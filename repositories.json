@@ -30,5 +30,6 @@
 	"unchained-capital/caravan",
 	"bitcoinknots/bitcoin",
 	"ACINQ/bitcoin-lib",
-	"Blockstream/satellite-api"
+	"Blockstream/satellite-api",
+	"goatpig/BitcoinArmory"
 ]
