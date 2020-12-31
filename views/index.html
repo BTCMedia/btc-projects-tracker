@@ -38,6 +38,240 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.4">v1.5.4</a>
+						    </h2>
+							<p class="card-text">Published: 2020-12-31 12:50:14 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This is a hotfix that improves <a href="https://github.com/bisq-network/bisq/pull/5026">DoS protection</a>.</p>
+
+<p>For a full list of changes please see <a href="https://github.com/bisq-network/bisq/milestone/48?closed=1">milestone v1.5.4</a> for more details.</p>
+
+<p>Here are the release notes from v1.5.2:</p>
+
+<h2>Release notes</h2>
+
+<p>This release improves transaction handling in certain edge cases and contains multiple fixes making Bisq more reliable in general. There are also some notable UI updates for the payment accounts and offer book screens.</p>
+
+<h3>DAO</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4909">Fix bsq to fiat calculation</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4781">Use 30 days average USD/BSQ price for market cap</a></li>
+</ul>
+
+<h3>UI</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4956">Sort payment methods by display string not by id</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4929">Make sign age column sortable</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4814">Improve UI/UX for account aging column in &#39;Offers&#39; section of GUI</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4923">Fix sorting of table columns in portfolio section</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4933">Improve funds and portfolio screens</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4863">Account management usability improvements</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4914">Improve usage of available space in accounts section</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4892">Improved Offer Book chart outlier filter</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4874">Prevent annoying popup errors for unhandled systray exception.</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4877">Fix warning about rejected transaction</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4850">Improve startup info display</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4825">Rename getsAll payout option string</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4968">Fix private notification style issue in dark mode</a></li>
+</ul>
+
+<h3>Trading</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4962">Handle unconfirmed deposit tx in pending trades</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4947">Fix bug with maker fee tx at create offer</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4917">Detect and handle invalid maker fee tx</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4921">Detect missing deposit tx to allow moving to failed trades</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4897">Allow take offer in case account age witness is not found and trade amount is small</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4860">Add taker check for deposit amount</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4764">Don&#39;t allow trade start if BitcoinJ is not fully synced</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4949">Show price deviation in % for fixed price offers and BSQ</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4845">Show price deviation in portfolio open offers and history view</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4944">Improve TransferWise account wording and defaults currency selections</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4976">Remove NGN (Nigerian Naira) as their central bank blocked Transferwise</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4977">Add extra note for Amazon gift cards</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4908">Add memo field at withdraw to external wallet screen after successful trade</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4831">Create JSON files of actively traded crypto and fiat assets</a></li>
+</ul>
+
+<h3>Wallet</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4859">Fix emergency payout</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4841">Prompt for confirmation before initiating SPV resync</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4780">Add encrypted wallet password prompt when sending funds from BSQ wallet</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4935">Add wallet info view</a></li>
+</ul>
+
+<h3>Reliability</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4943">Add tx broadcast to mempool explorer api</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4942">Refactor http client</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4907">Prevent that we write data at shutdown before we have read the data</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4927">Improve shutdown routine</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4843">Add 1 sec delay before calling exit</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4963">Call completeHandler if services in store services is empty</a></li>
+</ul>
+
+<h3>Mediation/Arbitration</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4899">Privacy improvements for manual payout</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4957">Option to sign single account for market bootstrapping</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4952">Allow sending private notifications from avatar icon at trade</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4822">Add error log for dispute failure</a></li>
+</ul>
+
+<h3>Performance</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4954">Various small performance improvements</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4955">Cache results of isFiatCurrency and isCryptoCurrency</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4875">Replace use of Collections to FXCollections in desktop</a></li>
+</ul>
+
+<h3>Network</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4920">Revert TTL of mailbox messages to original value of 15 days.</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4817">Improve filter</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4930">Use data store diffs also for AccountAgeWitnesses</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4961">Remove m52go btc node ip</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4848">In seednode installer, don&#39;t run random shell script to install git lfs</a></li>
+</ul>
+
+<h3>API</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4901">Add api method &#39;sendbtc&#39;</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4819">Add api method &#39;getpaymentacctform&#39;</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4818">Add api method &#39;getpaymentmethods&#39;</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4799">Add api method &#39;getbalance(s)&#39;</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4669">Add api method &#39;confirmpaymentreceived&#39;</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4668">Add api method &#39;confirmpaymentsent&#39;</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4667">Add api method &#39;takeoffer&#39;</a></li>
+<li>Add api method &#39;getunusedbsqaddress&#39;: <a href="https://github.com/bisq-network/bisq/pull/4798">1</a>, <a href="https://github.com/bisq-network/bisq/pull/4773">2</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4858">Add tx fee rate api methods: gettxfeerate, settxfeerate, unsettxfeerate</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/4852">Shut down rpc service at app shut down routine</a></li>
+</ul>
+
+<h3>Development</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/4898">Don&#39;t shut down seed in regtest mode if all connections lost</a></li>
+</ul>
+
+<h3>Assets</h3>
+
+<p>No new assets.</p>
+
+<h2>Verification</h2>
+
+<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
+Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
+
+<p>Import the key:
+<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
+
+<p>How to verify signatures?
+<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
+Replace BINARY with the file you downloaded (e.g. Bisq-1.5.4.dmg)</p>
+
+<p>Verify jar file inside binary:
+You can verify on OSX the jar file with:
+<code>shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.4.jar</code>
+The output need to match the value from the Bisq-1.5.4.jar.txt file.</p>
+
+<h2>Known issues with installation</h2>
+
+<h3>macOS Catalina:</h3>
+
+<blockquote>
+<p>Bisq can&#39;t be opened because Apple cannot check it for malicious software</p>
+</blockquote>
+
+<p>This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).</p>
+
+<p>Workaround: Right click on the installed Bisq app &gt; Click <code>Open</code> (warning popup shown again, but with new button available) &gt; Click <code>Open</code></p>
+
+<blockquote>
+<p>Bisq would like to receive keystrokes from any application.</p>
+</blockquote>
+
+<p>Discussed in issue <a href="https://github.com/bisq-network/bisq/issues/3373">https://github.com/bisq-network/bisq/issues/3373</a>, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.</p>
+
+<h3>Windows:</h3>
+
+<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
+
+<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
+
+<p>[1] Application directory (contains application installation files):
+C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
+
+<p>[2] Data directory (contains all Bisq data including wallet):
+C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
+
+<h3>Linux:</h3>
+
+<p>Hint for Debian users:
+If you have problems starting Bisq on Debian use: <code>/opt/Bisq/Bisq</code></p>
+
+<p>If your Linux distro does not support .deb files please follow this instruction:
+<code>
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.5.4.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+</code>
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
+
+<h2>Cleanup tool for saved trades that failed market price check</h2>
+
+<p>With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It will remove corrupt trade entries added due to bug <a href="https://github.com/bisq-network/bisq/issues/2924">https://github.com/bisq-network/bisq/issues/2924</a>. Install and run once, it will shut down automatically, then install version 1.5.4 or later. You can verify the binary the same way as you do with the Bisq application.</p>
+
+<h2>Credits</h2>
+
+<p>Thanks to everyone who directly contributed to this release:</p>
+
+<ul>
+<li>@chimp1984</li>
+<li>@ripcurlx </li>
+<li>@deusmax </li>
+<li>@ghubstan</li>
+<li>@jmacxx </li>
+<li>@m52go </li>
+<li>@oscarguindzberg </li>
+<li>@sqrrm </li>
+<li>@stejbac </li>
+<li>@wiz</li>
+</ul>
+
+<p>A special thanks to our first time contributors:</p>
+
+<ul>
+<li>@Jakub-CZ: <a href="https://github.com/bisq-network/bisq/pull/4877">Fix warning about rejected transaction</a></li>
+<li>@huey735: <a href="https://github.com/bisq-network/bisq/pull/4825">Rename getsAll payout option string</a></li>
+</ul>
+
+<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
+</p>
+					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.0">v0.3.0</a>
 						    </h2>
 							<p class="card-text">Published: 2020-12-30 14:26:35 UTC</p>
@@ -100,7 +334,9 @@
 							<p class="card-text">Published: 2020-12-30 13:52:55 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><p>This is a hotfix that introduces <a href="https://github.com/bisq-network/bisq/pull/5026">DoS protection</a>.</p>
+					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
+
+<p>This is a hotfix that introduces <a href="https://github.com/bisq-network/bisq/pull/5026">DoS protection</a>.</p>
 
 <p>Here are the release notes from v1.5.2:</p>
 
@@ -7446,353 +7682,6 @@ yyforyongyu</p>
 </p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.0-beta.rc4" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.0-beta.rc3">v0.11.0-beta.rc3</a>
-						    </h2>
-							<p class="card-text">Published: 2020-08-13 23:24:42 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This marks the first major release in the <code>v0.11.0</code> series!</p>
-
-<h1>Verifying the Release</h1>
-
-<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already: </p>
-
-<p><code>
-curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
-</code></p>
-
-<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-v0.11.0-beta.rc3.txt</code> and <code>manifest-v0.11.0-beta.rc3.txt.sig</code> are in the current directory) with:</p>
-
-<p><code>
-gpg --verify manifest-v0.11.0-beta.rc3.txt.sig
-</code></p>
-
-<p>You should see the following if the verification was successful:</p>
-
-<p><code>
-gpg: assuming signed data in &#39;manifest-v0.11.0-beta.rc3.txt&#39;
-gpg: Signature made Thu Aug 13 16:22:50 2020 PDT
-gpg:                using RSA key 9C8D61868A7C492003B2744EE7D737B67FA592C7
-gpg: Good signature from &quot;Conner Fromknecht &lt;conner@lightning.engineering&gt;&quot; [ultimate]
-</code></p>
-
-<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
-
-<h2>Verifying the Release Binaries</h2>
-
-<p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/tree/master/build/release">reproducible builds guide</a> for how this can be achieved. The release binaries are compiled with <code>go1.14.6</code>, which is required by verifiers to arrive at the same ones. They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>routerrpc</code>, and <code>watchtowerrpc</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
-
-<p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
-
-<p>Finally, you can also verify the <em>tag</em> itself with the following command:</p>
-
-<p>```
-$ git verify-tag v0.11.0-beta.rc3
-gpg: Signature made Thu Aug 13 15:46:14 2020 PDT
-gpg:                using RSA key 9C8D61868A7C492003B2744EE7D737B67FA592C7
-gpg: Good signature from &quot;Conner Fromknecht <a href="mailto:conner@lightning.engineering">conner@lightning.engineering</a>&quot; [ultimate]</p>
-
-<p>```</p>
-
-<h1>Building the Contained Release</h1>
-
-<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming that <code>vendor.tar.gz</code> and <code>lnd-source-v0.11.0-beta.rc3.tar.gz</code> are in the current directory, follow these steps:</p>
-
-<p><code>
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.11.0-beta.rc3.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.11.0-beta.rc3&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.11.0-beta.rc3&quot; ./cmd/lncli
-</code></p>
-
-<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory. </p>
-
-<p>Additionally, it&#39;s now possible to use the <a href="https://github.com/lightningnetwork/lnd/pull/2191">enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so</a>: </p>
-
-<p><code>
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-</code></p>
-
-<p>⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️</p>
-
-<h1>Release Notes</h1>
-
-<p>WIP, release will be up shortly!</p>
-
-<h2>Wumbo Channel Support</h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4429">This version of <code>lnd</code> supports accepting and creating wumbo channels!</a> A wumbo channel is a channel whose total capcity is greater than <code>0.16 BTC</code> (the existing channel limit). Activating wumbo channel features is <em>opt in</em> meaning users will need to set a name flag (<code>--protocol.wumbo-channels</code>) in order to use it. Most users can likely get by w/o wumbo channels, but larger nodes or exchanges/services may really benefit from the ability to manage a fewer set of larger channels. </p>
-
-<p>As is, there&#39;s no limit w.r.t. the size of a channel that a node will accept. However, nodes may want to limit the size of channel they&#39;ll accept in order to limt their exposure. This can be done by using a <a href="https://api.lightning.community/#channelacceptor"><code>ChannelAcceptor</code> call back</a> to <em>reject</em> all in-bound funding requests greater than a certain value. </p>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4335">To coincide with this feature, the existing payment limits have been lifted in the payment related RPC calls</a>. The max payment is now bounded by what the reciever can receive, and what the sender can route over using MPP. </p>
-
-<h2>New Autopilot Heuristic</h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4384">In this version of <code>lnd</code>, we&#39;ve added a new autopilot heuristic that is more
-robust and resistant to manipulation compared to the existing preferential
-attachment heuristic</a>. This new heuristic is based on the concept <a href="https://en.wikipedia.org/wiki/Betweenness_centrality">betweenness
-centrality</a>. The betweenness centrality metric is a essentially a measure of the number of
-shortest paths that pass through a particular node/vertex. The new heuristic
-uses this value rather than the relative number of channels a node has to make
-attachment (channel creation) decisions. This new heuristic should be more
-effective for both clients and routing nodes as as it&#39;s more indicative of a
-nodes potential as a routing node than simply the number of channels it has. </p>
-
-<p>This new mode can be activated by passing a new argument: <code>--autopilot.heuristic=top_centrality:1.0</code> to lnd. Note that it&#39;s possible to
-blend the old and new heuristics by specifying a another linear combination of
-heuristics with their total weight summing up to <code>1.0</code>. The current heuristic
-still maintains the stochastic nature of the existing attachment heuristics. In
-later releases, we aim to improve on this, by doing a mini simulation to
-identify the best <code>N</code> new channels a node can add to maximize the gain of its
-betweenness centrality metrics. Once this is complete, then this metric will
-actually attempt to actively better position a potential routing node in the
-network, rather than try to connect to the node w/ the &quot;best&quot; value for a given
-metric. </p>
-
-<h2>Experimental Support for new Storage Backend: <code>etcd</code></h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4015">In this release of <code>etcd</code>, we&#39;ve added experimental support for <code>etcd</code> as a
-new storage backend for <code>lnd</code></a>. <a href="https://etcd.io/"><code>etcd</code></a> differs from <code>bbolt</code> (the current default storage backend) in that it&#39;s a replicated database which can be run in a clustered
-manner. The main advantage over <code>bbolt</code> is that the replicated nature
-eliminates the current single point of failure that is <code>channel.db</code>. When
-activated, <code>lnd</code> will store data that can be reconstructed easily locally in
-<code>bbolt</code> (such as the channel graph), while critical data such as the current
-state of a channel will be replicated and stored in <code>etcd</code>. </p>
-
-<p>As this mode is still experimental, in order to test out this new DB mode,
-users will need to compile <code>lnd</code> with the new <code>kvdb_etcd</code> build tag: <code>make
-install tags=kvdb_etcd</code>. <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/etcd.md">Before running <code>etcd</code>, users should check out the new
-documentation for information concerning the recommended <code>etcd</code> configuration
-set up</a>. Future releases will further optimize our usage of the new database backend,
-eventually adding support to run <code>lnd</code> in a <em>clustered</em> mode by by using
-<code>etcd</code>&#39;s leader election APIs. </p>
-
-<h2>Protocol/Spec Compliance</h2>
-
-<h3>Sporadic Force Close Issue Resolution</h3>
-
-<p>This release fixes three distinct cases of erroneous force closes. All were related to the code that handles restarting channels, so nodes would regularly hit this if one of them flapped. Nodes should see increased stability across the network with this release.</p>
-
-<ul>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4430">https://github.com/lightningnetwork/lnd/pull/4430</a></li>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4431">https://github.com/lightningnetwork/lnd/pull/4431</a></li>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4432">https://github.com/lightningnetwork/lnd/pull/4432</a></li>
-</ul>
-
-<h3><code>ChannelAnnouncement</code> Feature Bit Decoding</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4342">We&#39;ll now properly include the feature bits of a <code>ChannelAnnouncement</code> in the wire messages we send out</a>. </p>
-
-<h3>Short Channel ID Decoding</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4391">A bug has been fixed that would otherwise cuase <code>lnd</code> incorrectly decode a zero value short channel ID</a>. </p>
-
-<h2>Support for Dynamic IPs and Domain Resolution for Node Addrs</h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4281">In this version of <code>lnd</code>, a new flag has been added to allow users that either have a dynamic IP or want to advertise the resolved IP address of a domain name: <code>--external-hosts</code></a>. This new flag can be set to a series of external hosts. If this flag is set, then <code>lnd</code> will peridically attempt to resolve the target host, advetising the new IP address. We&#39;ll also keep track of the prior IPs reported by that domain name, and will send out a new advertisement with the most up to date IP addresses if we detect a change. </p>
-
-<h2>RPC Enhancement and Bug Fixes</h2>
-
-<h3>New External Coin Selection API</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4303">In this release, we&#39;ve added a new set of calls to the <code>WalletKit</code> sub-server that allows clients to perform custom coin selection</a>. Along-side the existing <code>SignRPC</code> sub-server calls, <a href="https://api.lightning.community/#service-walletkit">this set of APIs allows clients to manually construct, sign and broadcast custom transactions</a>. This may also be combined with the new PSBT APIs to carry out complex multi-party protocols. </p>
-
-<p>Three new RPC calls have been added:
-* <code>ListUnspent</code>: a copy of the existing <code>ListUnspent</code> RPC in <code>LightningClient</code>, which has been marked as deprecated in favor of using the <code>walletrpc</code> one.
-* <code>LeaseOutput</code>: lease an output for a predetermined amount of time bound to a unique ID to ensure no other applications can lease the same output.
-* <code>ReleaseOutput</code>: if the lease for an output is no longer needed, it can be returned to the set of spendable UTXOs manually through this RPC, or it will be done automatically by the wallet once the lease expires.</p>
-
-<h3>New Wallet Recovery Progress API</h3>
-
-<p>This release features a <a href="https://github.com/lightningnetwork/lnd/pull/4106">new RPC to track the progress of an ongoing wallet recovery attempt</a>. This RPC lives within the <code>WalletKit</code> sub-server and exposes the progress as a floating point value between 0 and 1.</p>
-
-<h3>New HTLC Interception API</h3>
-
-<p><a href="https://api.lightning.community/#htlcinterceptor">This new release of <code>lnd</code> contains a new RPC API which is essentially the forwarded HTLC analgogue of the existing &quot;hodl&quot; invoice API</a>. <a href="https://github.com/lightningnetwork/lnd/pull/4018">This new API allows for <em>custom</em> forward policies to be implemented</a>. With the new API, for each forwarded HTLC, a call-back implemented as a streaming RPC will be called. With that call back, users can either signal they want the HTLC to immediately be settled, held, or instantly failed. This new API allows for a number of cool use cases such as notifying off-line clients of a new incoming payment (HTLC mailbox) and also opening a channel to a client in order to satisfy an incoming HTLC forwaard event. </p>
-
-<p>This new API also allows user to examine any custom records which may have been dropped off to intermediate nodes by the sender. This intermedaite node custom records have no &quot;official&quot; protocol use, but some interesting meta-protocol are possible with its inclusion. </p>
-
-<h3>Hodl Keysend Payments</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4167">With this new version of lnd, we&#39;ve added a new option to <code>lnd</code> to hold received keysend payments in the accepted state for a configured period of time</a>. During this time, an application can inspect the payment parameters and decide whether to cancel or settle this payment.</p>
-
-<p>Example: a keysend payment with an embedded order comes in. The payment is held and an external application checks that the paid amount is sufficient for the ordered goods. If not, the payment is canceled without the need to refund anything. If the amount is sufficient, the payment is settled and the order processed.</p>
-
-<p>This PR makes development of applications like <a href="https://tlvshop.com/">tlvshop.com</a> possible without forking <code>lnd</code>.</p>
-
-<p>Users can use the existing <code>SettleInvoice</code> call to manually settle inbound keysend payments if the <code>--keysend-hold-time</code> flag is set. </p>
-
-<h3>Updated Close Summary</h3>
-
-<p>The <code>CloseChannelSummary</code> returned by the <code>ClosedChannels</code> endpoint has been updated to <a href="https://github.com/lightningnetwork/lnd/pull/4157">include a list of on chain actions</a> that were taken to resolve channels that were force closed. The on chain actions taken depend on the type of commitment the channel had, and the party that force closed.
-* Commit sweep: Present if our node force closed the channel, represents sweeping of our own balance, which is behind a timelock for local force closes, back to our own wallet.
-* Incoming HTLC: Incoming htlcs offer to pay your node funds in exchange for reveal of a preimage. If your node had knowledge of the preimage, these outputs will reflect as having been claimed, which means your node swept the funds to itself. If your node force closed, this claim will have two on chain resolutions, a success transaction followed by a sweep. Otherwise, the remote party will have timed out the htlc.
-* Outgoing HTLC: Outgoing htlcs are offers that you make to pay a node in exchange for a preimage. If the remote party has knowledge of the preimage, they htlc will reflect as having been claimed, and the funds are swept by the remote party. If they do not provide the preimage before the timeout, our node will sweep the funds back to itself, and the htlc will reflect as having been timed out. If your node force closed, this timeout will have two on chain resolutions, a timeout transaction followed by a sweep.
-* Anchor: Present if the channel was created using the experimental anchors commitment format. These outputs can either be swept back to the wallet by our node, or claimed by another party if we did not sweep it within 16 blocks.</p>
-
-<h3>New List Sweeps API</h3>
-
-<p>A new <code>ListSweeps</code> endpoint that <a href="https://github.com/lightningnetwork/lnd/pull/4139">provides a list of all the on chain transactions that lnd has published to sweep funds back to its own wallet</a> has been added to the walletrpc subserver. By default, the endpoint returns a list of transaction IDs. The <code>verbose</code> option can be used to provide full transaction details, identical to those provided in the existing <code>GetTransactions</code> endpoint. </p>
-
-<h3>Height Parameters for GetTransactions</h3>
-
-<p>The <code>GetTransactions</code> endpoint was <a href="https://github.com/lightningnetwork/lnd/pull/4139">updated to take a start and end height parameter</a>, both values are inclusive. If the start height provided is greater than the end height, transactions will be listed in reverse order (from highest to lowest block). To include unconfirmed transactions in your query, the end height should be set to -1, and a list of transactions from start height to chain tip will be returned. This option is set by default to maintain backwards compatibility with the old API. </p>
-
-<h3>Transaction Labelling</h3>
-
-<p>On chain transactions broadcast by LND <a href="https://github.com/lightningnetwork/lnd/pull/4213">can now be labelled with strings</a> up to 500 characters long. These labels can be added on transaction creation when using the various on chain sending APIs, or <a href="https://github.com/lightningnetwork/lnd/pull/4228">retrospectively using the <code>LabelTransaction</code> endpoint</a> in the walletkit. If a transaction already has a label, you will need to explicitly set an overwrite flag.These labels are visible in the output of <code>GetTransactions</code>. </p>
-
-<h3>Payments Indexing</h3>
-
-<p>Payments in lnd are uniquely identified by a payment index which is auto-incremented as we dispatch payment attempts. Previously, calls to <code>ListPayments</code> allowed pagination using these indexes, but required that we fetch all payments from the database and sift through them to find payments lying in the correct range. This caused performance issues for nodes with large numbers of payments. This release adds <a href="https://github.com/lightningnetwork/lnd/pull/4261">an index by sequence number</a> which allows efficient lookup of payments in a range. The pagination API itself has not changed, but node operators with a lot of payments can expect a performance increase.</p>
-
-<h3>Funding Shims</h3>
-
-<p>The existing thaw height field of a funding shim has had a change in interpretation. Previously, the field was considered to be an absolute height of the backing blockchain. <a href="https://github.com/lightningnetwork/lnd/pull/4428">Now, values below 500,000 will be interpreted as a delta from a channel&#39;s funding transaction&#39;s confirmation height</a>.</p>
-
-<h3>Custom Max HTLC Value in Flight</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/971">An optional max value in flight may now be provided when opening channels</a>, allowing users to limit their pending value exposure.</p>
-
-<h3>Multi-Channel Outgoing Payment Restriction</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4257">The payment RPCs now support sticking to a set of specified channels during path finding</a>. This allows for more fine-grained path contorl, as if one want sto rebalance a specific set of channels, they can use this along with the existing allow/deny lists to force lnd to take a specific route. </p>
-
-<h3>REST API</h3>
-
-<p>With a series of pull requests the REST API has been overhauled quite notably. First of all, <a href="https://github.com/lightningnetwork/lnd/pull/4251">REST is now enabled on all (experimental) subservers</a>. This allows users of the REST API to make use of the new MPP enabled payment calls (<a href="https://github.com/lightningnetwork/lnd/blob/master/lnrpc/routerrpc/router.proto#L17"><code>Router.SendPaymentV2</code></a>) for example.<br>
-Then, to make the many server-streaming RPC calls available to REST users, a <a href="https://github.com/lightningnetwork/lnd/pull/4141">WebSocket proxy was added</a> that transforms streaming responses from single line JSON strings on a keep-alive HTTP response into proper WebSocket messages.<br>
-Our <a href="https://api.lightning.community">online API documentation</a> now also shows a <a href="https://api.lightning.community?javascript#v2-router-send">JavaScript example of how to use the WebSockets</a>.</p>
-
-<p>To make our RPC protobuf definitions easier to use and compile by other projects, we removed the Google annotations from our <code>rpc.proto</code> file and instead <a href="https://github.com/lightningnetwork/lnd/blob/master/lnrpc/rest-annotations.yaml">extracted all REST definitions into the file <code>lnrpc/rest-annotations.yaml</code></a>.</p>
-
-<h3>Bug Fixes</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4356">We&#39;ll now properly parse both possible <code>KeyDescriptor</code> fields for all calls to the <code>signrpc</code> sub-server</a>. </p>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4176">While the server hasnt&#39; yet fully started, we&#39;ll now omit uptime information in <code>ListChannels</code> as we wouldn&#39;t have connected out to any peers by then.</a></p>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4261/commits/eea871b5831b01c77c27d4f37e99f67217a3f2d8">Pagination for the ListInvoices was updated to return invoices when called with the reversed flag set, and the last index offset was greater than the number of invoices on disk.</a> Previously, this endpoint would return no invoices if the API was called with the reversed flag and did not have the precise number of invoices as its offset. </p>
-
-<h2><code>htlcswitch</code> Improvements</h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/3018">We&#39;ll now log each time an HTLC is succesfully forwarded on the least verbose logging level (info)</a>. This allows users to monitor their logs to detect sueccesfully forwarded HTLCs. </p>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4183">Payments initiated by the routing will now be directly handed to the link, rather than going through the switch first</a>. This results in lower latency for MPP payments, and also ensures that a link is able to actually carry the HTLC before the router moves onto the next payment shard. </p>
-
-<h2>AMP Progress</h2>
-
-<p>As a stepping stone towards enabling Atomic Multi-path Payments, <code>0.11.0</code> <a href="https://github.com/lightningnetwork/lnd/pull/4285">now indexes all newly created invoices by <code>payment_addr</code></a> in addition to the typical <code>payment_hash</code> index. Unlike MPP, the <code>payment_hash</code> of AMP HTLCs is not known to the sender at the time of invoice creation. Additionally, the <code>payment_hash</code> of each HTLC is expected to be unique, which creates an n-to-1 mapping of <code>payment_hash</code> to invoice. In the future, <code>payment_addr</code> will serve as a universal identifier for both MPP and AMP invoices, as it provides a consistent 1-to-1 mapping for both payment types. The remaining pieces of the AMP saga are expected to appear in a later release, at which point users will be able to query and/or interact with invoices via RPC using <code>payment_addr</code> as the primary identifier. As of now, the plan is to continue to support RPC interactions via <code>payment_hash</code> for MPP invoices as is done today.</p>
-
-<h2>Build process</h2>
-
-<p>Writing software that compiles and runs on all major operating systems and hardware architectures has become increasingly involved. Our Continuous Integration platform Travis only lets us run a certain number of parallel tasks which limited what we could automatically compile and test on each new commit. <a href="https://github.com/lightningnetwork/lnd/pull/4220">Offloading some of those tasks to run as GitHub Workflows</a> has allowed us to add cross-compilation checks for all major operating systems. <a href="https://github.com/lightningnetwork/lnd/pull/4482">Travis now only runs a very basic sanity check and then the  integration tests</a>. Splitting the work between GitHub and Travis also freed up two build slots where we now run <a href="https://github.com/lightningnetwork/lnd/pull/4408">integration tests on ARM</a> and <a href="https://github.com/lightningnetwork/lnd/pull/4475">on Windows</a>.</p>
-
-<p>A <a href="https://github.com/lightningnetwork/lnd/pull/4344">number of small improvements to our integration tests in general</a> reduced the flakiness of those tests significantly.</p>
-
-<p>Production binaries built from source via <code>make install</code> are now stripped of DWARF symbols and are <a href="https://github.com/lightningnetwork/lnd/pull/4262">noticeably smaller</a>.</p>
-
-<h2>Full-Node Compatability Updates</h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4366">This new version of <code>lnd</code> now properly supports <code>bitcoind v0.20</code></a>. </p>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4291">The latest <code>master</code> branch of <code>btcd</code> is now also supported as well</a>. </p>
-
-<h2>Safety Improvements</h2>
-
-<h3>SCB Recovery</h3>
-
-<p>This release of <code>lnd</code> fixes an existing bug that would at times replace the on-disk SCB state with fresh information, if <code>lnd</code> was started in SCB recovery mode (a clean slate) with an <em>existing</em> SCB file on disk. <a href="https://github.com/lightningnetwork/lnd/pull/4379">With this new version of <code>lnd</code>, we&#39;ll now always combine our in memory state with what&#39;s on disk, ensuring that we never override the information on disk</a>. </p>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4370">We&#39;ll also no longer insert a recovered SCB channel into the graph database</a>. This resolves a number of edge cases, and also makes the recovery process much simpler. </p>
-
-<h3>PSBT Channel Funding</h3>
-
-<p>The recently introduced PSBT channel funding flow was found to be risky when used to open multiple channels in one batch transaction. It can happen that the funding transaction is published too early and some of the channel funds get stuck. To mitigate that risk, we <a href="https://github.com/lightningnetwork/lnd/pull/4455">added the <code>--no-publish</code> flag to the PSBT funding flow</a>.</p>
-
-<h3>On-Chain Contract Handling</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/3892">We&#39;ll now properly clean up local state within the database after a local channel breach</a>. </p>
-
-<ul>
-<li>Add <code>--dry-run-migration</code> config option <a href="https://github.com/lightningnetwork/lnd/pull/2668">#2668</a>, which will prevent <code>lnd</code> from committing migrations on startup. This provides two useful features:
-
-<ul>
-<li>Avoids unexpected migrations that would otherwise prevent downgrading to a prior database version.</li>
-<li>Allows users to aid in testing migrations for correctness and to guage performance on real-world databases.</li>
-</ul></li>
-</ul>
-
-<h2>Refactoring</h2>
-
-<p>This release sees the addition of the <a href="https://github.com/lightningnetwork/lnd/pull/4365"><code>lnwallet/chancloser</code></a> and <a href="https://github.com/lightningnetwork/lnd/pull/4347"><code>peer</code></a> packages. This modularization will help with testing now that these components are properly isolated and can be imported into other packages.</p>
-
-<h2>Bug fixes</h2>
-
-<ul>
-<li>Fixed sporadic <code>tls: internal error: failed to clone hash</code> error that <a href="https://github.com/lightningnetwork/lnd/pull/4300">was caused by a faulty library import</a>.</li>
-<li>Added a sanity check to the Tor configuration options that <a href="https://github.com/lightningnetwork/lnd/pull/4207">disallows setting Tor socks and control port to the same value</a>.</li>
-<li>Fixed several <code>subscribeinvoice</code> bugs <a href="https://github.com/lightningnetwork/lnd/pull/4298">#4298</a>:
-
-<ul>
-<li>Backlogs are now delivered properly even if no invoices have been settled.</li>
-<li>Two separate race conditions that may have lead to duplicate notifications are now resolved.</li>
-</ul></li>
-<li>Fixed properly <a href="https://github.com/lightningnetwork/lnd/pull/4361">annotating certain classes of closed channels in the database</a></li>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4355">Fixed a panic that could arise if a notification of the <code>ChainNotifier</code> sub-server is cancelled as a new block arrives</a>.</li>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4341">We&#39;ll now log the full raw TX hex of any broadcasted funding transactions</a>.</li>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4302">A bug has been fixed to prevent a panic when accepting an incompatible output index in the wallet</a>.</li>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4274">A bug that could arise when a client switches between multiple towers has been fixed</a>.</li>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4194">We&#39;ll now ignore reconnection for unadvertised inbound peers over Tor</a>.</li>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4327">Bad features will no longer cause path finding to fail early</a>.</li>
-<li><a href="https://github.com/lightningnetwork/lnd/pull/4395">Fixed a potential overflow when processing channel range query replies</a>.</li>
-</ul>
-
-<p>The full list of changes since <code>v0.10.0-beta</code> can be found here:</p>
-
-<ul>
-<li><a href="https://github.com/lightningnetwork/lnd/compare/v0.10.0-beta-branch...v0.11.0-beta.rc3">https://github.com/lightningnetwork/lnd/compare/v0.10.0-beta-branch...v0.11.0-beta.rc3</a></li>
-</ul>
-
-<h1>Contributors (Alphabetical Order)</h1>
-
-<p>Andreas M. Antonopoulos
-András Bánki-Horváth
-Anthony Ronning
-Bjarne Magnussen
-Brian Mancini
-CandleHater
-Carla Kirk-Cohen
-Conner Fromknecht
-cryptagoras
-ErikEk
-Eugene Siegel
-fguisso
-Gabriel Comte
-Jake Sylvestre
-Jasper Rädisch
-Johan T. Halseth
-Joost Jager
-Markus Fix
-Matheus Degiovani
-Olaoluwa Osuntokun
-Oliver Gugger
-Roei Erez
-Sebastian Falbesoner
-vctt94
-Wilmer Paulino
-yyforyongyu</p>
-</p>
-					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.0-beta.rc3" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
