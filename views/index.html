@@ -47,9 +47,7 @@
 
 <h1>Database Migrations</h1>
 
-<ul>
-<li>TODO: describe &quot;peers-bucket&quot;</li>
-</ul>
+<p>A migration to initialize a top-level peers bucket is included in this release. The bucket is used to track flap counts for peers that we have channels open with across restarts. These values are used to rate-limit the amount of memory that <code>lnd</code> uses to track peers online state, ensuring that we do not store large volumes of uptime information for peers that are constantly changing online state.</p>
 
 <p>This release contains a migration to initialize a top-level-bucket for an outpoint index. There is also a subsequent migration that populates this index with an outpoint&#39;s status. This will cut down on expensive <code>bbolt</code> transactions throughout the codebase. The migration process should look something like this upon initial start up:
 <code>

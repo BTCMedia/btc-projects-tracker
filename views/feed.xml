@@ -6,14 +6,14 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-04T06:03:57+00:00</updated>
+  <updated>2021-01-04T07:03:23+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc3</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc3"/>
     <summary>This release marks the first major release in the `v0.12.x` series! As this is a major release several new features are included in this release including: anchor commitment types are now the default, anchor commitment support for watchtowers, new arguments to auto compact the database as well as drop the `wtxmgr` state, generic wallet PSBT crafting+signing, and much more! As usual, this release contains several important bug fixes, so we recommend all users update. 
 
 # Database Migrations
-- TODO: describe &quot;peers-bucket&quot;
+A migration to initialize a top-level peers bucket is included in this release. The bucket is used to track flap counts for peers that we have channels open with across restarts. These values are used to rate-limit the amount of memory that `lnd` uses to track peers online state, ensuring that we do not store large volumes of uptime information for peers that are constantly changing online state.
 
 This release contains a migration to initialize a top-level-bucket for an outpoint index. There is also a subsequent migration that populates this index with an outpoint's status. This will cut down on expensive `bbolt` transactions throughout the codebase. The migration process should look something like this upon initial start up:
 ```
@@ -6424,5 +6424,5 @@ yyforyongyu</summary>
     <updated>2020-08-15T16:47:13Z</updated>
     <dc:date>2020-08-15T16:47:13Z</dc:date>
   </entry>
-  <dc:date>2021-01-04T06:03:57+00:00</dc:date>
+  <dc:date>2021-01-04T07:03:23+00:00</dc:date>
 </feed>
