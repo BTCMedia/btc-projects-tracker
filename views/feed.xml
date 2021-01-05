@@ -6,7 +6,27 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-05T07:03:07+00:00</updated>
+  <updated>2021-01-05T08:04:05+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre6</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre6"/>
+    <summary>### This is a pre-release! Do not use unless you're sure know what you're doing!
+
+This is a pre-release for beta-testing the next version of Specter.
+
+Changes to notice while testing:
+- Fix Coldcard signing issue when exporting to Electrum
+- Fix wrong address type inPDF backup
+- Fix issue when camera is open and scanning doesn't work for too long.
+- Export transactions history, UTXOs, and addresses to CSV
+- Reorganize the UTXO screen
+- Label any address from any screen it is at.
+- Sorting, searching, page limit, of the transactions/ utxo lists.
+- New Tor tab in the settings for managing the connections over Tor and the Specter Tor hidden service</summary>
+    <title>cryptoadvance/specter-desktop: v0.11.0-pre6</title>
+    <updated>2021-01-05T07:20:02Z</updated>
+    <dc:date>2021-01-05T07:20:02Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc3</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc3"/>
@@ -6416,13 +6436,5 @@ yyforyongyu</summary>
     <updated>2020-08-16T11:48:59Z</updated>
     <dc:date>2020-08-16T11:48:59Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.1</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.1"/>
-    <summary></summary>
-    <title>getumbrel/umbrel: v0.2.1</title>
-    <updated>2020-08-15T16:47:13Z</updated>
-    <dc:date>2020-08-15T16:47:13Z</dc:date>
-  </entry>
-  <dc:date>2021-01-05T07:03:07+00:00</dc:date>
+  <dc:date>2021-01-05T08:04:05+00:00</dc:date>
 </feed>
