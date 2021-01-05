@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-05T00:03:35+00:00</updated>
+  <updated>2021-01-05T01:02:56+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc3</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc3"/>
@@ -6424,5 +6424,5 @@ yyforyongyu</summary>
     <updated>2020-08-15T16:47:13Z</updated>
     <dc:date>2020-08-15T16:47:13Z</dc:date>
   </entry>
-  <dc:date>2021-01-05T00:03:35+00:00</dc:date>
+  <dc:date>2021-01-05T01:02:56+00:00</dc:date>
 </feed>
