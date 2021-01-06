@@ -6,7 +6,68 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-06T14:01:44+00:00</updated>
+  <updated>2021-01-06T15:01:56+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.0.0</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.0.0"/>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.0.0/Specter-Setup-v1.0.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.0.0/SpecterDesktop-v1.0.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.0.0/specter_desktop-v1.0.0-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.0.0/specterd-v1.0.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.0.0/specterd-v1.0.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.0.0/specterd-v1.0.0-x86_64-linux-gnu.zip)
+
+# Signatures and hashes
+[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.0.0/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @stepansnigirev's GPG key.
+You can get the public key from here: [https://stepansnigirev.com/ss-specter-release.asc](https://stepansnigirev.com/ss-specter-release.asc).
+It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x36ED357AB24B915F) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F).
+Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, short id: `36ed357ab24b915f`
+
+# Release notes
+- Bugfix: Fix Windows CI build (#842) (@k9ert)
+- Bugfix: Allow sending to uppercase bech32 addresses (#837) (@ben-kaufman)
+- Bugfix: Disable deleting a key used in an existing wallet (#822) (@ben-kaufman)
+- Bugfix: Fix fiat symbol direction (#802) (@figgyfigs)
+- Bugfix: Fix Electrum export for signing with ColdCard (#800) (@ben-kaufman)
+- Bugfix: Fix wrong wallet address type in PDF backup file (#800) (@ben-kaufman)
+- Bugfix: Fix QR scanner timeout breaking the signing UI (#800) (@ben-kaufman)
+- Bugfix: Fix issue with wallet name in JSON backup download (#790) (@rajarshimaitra)
+- Bugfix: Properly handle exception if address not found in wallet (#783) (@ben-kaufman)
+- Bugfix: Fix spelling mistake (#766) (@szollo)
+- Bugfix: Fix transaction caching to track all transactions (#760) (@ben-kaufman)
+- Bugfix: Require authentication be on for stating Tor hidden service (#765) (@ben-kaufman)
+- Bugfix: Make HWI Bridge settings available to all users in multiuse mode (#765) (@ben-kaufman)
+- Feature: Add automatic SSL certificate generation from CLI (#789) (@k9ert)
+- Feature: Allow configuring custom Tor proxy URL and control port (#765) (@ben-kaufman)
+- Feature: Add Tor-only mode to force all external calls go over Tor (#765) (@ben-kaufman)
+- Feature: Label any addresses from everywhere (#760) (@ben-kaufman)
+- Feature: Search, sort, page limit, and jump between pages in the transactions and UTXO tabs. (#760) (@ben-kaufman)
+- Feature: Export transactions, UTXO, and addresses into CSV file (#758) (@ben-kaufman)
+- UI: Consistent rescan labels (#843) (@justinmoon)
+- UI: Fix typo in price update notification (#831) (@instagibbs)
+- UI: Change wallet type labels on new device popup (#798) (@rajarshimaitra)
+- UI: Fix closing notification issue on mobile (#791) (@ben-kaufman)
+- UI: Add Wallets Overview UTXO tab (#760) (@ben-kaufman)
+- UI: Refactor the UTXO tab to look like the tx history tab (#760) (@ben-kaufman)
+- UI: Rename address table column to label (#764) (@figgyfigs)
+- UI: Move all Tor settings to new &quot;Tor&quot; Setting tab (#765) (@ben-kaufman)
+- Docs: Fix Docker docs issue (#792) (@RandyMcMillan)
+- Docs: Update FAQ on Appimage on Debian 10 (#773) (@k9ert)
+- Devops: Improve dev-toolings with Cypress snapshots (#797) (@k9ert)
+- Test: Add Cypress as a new testing framework (#712) (@k9ert)</summary>
+    <title>cryptoadvance/specter-desktop: v1.0.0</title>
+    <updated>2021-01-06T14:52:03Z</updated>
+    <dc:date>2021-01-06T14:52:03Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre6</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre6"/>
@@ -6428,13 +6489,5 @@ yyforyongyu</summary>
     <updated>2020-08-16T14:37:17Z</updated>
     <dc:date>2020-08-16T14:37:17Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.2</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.2"/>
-    <summary></summary>
-    <title>getumbrel/umbrel: v0.2.2</title>
-    <updated>2020-08-16T11:48:59Z</updated>
-    <dc:date>2020-08-16T11:48:59Z</dc:date>
-  </entry>
-  <dc:date>2021-01-06T14:01:44+00:00</dc:date>
+  <dc:date>2021-01-06T15:01:56+00:00</dc:date>
 </feed>
