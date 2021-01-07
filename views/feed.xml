@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-07T19:01:18+00:00</updated>
+  <updated>2021-01-07T20:02:05+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.0.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.0.0"/>
@@ -2466,6 +2466,20 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.14...v0.2.15</summary>
     <dc:date>2020-11-26T10:52:47Z</dc:date>
   </entry>
   <entry>
+    <id>https://github.com/bitcoin-core/HWI/releases/tag/1.2.1</id>
+    <link href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.1"/>
+    <summary>Also available on [PyPi](https://pypi.org/project/hwi/) and can be installed with `pip install -U hwi`
+
+## Fixed
+
+* Compatibility with Ledger Bitcoin app 1.5.1
+* BitBox02 unlocks during `enumerate`
+</summary>
+    <title>bitcoin-core/HWI: 1.2.1</title>
+    <updated>2020-11-26T02:44:59Z</updated>
+    <dc:date>2020-11-26T02:44:59Z</dc:date>
+  </entry>
+  <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.0</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.0"/>
     <summary>### Important security fix
@@ -2527,6 +2541,23 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.14...v0.2.15</summary>
     <title>btcpayserver/btcpayserver: v1.0.6.0</title>
     <updated>2020-11-25T15:24:27Z</updated>
     <dc:date>2020-11-25T15:24:27Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/bitcoin-core/HWI/releases/tag/1.2.1-rc.1</id>
+    <link href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.1-rc.1"/>
+    <summary>Release Candidate 1 for HWI 1.2.1</summary>
+    <title>bitcoin-core/HWI: 1.2.1-rc.1</title>
+    <updated>2020-11-25T02:49:10Z</updated>
+    <dc:date>2020-11-25T02:49:10Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.12</id>
+    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.12"/>
+    <summary> * Large API overhauls to make several major API surfaces much easier to work.
+ * C/C++ Bindings are a part of this release, however are still considered beta status. They are expected to mature as more language-specific binding work is built on top.</summary>
+    <title>rust-bitcoin/rust-lightning: v0.0.12</title>
+    <updated>2020-11-24T22:53:13Z</updated>
+    <dc:date>2020-11-24T22:53:13Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.0</id>
@@ -3946,6 +3977,27 @@ Platforms:
     <dc:date>2020-10-12T16:44:17Z</dc:date>
   </entry>
   <entry>
+    <id>https://github.com/bitcoin-core/HWI/releases/tag/1.2.0</id>
+    <link href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.0"/>
+    <summary>Also available on [PyPi](https://pypi.org/project/hwi/) and can be installed with `pip install -U hwi`
+
+## Added
+
+* BitBox02 Support
+* Multisig address display on Trezor with descriptors
+* Additional library type checking
+
+## Fixed
+
+* Fixed script type assignment for an input with a witness script but no witness utxo
+* Fixed signing multiple segwit input signing for Ledger Bitcoin App 1.4.0+
+* Fixed parsing of descriptors with origin but no fingerprint
+</summary>
+    <title>bitcoin-core/HWI: 1.2.0</title>
+    <updated>2020-10-09T20:01:22Z</updated>
+    <dc:date>2020-10-09T20:01:22Z</dc:date>
+  </entry>
+  <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.7</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.7"/>
     <summary>### Bug fixes:
@@ -4033,6 +4085,14 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.11...v0.2.12</summary>
     <title>getumbrel/umbrel: v0.2.12</title>
     <updated>2020-10-06T13:14:53Z</updated>
     <dc:date>2020-10-06T13:14:53Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/bitcoin-core/HWI/releases/tag/1.2.0-rc.1</id>
+    <link href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.0-rc.1"/>
+    <summary>Release Candidate 1 for HWI 1.2.0</summary>
+    <title>bitcoin-core/HWI: 1.2.0-rc.1</title>
+    <updated>2020-10-02T20:05:09Z</updated>
+    <dc:date>2020-10-02T20:05:09Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.6</id>
@@ -6079,415 +6139,5 @@ There are two types of binaries in this release:
     <updated>2020-08-27T12:23:15Z</updated>
     <dc:date>2020-08-27T12:23:15Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.4</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.4"/>
-    <summary></summary>
-    <title>getumbrel/umbrel: v0.2.4</title>
-    <updated>2020-08-27T07:59:51Z</updated>
-    <dc:date>2020-08-27T07:59:51Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.6</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.6"/>
-    <summary>### v5.5.6
-
-* ADD: Camera Permission authorization view
-* FIX: recieve button for watch-only wallets
-* FIX: could not scan animated QR signed psbt
-* FIX: updated 'fi_FI' language.
-
-### v5.5.5
-
-* FIX: scan Cobo vault signed transaction QR
-
-### v5.5.4
-
-* ADD: handling push notification open
-* ADD: View Wallet xPub (Apple Watch)
-* ADD: COP Fiat
-* FIX: Invoice were not being sent (Apple Watch)
-* FIX: Disable some Watch app elements when app is not reachable
-* FIX: Show loading indicator when processing file or qrcode image
-* FIX: Button size for large devices
-* FIX: better handling of electrum disconnect
-* FIX: disable push notifications in settings
-* FIX: Font-Color in Bump-Fee Input Field &quot;Custom&quot; is not adapted for dark mode
-* FIX: QRCode border in LND Backup screen
-* FIX: Animated QRCode border. Change save path to Downloads folder
-* FIX: sk_SK language updates
-
-### v5.5.3
-
-* FIX: notifications
-* FIX: Inverted QR codes
-* FIX: translations
-* FIX: Wallet rename</summary>
-    <title>BlueWallet/BlueWallet: v5.5.6</title>
-    <updated>2020-08-26T13:49:38Z</updated>
-    <dc:date>2020-08-26T13:49:38Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.3</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.3"/>
-    <summary></summary>
-    <title>getumbrel/umbrel: v0.2.3</title>
-    <updated>2020-08-21T18:42:58Z</updated>
-    <dc:date>2020-08-21T18:42:58Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.11.0-beta</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.0-beta"/>
-    <summary>This marks the first major release in the `v0.11.0` series! This release contains several new features including support for hodl keysend payments, stability improvements, first-class REST/WebSocket support for all RPC subservers, richer accounting APIs, and much more. Notably, this release also includes a new experimental database backend supporting replication via etcd. As usual, this release also contains a number of optimizations and bug fixes.
-
-# Database Migrations
-This release contains one primary migration in order to index payments by sequence number, allowing for more efficient range queries and pagination. There are also three smaller migrations which initialize the top-level buckets for the payment index, payment address index, and channel close summaries. This migration should look something like this upon initial start up:  
-
-```
-2020-08-19 9:31:59.543 [INF] LTND: Version: 0.11.0-beta commit=v0.11.0-beta, build=production, logging=default
-2020-08-19 9:31:59.543 [INF] LTND: Active chain: Bitcoin (network=mainnet)
-2020-08-19 9:31:59.543 [INF] LTND: Opening the main database, this might take a few minutes...
-2020-08-19 9:31:59.960 [INF] CHDB: Checking for schema update: latest_version=17, db_version=13
-2020-08-19 9:31:59.969 [INF] CHDB: Performing database schema migration
-2020-08-19 9:31:59.969 [INF] CHDB: Applying migration #14
-2020-08-19 9:31:59.969 [INF] CHDB: Creating top-level bucket: &quot;pay-addr-index&quot; ...
-2020-08-19 9:31:59.969 [INF] CHDB: Created top-level bucket: &quot;pay-addr-index&quot;
-2020-08-19 9:31:59.969 [INF] CHDB: Applying migration #15
-2020-08-19 9:31:59.969 [INF] CHDB: Creating top-level bucket: &quot;payments-index-bucket&quot; ...
-2020-08-19 9:31:59.969 [INF] CHDB: Created top-level bucket: &quot;payments-index-bucket&quot;
-2020-08-19 9:31:59.969 [INF] CHDB: Applying migration #16
-2020-08-19 9:31:59.969 [INF] CHDB: Migrating payments to add sequence number index 
-2020-08-19 9:31:59.970 [INF] CHDB: Applying migration #17
-2020-08-19 9:31:59.970 [INF] CHDB: Creating top-level bucket: &quot;close-summaries&quot; ...
-2020-08-19 9:31:59.970 [INF] CHDB: Created top-level bucket: &quot;close-summaries&quot;
-2020-08-19 9:31:59.970 [INF] LTND: Database now open (time_to_open=427.238857ms)!
-```
-
-# Verifying the Release
-
-In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
-
-```
-curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
-```
-
-Once you have the required PGP keys, you can verify the release (assuming `manifest-v0.11.0-beta.txt` and `manifest-v0.11.0-beta.txt.sig` are in the current directory) with:
-
-```
-gpg --verify manifest-v0.11.0-beta.txt.sig
-```
-
-You should see the following if the verification was successful:
-
-```
-gpg: assuming signed data in 'manifest-v0.11.0-beta.txt'
-gpg: Signature made Wed Aug 19 18:22:45 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-```
-
-That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
-
-## Verifying the Release Timestamp 
-
-From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-v0.11.0-beta.txt.sig.ots` and `manifest-v0.11.0-beta.txt.ots`. 
-
-Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
-```
-ots verify manifest-v0.11.0-beta.txt.ots
-ots verify manifest-v0.11.0-beta.txt.sig.ots
-```
-
-These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
-
-## Verifying the Release Binaries
-
-Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved. The release binaries are compiled with `go1.14.7`, which is required by verifiers to arrive at the same ones. They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, and `watchtowerrpc`. Note that these are already included in the release script, so they do not need to be provided.
-
-The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
-
-Finally, you can also verify the _tag_ itself with the following command:
-
-```
-$ git verify-tag v0.11.0-beta
-gpg: Signature made Wed Aug 19 07:19:57 2020 PDT
-gpg:                using RSA key 9C8D61868A7C492003B2744EE7D737B67FA592C7
-gpg: Good signature from &quot;Conner Fromknecht &lt;conner@lightning.engineering&gt;&quot; [ultimate]
-```
-
-# Building the Contained Release 
-
-Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming that `vendor.tar.gz` and `lnd-source-v0.11.0-beta.tar.gz` are in the current directory, follow these steps:
-
-```
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.11.0-beta.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.11.0-beta&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.11.0-beta&quot; ./cmd/lncli
-```
-
-The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
-
-Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
-
-```
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-```
-
-⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
-
-# Release Notes 
-
-## Wumbo Channel Support 
-
-[This version of `lnd` supports accepting and creating wumbo channels!](https://github.com/lightningnetwork/lnd/pull/4429) A wumbo channel is a channel whose total capcity is greater than `0.16 BTC` (the existing channel limit). Activating the wumbo channel feature is _opt in_ meaning users will need to set a flag (`--protocol.wumbo-channels`) in order to use it. Most users can likely get by without wumbo channels, but larger nodes or exchanges/services may really benefit from the ability to manage a smaller set of larger channels. 
-
-As is, there's no limit with respect to the size of a channel that a node will accept. However, nodes may want to limit the size of channel they'll accept in order to limt their exposure. This can be done by using a [`ChannelAcceptor` call back](https://api.lightning.community/#channelacceptor) to _reject_ all in-bound funding requests greater than a certain value. 
-
-[To coincide with this feature, the existing payment limits have been lifted in the payment related RPC calls](https://github.com/lightningnetwork/lnd/pull/4335). The max payment is now bounded by what the reciever can receive, and what the sender can route over using MPP. 
-
-## New Autopilot Heuristic 
-
-[In this version of `lnd`, we've added a new autopilot heuristic that is more robust and resistant to manipulation compared to the existing preferential attachment heuristic](https://github.com/lightningnetwork/lnd/pull/4384). This new heuristic is based on the concept [betweenness centrality](https://en.wikipedia.org/wiki/Betweenness_centrality). The betweenness centrality metric is a essentially a measure of the number of shortest paths that pass through a particular node/vertex. The new heuristic uses this value rather than the relative number of channels a node has to make attachment (channel creation) decisions. This new heuristic should be more effective for both clients and routing nodes as as it's more indicative of a nodes potential as a routing node than simply the number of channels it has. 
-
-This new mode can be activated by passing a new argument:
-```
---autopilot.heuristic=top_centrality:1.0
-```
-to lnd. Note that it's possible to blend the old and new heuristics by specifying a another linear combination of heuristics with their total weight summing up to `1.0`. The current heuristic still maintains the stochastic nature of the existing attachment heuristics. In later releases, we aim to improve on this, by doing a mini simulation to identify the best `N` new channels a node can add to maximize the gain of its betweenness centrality metrics. Once this is complete, then this metric will actually attempt to actively better position a potential routing node in the network, rather than try to connect to the node with the &quot;best&quot; value for a given metric.
-
-## Experimental Support for new Storage Backend: `etcd`
-
-[In this release of `etcd`, we've added experimental support for `etcd` as a new storage backend for `lnd`](https://github.com/lightningnetwork/lnd/pull/4015). [`etcd`](https://etcd.io/) differs from `bbolt` (the current default storage backend) in that it's a replicated database which can be run in a clustered manner. The main advantage over `bbolt` is that the replicated nature eliminates the current single point of failure that is `channel.db`. When activated, `lnd` will store data that can be reconstructed easily locally in `bbolt` (such as the channel graph), while critical data such as the current state of a channel will be replicated and stored in `etcd`. 
-
-As this mode is still experimental, in order to test out this new DB mode, users will need to compile `lnd` with the new `kvdb_etcd` build tag: `make
-install tags=kvdb_etcd`. [Before running `etcd`, users should check out the new documentation for information concerning the recommended `etcd` configuration set up](https://github.com/lightningnetwork/lnd/blob/master/docs/etcd.md). Future releases will further optimize our usage of the new database backend, eventually adding support to run `lnd` in a _clustered_ mode by by using
-`etcd`'s leader election APIs. 
-
-
-## Protocol/Spec Compliance
-
-### Sporadic Force Close Issue Resolution 
-This release fixes three distinct cases of erroneous force closes. All were related to the code that handles restarting channels, so nodes would regularly hit this if one of them flapped. Nodes should see increased stability across the network with this release.
-
-- https://github.com/lightningnetwork/lnd/pull/4430
-- https://github.com/lightningnetwork/lnd/pull/4431
-- https://github.com/lightningnetwork/lnd/pull/4432
-
-### `ChannelAnnouncement` Feature Bit Decoding 
-
-[We'll now properly include the feature bits of a `ChannelAnnouncement` in the wire messages we send out](https://github.com/lightningnetwork/lnd/pull/4342). Failing to do so would lead to sporadic disconnections when attempting to relay `ChannelAnnouncment` messages with non-empty features. To our knowledge, this mostly affected users with direct connections to Eclair nodes, which started advertising wumbo feature bits on `ChannelAnnouncement` in a recent release.
-
-### Short Channel ID Decoding 
-
-[A bug has been fixed that would otherwise cuase `lnd` incorrectly fail when decoding a zero value short channel ID](https://github.com/lightningnetwork/lnd/pull/4391). This bug is unlikely to occur during normal operation, however it was discovered that this could cause connection instability while attempting to trigger the DLP protocol during SCB restoration.
-
-
-## Support for Dynamic IPs and Domain Resolution for Node Addrs
-
-[In this version of `lnd`, a new flag has been added to allow users that either have a dynamic IP or want to advertise the resolved IP address of a domain name: `--external-hosts`](https://github.com/lightningnetwork/lnd/pull/4281). This new flag can be set to a series of external hosts. If this flag is set, then `lnd` will peridically attempt to resolve the target host, advetising the new IP address. We'll also keep track of the prior IPs reported by that domain name, and will send out a new advertisement with the most up to date IP addresses if we detect a change. 
-
-## RPC Enhancement and Bug Fixes 
-
-### New External Coin Selection API 
-
-[In this release, we've added a new set of calls to the `WalletKit` sub-server that allows clients to perform custom coin selection](https://github.com/lightningnetwork/lnd/pull/4303). Along-side the existing `SignRPC` sub-server calls, [this set of APIs allows clients to manually construct, sign and broadcast custom transactions](https://api.lightning.community/#service-walletkit). This may also be combined with the new PSBT APIs to carry out complex multi-party protocols. 
-
-Three new RPC calls have been added:
-* `ListUnspent`: a copy of the existing `ListUnspent` RPC in `LightningClient`, which has been marked as deprecated in favor of using the `walletrpc` one.
-* `LeaseOutput`: lease an output for a predetermined amount of time bound to a unique ID to ensure no other applications can lease the same output.
-* `ReleaseOutput`: if the lease for an output is no longer needed, it can be returned to the set of spendable UTXOs manually through this RPC, or it will be done automatically by the wallet once the lease expires.
-
-### New Wallet Recovery Progress API
-
-This release features a [new RPC to track the progress of an ongoing wallet recovery attempt](https://github.com/lightningnetwork/lnd/pull/4106). This RPC lives within the `WalletKit` sub-server and exposes the progress as a floating point value between 0 and 1.
-
-### New HTLC Interception API 
-
-[This new release of `lnd` contains a new RPC API which is essentially the forwarded HTLC analgogue of the existing &quot;hodl&quot; invoice API](https://api.lightning.community/#htlcinterceptor). [This new API allows for _custom_ forward policies to be implemented](https://github.com/lightningnetwork/lnd/pull/4018). With the new API, for each forwarded HTLC, a call-back implemented as a streaming RPC will be called. With that call back, users can either signal they want the HTLC to immediately be settled, held, or instantly failed. This new API allows for a number of cool use cases such as notifying off-line clients of a new incoming payment (HTLC mailbox) and also opening a channel to a client in order to satisfy an incoming HTLC forwaard event. 
-
-This new API also allows user to examine any custom records which may have been dropped off to intermediate nodes by the sender. This intermedaite node custom records have no &quot;official&quot; protocol use, but some interesting meta-protocol are possible with its inclusion. 
-
-
-### Hodl Keysend Payments 
-
-[With this new version of lnd, we've added a new option to `lnd` to hold received keysend payments in the accepted state for a configured period of time](https://github.com/lightningnetwork/lnd/pull/4167). During this time, an application can inspect the payment parameters and decide whether to cancel or settle this payment.
-
-Example: a keysend payment with an embedded order comes in. The payment is held and an external application checks that the paid amount is sufficient for the ordered goods. If not, the payment is canceled without the need to refund anything. If the amount is sufficient, the payment is settled and the order processed.
-
-This PR makes development of applications like [tlvshop.com](https://tlvshop.com/) possible without forking `lnd`.
-
-Users can use the existing `SettleInvoice` call to manually settle inbound keysend payments if the `--keysend-hold-time` flag is set. 
-
-### Updated Close Summary
-The `CloseChannelSummary` returned by the `ClosedChannels` endpoint has been updated to [include a list of on chain actions](https://github.com/lightningnetwork/lnd/pull/4157) that were taken to resolve channels that were force closed. The on chain actions taken depend on the type of commitment the channel had, and the party that force closed.
-* Commit sweep: Present if our node force closed the channel, represents sweeping of our own balance, which is behind a timelock for local force closes, back to our own wallet.
-* Incoming HTLC: Incoming htlcs offer to pay your node funds in exchange for reveal of a preimage. If your node had knowledge of the preimage, these outputs will reflect as having been claimed, which means your node swept the funds to itself. If your node force closed, this claim will have two on chain resolutions, a success transaction followed by a sweep. Otherwise, the remote party will have timed out the htlc.
-* Outgoing HTLC: Outgoing htlcs are offers that you make to pay a node in exchange for a preimage. If the remote party has knowledge of the preimage, they htlc will reflect as having been claimed, and the funds are swept by the remote party. If they do not provide the preimage before the timeout, our node will sweep the funds back to itself, and the htlc will reflect as having been timed out. If your node force closed, this timeout will have two on chain resolutions, a timeout transaction followed by a sweep.
-* Anchor: Present if the channel was created using the experimental anchors commitment format. These outputs can either be swept back to the wallet by our node, or claimed by another party if we did not sweep it within 16 blocks.
-
-### New List Sweeps API
-A new `ListSweeps` endpoint that [provides a list of all the on chain transactions that lnd has published to sweep funds back to its own wallet](https://github.com/lightningnetwork/lnd/pull/4139) has been added to the walletrpc subserver. By default, the endpoint returns a list of transaction IDs. The `verbose` option can be used to provide full transaction details, identical to those provided in the existing `GetTransactions` endpoint. 
-
-### Height Parameters for GetTransactions
-The `GetTransactions` endpoint was [updated to take a start and end height parameter](https://github.com/lightningnetwork/lnd/pull/4139), both values are inclusive. If the start height provided is greater than the end height, transactions will be listed in reverse order (from highest to lowest block). To include unconfirmed transactions in your query, the end height should be set to -1, and a list of transactions from start height to chain tip will be returned. This option is set by default to maintain backwards compatibility with the old API. 
-
-### Transaction Labelling
-On chain transactions broadcast by LND [can now be labelled with strings](https://github.com/lightningnetwork/lnd/pull/4213) up to 500 characters long. These labels can be added on transaction creation when using the various on chain sending APIs, or [retrospectively using the `LabelTransaction` endpoint](https://github.com/lightningnetwork/lnd/pull/4228) in the walletkit. If a transaction already has a label, you will need to explicitly set an overwrite flag.These labels are visible in the output of `GetTransactions`. 
-
-
-### Payments Indexing
-Payments in lnd are uniquely identified by a payment index which is auto-incremented as we dispatch payment attempts. Previously, calls to `ListPayments` allowed pagination using these indexes, but required that we fetch all payments from the database and sift through them to find payments lying in the correct range. This caused performance issues for nodes with large numbers of payments. This release adds [an index by sequence number](https://github.com/lightningnetwork/lnd/pull/4261) which allows efficient lookup of payments in a range. The pagination API itself has not changed, but node operators with a lot of payments can expect a performance increase.
-
-### Funding Shims
-
-The existing thaw height field of a funding shim has had a change in interpretation. Previously, the field was considered to be an absolute height of the backing blockchain. [Now, values below 500,000 will be interpreted as a delta from a channel's funding transaction's confirmation height](https://github.com/lightningnetwork/lnd/pull/4428).
-
-### Custom Max HTLC Value in Flight
-
-[An optional max value in flight may now be provided when opening channels](https://github.com/lightningnetwork/lnd/pull/971), allowing users to limit their pending value exposure.
-
-### Multi-Channel Outgoing Payment Restriction 
-
-[The payment RPCs now support sticking to a set of specified channels during path finding](https://github.com/lightningnetwork/lnd/pull/4257). This allows for more fine-grained path contorl, as if one want sto rebalance a specific set of channels, they can use this along with the existing allow/deny lists to force lnd to take a specific route. 
-
-
-### REST API
-
-With a series of pull requests the REST API has been overhauled quite notably. First of all, [REST is now enabled on all (experimental) subservers](https://github.com/lightningnetwork/lnd/pull/4251). This allows users of the REST API to make use of the new MPP enabled payment calls ([`Router.SendPaymentV2`](https://github.com/lightningnetwork/lnd/blob/master/lnrpc/routerrpc/router.proto#L17)) for example.  
-Then, to make the many server-streaming RPC calls available to REST users, a [WebSocket proxy was added](https://github.com/lightningnetwork/lnd/pull/4141) that transforms streaming responses from single line JSON strings on a keep-alive HTTP response into proper WebSocket messages.  
-Our [online API documentation](https://api.lightning.community) now also shows a [JavaScript example of how to use the WebSockets](https://api.lightning.community?javascript#v2-router-send).
-
-To make our RPC protobuf definitions easier to use and compile by other projects, we removed the Google annotations from our `rpc.proto` file and instead [extracted all REST definitions into the file `lnrpc/rest-annotations.yaml`](https://github.com/lightningnetwork/lnd/blob/master/lnrpc/rest-annotations.yaml).
-
-### Bug Fixes
-
-[We'll now properly parse both possible `KeyDescriptor` fields for all calls to the `signrpc` sub-server](https://github.com/lightningnetwork/lnd/pull/4356). 
-
-[While the server hasn't yet fully started, we'll now omit uptime information in `ListChannels` as we wouldn't have connected out to any peers by then.](https://github.com/lightningnetwork/lnd/pull/4176)
-
-[Pagination for the ListInvoices was updated to return invoices when called with the reversed flag set, and the last index offset was greater than the number of invoices on disk.](https://github.com/lightningnetwork/lnd/pull/4261/commits/eea871b5831b01c77c27d4f37e99f67217a3f2d8) Previously, this endpoint would return no invoices if the API was called with the reversed flag and did not have the precise number of invoices as its offset. 
-
-## `htlcswitch` Improvements 
-
-[We'll now log each time an HTLC is succesfully forwarded on the least verbose logging level (info)](https://github.com/lightningnetwork/lnd/pull/3018). This allows users to monitor their logs to detect sueccesfully forwarded HTLCs. 
-
-[Payments initiated by the routing will now be directly handed to the link, rather than going through the switch first](https://github.com/lightningnetwork/lnd/pull/4183). This results in lower latency for MPP payments, and also ensures that a link is able to actually carry the HTLC before the router moves onto the next payment shard. 
-
-## AMP Progress
-
-As a stepping stone towards enabling Atomic Multi-path Payments, `0.11.0` [now indexes all newly created invoices by `payment_addr`](https://github.com/lightningnetwork/lnd/pull/4285) in addition to the typical `payment_hash` index. Unlike MPP, the `payment_hash` of AMP HTLCs is not known to the sender at the time of invoice creation. Additionally, the `payment_hash` of each HTLC is expected to be unique, which creates an n-to-1 mapping of `payment_hash` to invoice.
-
-In the future, `payment_addr` will serve as a universal identifier for both MPP and AMP invoices, as it provides a consistent 1-to-1 mapping for both payment types. The remaining pieces of the AMP saga are expected to appear in a later release, at which point users will be able to query and/or interact with invoices via RPC using `payment_addr` as the primary identifier. As of now, the plan is to continue to support RPC interactions via `payment_hash` for MPP invoices as is done today.
-
-## Build process
-
-Writing software that compiles and runs on all major operating systems and hardware architectures has become increasingly involved. Our Continuous Integration platform Travis only lets us run a certain number of parallel tasks which limited what we could automatically compile and test on each new commit. [Offloading some of those tasks to run as GitHub Workflows](https://github.com/lightningnetwork/lnd/pull/4220) has allowed us to add cross-compilation checks for all major operating systems. [Travis now only runs a very basic sanity check and unit tests](https://github.com/lightningnetwork/lnd/pull/4482). Splitting the work between GitHub and Travis also freed up two build slots where we now run [integration tests on ARM](https://github.com/lightningnetwork/lnd/pull/4408) and [on Windows](https://github.com/lightningnetwork/lnd/pull/4475).
-
-A [number of small improvements to our integration tests in general](https://github.com/lightningnetwork/lnd/pull/4344) reduced the flakiness of those tests significantly.
-
-Production binaries built from source via `make install` are now [stripped of DWARF symbols and are ~20% smaller](https://github.com/lightningnetwork/lnd/pull/4262).
-
-## Full-Node Compatability Updates 
-
-[This new version of `lnd` now properly supports `bitcoind v0.20`](https://github.com/lightningnetwork/lnd/pull/4366). 
-
-[The latest `master` branch of `btcd` is now also supported as well](https://github.com/lightningnetwork/lnd/pull/4291). 
-
-## Safety Improvements 
-
-### SCB Recovery 
-
-This release of `lnd` fixes an existing bug that would at times replace the on-disk SCB state with fresh information, if `lnd` was started in SCB recovery mode (a clean slate) with an _existing_ SCB file on disk. [With this new version of `lnd`, we'll now always combine our in memory state with what's on disk, ensuring that we never override the information on disk](https://github.com/lightningnetwork/lnd/pull/4379). 
-
-[We'll also no longer insert a recovered SCB channel into the graph database](https://github.com/lightningnetwork/lnd/pull/4370). This resolves a number of edge cases, and also makes the recovery process much simpler. 
-
-### PSBT Channel Funding 
-
-The recently introduced PSBT channel funding flow was found to be risky when used to open multiple channels in one batch transaction. It can happen that the funding transaction is published too early and some of the channel funds get stuck. To mitigate that risk, we [added the `--no-publish` flag to the PSBT funding flow](https://github.com/lightningnetwork/lnd/pull/4455).
-
-### On-Chain Contract Handling 
-
-[We'll now properly clean up local state within the database after a local channel breach](https://github.com/lightningnetwork/lnd/pull/3892). 
-
-
-- Add `--dry-run-migration` config option [#2668](https://github.com/lightningnetwork/lnd/pull/2668), which will prevent `lnd` from committing migrations on startup. This provides two useful features:
-    - Avoids unexpected migrations that would otherwise prevent downgrading to a prior database version.
-    - Allows users to aid in testing migrations for correctness and to guage performance on real-world databases.
-
-## Refactoring
-This release sees the addition of the [`lnwallet/chancloser`](https://github.com/lightningnetwork/lnd/pull/4365) and [`peer`](https://github.com/lightningnetwork/lnd/pull/4347) packages. This modularization will help with testing now that these components are properly isolated and can be imported into other packages.
-
-## Bug fixes
-
-- Fixed sporadic `tls: internal error: failed to clone hash` error that [was caused by a faulty library import](https://github.com/lightningnetwork/lnd/pull/4300).
-- Added a sanity check to the Tor configuration options that [disallows setting Tor socks and control port to the same value](https://github.com/lightningnetwork/lnd/pull/4207).
-- Fixed several `subscribeinvoice` bugs [#4298](https://github.com/lightningnetwork/lnd/pull/4298):
-    - Backlogs are now delivered properly even if no invoices have been settled.
-    - Two separate race conditions that may have lead to duplicate notifications are now resolved.
-- Fixed properly [annotating certain classes of closed channels in the database](https://github.com/lightningnetwork/lnd/pull/4361)
-- [Fixed a panic that could arise if a notification of the `ChainNotifier` sub-server is cancelled as a new block arrives](https://github.com/lightningnetwork/lnd/pull/4355).
-- [We'll now log the full raw TX hex of any broadcasted funding transactions](https://github.com/lightningnetwork/lnd/pull/4341).
-- [A bug has been fixed to prevent a panic when accepting an incompatible output index in the wallet](https://github.com/lightningnetwork/lnd/pull/4302).
-- [A bug that could arise when a client switches between multiple towers has been fixed](https://github.com/lightningnetwork/lnd/pull/4274).
-- [We'll now ignore reconnection for unadvertised inbound peers over Tor](https://github.com/lightningnetwork/lnd/pull/4194).
-- [Bad features will no longer cause path finding to fail early](https://github.com/lightningnetwork/lnd/pull/4327).
-- [Fixed a potential overflow when processing channel range query replies](https://github.com/lightningnetwork/lnd/pull/4395).
-- A bug has been fixed that would cause `lnd` to at times overpay [on chain transactions due to a dust miscalculation](https://github.com/lightningnetwork/lnd/pull/4534). 
-
-
-The full list of changes since `v0.10.0-beta` can be found here:
-
-* https://github.com/lightningnetwork/lnd/compare/v0.10.0-beta...v0.11.0-beta
-
-# Contributors (Alphabetical Order)
-
-Andreas M. Antonopoulos
-András Bánki-Horváth
-Anthony Ronning
-Bjarne Magnussen
-Brian Mancini
-CandleHater
-Carla Kirk-Cohen
-Conner Fromknecht
-cryptagoras
-ErikEk
-Eugene Siegel
-fguisso
-Gabriel Comte
-Jake Sylvestre
-Jasper Rädisch
-Johan T. Halseth
-Joost Jager
-Markus Fix
-Matheus Degiovani
-Olaoluwa Osuntokun
-Oliver Gugger
-Roei Erez
-Sebastian Falbesoner
-vctt94
-Wilmer Paulino
-yyforyongyu</summary>
-    <title>lightningnetwork/lnd: v0.11.0-beta</title>
-    <updated>2020-08-20T16:08:29Z</updated>
-    <dc:date>2020-08-20T16:08:29Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.5</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.5"/>
-    <summary>### Improvements
-* UI: Improve mobile login views (#1833 @DennisReimann)
-* Pull payments claim &amp; payout notification rewording (#1825 @Zaxounette)
-* Do not load webfonts from google font server, serve locally (@DennisReimann)
-
-### Bug fixes
-* Fix some crashes when switching from Altcoins edition to Bitcoin-Only. (@Kukks @NicolasDorier)
-* Fix invoices CSV Export formatting introduced in 1.0.5.4 (@NicolasDorier)
-* UI: Fix custom-select glitch (#1822 @DennisReimann)
-* Fix crash with hitbtc rate provider (@NicolasDorier)</summary>
-    <title>btcpayserver/btcpayserver: v1.0.5.5</title>
-    <updated>2020-08-16T14:37:17Z</updated>
-    <dc:date>2020-08-16T14:37:17Z</dc:date>
-  </entry>
-  <dc:date>2021-01-07T19:01:18+00:00</dc:date>
+  <dc:date>2021-01-07T20:02:05+00:00</dc:date>
 </feed>
