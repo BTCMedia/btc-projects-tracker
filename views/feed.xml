@@ -6,7 +6,42 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-07T22:01:42+00:00</updated>
+  <updated>2021-01-07T23:01:30+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.2</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.2"/>
+    <summary>* ADD: Easily share a Vault key with QR code
+* ADD: How many signatures can this Vault make
+* ADD: Electrum servers history - fast connect
+* ADD: Ability to set servers via QR code scanning 
+* ADD: CoinControl multi-selection
+* FIX: better support multisig cosigning with Electrum desktop
+* FIX: multisig 'Too many signatures' error
+* FIX: Amount displayed on success invoice payment
+* FIX: localizations for fr_FR, es_ES, de_DE, fa_IR, cs_CZ, fr_FR, nl_NL, fi_FI
+* FIX: Hide balance on reorder screen
+* FIX: disallow importing non-multisignature xpubs into multisig setup
+* FIX: better multisig wallet descriptors suppport
+* FIX: Incorrect import from Specter - p2sh wrapped segwit multisig
+* FIX: Clear quick actions if storage is encrypted
+* FIX: use dayjs localizedFormat plugin to render tx time
+* FIX: show more accurate precalculation fee on &quot;Not enough balance.&quot; exception
+* FIX: Wallet Delete on new install was not being triggered
+* FIX: Fallback to English if case isn't found
+* FIX: animated qr scan progress readability
+* FIX: rerender UI after language change
+* FIX: Hide modal when scanning
+* FIX: reorder screen bug
+* FIX: Don't show clipboard modal if user has already acted on it
+* REF: processing push notifications
+* REF: Add warning to LN
+* REF: Github link on about
+* DOC: Telegram and Discord links on about section
+</summary>
+    <title>BlueWallet/BlueWallet: v6.0.2</title>
+    <updated>2021-01-07T22:06:03Z</updated>
+    <dc:date>2021-01-07T22:06:03Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.0.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.0.0"/>
@@ -6106,38 +6141,5 @@ There are two types of binaries in this release:
     <updated>2020-08-27T14:55:48Z</updated>
     <dc:date>2020-08-27T14:55:48Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.0</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.0"/>
-    <summary># Binaries
-There are two types of binaries in this release:
-- specter_desktop - a windowed GUI application with Specter server included
-- specterd  - a command-line program that only runs Specter server
-
-*Note for MacOS:* If Specter-Desktop app appears in the tray, but doesn't start the server, go to Applications, find the app, right-click on it and select &quot;Open&quot; - it should solve the problem once and for all, so next time you should be able to launch it as normal.
-
-# Release notes
-- Build: Create Specter Desktop app  (#273, #308) (@stepansnigirev, @ben-kaufman)
-- Bugfix: Fix importing PSBT functionality (#291) (@ben-kaufman)
-- Bugfix: Fix issue with using xpub with no derivation (`m` only) (#282) (@hodlwave)
-- Bugfix: Fix issue with uploading PSBT from SD card (#292) (@luclefleur)
-- Bugfix: Fix error when creating wallet with single quotes in name (#300) (@luclefleur)
-- Bugfix: Fix signing issue on Cobo Vault (#301) (@stepansnigirev)
-- Bugfix: Fix export format for Cobo Vault and Coldcard (#301) (@stepansnigirev)
-- Bugfix: Fix validation of send form when the amount field is empty (#303) (@ben-kaufman)
-- Bugfix: Fix issue with creating wallets (#305) (@stepansnigirev)
-- Bugfix: Fix BTC to sat unit conversion mistake of x10 on Send tab amount input (#314) (@ben-kaufman)
-- Feature: Sats the standard - allow using sats instead of BTC as Specter's unit of account (#306) (@ben-kaufman)
-- Feature: Add a list of the wallet's past addresses to the Receive tab (#296) (@ben-kaufman)
-- Feature: Run the numbers! (Add calculate total BTC supply options to node info screen) (#304) (@ben-kaufman)
-- UI: Ask user to extract backup ZIP before uploading Specter backup folder (#307) (@ben-kaufman)
-- UI: Fix Tor popup typo (#310) (@TheCharlatan)
-- UI: Configure local and remote HWI in one place (#312) (@stepansnigirev)
-- Docs: Add a missing instruction for building with pyinstaller (#285) (@mflaxman)
-- Docs: Update README and screenshots (#309) (@ben-kaufman)</summary>
-    <title>cryptoadvance/specter-desktop: v0.7.0</title>
-    <updated>2020-08-27T12:23:15Z</updated>
-    <dc:date>2020-08-27T12:23:15Z</dc:date>
-  </entry>
-  <dc:date>2021-01-07T22:01:42+00:00</dc:date>
+  <dc:date>2021-01-07T23:01:30+00:00</dc:date>
 </feed>
