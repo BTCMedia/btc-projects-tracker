@@ -31,5 +31,11 @@
 	"bitcoinknots/bitcoin",
 	"ACINQ/bitcoin-lib",
 	"Blockstream/satellite-api",
-	"goatpig/BitcoinArmory"
+	"goatpig/BitcoinArmory",
+	"rust-bitcoin/rust-lightning",
+	"rust-bitcoin/rust-bitcoin",
+	"rust-bitcoin/rust-miniscript",
+	"sipa/miniscript",
+	"bitcoin-core/secp256k1",
+	"bitcoin-core/HWI"
 ]
