@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-08T20:00:54+00:00</updated>
+  <updated>2021-01-08T21:03:07+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.2</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.2"/>
@@ -6141,5 +6141,5 @@ There are two types of binaries in this release:
     <updated>2020-08-27T14:55:48Z</updated>
     <dc:date>2020-08-27T14:55:48Z</dc:date>
   </entry>
-  <dc:date>2021-01-08T20:00:54+00:00</dc:date>
+  <dc:date>2021-01-08T21:03:07+00:00</dc:date>
 </feed>
