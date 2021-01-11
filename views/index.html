@@ -38,6 +38,80 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.5">v1.0.6.5</a>
+						    </h2>
+							<p class="card-text">Published: 2021-01-11 14:59:56 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This release includes changes in the way we index invoices for search.
+As such, after update, the invoice search feature of BTCPay Server might not work for a while. (~5min if you have lot&#39;s of invoices)</p>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>Support a subset of output descriptor in the wallet setup @Kukks</li>
+<li>Improved styling of the notification dropdown (see #2167) @ubolator @dennisreimann</li>
+<li>API keys and server&#39;s url can be shown as QR Code to facilitate pairing @Kukks</li>
+<li>Greenfield API: Add <code>DefaultPaymentMethod</code> to the store&#39;s settings @Kukks</li>
+<li>Greenfield API: Can configure on-chain payment methods @Kukks @NicolasDorier</li>
+<li>UI Improvements (see this <a href="https://github.com/btcpayserver/btcpayserver/pull/2151/commits">commit list</a>) @dennisreimann</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Always normalize the invoice&#39;s currency in uppercase @NicolasDorier</li>
+<li>If a label on a wallet&#39;s transaction does not have color, it should still show it @NicolasDorier</li>
+<li>Do not include Tor Location header when querying the modal checkout (see #2180) @Kukks</li>
+<li>Webhooks should not be randomly deleted anymore. @NicolasDorier</li>
+<li>Fix header not showing properly after login to BTCPay Server (see #2155) @dennisreimann</li>
+<li>Bug: Searching invoices was timing out if there was too much invoices @rockstardev @Kukks</li>
+</ul>
+
+<h3>Miscellaneous:</h3>
+
+<ul>
+<li>Removing the old text search engine (DBreeze) @rockstardev @Kukks</li>
+<li>Add doc for asking permissions to BTCPayServer see <a href="docs/greenfield-authorization.md">link</a>. @Kukks</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/mempool/mempool">mempool/mempool</a>: <a href="https://github.com/mempool/mempool/releases/tag/v2.0.0">v2.0.0</a>
+						    </h2>
+							<p class="card-text">Published: 2021-01-11 14:43:58 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>Mempool v2 is here!</p>
+
+<p><img width="1161" alt="Screen Shot 2021-01-11 at 23 38 10" src="https://user-images.githubusercontent.com/232186/104195536-16bfd480-5466-11eb-8c66-7e5ed81bf79d.png"></p>
+
+<ul>
+<li>Supports Bitcoin Core RPC, Electrum Server, or Esplora backends</li>
+<li>Fully functional block, address, and transaction explorer with APIs</li>
+<li>Dashboard layout displaying fee estimates and other real-time stats</li>
+<li>Support for multiple networks including Testnet, Liquid, and Bisq</li>
+<li>Optional support for Angular Universal Server Side Rendering</li>
+<li>Internationalization support for 20+ languages and locales</li>
+<li>And much more!</li>
+</ul>
+</p>
+					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/mempool/mempool/releases/tag/v2.0.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc5">v0.12.0-beta.rc5</a>
 						    </h2>
 							<p class="card-text">Published: 2021-01-09 01:30:55 UTC</p>
@@ -7709,210 +7783,6 @@ ecc4163c5292cef3b72580f07cfa30dae3996a95fc426ea09766a71e07d58918  rskj-core-2.1.
 					    <p class="card-text"></p>
 					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/btcsuite/btcd">btcsuite/btcd</a>: <a href="https://github.com/btcsuite/btcd/releases/tag/v0.21.0-beta">v0.21.0-beta</a>
-						    </h2>
-							<p class="card-text">Published: 2020-08-28 20:40:25 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This release of <code>btcd</code> is primarily to act as a catchup for the various changes that have accumulated and to help move back to a more regular schedule.</p>
-
-<h1>Verifying the Release</h1>
-
-<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already:</p>
-
-<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-v0.21.0-beta.txt</code> and <code>manifest-v0.21.0-beta.txt.sig</code> are in the current directory) with:</p>
-
-<p><code>
-gpg --verify manifest-v0.21.0-beta.txt.sig
-</code></p>
-
-<p>You should see the following if the verification was successful:</p>
-
-<p><code>
-gpg: assuming signed data in &#39;manifest-v0.21.0-beta.txt&#39;
-gpg: Signature made Fri 28 Aug 2020 12:40:24 PM EDT
-gpg:                using DSA key 0DB39EAF526568682088EEDFB15210D35378BD54
-gpg: Good signature from &quot;John C. Vernaleo &lt;john@netpurgatory.com&gt;&quot; [ultimate]
-</code></p>
-
-<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
-
-<h2>Verifying the Release Binaries</h2>
-
-<p>As of this release, our release binaries are <strong>fully reproducible</strong> thanks to <code>go1.13</code>! Third parties are now able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/btcsuite/btcd/tree/master/release">reproducible builds guide</a> for how this can be achieved. The release binaries are compiled with <code>go1.14</code>, which is required by verifiers to arrive at the same ones.</p>
-
-<p>Finally, you can also verify the <em>tag</em> itself with the following command:
-<code>
-git verify-tag v0.21.0-beta
-</code></p>
-
-<p>You should see something along the lines of this in the case of a valid tag:
-<code>
-gpg: Signature made Fri 28 Aug 2020 09:58:10 AM EDT
-gpg:                using DSA key 0DB39EAF526568682088EEDFB15210D35378BD54
-gpg: Good signature from &quot;John C. Vernaleo &lt;john@netpurgatory.com&gt;&quot; [ultimate]
-</code></p>
-
-<h1>Building the Contained Release</h1>
-
-<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming that <code>vendor.tar.gz</code> and <code>btcd-source-v0.21.0-beta.tar.gz</code> are in the current directory, follow these steps:</p>
-
-<p><code>
-tar -xvzf vendor.tar.gz
-tar -xvzf btcd-source-v0.21.0.tar.gz
-GO111MODULE=on go install -v -mod=vendor
-GO111MODULE=on go install -v -mod=vendor ./cmd/btcctl
-</code></p>
-
-<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory.</p>
-
-<p>Additionally, it&#39;s also possible to use the enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so:</p>
-
-<p><code>
-BTCBUILDSYS=&quot;linux-arm64 darwin-amd64&quot; ./build/release/release.sh
-</code></p>
-
-<h1>Release Notes</h1>
-
-<h4>Network-related changes:</h4>
-
-<ul>
-<li>Handle <a href="https://en.bitcoin.it/wiki/Protocol_documentation#notfound"><strong><code>notfound</code></strong></a> messages from peers in <code>netsync</code> package.  (#1603)</li>
-</ul>
-
-<h4>RPC changes:</h4>
-
-<ul>
-<li>The <code>Verbose</code> and <code>VerboseTx</code> boolean fields in <code>btcjson.GetBlockCmd</code> have been replaced with a single integer field called <code>Verbosity</code>, to reflect the new <code>getblock</code> RPC call parameters introduced in Bitcoin Core 0.15.0.  (#1529)</li>
-</ul>
-
-<p>The <code>getblock</code> RPC server command in btcd has also been updated with this change.
-  Backwards compatibility has been maintained in <code>rpcclient</code>. (#1577)
-* Added an optional <code>Params</code> field to <code>rpcclient.ConnConfig</code>, to represent the network that the server is running. (#1467)
-* Added a new error code <code>ErrRPCInWarmup</code> in <code>btcjson</code>.  (#1541)
-* Updated <code>btcjson.GetMempoolEntryResult</code> to reflect the new <code>getmempoolentry</code> response in Bitcoin Core 0.19.0.  (#1524)
-* Implemented <code>rpcclient</code> methods to invoke <code>estimatesmartfee</code> and <code>generatetoaddress</code> JSON-RPC commands.  (#1500)
-* Implemented <code>rpcclient</code> method to invoke <code>getblockstats</code> JSON-RPC command.  (#1500)
-* Parse serialized transaction from <code>createrawtransaction</code> JSON-RPC command using both segwit, and legacy format. (#1502)
-* Support cookie-based authentication using a new <code>CookiePath</code> field in <code>rpcclient.ConnConfig</code>.  (#1460)
-* Implemented <code>rpcclient</code> method to invoke <code>getchaintxstats</code> JSON-RPC command.  (#1571)
-* Implemented <code>rpcclient</code> method to invoke <code>fundrawtransaction</code> JSON-RPC command.  (#1553)
-* Implemented <code>rpcclient</code> method to invoke <code>getbalances</code> JSON-RPC command.  (#1595)
-* Added a new method <code>rpcclient.GetTransactionWatchOnly</code> to support passing the <code>include_watchonly</code> argument to <code>gettransaction</code> JSON-RPC command.  (#1592)</p>
-
-<h4>Crypto changes:</h4>
-
-<ul>
-<li>Fixed panic in <code>fieldVal.SetByteSlice</code> when called with a value larger than 32 bytes. The improved version is approximately 35% faster.  (#1602)</li>
-</ul>
-
-<h4>btcctl changes:</h4>
-
-<ul>
-<li>Added <code>-regtest</code> mode to btcctl. (#1556)</li>
-</ul>
-
-<h4>Misc changes:</h4>
-
-<ul>
-<li>Fixed a bug due to a deadlock in <code>connmgr</code>&#39;s dynamic ban scoring.  (#1509)</li>
-<li>Replaced TravisCI with GitHub Actions.  (#1575)</li>
-<li>Improved chain state init efficiency.  (#1580)</li>
-<li>Added <code>blockchain.NewUtxoEntry()</code> to directly create entries for <code>UtxoViewpoint</code>.  (#1588)</li>
-<li>Switch to a generic LRU implementation in the <code>peer</code> package, from decred/dcrd.  (#1599)</li>
-</ul>
-
-<h2>Changelog</h2>
-
-<p>The full list of changes since <code>v0.21.0-beta</code> can be found here:</p>
-
-<ul>
-<li><a href="https://github.com/btcsuite/btcd/compare/v0.20.1-beta..v0.21.0-beta">https://github.com/btcsuite/btcd/compare/v0.20.1-beta..v0.21.0-beta</a></li>
-</ul>
-
-<h1>Contributors (Alphabetical Order)</h1>
-
-<p>Anirudha Bose
-Antonin Hildebrand
-Dan Cline
-Daniel McNally
-David Hill
-Federico Bond
-George Tankersley
-Henry
-Henry Harder
-Iskander Sharipov
-Ivan Kuznetsov
-Jake Sylvestre
-Javed Khan
-JeremyRand
-Jin
-John C. Vernaleo
-Kulpreet Singh
-Mikael Lindlof
-Murray Nesbitt
-Nisen
-Olaoluwa Osuntokun
-Oliver Gugger
-Steven Roose
-Torkel Rogstad
-Tyler Chambers
-Wilmer Paulino
-Yash Bhutwala
-adiabat
-jalavosus
-mohanson
-qqjettkgjzhxmwj
-qshuai
-shuai.qi
-tpkeeper</p>
-</p>
-					    <a href="https://github.com/btcsuite/btcd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/btcsuite/btcd/releases/tag/v0.21.0-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.2">v0.7.2</a>
-						    </h2>
-							<p class="card-text">Published: 2020-08-28 10:44:07 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<ul>
-<li>specter_desktop - a windowed GUI application with Specter server included</li>
-<li>specterd  - a command-line program that only runs Specter server</li>
-</ul>
-
-<p><em>Note</em>: In the remote mode Specter-Desktop will open a new window in the browser if you are using self-signed certificates or Tor. GUI app doesn&#39;t support it yet.</p>
-
-<p><em>Note for MacOS:</em> If Specter-Desktop app appears in the tray, but doesn&#39;t start the server, go to Applications, find the app, right-click on it and select &quot;Open&quot; - it should solve the problem once and for all, so next time you should be able to launch it as normal.</p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Build: Add build scripts for building the release files (#319) (@stepansnigirev)</li>
-<li>Bugfix: In the desktop app, open a remote https/ Tor Specter node in browser instead of Qtweb  (#320) (@stepansnigirev)</li>
-<li>Bugfix: Fix specterd not shutting down after closing desktop app with <code>cmd+q</code> (#320) (@stepansnigirev)</li>
-<li>Bugfix: Fix send amount using sats units by default even when using BTC as wallet unit (#318) (@ben-kaufman)</li>
-<li>Bugfix: Fix redirect error after login (#318) (@ben-kaufman)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

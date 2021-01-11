@@ -6,7 +6,57 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-11T14:01:32+00:00</updated>
+  <updated>2021-01-11T15:02:36+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.5</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.5"/>
+    <summary>This release includes changes in the way we index invoices for search.
+As such, after update, the invoice search feature of BTCPay Server might not work for a while. (~5min if you have lot's of invoices)
+
+### Improvements:
+
+* Support a subset of output descriptor in the wallet setup @Kukks
+* Improved styling of the notification dropdown (see #2167) @ubolator @dennisreimann
+* API keys and server's url can be shown as QR Code to facilitate pairing @Kukks
+* Greenfield API: Add `DefaultPaymentMethod` to the store's settings @Kukks
+* Greenfield API: Can configure on-chain payment methods @Kukks @NicolasDorier
+* UI Improvements (see this [commit list](https://github.com/btcpayserver/btcpayserver/pull/2151/commits)) @dennisreimann
+
+### Bug fixes:
+
+* Always normalize the invoice's currency in uppercase @NicolasDorier
+* If a label on a wallet's transaction does not have color, it should still show it @NicolasDorier
+* Do not include Tor Location header when querying the modal checkout (see #2180) @Kukks
+* Webhooks should not be randomly deleted anymore. @NicolasDorier
+* Fix header not showing properly after login to BTCPay Server (see #2155) @dennisreimann
+* Bug: Searching invoices was timing out if there was too much invoices @rockstardev @Kukks
+
+### Miscellaneous:
+
+* Removing the old text search engine (DBreeze) @rockstardev @Kukks
+* Add doc for asking permissions to BTCPayServer see [link](docs/greenfield-authorization.md). @Kukks</summary>
+    <title>btcpayserver/btcpayserver: v1.0.6.5</title>
+    <updated>2021-01-11T14:59:56Z</updated>
+    <dc:date>2021-01-11T14:59:56Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/mempool/mempool/releases/tag/v2.0.0</id>
+    <link href="https://github.com/mempool/mempool/releases/tag/v2.0.0"/>
+    <summary>Mempool v2 is here!
+
+&lt;img width=&quot;1161&quot; alt=&quot;Screen Shot 2021-01-11 at 23 38 10&quot; src=&quot;https://user-images.githubusercontent.com/232186/104195536-16bfd480-5466-11eb-8c66-7e5ed81bf79d.png&quot;&gt;
+
+* Supports Bitcoin Core RPC, Electrum Server, or Esplora backends
+* Fully functional block, address, and transaction explorer with APIs
+* Dashboard layout displaying fee estimates and other real-time stats
+* Support for multiple networks including Testnet, Liquid, and Bisq
+* Optional support for Angular Universal Server Side Rendering
+* Internationalization support for 20+ languages and locales
+* And much more!</summary>
+    <title>mempool/mempool: v2.0.0</title>
+    <updated>2021-01-11T14:43:58Z</updated>
+    <dc:date>2021-01-11T14:43:58Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc5</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc5"/>
@@ -6360,179 +6410,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.7...v0.2.8</summary>
     <updated>2020-08-29T09:32:22Z</updated>
     <dc:date>2020-08-29T09:32:22Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcsuite/btcd/releases/tag/v0.21.0-beta</id>
-    <link href="https://github.com/btcsuite/btcd/releases/tag/v0.21.0-beta"/>
-    <summary>This release of `btcd` is primarily to act as a catchup for the various changes that have accumulated and to help move back to a more regular schedule.
-
-# Verifying the Release
-
-In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already:
-
-Once you have the required PGP keys, you can verify the release (assuming `manifest-v0.21.0-beta.txt` and `manifest-v0.21.0-beta.txt.sig` are in the current directory) with:
-
-```
-gpg --verify manifest-v0.21.0-beta.txt.sig
-```
-
-You should see the following if the verification was successful:
-
-```
-gpg: assuming signed data in 'manifest-v0.21.0-beta.txt'
-gpg: Signature made Fri 28 Aug 2020 12:40:24 PM EDT
-gpg:                using DSA key 0DB39EAF526568682088EEDFB15210D35378BD54
-gpg: Good signature from &quot;John C. Vernaleo &lt;john@netpurgatory.com&gt;&quot; [ultimate]
-```
-
-That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
-
-## Verifying the Release Binaries
-
-As of this release, our release binaries are **fully reproducible** thanks to `go1.13`! Third parties are now able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/btcsuite/btcd/tree/master/release) for how this can be achieved. The release binaries are compiled with `go1.14`, which is required by verifiers to arrive at the same ones.
-
-Finally, you can also verify the _tag_ itself with the following command:
-```
-git verify-tag v0.21.0-beta
-```
-
-You should see something along the lines of this in the case of a valid tag:
-```
-gpg: Signature made Fri 28 Aug 2020 09:58:10 AM EDT
-gpg:                using DSA key 0DB39EAF526568682088EEDFB15210D35378BD54
-gpg: Good signature from &quot;John C. Vernaleo &lt;john@netpurgatory.com&gt;&quot; [ultimate]
-```
-
-# Building the Contained Release
-
-Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming that `vendor.tar.gz` and `btcd-source-v0.21.0-beta.tar.gz` are in the current directory, follow these steps:
-
-```
-tar -xvzf vendor.tar.gz
-tar -xvzf btcd-source-v0.21.0.tar.gz
-GO111MODULE=on go install -v -mod=vendor
-GO111MODULE=on go install -v -mod=vendor ./cmd/btcctl
-```
-
-The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory.
-
-Additionally, it's also possible to use the enclosed `release.sh` script to bundle a release for a _specific_ system like so:
-
-```
-BTCBUILDSYS=&quot;linux-arm64 darwin-amd64&quot; ./build/release/release.sh
-```
-
-# Release Notes
-
-#### Network-related changes:
-
-* Handle [**`notfound`**](https://en.bitcoin.it/wiki/Protocol_documentation#notfound) messages from peers in `netsync` package.  (#1603)
-
-#### RPC changes:
-
-* The `Verbose` and `VerboseTx` boolean fields in `btcjson.GetBlockCmd` have been replaced with a single integer field called `Verbosity`, to reflect the new `getblock` RPC call parameters introduced in Bitcoin Core 0.15.0.  (#1529)
-
-  The `getblock` RPC server command in btcd has also been updated with this change.
-  Backwards compatibility has been maintained in `rpcclient`. (#1577)
-* Added an optional `Params` field to `rpcclient.ConnConfig`, to represent the network that the server is running. (#1467)
-* Added a new error code `ErrRPCInWarmup` in `btcjson`.  (#1541)
-* Updated `btcjson.GetMempoolEntryResult` to reflect the new `getmempoolentry` response in Bitcoin Core 0.19.0.  (#1524)
-* Implemented `rpcclient` methods to invoke `estimatesmartfee` and `generatetoaddress` JSON-RPC commands.  (#1500)
-* Implemented `rpcclient` method to invoke `getblockstats` JSON-RPC command.  (#1500)
-* Parse serialized transaction from `createrawtransaction` JSON-RPC command using both segwit, and legacy format. (#1502)
-* Support cookie-based authentication using a new `CookiePath` field in `rpcclient.ConnConfig`.  (#1460)
-* Implemented `rpcclient` method to invoke `getchaintxstats` JSON-RPC command.  (#1571)
-* Implemented `rpcclient` method to invoke `fundrawtransaction` JSON-RPC command.  (#1553)
-* Implemented `rpcclient` method to invoke `getbalances` JSON-RPC command.  (#1595)
-* Added a new method `rpcclient.GetTransactionWatchOnly` to support passing the `include_watchonly` argument to `gettransaction` JSON-RPC command.  (#1592)
-
-#### Crypto changes:
-
-* Fixed panic in `fieldVal.SetByteSlice` when called with a value larger than 32 bytes. The improved version is approximately 35% faster.  (#1602)
-
-#### btcctl changes:
-
-* Added `-regtest` mode to btcctl. (#1556)
-
-#### Misc changes:
-
-* Fixed a bug due to a deadlock in `connmgr`'s dynamic ban scoring.  (#1509)
-* Replaced TravisCI with GitHub Actions.  (#1575)
-* Improved chain state init efficiency.  (#1580)
-* Added `blockchain.NewUtxoEntry()` to directly create entries for `UtxoViewpoint`.  (#1588)
-* Switch to a generic LRU implementation in the `peer` package, from decred/dcrd.  (#1599)
-
-## Changelog
-
-The full list of changes since `v0.21.0-beta` can be found here:
-
-* https://github.com/btcsuite/btcd/compare/v0.20.1-beta..v0.21.0-beta
-
-# Contributors (Alphabetical Order)
-
-Anirudha Bose
-Antonin Hildebrand
-Dan Cline
-Daniel McNally
-David Hill
-Federico Bond
-George Tankersley
-Henry
-Henry Harder
-Iskander Sharipov
-Ivan Kuznetsov
-Jake Sylvestre
-Javed Khan
-JeremyRand
-Jin
-John C. Vernaleo
-Kulpreet Singh
-Mikael Lindlof
-Murray Nesbitt
-Nisen
-Olaoluwa Osuntokun
-Oliver Gugger
-Steven Roose
-Torkel Rogstad
-Tyler Chambers
-Wilmer Paulino
-Yash Bhutwala
-adiabat
-jalavosus
-mohanson
-qqjettkgjzhxmwj
-qshuai
-shuai.qi
-tpkeeper
-</summary>
-    <title>btcsuite/btcd: v0.21.0-beta</title>
-    <updated>2020-08-28T20:40:25Z</updated>
-    <dc:date>2020-08-28T20:40:25Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.2</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.2"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-- specter_desktop - a windowed GUI application with Specter server included
-- specterd  - a command-line program that only runs Specter server
-
-*Note*: In the remote mode Specter-Desktop will open a new window in the browser if you are using self-signed certificates or Tor. GUI app doesn't support it yet.
-
-*Note for MacOS:* If Specter-Desktop app appears in the tray, but doesn't start the server, go to Applications, find the app, right-click on it and select &quot;Open&quot; - it should solve the problem once and for all, so next time you should be able to launch it as normal.
-
-# Release notes
-
-- Build: Add build scripts for building the release files (#319) (@stepansnigirev)
-- Bugfix: In the desktop app, open a remote https/ Tor Specter node in browser instead of Qtweb  (#320) (@stepansnigirev)
-- Bugfix: Fix specterd not shutting down after closing desktop app with `cmd+q` (#320) (@stepansnigirev)
-- Bugfix: Fix send amount using sats units by default even when using BTC as wallet unit (#318) (@ben-kaufman)
-- Bugfix: Fix redirect error after login (#318) (@ben-kaufman)
-</summary>
-    <title>cryptoadvance/specter-desktop: v0.7.2</title>
-    <updated>2020-08-28T10:44:07Z</updated>
-    <dc:date>2020-08-28T10:44:07Z</dc:date>
-  </entry>
-  <dc:date>2021-01-11T14:01:32+00:00</dc:date>
+  <dc:date>2021-01-11T15:02:36+00:00</dc:date>
 </feed>
