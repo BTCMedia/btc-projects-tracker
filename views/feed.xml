@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-11T16:02:04+00:00</updated>
+  <updated>2021-01-11T17:02:08+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc1</id>
+    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc1"/>
+    <summary></summary>
+    <title>ElementsProject/lightning: v0.9.3rc1</title>
+    <updated>2021-01-11T16:48:00Z</updated>
+    <dc:date>2021-01-11T16:48:00Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.5</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.5"/>
@@ -6402,13 +6410,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.7...v0.2.8</summary>
     <updated>2020-08-30T18:06:00Z</updated>
     <dc:date>2020-08-30T18:06:00Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.5</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.5"/>
-    <summary></summary>
-    <title>getumbrel/umbrel: v0.2.5</title>
-    <updated>2020-08-29T09:32:22Z</updated>
-    <dc:date>2020-08-29T09:32:22Z</dc:date>
-  </entry>
-  <dc:date>2021-01-11T16:02:04+00:00</dc:date>
+  <dc:date>2021-01-11T17:02:08+00:00</dc:date>
 </feed>
