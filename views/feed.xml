@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-12T20:01:04+00:00</updated>
+  <updated>2021-01-12T21:02:37+00:00</updated>
+  <entry>
+    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.5</id>
+    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.5"/>
+    <summary>Update `unchained-wallets` version in order to support new Coldcard firmware version.</summary>
+    <title>unchained-capital/caravan: v0.3.5</title>
+    <updated>2021-01-12T20:01:19Z</updated>
+    <dc:date>2021-01-12T20:01:19Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/mempool/mempool/releases/tag/v2.0.1</id>
     <link href="https://github.com/mempool/mempool/releases/tag/v2.0.1"/>
@@ -6405,13 +6413,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.7...v0.2.8</summary>
     <updated>2020-09-02T13:20:02Z</updated>
     <dc:date>2020-09-02T13:20:02Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.7</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.7"/>
-    <summary></summary>
-    <title>getumbrel/umbrel: v0.2.7</title>
-    <updated>2020-08-31T15:12:26Z</updated>
-    <dc:date>2020-08-31T15:12:26Z</dc:date>
-  </entry>
-  <dc:date>2021-01-12T20:01:04+00:00</dc:date>
+  <dc:date>2021-01-12T21:02:37+00:00</dc:date>
 </feed>
