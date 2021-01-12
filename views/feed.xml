@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-12T05:02:51+00:00</updated>
+  <updated>2021-01-12T06:02:01+00:00</updated>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc1</id>
     <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc1"/>
@@ -6410,5 +6410,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.7...v0.2.8</summary>
     <updated>2020-08-30T18:06:00Z</updated>
     <dc:date>2020-08-30T18:06:00Z</dc:date>
   </entry>
-  <dc:date>2021-01-12T05:02:51+00:00</dc:date>
+  <dc:date>2021-01-12T06:02:01+00:00</dc:date>
 </feed>
