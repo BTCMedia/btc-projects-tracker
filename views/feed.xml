@@ -6,7 +6,18 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-12T12:03:31+00:00</updated>
+  <updated>2021-01-12T13:00:51+00:00</updated>
+  <entry>
+    <id>https://github.com/mempool/mempool/releases/tag/v2.0.1</id>
+    <link href="https://github.com/mempool/mempool/releases/tag/v2.0.1"/>
+    <summary>Mempool v2.0.1 is a hotfix release:
+
+* Fixes memory leak by not stacking data in the scan accumulator (#273)
+* Also handle going from zero to initial graph data on dashboard</summary>
+    <title>mempool/mempool: v2.0.1</title>
+    <updated>2021-01-12T12:19:10Z</updated>
+    <dc:date>2021-01-12T12:19:10Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc1</id>
     <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc1"/>
@@ -6402,13 +6413,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.7...v0.2.8</summary>
     <updated>2020-08-31T15:12:26Z</updated>
     <dc:date>2020-08-31T15:12:26Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.6</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.6"/>
-    <summary></summary>
-    <title>getumbrel/umbrel: v0.2.6</title>
-    <updated>2020-08-30T18:06:00Z</updated>
-    <dc:date>2020-08-30T18:06:00Z</dc:date>
-  </entry>
-  <dc:date>2021-01-12T12:03:31+00:00</dc:date>
+  <dc:date>2021-01-12T13:00:51+00:00</dc:date>
 </feed>
