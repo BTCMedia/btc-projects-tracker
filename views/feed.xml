@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-14T02:01:54+00:00</updated>
+  <updated>2021-01-14T03:02:51+00:00</updated>
+  <entry>
+    <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.3</id>
+    <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.3"/>
+    <summary>with mempool 2.0.1, specter 1.0.0, joininbox v0.1.16 &amp; smaller updates + fixes</summary>
+    <title>rootzoll/raspiblitz: v1.6.3</title>
+    <updated>2021-01-14T02:48:02Z</updated>
+    <dc:date>2021-01-14T02:48:02Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.5</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.5"/>
@@ -6395,23 +6403,5 @@ ecc4163c5292cef3b72580f07cfa30dae3996a95fc426ea09766a71e07d58918  rskj-core-2.1.
     <updated>2020-09-05T21:32:45Z</updated>
     <dc:date>2020-09-05T21:32:45Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.8</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.8"/>
-    <summary>Umbrel v0.2.8 (#216)
-
-This update improves the reliability of automatic channel backups.
-
-Changes:
-
-- Increase decoy backup max interval to 12 hours (#214) a88541a
-- Handle backup upload failure (#215) 9363d62
-- Make backups thread safe (#213) 514fad9
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.2.7...v0.2.8</summary>
-    <title>getumbrel/umbrel: v0.2.8</title>
-    <updated>2020-09-02T13:20:02Z</updated>
-    <dc:date>2020-09-02T13:20:02Z</dc:date>
-  </entry>
-  <dc:date>2021-01-14T02:01:54+00:00</dc:date>
+  <dc:date>2021-01-14T03:02:51+00:00</dc:date>
 </feed>
