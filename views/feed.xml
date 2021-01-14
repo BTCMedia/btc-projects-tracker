@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-14T08:01:46+00:00</updated>
+  <updated>2021-01-14T09:02:32+00:00</updated>
   <entry>
     <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.3</id>
     <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.3"/>
@@ -6403,5 +6403,5 @@ ecc4163c5292cef3b72580f07cfa30dae3996a95fc426ea09766a71e07d58918  rskj-core-2.1.
     <updated>2020-09-05T21:32:45Z</updated>
     <dc:date>2020-09-05T21:32:45Z</dc:date>
   </entry>
-  <dc:date>2021-01-14T08:01:46+00:00</dc:date>
+  <dc:date>2021-01-14T09:02:32+00:00</dc:date>
 </feed>
