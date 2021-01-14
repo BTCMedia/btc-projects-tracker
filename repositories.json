@@ -37,5 +37,7 @@
 	"rust-bitcoin/rust-miniscript",
 	"sipa/miniscript",
 	"bitcoin-core/secp256k1",
-	"bitcoin-core/HWI"
+	"bitcoin-core/HWI",
+	"spesmilo/electrumx",
+	"bwt-dev/bwt"
 ]
