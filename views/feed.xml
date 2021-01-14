@@ -6,7 +6,88 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-14T15:04:12+00:00</updated>
+  <updated>2021-01-14T16:00:58+00:00</updated>
+  <entry>
+    <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.1</id>
+    <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.1"/>
+    <summary>### Changelog
+
+- Migrated to the [@bwt-dev](https://github.com/bwt-dev) github org and split up into:
+
+  [bwt](https://github.com/bwt-dev/bwt), [bwt-electrum-plugin](https://github.com/bwt-dev/bwt-electrum-plugin), [libbwt](https://github.com/bwt-dev/libbwt), [libbwt-jni](https://github.com/bwt-dev/libbwt-jni) and [libbwt-nodejs](https://github.com/bwt-dev/libbwt-nodejs).
+
+- Java Native Bindings for `libbwt` ([libbwt-jni](https://github.com/bwt-dev/libbwt-jni), #73)
+
+- Support for tracking standalone addresses (#14)
+
+  Using `--address &lt;address&gt;` or `--address-file &lt;path&gt;`.
+
+- New config options: `force_rescan` (9e7ccbe), `setup_logger` (35fc49f) and `require_addresses` (162790d)
+
+- Gracefully wait for bitcoind to warm-up (dec6d46)
+
+- Support for `android_logger` (74b2b2f)
+
+- Scrub bitcoin authentication from logs (c31def7)
+
+- Improved syncing/scanning progress updates (faba3f, 6e282fd, fdd46f3, 5ba2a0b)
+
+- Indexer: Fix excessive importing/rescanning (a20ae79)
+
+- Indexer: Fix cache invalidation for spends lookups (360eaee)
+
+- Indexer: Fix handling of missing mempool entries (e9b7511)
+
+- Electrum: Fix TCP listener not shutting down on shutdown signal (5bd639a)
+
+- Docker/CI: Update to Rust v1.49 (5bd639a)
+
+Breaking CLI changes:
+
+- The `--bare-xpub` option was removed. Use a descriptor instead.
+
+
+------------
+
+Also see the v0.2.1 releases for [bwt-electrum-plugin](https://github.com/bwt-dev/bwt-electrum-plugin/releases/tag/v0.2.1), [libbwt](https://github.com/bwt-dev/libbwt/releases/tag/v0.2.1), [libbwt-nodejs](https://github.com/bwt-dev/libbwt-nodejs/releases/tag/v0.2.1) and [libbwt-jni](https://github.com/bwt-dev/libbwt-jni/releases/tag/v0.2.1).
+
+### Installation
+
+Installation instructions are [available on the README](https://github.com/bwt-dev/bwt#installation).
+
+### Verifying signatures
+
+The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on the [PGP WoT](http://keys.gnupg.net/pks/lookup?op=vindex&amp;fingerprint=on&amp;search=0x81F6104CD0F150FC),
+[github](https://api.github.com/users/shesek/gpg_keys), [twitter](https://twitter.com/shesek), [keybase](https://keybase.io/nadav), [hacker news](https://news.ycombinator.com/user?id=nadaviv) and [this video presentation](https://youtu.be/SXJaN2T3M10?t=4).
+
+```bash
+# Download (change x86_64-linux to your platform)
+$ wget https://github.com/bwt-dev/bwt/releases/download/v0.2.1/bwt-0.2.1-x86_64-linux.tar.gz
+
+# Fetch public key
+$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC
+
+# Verify signature
+$ wget -qO - https://github.com/bwt-dev/bwt/releases/download/v0.2.1/SHA256SUMS.asc \
+  | gpg --decrypt - | grep ' bwt-0.2.1-x86_64-linux.tar.gz$' | sha256sum -c -
+
+$ tar zxvf bwt-0.2.1-x86_64-linux.tar.gz
+$ ./bwt-0.1.5-x86_64-linux/bwt --xpub &lt;xpub&gt; ...
+```
+
+The signature verification should show `Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...` and `bwt-0.2.1-x86_64-linux.tar.gz: OK`.
+
+### Reproducible builds
+
+The builds are fully reproducible.
+
+You can verify the checksums against the v0.2.1 builds on Travis CI: https://travis-ci.org/github/bwt-dev/bwt/builds/754451937
+
+See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</summary>
+    <title>bwt-dev/bwt: v0.2.1</title>
+    <updated>2021-01-14T13:06:37Z</updated>
+    <dc:date>2021-01-14T13:06:37Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.3</id>
     <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.3"/>
@@ -3090,6 +3171,98 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.14...v0.2.15</summary>
     <dc:date>2020-11-24T22:53:13Z</dc:date>
   </entry>
   <entry>
+    <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.0</id>
+    <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.0"/>
+    <summary>### Changelog
+
+- Descriptor based tracking! ✨🎉 (#1)
+
+  You can now specify output script descriptors to track via `--descriptor &lt;descriptor&gt;`. Descriptors are also used internally to represent user-provided `--xpub`s.
+
+  The HTTP API was updated to be fully descriptor-based. Wallets and wallet origins   are now identified by the descriptor checksum, addresses have descriptors associated with them,   and a new `bip32_origins` field is available based on the descriptor origin information.
+
+- Support for Electrum multi-signature wallets (#60)
+
+  For a manual server setup, this requires using the `sortedmulti()` descriptor.  For example, for a 2-of-3 wallet: `sortedmulti(2,xpub1...,xpub2...,xpub3...)`.
+
+  With the Electrum plugin, this should Just Work™.
+
+- Alpha release of [`libbwt`](https://github.com/shesek/bwt/blob/master/doc/libbwt.md) (#64), a C FFI interface for managing the bwt servers, and of [`nodejs-bwt-daemon`](https://github.com/shesek/bwt/tree/master/contrib/nodejs-bwt-daemon) (#65), a nodejs package that wraps it.
+
+- Support non-wallet transactions in `blockchain.transaction.get` / `GET /tx/:txid/hex` (requires txindex and no pruning)
+
+- Emit wallet rescan and blockchain sync progress updates (via mpsc, [ffi](#64) and the console)
+
+- Support binding on ephemeral port (e.g. `--http-addr 127.0.0.1:0`) (#63)
+
+- Reduce the number of dependencies (#61)
+
+- Shutdown cleanly, via `SIGINT`/`SIGTERM` for CLI or a custom signal for library users (#62, #66)
+
+- HTTP: Alias `GET /txs/since/0` as `GET /txs`
+
+- Fix `blockchain.scripthash.listunspent` / `Query::list_unspent` to return an empty set instead of erroring when there's no history.
+
+- Electrum: Fix `mempool.get_fee_histogram` (5af7bfc62d7d98)
+
+- Upgrade to rust-bitcoin v0.25, rust-miniscript v4.0.0 and rust-bitcoincore-rpc v0.12
+
+Breaking CLI changes:
+
+- The `-d` CLI option was changed to mean `--descriptor` instead of `--bitcoind-dir` (which is now available as `-r`).
+
+- Renamed `--http-server-addr` to `--http-addr` and `--electrum-rpc-addr` to `--electrum-addr`
+
+- The CLI now accepts a single `--rescan-since` timestamp instead of a separate one for each descriptor/xpub.
+
+- The separator for environment variables with multiple values is now `;` instead of `,`.
+  For example: `DESCRIPTORS=&quot;wpkh(xpub../0/*);wpkh(xpub../1/*)&quot;`
+
+
+------------
+
+### Downloads
+
+|         | Full Server &lt;sup&gt;1&lt;/sup&gt; | Electrum Server &lt;sup&gt;2&lt;/sup&gt; | Electrum Plugin &lt;sup&gt;3&lt;/sup&gt;
+|---------|--|--|--
+| **Linux**   | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-x86_64-linux.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-x86_64-linux.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-x86_64-linux.tar.gz) |
+| **macOS**   | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-x86_64-osx.zip) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-x86_64-osx.zip) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-x86_64-osx.zip) |
+| **Windows** | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-x86_64-win.zip) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-x86_64-win.zip) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-x86_64-win.zip) |
+| **ARMv7**   | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-arm32v7.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-arm32v7.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-arm32v7.tar.gz) |
+| **ARMv8**   | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-arm64v8.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-arm64v8.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-arm64v8.tar.gz)&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=4&gt;&lt;sub&gt;&lt;sup&gt;1&lt;/sup&gt; Includes Electrum RPC, HTTP API and WebHooks support ([learn more](https://github.com/shesek/bwt#installation))&lt;br&gt;&lt;sup&gt;2&lt;/sup&gt; Includes Electrum RPC support only ([learn more](https://github.com/shesek/bwt#electrum-only-server))&lt;br&gt;&lt;sup&gt;3&lt;/sup&gt; Plugin with an embedded RPC server - *hot wallets are unsupported* ([learn more](https://github.com/shesek/bwt#electrum-plugin))&lt;/sub&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; |
+
+### Installation
+
+Installation instructions are [available on the README](https://github.com/shesek/bwt#installation).
+
+### Verifying signatures
+
+The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on [keybase](https://keybase.io/nadav), [github](https://api.github.com/users/shesek/gpg_keys), [twitter](https://twitter.com/shesek) and [HN](https://news.ycombinator.com/user?id=nadaviv). The signature can be verified as follows (replace `x86_64-linux` with your download):
+
+```bash
+# Download package
+$ wget https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-x86_64-linux.tar.gz
+# Fetch signing key
+$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC
+# Verify signature
+$ wget -qO - https://github.com/shesek/bwt/releases/download/v0.2.0/SHA256SUMS.asc \
+  | gpg --decrypt - | grep ' bwt-0.2.0-x86_64-linux.tar.gz$' | sha256sum -c -
+```
+
+You should see `Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...` and `bwt-0.2.0-x86_64-linux.tar.gz: OK`.
+
+### Reproducible builds
+
+The builds are fully reproducible.
+
+You can verify the checksums against the v0.2.0 builds on Travis CI: https://travis-ci.org/github/shesek/bwt/builds/745668826
+
+See [more details here](https://github.com/shesek/bwt#reproducible-builds).</summary>
+    <title>bwt-dev/bwt: v0.2.0</title>
+    <updated>2020-11-24T16:21:58Z</updated>
+    <dc:date>2020-11-24T16:21:58Z</dc:date>
+  </entry>
+  <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.0</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.0"/>
     <summary>**A newer version is already available! Please don’t use this version anymore.**
@@ -3344,6 +3517,14 @@ Don't use it if you don't know what you're doing.
     <title>cryptoadvance/specter-desktop: v0.10.1-pre1</title>
     <updated>2020-11-22T13:59:09Z</updated>
     <dc:date>2020-11-22T13:59:09Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.0-rc.1</id>
+    <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.0-rc.1"/>
+    <summary></summary>
+    <title>bwt-dev/bwt: v0.2.0-rc.1</title>
+    <updated>2020-11-21T14:51:18Z</updated>
+    <dc:date>2020-11-21T14:51:18Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.0</id>
@@ -4615,6 +4796,90 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.11...v0.2.12</summary>
     <title>getumbrel/umbrel: v0.2.12</title>
     <updated>2020-10-06T13:14:53Z</updated>
     <dc:date>2020-10-06T13:14:53Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/bwt-dev/bwt/releases/tag/v0.1.5</id>
+    <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.1.5"/>
+    <summary>### Changelog
+
+- Reproducible builds using Docker (#51)
+
+- Pre-built binary releases for macOS (#24) and ARMv7/v8 (#19)
+
+- Electrum plugin: Compatibility with Electrum v4 — *except for lightning* which is [tricky with personal servers](https://github.com/chris-belcher/electrum-personal-server/issues/174#issuecomment-577619460) (#53)
+
+- Electrum: New welcome banner (#44)
+
+- Scriptable transaction broadcast command via `--tx-broadcast-cmd &lt;cmd&gt;` (#7)
+
+  The command will be used in place of broadcasting transactions using the full node, which may provide better privacy in some circumstances. The string `{tx_hex}` will be replaced with the hex-encoded transaction.
+
+  For example, to broadcast transactions over Tor using the blockstream.info onion service, you can use:
+
+  ```
+  --tx-broadcast-cmd '[ $(curl -s -x socks5h://localhost:9050 http://explorerzydxu5ecjrkwceayqybizmpjjznk5izmitf2modhcusuqlid.onion/api/tx -d {tx_hex} -o /dev/stderr -w &quot;%{http_code}&quot; -H &quot;User-Agent: curl/7.$(shuf -n1 -e 47 58 64 68).0&quot;) -eq 200 ]'
+  ```
+
+  (Replace port `9050` with `9150` if you're using the Tor browser bundle.)
+
+  h/t @chris-belcher's EPS for inspiring this feature! 🎩
+
+- Load bitcoind wallet automatically (#54)
+
+- Electrum plugin: Fix hot wallet test (#47)
+
+- Electrum: Fix docker image libssl dependency with the `http` feature (#48)
+
+- Improve block download check on regtest (#45, #35)
+
+- HTTP API: Fix `GET /block/tip` (#46)
+
+- HTTP API: Add `GET /banner.txt` (#44)
+
+- Tests: Upgrade to Electrum v4
+
+------------
+
+### Downloads
+
+|         | Full Server &lt;sup&gt;1&lt;/sup&gt; | Electrum Server &lt;sup&gt;2&lt;/sup&gt; | Electrum Plugin &lt;sup&gt;3&lt;/sup&gt;
+|---------|--|--|--
+| **Linux**   | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-x86_64-linux.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-x86_64-linux.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-x86_64-linux.tar.gz) |
+| **macOS**   | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-x86_64-osx.zip) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-x86_64-osx.zip) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-x86_64-osx.zip) |
+| **Windows** | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-x86_64-win.zip) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-x86_64-win.zip) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-x86_64-win.zip) |
+| **ARMv7**   | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-arm32v7.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-arm32v7.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-arm32v7.tar.gz) |
+| **ARMv8**   | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-arm64v8.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-arm64v8.tar.gz) | [📥 Download](https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-arm64v8.tar.gz)&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=4&gt;&lt;sub&gt;&lt;sup&gt;1&lt;/sup&gt; Includes Electrum RPC, HTTP API and WebHooks support ([learn more](https://github.com/shesek/bwt#installation))&lt;br&gt;&lt;sup&gt;2&lt;/sup&gt; Includes Electrum RPC support only ([learn more](https://github.com/shesek/bwt#electrum-only-server))&lt;br&gt;&lt;sup&gt;3&lt;/sup&gt; Plugin with an embedded RPC server - *hot wallets are unsupported* ([learn more](https://github.com/shesek/bwt#electrum-plugin))&lt;/sub&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; |
+
+### Installation
+
+Installation instructions are [available on the README](https://github.com/shesek/bwt#installation).
+
+### Verifying signatures
+
+The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on [keybase](https://keybase.io/nadav), [github](https://api.github.com/users/shesek/gpg_keys), [twitter](https://twitter.com/shesek) and [HN](https://news.ycombinator.com/user?id=nadaviv). The signature can be verified as follows (replace `x86_64-linux` with your download):
+
+```bash
+# Download package
+$ wget https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-x86_64-linux.tar.gz
+# Fetch signing key
+$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC
+# Verify signature
+$ wget -qO - https://github.com/shesek/bwt/releases/download/v0.1.5/SHA256SUMS.asc \
+  | gpg --decrypt - | grep ' bwt-0.1.5-x86_64-linux.tar.gz$' | sha256sum -c -
+```
+
+You should see `Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...` and `bwt-0.1.5-x86_64-linux.tar.gz: OK`.
+
+### Reproducible builds
+
+The builds are fully reproducible.
+
+You can verify the checksums against the v0.1.5 builds on Travis CI: https://travis-ci.org/github/shesek/bwt/builds/732966695
+
+See [more details here](https://github.com/shesek/bwt#reproducible-builds).</summary>
+    <title>bwt-dev/bwt: v0.1.5</title>
+    <updated>2020-10-05T14:00:58Z</updated>
+    <dc:date>2020-10-05T14:00:58Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/bitcoin-core/HWI/releases/tag/1.2.0-rc.1</id>
@@ -6351,57 +6616,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.9...v0.2.10</summary>
     <updated>2020-09-09T14:57:04Z</updated>
     <dc:date>2020-09-09T14:57:04Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.3-pre1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.3-pre1"/>
-    <summary></summary>
-    <title>cryptoadvance/specter-desktop: v0.7.3-pre1</title>
-    <updated>2020-09-08T19:17:37Z</updated>
-    <dc:date>2020-09-08T19:17:37Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.1.0</id>
-    <link href="https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.1.0"/>
-    <summary>This release contains performance improvements, bug fixes and security improvements. This is a summary of the changes included in this version:
-
-- Transaction relay improvements and handling of pending transactions fixes (#1266, #1134, #1253)
-- New persistent storage for logs bloom reduces execution times for _eth_getLogs_ method (#1208)
-- New command-line tools enable local export and import of blocks (see this [blog post](https://medium.com/@angeljavalopez/command-line-tools-for-rsk-node-565d53c240c1) for more info) (#1226)
-- Peer discovery now works for nodes behind NAT routers (#1262)
-- The _eth_compile_ family of methods has been removed (#1211)
-- Other performance improvements (#1227, #1285)
-
-You can find a complete list of the changes introduced in [Papyrus 2.1.0 milestone](https://github.com/rsksmart/rskj/milestone/22).
-
-SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
-ecc4163c5292cef3b72580f07cfa30dae3996a95fc426ea09766a71e07d58918  rskj-core-2.1.0-PAPYRUS-all.jar</summary>
-    <title>rsksmart/rskj: PAPYRUS-2.1.0</title>
-    <updated>2020-09-07T14:52:20Z</updated>
-    <dc:date>2020-09-07T14:52:20Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.9</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.9"/>
-    <summary>What's new? 
-
-- LND has been upgraded to the latest version (v0.11.0). 
-
-- iOS users can now access their dashboard in any Tor browser without the CORS issue (h/t @cbetz and @carlosmassa for debugging and testing the fix). 
-
-- The last backup status is now visible on the settings page.
-
-- Some other minor bug fixes.</summary>
-    <title>getumbrel/umbrel: v0.2.9</title>
-    <updated>2020-09-06T05:12:22Z</updated>
-    <dc:date>2020-09-06T05:12:22Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.0</id>
-    <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.0"/>
-    <summary>For detailed info about the RaspiBlitz v1.6 release see here: https://github.com/rootzoll/raspiblitz/blob/v1.6/CHANGES.md#whats-new-in-version-16-of-raspiblitz</summary>
-    <title>rootzoll/raspiblitz: v1.6.0</title>
-    <updated>2020-09-05T21:32:45Z</updated>
-    <dc:date>2020-09-05T21:32:45Z</dc:date>
-  </entry>
-  <dc:date>2021-01-14T15:04:12+00:00</dc:date>
+  <dc:date>2021-01-14T16:00:58+00:00</dc:date>
 </feed>
