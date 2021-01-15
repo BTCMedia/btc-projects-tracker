@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-15T18:02:34+00:00</updated>
+  <updated>2021-01-15T19:03:12+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc2</id>
+    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc2"/>
+    <summary></summary>
+    <title>ElementsProject/lightning: v0.9.3rc2</title>
+    <updated>2021-01-15T18:33:16Z</updated>
+    <dc:date>2021-01-15T18:33:16Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.1</id>
     <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.1"/>
@@ -6600,21 +6608,5 @@ With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It
     <updated>2020-09-14T09:16:49Z</updated>
     <dc:date>2020-09-14T09:16:49Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.10</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.10"/>
-    <summary>This update brings some minor bugfixes and adds monitoring functionality to ensure your external storage device is running reliably.
-
-Changes:
-
-- Stop Umbrel if external storage device is unreliable (#224) af4066d (Thanks @vindard for helping out with this)
-- Prevent start script from failing on no hidden service file (#226) 95a0dd8
-- Bump dashboard to v0.3.7 (#227) eea7208
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.2.9...v0.2.10</summary>
-    <title>getumbrel/umbrel: v0.2.10</title>
-    <updated>2020-09-09T14:57:04Z</updated>
-    <dc:date>2020-09-09T14:57:04Z</dc:date>
-  </entry>
-  <dc:date>2021-01-15T18:02:34+00:00</dc:date>
+  <dc:date>2021-01-15T19:03:12+00:00</dc:date>
 </feed>
