@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-15T11:03:41+00:00</updated>
+  <updated>2021-01-15T12:01:02+00:00</updated>
   <entry>
     <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.1</id>
     <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.1"/>
@@ -6616,5 +6616,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.9...v0.2.10</summary>
     <updated>2020-09-09T14:57:04Z</updated>
     <dc:date>2020-09-09T14:57:04Z</dc:date>
   </entry>
-  <dc:date>2021-01-15T11:03:41+00:00</dc:date>
+  <dc:date>2021-01-15T12:01:02+00:00</dc:date>
 </feed>
