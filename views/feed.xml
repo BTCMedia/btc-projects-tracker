@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-17T11:00:35+00:00</updated>
+  <updated>2021-01-17T12:03:21+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.6</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.6"/>
@@ -6470,5 +6470,5 @@ Wilmer Paulino
     <updated>2020-09-16T02:42:26Z</updated>
     <dc:date>2020-09-16T02:42:26Z</dc:date>
   </entry>
-  <dc:date>2021-01-17T11:00:35+00:00</dc:date>
+  <dc:date>2021-01-17T12:03:21+00:00</dc:date>
 </feed>
