@@ -38,6 +38,26 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.7">v1.0.6.7</a>
+						    </h2>
+							<p class="card-text">Published: 2021-01-17 12:56:17 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Bug fixes:</h3>
+
+<ul>
+<li>Reverted the new Greenfield API: Can configure lightning payment methods @NicolasDorier</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.6">v1.0.6.6</a>
 						    </h2>
 							<p class="card-text">Published: 2021-01-17 10:24:33 UTC</p>
@@ -7714,174 +7734,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.3.9" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.1-beta.rc2">v0.11.1-beta.rc2</a>
-						    </h2>
-							<p class="card-text">Published: 2020-09-16 02:42:26 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This marks the first minor release in the <code>v0.11.x</code> series! This release contains no breaking changes, and no database migrations. Instead this release bundles a number of reliability improvements, some macaroon upgrades, and a change to make our version our anchor commitments spec compliant amongst several other chagnes. </p>
-
-<h1>Database Migrations</h1>
-
-<p>This release contains no database migrations. </p>
-
-<h1>Verifying the Release</h1>
-
-<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already: </p>
-
-<p><code>
-curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
-</code></p>
-
-<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-v0.11.1-beta.rc2.txt</code> and <code>manifest-v0.11.1-beta.rc2.txt.sig</code> are in the current directory) with:</p>
-
-<p><code>
-gpg --verify manifest-v0.11.1-beta.rc2.txt.sig
-</code></p>
-
-<p>You should see the following if the verification was successful:</p>
-
-<p><code>
-gpg: assuming signed data in &#39;manifest-v0.11.1-beta.rc2.txt&#39;
-gpg: Signature made Tue Sep 15 19:13:32 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-</code></p>
-
-<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
-
-<h2>Verifying the Release Timestamp</h2>
-
-<p>From this new version onwards, in addition time-stamping the <em>git tag</em> with <a href="https://opentimestamps.org/">OpenTimeStamps</a>, we&#39;ll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: <code>manifest-v0.11.1-beta.txt.sig.ots</code> and <code>manifest-v0.11.1-beta.txt.ots</code>. </p>
-
-<p>Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
-<code>
-ots verify manifest-v0.11.1-beta.txt.ots
-ots verify manifest-v0.11.1-beta.txt.sig.ots
-</code></p>
-
-<p>These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. </p>
-
-<h2>Verifying the Release Binaries</h2>
-
-<p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/tree/master/build/release">reproducible builds guide</a> for how this can be achieved. The release binaries are compiled with <code>go1.14.7</code>, which is required by verifiers to arrive at the same ones. They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>routerrpc</code>, and <code>watchtowerrpc</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
-
-<p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
-
-<p>Finally, you can also verify the <em>tag</em> itself with the following command:</p>
-
-<p><code>
-$ git verify-tag v0.11.1-beta.rc2
-gpg: Signature made Tue Sep 15 18:55:00 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-</code></p>
-
-<h1>Building the Contained Release</h1>
-
-<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming that <code>vendor.tar.gz</code> and <code>lnd-source-v0.11.1-beta.rc2.tar.gz</code> are in the current directory, follow these steps:</p>
-
-<p><code>
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.11.1-beta.rc2.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.11.1-beta&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.11.1-beta&quot; ./cmd/lncli
-</code></p>
-
-<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory. </p>
-
-<p>Additionally, it&#39;s now possible to use the <a href="https://github.com/lightningnetwork/lnd/pull/2191">enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so</a>: </p>
-
-<p><code>
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-</code></p>
-
-<p>⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️</p>
-
-<h1>Release Notes (WIP)</h1>
-
-<h2>Wumbo Soft Limit</h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4567"><code>lnd</code> now has a soft-limit of 10 BTC for wumbo channels</a>, when they&#39;re enabled. This limit can be reduced by specifying the new <code>--maxchansize</code> command line flag. This new flag allows node operators to better control their exposure to very large channels, while still allowing channels above the prior pre-wumbo limit. </p>
-
-<h2>Healthchecks</h2>
-
-<p>This release contains a new health checks subsystem which periodically runs a set of health checks and requests that lnd gracefully shutdown if the check fails. The following health checks are implemented:
-* Chain backend: lnd requires access to a bitcoin backend, and may be at risk of losing funds if it loses its connection to the chain. A health check which periodically queries the chain backend for the best block is added, and enabled by default.
-* Disk space: lnd needs disk space to update its database with operational data. A disk space health check which will request shutdown if available disk space falls below a threshold percentage has been added, but is disabled by default to ensure that this check does affect any existing deployments (particularly mobile). </p>
-
-<p>Both of these checks are configurable, and the following options can be set in the <code>healtcheck.chainbackend</code> and <code>healthcheck.diskspace</code> config groups:
-* Interval: how often the check should be run
-* Attempts: the number of attempts we allow the check to fail before we request shutdown; this value can be set to 0 to disable a check. 
-* Timeout: the amount of time we allow a check to take before failing it due to timeout
-* Backoff: the amount of time we backoff between failed checks</p>
-
-<h2>Anchor channels</h2>
-
-<p>The experimental <code>anchor channel</code> type introduced in <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.10.0-beta">lnd v0.10.0</a> has now been finalized in the <a href="https://github.com/lightningnetwork/lightning-rfc/pull/688">BOLT spec</a>, and this release makes the lnd implementation compatible with these changes. If you already have channels of the previous type you can still update. The only thing you must be aware is that cooperative close will fail until your channel party also update to a spec compliant implementation. </p>
-
-<p>Note that this channel type still remains experimental.</p>
-
-<h2>Channel Configuration</h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4527">A new flag has been added to allow node operators to limit the total number of HTLCs they&#39;ll allow to exist on &quot;their side&quot;</a> of the commitment. In the future, we may lower this default in order to mitigate certain &quot;fee siphoning&quot; attacks that exist with high fee rates and a large number of HTLCs. Users can set this new value to control the value used for all <em>newly created channels</em> 
-using the following flag: <code>--default-remote-max-htlcs</code>. </p>
-
-<h2>RPC Server</h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4551">The <code>WalletUnlocker</code> proxy now exposes CORs options like the rest of the REST proxy</a>. </p>
-
-<h2>Macaroons</h2>
-
-<h3>Granular Method Macaroons</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4463">A series of new calls to enable <em>granular</em> macaroon access has landed in this new version</a>. These new calls allow users to bake a macaroon with a specific <em>method call URI</em>. In other words, macaroons can now be created that only allow access to a specific set of RPC calls. As an example, it&#39;s now possible to create a macaroon that only lets a user obtain the current snapshot of the graph <em>and nothing more</em>. </p>
-
-<p>A new local CLI command: <code>lncli listpermissions</code>, allows one to view all the current permissions available when baking a macaroon. </p>
-
-<p>If we wanted to make a macaroon that <em>only</em> allowed access to <code>GetInfo</code> and <code>GetVersion, then we&#39;d execute the following command: 
-</code><code>
-lncli bakemacaroon uri:/lnrpc.Lightning/GetInfo uri:/verrpc.Versioner/GetVersion
-</code>`</p>
-
-<p>For more information on this new feature, <a href="https://github.com/guggero/lnd/blob/4996b28dabd71854b15f235ee1314c0b2242634a/macaroons/README.md">check out the updated set of docs on macaroons</a>. </p>
-
-<h3>Custom Macaroon Validators</h3>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4464">When initializing <code>lnd</code>, it&#39;s now possible to register a custom macaroon validator for a sub-server</a>. This allows certain components to be unbundled, yet still retain lnd&#39;s primary RPC server interface for macaroon validation. </p>
-
-<h2>Bug Fixes</h2>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4620">A bug has been fixed that would at times cause <code>lnd</code> to crash</a> due to an edge case in the logic within the <code>ChainNotifier</code> sub-server. </p>
-
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4596">A bug has been fixed in the routerrpc server</a> that would previously cause it to crash when given bad input. </p>
-
-<p>The full list of changes since <code>v0.11.0-beta</code> can be found here:</p>
-
-<ul>
-<li><a href="https://github.com/lightningnetwork/lnd/compare/v0.11.0-beta...v0.11.1-beta.rc2">https://github.com/lightningnetwork/lnd/compare/v0.11.0-beta...v0.11.1-beta.rc2</a></li>
-</ul>
-
-<h1>Contributors (Alphabetical Order)</h1>
-
-<p>Carla Kirk-Cohen
-Calvin Zachman 
-Conner Fromknecht 
-Graham Krizek 
-Johan T. Halseth 
-Olaoluwa Osuntokun 
-Oliver Gugger 
-Wilmer Paulino </p>
-</p>
-					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.1-beta.rc2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
