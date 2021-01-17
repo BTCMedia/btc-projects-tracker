@@ -6,7 +6,23 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-17T10:02:39+00:00</updated>
+  <updated>2021-01-17T11:00:35+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.6</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.6"/>
+    <summary>### Bug fixes:
+
+* Load correct connection string when using SQLite @Kukks
+* Greenfeld API: Invoice Metadata update was not updating @saliehendricks
+* Prevent access to wallet page if wallet not set @dennisreimann
+
+### New features
+
+* Greenfield API: Can configure lightning payment methods @Kukks</summary>
+    <title>btcpayserver/btcpayserver: v1.0.6.6</title>
+    <updated>2021-01-17T10:24:33Z</updated>
+    <dc:date>2021-01-17T10:24:33Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin/bitcoin/releases/tag/v0.21.0</id>
     <link href="https://github.com/bitcoin/bitcoin/releases/tag/v0.21.0"/>
@@ -6454,53 +6470,5 @@ Wilmer Paulino
     <updated>2020-09-16T02:42:26Z</updated>
     <dc:date>2020-09-16T02:42:26Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.1</id>
-    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.1"/>
-    <summary>We're pleased to announce the 0.9.1 release of c-lightning, named by Jon Griffiths.
-
-This is a significant release with major bugfixes to multi-part payments and various notable speedups and improvements across the board.
-
-**Did you know**: c-lightning deprecates features with 6 months warning, and you can set `allow-deprecated-apis=false` to test?
-
-## Highlights for Users
-
-* The sending of multi-part payments has seen a lot of work, covering more corner cases and generally becoming much more robust.
-* New official plugins create commands `multiwithdraw` and `multifundchannel` to easily produce a single transaction which does more than  one thing; these use the PSBT plumbing created for v0.9.0.
-* We produce far less log spam when log-level is set to `debug`, so if you've avoided setting that before, I recommend trying now.
-* Startup checks that bitcoind is the correct version, and relays transactions
-* Builtin plugins are now nominated as *important*, and you can nominate others as important too.  The daemon will stop if these fail.
-* You can now build a postgres-only installation, without sqlite3.
-
-## Highlights for the Network
-
-* Our invoices now supply more than one routehint if we think you'll need to use multi-part-payments.
-* We prune channels which are not updated in both directions every 2 weeks.
-* Our default CTLV expiry has increased to 34 blocks, or 18 if we're the final node, as per updated specification recommendations (https://github.com/lightningnetwork/lightning-rfc/pull/785)
-
-## Highlights for Developers
-
- * PSBT APIs fleshed out with `utxopsbt` and locktime arguments.
- * Plugins can easily mark commands and options deprecated.
- * The new `channel_state_changed` notification lets plugins easily track channel behavior.
-
-More details can be found at https://github.com/ElementsProject/lightning/blob/v0.9.1/CHANGELOG.md
-
-Thanks to everyone for their contributions and bug reports; please keep them coming.
-
-Since 0.9.0, we've had 391 commits commits from 15 different authors.
-A special thanks goes to the 3 first time contributors:
-
- * Matt Whitlock @whitslack 
- * Sergi Delgado Segura @sr-gi 
- * Moller40 @Moller40 
-
-Cheers,
-Christian, Rusty, ZmnSCPxj, and Lisa
-</summary>
-    <title>ElementsProject/lightning: v0.9.1</title>
-    <updated>2020-09-15T20:20:19Z</updated>
-    <dc:date>2020-09-15T20:20:19Z</dc:date>
-  </entry>
-  <dc:date>2021-01-17T10:02:39+00:00</dc:date>
+  <dc:date>2021-01-17T11:00:35+00:00</dc:date>
 </feed>

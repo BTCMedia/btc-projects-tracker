@@ -38,6 +38,34 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.6">v1.0.6.6</a>
+						    </h2>
+							<p class="card-text">Published: 2021-01-17 10:24:33 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Bug fixes:</h3>
+
+<ul>
+<li>Load correct connection string when using SQLite @Kukks</li>
+<li>Greenfeld API: Invoice Metadata update was not updating @saliehendricks</li>
+<li>Prevent access to wallet page if wallet not set @dennisreimann</li>
+</ul>
+
+<h3>New features</h3>
+
+<ul>
+<li>Greenfield API: Can configure lightning payment methods @Kukks</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/bitcoin/bitcoin">bitcoin/bitcoin</a>: <a href="https://github.com/bitcoin/bitcoin/releases/tag/v0.21.0">v0.21.0</a>
 						    </h2>
 							<p class="card-text">Published: 2021-01-15 19:52:11 UTC</p>
@@ -7854,69 +7882,6 @@ Wilmer Paulino </p>
 </p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.1-beta.rc2" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ElementsProject/lightning">ElementsProject/lightning</a>: <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.1">v0.9.1</a>
-						    </h2>
-							<p class="card-text">Published: 2020-09-15 20:20:19 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>We&#39;re pleased to announce the 0.9.1 release of c-lightning, named by Jon Griffiths.</p>
-
-<p>This is a significant release with major bugfixes to multi-part payments and various notable speedups and improvements across the board.</p>
-
-<p><strong>Did you know</strong>: c-lightning deprecates features with 6 months warning, and you can set <code>allow-deprecated-apis=false</code> to test?</p>
-
-<h2>Highlights for Users</h2>
-
-<ul>
-<li>The sending of multi-part payments has seen a lot of work, covering more corner cases and generally becoming much more robust.</li>
-<li>New official plugins create commands <code>multiwithdraw</code> and <code>multifundchannel</code> to easily produce a single transaction which does more than  one thing; these use the PSBT plumbing created for v0.9.0.</li>
-<li>We produce far less log spam when log-level is set to <code>debug</code>, so if you&#39;ve avoided setting that before, I recommend trying now.</li>
-<li>Startup checks that bitcoind is the correct version, and relays transactions</li>
-<li>Builtin plugins are now nominated as <em>important</em>, and you can nominate others as important too.  The daemon will stop if these fail.</li>
-<li>You can now build a postgres-only installation, without sqlite3.</li>
-</ul>
-
-<h2>Highlights for the Network</h2>
-
-<ul>
-<li>Our invoices now supply more than one routehint if we think you&#39;ll need to use multi-part-payments.</li>
-<li>We prune channels which are not updated in both directions every 2 weeks.</li>
-<li>Our default CTLV expiry has increased to 34 blocks, or 18 if we&#39;re the final node, as per updated specification recommendations (<a href="https://github.com/lightningnetwork/lightning-rfc/pull/785">https://github.com/lightningnetwork/lightning-rfc/pull/785</a>)</li>
-</ul>
-
-<h2>Highlights for Developers</h2>
-
-<ul>
-<li>PSBT APIs fleshed out with <code>utxopsbt</code> and locktime arguments.</li>
-<li>Plugins can easily mark commands and options deprecated.</li>
-<li>The new <code>channel_state_changed</code> notification lets plugins easily track channel behavior.</li>
-</ul>
-
-<p>More details can be found at <a href="https://github.com/ElementsProject/lightning/blob/v0.9.1/CHANGELOG.md">https://github.com/ElementsProject/lightning/blob/v0.9.1/CHANGELOG.md</a></p>
-
-<p>Thanks to everyone for their contributions and bug reports; please keep them coming.</p>
-
-<p>Since 0.9.0, we&#39;ve had 391 commits commits from 15 different authors.
-A special thanks goes to the 3 first time contributors:</p>
-
-<ul>
-<li>Matt Whitlock @whitslack </li>
-<li>Sergi Delgado Segura @sr-gi </li>
-<li>Moller40 @Moller40 </li>
-</ul>
-
-<p>Cheers,
-Christian, Rusty, ZmnSCPxj, and Lisa</p>
-</p>
-					    <a href="https://github.com/ElementsProject/lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
