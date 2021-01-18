@@ -753,6 +753,7 @@ New flags added to the <code>lnd</code> command line and <code>lnd.conf</code>:<
 <li><a href="https://github.com/lightningnetwork/lnd/pull/4738">A bug has been fixed related to mnemonic seed validation on restore</a>. This ensures <code>lnd</code> will properly catch invalid words (that aren&#39;t in the wordlist) much earlier than before. </li>
 <li><a href="https://github.com/lightningnetwork/lnd/pull/4691">All errors in the <code>routerrpc</code> server will now be properly mapped to gRPC status codes</a>. </li>
 <li><a href="https://github.com/lightningnetwork/lnd/pull/4806"><code>lnd</code> nodes using the neutrino backend will now properly be able to connect to onion v2 onion service addresses</a>. </li>
+<li><a href="https://github.com/lightningnetwork/lnd/pull/4789">A bug preventing the <code>wtclient</code> from shutting down cleanly while a concurrent session negotiation is in progress has been fixed.</a></li>
 </ul>
 
 <p>The full list of changes since <code>v0.11.0-beta</code> can be found here:</p>

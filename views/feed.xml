@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-18T18:01:49+00:00</updated>
+  <updated>2021-01-18T19:01:20+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3"/>
@@ -601,7 +601,7 @@ A change that makes it possible to set the [log level for individual subsystems]
 - [A bug has been fixed related to mnemonic seed validation on restore](https://github.com/lightningnetwork/lnd/pull/4738). This ensures `lnd` will properly catch invalid words (that aren't in the wordlist) much earlier than before. 
 - [All errors in the `routerrpc` server will now be properly mapped to gRPC status codes](https://github.com/lightningnetwork/lnd/pull/4691). 
 - [`lnd` nodes using the neutrino backend will now properly be able to connect to onion v2 onion service addresses](https://github.com/lightningnetwork/lnd/pull/4806). 
-
+- [A bug preventing the `wtclient` from shutting down cleanly while a concurrent session negotiation is in progress has been fixed.](https://github.com/lightningnetwork/lnd/pull/4789)
 
 The full list of changes since `v0.11.0-beta` can be found here:
 
@@ -6219,5 +6219,5 @@ Wilmer Paulino
     <updated>2020-09-18T03:03:04Z</updated>
     <dc:date>2020-09-18T03:03:04Z</dc:date>
   </entry>
-  <dc:date>2021-01-18T18:01:49+00:00</dc:date>
+  <dc:date>2021-01-18T19:01:20+00:00</dc:date>
 </feed>
