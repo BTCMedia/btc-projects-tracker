@@ -6,7 +6,24 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-18T16:01:24+00:00</updated>
+  <updated>2021-01-18T17:02:35+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3"/>
+    <summary>- Vaults coin control
+- Share panel when sharing Vault cosigner
+- Ask fp &amp; path when scanning Zpub 
+- Show spinner if Vault is trying to cosign 
+- Disable RPC batching for Fulcrum electrum
+- Coin control hangs (no connection on fetchUtxo)
+- Scanning a Vault PSBT Qr code when scanning  address
+- Some devices wouldn't allow writing files
+- Label is not set to created Vault wallet
+</summary>
+    <title>BlueWallet/BlueWallet: v6.0.3</title>
+    <updated>2021-01-18T16:57:51Z</updated>
+    <dc:date>2021-01-18T16:57:51Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.7</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.7"/>
@@ -6202,128 +6219,5 @@ Wilmer Paulino
     <updated>2020-09-18T03:03:04Z</updated>
     <dc:date>2020-09-18T03:03:04Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.3.9</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.3.9"/>
-    <summary>**A newer version is already available! Please don’t use this version anymore.**
-
-## Release notes
-This release brings auto-confirmation for Monero trades, makes usernames required for Revolut payments (to reduce disputes, based on mediator feedback), and improves connectivity within the network. It also improves reliability, please update to this version to avoid network issues!
-
-### DAO
-- [Move merit and stake column to the right](https://github.com/bisq-network/bisq/pull/4402)
-- [Tweak a few DAO bonded role names in strings file](https://github.com/bisq-network/bisq/pull/4483)
-
-### UI
-- [Fix intermittent blank price cells in offer book view](https://github.com/bisq-network/bisq/pull/4420)
-- [Improve warning message regarding insufficient BSQ](https://github.com/bisq-network/bisq/pull/4440)
-- [Add more detailed network statistics](https://github.com/bisq-network/bisq/pull/4435)
-- [Only show signing state if signing for payment method is required](https://github.com/bisq-network/bisq/pull/4396)
-
-### Trading
-- [Add auto-confirm feature for Monero](https://github.com/bisq-network/bisq/pull/4458)
-- [Add support for user name for Revolut accounts](https://github.com/bisq-network/bisq/pull/4453)
-- [Add check for option trade for dispute cases](https://github.com/bisq-network/bisq/pull/4451)
-- [Fix null pointer in case if selectedMarketPrice is null](https://github.com/bisq-network/bisq/pull/4450)
-- [Reload dispute layout on reopen](https://github.com/bisq-network/bisq/pull/4438)
-- [Improve dispute views](https://github.com/bisq-network/bisq/pull/4446)
-- [Update GUI labels to reflect multiple rate providers](https://github.com/bisq-network/bisq/pull/4406)
-- [Fix bug with all mobile notifications for disputes are sent at startup.](https://github.com/bisq-network/bisq/pull/4475)
-- [Remove offer from takers offerbook after take offer is completed](https://github.com/bisq-network/bisq/pull/4487)
-- [Remove 'monero:' prefix when adding a XMR account](https://github.com/bisq-network/bisq/pull/4480)
-
-### Reliability
-- [Optimize application shutdown](https://github.com/bisq-network/bisq/pull/4410)
-- Increase timeouts: [1](https://github.com/bisq-network/bisq/pull/4424), [2](https://github.com/bisq-network/bisq/pull/4521)
-- [Revert usage of caffeinate on OSX](https://github.com/bisq-network/bisq/pull/4407)
-- [Make moving average code more safe](https://github.com/bisq-network/bisq/pull/4529)
-
-### Network
-- [Filter improvements](https://github.com/bisq-network/bisq/pull/4460)
-- [Bundle messages at broadcast](https://github.com/bisq-network/bisq/pull/4436)
-- [Tweak seednode bitcoin.conf, remove timeout, separate testnet block](https://github.com/bisq-network/bisq/pull/4447)
-- [Improve restarting of seednodes](https://github.com/bisq-network/bisq/pull/4445)
-- [Reduce seednode maxconnections setting from 50 to 40 in bisq.env](https://github.com/bisq-network/bisq/pull/4425)
-- [Add mempool.bisq.services explorer and mempool fee estimation provider](https://github.com/bisq-network/bisq/pull/4437)
-- [Add mempool.ninja to pricenodes as 3rd mempool fee estimation backend](https://github.com/bisq-network/bisq/pull/4413)
-- [Update all Pricenodes with new Tor V3 onions](https://github.com/bisq-network/bisq/pull/4403)
-- [Add new Monero Explorer node77.monero.wiz.biz with onion](https://github.com/bisq-network/bisq/pull/4488)
-- [Update old Bisq Explorer URLs with new Mempool Explorer URLs, tweak strings](https://github.com/bisq-network/bisq/pull/4501)
-
-### Development
-- [Add option to use different css for dev mode](https://github.com/bisq-network/bisq/pull/4415)
-
-### Assets
-No new assets.
-
-## Verification
-
-Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
-Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
-
-Import the key:
-`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
-
-How to verify signatures?
-`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
-Replace BINARY with the file you downloaded (e.g. Bisq-1.3.9.dmg)
-
-Verify jar file inside binary:
-You can verify on OSX the jar file with:
-`shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.3.9.jar`
-The output need to match the value from the Bisq-1.3.9.jar.txt file.
-
-
-## Known issues with installation 
-
-### macOS Catalina:
-
-&gt; Bisq can't be opened because Apple cannot check it for malicious software
-
-This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).
-
-Workaround: Right click on the installed Bisq app &gt; Click `Open` (warning popup shown again, but with new button available) &gt; Click `Open`
-
-&gt; Bisq would like to receive keystrokes from any application.
-
-Discussed in issue https://github.com/bisq-network/bisq/issues/3373, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.
-
-### Windows:
-
-There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
-
-If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
-
-[1] Application directory (contains application installation files):
-C:\Users\&lt;username&gt;\AppData\Local\Bisq
-
-[2] Data directory (contains all Bisq data including wallet):
-C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
-
-
-### Linux:
-
-Hint for Debian users:
-If you have problems starting Bisq on Debian use: `/opt/Bisq/Bisq`
-
-If your Linux distro does not support .deb files please follow this instruction:
-```
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.3.9.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-```
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Cleanup tool for saved trades that failed market price check
-
-With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It will remove corrupt trade entries added due to bug https://github.com/bisq-network/bisq/issues/2924. Install and run once, it will shut down automatically, then install version 1.3.9 or later. You can verify the binary the same way as you do with the Bisq application.</summary>
-    <title>bisq-network/bisq: v1.3.9</title>
-    <updated>2020-09-16T14:36:28Z</updated>
-    <dc:date>2020-09-16T14:36:28Z</dc:date>
-  </entry>
-  <dc:date>2021-01-18T16:01:24+00:00</dc:date>
+  <dc:date>2021-01-18T17:02:35+00:00</dc:date>
 </feed>
