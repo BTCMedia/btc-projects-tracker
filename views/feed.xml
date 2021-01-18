@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-18T21:02:46+00:00</updated>
+  <updated>2021-01-18T22:02:12+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3"/>
@@ -440,7 +440,15 @@ Performance [improvements](https://github.com/lightningnetwork/lnd/pull/4697) we
 
 Database contention has been [reduced](https://github.com/lightningnetwork/lnd/pull/4547) in the link by batching removal of forwarding packages. The removal timer has also been increased from 1 minute to 1 hour.
 
-[A bug has been fixed in our non-strict forwarding randomization](https://github.com/lightningnetwork/lnd/pull/4659) to ensure we explciitly randomize our link sleection rather than relying on the undefined ordering of map interation in the Go spec. 
+[A bug has been fixed in our non-strict forwarding randomization](https://github.com/lightningnetwork/lnd/pull/4659) to ensure we explciitly randomize our link sleection rather than relying on the undefined ordering of map interation in the Go spec.
+
+## Gossip Enhancements
+
+During the development of this release, an increase in high disk usage was reported by several users throughout the network due to channel update spam. To minimize the effects to disks, `lnd` will now [rate limit channel updates in two ways](https://github.com/lightningnetwork/lnd/pull/4786). Keep-alive updates, those which only increase their timestamps to signal liveliness, are now limited to one per rebroadcast interval (current default of 24H). Non-keep-alive updates are now limited to one per block per direction.
+
+As required by the specification, `lnd` now [enforces all channels for a block must fit within a single reply](https://github.com/lightningnetwork/lnd/pull/4804). It would previously not enforce this as it would allow an overlap of blocks across multiple replies, which could lead other implementations to send us a error due to the overlap and cause connect/disconnect cycles.
+
+`lnd` will [no longer accept premature channel announcements/updates and wait for their maturity](https://github.com/lightningnetwork/lnd/pull/4895).
 
 ## Peer Flap Rate Tracking
 
@@ -448,7 +456,15 @@ An [update](https://github.com/lightningnetwork/lnd/pull/4440) to the channel fi
 
 The flap rate we have recorded for peers is also used to rate limit the amount of data lnd will store to track the peer’s uptime. If a peer has a high flap rate, lnd will reduce the amount of data it stores in memory, resulting in more aggregated uptime information. This change is intended to protect against constantly flapping peers, and will have little effect on peers that are consistently online with the occasional restart. To ensure that we do not permanently punish a peer for a period of instability long in the past, the flap rate we track for peers is exponentially cooled down over time. 
 
-## RPC Enchancements &amp; Bug Fixes 
+## RPC Enchancements &amp; Bug Fixes
+
+### GetInfo `best_header_timestamp`
+
+[The `best_header_timestamp` field included in the `GetInfo`'s RPC response will now be set to what the backend reports while it is syncing](https://github.com/lightningnetwork/lnd/pull/4703). This will restore the ability for higher-level applications to determine their sync progress.
+
+### Watchtower Address Removal
+
+[The last address of a registered watchtower can no longer be removed](https://github.com/lightningnetwork/lnd/pull/4746) to prevent a potential panic. 
 
 ### Uniform Unconfirmed Coin Selection for SendCoins+
 
@@ -6219,5 +6235,5 @@ Wilmer Paulino
     <updated>2020-09-18T03:03:04Z</updated>
     <dc:date>2020-09-18T03:03:04Z</dc:date>
   </entry>
-  <dc:date>2021-01-18T21:02:46+00:00</dc:date>
+  <dc:date>2021-01-18T22:02:12+00:00</dc:date>
 </feed>

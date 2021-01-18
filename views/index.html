@@ -584,7 +584,15 @@ Read more about the possible use cases and dive into the examples <a href="https
 
 <p>Database contention has been <a href="https://github.com/lightningnetwork/lnd/pull/4547">reduced</a> in the link by batching removal of forwarding packages. The removal timer has also been increased from 1 minute to 1 hour.</p>
 
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4659">A bug has been fixed in our non-strict forwarding randomization</a> to ensure we explciitly randomize our link sleection rather than relying on the undefined ordering of map interation in the Go spec. </p>
+<p><a href="https://github.com/lightningnetwork/lnd/pull/4659">A bug has been fixed in our non-strict forwarding randomization</a> to ensure we explciitly randomize our link sleection rather than relying on the undefined ordering of map interation in the Go spec.</p>
+
+<h2>Gossip Enhancements</h2>
+
+<p>During the development of this release, an increase in high disk usage was reported by several users throughout the network due to channel update spam. To minimize the effects to disks, <code>lnd</code> will now <a href="https://github.com/lightningnetwork/lnd/pull/4786">rate limit channel updates in two ways</a>. Keep-alive updates, those which only increase their timestamps to signal liveliness, are now limited to one per rebroadcast interval (current default of 24H). Non-keep-alive updates are now limited to one per block per direction.</p>
+
+<p>As required by the specification, <code>lnd</code> now <a href="https://github.com/lightningnetwork/lnd/pull/4804">enforces all channels for a block must fit within a single reply</a>. It would previously not enforce this as it would allow an overlap of blocks across multiple replies, which could lead other implementations to send us a error due to the overlap and cause connect/disconnect cycles.</p>
+
+<p><code>lnd</code> will <a href="https://github.com/lightningnetwork/lnd/pull/4895">no longer accept premature channel announcements/updates and wait for their maturity</a>.</p>
 
 <h2>Peer Flap Rate Tracking</h2>
 
@@ -593,6 +601,14 @@ Read more about the possible use cases and dive into the examples <a href="https
 <p>The flap rate we have recorded for peers is also used to rate limit the amount of data lnd will store to track the peer’s uptime. If a peer has a high flap rate, lnd will reduce the amount of data it stores in memory, resulting in more aggregated uptime information. This change is intended to protect against constantly flapping peers, and will have little effect on peers that are consistently online with the occasional restart. To ensure that we do not permanently punish a peer for a period of instability long in the past, the flap rate we track for peers is exponentially cooled down over time. </p>
 
 <h2>RPC Enchancements &amp; Bug Fixes</h2>
+
+<h3>GetInfo <code>best_header_timestamp</code></h3>
+
+<p><a href="https://github.com/lightningnetwork/lnd/pull/4703">The <code>best_header_timestamp</code> field included in the <code>GetInfo</code>&#39;s RPC response will now be set to what the backend reports while it is syncing</a>. This will restore the ability for higher-level applications to determine their sync progress.</p>
+
+<h3>Watchtower Address Removal</h3>
+
+<p><a href="https://github.com/lightningnetwork/lnd/pull/4746">The last address of a registered watchtower can no longer be removed</a> to prevent a potential panic. </p>
 
 <h3>Uniform Unconfirmed Coin Selection for SendCoins+</h3>
 
