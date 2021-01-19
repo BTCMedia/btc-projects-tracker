@@ -6,11 +6,27 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-19T13:02:56+00:00</updated>
+  <updated>2021-01-19T14:03:58+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.2</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.2"/>
     <summary>This update brings the latest versions of BTCPay Server, Sphinx Relay, Specter Desktop and Thunderhub to your Umbrel.
+
+Changes:
+
+- Run Umbrel OS security updates during OTA update (#293) 08c6f85 (@AaronDewes)
+- Update sphinx-relay to v1.3.8 bb0b867 (@lukechilds)
+- Update sphinx-relay version in app registry fbd4aa9 (@lukechilds)
+- Upgrade thunderhub app to v0.12.2 (#402) e7a836a (@louneskmt)
+- Update specter-desktop app to v1.0.0 (#400) 2ec9b24 (@nolim1t)
+- Update thunderhub app to use Tor proxy (#434) c7faead (@louneskmt @lukechilds)
+- Use updated brew install command (#421) 604db87 (@goums)
+- Update to getumbrel/dashboard to v0.3.15 (#437) 3e1cd09 (@lukechilds)
+- Fix unattended-upgrades package installation (#439) 44b4882 (@lukechilds)
+- Update thunderhub app to v0.12.4 (#440) 74ded27 (@AaronDewes @louneskmt)
+- Fix incorrect version of btc-rpc-explorer app in registry (#442) 0cf5d8c (@AaronDewes)
+- Update btcpay-server app to v1.0.6.7 (#441) 24233c7 (@AaronDewes @louneskmt)
+- Umbrel v0.3.2 (#438) 56ad651 (@lukechilds)
 
 Diff: https://github.com/getumbrel/umbrel/compare/v0.3.1...v0.3.2</summary>
     <title>getumbrel/umbrel: v0.3.2</title>
@@ -6086,5 +6102,5 @@ v5.5.7
     <updated>2020-09-18T09:47:19Z</updated>
     <dc:date>2020-09-18T09:47:19Z</dc:date>
   </entry>
-  <dc:date>2021-01-19T13:02:56+00:00</dc:date>
+  <dc:date>2021-01-19T14:03:58+00:00</dc:date>
 </feed>
