@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-19T08:00:59+00:00</updated>
+  <updated>2021-01-19T09:03:31+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3"/>
@@ -381,11 +381,13 @@ The most important data of any `lnd` node is stored in its channel database (`ch
 ## Protocol Upgrades
 
 ### Anchor Output Channels
-`lnd` will now open the new channel type dubbed &quot;anchor channels&quot; by default if both peers support it. This is a channel type that has been available to advanced users [since lnd v0.10](https://github.com/lightningnetwork/lnd/releases/tag/v0.10.0-beta), but it has seen a few updates that makes it [even safer](https://github.com/lightningnetwork/lnd/pull/4840) and useful in high fee scenarios, and it is now in line with [a proposed BOLT change](https://github.com/lightningnetwork/lightning-rfc/pull/824).
+`lnd` will now open the new channel type dubbed &quot;anchor channels&quot; by default if both peers support it. You signal support by setting the `--protocol.anchors` flag at `lnd` startup. This is a channel type that has been available to advanced users [since lnd v0.10](https://github.com/lightningnetwork/lnd/releases/tag/v0.10.0-beta), but it has seen a few updates that makes it [even safer](https://github.com/lightningnetwork/lnd/pull/4840) and useful in high fee scenarios, and it is now in line with [a proposed BOLT change](https://github.com/lightningnetwork/lightning-rfc/pull/824).
 
 The anchor channel type is a new type of channel that is much safer in high fee scenarios, as it allows bumping the fees after the channel has been force closed, instead of making the peers agreeing on a future close fee. This is also a nice UX improvement, as less of the channel capacity needs to go towards the commitment fee reserve, and can instead be used for payments. In addition it allows [bundling multiple HTLC transactions](https://github.com/lightningnetwork/lnd/pull/4779) together into one, potentially saving on chain fees in force close scenarios.
 
-The commitment transaction still needs to be signed up front with a fee that ensures its mempool acceptance, and this [fee now defaults](https://github.com/lightningnetwork/lnd/pull/4855) to 10 sat/vbyte. This can be tuned by the `--max-commit-fee-rate-anchors` flag, but this should be used with caution. One can opt-out of the anchor channel type for new channels by setting the `--protocol.no-anchors` flag.
+The commitment transaction still needs to be signed up front with a fee that ensures its mempool acceptance, and this [fee now defaults](https://github.com/lightningnetwork/lnd/pull/4855) to 10 sat/vbyte. This can be tuned by the `--max-commit-fee-rate-anchors` flag, but this should be used with caution. 
+
+Note that one has to have on-chain funds available in the wallet for fee bumping channel closes for anchor channels. Because of this, a small portion of the wallet balance will be reserved for this purpose, and some on-chain actions that used to be allowed can now be rejected if you have anchor channels open.
 
 ### Static Remote Key Feature Bit Required
 
@@ -6235,5 +6237,5 @@ Wilmer Paulino
     <updated>2020-09-18T03:03:04Z</updated>
     <dc:date>2020-09-18T03:03:04Z</dc:date>
   </entry>
-  <dc:date>2021-01-19T08:00:59+00:00</dc:date>
+  <dc:date>2021-01-19T09:03:31+00:00</dc:date>
 </feed>

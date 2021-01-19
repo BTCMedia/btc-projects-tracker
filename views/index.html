@@ -525,11 +525,13 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 
 <h3>Anchor Output Channels</h3>
 
-<p><code>lnd</code> will now open the new channel type dubbed &quot;anchor channels&quot; by default if both peers support it. This is a channel type that has been available to advanced users <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.10.0-beta">since lnd v0.10</a>, but it has seen a few updates that makes it <a href="https://github.com/lightningnetwork/lnd/pull/4840">even safer</a> and useful in high fee scenarios, and it is now in line with <a href="https://github.com/lightningnetwork/lightning-rfc/pull/824">a proposed BOLT change</a>.</p>
+<p><code>lnd</code> will now open the new channel type dubbed &quot;anchor channels&quot; by default if both peers support it. You signal support by setting the <code>--protocol.anchors</code> flag at <code>lnd</code> startup. This is a channel type that has been available to advanced users <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.10.0-beta">since lnd v0.10</a>, but it has seen a few updates that makes it <a href="https://github.com/lightningnetwork/lnd/pull/4840">even safer</a> and useful in high fee scenarios, and it is now in line with <a href="https://github.com/lightningnetwork/lightning-rfc/pull/824">a proposed BOLT change</a>.</p>
 
 <p>The anchor channel type is a new type of channel that is much safer in high fee scenarios, as it allows bumping the fees after the channel has been force closed, instead of making the peers agreeing on a future close fee. This is also a nice UX improvement, as less of the channel capacity needs to go towards the commitment fee reserve, and can instead be used for payments. In addition it allows <a href="https://github.com/lightningnetwork/lnd/pull/4779">bundling multiple HTLC transactions</a> together into one, potentially saving on chain fees in force close scenarios.</p>
 
-<p>The commitment transaction still needs to be signed up front with a fee that ensures its mempool acceptance, and this <a href="https://github.com/lightningnetwork/lnd/pull/4855">fee now defaults</a> to 10 sat/vbyte. This can be tuned by the <code>--max-commit-fee-rate-anchors</code> flag, but this should be used with caution. One can opt-out of the anchor channel type for new channels by setting the <code>--protocol.no-anchors</code> flag.</p>
+<p>The commitment transaction still needs to be signed up front with a fee that ensures its mempool acceptance, and this <a href="https://github.com/lightningnetwork/lnd/pull/4855">fee now defaults</a> to 10 sat/vbyte. This can be tuned by the <code>--max-commit-fee-rate-anchors</code> flag, but this should be used with caution. </p>
+
+<p>Note that one has to have on-chain funds available in the wallet for fee bumping channel closes for anchor channels. Because of this, a small portion of the wallet balance will be reserved for this purpose, and some on-chain actions that used to be allowed can now be rejected if you have anchor channels open.</p>
 
 <h3>Static Remote Key Feature Bit Required</h3>
 
