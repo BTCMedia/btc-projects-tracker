@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-19T02:02:27+00:00</updated>
+  <updated>2021-01-19T03:04:06+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3"/>
@@ -6235,5 +6235,5 @@ Wilmer Paulino
     <updated>2020-09-18T03:03:04Z</updated>
     <dc:date>2020-09-18T03:03:04Z</dc:date>
   </entry>
-  <dc:date>2021-01-19T02:02:27+00:00</dc:date>
+  <dc:date>2021-01-19T03:04:06+00:00</dc:date>
 </feed>
