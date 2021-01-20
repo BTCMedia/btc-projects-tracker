@@ -6,7 +6,56 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-20T17:01:00+00:00</updated>
+  <updated>2021-01-20T18:04:00+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.3</id>
+    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3"/>
+    <summary>We're pleased to announce the 0.9.2 release of c-lightning, named by Karol Hosiawa.
+
+This is a minor release, but it also introduces a number of new features that we're really exited about, including a number of usability improvements, better access to lower-level primitives to build on top, and experimental extensions to the lightning protocol.
+
+
+## Highlights for Users
+
+-   Much improved parameter verification in `lightning-cli` makes it easier to debug why a call failed.
+-   You can now query for the status of an invoice based on the hash or the invoice.
+-   Plugins that are started while the node is running can now receive command line arguments as if they were provided at node startup.
+-   The security of the `hsmtool` used to encrypt and decrypt the node's seed key was improved by switching to a passphrase prompt
+    instead of a command line argument.
+-   Multiple plugins can now register for the `db_write` hook, which means you can now run multiple backup plugins at the same time. In addition we wrote [extensive documentation](https://lightning.readthedocs.io/BACKUP.html) on how to secure your node from dataloss.
+
+
+## Highlights for the Network
+
+-   No more reckless: the default network changed from `testnet` to `bitcoin`.
+-   We have experimental support for the onion messages proposal, allowing arbitrary messages to be exchanged between nodes in the network.
+-   We have experimental support for the offers proposal, enabling reusable invoices, refunds, invoices denominated in currencies other than bitcoins, and much much more. If you ever wanted to have an inline communication step with the other endpoint of a payment then take a look at this.
+
+## Highlights for Developers
+
+-   pyln now supports both receiving notifications from the RPC interface, as well as sending notifications in methods implemented by plugins. No more waiting in front of a blank screen for your users.
+-   The new `createinvoice` allows you to create an invoice externally, then have your node sign it and manage it internally.
+-   You can use `sendonionmessage` to send an onion routed message, which recipient can receive using a plugin that register for the `onion_message` or `onion_message_blinded` hook.
+
+More details can be found in the [changelog](https://github.com/ElementsProject/lightning/blob/v0.9.3/CHANGELOG.md)
+
+Thanks to everyone for their contributions and bug reports; please keep them coming.
+
+Since 0.9.2, we've had 360 commits from 13 different authors over 60 days, an average commit rate of 6.51 commits per day 🤓
+
+A special thanks goes to the 2 first time contributors:
+
+-   João Paulo
+-   Karol Hosiawa
+
+Cheers,
+Christian, Rusty, Lisa, ZmnSCPxj
+
+</summary>
+    <title>ElementsProject/lightning: v0.9.3</title>
+    <updated>2021-01-20T17:39:58Z</updated>
+    <dc:date>2021-01-20T17:39:58Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc6</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc6"/>
@@ -6030,80 +6079,5 @@ Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/
     <updated>2020-09-19T11:08:54Z</updated>
     <dc:date>2020-09-19T11:08:54Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.92</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.92"/>
-    <summary>v5.5.9
-=======
-
-* ADD: Real time fees
-* FIX: broken LN -&gt; manage funds -&gt; refill
-* FIX: camera wont scan QR with airgapped HW wallet flow
-* FIX: Refresh from notification
-* FIX: transaction not updating on refresh
-* FIX: textAlign: right for custom fee in CPFP/RBF form
-* FIX: set default fee in CPFP/RBF fee-selection component
-* FIX: update recalculate fee on send screen with custom sat/byte fee rate
-* FIX: broken sendMAX if units are changed several times
-* FIX: validation allows user to create transaction even without valid address &amp; amount
-* FIX: Only send wallets to watch app if installed
-* FIX: Send Max not working
-* FIX: Reorder screen is broken
-
-
-v5.5.8
-======
-
-* ADD: Split for large devices
-* ADD: Export file option
-* ADD: Arabic, Slovenian &amp; Hebrew language
-* ADD: KES, NGN, TWD Fiat
-* FIX: After broadcast, value of sent transaction is incorrect
-* FIX: transaction time when using ElectrumPersonalServer
-* FIX: some ElectrumPersonalServer txs stay unconfirmed
-* FIX: Fixed dark/light theme switch
-* FIX: updated languages pt_BR, pt_PT, es_ES, sl_SI, de_DE, fr_FR, cs_CZ, ja_JP, it, ru, he
-* FIX: create-ln-invoice - button is not blocked, which can lead to multiple invoices created
-* FIX: If user has approved notifications, send hash from watch
-* FIX: If Camera not authorized, show Alert.
-* FIX: Only show direct export
-* FIX: better handling of errors from HodlHodl
-* FIX: Safello buy-bitcoin flow
-* FIX: Request location authorization for HodlHodl
-* FIX: Settings|Network|Lightning Settings fails input for leading or trailing blank
-* FIX: show Import file option
-* FIX: Background had wrong color during loading phase
-* REF: speeded up large wallets (&gt;3k txs)
-* REF: speedup onchain wallet creation
-
-
-v5.5.7
-======
-
-* ADD: Split for large devices
-* ADD: Export file option
-* ADD: Slovenian &amp; Hebrew language
-* ADD: KES, NGN, TWD Fiat
-* FIX: After broadcast, value of sent transaction is incorrect
-* FIX: transaction time when using ElectrumPersonalServer
-* FIX: some ElectrumPersonalServer txs stay unconfirmed
-* FIX: Fixed dark/light theme switch
-* FIX: updated languages pt_BR, pt_PT, es_ES, sl_SI, de_DE, fr_FR, cs_CZ, ja_JP, it, ru, he
-* FIX: create-ln-invoice - button is not blocked, which can lead to multiple invoices created
-* FIX: If user has approved notifications, send hash from watch
-* FIX: If Camera not authorized, show Alert.
-* FIX: Only show direct export
-* FIX: better handling of errors from HodlHodl
-* FIX: Safello buy-bitcoin flow
-* FIX: Request location authorization for HodlHodl
-* FIX: Settings|Network|Lightning Settings fails input for leading or trailing blank
-* FIX: show Import file option
-* FIX: Background had wrong color during loading phase
-* REF: speeded up large wallets (&gt;3k txs)
-* REF: speedup onchain wallet creation</summary>
-    <title>BlueWallet/BlueWallet: v5.5.92</title>
-    <updated>2020-09-18T10:29:18Z</updated>
-    <dc:date>2020-09-18T10:29:18Z</dc:date>
-  </entry>
-  <dc:date>2021-01-20T17:01:00+00:00</dc:date>
+  <dc:date>2021-01-20T18:04:00+00:00</dc:date>
 </feed>

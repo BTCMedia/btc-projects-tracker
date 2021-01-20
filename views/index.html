@@ -38,6 +38,67 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ElementsProject/lightning">ElementsProject/lightning</a>: <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3">v0.9.3</a>
+						    </h2>
+							<p class="card-text">Published: 2021-01-20 17:39:58 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>We&#39;re pleased to announce the 0.9.2 release of c-lightning, named by Karol Hosiawa.</p>
+
+<p>This is a minor release, but it also introduces a number of new features that we&#39;re really exited about, including a number of usability improvements, better access to lower-level primitives to build on top, and experimental extensions to the lightning protocol.</p>
+
+<h2>Highlights for Users</h2>
+
+<ul>
+<li>  Much improved parameter verification in <code>lightning-cli</code> makes it easier to debug why a call failed.</li>
+<li>  You can now query for the status of an invoice based on the hash or the invoice.</li>
+<li>  Plugins that are started while the node is running can now receive command line arguments as if they were provided at node startup.</li>
+<li>  The security of the <code>hsmtool</code> used to encrypt and decrypt the node&#39;s seed key was improved by switching to a passphrase prompt
+instead of a command line argument.</li>
+<li>  Multiple plugins can now register for the <code>db_write</code> hook, which means you can now run multiple backup plugins at the same time. In addition we wrote <a href="https://lightning.readthedocs.io/BACKUP.html">extensive documentation</a> on how to secure your node from dataloss.</li>
+</ul>
+
+<h2>Highlights for the Network</h2>
+
+<ul>
+<li>  No more reckless: the default network changed from <code>testnet</code> to <code>bitcoin</code>.</li>
+<li>  We have experimental support for the onion messages proposal, allowing arbitrary messages to be exchanged between nodes in the network.</li>
+<li>  We have experimental support for the offers proposal, enabling reusable invoices, refunds, invoices denominated in currencies other than bitcoins, and much much more. If you ever wanted to have an inline communication step with the other endpoint of a payment then take a look at this.</li>
+</ul>
+
+<h2>Highlights for Developers</h2>
+
+<ul>
+<li>  pyln now supports both receiving notifications from the RPC interface, as well as sending notifications in methods implemented by plugins. No more waiting in front of a blank screen for your users.</li>
+<li>  The new <code>createinvoice</code> allows you to create an invoice externally, then have your node sign it and manage it internally.</li>
+<li>  You can use <code>sendonionmessage</code> to send an onion routed message, which recipient can receive using a plugin that register for the <code>onion_message</code> or <code>onion_message_blinded</code> hook.</li>
+</ul>
+
+<p>More details can be found in the <a href="https://github.com/ElementsProject/lightning/blob/v0.9.3/CHANGELOG.md">changelog</a></p>
+
+<p>Thanks to everyone for their contributions and bug reports; please keep them coming.</p>
+
+<p>Since 0.9.2, we&#39;ve had 360 commits from 13 different authors over 60 days, an average commit rate of 6.51 commits per day 🤓</p>
+
+<p>A special thanks goes to the 2 first time contributors:</p>
+
+<ul>
+<li>  João Paulo</li>
+<li>  Karol Hosiawa</li>
+</ul>
+
+<p>Cheers,
+Christian, Rusty, Lisa, ZmnSCPxj</p>
+</p>
+					    <a href="https://github.com/ElementsProject/lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc6">v0.12.0-beta.rc6</a>
 						    </h2>
 							<p class="card-text">Published: 2021-01-20 04:02:34 UTC</p>
@@ -7410,90 +7471,6 @@ Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/r
 					  </div>
 					</div>
 	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.92">v5.5.92</a>
-						    </h2>
-							<p class="card-text">Published: 2020-09-18 10:29:18 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>v5.5.9</h1>
-
-<ul>
-<li>ADD: Real time fees</li>
-<li>FIX: broken LN -&gt; manage funds -&gt; refill</li>
-<li>FIX: camera wont scan QR with airgapped HW wallet flow</li>
-<li>FIX: Refresh from notification</li>
-<li>FIX: transaction not updating on refresh</li>
-<li>FIX: textAlign: right for custom fee in CPFP/RBF form</li>
-<li>FIX: set default fee in CPFP/RBF fee-selection component</li>
-<li>FIX: update recalculate fee on send screen with custom sat/byte fee rate</li>
-<li>FIX: broken sendMAX if units are changed several times</li>
-<li>FIX: validation allows user to create transaction even without valid address &amp; amount</li>
-<li>FIX: Only send wallets to watch app if installed</li>
-<li>FIX: Send Max not working</li>
-<li>FIX: Reorder screen is broken</li>
-</ul>
-
-<h1>v5.5.8</h1>
-
-<ul>
-<li>ADD: Split for large devices</li>
-<li>ADD: Export file option</li>
-<li>ADD: Arabic, Slovenian &amp; Hebrew language</li>
-<li>ADD: KES, NGN, TWD Fiat</li>
-<li>FIX: After broadcast, value of sent transaction is incorrect</li>
-<li>FIX: transaction time when using ElectrumPersonalServer</li>
-<li>FIX: some ElectrumPersonalServer txs stay unconfirmed</li>
-<li>FIX: Fixed dark/light theme switch</li>
-<li>FIX: updated languages pt<em>BR, pt</em>PT, es<em>ES, sl</em>SI, de<em>DE, fr</em>FR, cs<em>CZ, ja</em>JP, it, ru, he</li>
-<li>FIX: create-ln-invoice - button is not blocked, which can lead to multiple invoices created</li>
-<li>FIX: If user has approved notifications, send hash from watch</li>
-<li>FIX: If Camera not authorized, show Alert.</li>
-<li>FIX: Only show direct export</li>
-<li>FIX: better handling of errors from HodlHodl</li>
-<li>FIX: Safello buy-bitcoin flow</li>
-<li>FIX: Request location authorization for HodlHodl</li>
-<li>FIX: Settings|Network|Lightning Settings fails input for leading or trailing blank</li>
-<li>FIX: show Import file option</li>
-<li>FIX: Background had wrong color during loading phase</li>
-<li>REF: speeded up large wallets (&gt;3k txs)</li>
-<li>REF: speedup onchain wallet creation</li>
-</ul>
-
-<h1>v5.5.7</h1>
-
-<ul>
-<li>ADD: Split for large devices</li>
-<li>ADD: Export file option</li>
-<li>ADD: Slovenian &amp; Hebrew language</li>
-<li>ADD: KES, NGN, TWD Fiat</li>
-<li>FIX: After broadcast, value of sent transaction is incorrect</li>
-<li>FIX: transaction time when using ElectrumPersonalServer</li>
-<li>FIX: some ElectrumPersonalServer txs stay unconfirmed</li>
-<li>FIX: Fixed dark/light theme switch</li>
-<li>FIX: updated languages pt<em>BR, pt</em>PT, es<em>ES, sl</em>SI, de<em>DE, fr</em>FR, cs<em>CZ, ja</em>JP, it, ru, he</li>
-<li>FIX: create-ln-invoice - button is not blocked, which can lead to multiple invoices created</li>
-<li>FIX: If user has approved notifications, send hash from watch</li>
-<li>FIX: If Camera not authorized, show Alert.</li>
-<li>FIX: Only show direct export</li>
-<li>FIX: better handling of errors from HodlHodl</li>
-<li>FIX: Safello buy-bitcoin flow</li>
-<li>FIX: Request location authorization for HodlHodl</li>
-<li>FIX: Settings|Network|Lightning Settings fails input for leading or trailing blank</li>
-<li>FIX: show Import file option</li>
-<li>FIX: Background had wrong color during loading phase</li>
-<li>REF: speeded up large wallets (&gt;3k txs)</li>
-<li>REF: speedup onchain wallet creation</li>
-</ul>
-</p>
-					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.92" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
 			</div>
 
 		 	<div class="col-md-4 sidenav">
@@ -7600,11 +7577,11 @@ Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/r
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/joule-labs/joule-extension">joule-labs/joule-extension</a>
+		                	<a href="https://github.com/mempool/mempool">mempool/mempool</a>
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/mempool/mempool">mempool/mempool</a>
+		                	<a href="https://github.com/joule-labs/joule-extension">joule-labs/joule-extension</a>
 		                </li>
 	                
 		                <li>
