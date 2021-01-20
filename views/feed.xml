@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-20T15:04:14+00:00</updated>
+  <updated>2021-01-20T16:01:08+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc6</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc6"/>
@@ -6105,5 +6105,5 @@ v5.5.7
     <updated>2020-09-18T10:29:18Z</updated>
     <dc:date>2020-09-18T10:29:18Z</dc:date>
   </entry>
-  <dc:date>2021-01-20T15:04:14+00:00</dc:date>
+  <dc:date>2021-01-20T16:01:08+00:00</dc:date>
 </feed>
