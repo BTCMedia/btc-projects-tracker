@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-20T09:03:24+00:00</updated>
+  <updated>2021-01-20T10:01:23+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc6</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc6"/>
@@ -119,8 +119,6 @@ Additionally, it's now possible to use the [enclosed `release.sh` script to bund
 ```
 make release sys=&quot;linux-arm64 darwin-amd64&quot;
 ```
-
-⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
 
 ⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
 
@@ -6107,5 +6105,5 @@ v5.5.7
     <updated>2020-09-18T10:29:18Z</updated>
     <dc:date>2020-09-18T10:29:18Z</dc:date>
   </entry>
-  <dc:date>2021-01-20T09:03:24+00:00</dc:date>
+  <dc:date>2021-01-20T10:01:23+00:00</dc:date>
 </feed>
