@@ -39,5 +39,6 @@
 	"bitcoin-core/secp256k1",
 	"bitcoin-core/HWI",
 	"spesmilo/electrumx",
-	"bwt-dev/bwt"
+	"bwt-dev/bwt",
+	"lnbits/lnbits"
 ]
