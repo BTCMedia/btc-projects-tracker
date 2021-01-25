@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-25T13:04:15+00:00</updated>
+  <updated>2021-01-25T14:01:05+00:00</updated>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.3</id>
     <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3"/>
@@ -573,14 +573,6 @@ Preferably use the above download link, not the links provided by GitHub to down
     <dc:date>2021-01-15T19:52:11Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc2</id>
-    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc2"/>
-    <summary></summary>
-    <title>ElementsProject/lightning: v0.9.3rc2</title>
-    <updated>2021-01-15T18:33:16Z</updated>
-    <dc:date>2021-01-15T18:33:16Z</dc:date>
-  </entry>
-  <entry>
     <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.1</id>
     <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.1"/>
     <summary>### Changelog
@@ -687,14 +679,6 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <title>mempool/mempool: v2.0.1</title>
     <updated>2021-01-12T12:19:10Z</updated>
     <dc:date>2021-01-12T12:19:10Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc1</id>
-    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3rc1"/>
-    <summary></summary>
-    <title>ElementsProject/lightning: v0.9.3rc1</title>
-    <updated>2021-01-11T16:48:00Z</updated>
-    <dc:date>2021-01-11T16:48:00Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.5</id>
@@ -6079,5 +6063,88 @@ Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/
     <updated>2020-09-19T11:08:54Z</updated>
     <dc:date>2020-09-19T11:08:54Z</dc:date>
   </entry>
-  <dc:date>2021-01-25T13:04:15+00:00</dc:date>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.92</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.92"/>
+    <summary>v5.5.9
+=======
+
+* ADD: Real time fees
+* FIX: broken LN -&gt; manage funds -&gt; refill
+* FIX: camera wont scan QR with airgapped HW wallet flow
+* FIX: Refresh from notification
+* FIX: transaction not updating on refresh
+* FIX: textAlign: right for custom fee in CPFP/RBF form
+* FIX: set default fee in CPFP/RBF fee-selection component
+* FIX: update recalculate fee on send screen with custom sat/byte fee rate
+* FIX: broken sendMAX if units are changed several times
+* FIX: validation allows user to create transaction even without valid address &amp; amount
+* FIX: Only send wallets to watch app if installed
+* FIX: Send Max not working
+* FIX: Reorder screen is broken
+
+
+v5.5.8
+======
+
+* ADD: Split for large devices
+* ADD: Export file option
+* ADD: Arabic, Slovenian &amp; Hebrew language
+* ADD: KES, NGN, TWD Fiat
+* FIX: After broadcast, value of sent transaction is incorrect
+* FIX: transaction time when using ElectrumPersonalServer
+* FIX: some ElectrumPersonalServer txs stay unconfirmed
+* FIX: Fixed dark/light theme switch
+* FIX: updated languages pt_BR, pt_PT, es_ES, sl_SI, de_DE, fr_FR, cs_CZ, ja_JP, it, ru, he
+* FIX: create-ln-invoice - button is not blocked, which can lead to multiple invoices created
+* FIX: If user has approved notifications, send hash from watch
+* FIX: If Camera not authorized, show Alert.
+* FIX: Only show direct export
+* FIX: better handling of errors from HodlHodl
+* FIX: Safello buy-bitcoin flow
+* FIX: Request location authorization for HodlHodl
+* FIX: Settings|Network|Lightning Settings fails input for leading or trailing blank
+* FIX: show Import file option
+* FIX: Background had wrong color during loading phase
+* REF: speeded up large wallets (&gt;3k txs)
+* REF: speedup onchain wallet creation
+
+
+v5.5.7
+======
+
+* ADD: Split for large devices
+* ADD: Export file option
+* ADD: Slovenian &amp; Hebrew language
+* ADD: KES, NGN, TWD Fiat
+* FIX: After broadcast, value of sent transaction is incorrect
+* FIX: transaction time when using ElectrumPersonalServer
+* FIX: some ElectrumPersonalServer txs stay unconfirmed
+* FIX: Fixed dark/light theme switch
+* FIX: updated languages pt_BR, pt_PT, es_ES, sl_SI, de_DE, fr_FR, cs_CZ, ja_JP, it, ru, he
+* FIX: create-ln-invoice - button is not blocked, which can lead to multiple invoices created
+* FIX: If user has approved notifications, send hash from watch
+* FIX: If Camera not authorized, show Alert.
+* FIX: Only show direct export
+* FIX: better handling of errors from HodlHodl
+* FIX: Safello buy-bitcoin flow
+* FIX: Request location authorization for HodlHodl
+* FIX: Settings|Network|Lightning Settings fails input for leading or trailing blank
+* FIX: show Import file option
+* FIX: Background had wrong color during loading phase
+* REF: speeded up large wallets (&gt;3k txs)
+* REF: speedup onchain wallet creation</summary>
+    <title>BlueWallet/BlueWallet: v5.5.92</title>
+    <updated>2020-09-18T10:29:18Z</updated>
+    <dc:date>2020-09-18T10:29:18Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.3-pre3</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.7.3-pre3"/>
+    <summary>THIS IS A PRE-RELEASE. Don't use it if you don't have a reason to.</summary>
+    <title>cryptoadvance/specter-desktop: v0.7.3-pre3</title>
+    <updated>2020-09-18T09:47:19Z</updated>
+    <dc:date>2020-09-18T09:47:19Z</dc:date>
+  </entry>
+  <dc:date>2021-01-25T14:01:05+00:00</dc:date>
 </feed>
