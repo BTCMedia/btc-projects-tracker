@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-27T09:02:56+00:00</updated>
+  <updated>2021-01-27T10:04:06+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta"/>
@@ -73,7 +73,7 @@ These timestamps should give users confidence in the integrity of this release e
 ## Verifying the Release Binaries
 
 Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
-The release binaries are compiled with `go1.15.6`, which is required by verifiers to arrive at the same ones.
+The release binaries are compiled with `go1.15.7`, which is required by verifiers to arrive at the same ones.
 They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, and `watchtowerrpc`. Note that these are already included in the release script, so they do not need to be provided.
 
 The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
@@ -6567,5 +6567,5 @@ v5.5.7
     <updated>2020-09-18T10:29:18Z</updated>
     <dc:date>2020-09-18T10:29:18Z</dc:date>
   </entry>
-  <dc:date>2021-01-27T09:02:56+00:00</dc:date>
+  <dc:date>2021-01-27T10:04:06+00:00</dc:date>
 </feed>

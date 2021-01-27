@@ -108,7 +108,7 @@ ots verify manifest-roasbeef-v0.12.0-beta.txt.asc.ots -f manifest-roasbeef-v0.12
 <h2>Verifying the Release Binaries</h2>
 
 <p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/tree/master/build/release">reproducible builds guide</a> for how this can be achieved.
-The release binaries are compiled with <code>go1.15.6</code>, which is required by verifiers to arrive at the same ones.
+The release binaries are compiled with <code>go1.15.7</code>, which is required by verifiers to arrive at the same ones.
 They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>routerrpc</code>, and <code>watchtowerrpc</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
 
 <p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
