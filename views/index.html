@@ -172,7 +172,7 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 
 <h2>Peer to Peer Updates</h2>
 
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4452">A new flag has been added to <code>lnd</code> to enforce a <em>global</em> connection timeout when trying to connect out to new peers</a>. Setting a lower value for this new command line option (<code>timeout</code>) will mean that <code>lnd</code> will give up on unrechable peers much sooner than before, which can be useful when attempting to connect to a set of addresses to open chnnel to a peer. </p>
+<p><a href="https://github.com/lightningnetwork/lnd/pull/4452">A new flag has been added to <code>lnd</code> to enforce a <em>global</em> connection timeout when trying to connect out to new peers</a>. Setting a lower value for this new command line option (<code>timeout</code>) will mean that <code>lnd</code> will give up on unreachable peers much sooner than before, which can be useful when attempting to connect to a set of addresses to open channel to a peer. </p>
 
 <h2>Automatic Database Compaction</h2>
 
@@ -245,7 +245,7 @@ Read more about the possible use cases and dive into the examples <a href="https
 
 <p>Database contention has been <a href="https://github.com/lightningnetwork/lnd/pull/4547">reduced</a> in the link by batching removal of forwarding packages. The removal timer has also been increased from 1 minute to 1 hour.</p>
 
-<p><a href="https://github.com/lightningnetwork/lnd/pull/4659">A bug has been fixed in our non-strict forwarding randomization</a> to ensure we explciitly randomize our link sleection rather than relying on the undefined ordering of map interation in the Go spec.</p>
+<p><a href="https://github.com/lightningnetwork/lnd/pull/4659">A bug has been fixed in our non-strict forwarding randomization</a> to ensure we explicitly randomize our link selection rather than relying on the undefined ordering of map interation in the Go spec.</p>
 
 <h2>Gossip Enhancements</h2>
 

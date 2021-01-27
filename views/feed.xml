@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-27T15:03:04+00:00</updated>
+  <updated>2021-01-27T16:03:02+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta"/>
@@ -137,7 +137,7 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 
 ## Peer to Peer Updates 
 
-[A new flag has been added to `lnd` to enforce a _global_ connection timeout when trying to connect out to new peers](https://github.com/lightningnetwork/lnd/pull/4452). Setting a lower value for this new command line option (`timeout`) will mean that `lnd` will give up on unrechable peers much sooner than before, which can be useful when attempting to connect to a set of addresses to open chnnel to a peer. 
+[A new flag has been added to `lnd` to enforce a _global_ connection timeout when trying to connect out to new peers](https://github.com/lightningnetwork/lnd/pull/4452). Setting a lower value for this new command line option (`timeout`) will mean that `lnd` will give up on unreachable peers much sooner than before, which can be useful when attempting to connect to a set of addresses to open channel to a peer. 
 
 
 ## Automatic Database Compaction
@@ -211,7 +211,7 @@ Performance [improvements](https://github.com/lightningnetwork/lnd/pull/4697) we
 
 Database contention has been [reduced](https://github.com/lightningnetwork/lnd/pull/4547) in the link by batching removal of forwarding packages. The removal timer has also been increased from 1 minute to 1 hour.
 
-[A bug has been fixed in our non-strict forwarding randomization](https://github.com/lightningnetwork/lnd/pull/4659) to ensure we explciitly randomize our link sleection rather than relying on the undefined ordering of map interation in the Go spec.
+[A bug has been fixed in our non-strict forwarding randomization](https://github.com/lightningnetwork/lnd/pull/4659) to ensure we explicitly randomize our link selection rather than relying on the undefined ordering of map interation in the Go spec.
 
 ## Gossip Enhancements
 
@@ -6567,5 +6567,5 @@ v5.5.7
     <updated>2020-09-18T10:29:18Z</updated>
     <dc:date>2020-09-18T10:29:18Z</dc:date>
   </entry>
-  <dc:date>2021-01-27T15:03:04+00:00</dc:date>
+  <dc:date>2021-01-27T16:03:02+00:00</dc:date>
 </feed>
