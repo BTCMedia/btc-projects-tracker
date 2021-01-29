@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-29T11:01:33+00:00</updated>
+  <updated>2021-01-29T12:02:35+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8"/>
@@ -6500,5 +6500,5 @@ b913a423553 Bump scalac 2.12.x series to 2.12.11 (#1257)
     <updated>2020-09-22T03:31:26Z</updated>
     <dc:date>2020-09-22T03:31:26Z</dc:date>
   </entry>
-  <dc:date>2021-01-29T11:01:33+00:00</dc:date>
+  <dc:date>2021-01-29T12:02:35+00:00</dc:date>
 </feed>
