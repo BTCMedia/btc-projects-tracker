@@ -6,7 +6,76 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-29T02:03:20+00:00</updated>
+  <updated>2021-01-29T03:02:55+00:00</updated>
+  <entry>
+    <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.2</id>
+    <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.2"/>
+    <summary>### Changelog
+
+- [Authentication support](doc/auth.md) for the Electrum and HTTP API servers (#70)
+
+- Compatibility with Bitcoin Core v0.21 (#78)
+
+- Support for Signet
+
+- New `GET /bitcoin.pdf` HTTP API endpoint for extracting the Bitcoin whitepaper from the block chain
+  (https://twitter.com/shesek/status/1352368296553836544)
+
+- New `--create-wallet-if-missing` option to ease the creation of a designated bitcoind wallet (#76)
+
+- Docker: Multi-arch images for amd64, arm32v7 and arm64v8 (#79)
+
+- Indexer: Fix detection of conflicted mempool transactions
+
+- Support setting boolean options using environment variables
+  (`FORCE_RESCAN`, `CREATE_WALLET_IF_MISSING`, `ELECTRUM_SKIP_MERKLE`, `NO_STARTUP_BANNER` and `VERBOSE`)
+
+- Accept wildcard envirnoment variables for options that accept multiple values
+  (`XPUB_*`, `DESC_*`/`DESCRIPTOR_*` and `ADDRESS_*`)
+
+- Upgrade to rust-bitcoin v0.26.0, rust-miniscript v5.0.1 and bitcoincore-rpc v0.13.0
+
+
+------------
+
+Also see the v0.2.2 releases for [bwt-electrum-plugin](https://github.com/bwt-dev/bwt-electrum-plugin/releases/tag/v0.2.2), [libbwt](https://github.com/bwt-dev/libbwt/releases/tag/v0.2.2), [libbwt-nodejs](https://github.com/bwt-dev/libbwt-nodejs/releases/tag/v0.2.2) and [libbwt-jni](https://github.com/bwt-dev/libbwt-jni/releases/tag/v0.2.2).
+
+### Installation
+
+Installation instructions are [available on the README](https://github.com/bwt-dev/bwt#installation).
+
+### Verifying signatures
+
+The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on the [PGP WoT](http://keys.gnupg.net/pks/lookup?op=vindex&amp;fingerprint=on&amp;search=0x81F6104CD0F150FC), [github](https://api.github.com/users/shesek/gpg_keys), [twitter](https://twitter.com/shesek), [keybase](https://keybase.io/nadav), [hacker news](https://news.ycombinator.com/user?id=nadaviv) and [this video presentation](https://youtu.be/SXJaN2T3M10?t=4).
+
+```bash
+# Download (change x86_64-linux to your platform)
+$ wget https://github.com/bwt-dev/bwt/releases/download/v0.2.2/bwt-0.2.2-x86_64-linux.tar.gz
+
+# Fetch public key
+$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC
+
+# Verify signature
+$ wget -qO - https://github.com/bwt-dev/bwt/releases/download/v0.2.2/SHA256SUMS.asc \
+  | gpg --decrypt - | grep ' bwt-0.2.2-x86_64-linux.tar.gz$' | sha256sum -c -
+
+$ tar zxvf bwt-0.2.2-x86_64-linux.tar.gz
+$ ./bwt-0.1.5-x86_64-linux/bwt --xpub &lt;xpub&gt; ...
+```
+
+The signature verification should show `Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...` and `bwt-0.2.2-x86_64-linux.tar.gz: OK`.
+
+### Reproducible builds
+
+The builds are fully reproducible.
+
+You can verify the checksums against the v0.2.2 builds on Travis CI: https://travis-ci.org/github/bwt-dev/bwt/builds/756663238
+
+See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</summary>
+    <title>bwt-dev/bwt: v0.2.2</title>
+    <updated>2021-01-29T02:18:21Z</updated>
+    <dc:date>2021-01-29T02:18:21Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta"/>
@@ -6492,80 +6561,5 @@ Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/
     <updated>2020-09-19T11:08:54Z</updated>
     <dc:date>2020-09-19T11:08:54Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.92</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.5.92"/>
-    <summary>v5.5.9
-=======
-
-* ADD: Real time fees
-* FIX: broken LN -&gt; manage funds -&gt; refill
-* FIX: camera wont scan QR with airgapped HW wallet flow
-* FIX: Refresh from notification
-* FIX: transaction not updating on refresh
-* FIX: textAlign: right for custom fee in CPFP/RBF form
-* FIX: set default fee in CPFP/RBF fee-selection component
-* FIX: update recalculate fee on send screen with custom sat/byte fee rate
-* FIX: broken sendMAX if units are changed several times
-* FIX: validation allows user to create transaction even without valid address &amp; amount
-* FIX: Only send wallets to watch app if installed
-* FIX: Send Max not working
-* FIX: Reorder screen is broken
-
-
-v5.5.8
-======
-
-* ADD: Split for large devices
-* ADD: Export file option
-* ADD: Arabic, Slovenian &amp; Hebrew language
-* ADD: KES, NGN, TWD Fiat
-* FIX: After broadcast, value of sent transaction is incorrect
-* FIX: transaction time when using ElectrumPersonalServer
-* FIX: some ElectrumPersonalServer txs stay unconfirmed
-* FIX: Fixed dark/light theme switch
-* FIX: updated languages pt_BR, pt_PT, es_ES, sl_SI, de_DE, fr_FR, cs_CZ, ja_JP, it, ru, he
-* FIX: create-ln-invoice - button is not blocked, which can lead to multiple invoices created
-* FIX: If user has approved notifications, send hash from watch
-* FIX: If Camera not authorized, show Alert.
-* FIX: Only show direct export
-* FIX: better handling of errors from HodlHodl
-* FIX: Safello buy-bitcoin flow
-* FIX: Request location authorization for HodlHodl
-* FIX: Settings|Network|Lightning Settings fails input for leading or trailing blank
-* FIX: show Import file option
-* FIX: Background had wrong color during loading phase
-* REF: speeded up large wallets (&gt;3k txs)
-* REF: speedup onchain wallet creation
-
-
-v5.5.7
-======
-
-* ADD: Split for large devices
-* ADD: Export file option
-* ADD: Slovenian &amp; Hebrew language
-* ADD: KES, NGN, TWD Fiat
-* FIX: After broadcast, value of sent transaction is incorrect
-* FIX: transaction time when using ElectrumPersonalServer
-* FIX: some ElectrumPersonalServer txs stay unconfirmed
-* FIX: Fixed dark/light theme switch
-* FIX: updated languages pt_BR, pt_PT, es_ES, sl_SI, de_DE, fr_FR, cs_CZ, ja_JP, it, ru, he
-* FIX: create-ln-invoice - button is not blocked, which can lead to multiple invoices created
-* FIX: If user has approved notifications, send hash from watch
-* FIX: If Camera not authorized, show Alert.
-* FIX: Only show direct export
-* FIX: better handling of errors from HodlHodl
-* FIX: Safello buy-bitcoin flow
-* FIX: Request location authorization for HodlHodl
-* FIX: Settings|Network|Lightning Settings fails input for leading or trailing blank
-* FIX: show Import file option
-* FIX: Background had wrong color during loading phase
-* REF: speeded up large wallets (&gt;3k txs)
-* REF: speedup onchain wallet creation</summary>
-    <title>BlueWallet/BlueWallet: v5.5.92</title>
-    <updated>2020-09-18T10:29:18Z</updated>
-    <dc:date>2020-09-18T10:29:18Z</dc:date>
-  </entry>
-  <dc:date>2021-01-29T02:03:20+00:00</dc:date>
+  <dc:date>2021-01-29T03:02:55+00:00</dc:date>
 </feed>
