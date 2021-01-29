@@ -38,6 +38,29 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8">v1.0.6.8</a>
+						    </h2>
+							<p class="card-text">Published: 2021-01-29 09:55:09 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This release is trying some improvement to decrease the chances of being falsy flagged by Google Safe Browsing.</p>
+
+<ul>
+<li>Remove Tor URL from login page (useless now thanks to the url bar link) @dennisreimann</li>
+<li>Remove allowtransparency from checkout overlay @dennisreimann</li>
+<li>Remove clipboard code from the login page (was used to copy the tor url) @dennisreimann</li>
+<li>Rename some pages from PascalCase to lowercase. (Register =&gt; register, Login =&gt; login) @dennisreimann</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/bwt-dev/bwt">bwt-dev/bwt</a>: <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.2">v0.2.2</a>
 						    </h2>
 							<p class="card-text">Published: 2021-01-29 02:18:21 UTC</p>
@@ -7870,96 +7893,6 @@ b913a423553 Bump scalac 2.12.x series to 2.12.11 (#1257)
 					    <p class="card-text"></p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.1-beta.rc4" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.8.0">v0.8.0</a>
-						    </h2>
-							<p class="card-text">Published: 2020-09-19 11:08:54 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>Binaries for this release will appear soon. Building in progress...</p>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.0/specter_desktop_setup.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.0/SpecterDesktop-v0.8.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.0/specter_desktop-v0.8.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note:</strong>  In the remote mode Specter-Desktop will open a new window in the browser if you are using self-signed certificates or Tor. GUI app doesn&#39;t support it yet.</p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on MacOS:</strong> if Specter server doesn&#39;t start for a long time at the first launch, quit Specter, go to Applications, right click on Specter and click &quot;open&quot;. After that Specter will launch normally, and from now on you can start it as usual.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.0/specterd-v0.8.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.0/specterd-v0.8.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.0/specterd-v0.8.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Build: Refactor the desktop app to run Specter in a separate thread instead of from binaries (#370) (@stepansnigirev)</li>
-<li>Devices: <a href="https://shiftcrypto.ch/bitbox02/">BitBox02</a> single-sig support (#393, #402) (@ben-kaufman, @stepansnigirev)</li>
-<li>Bugfix: Fix file uploading (#327) (@ben-kaufman)</li>
-<li>Bugfix: Properly handle errors with listwalletdir command (#331) (@stepansnigirev)</li>
-<li>Bugfix: Fix logging ignoring the config (#348) (@k9ert)</li>
-<li>Bugfix: On send screen, make the amount input steps match the unit selected (#350) (@ben-kaufman)</li>
-<li>Bugfix: Fix Bitcoin Core fee calculation (#350, #367, #400) (@ben-kaufman, @stepansnigirev)</li>
-<li>Bugfix: Remove loggings of unrelated logs (#362) (@k9ert)</li>
-<li>Bugfix: Fix fee unit issues by using only sat/vbyte as Specter&#39;s fee unit (#372) (@ben-kaufman)</li>
-<li>Bugfix: Fix wallets not showing up and inability to create wallets if a JSON file is damaged (#375)</li>
-<li>Feature: Add option to verify merkle root and block headers (#334) (@mflaxman)</li>
-<li>Feature: Allow pruned nodes to fetch from a block explorer the missing data needed for importing wallet funds when scanning for UTXO (#344) (@stepansnigirev)</li>
-<li>Feature: Add HWI message signing (#345) (@ben-kaufman)</li>
-<li>Feature: Support ColdCard Generic file export format (#349) (@stepansnigirev)</li>
-<li>Feature: Allow configuring the Bitcoin Core RPC connection via environment variables (#351) (@k9ert)</li>
-<li>Feature: Allow specifying BIP44 account number when importing device keys from USB (#360) (@ben-kaufman)</li>
-<li>Feature: Allow arbitrary fee rate (#379) (@stepansnigirev)</li>
-<li>Feature: Allow connecting to a remote Bitcoin Core node over Tor (#383) (@ben-kaufman)</li>
-<li>UI: Make UI mobile-friendly (watch-only mode) (#326) (@ben-kaufman)</li>
-<li>UI: Show current Specter version on the sidebar (#333) (@mflaxman)</li>
-<li>UI: Add wallet keys list to wallet settings (#335) (@ben-kaufman)</li>
-<li>UI: Improve scan for existing funds option when creating a wallet (#337) (@ben-kaufman)</li>
-<li>UI: Allow toggling SLIP-132 format in wallet settings keys list (#343) (@ben-kaufman)</li>
-<li>UI: Add send max amount button (#350) (@ben-kaufman)</li>
-<li>UI: Add free-text transaction creation editor (#350) (@ben-kaufman)</li>
-<li>UI: Add total transaction fee preview when composing a transaction (#350) (@ben-kaufman)</li>
-<li>UI: Add tooltip to the Tor button (#364) (@ben-kaufman)</li>
-<li>UI: Allow resizing QR codes used for communications with airgapped wallets (#380) (@ben-kaufman)</li>
-<li>UI: New single-sig wallet and device setup wizard (#392) (@ben-kaufman)</li>
-<li>UI: Align sidebar contents properly (#394) (@dennisreimann)</li>
-<li>UI: Add about page to the sidebar (#401) (@moritzwietersheim, @ben-kaufman)</li>
-<li>Refactoring: Small cleanup of the JSON-RPC server code (#322) (@PulpCattel)</li>
-<li>Refactoring: Rearrange the utils and helpers files and functions (#352) (@stepansnigirev)</li>
-<li>Devops: Automate Linux binary releases (#324) (@k9ert)</li>
-<li>Devops: Add gen-certificate tool for self-signed certificates (#354) (@stepansnigirev)</li>
-<li>Devops: Automate Windows binary releases (#361) (@k9ert)</li>
-<li>Devops: Make pre-releases possible supporting semver (#371) (@k9ert)</li>
-<li>Docs: Update the FAQ (#328, #378, #387, #395) (@kkdao, @k9ert)</li>
-<li>Docs: Update Tor docs for Linux (#340) (@stepansnigirev)</li>
-<li>Docs: Add Tor document link to the README (#357) (@k9ert)</li>
-<li>Docs: Add FAQ link to the README (#355) (@Siimone)</li>
-<li>Docs: Update FAQ with a question about devices vs. wallets (#357) (@k9ert)</li>
-<li>Docs: Add Help Wanted section to the README (#357) (@moritzwietersheim)</li>
-</ul>
-
-<h1>Known Issues</h1>
-
-<ul>
-<li>The windows-binary is showing the the wrong version v0.7.2 even though it is indeed v0.8.0 (#407)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.8.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
