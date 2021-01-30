@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-30T11:02:09+00:00</updated>
+  <updated>2021-01-30T12:03:43+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.0-pre1</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.0-pre1"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.1.0-pre1</title>
+    <updated>2021-01-30T11:53:21Z</updated>
+    <dc:date>2021-01-30T11:53:21Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8"/>
@@ -6493,13 +6501,5 @@ b913a423553 Bump scalac 2.12.x series to 2.12.11 (#1257)
     <updated>2020-09-23T14:26:39Z</updated>
     <dc:date>2020-09-23T14:26:39Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.11.1-beta.rc4</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.1-beta.rc4"/>
-    <summary></summary>
-    <title>lightningnetwork/lnd: v0.11.1-beta.rc4</title>
-    <updated>2020-09-22T03:31:26Z</updated>
-    <dc:date>2020-09-22T03:31:26Z</dc:date>
-  </entry>
-  <dc:date>2021-01-30T11:02:09+00:00</dc:date>
+  <dc:date>2021-01-30T12:03:43+00:00</dc:date>
 </feed>
