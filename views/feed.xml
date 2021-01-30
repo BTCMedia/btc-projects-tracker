@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-01-30T06:02:18+00:00</updated>
+  <updated>2021-01-30T07:02:05+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8"/>
@@ -132,8 +132,8 @@ gpg --verify manifest-roasbeef-v0.12.0-beta.txt.asc
 You should see the following if the verification was successful:
 
 ```
-gpg: Signature made Tue Jan 26 19:41:19 2021 PST
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
+gpg: Signature made Tue Jan 26 23:22:18 2021 PST
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
 gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
 ```
 
@@ -164,9 +164,10 @@ Finally, you can also verify the _tag_ itself with the following command:
 
 ```
 $ git verify-tag v0.12.0-beta
-gpg: Signature made Tue Sep 15 18:55:00 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+gpg: Signature made Wed 27 Jan 2021 02:29:33 AM UTC using RSA key ID 9B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot;
+Primary key fingerprint: E4D8 5299 674B 2D31 FAA1  892E 372C BD76 33C6 1696
+     Subkey fingerprint: 60A1 FA7D A5BF F08B DCBB  E790 3BBD 59E9 9B28 0306
 ```
 
 ## Verifying the Docker Images
@@ -6500,5 +6501,5 @@ b913a423553 Bump scalac 2.12.x series to 2.12.11 (#1257)
     <updated>2020-09-22T03:31:26Z</updated>
     <dc:date>2020-09-22T03:31:26Z</dc:date>
   </entry>
-  <dc:date>2021-01-30T06:02:18+00:00</dc:date>
+  <dc:date>2021-01-30T07:02:05+00:00</dc:date>
 </feed>
