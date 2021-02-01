@@ -6,7 +6,27 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-01T22:03:15+00:00</updated>
+  <updated>2021-02-01T23:01:44+00:00</updated>
+  <entry>
+    <id>https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.2.0</id>
+    <link href="https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.2.0"/>
+    <summary>This release contains relevant improvements from community feedback. Thanks to all **RSK buidlers** for your contributions!
+
+This is a summary of the changes included in this version:
+
+- Add *Content-Type* field in JSON RPC responses (#1390)
+- Consider minimum gas price in *eth_gasPrice* method (#1389)
+- On-the-fly block blooms cache for faster events retrieval (#1384)
+- Fix *v* value in JSON RPC transaction result (#1382)
+
+You can find a complete list of the changes introduced in [Papyrus 2.2.0 milestone](https://github.com/rsksmart/rskj/milestone/23).
+
+SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
+f7cb1e6c5568332d047c602a5b2c464c41688336b824d92ef3a40b89a8f55b60  rskj-core-2.2.0-PAPYRUS-all.jar</summary>
+    <title>rsksmart/rskj: PAPYRUS-2.2.0</title>
+    <updated>2021-02-01T22:19:58Z</updated>
+    <dc:date>2021-02-01T22:19:58Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.0"/>
@@ -5921,28 +5941,5 @@ Wilmer Paulino
     <updated>2020-10-01T02:43:01Z</updated>
     <dc:date>2020-10-01T02:43:01Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.11</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.11"/>
-    <summary>This release of Umbrel adds an Electrum server along with lndconnect to expand wallet compatibility. You can now connect Electrum, Blockstream Green, BlueWallet, Phoenix, Sparrow, Wasabi, Zap, and Zeus directly to your Umbrel.
-
-Due to the performance constraints of running an Electrum server, this update isn’t compatible with devices with less than 2GB RAM, such as the Raspberry Pi 3. We strongly recommend upgrading to a device with more RAM, such as the Raspberry Pi 4 with 4GB or 8GB RAM.
-
-Changes:
-
-- Bump manager to v0.2.5 (#252)
-- Bump dashboard to v0.3.8 (#251)
-- Integrate electrs (#242)
-- Expose LND RPC/REST for lndconnect (#237)
-- Update outdated readme information (#238) (Thanks, @AaronDewes!)
-- Update license (#235)
-- Remove confusing log message on no file (#233)
-- Add link to dev chat (#232)
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.2.10...v0.2.11</summary>
-    <title>getumbrel/umbrel: v0.2.11</title>
-    <updated>2020-09-28T15:29:10Z</updated>
-    <dc:date>2020-09-28T15:29:10Z</dc:date>
-  </entry>
-  <dc:date>2021-02-01T22:03:15+00:00</dc:date>
+  <dc:date>2021-02-01T23:01:44+00:00</dc:date>
 </feed>
