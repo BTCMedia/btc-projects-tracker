@@ -6,7 +6,188 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-02T09:02:12+00:00</updated>
+  <updated>2021-02-02T10:03:44+00:00</updated>
+  <entry>
+    <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.5</id>
+    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.5"/>
+    <summary>## Release notes
+
+ATTENTION: This release changes the trade protocol. 
+
+**DO NOT specify trade ID in 'reason for payment'.** 
+
+This change reduces the chances that certain payment accounts get flagged. 
+
+This release introduces the option to create limit offers to be able to deactivate an offer if a certain price limit is reached. It also introduces cash-by-mail as a new payment method. In addition to multiple minor UI changes, we squashed lots of bugs and improved reliability and performance of the app across the board.
+
+### DAO
+- [Add CSV export to BSQ transaction view](https://github.com/bisq-network/bisq/pull/5054)
+- [Move BSQ price in USD at first row](https://github.com/bisq-network/bisq/pull/4988)
+- [Add indication of last GH CR issue](https://github.com/bisq-network/bisq/pull/5014)
+- [Fix request amount bounds in ReimbursementValidator](https://github.com/bisq-network/bisq/pull/5077)
+
+### UI
+- [Add toggle for displaying volume in trade statistics chart in USD](https://github.com/bisq-network/bisq/pull/5066)
+- [Add toggle for hiding not takable offers](https://github.com/bisq-network/bisq/pull/5048)
+- [Add a 'payment method details' screen](https://github.com/bisq-network/bisq/pull/5052)
+- [Improve trade fee display at create and take offer screens and popups](https://github.com/bisq-network/bisq/pull/4985)
+- [Disable CPU-intensive animations](https://github.com/bisq-network/bisq/pull/5090)
+- [Improve popup text in case a local node is detected](https://github.com/bisq-network/bisq/pull/4984)
+- [Keep main navigation items left aligned](https://github.com/bisq-network/bisq/pull/5087)
+- [Reword &quot;trade started&quot; popup messages per suggestion](https://github.com/bisq-network/bisq/pull/5091)
+- [Update translations and fix a broken German translation](https://github.com/bisq-network/bisq/pull/5037)
+- [Show stacktrace in error popup at view exceptions](https://github.com/bisq-network/bisq/pull/5011)
+- [Fix missing apostrophe in Withdrawal view](https://github.com/bisq-network/bisq/pull/5015)
+- [Remove redundant popup when cancelling an offer](https://github.com/bisq-network/bisq/pull/4987)
+
+### Trading
+- [Change rule for 'reason for payment' field to not use trade ID but leave it empty](https://github.com/bisq-network/bisq/pull/5080)
+- [Deactivate open offer if trigger price is reached](https://github.com/bisq-network/bisq/pull/5001)
+- [Add payment method &quot;Cash by mail&quot;](https://github.com/bisq-network/bisq/pull/5092)
+- [Change trade period for TransferWise from 1 day to 4 days](https://github.com/bisq-network/bisq/pull/5016)
+- [Add option to hide non supported payment methods](https://github.com/bisq-network/bisq/pull/5045)
+- [Select show-all currencies if TransferWise is selected](https://github.com/bisq-network/bisq/pull/5042)
+
+### Wallet
+- [Show a confirmation of successfully sending BTC or BSQ from wallet](https://github.com/bisq-network/bisq/pull/5071)
+- [Improve path text on wallet info screen](https://github.com/bisq-network/bisq/pull/4991)
+- [Fix broken `-ignoreLocalBtcNode` startup option](https://github.com/bisq-network/bisq/pull/5094)
+
+### Reliability
+- [Persist and republish mailbox messages](https://github.com/bisq-network/bisq/pull/5072)
+- [Request only non-seed nodes if no seed nodes are available](https://github.com/bisq-network/bisq/pull/5041)
+- [Access concrete data stores](https://github.com/bisq-network/bisq/pull/5031)
+- [Improve offer publishing](https://github.com/bisq-network/bisq/pull/4950)
+- [Improve getBlocks request handling](https://github.com/bisq-network/bisq/pull/4851)
+- [Improve CleanupMailboxMessages](https://github.com/bisq-network/bisq/pull/4975)
+- [Fix premature disconnections from seeds](https://github.com/bisq-network/bisq/pull/5057)
+
+### Mediation/Arbitration
+- [Add mediators keybase usernames](https://github.com/bisq-network/bisq/pull/5004)
+
+### Performance
+- [Persist failed attempts of decrypting mailbox messages](https://github.com/bisq-network/bisq/pull/5061)
+- [Cache signature verification results](https://github.com/bisq-network/bisq/pull/5047)
+- [Cache results in account witness domain](https://github.com/bisq-network/bisq/pull/4953)
+
+### Network
+- [Add 4 old v2 seed nodes](https://github.com/bisq-network/bisq/pull/5078)
+- [Add option to prevent periodic shutdown for seed nodes](https://github.com/bisq-network/bisq/pull/5039)
+- [Add filter support on network level](https://github.com/bisq-network/bisq/pull/5038)
+- [Improve cleanup tor dir at seeds](https://github.com/bisq-network/bisq/pull/5070)
+- [Avoid resync from genesis in case of dao state issues](https://github.com/bisq-network/bisq/pull/4971)
+- [Update inventory code](https://github.com/bisq-network/bisq/pull/5040)
+
+### API
+- [Add new api methods 'getmyoffers' and 'getmyoffer'](https://github.com/bisq-network/bisq/pull/5056)
+- [Add new api method 'sendbtc'](https://github.com/bisq-network/bisq/pull/4922)
+- [Add new api method 'gettransaction'](https://github.com/bisq-network/bisq/pull/4948)
+- [Add optional txFeeRate parameter to api 'sendbsq'](https://github.com/bisq-network/bisq/pull/4900)
+- [Support tx memo field for btc withdrawals from api](https://github.com/bisq-network/bisq/pull/4925)
+- [Add protection tools](https://github.com/bisq-network/bisq/pull/5053)
+- [Integrate new protection tools into api's offer &amp; trade services](https://github.com/bisq-network/bisq/pull/5065)
+- [Prevent excessive api calls](https://github.com/bisq-network/bisq/pull/4966)
+- [Use posix-style CLI opts, provide method help](https://github.com/bisq-network/bisq/pull/5081)
+- [Add api trade simulation scripts](https://github.com/bisq-network/bisq/pull/5093)
+- [Pass hash to bitcoind blocknotify script](https://github.com/bisq-network/bisq/pull/4996)
+- [Stub out support for OpenOffer's triggerPrice in api](https://github.com/bisq-network/bisq/pull/5076)
+- [Use Bisq's UserThread.executor in gRPC server](https://github.com/bisq-network/bisq/pull/4936)
+
+### Development
+- [Remove awt dependencies except for webcam library](https://github.com/bisq-network/bisq/pull/5008)
+- [Update installation script](https://github.com/bisq-network/bisq/pull/4893)
+
+### Assets
+No new assets.
+
+## Verification
+
+Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
+Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
+
+Import the key:
+`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
+
+How to verify signatures?
+`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
+Replace BINARY with the file you downloaded (e.g. Bisq-1.5.5.dmg)
+
+Verify jar file inside binary:
+You can verify on OSX the jar file with:
+`shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.5.jar`
+The output need to match the value from the Bisq-1.5.5.jar.txt file.
+
+
+## Known issues with installation 
+
+### macOS Catalina:
+
+&gt; Bisq can't be opened because Apple cannot check it for malicious software
+
+This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).
+
+Workaround: Right click on the installed Bisq app &gt; Click `Open` (warning popup shown again, but with new button available) &gt; Click `Open`
+
+&gt; Bisq would like to receive keystrokes from any application.
+
+Discussed in issue https://github.com/bisq-network/bisq/issues/3373, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.
+
+### Windows:
+
+There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
+
+If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
+
+[1] Application directory (contains application installation files):
+C:\Users\&lt;username&gt;\AppData\Local\Bisq
+
+[2] Data directory (contains all Bisq data including wallet):
+C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
+
+
+### Linux:
+
+Hint for Debian users:
+If you have problems starting Bisq on Debian use: `/opt/Bisq/Bisq`
+
+If your Linux distro does not support .deb files please follow this instruction:
+```
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.5.5.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+```
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
+
+## Cleanup tool for saved trades that failed market price check
+
+With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It will remove corrupt trade entries added due to bug https://github.com/bisq-network/bisq/issues/2924. Install and run once, it will shut down automatically, then install version 1.5.5 or later. You can verify the binary the same way as you do with the Bisq application.
+
+## Credits
+
+Thanks to everyone who directly contributed to this release:
+
+- @chimp1984
+- @ripcurlx 
+- @ghubstan
+- @jakub_cz
+- @jmacxx 
+- @m52go 
+- @sqrrm 
+- @stejbac
+
+A special thanks to our first time contributors:
+
+- @81dr: [Update installation script](https://github.com/bisq-network/bisq/pull/4893)
+
+As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
+    <title>bisq-network/bisq: v1.5.5</title>
+    <updated>2021-02-02T09:22:14Z</updated>
+    <dc:date>2021-02-02T09:22:14Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.2.0</id>
     <link href="https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.2.0"/>
@@ -1914,7 +2095,9 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.0...v0.3.1</summary>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.4</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.4"/>
-    <summary>This is a hotfix that improves [DoS protection](https://github.com/bisq-network/bisq/pull/5026).
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+This is a hotfix that improves [DoS protection](https://github.com/bisq-network/bisq/pull/5026).
 
 For a full list of changes please see [milestone v1.5.4](https://github.com/bisq-network/bisq/milestone/48?closed=1) for more details.
 
@@ -5767,179 +5950,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2020-10-01T08:45:58Z</updated>
     <dc:date>2020-10-01T08:45:58Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.11.1-beta</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.11.1-beta"/>
-    <summary>This marks the first minor release in the `v0.11.x` series! This release contains no breaking changes, and no database migrations. Instead this release bundles a number of reliability improvements, some macaroon upgrades, and a change to make our version our anchor commitments spec compliant amongst several other changes. 
-
-# Database Migrations
-This release contains no database migrations. 
-
-# Verifying the Release
-
-In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
-
-```
-curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
-```
-
-Once you have the required PGP keys, you can verify the release (assuming `manifest-v0.11.1-beta.txt` and `manifest-v0.11.1-beta.txt.sig` are in the current directory) with:
-
-```
-gpg --verify manifest-v0.11.1-beta.txt.sig
-```
-
-You should see the following if the verification was successful:
-
-```
-gpg: assuming signed data in 'manifest-v0.11.1-beta.txt'
-gpg: Signature made Thu Oct  1 16:38:32 2020 PDT
-gpg:                using RSA key 9C8D61868A7C492003B2744EE7D737B67FA592C7
-gpg: Good signature from &quot;Conner Fromknecht &lt;conner@lightning.engineering&gt;&quot; [ultimate]
-```
-
-That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
-
-
-For this release roasbeef's signature is the secondary signature which can be verified with the following command: 
-```
-gpg --verify roasbeef-manifest-v0.11.1-beta.txt.sig manifest-v0.11.1-beta.txt
-gpg: Signature made Wed Sep 30 17:35:20 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-```
-
-## Verifying the Release Timestamp 
-
-From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-v0.11.1-beta.txt.sig.ots` and `manifest-v0.11.1-beta.txt.ots`. 
-
-Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
-```
-ots verify manifest-v0.11.1-beta.txt.ots
-ots verify manifest-v0.11.1-beta.txt.sig.ots -f roasbeef-manifest-v0.11.1-beta.txt.sig
-```
-
-Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
-
-These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
-
-## Verifying the Release Binaries
-
-Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved. The release binaries are compiled with `go1.14.9`, which is required by verifiers to arrive at the same ones. They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, and `watchtowerrpc`. Note that these are already included in the release script, so they do not need to be provided.
-
-The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
-
-Finally, you can also verify the _tag_ itself with the following command:
-
-```
-$ git verify-tag v0.11.1-beta
-gpg: Signature made Tue Sep 15 18:55:00 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-```
-
-# Building the Contained Release 
-
-Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming that `vendor.tar.gz` and `lnd-source-v0.11.1-beta.tar.gz` are in the current directory, follow these steps:
-
-```
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.11.1-beta.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.11.1-beta&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.11.1-beta&quot; ./cmd/lncli
-```
-
-The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
-
-Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
-
-```
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-```
-
-⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
-
-# Release Notes 
-
-## Wumbo Soft Limit 
-
-[`lnd` now has a soft-limit of 10 BTC for wumbo channels](https://github.com/lightningnetwork/lnd/pull/4567), when they're enabled. This limit can be reduced by specifying the new `--maxchansize` command line flag. This new flag allows node operators to better control their exposure to very large channels, while still allowing channels above the prior pre-wumbo limit. 
-
-## Healthchecks
-This release contains a new health checks subsystem which periodically runs a set of health checks and requests that lnd gracefully shutdown if the check fails. The following health checks are implemented:
-* Chain backend: lnd requires access to a bitcoin backend, and may be at risk of losing funds if it loses its connection to the chain. A health check which periodically queries the chain backend for the best block is added, and enabled by default.
-* Disk space: lnd needs disk space to update its database with operational data. A disk space health check which will request shutdown if available disk space falls below a threshold percentage has been added, but is disabled by default to ensure that this check does affect any existing deployments (particularly mobile). 
-
-Both of these checks are configurable, and the following options can be set in the `healthcheck.chainbackend` and `healthcheck.diskspace` config groups:
-* Interval: how often the check should be run
-* Attempts: the number of attempts we allow the check to fail before we request shutdown; this value can be set to 0 to disable a check. 
-* Timeout: the amount of time we allow a check to take before failing it due to timeout
-* Backoff: the amount of time we backoff between failed checks
-
-**Note that these new checks are off by default.** To turn them on, users should set `healthcheck.chainbackend.attempts` and `healthcheck.diskspace.attempts` to a non-zero value. 
-
-## Anchor channels
-The experimental `anchor channel` type introduced in [lnd v0.10.0](https://github.com/lightningnetwork/lnd/releases/tag/v0.10.0-beta) has now been finalized in the [BOLT spec](https://github.com/lightningnetwork/lightning-rfc/pull/688), and this release makes the lnd implementation compatible with these changes. If you already have channels of the previous type you can still update. The only thing you must be aware is that cooperative close will fail until your channel party also update to a spec compliant implementation. 
-
-Note that this channel type still remains experimental.
-
-## Channel Configuration 
-
-[A new flag has been added to allow node operators to limit the total number of HTLCs they'll allow to exist on &quot;their side&quot;](https://github.com/lightningnetwork/lnd/pull/4527) of the commitment. In the future, we may lower this default in order to mitigate certain &quot;fee siphoning&quot; attacks that exist with high fee rates and a large number of HTLCs. Users can set this new value to control the value used for all _newly created channels_ 
-using the following flag: `--default-remote-max-htlcs`. 
-
-## RPC Server
-
-[The `WalletUnlocker` proxy now exposes CORS options like the rest of the REST proxy](https://github.com/lightningnetwork/lnd/pull/4551). 
-
-[A new flag has been added to `lnd` which allows TLS certs to be generated without leaking sensitive data](https://github.com/lightningnetwork/lnd/pull/4421) such as certain IP address information. 
-
-[The existing PSBT funding flow has been modified to accept a raw transaction during the `Finalize` step](https://github.com/lightningnetwork/lnd/issues/4330). This makes our workflow more compatible with certain wallets like Electrum. Additionally, our flow is now compatible with wallets that have implemented mandatory measures to mitigate certain signing fault attacks. 
-
-## Macaroons 
-
-### Granular Method Macaroons 
-
-[A series of new calls to enable _granular_ macaroon access has landed in this new version](https://github.com/lightningnetwork/lnd/pull/4463). These new calls allow users to bake a macaroon with a specific _method call URI_. In other words, macaroons can now be created that only allow access to a specific set of RPC calls. As an example, it's now possible to create a macaroon that only lets a user obtain the current snapshot of the graph _and nothing more_. 
-
-A new local CLI command: `lncli listpermissions`, allows one to view all the current permissions available when baking a macaroon. 
-
-If we wanted to make a macaroon that _only_ allowed access to `GetInfo` and `GetVersion, then we'd execute the following command: 
-```
-lncli bakemacaroon uri:/lnrpc.Lightning/GetInfo uri:/verrpc.Versioner/GetVersion
-```
-
-A new CLI command `lncli printmacaroon` has also been added that shows what permissions an already baked macaroon contains.
-
-For more information on this new feature, [check out the updated set of docs on macaroons](https://github.com/guggero/lnd/blob/4996b28dabd71854b15f235ee1314c0b2242634a/macaroons/README.md). 
-
-### Custom Macaroon Validators 
-
-[When initializing `lnd`, it's now possible to register a custom macaroon validator for a sub-server](https://github.com/lightningnetwork/lnd/pull/4464). This allows certain components to be unbundled, yet still retain lnd's primary RPC server interface for macaroon validation. 
-
-## Bug Fixes
-
-[A bug has been fixed that would at times cause `lnd` to crash](https://github.com/lightningnetwork/lnd/pull/4620) due to an edge case in the logic within the `ChainNotifier` sub-server. 
-
-[A bug has been fixed in the routerrpc server](https://github.com/lightningnetwork/lnd/pull/4596) that would previously cause it to crash when given bad input. 
-
-The full list of changes since `v0.11.0-beta` can be found here:
-
-* https://github.com/lightningnetwork/lnd/compare/v0.11.0-beta...v0.11.1-beta
-
-# Contributors (Alphabetical Order)
-Carla Kirk-Cohen
-Calvin Zachman 
-Conner Fromknecht 
-Graham Krizek 
-Johan T. Halseth 
-Olaoluwa Osuntokun 
-Oliver Gugger 
-Wilmer Paulino 
-</summary>
-    <title>lightningnetwork/lnd: v0.11.1-beta</title>
-    <updated>2020-10-01T02:43:01Z</updated>
-    <dc:date>2020-10-01T02:43:01Z</dc:date>
-  </entry>
-  <dc:date>2021-02-02T09:02:12+00:00</dc:date>
+  <dc:date>2021-02-02T10:03:44+00:00</dc:date>
 </feed>
