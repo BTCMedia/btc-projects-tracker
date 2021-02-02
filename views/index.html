@@ -38,6 +38,100 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6">v1.4.6</a>
+						    </h2>
+							<p class="card-text">Published: 2021-02-02 16:40:13 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Display min amount for pay-to-open</h2>
+
+<p>The minimum amount that the wallet can receive is now displayed when the wallet does not have any channels. It is also displayed for swap-ins. This minimum amount prevents creating new channels for very small amounts.</p>
+
+<h2>Complete list of changes</h2>
+
+<ul>
+<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.5...v1.4.6">https://github.com/ACINQ/phoenix/compare/v1.4.5...v1.4.6</a></li>
+<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.7-android-phoenix...v0.4.8-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.7-android-phoenix...v0.4.8-android-phoenix</a></li>
+</ul>
+
+<p>Thanks @bitcoinuser for updating the Portuguese-Brazilian translation.</p>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
+- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import padioupm.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.5">v1.4.5</a>
+						    </h2>
+							<p class="card-text">Published: 2021-02-02 16:39:53 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Main changes</h2>
+
+<h4>Closing logic is cooperative when we have nothing at stake</h4>
+
+<p>More information here: <a href="https://github.com/ACINQ/eclair/pull/1633">https://github.com/ACINQ/eclair/pull/1633</a></p>
+
+<h4>Add links to terms</h4>
+
+<p>A link to the <a href="https://phoenix.acinq.co/terms">terms</a> (explaining how the wallet works and what can be expected) has been added to the about and initialization screens.</p>
+
+<h2>Complete list of changes</h2>
+
+<ul>
+<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.4...v1.4.5">https://github.com/ACINQ/phoenix/compare/v1.4.4...v1.4.5</a></li>
+<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.6-android-phoenix...v0.4.7-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.6-android-phoenix...v0.4.7-android-phoenix</a></li>
+</ul>
+
+<p>Thanks @bitcoinuser for updating the Portuguese-Brazilian translation.</p>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
+- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import padioupm.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.5">v1.5.5</a>
 						    </h2>
 							<p class="card-text">Published: 2021-02-02 09:22:14 UTC</p>
@@ -7244,148 +7338,6 @@ FIX: Missing (NT) before $ sign</p>
 </p>
 					    <a href="https://github.com/bitcoin-core/HWI" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.0-rc.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.6">v1.0.5.6</a>
-						    </h2>
-							<p class="card-text">Published: 2020-10-01 14:11:08 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>New features:</h3>
-
-<ul>
-<li>Shopify support @rockstardev @Kukks</li>
-<li>Can enable/disable any payment method based on the amount of the invoice #1871 @xpayserver</li>
-<li>New Invoice API in Greenfield (Still incomplete, more for next release) @Kukks @NicolasDorier</li>
-<li>A new light view more adapted for Point of Sale @mariodian</li>
-<li>Allows administrator to invite new users via link and email @Kukks</li>
-<li>New labels in the wallet for payment requests, apps, and improvement of the payout label @Kukks</li>
-<li>Allows entry in wallet send via fiat #1891 @Kukks</li>
-<li>Allows partial invoice refund #1882 @Kukks</li>
-<li>In the Request API key flow, let the user be redirected to the original website #1800 @Kukks @dennisreimann (<a href="https://docs.btcpayserver.org/API/Greenfield/v1/#tag/Authorization">more info</a>)</li>
-<li>Invoice logs now show their severity #1681 @Kukks (see <a href="https://i.imgur.com/eyMO9M3.png">https://i.imgur.com/eyMO9M3.png</a>)</li>
-<li>Add store sort (#1861) @bolatovumar</li>
-</ul>
-
-<h3>Improvements:</h3>
-
-<ul>
-<li>Update PSBT and PSBT sent to Hardware wallet will include <code>non_witness_utxo</code> by default, when possible, to match Bitcoin Core 0.20.1 behavior. @NicolasDorier</li>
-<li>Adjust invoice badge styling (#1906) @bolatovumar</li>
-<li>Invoice notification email improvements (#1875) @dennisreimann</li>
-<li>Improvement of the UX flow for requesting an API Key of a BTCPay Server user (#1898) @dennisreimann</li>
-<li>Don&#39;t send notification email for expired invoices @dennisreimann</li>
-<li>Greenfield API: Add <code>Roles</code> property to the user data. @dennisreimann</li>
-<li>Remove Changelly integration @Kukks</li>
-<li>Better wording in transaction list page #1887 @maltokyo</li>
-<li>Fix alerts text break. #1865 @bolatovumar</li>
-<li>Remove Tor link from navbar @NicolasDorier</li>
-<li>Improve invoices list view #1815 @dennisreimann</li>
-<li>Improve sync progress dialog #1929 @Kukks</li>
-<li>Show index of payment address for onchain payments @Kukks</li>
-</ul>
-
-<h3>Bug fixes:</h3>
-
-<ul>
-<li>When an invoice is partially paid on-chain and allow off-chain, a new lightning network invoice should be created for the remainder of the payment. @Kukks</li>
-<li>Changing the inventory of a PoS item was not working properly (@mariodian)</li>
-<li>Greenfield API: The internal lightning API was returning error 403, even when used as an administrator (@Kukks)</li>
-<li>Using lightning charge as lightning network invoice provider over HTTP was not working properly @bolatovumar</li>
-<li>Fix: If the hot wallet failed to sign a PSBT, should not show a blank page crash (@NicolasDorier)</li>
-<li>Fix bug: The wallet was sending only round amount of sat per byte (@NicolasDorier)</li>
-<li>&quot;Attempt MySql Fix&quot; #1856 @Kukks</li>
-<li>Fix HitBTC rate provider again @NicolasDorier</li>
-</ul>
-
-<h3>Altcoin build</h3>
-
-<ul>
-<li>MonetaryUnit support (MUE) @sotblad</li>
-<li>ETH/ERC20 support @xpayserver</li>
-<li>Fix monero crash #1883 @Kukks</li>
-</ul>
-</p>
-					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.8.1">v0.8.1</a>
-						    </h2>
-							<p class="card-text">Published: 2020-10-01 08:45:58 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specter_desktop_setup.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/SpecterDesktop-v0.8.1.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specter_desktop-v0.8.1-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note:</strong>  In the remote mode Specter-Desktop will open a new window in the browser if you are using self-signed certificates or Tor. GUI app doesn&#39;t support it yet.</p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on MacOS:</strong> if Specter server doesn&#39;t start for a long time at the first launch, quit Specter, go to Applications, right click on Specter and click &quot;open&quot;. After that Specter will launch normally, and from now on you can start it as usual.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specterd-v0.8.1-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specterd-v0.8.1-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specterd-v0.8.1-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<h1>Signatures and hashes</h1>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @stepansnigirev&#39;s GPG key.
-You can get public key from here: <a href="https://stepansnigirev.com/ss-specter-release.asc">https://stepansnigirev.com/ss-specter-release.asc</a>.
-It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x36ED357AB24B915F">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F">keys.openpgp.org</a>.
-Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F</code>, short id: <code>36ed357ab24b915f</code></p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Bugfix: Fix displaying address on BitBox02 (#416) (@stepansnigirev)</li>
-<li>Bugfix: Fix Specter not starting up if Ledger is connected and asleep (#416) (@stepansnigirev)</li>
-<li>Bugfix: Fix wallet-create wizard ignoring passphrase on Trezor One and KeepKey (#420) (@ben-kaufman)</li>
-<li>Bugfix: Fix handling of corrupted wallet file (#422) (@stepansnigirev)</li>
-<li>Bugfix: Fix wrong version number shown on Windows installer (#431) (@k9ert)</li>
-<li>Bugfix: Fix default address labeling issue when importing an old wallet (#435) (@ben-kaufman)</li>
-<li>Bugfix: Fix message signing with Specter-DIY (#440) (@stepansnigirev)</li>
-<li>Bugfix: Fix handling of Bitcoin Core&#39;s <code>disablewallet</code> mode (#461) (@ben-kaufman)</li>
-<li>Bugfix: Use port 8332 if port was not specified with disabled auto-detect (#462) (@stepansnigirev)</li>
-<li>Bugfix: Fix ColdCard multisig wallet export (#467) (@stepansnigirev)</li>
-<li>Bugfix: Fix Ledger failing to sign transactions with multiple inputs (#468) (@ben-kaufman)</li>
-<li>Bugfix: Fix wallet importing issues (#463) (@k9ert)</li>
-<li>Performance: Improve RPC calls speed (#419) (@stepansnigirev)</li>
-<li>Performance: Move version-checker to a separate thread (#421) (@stepansnigirev)</li>
-<li>Performance: Improve speed of the wallet UTXO tab (#457) (@ben-kaufman)</li>
-<li>Feature: Add addresses labels to wallet backup file (#430) (@ben-kaufman)</li>
-<li>Feature: Notify on desktop app when new Specter version is available (#421, #438) (@stepansnigirev)</li>
-<li>UI: Correct typos in main menus (#424) (@Bayernatoor)</li>
-<li>UI: Fix RPC connection test checkboxes CSS (#427) (@ben-kaufman)</li>
-<li>UI: Show total balances as percentage of the total Bitcoin supply when running the numbers (#429) (@ben-kaufman)</li>
-<li>UI: Show live updates of wallet rescan progress (#432) (@ben-kaufman)</li>
-<li>UI: Add QR code (base64) and file upload (binary, base64) support for PSBT import and export (#469) (@stepansnigirev)</li>
-<li>Refactoring: Add automated PEP8 checks with Black (#286) (@mflaxman)</li>
-<li>Refactoring: Cleaner input weight calculation for estimating transaction fees (#426) (@stepansnigirev)</li>
-<li>Refactoring: Blackify the codebase (#464) (@stepansnigirev)</li>
-<li>Docs: Update the FAQ (#437) (@calkob)</li>
-<li>Docs: Add a note to the README about setting <code>server=1</code> for Bitcoin Core GUI (#459) (@Maple44)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.8.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

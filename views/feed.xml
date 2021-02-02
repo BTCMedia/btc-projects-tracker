@@ -6,7 +6,81 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-02T16:01:54+00:00</updated>
+  <updated>2021-02-02T17:03:51+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.6</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6"/>
+    <summary>## Display min amount for pay-to-open
+
+The minimum amount that the wallet can receive is now displayed when the wallet does not have any channels. It is also displayed for swap-ins. This minimum amount prevents creating new channels for very small amounts.
+
+## Complete list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.5...v1.4.6
+- **core**: https://github.com/ACINQ/eclair/compare/v0.4.7-android-phoenix...v0.4.8-android-phoenix
+
+Thanks @bitcoinuser for updating the Portuguese-Brazilian translation.
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: https://acinq.co/pgp/padioupm.asc
+- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import padioupm.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.6</title>
+    <updated>2021-02-02T16:40:13Z</updated>
+    <dc:date>2021-02-02T16:40:13Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.5</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.5"/>
+    <summary>## Main changes
+
+#### Closing logic is cooperative when we have nothing at stake
+
+More information here: https://github.com/ACINQ/eclair/pull/1633
+
+#### Add links to terms
+
+A link to the [terms](https://phoenix.acinq.co/terms) (explaining how the wallet works and what can be expected) has been added to the about and initialization screens.
+
+## Complete list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.4...v1.4.5
+- **core**: https://github.com/ACINQ/eclair/compare/v0.4.6-android-phoenix...v0.4.7-android-phoenix
+
+Thanks @bitcoinuser for updating the Portuguese-Brazilian translation.
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: https://acinq.co/pgp/padioupm.asc
+- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import padioupm.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.5</title>
+    <updated>2021-02-02T16:39:53Z</updated>
+    <dc:date>2021-02-02T16:39:53Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.5</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.5"/>
@@ -5843,114 +5917,5 @@ See [more details here](https://github.com/shesek/bwt#reproducible-builds).</sum
     <updated>2020-10-02T20:05:09Z</updated>
     <dc:date>2020-10-02T20:05:09Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.6</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.6"/>
-    <summary>### New features:
-
-* Shopify support @rockstardev @Kukks
-* Can enable/disable any payment method based on the amount of the invoice #1871 @xpayserver
-* New Invoice API in Greenfield (Still incomplete, more for next release) @Kukks @NicolasDorier
-* A new light view more adapted for Point of Sale @mariodian
-* Allows administrator to invite new users via link and email @Kukks
-* New labels in the wallet for payment requests, apps, and improvement of the payout label @Kukks
-* Allows entry in wallet send via fiat #1891 @Kukks
-* Allows partial invoice refund #1882 @Kukks
-* In the Request API key flow, let the user be redirected to the original website #1800 @Kukks @dennisreimann ([more info](https://docs.btcpayserver.org/API/Greenfield/v1/#tag/Authorization))
-* Invoice logs now show their severity #1681 @Kukks (see https://i.imgur.com/eyMO9M3.png)
-* Add store sort (#1861) @bolatovumar
-
-### Improvements:
-* Update PSBT and PSBT sent to Hardware wallet will include `non_witness_utxo` by default, when possible, to match Bitcoin Core 0.20.1 behavior. @NicolasDorier
-* Adjust invoice badge styling (#1906) @bolatovumar
-* Invoice notification email improvements (#1875) @dennisreimann
-* Improvement of the UX flow for requesting an API Key of a BTCPay Server user (#1898) @dennisreimann
-* Don't send notification email for expired invoices @dennisreimann
-* Greenfield API: Add `Roles` property to the user data. @dennisreimann
-* Remove Changelly integration @Kukks
-* Better wording in transaction list page #1887 @maltokyo
-* Fix alerts text break. #1865 @bolatovumar
-* Remove Tor link from navbar @NicolasDorier
-* Improve invoices list view #1815 @dennisreimann
-* Improve sync progress dialog #1929 @Kukks
-* Show index of payment address for onchain payments @Kukks
-
-### Bug fixes:
-* When an invoice is partially paid on-chain and allow off-chain, a new lightning network invoice should be created for the remainder of the payment. @Kukks
-* Changing the inventory of a PoS item was not working properly (@mariodian)
-* Greenfield API: The internal lightning API was returning error 403, even when used as an administrator (@Kukks)
-* Using lightning charge as lightning network invoice provider over HTTP was not working properly @bolatovumar
-* Fix: If the hot wallet failed to sign a PSBT, should not show a blank page crash (@NicolasDorier)
-* Fix bug: The wallet was sending only round amount of sat per byte (@NicolasDorier)
-* &quot;Attempt MySql Fix&quot; #1856 @Kukks
-* Fix HitBTC rate provider again @NicolasDorier
-
-### Altcoin build
-* MonetaryUnit support (MUE) @sotblad
-* ETH/ERC20 support @xpayserver
-* Fix monero crash #1883 @Kukks</summary>
-    <title>btcpayserver/btcpayserver: v1.0.5.6</title>
-    <updated>2020-10-01T14:11:08Z</updated>
-    <dc:date>2020-10-01T14:11:08Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.8.1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.8.1"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specter_desktop_setup.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/SpecterDesktop-v0.8.1.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specter_desktop-v0.8.1-x86_64-linux-gnu.tar.gz)
-
-**Note:**  In the remote mode Specter-Desktop will open a new window in the browser if you are using self-signed certificates or Tor. GUI app doesn't support it yet.
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on MacOS:** if Specter server doesn't start for a long time at the first launch, quit Specter, go to Applications, right click on Specter and click &quot;open&quot;. After that Specter will launch normally, and from now on you can start it as usual.
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specterd-v0.8.1-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specterd-v0.8.1-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/specterd-v0.8.1-x86_64-linux-gnu.tar.gz)
-
-# Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.8.1/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @stepansnigirev's GPG key.
-You can get public key from here: [https://stepansnigirev.com/ss-specter-release.asc](https://stepansnigirev.com/ss-specter-release.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x36ED357AB24B915F) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F).
-Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, short id: `36ed357ab24b915f`
-
-# Release notes
- - Bugfix: Fix displaying address on BitBox02 (#416) (@stepansnigirev)
- - Bugfix: Fix Specter not starting up if Ledger is connected and asleep (#416) (@stepansnigirev)
- - Bugfix: Fix wallet-create wizard ignoring passphrase on Trezor One and KeepKey (#420) (@ben-kaufman)
- - Bugfix: Fix handling of corrupted wallet file (#422) (@stepansnigirev)
- - Bugfix: Fix wrong version number shown on Windows installer (#431) (@k9ert)
- - Bugfix: Fix default address labeling issue when importing an old wallet (#435) (@ben-kaufman)
- - Bugfix: Fix message signing with Specter-DIY (#440) (@stepansnigirev)
- - Bugfix: Fix handling of Bitcoin Core's `disablewallet` mode (#461) (@ben-kaufman)
- - Bugfix: Use port 8332 if port was not specified with disabled auto-detect (#462) (@stepansnigirev)
- - Bugfix: Fix ColdCard multisig wallet export (#467) (@stepansnigirev)
- - Bugfix: Fix Ledger failing to sign transactions with multiple inputs (#468) (@ben-kaufman)
- - Bugfix: Fix wallet importing issues (#463) (@k9ert)
- - Performance: Improve RPC calls speed (#419) (@stepansnigirev)
- - Performance: Move version-checker to a separate thread (#421) (@stepansnigirev)
- - Performance: Improve speed of the wallet UTXO tab (#457) (@ben-kaufman)
- - Feature: Add addresses labels to wallet backup file (#430) (@ben-kaufman)
- - Feature: Notify on desktop app when new Specter version is available (#421, #438) (@stepansnigirev)
- - UI: Correct typos in main menus (#424) (@Bayernatoor)
- - UI: Fix RPC connection test checkboxes CSS (#427) (@ben-kaufman)
- - UI: Show total balances as percentage of the total Bitcoin supply when running the numbers (#429) (@ben-kaufman)
- - UI: Show live updates of wallet rescan progress (#432) (@ben-kaufman)
- - UI: Add QR code (base64) and file upload (binary, base64) support for PSBT import and export (#469) (@stepansnigirev)
- - Refactoring: Add automated PEP8 checks with Black (#286) (@mflaxman)
- - Refactoring: Cleaner input weight calculation for estimating transaction fees (#426) (@stepansnigirev)
- - Refactoring: Blackify the codebase (#464) (@stepansnigirev)
- - Docs: Update the FAQ (#437) (@calkob)
- - Docs: Add a note to the README about setting `server=1` for Bitcoin Core GUI (#459) (@Maple44)</summary>
-    <title>cryptoadvance/specter-desktop: v0.8.1</title>
-    <updated>2020-10-01T08:45:58Z</updated>
-    <dc:date>2020-10-01T08:45:58Z</dc:date>
-  </entry>
-  <dc:date>2021-02-02T16:01:54+00:00</dc:date>
+  <dc:date>2021-02-02T17:03:51+00:00</dc:date>
 </feed>
