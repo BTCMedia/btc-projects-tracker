@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-02T01:02:10+00:00</updated>
+  <updated>2021-02-02T02:02:17+00:00</updated>
   <entry>
     <id>https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.2.0</id>
     <link href="https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.2.0"/>
@@ -5941,5 +5941,5 @@ Wilmer Paulino
     <updated>2020-10-01T02:43:01Z</updated>
     <dc:date>2020-10-01T02:43:01Z</dc:date>
   </entry>
-  <dc:date>2021-02-02T01:02:10+00:00</dc:date>
+  <dc:date>2021-02-02T02:02:17+00:00</dc:date>
 </feed>
