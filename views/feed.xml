@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-02T13:01:24+00:00</updated>
+  <updated>2021-02-02T14:01:07+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.5</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.5"/>
@@ -14,9 +14,11 @@
 
 ATTENTION: This release changes the trade protocol. 
 
-**DO NOT specify trade ID in 'reason for payment'.** 
+**DO NOT specify trade ID or any other value in the 'reason for payment' field.
+LEAVE IT BLANK.** 
 
 This change reduces the chances that certain payment accounts get flagged. 
+Please see https://github.com/bisq-network/bisq/issues/2869 for more details on this change.
 
 This release introduces the option to create limit offers to be able to deactivate an offer if a certain price limit is reached. It also introduces cash-by-mail as a new payment method. In addition to multiple minor UI changes, we squashed lots of bugs and improved reliability and performance of the app across the board.
 
@@ -5950,5 +5952,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2020-10-01T08:45:58Z</updated>
     <dc:date>2020-10-01T08:45:58Z</dc:date>
   </entry>
-  <dc:date>2021-02-02T13:01:24+00:00</dc:date>
+  <dc:date>2021-02-02T14:01:07+00:00</dc:date>
 </feed>
