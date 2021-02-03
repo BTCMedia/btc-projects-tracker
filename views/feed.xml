@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-03T10:02:00+00:00</updated>
+  <updated>2021-02-03T11:01:47+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.6</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6"/>
@@ -239,10 +239,6 @@ sudo tar Jxvf data.tar.xz
 sudo cp -rp opt/Bisq /opt/
 ```
 That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Cleanup tool for saved trades that failed market price check
-
-With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It will remove corrupt trade entries added due to bug https://github.com/bisq-network/bisq/issues/2924. Install and run once, it will shut down automatically, then install version 1.5.5 or later. You can verify the binary the same way as you do with the Bisq application.
 
 ## Credits
 
@@ -5919,5 +5915,5 @@ See [more details here](https://github.com/shesek/bwt#reproducible-builds).</sum
     <updated>2020-10-02T20:05:09Z</updated>
     <dc:date>2020-10-02T20:05:09Z</dc:date>
   </entry>
-  <dc:date>2021-02-03T10:02:00+00:00</dc:date>
+  <dc:date>2021-02-03T11:01:47+00:00</dc:date>
 </feed>
