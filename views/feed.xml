@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-03T01:03:20+00:00</updated>
+  <updated>2021-02-03T02:03:20+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.6</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6"/>
@@ -5917,5 +5917,5 @@ See [more details here](https://github.com/shesek/bwt#reproducible-builds).</sum
     <updated>2020-10-02T20:05:09Z</updated>
     <dc:date>2020-10-02T20:05:09Z</dc:date>
   </entry>
-  <dc:date>2021-02-03T01:03:20+00:00</dc:date>
+  <dc:date>2021-02-03T02:03:20+00:00</dc:date>
 </feed>
