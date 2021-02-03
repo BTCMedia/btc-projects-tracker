@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-03T08:01:45+00:00</updated>
+  <updated>2021-02-03T09:01:46+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.6</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6"/>
@@ -90,6 +90,8 @@ ATTENTION: This release changes the trade protocol.
 
 **DO NOT specify trade ID or any other value in the 'reason for payment' field.
 LEAVE IT BLANK.** 
+
+If it is mandatory for your payment service add a dash character ('-') or coordinate with your counterparty over trader chat to agree on a reason for payment.
 
 This change reduces the chances that certain payment accounts get flagged. 
 Please see https://github.com/bisq-network/bisq/issues/2869 for more details on this change.
@@ -5917,5 +5919,5 @@ See [more details here](https://github.com/shesek/bwt#reproducible-builds).</sum
     <updated>2020-10-02T20:05:09Z</updated>
     <dc:date>2020-10-02T20:05:09Z</dc:date>
   </entry>
-  <dc:date>2021-02-03T08:01:45+00:00</dc:date>
+  <dc:date>2021-02-03T09:01:46+00:00</dc:date>
 </feed>
