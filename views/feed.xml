@@ -6,7 +6,36 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-04T06:01:50+00:00</updated>
+  <updated>2021-02-04T07:04:13+00:00</updated>
+  <entry>
+    <id>https://github.com/mempool/mempool/releases/tag/v2.1.0</id>
+    <link href="https://github.com/mempool/mempool/releases/tag/v2.1.0"/>
+    <summary>Mempool v2.1.0 is a minor release that brings bug fixes and improvements.
+
+&lt;img width=&quot;559&quot; alt=&quot;Screen Shot 2021-02-03 at 18 06 20&quot; src=&quot;https://user-images.githubusercontent.com/8561090/106738489-8e8ab480-664a-11eb-95dc-3ed8d0ec517b.png&quot;&gt;
+
+* Implement workflow to publish [mempool on DockerHub](https://hub.docker.com/u/mempool). #67
+* Add CoreRPC &quot;Minimum fee&quot; to the dashboard. #171
+* Fix for occasional inability to change language to English. #275
+* Fix for anguage dropdown select styling. #293
+* Display a red RBF button when RBF is not enabled. #279
+* Don't save disk cache on exit. Handle corrupted mempool disk cache. #304
+* Fix for fee estimate not being correct when block is almost full. #278
+* Bisq stats calculation fixed. #280
+* Fix for sub networks not detected when using languages. #287
+* Don't display fee rating when block medianFee is empty. #228
+* Display P2PK inputs as &quot;P2PK&quot; instead of empty string.  #290
+* Better identification of Lightning and Liquid scripts. #324
+* Add new languages: Hungarian and Italian
+* (Bitcoind) Return correct http status message when tx not found. #295
+* (Bitcoind) Adding missing basic API endpoints. #291
+* (Bitcoind) Parse witness scripts from P2SH transactions. #323
+* (Electrum) Hide missing address received/sent from address page. #294
+</summary>
+    <title>mempool/mempool: v2.1.0</title>
+    <updated>2021-02-04T06:17:59Z</updated>
+    <dc:date>2021-02-04T06:17:59Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.6</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6"/>
@@ -5907,13 +5936,5 @@ See [more details here](https://github.com/shesek/bwt#reproducible-builds).</sum
     <updated>2020-10-05T14:00:58Z</updated>
     <dc:date>2020-10-05T14:00:58Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bitcoin-core/HWI/releases/tag/1.2.0-rc.1</id>
-    <link href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.0-rc.1"/>
-    <summary>Release Candidate 1 for HWI 1.2.0</summary>
-    <title>bitcoin-core/HWI: 1.2.0-rc.1</title>
-    <updated>2020-10-02T20:05:09Z</updated>
-    <dc:date>2020-10-02T20:05:09Z</dc:date>
-  </entry>
-  <dc:date>2021-02-04T06:01:50+00:00</dc:date>
+  <dc:date>2021-02-04T07:04:13+00:00</dc:date>
 </feed>
