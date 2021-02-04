@@ -38,6 +38,193 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc1">v0.12.1-beta.rc1</a>
+						    </h2>
+							<p class="card-text">Published: 2021-02-04 08:23:19 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>Database Migrations</h1>
+
+<p>There are no database migrations in v0.12.1-beta.rc1.</p>
+
+<h1>Verifying the Release</h1>
+
+<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already: </p>
+
+<p><code>
+curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
+curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
+</code></p>
+
+<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-bitconner-v0.12.1-beta.rc1.txt.asc</code> is in the current directory) with:</p>
+
+<p><code>
+gpg --verify manifest-bitconner-v0.12.1-beta.rc1.txt.asc
+</code></p>
+
+<p>You should see the following if the verification was successful:</p>
+
+<p><code>
+gpg: Signature made Wed Feb  3 22:51:31 2021 PST
+gpg:                using RSA key 9C8D61868A7C492003B2744EE7D737B67FA592C7
+gpg: Good signature from &quot;Conner Fromknecht &lt;conner@lightning.engineering&gt;&quot; [ultimate]
+</code></p>
+
+<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
+
+<h2>Verifying the Release Timestamp</h2>
+
+<p>From this new version onwards, in addition time-stamping the <em>git tag</em> with <a href="https://opentimestamps.org/">OpenTimeStamps</a>, we&#39;ll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: <code>manifest-roasbeef-v0.12.1-beta.rc1.txt.asc.ots</code>.</p>
+
+<p>Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+<code>
+ots verify manifest-roasbeef-v0.12.1-beta.rc1.txt.asc.ots -f manifest-roasbeef-v0.12.1-beta.rc1.txt.asc
+</code></p>
+
+<p>Alternatively, <a href="https://opentimestamps.org/">the open timestamps website</a> can be used to verify timestamps if one doesn&#39;t have a <code>bitcoind</code> instance accessible locally. </p>
+
+<p>These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. </p>
+
+<h2>Verifying the Release Binaries</h2>
+
+<p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/tree/master/build/release">reproducible builds guide</a> for how this can be achieved.
+The release binaries are compiled with <code>go1.15.7</code>, which is required by verifiers to arrive at the same ones.
+They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>routerrpc</code>, and <code>watchtowerrpc</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
+
+<p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
+
+<p>Finally, you can also verify the <em>tag</em> itself with the following command:</p>
+
+<p><code>
+$ git verify-tag v0.12.1-beta.rc1
+gpg: Signature made Wed Feb  3 22:09:02 2021 PST
+gpg:                using RSA key 9C8D61868A7C492003B2744EE7D737B67FA592C7
+gpg: Good signature from &quot;Conner Fromknecht &lt;conner@lightning.engineering&gt;&quot; [ultimate]
+</code></p>
+
+<h2>Verifying the Docker Images</h2>
+
+<p>To verify the <code>lnd</code> and <code>lncli</code> binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):</p>
+
+<p><code>shell
+$ docker pull lightninglabs/lnd:v0.12.1-beta.rc1
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.12.1-beta.rc1 /verify-install.sh
+$ OK=$?
+$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
+$ docker run lightninglabs/lnd [command-line options]
+</code></p>
+
+<h1>Building the Contained Release</h1>
+
+<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
+that <code>vendor.tar.gz</code> and <code>lnd-source-v0.12.1-beta.rc1.tar.gz</code> are in the current directory, follow these steps:</p>
+
+<p><code>
+tar -xvzf vendor.tar.gz
+tar -xvzf lnd-source-v0.12.1-beta.rc1.tar.gz
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.12.1-beta.rc1&quot; ./cmd/lnd
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.12.1-beta.rc1&quot; ./cmd/lncli
+</code></p>
+
+<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory. </p>
+
+<p>Additionally, it&#39;s now possible to use the <a href="https://github.com/lightningnetwork/lnd/pull/2191">enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so</a>: </p>
+
+<p><code>
+make release sys=&quot;linux-arm64 darwin-amd64&quot;
+</code></p>
+
+<p>⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️</p>
+
+<h1>Release Notes</h1>
+
+<h2>Spec Compatibility</h2>
+
+<ul>
+<li>0.12.1-beta.rc1 fixes a <a href="https://github.com/lightningnetwork/lightning-rfc/issues/794">recently discovered edge-case in the spec</a> surrounding retransmission of <code>RevokeAndAck</code> and <code>CommitSig</code> that can lead to channel force closures if they are not retransmitted in the same order upon reconnection. This version now <a href="https://github.com/lightningnetwork/lnd/pull/4915">persists this extra state required to determine the correct transmission order</a>, <a href="https://github.com/lightningnetwork/lightning-rfc/pull/810">in accordance with the new spec requirements</a>. This eliminates a potential vector for channel desynchronization on restart once both sides of the channel have updated and a successful state transition is performed.</li>
+<li>Prior to this version, <code>lnd</code> may have incorrectly attempted an MPP payment even if the receiver&#39;s <code>NodeAnnouncement</code> or invoice did not set the MPP feature bit. This was caused by a bug that incorrectly assumed support for <code>payment_secrets</code> implied support for MPP. A fix has been applied that <a href="https://github.com/lightningnetwork/lnd/pull/4924">limits the maximum number of splits to 1 when the receiver doesn&#39;t support MPP</a>.</li>
+</ul>
+
+<h2>Pinned Gossip Syncers</h2>
+
+<p>Typically <code>lnd</code> performs this historical channel reconciliation periodically, rotating between the set of all active peers, and attempting to keep <code>numgraphsyncpeers</code> (defaults to 3) in a state where they are receiving new gossip messages. Due to the eventually consistent properties of this algorithm (and the gossip protocol in general), there are some cases that lead to long delays in a node receiving newer updates. Notably, if a node has many peers, then it may be a while before the sync rotation algorithm queries a given peer for newer updates.</p>
+
+<p>To provide more control, a new configuration option has been added allowing users to <em>pin</em> their nodes into an ActiveSync with particular nodes. Each time a connection is established with a pinned syncer, <code>lnd</code> will first perform a historical channel reconciliation, followed by a request for the pinned syncer to forward all new gossip messages. Doing so allows users to keep their routing table tightly synchronized with nodes in their list of configured, pinned syncers. Users can add one or more pinned syncers via:
+<code>
+gossip.pinned-syncers=&lt;pubkey1&gt;
+gossip.pinned-syncers=&lt;pubkey2&gt;
+</code>
+This can be especially useful for services that run multiple, well-connected <code>lnd</code> nodes, and want their own nodes to maintain similar views of the channel graph.</p>
+
+<h2>RPC Changes</h2>
+
+<ul>
+<li><code>lnd</code> 0.12.1-beta.rc1 now <a href="https://github.com/lightningnetwork/lnd/pull/4956">exposes the HTLC <code>attempt_id</code> on response from <code>TrackPayment</code></a>. Internally, <code>lnd</code> uses <code>attempt_id</code> as a unique identifier for each HTLC it sends out, and to provide a total ordering on all HTLC sent by the daemon.  This identifier can be used by developers to better reflect progress of a payment, making it easier to extract per-HTLC state deltas rather than displaying the full payment state every time.</li>
+</ul>
+
+<h2>Build / verification</h2>
+
+<ul>
+<li>Some of the GitHub Action scripts <a href="https://github.com/lightningnetwork/lnd/pull/4952">were replaced by vendored scripts</a> to prevent secret extraction through malicious code.</li>
+<li>The signature verification script <a href="https://github.com/lightningnetwork/lnd/pull/4963">was fixed to no longer fail if a public key of a signature is missing</a> and <a href="https://github.com/lightningnetwork/lnd/pull/4962">more signing public keys were added</a>.</li>
+<li>The build process was <a href="https://github.com/lightningnetwork/lnd/pull/2162">enhanced with a <code>make imports</code></a> command that organizes all golang import statements.</li>
+<li>The protobuf definitions are now compiled <a href="https://github.com/lightningnetwork/lnd/pull/4911">using docker</a> to avoid needing to install a set of binaries and libraries with exact pinned versions. The instructions on how to <a href="https://github.com/lightningnetwork/lnd/pull/4944">format the proto files with MacOS</a> were added as well.</li>
+<li>The <a href="https://github.com/lightningnetwork/lnd/pull/4961">golang version <code>1.15.7</code></a> is now used for compilation across all build processes.</li>
+</ul>
+
+<h2>Bug Fixes</h2>
+
+<ul>
+<li>Fixes a bug that can result in a <a href="https://github.com/lightningnetwork/lnd/pull/4978">panic when generating hodl invoices for private channels</a>.</li>
+<li>Squashes a bug that results in a <a href="https://github.com/lightningnetwork/lnd/pull/4958">startup error when the daemon exits while in the middle of processing graph updates for its own channels</a>.</li>
+<li>The development docker files were <a href="https://github.com/lightningnetwork/lnd/pull/4938">fixed by adding an extra listener</a> to make sure the beginner tutorial can be followed without running into errors.</li>
+</ul>
+
+<h2>Full Changelog</h2>
+
+<ul>
+<li>#4958 - netann: ignore unknown channel update on startup</li>
+<li>#4962 - scripts: add halseth key to verify script</li>
+<li>#4938 - docker: add an extra listener for localhost</li>
+<li>#4944 - docs: Add clang-format instructions for mac</li>
+<li>#4956 - lnrpc: add htlc attempt id</li>
+<li>#4952 - Github: use vendored actions for steps with sensitive info</li>
+<li>#4963 - scripts: don&#39;t fail signature verification on missing public key</li>
+<li>#2162 - Makefile: define <code>make imports</code></li>
+<li>#4911 - lnrpc/mobile: use docker to compile/format protos</li>
+<li>#4974 - Fix typo in restorechanbackup command description</li>
+<li>#4902 - lntest/channels: introduce subpackage to deduplicate structs</li>
+<li>#4978 - invoices+rpc: add missing channel graph to the AddInvoiceConfig</li>
+<li>#4934 - discovery: pinned syncers</li>
+<li>#4924 - routerrpc,routing: limit max parts if the invoice doesn&#39;t declare MPP support</li>
+<li>#4961 - build: update CI builds to use go 1.15.7</li>
+<li>#4979 - routing: add new TestPaymentAddrOnlyNoSplit test case</li>
+<li>#4915 - multi: store bool to determine retransmission ordering</li>
+</ul>
+
+<h1>Contributors (Alphabetical Order)</h1>
+
+<p>András Bánki-Horváth
+Conner Fromknecht
+eugene
+Jake Sylvestre
+Johan T. Halseth
+Joost Jager
+Juan Pablo Civile
+Olaoluwa Osuntokun
+Oliver Gugger
+Umar Bolatov
+Vlad Stan</p>
+</p>
+					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/mempool/mempool">mempool/mempool</a>: <a href="https://github.com/mempool/mempool/releases/tag/v2.1.0">v2.1.0</a>
 						    </h2>
 							<p class="card-text">Published: 2021-02-04 06:17:59 UTC</p>
@@ -7234,130 +7421,6 @@ FIX: Missing (NT) before $ sign</p>
 </p>
 					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.12" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bwt-dev/bwt">bwt-dev/bwt</a>: <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.1.5">v0.1.5</a>
-						    </h2>
-							<p class="card-text">Published: 2020-10-05 14:00:58 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>Changelog</h3>
-
-<ul>
-<li><p>Reproducible builds using Docker (#51)</p></li>
-<li><p>Pre-built binary releases for macOS (#24) and ARMv7/v8 (#19)</p></li>
-<li><p>Electrum plugin: Compatibility with Electrum v4 — <em>except for lightning</em> which is <a href="https://github.com/chris-belcher/electrum-personal-server/issues/174#issuecomment-577619460">tricky with personal servers</a> (#53)</p></li>
-<li><p>Electrum: New welcome banner (#44)</p></li>
-<li><p>Scriptable transaction broadcast command via <code>--tx-broadcast-cmd &lt;cmd&gt;</code> (#7)</p></li>
-</ul>
-
-<p>The command will be used in place of broadcasting transactions using the full node, which may provide better privacy in some circumstances. The string <code>{tx_hex}</code> will be replaced with the hex-encoded transaction.</p>
-
-<p>For example, to broadcast transactions over Tor using the blockstream.info onion service, you can use:</p>
-
-<p><code>
-  --tx-broadcast-cmd &#39;[ $(curl -s -x socks5h://localhost:9050 http://explorerzydxu5ecjrkwceayqybizmpjjznk5izmitf2modhcusuqlid.onion/api/tx -d {tx_hex} -o /dev/stderr -w &quot;%{http_code}&quot; -H &quot;User-Agent: curl/7.$(shuf -n1 -e 47 58 64 68).0&quot;) -eq 200 ]&#39;
-</code></p>
-
-<p>(Replace port <code>9050</code> with <code>9150</code> if you&#39;re using the Tor browser bundle.)</p>
-
-<p>h/t @chris-belcher&#39;s EPS for inspiring this feature! 🎩</p>
-
-<ul>
-<li><p>Load bitcoind wallet automatically (#54)</p></li>
-<li><p>Electrum plugin: Fix hot wallet test (#47)</p></li>
-<li><p>Electrum: Fix docker image libssl dependency with the <code>http</code> feature (#48)</p></li>
-<li><p>Improve block download check on regtest (#45, #35)</p></li>
-<li><p>HTTP API: Fix <code>GET /block/tip</code> (#46)</p></li>
-<li><p>HTTP API: Add <code>GET /banner.txt</code> (#44)</p></li>
-<li><p>Tests: Upgrade to Electrum v4</p></li>
-</ul>
-
-<hr>
-
-<h3>Downloads</h3>
-
-<table><thead>
-<tr>
-<th></th>
-<th>Full Server <sup>1</sup></th>
-<th>Electrum Server <sup>2</sup></th>
-<th>Electrum Plugin <sup>3</sup></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Linux</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-x86_64-linux.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-x86_64-linux.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-x86_64-linux.tar.gz">📥 Download</a></td>
-</tr>
-<tr>
-<td><strong>macOS</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-x86_64-osx.zip">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-x86_64-osx.zip">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-x86_64-osx.zip">📥 Download</a></td>
-</tr>
-<tr>
-<td><strong>Windows</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-x86_64-win.zip">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-x86_64-win.zip">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-x86_64-win.zip">📥 Download</a></td>
-</tr>
-<tr>
-<td><strong>ARMv7</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-arm32v7.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-arm32v7.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-arm32v7.tar.gz">📥 Download</a></td>
-</tr>
-<tr>
-<td><strong>ARMv8</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-arm64v8.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_only-arm64v8.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-electrum_plugin-arm64v8.tar.gz">📥 Download</a></tr><tr><td colspan=4><sub><sup>1</sup> Includes Electrum RPC, HTTP API and WebHooks support (<a href="https://github.com/shesek/bwt#installation">learn more</a>)<br><sup>2</sup> Includes Electrum RPC support only (<a href="https://github.com/shesek/bwt#electrum-only-server">learn more</a>)<br><sup>3</sup> Plugin with an embedded RPC server - <em>hot wallets are unsupported</em> (<a href="https://github.com/shesek/bwt#electrum-plugin">learn more</a>)</sub></td></tr></table></td>
-</tr>
-</tbody></table>
-
-<h3>Installation</h3>
-
-<p>Installation instructions are <a href="https://github.com/shesek/bwt#installation">available on the README</a>.</p>
-
-<h3>Verifying signatures</h3>
-
-<p>The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on <a href="https://keybase.io/nadav">keybase</a>, <a href="https://api.github.com/users/shesek/gpg_keys">github</a>, <a href="https://twitter.com/shesek">twitter</a> and <a href="https://news.ycombinator.com/user?id=nadaviv">HN</a>. The signature can be verified as follows (replace <code>x86_64-linux</code> with your download):</p>
-
-<p>```bash</p>
-
-<h1>Download package</h1>
-
-<p>$ wget <a href="https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-x86_64-linux.tar.gz">https://github.com/shesek/bwt/releases/download/v0.1.5/bwt-0.1.5-x86_64-linux.tar.gz</a></p>
-
-<h1>Fetch signing key</h1>
-
-<p>$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC</p>
-
-<h1>Verify signature</h1>
-
-<p>$ wget -qO - <a href="https://github.com/shesek/bwt/releases/download/v0.1.5/SHA256SUMS.asc">https://github.com/shesek/bwt/releases/download/v0.1.5/SHA256SUMS.asc</a> \
-  | gpg --decrypt - | grep &#39; bwt-0.1.5-x86_64-linux.tar.gz$&#39; | sha256sum -c -
-```</p>
-
-<p>You should see <code>Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...</code> and <code>bwt-0.1.5-x86_64-linux.tar.gz: OK</code>.</p>
-
-<h3>Reproducible builds</h3>
-
-<p>The builds are fully reproducible.</p>
-
-<p>You can verify the checksums against the v0.1.5 builds on Travis CI: <a href="https://travis-ci.org/github/shesek/bwt/builds/732966695">https://travis-ci.org/github/shesek/bwt/builds/732966695</a></p>
-
-<p>See <a href="https://github.com/shesek/bwt#reproducible-builds">more details here</a>.</p>
-</p>
-					    <a href="https://github.com/bwt-dev/bwt" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.1.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
