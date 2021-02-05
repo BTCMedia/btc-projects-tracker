@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-05T05:01:04+00:00</updated>
+  <updated>2021-02-05T06:04:01+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.5.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.5.0"/>
@@ -6849,5 +6849,5 @@ FIX: Missing (NT) before $ sign</summary>
     <updated>2020-10-07T13:10:44Z</updated>
     <dc:date>2020-10-07T13:10:44Z</dc:date>
   </entry>
-  <dc:date>2021-02-05T05:01:04+00:00</dc:date>
+  <dc:date>2021-02-05T06:04:01+00:00</dc:date>
 </feed>
