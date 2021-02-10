@@ -6,7 +6,19 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-10T14:03:21+00:00</updated>
+  <updated>2021-02-10T15:02:43+00:00</updated>
+  <entry>
+    <id>https://github.com/mempool/mempool/releases/tag/v2.1.1</id>
+    <link href="https://github.com/mempool/mempool/releases/tag/v2.1.1"/>
+    <summary>This update adds support for Umbrel, together with a few minor bugfixes:
+
+* Improve Docker workflow for Umbrel (#326) by @bguillaumat
+* BSQ token market cap calculation fix (#332) by @devinbileck
+* Lightning HTLC identification label fix (#320) by @fiatjaf</summary>
+    <title>mempool/mempool: v2.1.1</title>
+    <updated>2021-02-10T14:28:06Z</updated>
+    <dc:date>2021-02-10T14:28:06Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.5.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.5.0"/>
@@ -6834,20 +6846,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.12...v0.2.13</summary>
     <updated>2020-10-08T06:47:54Z</updated>
     <dc:date>2020-10-08T06:47:54Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v5.6.1</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.6.1"/>
-    <summary>ADD: payjoin support (bip78)
-FIX: rare crash on startup (electrum server)
-FIX: rare freezes on send screen
-FIX: bitcoin price widget content overlap
-FIX: biometrics listener release for some devices
-FIX: locales pt_BR, pt_PT, ru, sl_SI, ja_JP
-FIX: add margin for RTL languages
-FIX: Missing (NT) before $ sign</summary>
-    <title>BlueWallet/BlueWallet: v5.6.1</title>
-    <updated>2020-10-07T13:10:44Z</updated>
-    <dc:date>2020-10-07T13:10:44Z</dc:date>
-  </entry>
-  <dc:date>2021-02-10T14:03:21+00:00</dc:date>
+  <dc:date>2021-02-10T15:02:43+00:00</dc:date>
 </feed>
