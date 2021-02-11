@@ -6,7 +6,45 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-11T20:02:20+00:00</updated>
+  <updated>2021-02-11T21:02:49+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.4</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.4"/>
+    <summary>**New**
+
+- Fee estimation based on mempool 
+- iOS 14.5 support
+- Electrum json import support
+- AEZEED mnemonics support (LND wallet)
+- Remove Location permission (Local trader)
+- Wallet update indicator
+- Vault manage keys - show alert if unsaved
+- Lower fee value if balance is not enough
+
+**Fixed**
+
+- &quot;Can't finalize input&quot;' error (Vaults)
+- Scroll on multi sig creation (Vaults)
+- Loading on creation (Vaults)
+- Import seed hangs forever (Vaults)
+- Scanning invalid QR code throws multiple alerts
+- Cached wallet address wouldn't change
+- 'Few seconds ago' -&gt; 'pending'
+- Legacy wallet can now derive UTXO from transactions if fetching listUnspent from network is not possible
+- Biometrics with PSBT
+- Better support of coldcard's 'p2sh-p2wsh'
+- Do not show notification settings if device does not support it
+
+**Download**
+
+[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.4/BlueWallet.6.0.5.dmg)
+
+[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.4/android-6.0.5.apk)
+</summary>
+    <title>BlueWallet/BlueWallet: v6.0.4</title>
+    <updated>2021-02-11T20:26:03Z</updated>
+    <dc:date>2021-02-11T20:26:03Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/mempool/mempool/releases/tag/v2.1.1</id>
     <link href="https://github.com/mempool/mempool/releases/tag/v2.1.1"/>
@@ -6831,20 +6869,5 @@ Platforms:
     <updated>2020-10-08T09:27:38Z</updated>
     <dc:date>2020-10-08T09:27:38Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.13</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.13"/>
-    <summary>This update fixes an important bug with the background processes. If you're unable to start this update or it gets stuck at \&quot;Starting Update...\&quot; please follow the instructions here: https://gist.github.com/lukechilds/8dc223885f47579a77407ba7f5beaaec
-
-Changes: 
-
-- Don't skip creation of logs directory on OTA update (#281) 7ee64e1
-- Echo 'umbrel.local' instead of 'umbrel.local.local' (#277) eaaa2eb (Thanks, @louneskmt!)
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.2.12...v0.2.13</summary>
-    <title>getumbrel/umbrel: v0.2.13</title>
-    <updated>2020-10-08T06:47:54Z</updated>
-    <dc:date>2020-10-08T06:47:54Z</dc:date>
-  </entry>
-  <dc:date>2021-02-11T20:02:20+00:00</dc:date>
+  <dc:date>2021-02-11T21:02:49+00:00</dc:date>
 </feed>
