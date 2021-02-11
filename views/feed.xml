@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-11T08:02:48+00:00</updated>
+  <updated>2021-02-11T09:03:06+00:00</updated>
   <entry>
     <id>https://github.com/mempool/mempool/releases/tag/v2.1.1</id>
     <link href="https://github.com/mempool/mempool/releases/tag/v2.1.1"/>
@@ -6846,5 +6846,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.12...v0.2.13</summary>
     <updated>2020-10-08T06:47:54Z</updated>
     <dc:date>2020-10-08T06:47:54Z</dc:date>
   </entry>
-  <dc:date>2021-02-11T08:02:48+00:00</dc:date>
+  <dc:date>2021-02-11T09:03:06+00:00</dc:date>
 </feed>
