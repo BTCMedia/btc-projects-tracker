@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-12T16:03:23+00:00</updated>
+  <updated>2021-02-12T17:02:34+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc3</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc3"/>
@@ -112,9 +112,9 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 
 ## Gossip Propagation Improvements
 
-This release [reverts the removal of the premature channel update cache](#5003) that was removed in 0.12.0-beta. Absence of the cache was seen to cause issues with channel update propagation, so the change is reverted to restore the pre-0.12.0-beta behavior and stability. The current plan is to reschedule the cache's removal for 0.13 after performing more extensive investigation.
+This release [reverts the removal of the premature channel update cache](https://github.com/lightningnetwork/lnd/pull/5003) that was removed in 0.12.0-beta. Absence of the cache was seen to cause issues with channel update propagation, so the change is reverted to restore the pre-0.12.0-beta behavior and stability. The current plan is to reschedule the cache's removal for 0.13 after performing more extensive investigation.
  
-In addition, the gossip throttling adding in v0.12.0 has been [refactored to be less aggressive with respect to non-keepalive channel updates](#5006), i.e. channel updates that differ in more than just the timestamp. Previously `lnd` would drop all but the first such update that it received over the course of a block, which has reportedly been too restrictive and resulted in degraded propagation of routine channel updates.
+In addition, the gossip throttling adding in v0.12.0 has been [refactored to be less aggressive with respect to non-keepalive channel updates](https://github.com/lightningnetwork/lnd/pull/5006), i.e. channel updates that differ in more than just the timestamp. Previously `lnd` would drop all but the first such update that it received over the course of a block, which has reportedly been too restrictive and resulted in degraded propagation of routine channel updates.
 
 The new throttling logic now employs a directional [token bucket rate limiter](https://en.wikipedia.org/wiki/Token_bucket), the same approach used by `lnd` to rate-limit gossip requests from sync peers. Each token bucket is configured to drop non-keepalive updates arriving faster that once per minute, yet permitting bursts of up 10 updates. This improves on the previous approach in a few ways:
  - Updates are now limited with respect to a consistent time source, i.e. seconds, rather than block height. This makes it easier to reason about when channel updates might get dropped as an average user, and places a deterministic bound on the next time a normal user can reliably update their channel again.
@@ -123,7 +123,7 @@ The new throttling logic now employs a directional [token bucket rate limiter](h
 
 ## No Gossip Mode
 
-This release includes support for a [no-graph sync mode](#4945) which can be enabled by setting `numgraphsyncpeers=0`. In prior versions, running `lnd` in this configuration would still trigger an initial historical sync with the first connected peer on each restart. The behavior was modified under the assumption that users who have already configured `lnd` to not receive gossip updates probably don't want to sync the graph at all.
+This release includes support for a [no-graph sync mode](https://github.com/lightningnetwork/lnd/pull/4945) which can be enabled by setting `numgraphsyncpeers=0`. In prior versions, running `lnd` in this configuration would still trigger an initial historical sync with the first connected peer on each restart. The behavior was modified under the assumption that users who have already configured `lnd` to not receive gossip updates probably don't want to sync the graph at all.
 
 This mode is especially helpful to wallet developers that choose to outsource pathfinding via their own service, or purely forwarding nodes that never need to perform pathfinding.
 
@@ -131,7 +131,7 @@ This mode is especially helpful to wallet developers that choose to outsource pa
 
 Typically `lnd` performs this historical channel reconciliation periodically, rotating between the set of all active peers, and attempting to keep `numgraphsyncpeers` (defaults to 3) in a state where they are receiving new gossip messages. Due to the eventually consistent properties of this algorithm (and the gossip protocol in general), there are some cases that lead to long delays in a node receiving newer updates. Notably, if a node has many peers, then it may be a while before the sync rotation algorithm queries a given peer for newer updates.
 
-To provide more control, a new configuration option has been added allowing users to _pin_ their nodes into an ActiveSync with particular nodes. Each time a connection is established with a pinned syncer, `lnd` will first perform a historical channel reconciliation, followed by a request for the pinned syncer to forward all new gossip messages. Doing so allows users to keep their routing table tightly synchronized with nodes in their list of configured, pinned syncers. Users can add one or more pinned syncers via:
+To provide more control, a new configuration option has been added [allowing users to _pin_ their nodes into an ActiveSync with particular nodes](https://github.com/lightningnetwork/lnd/pull/4934). Each time a connection is established with a pinned syncer, `lnd` will first perform a historical channel reconciliation, followed by a request for the pinned syncer to forward all new gossip messages. Doing so allows users to keep their routing table tightly synchronized with nodes in their list of configured, pinned syncers. Users can add one or more pinned syncers via:
 ```
 gossip.pinned-syncers=&lt;pubkey1&gt;
 gossip.pinned-syncers=&lt;pubkey2&gt;
@@ -145,8 +145,8 @@ This can be especially useful for services that run multiple, well-connected `ln
 ## Deterministic Build / Release Verification
  - The signature verification script [was fixed to no longer fail if a public key of a signature is missing](https://github.com/lightningnetwork/lnd/pull/4963) and @halseth's [signing public keys were added](https://github.com/lightningnetwork/lnd/pull/4962).
  - The [golang version `1.15.7`](https://github.com/lightningnetwork/lnd/pull/4961) is now used for compilation across all build processes.
- - The release process has been modified to [clean any generated mobile stubs before packaging/verifying the release](#4983). Without doing so, users would arrive at a different `vendor.tar.gz` depending on whether or not they had previously run `make mobile` due to small differences in the imports present in the project.
- - Fixed an issue that allowed GO_VERSION of the release toolchain to be spuriously updated to newer releases of go. This was hit unexpectedly in the v0.12.1-beta.rc2 release cycle where the release binaries were built with go1.15.8, which had been released earlier in the week, rather than go1.15.7 which is pinned in our release/verify docker containers. As a result, building the release locally did not match the binaries uploaded by github to the release. We resolved this by _exactly_ pinning the [GO_VERSION used to compile the release binaries](#5013).
+ - The release process has been modified to [clean any generated mobile stubs before packaging/verifying the release](https://github.com/lightningnetwork/lnd/pull/4983). Without doing so, users would arrive at a different `vendor.tar.gz` depending on whether or not they had previously run `make mobile` due to small differences in the imports present in the project.
+ - Fixed an issue that allowed GO_VERSION of the release toolchain to be spuriously updated to newer releases of go. This was hit unexpectedly in the v0.12.1-beta.rc2 release cycle where the release binaries were built with go1.15.8, which had been released earlier in the week, rather than go1.15.7 which is pinned in our release/verify docker containers. As a result, building the release locally did not match the binaries uploaded by github to the release. We resolved this by _exactly_ [pinning the GO_VERSION used to compile the release binaries](https://github.com/lightningnetwork/lnd/pull/5013).
 
 ## Developer Toolchain
  - Some of the GitHub Action scripts [were replaced by vendored scripts](https://github.com/lightningnetwork/lnd/pull/4952) to prevent secret extraction through malicious code.
@@ -154,43 +154,43 @@ This can be especially useful for services that run multiple, well-connected `ln
  - The protobuf definitions are now compiled [using docker](https://github.com/lightningnetwork/lnd/pull/4911) to avoid needing to install a set of binaries and libraries with exact pinned versions. The instructions on how to [format the proto files with MacOS](https://github.com/lightningnetwork/lnd/pull/4944) were added as well.
 
 ## Bug Fixes
- - Fixes a bug that can result in a [panic when generating hodl invoices for private channels](https://github.com/lightningnetwork/lnd/pull/4978). An [itest has also been added for generating hodl invoices using private channels](#4996) to provide more complete coverage of this area going forward.
+ - Fixes a bug that can result in a [panic when generating hodl invoices for private channels](https://github.com/lightningnetwork/lnd/pull/4978). An [itest has also been added for generating hodl invoices using private channels](https://github.com/lightningnetwork/lnd/pull/4996) to provide more complete coverage of this area going forward.
  - Squashes a bug that results in a [startup error when the daemon exits while in the middle of processing graph updates for its own channels](https://github.com/lightningnetwork/lnd/pull/4958).
- - Creates a [fast-path for persisting locally-created gossip messages](#4964) rather than waiting to be batched with remote graph updates. This reduces the likelihood of partially-writes for local graph updates, which was partially patched in #4958.
+ - Creates a [fast-path for persisting locally-created gossip messages](https://github.com/lightningnetwork/lnd/pull/4964) rather than waiting to be batched with remote graph updates. This reduces the likelihood of partially-writes for local graph updates, which was partially patched in https://github.com/lightningnetwork/lnd/pull/4958.
  - The development docker files were [fixed by adding an extra listener](https://github.com/lightningnetwork/lnd/pull/4938) to make sure the beginner tutorial can be followed without running into errors.
- - Fixes an [error message returned when attempting to bind a REST listener on a public interface without authentication](#4993), such that it returns the relevant configuration flag (`no-rest-tls`).
- - Fixes an issue with [IPv6 address resolution when using `tor.active`](#4988) such that `lnd` will fall back to the system resolver.
- - Fixes an issue with [IP alias resolution](#5007) such that `lnd` will fall back to the system resolver.
+ - Fixes an [error message returned when attempting to bind a REST listener on a public interface without authentication](https://github.com/lightningnetwork/lnd/pull/4993), such that it returns the relevant configuration flag (`no-rest-tls`).
+ - Fixes an issue with [IPv6 address resolution when using `tor.active`](https://github.com/lightningnetwork/lnd/pull/4988) such that `lnd` will fall back to the system resolver.
+ - Fixes an issue with [IP alias resolution](https://github.com/lightningnetwork/lnd/pull/5007) such that `lnd` will fall back to the system resolver.
 
 ## Full Changelog
- - #4958 - netann: ignore unknown channel update on startup
- - #4962 - scripts: add halseth key to verify script
- - #4938 - docker: add an extra listener for localhost
- - #4944 - docs: Add clang-format instructions for mac
- - #4956 - lnrpc: add htlc attempt id
- - #4952 - Github: use vendored actions for steps with sensitive info
- - #4963 - scripts: don't fail signature verification on missing public key
- - #2162 - Makefile: define `make imports`
- - #4911 - lnrpc/mobile: use docker to compile/format protos
- - #4974 - Fix typo in restorechanbackup command description
- - #4902 - lntest/channels: introduce subpackage to deduplicate structs
- - #4978 - invoices+rpc: add missing channel graph to the AddInvoiceConfig
- - #4934 - discovery: pinned syncers
- - #4924 - routerrpc,routing: limit max parts if the invoice doesn't declare MPP support
- - #4961 - build: update CI builds to use go 1.15.7
- - #4979 - routing: add new TestPaymentAddrOnlyNoSplit test case
- - #4915 - multi: store bool to determine retransmission ordering
- - #4981 - docs: correct sign command
- - #4983 - make: clean mobile stubs before building release
- - #4993 - fix: correct no-rest-tls parameter in error message
- - #5003 - Revert: #4895 to store premature channel updates
- - #4996 - itest: add coverage for hold invoices with hop hints
- - #4945 - discovery: no graph sync
- - #4964 - channeldb+routing+gossiper: add local updates to graph immediately
- - #5006 - discovery: use token bucket based rate limiting to throttle gossip
- - #4988 - add isIPv6Host helper to force v6 addrs through system resolver
- - #5007 - lncfg: add IPv6 resolution bypass &amp; account for local hostname aliases
- - #5013 - github/workflows: pin exact docker release
+ - https://github.com/lightningnetwork/lnd/pull/4958 - netann: ignore unknown channel update on startup
+ - https://github.com/lightningnetwork/lnd/pull/4962 - scripts: add halseth key to verify script
+ - https://github.com/lightningnetwork/lnd/pull/4938 - docker: add an extra listener for localhost
+ - https://github.com/lightningnetwork/lnd/pull/4944 - docs: Add clang-format instructions for mac
+ - https://github.com/lightningnetwork/lnd/pull/4956 - lnrpc: add htlc attempt id
+ - https://github.com/lightningnetwork/lnd/pull/4952 - Github: use vendored actions for steps with sensitive info
+ - https://github.com/lightningnetwork/lnd/pull/4963 - scripts: don't fail signature verification on missing public key
+ - https://github.com/lightningnetwork/lnd/pull/2162 - Makefile: define `make imports`
+ - https://github.com/lightningnetwork/lnd/pull/4911 - lnrpc/mobile: use docker to compile/format protos
+ - https://github.com/lightningnetwork/lnd/pull/4974 - Fix typo in restorechanbackup command description
+ - https://github.com/lightningnetwork/lnd/pull/4902 - lntest/channels: introduce subpackage to deduplicate structs
+ - https://github.com/lightningnetwork/lnd/pull/4978 - invoices+rpc: add missing channel graph to the AddInvoiceConfig
+ - https://github.com/lightningnetwork/lnd/pull/4934 - discovery: pinned syncers
+ - https://github.com/lightningnetwork/lnd/pull/4924 - routerrpc,routing: limit max parts if the invoice doesn't declare MPP support
+ - https://github.com/lightningnetwork/lnd/pull/4961 - build: update CI builds to use go 1.15.7
+ - https://github.com/lightningnetwork/lnd/pull/4979 - routing: add new TestPaymentAddrOnlyNoSplit test case
+ - https://github.com/lightningnetwork/lnd/pull/4915 - multi: store bool to determine retransmission ordering
+ - https://github.com/lightningnetwork/lnd/pull/4981 - docs: correct sign command
+ - https://github.com/lightningnetwork/lnd/pull/4983 - make: clean mobile stubs before building release
+ - https://github.com/lightningnetwork/lnd/pull/4993 - fix: correct no-rest-tls parameter in error message
+ - https://github.com/lightningnetwork/lnd/pull/5003 - Revert: https://github.com/lightningnetwork/lnd/pull/4895 to store premature channel updates
+ - https://github.com/lightningnetwork/lnd/pull/4996 - itest: add coverage for hold invoices with hop hints
+ - https://github.com/lightningnetwork/lnd/pull/4945 - discovery: no graph sync
+ - https://github.com/lightningnetwork/lnd/pull/4964 - channeldb+routing+gossiper: add local updates to graph immediately
+ - https://github.com/lightningnetwork/lnd/pull/5006 - discovery: use token bucket based rate limiting to throttle gossip
+ - https://github.com/lightningnetwork/lnd/pull/4988 - add isIPv6Host helper to force v6 addrs through system resolver
+ - https://github.com/lightningnetwork/lnd/pull/5007 - lncfg: add IPv6 resolution bypass &amp; account for local hostname aliases
+ - https://github.com/lightningnetwork/lnd/pull/5013 - github/workflows: pin exact docker release
 
 # Contributors (Alphabetical Order)
 
@@ -7043,5 +7043,5 @@ Platforms:
     <updated>2020-10-09T20:01:22Z</updated>
     <dc:date>2020-10-09T20:01:22Z</dc:date>
   </entry>
-  <dc:date>2021-02-12T16:03:23+00:00</dc:date>
+  <dc:date>2021-02-12T17:02:34+00:00</dc:date>
 </feed>
