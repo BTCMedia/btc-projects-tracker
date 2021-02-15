@@ -6,7 +6,19 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-15T13:03:14+00:00</updated>
+  <updated>2021-02-15T14:02:56+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.3</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.3"/>
+    <summary>Umbrel v0.3.3 is here with 3 brand new apps in the Umbrel App Store — Samourai Server (Dojo + Whirlpool), Mempool, LNbits —  a totally redesigned wallet connector, Lightning Pool, Bitcoin Core v0.21.0, and more.
+
+If your update gets stuck for some reason, please message us on Telegram: https://t.me/getumbrel
+
+Diff: https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</summary>
+    <title>getumbrel/umbrel: v0.3.3</title>
+    <updated>2021-02-15T13:50:58Z</updated>
+    <dc:date>2021-02-15T13:50:58Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc3</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc3"/>
@@ -7022,26 +7034,5 @@ Platforms:
     <updated>2020-10-12T16:44:17Z</updated>
     <dc:date>2020-10-12T16:44:17Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bitcoin-core/HWI/releases/tag/1.2.0</id>
-    <link href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.0"/>
-    <summary>Also available on [PyPi](https://pypi.org/project/hwi/) and can be installed with `pip install -U hwi`
-
-## Added
-
-* BitBox02 Support
-* Multisig address display on Trezor with descriptors
-* Additional library type checking
-
-## Fixed
-
-* Fixed script type assignment for an input with a witness script but no witness utxo
-* Fixed signing multiple segwit input signing for Ledger Bitcoin App 1.4.0+
-* Fixed parsing of descriptors with origin but no fingerprint
-</summary>
-    <title>bitcoin-core/HWI: 1.2.0</title>
-    <updated>2020-10-09T20:01:22Z</updated>
-    <dc:date>2020-10-09T20:01:22Z</dc:date>
-  </entry>
-  <dc:date>2021-02-15T13:03:14+00:00</dc:date>
+  <dc:date>2021-02-15T14:02:56+00:00</dc:date>
 </feed>
