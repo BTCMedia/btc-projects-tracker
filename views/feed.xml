@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-17T11:03:01+00:00</updated>
+  <updated>2021-02-17T12:02:18+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc4</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc4"/>
@@ -7329,5 +7329,5 @@ With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It
     <updated>2020-10-19T04:35:13Z</updated>
     <dc:date>2020-10-19T04:35:13Z</dc:date>
   </entry>
-  <dc:date>2021-02-17T11:03:01+00:00</dc:date>
+  <dc:date>2021-02-17T12:02:18+00:00</dc:date>
 </feed>
