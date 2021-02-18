@@ -38,6 +38,34 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/mempool/mempool">mempool/mempool</a>: <a href="https://github.com/mempool/mempool/releases/tag/v2.1.2">v2.1.2</a>
+						    </h2>
+							<p class="card-text">Published: 2021-02-18 11:47:39 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This is a patch release that optimizes memory usage for embedded devices like Raspberry Pi</p>
+
+<p>Notes:
+* The disk cache now has its own folder, so <code>mv cache*.json ./cache/</code> before restart to migrate</p>
+
+<p>Changes:
+* Optimize memory usage when writing disk cache (#342)
+* Reduce backend maximum heap size setting to 2G (#345)
+* Enable mempool clear protection on all backends (#335)
+* Make mempool clear protection timeout configurable (#343)
+* Minor tweaks to About page text, links (#350)
+* Logo design update (#349) by @pedromvpg
+* Fix style on block hover (#347) by @Czino and @Eric-Machinas</p>
+</p>
+					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/mempool/mempool/releases/tag/v2.1.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.1-pre1">v1.1.1-pre1</a>
 						    </h2>
 							<p class="card-text">Published: 2021-02-18 07:56:16 UTC</p>
@@ -8676,176 +8704,6 @@ $ sha256sum -c SHA256SUMS.stripped
 </p>
 					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/eclair">ACINQ/eclair</a>: <a href="https://github.com/ACINQ/eclair/releases/tag/v0.4.2">v0.4.2</a>
-						    </h2>
-							<p class="card-text">Published: 2020-10-19 13:13:59 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This release includes many exciting new features, API changes as well as several bug fixes and improvements.
-Its is fully compatible with 0.4.1 (and all previous versions of eclair).</p>
-
-<h1>Major changes</h1>
-
-<h3>Plugins</h3>
-
-<p>Third-party plugins are now able to add new feature bits to eclair and handle unknown custom messages.
-This lets plugin developers offer services to their customers that are not available in the Lightning specification (e.g. swap-in/swap-out), while staying fully compatible with the network.</p>
-
-<p>See #1528 for more details.</p>
-
-<h3>Anchor Outputs</h3>
-
-<p>This release adds experimental support for <a href="https://github.com/lightningnetwork/lightning-rfc/pull/688">anchor outputs</a> channels.
-The main benefit of this type of channels is that it is possible to bump the on-chain fees of commitment transactions and htlc transactions once they are in the mempool to speed up their confirmation.</p>
-
-<p>Eclair is fully compatible with the anchor output specification, but automatic fee bumping has not been implemented yet, hence we do not recommend activating the feature.
-Some attacks that are specific to anchor outputs have also been discovered recently and haven&#39;t been fully addressed yet, but will be fixed in future releases.</p>
-
-<h3>Keysend</h3>
-
-<p>This release adds support for spontaneous payments using <a href="https://github.com/ElementsProject/lightning/pull/3611">keysend</a>.
-It is fully compatible with lnd and c-lightning and makes it easy for public LN nodes to receive donations.</p>
-
-<h3>API changes</h3>
-
-<p>This release contains many new APIs and improvements to existing ones:</p>
-
-<ul>
-<li>Add <code>signmessage</code>/<code>verifymessage</code> APIs: this allows signing arbitrary messages with the node&#39;s key and is compatible with lnd and c-lightning</li>
-<li>We publish new channel events to the websocket (<code>channel-opened</code>, <code>channel-state-changed</code> and <code>channel-closed</code>)</li>
-<li>The <code>sendtoroute</code> API now lets you choose the channels that must be used, making it easy to rebalance your local channels</li>
-</ul>
-
-<p>Head over to our <a href="https://acinq.github.io/eclair">API documentation</a> for more details.</p>
-
-<h1>Miscellaneous improvements and bug fixes</h1>
-
-<ul>
-<li>Many actors have been refactored to use <a href="https://doc.akka.io/docs/akka/current/typed/index.html">Akka Typed</a> instead of classic actors.
-This leads to a cleaner design, better types and more help from the compiler to detect unhandled messages.</li>
-<li>We added support for Bitcoin Core 0.20.1.</li>
-<li>We added support for non-default Bitcoin Core wallets (see #1540 for details)</li>
-<li>We fixed the <code>override-features</code> configuration parameter, which wasn&#39;t overriding features everywhere. This parameter can be very useful for example to sync only from specific nodes, or advertize wumbo support only to nodes that you trust.</li>
-</ul>
-
-<h1>Verifying signatures</h1>
-
-<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:</p>
-
-<ul>
-<li>from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a></li>
-<li>from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></li>
-</ul>
-
-<p>To import our signing key:</p>
-
-<p><code>sh
-$ gpg --import drouinf.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:</p>
-
-<p><code>sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-
-<h1>Building</h1>
-
-<p>Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):</p>
-
-<ul>
-<li>Ubuntu 19.10</li>
-<li>AdoptOpenJDK 11.0.6</li>
-<li>Maven 3.6.3</li>
-</ul>
-
-<p>Use the following command to generate the eclair-node package:</p>
-
-<p><code>sh
-mvn clean install -DskipTests
-</code></p>
-
-<p>That should generate <code>eclair-node/target/eclair-node-0.4.2-XXXXXXX-bin.zip</code> with sha256 checksums that matches the one we provide and sign in <code>SHA256SUMS.asc</code></p>
-
-<p>(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.</p>
-
-<h1>Upgrading</h1>
-
-<p>This release is fully compatible with Eclair v0.4.1. You don&#39;t need to close your channels, just stop eclair, upgrade and restart.</p>
-
-<h1>Changelog</h1>
-
-<ul>
-<li>ebfca8cef Bitcoin Core Wallet small refactoring (#1482)</li>
-<li>e06325e03 fixup! Split the <code>Peer</code> in two (#1347) (#1487)</li>
-<li>65facab14 Add debug logs to transport handler (#1488)</li>
-<li>ea57bb266 Release 0.4.1 (#1481)</li>
-<li>92a094c49 Anchor output transaction format (#1484)</li>
-<li>aca7499df Use github action for scoverage (#1490)</li>
-<li>625e996ae Update MinFinalCltvExpiryDelta default value and activate wumbo (#1483)</li>
-<li>ab4831fe6 Use file filter for scoverage upload (#1492)</li>
-<li>e6909cfcb Implement the KeySend feature, spontaneous payments (#1485)</li>
-<li>a3dd365c6 Revive codecov.yml (#1493)</li>
-<li>bc81cd527 Add delay before setting watches at startup (#1489)</li>
-<li>8cd264457 Do not merge user provided features with defaults (#1435)</li>
-<li>3d4e00fe1 Activate anchor output in channels (#1491)</li>
-<li>6f9edec10 Relax relaying requirement on expiry (#1497)</li>
-<li>5a5a0b96f Verify feature graph in Init (#1495)</li>
-<li>01f924ae8 Add API commands to sign &amp; verify arbitrary messages (#1499)</li>
-<li>1b21e14b9 Fix typo related to pico-bitcoin conversion (#1503)</li>
-<li>daddfc007 Type fee rates info (#1504)</li>
-<li>3d168a5ba Remove semaphore build (#1517)</li>
-<li>2c437421d Show reminder of failed tests at the end (#1521)</li>
-<li>153f82c8c Refactor integration tests (#1494)</li>
-<li>ef1bf0b9a Use the <code>replyTo</code> pattern for Register messages (#1514)</li>
-<li>e54066be5 Remove <code>Status.Failure</code> in register responses (#1516)</li>
-<li>14a69b810 Trampoline relay exhausted liquidity (#1523)</li>
-<li>77e972bcb Improve blockchain watchers (#1500)</li>
-<li>ea7202380 Set the channel version in the init msg for the fundee (#1518)</li>
-<li>e34b74f88 Fix flaky integration test (#1524)</li>
-<li>6b05099f0 Use the <code>replyTo</code> pattern for Channel messages (#1520)</li>
-<li>b954defa2 Update to Bitcoin Core 0.20.1 (#1526)</li>
-<li>d0011005a Migrate relayers to akka typed (#1525)</li>
-<li>2fc118c29 Do not reply to htlc settlement commands (#1527)</li>
-<li>f26423563 Improve relayer logs (#1529)</li>
-<li>3158c2668 More leeway in tests (#1530)</li>
-<li>eed82e262 Update to scala 2.13.3 and akka 2.6.9 (#1532)</li>
-<li>750b372b2 Minor improvements to the watcher (#1531)</li>
-<li>662e0c4bc Anchor output: handle unilateral close (#1501)</li>
-<li>6ef72a0bd Set a timefactor for typed actors tests (#1541)</li>
-<li>3a773c1fd Allow plugins to handle custom messages and features (#1528)</li>
-<li>483cce4ae Split IntegrationSpec (#1535)</li>
-<li>42481c66e Add some channel events to websocket (#1536)</li>
-<li>36c9b9b5a Configure bitcoin wallet (#1540)</li>
-<li>8a27b4ca8 Fixup funder fee buffer (#1364)</li>
-<li>0ab7ec63f Add DB entry for payment router error (#1513)</li>
-<li>127416801 Make all commands extend <code>Has*ReplyToCommand</code> (#1543)</li>
-<li>382868dda [ChannelRelay] Prioritize lowest capacity channels (#1539)</li>
-<li>56d216b91 Separate configuration for peer-connection (#1548)</li>
-<li>8885ed7f4 (minor) Improve logs in channel relayer (#1550)</li>
-<li>428349a34 Send to channel route (#1537)</li>
-<li>20e0b4bc4 Fix override-features implementation (#1549)</li>
-<li>ed6175043 Nits (#1553)</li>
-<li>b728520ad Prevent disabling <code>var_onion_optin</code> (#1552)</li>
-<li>eea1ba99b Add backward-compatibility tests on some database codecs (#1554)</li>
-<li>50363569c Fix forceclose API (#1555)</li>
-<li>135ce6cc8 Use maven plugin to include tests (#1557)</li>
-<li>a76db1c27 Fix channel CMD_SIGN (#1556)</li>
-<li>3da76c08a Allow mandatory static-remotekey (#1558)</li>
-<li>4b55d3e71 Fix typo in startup script (#1559)</li>
-<li>3e3397cfb Fix Docker JAVA_OPTS expansion (#1561)</li>
-</ul>
-</p>
-					    <a href="https://github.com/ACINQ/eclair" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/eclair/releases/tag/v0.4.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
