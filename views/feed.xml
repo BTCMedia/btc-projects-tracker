@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-18T07:02:37+00:00</updated>
+  <updated>2021-02-18T08:03:46+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.1-pre1</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.1-pre1"/>
+    <summary>This is a pre-release. Use this with caution!</summary>
+    <title>cryptoadvance/specter-desktop: v1.1.1-pre1</title>
+    <updated>2021-02-18T07:56:16Z</updated>
+    <dc:date>2021-02-18T07:56:16Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc5</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc5"/>
@@ -7414,131 +7422,5 @@ This release is fully compatible with Eclair v0.4.1. You don't need to close you
     <updated>2020-10-19T13:13:59Z</updated>
     <dc:date>2020-10-19T13:13:59Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.4.1</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.4.1"/>
-    <summary>**A newer pre-release version based on v1.4.1 fixing a [wrong trade history entry](https://github.com/bisq-network/bisq/pull/4678) is available! Please don’t use this version anymore.**
-
-## Release notes
-This release is packed with new features and improvements:
-- Use SegWit addresses to fund and withdraw from your Bisq wallet
-&gt; **_NOTE:_** Although it's now finally possible to transfer out of Bisq to Bech32 wallets, do not expect any fee savings just yet, because all Bisq trading transactions still happen against P2PKH addresses. This change will be shipped in one of the next releases.
-- Startup time reduced further, especially on slow connections
-- Improvements in the trade protocol to make trading more reliable
-- Bug fixes, bug fixes, bug fixes...
-
-### UI
-- Improve wording: [1](https://github.com/bisq-network/bisq/pull/4603), [2](https://github.com/bisq-network/bisq/pull/4515)
-- [Show info popup if Bisq started under Qubes OS](https://github.com/bisq-network/bisq/pull/4520)
-- [Remove short cut info for removed key handlers](https://github.com/bisq-network/bisq/pull/4472)
-
-### Trading
-- Show if seller has XMR autoconfirmation enabled: [1](https://github.com/bisq-network/bisq/pull/4578), [2](https://github.com/bisq-network/bisq/pull/4625)
-- [XMR autoconfirmation should get amount from trade not offer](https://github.com/bisq-network/bisq/pull/4560)
-- [Reactivate confirm button again in specific cases](https://github.com/bisq-network/bisq/pull/4602)
-- [Display the calculated security deposit at each order entry](https://github.com/bisq-network/bisq/pull/4555)
-
-### Wallet
-- [Fund/Withdraw BTC from/to SegWit addresses](https://github.com/bisq-network/bisq/pull/4509)
-- [Set memo to transaction after transaction creation and not on broadcast success](https://github.com/bisq-network/bisq/pull/4619)
-- [Fix bug with wallet seed restore and open offers](https://github.com/bisq-network/bisq/pull/4507)
-
-### Reliability
-- [New trade statistics](https://github.com/bisq-network/bisq/pull/4611)
-- [Remove address prefix for mailbox messages](https://github.com/bisq-network/bisq/pull/4610)
-- Trade protocol improvements: [1](https://github.com/bisq-network/bisq/pull/4566), [2](https://github.com/bisq-network/bisq/pull/4533)
-- [Upgrade to bitcoinj 0.15.8](https://github.com/bisq-network/bisq/pull/4504)
-- [Fix bug with missing remove of old filter when new filter is added](https://github.com/bisq-network/bisq/pull/4576)
-
-### Privacy
-- [Use binaries from tor browser v10.0](https://github.com/bisq-network/bisq/pull/4604)
-
-### Mediation/Arbitration
-- [Add signature to dispute result and various other improvements](https://github.com/bisq-network/bisq/pull/4543)
-
-### Network
-- [Adding two torv3 seednodes, removing torv2 nodes](https://github.com/bisq-network/bisq/pull/4645)
-- [Replace emzy's v2 seednodes with new v3 seednodes](https://github.com/bisq-network/bisq/pull/4644)
-
-### API
-- [Add core support for registration of regtest dispute agents via API](https://github.com/bisq-network/bisq/pull/4524)
-
-### Development
-- [Do not log full filter object in case of an invalid Filter](https://github.com/bisq-network/bisq/pull/4607)
-- [Setting jvm option `-Djdk.module.illegalAccess=deny`](https://github.com/bisq-network/bisq/pull/4600)
-- [Add flags to header to signal which dev setup is used](https://github.com/bisq-network/bisq/pull/4471)
-
-### Assets
-No new assets.
-
-## Verification
-
-Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
-Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
-
-Import the key:
-`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
-
-How to verify signatures?
-`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
-Replace BINARY with the file you downloaded (e.g. Bisq-1.4.1.dmg)
-
-Verify jar file inside binary:
-You can verify on OSX the jar file with:
-`shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.4.1.jar`
-The output need to match the value from the Bisq-1.4.1.jar.txt file.
-
-
-## Known issues with installation 
-
-### macOS Catalina:
-
-&gt; Bisq can't be opened because Apple cannot check it for malicious software
-
-This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).
-
-Workaround: Right click on the installed Bisq app &gt; Click `Open` (warning popup shown again, but with new button available) &gt; Click `Open`
-
-&gt; Bisq would like to receive keystrokes from any application.
-
-Discussed in issue https://github.com/bisq-network/bisq/issues/3373, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.
-
-### Windows:
-
-There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
-
-If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
-
-[1] Application directory (contains application installation files):
-C:\Users\&lt;username&gt;\AppData\Local\Bisq
-
-[2] Data directory (contains all Bisq data including wallet):
-C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
-
-
-### Linux:
-
-Hint for Debian users:
-If you have problems starting Bisq on Debian use: `/opt/Bisq/Bisq`
-
-If your Linux distro does not support .deb files please follow this instruction:
-```
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.4.1.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-```
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Cleanup tool for saved trades that failed market price check
-
-With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It will remove corrupt trade entries added due to bug https://github.com/bisq-network/bisq/issues/2924. Install and run once, it will shut down automatically, then install version 1.4.1 or later. You can verify the binary the same way as you do with the Bisq application.</summary>
-    <title>bisq-network/bisq: v1.4.1</title>
-    <updated>2020-10-19T07:28:14Z</updated>
-    <dc:date>2020-10-19T07:28:14Z</dc:date>
-  </entry>
-  <dc:date>2021-02-18T07:02:37+00:00</dc:date>
+  <dc:date>2021-02-18T08:03:46+00:00</dc:date>
 </feed>
