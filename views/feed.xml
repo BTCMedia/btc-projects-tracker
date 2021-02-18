@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-18T18:02:38+00:00</updated>
+  <updated>2021-02-18T19:02:51+00:00</updated>
   <entry>
     <id>https://github.com/mempool/mempool/releases/tag/v2.1.2</id>
     <link href="https://github.com/mempool/mempool/releases/tag/v2.1.2"/>
@@ -7289,5 +7289,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2020-10-20T15:05:31Z</updated>
     <dc:date>2020-10-20T15:05:31Z</dc:date>
   </entry>
-  <dc:date>2021-02-18T18:02:38+00:00</dc:date>
+  <dc:date>2021-02-18T19:02:51+00:00</dc:date>
 </feed>
