@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-20T14:03:13+00:00</updated>
+  <updated>2021-02-20T15:00:58+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.5</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.5"/>
@@ -7442,5 +7442,5 @@ With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It
     <updated>2020-10-21T12:39:35Z</updated>
     <dc:date>2020-10-21T12:39:35Z</dc:date>
   </entry>
-  <dc:date>2021-02-20T14:03:13+00:00</dc:date>
+  <dc:date>2021-02-20T15:00:58+00:00</dc:date>
 </feed>
