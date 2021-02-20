@@ -6,7 +6,51 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-20T15:00:58+00:00</updated>
+  <updated>2021-02-20T16:02:22+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.0</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.0"/>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/Specter-Setup-v1.2.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/SpecterDesktop-v1.2.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/specter_desktop-v1.2.0-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/specterd-v1.2.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/specterd-v1.2.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/specterd-v1.2.0-x86_64-linux-gnu.zip)
+
+# Signatures and hashes
+[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @stepansnigirev's GPG key.
+You can get the public key from here: [https://stepansnigirev.com/ss-specter-release.asc](https://stepansnigirev.com/ss-specter-release.asc).
+It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x36ED357AB24B915F) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F).
+Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, short id: `36ed357ab24b915f`
+
+# Release notes
+- Bugfix: a minor bug that always shows address as used #927 (jleo84)
+- Bugfix: cypress-tests #961 (Kim Neunert)
+- Bugfix: Fix key initial format in wallet info #925 (benk10)
+- Bugfix: Use the request session API for authentification #958 (Jürgen Hötzel)
+- Chore: Bump cryptography from 3.2 to 3.3.2 #943 (dependabot[bot])
+- Chore: enable dev-restart-login #960 (Kim Neunert)
+- Chore: fix release-notes #928 (Kim Neunert)
+- Docs: Typos #941 (Max Hillebrand)
+- Feature: Add failed wallets popup #952 (benk10)
+- Feature: Freeze UTXO and select UTXO for new transaction from the UTXO tab #956 (benk10)
+- Feature: Use descriptor wallet for Bitcoin Core &gt;= v0.21.0 #737 (Sjors Provoost)
+- UIUX: Add reason for why device is disabled in new wallet screen #932 (benk10)
+- UIUX: pass result of createpsbt call back to calculateEstimatedFee #945 (djpnewton)
+- UIUX: Preserve form status when creating a transaction #938 (djpnewton)</summary>
+    <title>cryptoadvance/specter-desktop: v1.2.0</title>
+    <updated>2021-02-20T15:04:18Z</updated>
+    <dc:date>2021-02-20T15:04:18Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.5</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.5"/>
@@ -7316,131 +7360,5 @@ Build with .NET Core 3.1.403-win-x64.
     <updated>2020-10-22T14:09:47Z</updated>
     <dc:date>2020-10-22T14:09:47Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.4.2</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.4.2"/>
-    <summary>**A newer version is available! Please don’t use this version anymore.**
-
-## Release notes
-This release is packed with new features and improvements:
-- Use SegWit addresses to fund and withdraw from your Bisq wallet
-&gt; **_NOTE:_** Although it's now finally possible to transfer out of Bisq to Bech32 wallets, do not expect any fee savings just yet, because all Bisq trading transactions still happen against P2PKH addresses. This change will be shipped in one of the next releases.
-- Startup time reduced further, especially on slow connections
-- Improvements in the trade protocol to make trading more reliable
-- Bug fixes, bug fixes, bug fixes...
-
-### UI
-- Improve wording: [1](https://github.com/bisq-network/bisq/pull/4603), [2](https://github.com/bisq-network/bisq/pull/4515)
-- [Show info popup if Bisq started under Qubes OS](https://github.com/bisq-network/bisq/pull/4520)
-- [Remove short cut info for removed key handlers](https://github.com/bisq-network/bisq/pull/4472)
-
-### Trading
-- Show if seller has XMR autoconfirmation enabled: [1](https://github.com/bisq-network/bisq/pull/4578), [2](https://github.com/bisq-network/bisq/pull/4625)
-- [XMR autoconfirmation should get amount from trade not offer](https://github.com/bisq-network/bisq/pull/4560)
-- [Reactivate confirm button again in specific cases](https://github.com/bisq-network/bisq/pull/4602)
-- [Display the calculated security deposit at each order entry](https://github.com/bisq-network/bisq/pull/4555)
-
-### Wallet
-- [Fund/Withdraw BTC from/to SegWit addresses](https://github.com/bisq-network/bisq/pull/4509)
-- [Set memo to transaction after transaction creation and not on broadcast success](https://github.com/bisq-network/bisq/pull/4619)
-- [Fix bug with wallet seed restore and open offers](https://github.com/bisq-network/bisq/pull/4507)
-
-### Reliability
-- [New trade statistics](https://github.com/bisq-network/bisq/pull/4611)
-- [Remove address prefix for mailbox messages](https://github.com/bisq-network/bisq/pull/4610)
-- Trade protocol improvements: [1](https://github.com/bisq-network/bisq/pull/4566), [2](https://github.com/bisq-network/bisq/pull/4533)
-- [Upgrade to bitcoinj 0.15.8](https://github.com/bisq-network/bisq/pull/4504)
-- [Fix bug with missing remove of old filter when new filter is added](https://github.com/bisq-network/bisq/pull/4576)
-
-### Privacy
-- [Use binaries from tor browser v10.0](https://github.com/bisq-network/bisq/pull/4604)
-
-### Mediation/Arbitration
-- [Add signature to dispute result and various other improvements](https://github.com/bisq-network/bisq/pull/4543)
-
-### Network
-- [Adding two torv3 seednodes, removing torv2 nodes](https://github.com/bisq-network/bisq/pull/4645)
-- [Replace emzy's v2 seednodes with new v3 seednodes](https://github.com/bisq-network/bisq/pull/4644)
-
-### API
-- [Add core support for registration of regtest dispute agents via API](https://github.com/bisq-network/bisq/pull/4524)
-
-### Development
-- [Do not log full filter object in case of an invalid Filter](https://github.com/bisq-network/bisq/pull/4607)
-- [Setting jvm option `-Djdk.module.illegalAccess=deny`](https://github.com/bisq-network/bisq/pull/4600)
-- [Add flags to header to signal which dev setup is used](https://github.com/bisq-network/bisq/pull/4471)
-
-### Assets
-No new assets.
-
-## Verification
-
-Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
-Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
-
-Import the key:
-`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
-
-How to verify signatures?
-`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
-Replace BINARY with the file you downloaded (e.g. Bisq-1.4.2.dmg)
-
-Verify jar file inside binary:
-You can verify on OSX the jar file with:
-`shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.4.2.jar`
-The output need to match the value from the Bisq-1.4.2.jar.txt file.
-
-
-## Known issues with installation 
-
-### macOS Catalina:
-
-&gt; Bisq can't be opened because Apple cannot check it for malicious software
-
-This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).
-
-Workaround: Right click on the installed Bisq app &gt; Click `Open` (warning popup shown again, but with new button available) &gt; Click `Open`
-
-&gt; Bisq would like to receive keystrokes from any application.
-
-Discussed in issue https://github.com/bisq-network/bisq/issues/3373, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.
-
-### Windows:
-
-There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
-
-If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
-
-[1] Application directory (contains application installation files):
-C:\Users\&lt;username&gt;\AppData\Local\Bisq
-
-[2] Data directory (contains all Bisq data including wallet):
-C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
-
-
-### Linux:
-
-Hint for Debian users:
-If you have problems starting Bisq on Debian use: `/opt/Bisq/Bisq`
-
-If your Linux distro does not support .deb files please follow this instruction:
-```
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.4.2.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-```
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Cleanup tool for saved trades that failed market price check
-
-With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It will remove corrupt trade entries added due to bug https://github.com/bisq-network/bisq/issues/2924. Install and run once, it will shut down automatically, then install version 1.4.2 or later. You can verify the binary the same way as you do with the Bisq application.</summary>
-    <title>bisq-network/bisq: v1.4.2</title>
-    <updated>2020-10-21T12:39:35Z</updated>
-    <dc:date>2020-10-21T12:39:35Z</dc:date>
-  </entry>
-  <dc:date>2021-02-20T15:00:58+00:00</dc:date>
+  <dc:date>2021-02-20T16:02:22+00:00</dc:date>
 </feed>
