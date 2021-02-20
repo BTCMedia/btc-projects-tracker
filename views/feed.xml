@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-20T01:04:06+00:00</updated>
+  <updated>2021-02-20T02:01:56+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc6</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc6"/>
@@ -7443,5 +7443,5 @@ Now also including: Mempool Explorer, PyBlock, ..</summary>
     <updated>2020-10-21T08:02:48Z</updated>
     <dc:date>2020-10-21T08:02:48Z</dc:date>
   </entry>
-  <dc:date>2021-02-20T01:04:06+00:00</dc:date>
+  <dc:date>2021-02-20T02:01:56+00:00</dc:date>
 </feed>
