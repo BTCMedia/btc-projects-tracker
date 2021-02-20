@@ -6,7 +6,19 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-20T10:01:23+00:00</updated>
+  <updated>2021-02-20T11:03:00+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.5</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.5"/>
+    <summary>Umbrel v0.3.5 fixes some bugs that were preventing the sending of transactions and causing Umbrel to hang on the &quot;Loading LND...\ message.
+
+If your update gets stuck for some reason, please message us on Telegram: https://t.me/getumbrel&quot;
+
+Diff: https://github.com/getumbrel/umbrel/compare/v0.3.4...v0.3.5</summary>
+    <title>getumbrel/umbrel: v0.3.5</title>
+    <updated>2021-02-20T10:15:13Z</updated>
+    <dc:date>2021-02-20T10:15:13Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc6</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc6"/>
@@ -7430,18 +7442,5 @@ With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It
     <updated>2020-10-21T12:39:35Z</updated>
     <dc:date>2020-10-21T12:39:35Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.1</id>
-    <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.1"/>
-    <summary>Includes the LND security fix.
-Update is strongly advised!
-MENU &gt; UPDATE &gt; RELEASE
-and follow instructions.
-
-Now also including: Mempool Explorer, PyBlock, ..</summary>
-    <title>rootzoll/raspiblitz: v1.6.1</title>
-    <updated>2020-10-21T08:02:48Z</updated>
-    <dc:date>2020-10-21T08:02:48Z</dc:date>
-  </entry>
-  <dc:date>2021-02-20T10:01:23+00:00</dc:date>
+  <dc:date>2021-02-20T11:03:00+00:00</dc:date>
 </feed>
