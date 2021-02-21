@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-21T19:01:56+00:00</updated>
+  <updated>2021-02-21T20:01:37+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.2</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.2"/>
@@ -7409,5 +7409,5 @@ Build with .NET Core 3.1.403-win-x64.
     <updated>2020-10-27T09:02:01Z</updated>
     <dc:date>2020-10-27T09:02:01Z</dc:date>
   </entry>
-  <dc:date>2021-02-21T19:01:56+00:00</dc:date>
+  <dc:date>2021-02-21T20:01:37+00:00</dc:date>
 </feed>
