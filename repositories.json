@@ -40,5 +40,7 @@
 	"bitcoin-core/HWI",
 	"spesmilo/electrumx",
 	"bwt-dev/bwt",
-	"lnbits/lnbits"
+	"lnbits/lnbits",
+	"btcsuite/btcd",
+	"btcsuite/btcwallet"
 ]
