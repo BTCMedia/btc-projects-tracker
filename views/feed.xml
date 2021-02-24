@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-24T03:03:32+00:00</updated>
+  <updated>2021-02-24T04:00:45+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta"/>
@@ -7624,5 +7624,5 @@ Build with .NET Core 3.1.403-win-x64.
     <updated>2020-10-27T11:00:23Z</updated>
     <dc:date>2020-10-27T11:00:23Z</dc:date>
   </entry>
-  <dc:date>2021-02-24T03:03:32+00:00</dc:date>
+  <dc:date>2021-02-24T04:00:45+00:00</dc:date>
 </feed>
