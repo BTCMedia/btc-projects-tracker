@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-27T09:03:00+00:00</updated>
+  <updated>2021-02-27T10:01:51+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.7</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.7"/>
@@ -7735,5 +7735,5 @@ REF: Improve wallet import speed</summary>
     <updated>2020-10-28T10:28:35Z</updated>
     <dc:date>2020-10-28T10:28:35Z</dc:date>
   </entry>
-  <dc:date>2021-02-27T09:03:00+00:00</dc:date>
+  <dc:date>2021-02-27T10:01:51+00:00</dc:date>
 </feed>
