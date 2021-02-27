@@ -6,7 +6,19 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-27T16:00:41+00:00</updated>
+  <updated>2021-02-27T17:01:11+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.6</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.6"/>
+    <summary>Umbrel v0.3.6 brings some performance improvements to the Mempool app, updates LND to v0.12.1, and includes some other small bug fixes.
+
+If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
+
+Diff: https://github.com/getumbrel/umbrel/compare/v0.3.5...v0.3.6</summary>
+    <title>getumbrel/umbrel: v0.3.6</title>
+    <updated>2021-02-27T16:44:00Z</updated>
+    <dc:date>2021-02-27T16:44:00Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.7</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.7"/>
@@ -7723,17 +7735,5 @@ REF: Improve wallet import speed</summary>
     <updated>2020-10-30T11:40:47Z</updated>
     <dc:date>2020-10-30T11:40:47Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.9</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.5.9"/>
-    <summary>### Bug fixes:
-
-* If there was too many pending invoice, postgres would be overwhelmed and freeze some requests (Igor Rylko)
-* Emails were not included in the text search anymore @Kukks
-* Payjoin: Do not include maxadditionalfeecontribution if there is no change. @NicolasDorier</summary>
-    <title>btcpayserver/btcpayserver: v1.0.5.9</title>
-    <updated>2020-10-28T10:28:35Z</updated>
-    <dc:date>2020-10-28T10:28:35Z</dc:date>
-  </entry>
-  <dc:date>2021-02-27T16:00:41+00:00</dc:date>
+  <dc:date>2021-02-27T17:01:11+00:00</dc:date>
 </feed>
