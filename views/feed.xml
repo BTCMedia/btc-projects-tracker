@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-02-28T17:02:45+00:00</updated>
+  <updated>2021-02-28T18:00:54+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.7</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.7"/>
@@ -7729,5 +7729,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2020-11-02T15:29:55Z</updated>
     <dc:date>2020-11-02T15:29:55Z</dc:date>
   </entry>
-  <dc:date>2021-02-28T17:02:45+00:00</dc:date>
+  <dc:date>2021-02-28T18:00:54+00:00</dc:date>
 </feed>
