@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-01T04:03:00+00:00</updated>
+  <updated>2021-03-01T05:02:47+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.7</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.7"/>
@@ -217,7 +217,8 @@ From this new version onwards, in addition time-stamping the _git tag_ with [Ope
 
 Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
 ```
-ots verify manifest-roasbeef-v0.12.1-beta.sig.ots -f manifest-roasbeef-v0.12.1-beta.sig
+ots verify manifest-roasbeef-v0.12.1-beta.sig.ots 
+ots verify manifest-v0.12.1-beta.txt.ots
 ```
 
 Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
@@ -7729,5 +7730,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2020-11-02T15:29:55Z</updated>
     <dc:date>2020-11-02T15:29:55Z</dc:date>
   </entry>
-  <dc:date>2021-03-01T04:03:00+00:00</dc:date>
+  <dc:date>2021-03-01T05:02:47+00:00</dc:date>
 </feed>
