@@ -38,6 +38,207 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.8">v1.5.8</a>
+						    </h2>
+							<p class="card-text">Published: 2021-03-01 14:26:42 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This is a follow-up release that <a href="https://github.com/bisq-network/bisq/pull/5235">obtains the minimum withdrawal fee from mempool.space</a> to avoid transactions being rejected by the bitcoin network for having too low a fee.</p>
+
+<p>Here are the release notes from v1.5.7:</p>
+
+<h2>Release notes</h2>
+
+<p>This release improves DAO charts to make it easier to drill into the DAO economics, it ships improvements for Amazon eGift Cards, adds new SEPA countries and the possibility to try out pre-release versions without the need of manual downloads and verification (see settings)...and lots of bug fixes and improvements across the board.</p>
+
+<h3>DAO</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5156">Improve facts and figures</a></li>
+</ul>
+
+<h3>UI</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5198">Add colored decimal places with zeros for dark mode</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5122">Fix stale trade statistics list view when new entries arrive</a></li>
+</ul>
+
+<h3>Trading</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5117">Specify Amazon eGift Card country</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5123">Add four SEPA payment account countries: AD, SM, VA, JE</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5114">&quot;Cash by Mail&quot; instructions improvements</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5191">Fix startup error: &quot;You must have bootstrapped before adding data to the P2P network&quot;</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5175">Fix NullPointerException in trader chat when trade contract is not set</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5172">Fix NullPointerException at offer entry when trading account is switched</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5196">Prevent erroneous logging of &#39;SignaturePubKey in message does not match&#39;</a></li>
+</ul>
+
+<h3>Wallet</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5126">Check wallet is available and/or unlocked when creating an offer</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5224">Increase min withdrawal tx fee to 15 sats/vB</a></li>
+</ul>
+
+<h3>Reliability</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5108">New Feature: Pre-release notifications</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5205">Fix multiple request preliminary data calls</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5219">Fix initialization ordering issue</a></li>
+</ul>
+
+<h3>Privacy</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5245">Update to Tor version v0.4.5.6 </a></li>
+</ul>
+
+<h3>Mediation/Arbitration</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5178">Refund agent payout to use withdrawal fee rate from settings</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5099">Manual payout tool: prevent absurdly high fee payout</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5167">Fix Mediator&#39;s name</a></li>
+</ul>
+
+<h3>Performance</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5120">Speed up deposit and transactions view loads</a></li>
+</ul>
+
+<h3>Network</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5137">Replace deprecated Bisq explorer settings</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5136">Show popup if no filter is delivered</a></li>
+</ul>
+
+<h3>API</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5202">Add api method &#39;stop&#39;</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5159">Api v1 Beta Test Guide</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5084">Add core api method help docs</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5129">Add apitest rolling offer simulation script</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5103">Define gRPC api call rate constraints</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5157">Fix method help typos</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5155">Fix find pid on OSX</a></li>
+</ul>
+
+<h3>Development</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5134">Remove unused BalanceWithConfirmationTextField</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5083">Avoid reverse DNS lookup in BtcNodeConverterTest</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5111">Fix log message when opening browser link</a></li>
+</ul>
+
+<h3>Assets</h3>
+
+<p>No new assets.</p>
+
+<h2>Verification</h2>
+
+<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
+Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
+
+<p>Import the key:
+<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
+
+<p>How to verify signatures?
+<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
+Replace BINARY with the file you downloaded (e.g. Bisq-1.5.8.dmg)</p>
+
+<p>Verify jar file inside binary:
+You can verify on OSX the jar file with:
+<code>shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.8.jar</code>
+The output need to match the value from the Bisq-1.5.8.jar.txt file.</p>
+
+<h2>Known issues with installation</h2>
+
+<h3>macOS Catalina:</h3>
+
+<blockquote>
+<p>Bisq can&#39;t be opened because Apple cannot check it for malicious software</p>
+</blockquote>
+
+<p>This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).</p>
+
+<p>Workaround: Right click on the installed Bisq app &gt; Click <code>Open</code> (warning popup shown again, but with new button available) &gt; Click <code>Open</code></p>
+
+<blockquote>
+<p>Bisq would like to receive keystrokes from any application.</p>
+</blockquote>
+
+<p>Discussed in issue <a href="https://github.com/bisq-network/bisq/issues/3373">https://github.com/bisq-network/bisq/issues/3373</a>, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.</p>
+
+<h3>Windows:</h3>
+
+<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
+
+<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
+
+<p>[1] Application directory (contains application installation files):
+C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
+
+<p>[2] Data directory (contains all Bisq data including wallet):
+C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
+
+<h3>Linux:</h3>
+
+<p>Hint for Debian users:
+If you have problems starting Bisq on Debian use: <code>/opt/Bisq/Bisq</code></p>
+
+<p>If your Linux distro does not support .deb files please follow this instruction:
+<code>
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.5.8.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+</code>
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
+
+<h2>Credits</h2>
+
+<p>Thanks to everyone who directly contributed to this release:</p>
+
+<ul>
+<li>@chimp1984</li>
+<li>@ripcurlx </li>
+<li>@ghubstan</li>
+<li>@huey735 </li>
+<li>@jakub_cz</li>
+<li>@jmacxx </li>
+<li>@sqrrm </li>
+<li>@stejbac</li>
+<li>@bisqubutor</li>
+</ul>
+
+<p>A special thanks to our first time contributor:</p>
+
+<ul>
+<li>@bisqubutor: <a href="https://github.com/bisq-network/bisq/pull/5198">Add colored decimal places with zeros for dark mode</a></li>
+</ul>
+
+<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
+</p>
+					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.7">v0.3.7</a>
 						    </h2>
 							<p class="card-text">Published: 2021-02-28 15:02:41 UTC</p>
@@ -83,7 +284,9 @@
 							<p class="card-text">Published: 2021-02-26 19:18:20 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><h2>Release notes</h2>
+					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
+
+<h2>Release notes</h2>
 
 <p>This release improves DAO charts to make it easier to drill into the DAO economics, it ships improvements for Amazon eGift Cards, adds new SEPA countries and the possibility to try out pre-release versions without the need of manual downloads and verification (see settings)...and lots of bug fixes and improvements across the board.</p>
 
@@ -9110,96 +9313,6 @@ Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 91
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.9.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.9.1">v0.9.1</a>
-						    </h2>
-							<p class="card-text">Published: 2020-11-02 15:29:55 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.1/Specter-Setup-v0.9.1.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.1/SpecterDesktop-v0.9.1.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.1/specter_desktop-v0.9.1-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.1/specterd-v0.9.1-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.1/specterd-v0.9.1-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.1/specterd-v0.9.1-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h1>Signatures and hashes</h1>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.1/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @stepansnigirev&#39;s GPG key.
-You can get public key from here: <a href="https://stepansnigirev.com/ss-specter-release.asc">https://stepansnigirev.com/ss-specter-release.asc</a>.
-It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x36ED357AB24B915F">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F">keys.openpgp.org</a>.
-Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F</code>, short id: <code>36ed357ab24b915f</code></p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Bugfix: Fix hash verification #554 (@ben-kaufman)
-
-<ul>
-<li>Bugfix: Fix CI related fixes #551 #552 #553 (@ben-kaufman)</li>
-<li>Bugfix: fixes #486 support binary psbt #535 (Stepan Snigirev)</li>
-<li>Bugfix: fix label size #532 (Stepan Snigirev)</li>
-<li>Bugfix: Minor spelling fix #531 (Daniel Mross)</li>
-<li>Bugfix: update coldcard instructions to generic json #527 (Stepan Snigirev)</li>
-<li>Bugfix: Feedback again for non working Core-connections #491 (Kim Neunert)</li>
-<li>Bugfix: fix for proper namespace package cryptoadvance #524 (Kim Neunert)</li>
-<li>Bugfix: Enable macOS dock icon #520 (Chris Beams)</li>
-<li>Bugfix: Scanning of upper-case btc-addresses (Samourai) fixes 479 #510 (Kim Neunert)</li>
-<li>Bugfix: rework discovery of pip installed version #502 (Andreas Zuber)</li>
-<li>Bugfix: fix broken windows build #508 (Kim Neunert)</li>
-<li>Bugfix: Fix amount validation #516 (@ben-kaufman)</li>
-<li>Bugfix: Fix display address on Specter HWI and an error when creating wallets #511 (@ben-kaufman)</li>
-<li>Bugfix: Minor spelling change #485 (Michael Flaxman)</li>
-<li>Bugfix: Update HWI to 1.2.0 closes #500 #476 (#506)</li>
-<li>Bugfix: Blackify (#497) (@mflaxman)</li>
-<li>Bugfix: Specify python version &lt;3.9 (#559) (@mflaxman)</li>
-<li>Performance: Add threaded checker for Bitcoin RPC calls (#558) (@stepansnigirev)</li>
-<li>Feature: Allow manual specterd upload for the desktop app (#560) (@ben-kaufman)</li>
-<li>Feature: add tx hash to psbt filename #548 (Michael Flaxman)</li>
-<li>Feature: backup files on write and rollback to prevent corrupt-data #542 (Stepan Snigirev)</li>
-<li>Feature: Use Electron for desktop app #555 #473 (@ben-kaufman)</li>
-<li>Feature: change wallet export to use alias instead of name #543 (Michael Flaxman)</li>
-<li>Feature: add page loader to get visual feedback while loading #541 (Stepan Snigirev)</li>
-<li>Feature: Now devices can get renamed #534 (Stepan Snigirev)</li>
-<li>Feature: friendly camera error message if camera unavailable #533 (Stepan Snigirev)</li>
-<li>Feature: electrum watch-only export #530 (Michael Flaxman)</li>
-<li>Feature: Improves update version checker #525 (Stepan Snigirev)</li>
-<li>Feature: ask for encryption password at hot wallet only if it&#39;s enabled #526 (Stepan Snigirev)</li>
-<li>Feature: BIP39 passphrases, custom derivations and more for hot wallets #514 (@ben-kaufman)</li>
-<li>Feature: Packaging pip-releases as tarballs and sha256-hashes them #523 (Kim Neunert)</li>
-<li>Feature: add support for non-hardened derivation for hot storage #521 (Stepan Snigirev)</li>
-<li>Feature: Support for url context paths #504 (kexkey)</li>
-<li>Feature: add pip-compile and hash support for security/reproducibility #496 (Michael Flaxman)</li>
-<li>Feature add pip-compile and hash support for security/reproducibility (#496) (@mflaxman)</li>
-<li>Feature: All code now blackified (#497) (@mflaxman)</li>
-<li>Refactoring: Remove RPC calls from the UI #557 (@ben-kaufman)</li>
-<li>Refactoring: Refactor preparation for observers #544 (Stepan Snigirev)</li>
-<li>Refactoring: Code Compliance via Black #497 #529 (Michael Flaxman)</li>
-<li>Refactoring: persistence.py #255 #403 (Kim Neunert)</li>
-<li>Refactoring: Update HWI to 1.2.0 #506 (@ben-kaufman)</li>
-<li>Docs: Hardwarewallet Troubleshooting #522 (Kim Neunert)</li>
-<li>Docs: Update hwibridge.md #505 (Kim Neunert)</li>
-<li>Docs: Update FAQ on Coin Control (@moritzwietersheim) (#563)</li>
-</ul></li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.9.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
