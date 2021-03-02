@@ -6,7 +6,52 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-02T14:02:52+00:00</updated>
+  <updated>2021-03-02T15:02:27+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.6</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.6"/>
+    <summary>**New**
+
+- Offline Signing and Cold Storage
+
+Allows a BlueWallet app on any mobile phone to sign transactions offline. Using PSBTs and Airgapped Animated QR codes to transmit information on the dark.
+
+- Long press on Transaction Row to get shortcuts
+- Tap and hold to Share QRCode image
+- QR code scanner to wallet/broadcast screen
+- Apple Watch Price Complication
+- Copying Block Explorer Link
+- If unable to connect to server, show alert
+
+**Fixed**
+
+- Wallet delete would cause crash
+- Browser crash when accessing wallet
+- Widgets were not showing on drawer
+- Screen titles language
+- QRCode save alert description
+- QRCode size on large devices
+- Transactions/details screen graceful error handling
+- Electrum protocol graceful error handling
+- Better bitcoinscript error handling
+- Fee selection in darkmode
+
+**Languages updates**
+
+- Arabic, Russian, Greek, Polish, Japanese, Portuguese, Portuguese Brazilian, Swedish, Thai, Finnish, Persian, Dutch, German, French and Chinese.
+
+A special shout out to @bitkarrot and @et_sam from the Hong Kong Bitcoin Association on the Chinese translation work.
+
+**Download**
+
+[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.6/BlueWallet.6.0.6.dmg)
+
+[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.6/BlueWallet-v6.0.6.apk)
+</summary>
+    <title>BlueWallet/BlueWallet: v6.0.6</title>
+    <updated>2021-03-02T14:09:23Z</updated>
+    <dc:date>2021-03-02T14:09:23Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.8</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.8"/>
@@ -7782,36 +7827,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.13...v0.2.14</summary>
     <updated>2020-11-12T12:02:23Z</updated>
     <dc:date>2020-11-12T12:02:23Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.9.2</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.9.2"/>
-    <summary># v0.9.2 (Hotfix for v0.9.1 Linux binaries)
-
-# Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.2/Specter-Setup-v0.9.2.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.2/SpecterDesktop-v0.9.2.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.2/specter_desktop-v0.9.2-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.2/specterd-v0.9.2-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.2/specterd-v0.9.2-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.2/specterd-v0.9.2-x86_64-linux-gnu.zip)
-
-# Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.9.2/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @stepansnigirev's GPG key.
-You can get public key from here: [https://stepansnigirev.com/ss-specter-release.asc](https://stepansnigirev.com/ss-specter-release.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x36ED357AB24B915F) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F).
-Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, short id: `36ed357ab24b915f`
-
-# Release notes
-Bugfix: Fix Linux binary executable.</summary>
-    <title>cryptoadvance/specter-desktop: v0.9.2</title>
-    <updated>2020-11-02T19:43:38Z</updated>
-    <dc:date>2020-11-02T19:43:38Z</dc:date>
-  </entry>
-  <dc:date>2021-03-02T14:02:52+00:00</dc:date>
+  <dc:date>2021-03-02T15:02:27+00:00</dc:date>
 </feed>
