@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-02T08:01:17+00:00</updated>
+  <updated>2021-03-02T09:02:17+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.8</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.8"/>
@@ -1404,7 +1404,9 @@ Wilmer Paulino
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.6</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.6"/>
-    <summary>This is a hotfix that fixes a [startup issue](https://github.com/bisq-network/bisq/pull/5191) with limit offers.
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+This is a hotfix that fixes a [startup issue](https://github.com/bisq-network/bisq/pull/5191) with limit offers.
 
 Here are the release notes from v1.5.5:
 
@@ -7811,5 +7813,5 @@ Bugfix: Fix Linux binary executable.</summary>
     <updated>2020-11-02T19:43:38Z</updated>
     <dc:date>2020-11-02T19:43:38Z</dc:date>
   </entry>
-  <dc:date>2021-03-02T08:01:17+00:00</dc:date>
+  <dc:date>2021-03-02T09:02:17+00:00</dc:date>
 </feed>
