@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-02T03:03:06+00:00</updated>
+  <updated>2021-03-02T04:01:45+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.8</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.8"/>
@@ -7811,5 +7811,5 @@ Bugfix: Fix Linux binary executable.</summary>
     <updated>2020-11-02T19:43:38Z</updated>
     <dc:date>2020-11-02T19:43:38Z</dc:date>
   </entry>
-  <dc:date>2021-03-02T03:03:06+00:00</dc:date>
+  <dc:date>2021-03-02T04:01:45+00:00</dc:date>
 </feed>
