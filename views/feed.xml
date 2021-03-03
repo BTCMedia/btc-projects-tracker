@@ -6,7 +6,318 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-03T12:01:25+00:00</updated>
+  <updated>2021-03-03T13:02:26+00:00</updated>
+  <entry>
+    <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.9</id>
+    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.9"/>
+    <summary>This is a hotfix release that [fixes an issue when trading messages are resent on application startup](https://github.com/bisq-network/bisq/pull/5267).
+
+Here are the release notes from v1.5.8:
+
+## Release notes
+This release improves DAO charts to make it easier to drill into the DAO economics, it ships improvements for Amazon eGift Cards, adds new SEPA countries and the possibility to try out pre-release versions without the need of manual downloads and verification (see settings)...and lots of bug fixes and improvements across the board.
+
+### DAO
+- [Improve facts and figures](https://github.com/bisq-network/bisq/pull/5156)
+
+### UI
+- [Add colored decimal places with zeros for dark mode](https://github.com/bisq-network/bisq/pull/5198)
+- [Fix stale trade statistics list view when new entries arrive](https://github.com/bisq-network/bisq/pull/5122)
+
+### Trading
+- [Specify Amazon eGift Card country](https://github.com/bisq-network/bisq/pull/5117)
+- [Add four SEPA payment account countries: AD, SM, VA, JE](https://github.com/bisq-network/bisq/pull/5123)
+- [&quot;Cash by Mail&quot; instructions improvements](https://github.com/bisq-network/bisq/pull/5114)
+- [Fix startup error: &quot;You must have bootstrapped before adding data to the P2P network&quot;](https://github.com/bisq-network/bisq/pull/5191)
+- [Fix NullPointerException in trader chat when trade contract is not set](https://github.com/bisq-network/bisq/pull/5175)
+- [Fix NullPointerException at offer entry when trading account is switched](https://github.com/bisq-network/bisq/pull/5172)
+- [Prevent erroneous logging of 'SignaturePubKey in message does not match'](https://github.com/bisq-network/bisq/pull/5196)
+
+### Wallet
+- [Check wallet is available and/or unlocked when creating an offer](https://github.com/bisq-network/bisq/pull/5126)
+- [Obtain the minimum withdrawal fee from mempool.space](https://github.com/bisq-network/bisq/pull/5235)
+
+### Reliability
+- [New Feature: Pre-release notifications](https://github.com/bisq-network/bisq/pull/5108)
+- [Fix multiple request preliminary data calls](https://github.com/bisq-network/bisq/pull/5205)
+- [Fix initialization ordering issue](https://github.com/bisq-network/bisq/pull/5219)
+
+### Privacy
+- [Update to Tor version v0.4.5.6 ](https://github.com/bisq-network/bisq/pull/5245)
+
+### Mediation/Arbitration
+- [Refund agent payout to use withdrawal fee rate from settings](https://github.com/bisq-network/bisq/pull/5178)
+- [Manual payout tool: prevent absurdly high fee payout](https://github.com/bisq-network/bisq/pull/5099)
+- [Fix Mediator's name](https://github.com/bisq-network/bisq/pull/5167)
+
+### Performance
+- [Speed up deposit and transactions view loads](https://github.com/bisq-network/bisq/pull/5120)
+
+### Network
+- [Replace deprecated Bisq explorer settings](https://github.com/bisq-network/bisq/pull/5137)
+- [Show popup if no filter is delivered](https://github.com/bisq-network/bisq/pull/5136)
+
+### API
+- [Add api method 'stop'](https://github.com/bisq-network/bisq/pull/5202)
+- [Api v1 Beta Test Guide](https://github.com/bisq-network/bisq/pull/5159)
+- [Add core api method help docs](https://github.com/bisq-network/bisq/pull/5084)
+- [Add apitest rolling offer simulation script](https://github.com/bisq-network/bisq/pull/5129)
+- [Define gRPC api call rate constraints](https://github.com/bisq-network/bisq/pull/5103)
+- [Fix method help typos](https://github.com/bisq-network/bisq/pull/5157)
+- [Fix find pid on OSX](https://github.com/bisq-network/bisq/pull/5155)
+
+### Development
+- [Remove unused BalanceWithConfirmationTextField](https://github.com/bisq-network/bisq/pull/5134)
+- [Avoid reverse DNS lookup in BtcNodeConverterTest](https://github.com/bisq-network/bisq/pull/5083)
+- [Fix log message when opening browser link](https://github.com/bisq-network/bisq/pull/5111)
+
+### Assets
+No new assets.
+
+## Verification
+
+Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
+Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
+
+Import the key:
+`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
+
+How to verify signatures?
+`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
+Replace BINARY with the file you downloaded (e.g. Bisq-1.5.9.dmg)
+
+Verify jar file inside binary:
+You can verify on OSX the jar file with:
+`shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.9.jar`
+The output need to match the value from the Bisq-1.5.9.jar.txt file.
+
+
+## Known issues with installation 
+
+### macOS Catalina:
+
+&gt; Bisq can't be opened because Apple cannot check it for malicious software
+
+This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).
+
+Workaround: Right click on the installed Bisq app &gt; Click `Open` (warning popup shown again, but with new button available) &gt; Click `Open`
+
+&gt; Bisq would like to receive keystrokes from any application.
+
+Discussed in issue https://github.com/bisq-network/bisq/issues/3373, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.
+
+### Windows:
+
+There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
+
+If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
+
+[1] Application directory (contains application installation files):
+C:\Users\&lt;username&gt;\AppData\Local\Bisq
+
+[2] Data directory (contains all Bisq data including wallet):
+C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
+
+
+### Linux:
+
+Hint for Debian users:
+If you have problems starting Bisq on Debian use: `/opt/Bisq/Bisq`
+
+If your Linux distro does not support .deb files please follow this instruction:
+```
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.5.9.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+```
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
+
+## Credits
+
+Thanks to everyone who directly contributed to this release:
+
+- @chimp1984
+- @ripcurlx 
+- @ghubstan
+- @huey735 
+- @jakub_cz
+- @jmacxx 
+- @sqrrm 
+- @stejbac
+- @bisqubutor
+
+A special thanks to our first time contributor:
+
+- @bisqubutor: [Add colored decimal places with zeros for dark mode](https://github.com/bisq-network/bisq/pull/5198)
+
+As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
+    <title>bisq-network/bisq: v1.5.9</title>
+    <updated>2021-03-03T12:38:54Z</updated>
+    <dc:date>2021-03-03T12:38:54Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/ACINQ/eclair/releases/tag/v0.5.1</id>
+    <link href="https://github.com/ACINQ/eclair/releases/tag/v0.5.1"/>
+    <summary>This release includes many bug fixes and improvements, a new API and monitoring updates.
+It is fully compatible with 0.5.0 (and all previous versions of eclair).
+
+# Major changes
+
+### Improved startup performance
+
+When eclair starts up and restores channels, it makes a lot of calls to `bitcoind` to check the status of each channel.
+We improved our calling pattern to greatly reduce the number of calls made when some channels are closing.
+This is particularly noticeable when the mempool is quite full and you have many channels.
+
+See #1699 for details.
+
+### Gossip sync improvements
+
+Most of the bandwidth consumed by lightning nodes is due to gossip (syncing the network graph).
+When your eclair node has a lot of peers and doesn't use a `sync-whitelist`, you may end up syncing with many different peers and obtaining redundant information, thus wasting bandwidth.
+Eclair now only syncs with peers you have a channel with to reduce bandwidth usage.
+
+### Anchor outputs
+
+This release contains a lot of changes for the upcoming anchor outputs commitment format:
+
+- the feerate of the commitment transaction is kept low to improve off-chain channel usage
+- transactions with multiple inputs and outputs are now supported
+- CPFP and RBF utilities have been added to increase the feerate of commitment and htlc transactions
+
+While you can start experimenting with this commitment format, it is still not safe to activate in production.
+Anchor outputs is a complex and subtle change that requires re-architecting most of our transaction broadcasting logic and utxo management.
+We are making steady progress towards that, but we're not there yet.
+
+### Monitoring changes
+
+Kamon tracing has been removed in this release.
+It was too invasive in the codebase, generally unused and was costing some bandwidth.
+We've found that metrics and logs are enough to correctly monitor your eclair node.
+
+Additional metrics to monitor transaction signing have been added.
+The rate of transaction signatures is a good indicator of how busy your node is.
+
+### API changes
+
+This release adds a new path-finding API:
+
+- `findroutebetweennodes` lets you inspect the network graph by looking for routes between two nodes (whereas `findroute` only allowed finding routes between your node and a remote node)
+
+Head over to our [API documentation](https://acinq.github.io/eclair) for more details.
+
+### Miscellaneous improvements and bug fixes
+
+- Correctly sort addresses in its `node_announcement` (#1693)
+- Allow 2016 blocks before unconfirmed channels are forgotten (#1692)
+- Re-emit private channel updates more frequently, improving payments to mobile wallets (#1671)
+- Correctly handle channel failures in private routing hints, fixing an edge case for payments to mobile wallets (#1675)
+- Drop support for `initial_routing_sync`: this was bandwidth-heavy and now unnecessary (#1683)
+- Fix an MPP-send edge-case (#1685)
+- Fix race condition between outgoing payment and peer disconnection (#1688)
+- Fix race condition between `update_fee` and `shutdown`, which could lead to channels stuck in `shutdown` (#1661)
+- Ensure transactions we publish always meet bitcoin's `min_relay_fee` (#1687)
+- Fix an edge case where an HTLC failure was not correctly relayed upstream if `revoke_and_ack` had not been received (#1706)
+
+# Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+
+```sh
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+
+```sh
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```
+
+# Building
+
+Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):
+
+- Ubuntu 19.10
+- AdoptOpenJDK 11.0.6
+- Maven 3.6.3
+
+Use the following command to generate the eclair-node package:
+
+```sh
+mvn clean install -DskipTests
+```
+
+That should generate `eclair-node/target/eclair-node-0.5.1-XXXXXXX-bin.zip` with sha256 checksums that match the one we provide and sign in `SHA256SUMS.asc`
+
+(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.
+
+# Upgrading
+
+This release is fully compatible with Eclair v0.5.0. You don't need to close your channels, just stop eclair, upgrade and restart.
+
+# Changelog
+
+- 923ca26f Set version to 0.5.1-SNAPSHOT (#1651)
+- b75f6c36 Fix duplicate commit id in awseb bundle (#1650)
+- 5f9d0d91 Relax cltv-expiry-delta requirement when selecting a channel to relay (#1655)
+- dd8975ae Make ChannelVersion methods public (#1656)
+- 7343283f Add test for duplicate temporary channel id (#1660)
+- 629c2e69 Fix rare race conditions in integration tests (#1653)
+- b477d179 Update build instructions for front (#1658)
+- e369ba9a More aggressively re-emit private channel updates (#1671)
+- d40b321d Blockchain watchdogs use unique actor name (#1667)
+- 9c4ab7d9 Fix HTLC fulfill race condition in integration spec (#1666)
+- 81f15aab Refactor and improve some channel tests (#1654)
+- 54ca2922 Remove kamon tracing (#1662)
+- 34e901db Clarify default relay fee change (#1673)
+- c75d9143 Fix failing reconnection tests (#1678)
+- 0127ace4 Remote failure updating routing hint (#1675)
+- ac054a2b Only sync with channel peers (#1587)
+- d0531883 Truncate hex strings in front logs (#1679)
+- 49023625 Refactor channel test helpers (#1682)
+- f241ef93 Remove support for initial_routing_sync (#1683)
+- 63d972bd Fix a few typos (#1684)
+- 5d3958dd Fix MPP path-finding edge case (#1685)
+- 15c1837d Add tx signing metrics (#1659)
+- 72179de0 PaymentLifecycle handle disconnected peers (#1688)
+- fdeb3ce7 Correctly set gossip sync_complete (#1668)
+- 36e8c056 Shutdown and UpdateFee should not be intertwined (#1661)
+- 2a359c6a Publish txs with min-relay-fee met (#1687)
+- 82e5b596 Sort addresses in node announcement (#1693)
+- 3a94a804 Reject unreasonable remote dust limit (#1694)
+- fdb57b43 Find route between nodes (#1695)
+- 9618a6a7 Add a maximum fee threshold for anchor outputs (#1672)
+- ab89851c Relax single tx input requirements (#1677)
+- 08351508 Update funding timeout fundee (#1692)
+- d9c0b862 Refactor bitcoin clients (#1697)
+- 5163749a [eclair-cli] Use multiplatform escape sequence
+- fa759f1e Fix PaymentLifecycle warning (#1703)
+- c1bf9bd1 Optimize watching for spending txs (#1699)
+- d02b900a Fix annoying compiler warning (#1704)
+- a3c477e3 Address all intellij warnings for Channel.scala (#1705)
+- bf2a35f7 Relay partially failed htlcs when closing (#1706)
+- 5d662fc3 Set anchor output feerates when force-closing (#1702)
+- 8065d0bb Add a serializer for `DoSync` (#1708)
+- 8d4da2fa Improve channel state tests (#1709)
+- 26468862 fixup! Improve channel state tests (#1709) (#1712)
+- 34796691 Disable jdbc instrumentation by default (#1713)
+- 98bb7be7 Set version to 0.5.1 (#1707)
+
+Thanks to our new contributors, @tompro and @ariskk!</summary>
+    <title>ACINQ/eclair: v0.5.1</title>
+    <updated>2021-03-03T12:33:57Z</updated>
+    <dc:date>2021-03-03T12:33:57Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.6</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.6"/>
@@ -55,7 +366,9 @@ A special shout out to @bitkarrot and @et_sam from the Hong Kong Bitcoin Associa
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.8</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.8"/>
-    <summary>This is a follow-up release that [obtains the minimum withdrawal fee from mempool.space](https://github.com/bisq-network/bisq/pull/5235) to avoid transactions being rejected by the bitcoin network for having too low a fee.
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+This is a follow-up release that [obtains the minimum withdrawal fee from mempool.space](https://github.com/bisq-network/bisq/pull/5235) to avoid transactions being rejected by the bitcoin network for having too low a fee.
 
 Here are the release notes from v1.5.7:
 
@@ -7753,79 +8066,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2020-11-17T14:37:10Z</updated>
     <dc:date>2020-11-17T14:37:10Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.1</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.1"/>
-    <summary>## Main changes
-
-#### Customizable max fees for outgoing Lightning payments
-
-Users can now change the maximum fees that the trampoline node can use for outgoing LN payments. In some cases, the [default setting](https://phoenix.acinq.co/faq#what-are-the-fees) may not be sufficient so the user can try higher fees. Note that the trampoline node will always try to use as low fee as possible. Also, setting a super high fee will not help if the recipient is simply not reachable (no channels/no connection) or does not have enough inbound liquidity.
-
-This setting is available in Setting &gt; Payment settings
-
-#### Better error messages for failed payments
-
-Some error messages are rewritten to be more explicit and provide guidance to users.
-
-#### Small channels are more resilient to high fee environment
-
-Channels inbound capacity is also displayed in the wallet's channels list.
-
-## Complete list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.0...v1.4.1
-- **core**: https://github.com/ACINQ/eclair/compare/v0.4.2-android-phoenix...v0.4.4-android-phoenix
-
-Thanks @bitcoinuser for updating PT-BR translation.
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: https://acinq.co/pgp/padioupm.asc
-- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import padioupm.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: v1.4.1</title>
-    <updated>2020-11-13T10:45:16Z</updated>
-    <dc:date>2020-11-13T10:45:16Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.2.14</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.2.14"/>
-    <summary>This Umbrel release brings LND v0.11.1, native segwit addresses for on-chain deposits and some tiny but mighty changes that will silently prepare your Umbrel for some big upcoming updates.
-
-Changes:
-
-- Make sure containers don't autostart on boot (#288) 238b0d6
-- Proxy dev HMR websockets through NGINX (#290) 2a3e2eb
-- Add docker-compose.override.ym to .gitignore (#289) ea3249e
-- Mention permissions in SECURITY.md (#296) 84bd730
-- Get device IP more reliably (#297) ebc95bd (Thanks, @nioncode!)
-- Autodetect docker binrary path (#297) 3504d4b (Thanks, @nioncode!)
-- Prevent unbound variable error (#297) 046a067 (Thanks, @nioncode!)
-- Remove redundant docker pull (#297) 0dab55d (Thanks, @nioncode!)
-- Move zmq params to bitcoin.conf 2be6232
-- Add txindex=1 to bitcoin.conf (#305) b42caaf
-- Add blockfilterindex=1 to bitcoin.conf (#306) 96ef3b3
-- Update to getumbrel/dashboard:v0.3.12 (#307) e2b762e
-- Bump lnd to v0.11.1 (#278) 56614f3
-- Update to getumbrel/dashboard to v0.3.13 (#310) 6da4d27
-- Update to getumbrel/middleware to v0.1.7 (#311) 4ec925e
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.2.13...v0.2.14</summary>
-    <title>getumbrel/umbrel: v0.2.14</title>
-    <updated>2020-11-12T12:02:23Z</updated>
-    <dc:date>2020-11-12T12:02:23Z</dc:date>
-  </entry>
-  <dc:date>2021-03-03T12:01:25+00:00</dc:date>
+  <dc:date>2021-03-03T13:02:26+00:00</dc:date>
 </feed>
