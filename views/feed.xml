@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-03T00:05:24+00:00</updated>
+  <updated>2021-03-03T01:03:30+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.6</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.6"/>
@@ -7827,5 +7827,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.13...v0.2.14</summary>
     <updated>2020-11-12T12:02:23Z</updated>
     <dc:date>2020-11-12T12:02:23Z</dc:date>
   </entry>
-  <dc:date>2021-03-03T00:05:24+00:00</dc:date>
+  <dc:date>2021-03-03T01:03:30+00:00</dc:date>
 </feed>
