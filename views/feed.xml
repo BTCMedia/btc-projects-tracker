@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-04T00:03:59+00:00</updated>
+  <updated>2021-03-04T01:03:31+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.9</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.9"/>
@@ -8066,5 +8066,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2020-11-17T14:37:10Z</updated>
     <dc:date>2020-11-17T14:37:10Z</dc:date>
   </entry>
-  <dc:date>2021-03-04T00:03:59+00:00</dc:date>
+  <dc:date>2021-03-04T01:03:31+00:00</dc:date>
 </feed>
