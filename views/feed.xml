@@ -6,7 +6,80 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-04T15:03:52+00:00</updated>
+  <updated>2021-03-04T16:02:29+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.8</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.8"/>
+    <summary>## Main changes
+
+The channel creation fee for pay-to-open has been increased: it's still 0.1% but there is now a 1000 sat minimum. The manual confirmation dialog and asynchronous pay-to-open logic have been removed. The FTUE page regarding the channel opening cost has been updated as well as the swap-in dialog so that we can display this new fee minimum value.
+
+## Complete list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.7...v1.4.8
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: https://acinq.co/pgp/padioupm.asc
+- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import padioupm.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.8</title>
+    <updated>2021-03-04T15:20:44Z</updated>
+    <dc:date>2021-03-04T15:20:44Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.7</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.7"/>
+    <summary>## Main changes
+
+### Improve LNURL error feedback
+
+Errors returned by LNURL services were not properly handled and information was lost, causing confusion, especially for LNURL-withdraw.
+
+### Notify user when channel opening is rejected
+
+If a new channel must be created to receive an incoming payment but the amount is below the channel creation threshold, a notification is displayed. Note that this is not enabled yet because changes on the peer side are also needed.
+
+-- edit: this is now enabled.
+
+## Complete list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.6...v1.4.7
+- **core**: https://github.com/ACINQ/eclair/compare/v0.4.8-android-phoenix...v0.4.9-android-phoenix
+
+Thanks again @bitcoinuser for updating the Portuguese-Brazilian translation.
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: https://acinq.co/pgp/padioupm.asc
+- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import padioupm.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.7</title>
+    <updated>2021-03-04T15:20:33Z</updated>
+    <dc:date>2021-03-04T15:20:33Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.9</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.9"/>
@@ -8018,53 +8091,5 @@ Don't use it if you don't know what you're doing!</summary>
     <updated>2020-11-20T13:27:41Z</updated>
     <dc:date>2020-11-20T13:27:41Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.0-pre1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.0-pre1"/>
-    <summary>
-
-THIS IS A PRERELEASE
-
-Don't use it if you don't know what you're doing!</summary>
-    <title>cryptoadvance/specter-desktop: v0.10.0-pre1</title>
-    <updated>2020-11-19T21:46:43Z</updated>
-    <dc:date>2020-11-19T21:46:43Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.2</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.2"/>
-    <summary>## Main changes
-
-#### Fixed some &quot;route not found&quot; errors
-
-There was an issue where channels with less than 15 000 satoshis were ignored by the path-finding algorithm, which could prevent payments from going through and incorrectly trigger a &quot;Route not found&quot; error.
-
-## Complete list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.1...v1.4.2
-- **core**: https://github.com/ACINQ/eclair/compare/v0.4.4-android-phoenix...v0.4.5-android-phoenix
-
-Thanks @bitcoinuser for updating PT-BR translation.
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: https://acinq.co/pgp/padioupm.asc
-- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import padioupm.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: v1.4.2</title>
-    <updated>2020-11-17T14:37:10Z</updated>
-    <dc:date>2020-11-17T14:37:10Z</dc:date>
-  </entry>
-  <dc:date>2021-03-04T15:03:52+00:00</dc:date>
+  <dc:date>2021-03-04T16:02:29+00:00</dc:date>
 </feed>
