@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-05T19:04:10+00:00</updated>
+  <updated>2021-03-05T20:02:22+00:00</updated>
+  <entry>
+    <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.0-rc.2</id>
+    <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.0-rc.2"/>
+    <summary>Release Candidate 2 for HWI 2.0.0</summary>
+    <title>bitcoin-core/HWI: 2.0.0-rc.2</title>
+    <updated>2021-03-05T19:53:45Z</updated>
+    <dc:date>2021-03-05T19:53:45Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.8</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.8"/>
@@ -8081,15 +8089,5 @@ v5.6.3
     <updated>2020-11-20T16:15:52Z</updated>
     <dc:date>2020-11-20T16:15:52Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.0-pre2</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.0-pre2"/>
-    <summary>THIS IS A PRERELEASE
-
-Don't use it if you don't know what you're doing!</summary>
-    <title>cryptoadvance/specter-desktop: v0.10.0-pre2</title>
-    <updated>2020-11-20T13:27:41Z</updated>
-    <dc:date>2020-11-20T13:27:41Z</dc:date>
-  </entry>
-  <dc:date>2021-03-05T19:04:10+00:00</dc:date>
+  <dc:date>2021-03-05T20:02:22+00:00</dc:date>
 </feed>
