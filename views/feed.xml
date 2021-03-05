@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-05T16:01:59+00:00</updated>
+  <updated>2021-03-05T17:02:28+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.8</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.8"/>
@@ -8091,5 +8091,5 @@ Don't use it if you don't know what you're doing!</summary>
     <updated>2020-11-20T13:27:41Z</updated>
     <dc:date>2020-11-20T13:27:41Z</dc:date>
   </entry>
-  <dc:date>2021-03-05T16:01:59+00:00</dc:date>
+  <dc:date>2021-03-05T17:02:28+00:00</dc:date>
 </feed>
