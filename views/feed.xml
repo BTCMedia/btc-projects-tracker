@@ -6,20 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-08T18:03:13+00:00</updated>
-  <entry>
-    <id>https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.10</id>
-    <link href="https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.10"/>
-    <summary>Changelog: 
-
-- Add SIGHASH_RANGEPROOF support
-- Add two missing dynafed fields to getblockchaininfo
-- Support changing mainnet dynafed activation
-- Only verify proposed dynafed parameters if they differ from current</summary>
-    <title>ElementsProject/elements: elements-0.18.1.10</title>
-    <updated>2021-03-08T11:48:13Z</updated>
-    <dc:date>2021-03-08T11:48:13Z</dc:date>
-  </entry>
+  <updated>2021-03-08T19:00:39+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.0-rc.2</id>
     <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.0-rc.2"/>
@@ -8055,5 +8042,52 @@ Don't use it if you don't know what you're doing!</summary>
     <updated>2020-11-20T16:31:05Z</updated>
     <dc:date>2020-11-20T16:31:05Z</dc:date>
   </entry>
-  <dc:date>2021-03-08T18:03:13+00:00</dc:date>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v5.6.6</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.6.6"/>
+    <summary>v5.6.6
+======
+
+* FIX: camera is not closing after QR with PSBT (UR) scanned from hw wallet
+* FIX: Input amount can now start with dot for fractional values
+* ADD: ARS fiat currency
+* FIX: locales nl_NL, sl_SI, es_ES
+* FIX: Dim nonselected wallets on additional screens
+* FIX: Use numberformatter for properly displaying the wallet balance on widget
+* REF: new wallets now generate 12 words mnemonic seed instead of 24, same security, but easier to manage
+
+
+v5.6.5
+======
+
+* ADD: Price Current/Previous Widget
+* ADD: Allow image for importing wallet
+* FIX: wallets are not refreshing when app boots
+* FIX: wallets are not refreshing when they are navigated to
+* FIX: Some colors were not using usetheme
+* FIX: Track time first seen of unconfirmed transactions
+* FIX: missing transactions after restart for single-address wallets
+* FIX: locales nl_NL, ru
+* FIX: Widget Fiat calculation
+* FIX: 'RnSksIsAppInstalled' was being read from the wrong suite
+
+v5.6.3
+======
+
+* ADD: Market Widget for iOS 14
+* ADD: Large iOS widget
+* ADD: Turkish Lira
+* FIX: Refill not working on Lightning
+* FIX: iOS - lightning:lnurl... links
+* FIX: hodlhodl - my contracts - sorted by creation time
+* FIX: scanQR now has progress bar when scanning animated QRs
+* FIX: Backup screen visibility
+* REF: brush up locales sl_SI, cs_CZ
+* REF: Wallet types style
+</summary>
+    <title>BlueWallet/BlueWallet: v5.6.6</title>
+    <updated>2020-11-20T16:15:52Z</updated>
+    <dc:date>2020-11-20T16:15:52Z</dc:date>
+  </entry>
+  <dc:date>2021-03-08T19:00:39+00:00</dc:date>
 </feed>
