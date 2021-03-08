@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-08T03:04:13+00:00</updated>
+  <updated>2021-03-08T04:03:38+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.0-rc.2</id>
     <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.0-rc.2"/>
@@ -8089,5 +8089,5 @@ v5.6.3
     <updated>2020-11-20T16:15:52Z</updated>
     <dc:date>2020-11-20T16:15:52Z</dc:date>
   </entry>
-  <dc:date>2021-03-08T03:04:13+00:00</dc:date>
+  <dc:date>2021-03-08T04:03:38+00:00</dc:date>
 </feed>
