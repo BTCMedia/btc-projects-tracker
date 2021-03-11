@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-11T15:01:38+00:00</updated>
+  <updated>2021-03-11T16:01:11+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.0</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.0"/>
@@ -31,17 +31,17 @@
 
 ### Bug fixes:
 
-* Hovering the mouse pointer on invoice logs row would make them unreadable @ubolator
+* Hovering the mouse pointer on invoice logs row would make them unreadable @bolatovumar
 * Remove exchange rates that lost support in Coingecko @NicolasDorier
 * Get invoice in greenfield was crashing if invoiceId did not exist @NicolasDorier
 * Getting a file from the storage service which did not exist would return http 500 instead of 404 @NicolasDorier
-* Fix direct URL for local storage with custom root path #2318 @ubolator
-* The pay button would not show up properly on some websites @ubolator
+* Fix direct URL for local storage with custom root path #2318 @bolatovumar
+* The pay button would not show up properly on some websites @bolatovumar
 * Profile email change should check email's availability @NicolasDorier
 * Fixed mysql/sqlite support @ketominer
 * Checkout: Fix scan/copy tab sizes with varying content (see #2264) @dennisreimann
 * Greenfield: Lightning API would return HTTP 500 if store owner did not set the connection string @dennisreimann
-* Point of Sale: The custom price was not properly working (see #2248) @ubolator</summary>
+* Point of Sale: The custom price was not properly working (see #2248) @bolatovumar</summary>
     <title>btcpayserver/btcpayserver: v1.0.7.0</title>
     <updated>2021-03-11T14:50:16Z</updated>
     <dc:date>2021-03-11T14:50:16Z</dc:date>
@@ -8081,5 +8081,5 @@ Don't use it if you don't know what you're doing!</summary>
     <updated>2020-11-20T16:31:05Z</updated>
     <dc:date>2020-11-20T16:31:05Z</dc:date>
   </entry>
-  <dc:date>2021-03-11T15:01:38+00:00</dc:date>
+  <dc:date>2021-03-11T16:01:11+00:00</dc:date>
 </feed>
