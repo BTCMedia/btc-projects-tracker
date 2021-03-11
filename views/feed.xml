@@ -6,7 +6,46 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-11T14:00:27+00:00</updated>
+  <updated>2021-03-11T15:01:38+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.0</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.0"/>
+    <summary>### Features:
+
+* New Wallet Setup UI (see #2164, #2296) @dennisreimann @dstrukt
+* Greenfield: New on-chain wallet API @Kukks
+* Greenfield: Ability to configure store's lightning payment methods @Kukks
+* Allow an invoice to be marked invalid/complete even from the `new` state @Kukks
+* Point of Sale and Crowdfund: Allow custom buy button text (see #2299) @dennisreimann
+* Specter wallet file import (see #2252) @dennisreimann
+
+### Improvements:
+
+* Reenabling uppercase BECH32 in QR codes (see #2110) @rockstardev
+* If a store is set to internal node, use &quot;Internal Node&quot; as connection string rather than the actual connection string. @NicolasDorier
+* Improve Policies options UX in server settings (see #2307) @dstrukt @dennisreimann
+* Fix view payment request loading spinner alignment @bumbummen99 
+* Fix cart pay button loading spinner vertical alignment @bumbummen99
+* Invoices list: Remove icon indicator for onchain (see #2240) @dennisreimann
+* Login: Improve tab navigation for input fields (see #2258) @dennisreimann
+
+### Bug fixes:
+
+* Hovering the mouse pointer on invoice logs row would make them unreadable @ubolator
+* Remove exchange rates that lost support in Coingecko @NicolasDorier
+* Get invoice in greenfield was crashing if invoiceId did not exist @NicolasDorier
+* Getting a file from the storage service which did not exist would return http 500 instead of 404 @NicolasDorier
+* Fix direct URL for local storage with custom root path #2318 @ubolator
+* The pay button would not show up properly on some websites @ubolator
+* Profile email change should check email's availability @NicolasDorier
+* Fixed mysql/sqlite support @ketominer
+* Checkout: Fix scan/copy tab sizes with varying content (see #2264) @dennisreimann
+* Greenfield: Lightning API would return HTTP 500 if store owner did not set the connection string @dennisreimann
+* Point of Sale: The custom price was not properly working (see #2248) @ubolator</summary>
+    <title>btcpayserver/btcpayserver: v1.0.7.0</title>
+    <updated>2021-03-11T14:50:16Z</updated>
+    <dc:date>2021-03-11T14:50:16Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.0-rc.2</id>
     <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.0-rc.2"/>
@@ -8042,52 +8081,5 @@ Don't use it if you don't know what you're doing!</summary>
     <updated>2020-11-20T16:31:05Z</updated>
     <dc:date>2020-11-20T16:31:05Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v5.6.6</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.6.6"/>
-    <summary>v5.6.6
-======
-
-* FIX: camera is not closing after QR with PSBT (UR) scanned from hw wallet
-* FIX: Input amount can now start with dot for fractional values
-* ADD: ARS fiat currency
-* FIX: locales nl_NL, sl_SI, es_ES
-* FIX: Dim nonselected wallets on additional screens
-* FIX: Use numberformatter for properly displaying the wallet balance on widget
-* REF: new wallets now generate 12 words mnemonic seed instead of 24, same security, but easier to manage
-
-
-v5.6.5
-======
-
-* ADD: Price Current/Previous Widget
-* ADD: Allow image for importing wallet
-* FIX: wallets are not refreshing when app boots
-* FIX: wallets are not refreshing when they are navigated to
-* FIX: Some colors were not using usetheme
-* FIX: Track time first seen of unconfirmed transactions
-* FIX: missing transactions after restart for single-address wallets
-* FIX: locales nl_NL, ru
-* FIX: Widget Fiat calculation
-* FIX: 'RnSksIsAppInstalled' was being read from the wrong suite
-
-v5.6.3
-======
-
-* ADD: Market Widget for iOS 14
-* ADD: Large iOS widget
-* ADD: Turkish Lira
-* FIX: Refill not working on Lightning
-* FIX: iOS - lightning:lnurl... links
-* FIX: hodlhodl - my contracts - sorted by creation time
-* FIX: scanQR now has progress bar when scanning animated QRs
-* FIX: Backup screen visibility
-* REF: brush up locales sl_SI, cs_CZ
-* REF: Wallet types style
-</summary>
-    <title>BlueWallet/BlueWallet: v5.6.6</title>
-    <updated>2020-11-20T16:15:52Z</updated>
-    <dc:date>2020-11-20T16:15:52Z</dc:date>
-  </entry>
-  <dc:date>2021-03-11T14:00:27+00:00</dc:date>
+  <dc:date>2021-03-11T15:01:38+00:00</dc:date>
 </feed>
