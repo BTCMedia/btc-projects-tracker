@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-11T21:01:55+00:00</updated>
+  <updated>2021-03-11T22:04:06+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.0</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.0"/>
@@ -8081,5 +8081,5 @@ Don't use it if you don't know what you're doing!</summary>
     <updated>2020-11-20T16:31:05Z</updated>
     <dc:date>2020-11-20T16:31:05Z</dc:date>
   </entry>
-  <dc:date>2021-03-11T21:01:55+00:00</dc:date>
+  <dc:date>2021-03-11T22:04:06+00:00</dc:date>
 </feed>
