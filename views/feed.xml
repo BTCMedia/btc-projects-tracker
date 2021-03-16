@@ -6,7 +6,46 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-16T17:01:18+00:00</updated>
+  <updated>2021-03-16T18:03:27+00:00</updated>
+  <entry>
+    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.5</id>
+    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.5"/>
+    <summary># Summary
+
+The recent macOS update broke the initialization of the build-in Tor client in Wasabi. As a result, the client was not able to start Tor client, thus it was not able to connect to our Backend. 
+
+- **Tor fix on the newest macOS.** 
+- **Update HWI to 2.0.0**
+- **Add Ledger Nano X support**
+
+# Newbie Guide
+
+While setting up Wasabi is straightforward, even a Linux wizard with the longest beard can get stuck on the most basic tasks. Consider taking a look at the [Installation Instructions](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html) guide.
+
+# Advanced Guide
+
+If you want to build Wasabi from source code or update the source code check out [these instructions.](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html)
+
+From version 1.1.3 Wasabi also introduces [reproducible builds](https://reproducible-builds.org/): [Deterministic Build Guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md)
+
+Build with .NET Core 3.1.407-win-x64.
+
+## FAQ
+
+- **Frequently asked questions [here](https://docs.wasabiwallet.io/FAQ/).**
+- **Requirements?** x64, Linux, &gt;Win10, &gt;macOS 10.13.
+
+# Release Notes
+
+- **Tor update** https://github.com/zkSNACKs/WalletWasabi/pull/5295
+- **New support link** https://github.com/zkSNACKs/WalletWasabi/pull/5184
+- **HWI update** https://github.com/zkSNACKs/WalletWasabi/pull/5331
+- **Ledger Nano X support** https://github.com/zkSNACKs/WalletWasabi/pull/5270
+</summary>
+    <title>zkSNACKs/WalletWasabi: v1.1.12.5</title>
+    <updated>2021-03-16T17:43:47Z</updated>
+    <dc:date>2021-03-16T17:43:47Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.0</id>
     <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.0"/>
@@ -8101,15 +8140,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2020-11-21T12:21:35Z</updated>
     <dc:date>2020-11-21T12:21:35Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.0-pre5</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.0-pre5"/>
-    <summary>THIS IS A PRERELEASE
-
-Don't use it if you don't know what you're doing!</summary>
-    <title>cryptoadvance/specter-desktop: v0.10.0-pre5</title>
-    <updated>2020-11-21T10:00:19Z</updated>
-    <dc:date>2020-11-21T10:00:19Z</dc:date>
-  </entry>
-  <dc:date>2021-03-16T17:01:18+00:00</dc:date>
+  <dc:date>2021-03-16T18:03:27+00:00</dc:date>
 </feed>
