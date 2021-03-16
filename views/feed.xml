@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-16T20:02:53+00:00</updated>
+  <updated>2021-03-16T21:02:30+00:00</updated>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.5</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.5"/>
@@ -8140,5 +8140,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2020-11-21T12:21:35Z</updated>
     <dc:date>2020-11-21T12:21:35Z</dc:date>
   </entry>
-  <dc:date>2021-03-16T20:02:53+00:00</dc:date>
+  <dc:date>2021-03-16T21:02:30+00:00</dc:date>
 </feed>
