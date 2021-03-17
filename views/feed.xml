@@ -6,7 +6,81 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-17T03:01:32+00:00</updated>
+  <updated>2021-03-17T04:02:52+00:00</updated>
+  <entry>
+    <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.3</id>
+    <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.3"/>
+    <summary>### Changelog
+
+- New `--prune-until &lt;target&gt;` option to automatically prune the chain up to the given target (height, unix timestamp or YYYY-MM-DD formatted date)
+
+  Require configuring bitcoind with `prune=1` to allow manual pruning via the RPC.
+
+- New `--no-wait-sync` option to allow importing addresses without waiting for bitcoind to finish syncing first
+
+  Useful for tracking wallets during the IBD of a pruned node, so transactions could be indexed before the blocks get pruned.
+
+- Fix compatibility with the upcoming v0.22 Bitcoin Core release (https://github.com/sparrowwallet/sparrow/issues/67#issuecomment-791522237)
+
+- HTTP: Set the `WWW-Authenticate` header to make logging-in possible via web browsers
+
+- Implement an [fd-based daemon readiness notification mechanism](https://skarnet.org/software/s6/notifywhenup.html), enabled with `FD_NOTIFY=&lt;fd&gt;`
+
+- Fix whitepaper extractor
+
+- UX touchups for progress indicator, welcome banner and logs
+
+- Allow setting `UNIX_LISTENER_MODE` to control permissions for the unix socket notification listener
+
+- Allow setting `NO_REQUIRE_ADDRESSES` as an env variable
+
+Breaking CLI changes:
+
+- The Electrum SOCKS5-based authentication needs to be explicitly enabled with `--electrum-socks-auth`,
+  in addition to enabling the `--auth-*` options. By default, authentication will only be enabled for
+  the HTTP API server.
+
+
+------------
+
+Also see the v0.2.3 releases for [bwt-electrum-plugin](https://github.com/bwt-dev/bwt-electrum-plugin/releases/tag/v0.2.3), [libbwt](https://github.com/bwt-dev/libbwt/releases/tag/v0.2.3), [libbwt-nodejs](https://github.com/bwt-dev/libbwt-nodejs/releases/tag/v0.2.3) and [libbwt-jni](https://github.com/bwt-dev/libbwt-jni/releases/tag/v0.2.3).
+
+### Installation
+
+Installation instructions are [available on the README](https://github.com/bwt-dev/bwt#installation).
+
+### Verifying signatures
+
+The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on the [PGP WoT](http://keys.gnupg.net/pks/lookup?op=vindex&amp;fingerprint=on&amp;search=0x81F6104CD0F150FC), [github](https://api.github.com/users/shesek/gpg_keys), [twitter](https://twitter.com/shesek), [keybase](https://keybase.io/nadav), [hacker news](https://news.ycombinator.com/user?id=nadaviv) and [this video presentation](https://youtu.be/SXJaN2T3M10?t=4).
+
+```bash
+# Download (change x86_64-linux to your platform)
+$ wget https://github.com/bwt-dev/bwt/releases/download/v0.2.3/bwt-0.2.3-x86_64-linux.tar.gz
+
+# Fetch public key
+$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC
+
+# Verify signature
+$ wget -qO - https://github.com/bwt-dev/bwt/releases/download/v0.2.3/SHA256SUMS.asc \
+  | gpg --decrypt - | grep ' bwt-0.2.3-x86_64-linux.tar.gz$' | sha256sum -c -
+
+$ tar zxvf bwt-0.2.3-x86_64-linux.tar.gz
+$ ./bwt-0.1.5-x86_64-linux/bwt --xpub &lt;xpub&gt; ...
+```
+
+The signature verification should show `Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...` and `bwt-0.2.3-x86_64-linux.tar.gz: OK`.
+
+### Reproducible builds
+
+The builds are fully reproducible.
+
+You can verify the checksums against the v0.2.3 builds on Travis CI: https://travis-ci.org/github/bwt-dev/bwt/builds/763199070
+
+See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</summary>
+    <title>bwt-dev/bwt: v0.2.3</title>
+    <updated>2021-03-17T04:02:43Z</updated>
+    <dc:date>2021-03-17T04:02:43Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.5</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.5"/>
@@ -8078,67 +8152,5 @@ Don't use it if you don't know what you're doing.
     <updated>2020-11-21T14:51:18Z</updated>
     <dc:date>2020-11-21T14:51:18Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.0</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.0"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.0/Specter-Setup-v0.10.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.0/SpecterDesktop-v0.10.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.0/specter_desktop-v0.10.0-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.0/specterd-v0.10.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.0/specterd-v0.10.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.0/specterd-v0.10.0-x86_64-linux-gnu.zip)
-
-# Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.0/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @stepansnigirev's GPG key.
-You can get public key from here: [https://stepansnigirev.com/ss-specter-release.asc](https://stepansnigirev.com/ss-specter-release.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x36ED357AB24B915F) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F).
-Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, short id: `36ed357ab24b915f`
-
-# Release notes
-- HWI: Fix integration with Ledger running the latest Bitcoin app (1.5.1) (#650) (@ben-kaufman)
-- HWI: Fix BitBox02 integration (#652) (@ben-kaufman)
-- Bugfix: Fix spelling mistake (#589) (@danielnordh)
-- Bugfix: Fix infinite pacman on backup (#576) (@stepansnigirev)
-- Bugfix: Specifying python version better (#574) (@k9ert)
-- Bugfix: Fix issue with error popup on Electron app (#609) (@ben-kaufman)
-- Bugfix: Fix failing to write backup causing wallet to disappear (#612) (@ben-kaufman)
-- Bugfix: Fix isascii for Python3.6 (#623) (@stepansnigirev)
-- Bugfix: Fix raw transaction processing (#626) (@stepansnigirev)
-- Bugfix: Add context menu to Electron app (#637) (@ben-kaufman)
-- Bugfix: Remove &quot;ban&quot; over BIP44 xpubs and set default network to mainnet if Bitcoin Core not detected (#643) (@stepansnigirev)
-- Bugfix: Fix paste psbt/ xpub prompts for desktop app + fix typo causing adding multisig issue (#649) (@ben-kaufman)
-- Bugfix: Fix signing issue with coldcard and cobo when cosigners' derivation path is not specified properly (#653) (@stepansnigirev)
-- Feature: Support Specter file format in import wallet screen (#580) (@ben-kaufman)
-- Feature: Use sat/vbytes as fee unit everywhere (#582) (@ben-kaufman)
-- Feature: Bundle Tor with macOS and Windows desktop apps (#610) (@ben-kaufman)
-- Feature: Add connect to node with QR code option (#611) (@ben-kaufman)
-- Feature: Wallet PDF backup (#614, #644) (@ben-kaufman)
-- Feature: Show Bitcoin price with amounts (#622) (@ben-kaufman)
-- Feature: Support using Specter as an offline signing device and coordinator (#625) (@ben-kaufman)
-- Feature: Transactions and addresses caching in CSV file (#625, #639) (@ben-kaufman)
-- UI: Add icons for all devices types (#592) (@stepansnigirev)
-- UI: New device wizard and various UI improvements (#598, #636, #641) (@ben-kaufman)
-- UI: Export wallet from new wallet wizard (#624) (@ben-kaufman)
-- UI: Addresses history list pagination and indicate for each address if it is already used or not (#635) (@ben-kaufman)
-- UI: Reorganize wallet settings page into tabs (#638) (@ben-kaufman)
-- Feature: RBF support (#587) (@ben-kaufman)
-- Refactoring: Swap to embit for xpub and address derivation (#588) (@stepansnigirev)
-- Refactoring: Improve logs, refactoring and improve checker tests (#595) (@k9ert)
-- Devops: Add release script (#594) (@k9ert)
-- Devops: Add pre-commit configuration (#596) (@k9ert)
-- Docs: Update Tor documentation (#613, #633) (@stepansnigirev)
-- Docs: Add daemon documentation (#621) (@stepansnigirev)
-- Test: Fix checker test (#616) (@stepansnigirev)</summary>
-    <title>cryptoadvance/specter-desktop: v0.10.0</title>
-    <updated>2020-11-21T12:21:35Z</updated>
-    <dc:date>2020-11-21T12:21:35Z</dc:date>
-  </entry>
-  <dc:date>2021-03-17T03:01:32+00:00</dc:date>
+  <dc:date>2021-03-17T04:02:52+00:00</dc:date>
 </feed>
