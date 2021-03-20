@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-20T14:03:17+00:00</updated>
+  <updated>2021-03-20T14:13:59+00:00</updated>
   <entry>
     <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.3</id>
     <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.3"/>
@@ -8152,5 +8152,5 @@ Don't use it if you don't know what you're doing.
     <updated>2020-11-21T14:51:18Z</updated>
     <dc:date>2020-11-21T14:51:18Z</dc:date>
   </entry>
-  <dc:date>2021-03-20T14:03:17+00:00</dc:date>
+  <dc:date>2021-03-20T14:13:59+00:00</dc:date>
 </feed>
