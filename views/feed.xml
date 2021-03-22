@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-22T18:53:14+00:00</updated>
+  <updated>2021-03-22T19:10:45+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre1</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre1"/>
+    <summary>This is a pre-release. Use this with caution!</summary>
+    <title>cryptoadvance/specter-desktop: v1.3.0-pre1</title>
+    <updated>2021-03-22T19:05:18Z</updated>
+    <dc:date>2021-03-22T19:05:18Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.13</id>
     <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.13"/>
@@ -8144,36 +8152,5 @@ Lisa, Christian, Rusty, ZmnSCPxj
     <updated>2020-11-23T17:46:44Z</updated>
     <dc:date>2020-11-23T17:46:44Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.1"/>
-    <summary>#  v0.10.1 (Hotfix to support Ledger's new firmware)
-
-# Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.1/Specter-Setup-v0.10.1.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.1/SpecterDesktop-v0.10.1.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.1/specter_desktop-v0.10.1-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.1/specterd-v0.10.1-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.1/specterd-v0.10.1-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.1/specterd-v0.10.1-x86_64-linux-gnu.zip)
-
-# Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.1/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @stepansnigirev's GPG key.
-You can get public key from here: [https://stepansnigirev.com/ss-specter-release.asc](https://stepansnigirev.com/ss-specter-release.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x36ED357AB24B915F) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F).
-Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, short id: `36ed357ab24b915f`
-
-# Release notes
-- Bugfix: Fix integration with Ledger running the latest Bitcoin app (1.5.1) (#682) (@ben-kaufman)</summary>
-    <title>cryptoadvance/specter-desktop: v0.10.1</title>
-    <updated>2020-11-23T07:31:15Z</updated>
-    <dc:date>2020-11-23T07:31:15Z</dc:date>
-  </entry>
-  <dc:date>2021-03-22T18:53:14+00:00</dc:date>
+  <dc:date>2021-03-22T19:10:45+00:00</dc:date>
 </feed>
