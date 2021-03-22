@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-22T16:41:14+00:00</updated>
+  <updated>2021-03-22T16:52:00+00:00</updated>
+  <entry>
+    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.13</id>
+    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.13"/>
+    <summary></summary>
+    <title>rust-bitcoin/rust-lightning: v0.0.13</title>
+    <updated>2021-03-22T16:49:11Z</updated>
+    <dc:date>2021-03-22T16:49:11Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.6</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.6"/>
@@ -8167,16 +8175,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2020-11-23T07:31:15Z</updated>
     <dc:date>2020-11-23T07:31:15Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.1-pre1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.1-pre1"/>
-    <summary>THIS IS A PRERELEASE
-
-Don't use it if you don't know what you're doing.
-</summary>
-    <title>cryptoadvance/specter-desktop: v0.10.1-pre1</title>
-    <updated>2020-11-22T13:59:09Z</updated>
-    <dc:date>2020-11-22T13:59:09Z</dc:date>
-  </entry>
-  <dc:date>2021-03-22T16:41:14+00:00</dc:date>
+  <dc:date>2021-03-22T16:52:00+00:00</dc:date>
 </feed>
