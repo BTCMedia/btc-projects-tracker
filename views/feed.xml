@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-22T13:51:52+00:00</updated>
+  <updated>2021-03-22T14:10:22+00:00</updated>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.6</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.6"/>
@@ -8178,5 +8178,5 @@ Don't use it if you don't know what you're doing.
     <updated>2020-11-22T13:59:09Z</updated>
     <dc:date>2020-11-22T13:59:09Z</dc:date>
   </entry>
-  <dc:date>2021-03-22T13:51:52+00:00</dc:date>
+  <dc:date>2021-03-22T14:10:22+00:00</dc:date>
 </feed>
