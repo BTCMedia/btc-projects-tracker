@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-22T08:41:12+00:00</updated>
+  <updated>2021-03-22T08:53:21+00:00</updated>
   <entry>
     <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.3</id>
     <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.3"/>
@@ -1201,7 +1201,7 @@ Wilmer Paulino</summary>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.2</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.2"/>
-    <summary># v1.2.2 (Hotfix release for Send trransaction error)
+    <summary># v1.2.2 (Hotfix release for Send transaction error)
 # Binaries
 
 There are two types of binaries:
@@ -8152,5 +8152,5 @@ Don't use it if you don't know what you're doing.
     <updated>2020-11-21T14:51:18Z</updated>
     <dc:date>2020-11-21T14:51:18Z</dc:date>
   </entry>
-  <dc:date>2021-03-22T08:41:12+00:00</dc:date>
+  <dc:date>2021-03-22T08:53:21+00:00</dc:date>
 </feed>
