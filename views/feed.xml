@@ -6,11 +6,19 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-22T19:51:05+00:00</updated>
+  <updated>2021-03-22T20:07:35+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre1"/>
-    <summary>This is a pre-release. Use this with caution!</summary>
+    <summary># v1.3.0-pre1 - This is a pre-release (i.e. beta software).
+# Use this with caution!!!
+
+
+# Signatures and hashes
+[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0-pre1/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
+You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
+It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
+Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`</summary>
     <title>cryptoadvance/specter-desktop: v1.3.0-pre1</title>
     <updated>2021-03-22T19:05:18Z</updated>
     <dc:date>2021-03-22T19:05:18Z</dc:date>
@@ -8152,5 +8160,5 @@ Lisa, Christian, Rusty, ZmnSCPxj
     <updated>2020-11-23T17:46:44Z</updated>
     <dc:date>2020-11-23T17:46:44Z</dc:date>
   </entry>
-  <dc:date>2021-03-22T19:51:05+00:00</dc:date>
+  <dc:date>2021-03-22T20:07:35+00:00</dc:date>
 </feed>
