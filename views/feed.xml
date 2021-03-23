@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-23T09:32:08+00:00</updated>
+  <updated>2021-03-23T09:42:26+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre2</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre2"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.3.0-pre2</title>
+    <updated>2021-03-23T09:37:56Z</updated>
+    <dc:date>2021-03-23T09:37:56Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre1"/>
@@ -8102,63 +8110,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-11-24T13:55:09Z</updated>
     <dc:date>2020-11-24T13:55:09Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.9.2</id>
-    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.2"/>
-    <summary>We're pleased to announce the 0.9.2 release of c-lightning, named by Sergi Delgado.
-
-This is a significant release with new CLI-level notifications, better channel state reporting, and stable plugin-hook call ordering.
-
-Note that as of this release c-lightning-generated **PSBTs** are only considered valid by bitcoind **v0.20.1** and above.
-
-**Did you know**: c-lightning deprecates features with 6 months warning, and you can set `allow-deprecated-apis=false` to test?
-
-## Highlights for Users
-
- * We now keep track of channel closure rationales. Wonder &quot;why did my channel close&quot; no more. All channel state changes are now listed in `listpeers`'s `state_changes`.
- * *NEW* CLI/RPC notifications! Tired of waiting for `close` to finish without getting any updates? With notifications, the `close` command will publish notifications (think CLI status updates) for slow closes. Must have `allow-deprecated-apis` set to false for these to work.
- * New optional argument `commitment_feerate` on the `multifundchannel` command. This is useful for setting one feerate for the funding transaction and another for the channel commitment transactions.
- * Two new commands added to `hsmtool`!
-    * `generatehsm` allows you to create an HSM `hsm_secret` from a BIP39 pass phrase. (Note that due to c-lightning's current seed derivation process, wallet addresses aren't standard 'BIP39 to BIP32' compliant. Which is a fancy way of saying your pass phrase isn't portable to other, non-clightning wallets.)
-    * `dumponchaindescriptors` will output the xpub for the HD wallet master key. This will let you track _swept_ c-lightning wallet funds -- anchor outputs and unswept channel outputs won't be visible until swept.
- * The starting feerate for mutual closes has been reduced to 'slow', to avoid overpayment.
- * In-memory log buffer now is 10MB, down from 100MB.
-
-
-## Highlights for the Network
-
- * We no longer support receiving full gossip from ancient LND nodes
- * Fixed re-transmission order of multiple new HTLCS. This was causing channel closures with LND.
-
-
-## Highlights for Developers
-
- * Plugin hook call ordering. Hooks can now specify that they must be called 'before' or 'after' other plugins.
- * pyln-client will handle and send RPC command notifications.
- * pyln-proto now includes a pure python implementation of the sphinx onion creation and processing.
- * PostgresSQL key-value DSNs now supported.
- * Plugin hook `htlc_accepted` can now return a custom `failure_onion`.
-
-
-More details can be found at https://github.com/ElementsProject/lightning/blob/v0.9.2/CHANGELOG.md
-
-Thanks to everyone for their contributions and bug reports; please keep them coming.
-
-Since 0.9.1, we've had 321 commits from 15 different authors over ~58 days, an average commit rate of 5.5344 commits per day.
-
-A special thanks goes to the 4 first time contributors:
-
- * YOSHIDA Masanori @siburu
- * @grubles
- * Jordi Montes @positiveblue
- * @lakshit24
-
-Cheers,
-Lisa, Christian, Rusty, ZmnSCPxj
-</summary>
-    <title>ElementsProject/lightning: v0.9.2</title>
-    <updated>2020-11-23T17:46:44Z</updated>
-    <dc:date>2020-11-23T17:46:44Z</dc:date>
-  </entry>
-  <dc:date>2021-03-23T09:32:08+00:00</dc:date>
+  <dc:date>2021-03-23T09:42:26+00:00</dc:date>
 </feed>
