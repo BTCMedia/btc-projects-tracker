@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-23T13:53:31+00:00</updated>
+  <updated>2021-03-23T14:10:26+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre2</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre2"/>
@@ -59,7 +59,13 @@
 - Feature: Move to HWI v2 #1001 (benk10)
 - Feature: Specter-DIY: add sd card support #1047 (Stepan Snigirev)
 - UIUX: changing the background color of that input/output (using colors based on the send/receive svg icons) #989 (djpnewton)
-- UIUX: HWI Bridge design improvement #1015 (benk10)</summary>
+- UIUX: HWI Bridge design improvement #1015 (benk10)
+
+## Signatures and hashes
+[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0-pre1/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
+You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
+It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
+Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`</summary>
     <title>cryptoadvance/specter-desktop: v1.3.0-pre2</title>
     <updated>2021-03-23T09:37:56Z</updated>
     <dc:date>2021-03-23T09:37:56Z</dc:date>
@@ -8159,5 +8165,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-11-24T13:55:09Z</updated>
     <dc:date>2020-11-24T13:55:09Z</dc:date>
   </entry>
-  <dc:date>2021-03-23T13:53:31+00:00</dc:date>
+  <dc:date>2021-03-23T14:10:26+00:00</dc:date>
 </feed>
