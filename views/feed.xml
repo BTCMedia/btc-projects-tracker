@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-23T16:53:33+00:00</updated>
+  <updated>2021-03-23T17:03:47+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre3</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre3"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.3.0-pre3</title>
+    <updated>2021-03-23T16:58:56Z</updated>
+    <dc:date>2021-03-23T16:58:56Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre2</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre2"/>
@@ -8009,161 +8017,5 @@ See [more details here](https://github.com/shesek/bwt#reproducible-builds).</sum
     <updated>2020-11-24T16:21:58Z</updated>
     <dc:date>2020-11-24T16:21:58Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.0</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.0"/>
-    <summary>**A newer version is already available! Please don’t use this version anymore.**
-
-## Release notes
-
-This release finally brings SegWit to Bisq's trade protocol. It also implements fee optimizations enabled by SegWit, so mining fees for all BTC transactions are lower.
-
-There are also some notable trading-related updates: you can now edit pricing and payment methods of your live offers; account limits have been simplified (and removed where unneeded); and 3 new payment methods were added (Australian PayID, TransferWise and Amazon gift cards).
-
-The SegWit integration wouldn't have been possible without the anonymous sponsor who pre-funded the project, so big thanks to them! If you might be interested in pre-funding a specific feature, please contact us on Keybase in the #projects channel. Bisq is a critical element of the Bitcoin ecosystem and could really use your help.
-
-### DAO
-- [Use LegacyAddress instead of Address for BSQ](https://github.com/bisq-network/bisq/pull/4681)
-- [Remove outliers when calculating BSQ rate](https://github.com/bisq-network/bisq/pull/4706)
-- [Hide proposal delete button](https://github.com/bisq-network/bisq/pull/4739)
-
-### UI
-- Improve labeling of charts: [1](https://github.com/bisq-network/bisq/pull/4740), [2](https://github.com/bisq-network/bisq/pull/4715)
-- [Cleanup user interface elements in `Send Funds` screen](https://github.com/bisq-network/bisq/pull/4718)
-- [Add export to csv hyperlink (as button takes too much vertical space)](https://github.com/bisq-network/bisq/pull/4702)
-
-### Trading
-- [Use SegWit for the trade protocol](https://github.com/bisq-network/bisq/pull/4612)
-- [Simplify limits for signed and unsigned accounts](https://github.com/bisq-network/bisq/pull/4744)
-- [Update `Edit Offer` to allow for change of market and payment method](https://github.com/bisq-network/bisq/pull/4728)
-- [Add new payment method: Australian PayID](https://github.com/bisq-network/bisq/pull/4743)
-- [Add new payment method: TransferWise](https://github.com/bisq-network/bisq/pull/4726)
-- [Add new payment method: Amazon Gift Cards](https://github.com/bisq-network/bisq/pull/4788)
-- [Fix bug with reading historical data](https://github.com/bisq-network/bisq/pull/4745)
-
-### Wallet
-- Add SegWit fee estimation: [1](https://github.com/bisq-network/bisq/pull/4710), [2](https://github.com/bisq-network/bisq/pull/4754)
-- [Speed up restore from seed](https://github.com/bisq-network/bisq/pull/4840)
-- [Allow user-defined block explorers](https://github.com/bisq-network/bisq/pull/4733)
-- [Show current tx fee rate on main screen](https://github.com/bisq-network/bisq/pull/4676)
-
-### Privacy
-- [Update netlayer references to Bisq repository](https://github.com/bisq-network/bisq/pull/4694)
-
-### Network
-- [Remove HitBTC as a pricenode data provider](https://github.com/bisq-network/bisq/pull/4756)
-- [Add new burningman address for delayed payout txs](https://github.com/bisq-network/bisq/pull/4768)
-- [Reduce seednode default max connections to 20](https://github.com/bisq-network/bisq/pull/4751)
-- [Show past deviation in monitor](https://github.com/bisq-network/bisq/pull/4734)
-- [Clean up mailbox messages for closed trades](https://github.com/bisq-network/bisq/pull/4746)
-- [Admin filter for auto-confirmation service addresses](https://github.com/bisq-network/bisq/pull/4736)
-
-### API
-- [Implement 'canceloffer' api method](https://github.com/bisq-network/bisq/pull/4714)
-- [Implement api methods 'keepfunds', 'withdrawfunds'](https://github.com/bisq-network/bisq/pull/4711)
-- [Implement 'gettrade' api method](https://github.com/bisq-network/bisq/pull/4704)
-- [Implement 'takeoffer' api method](https://github.com/bisq-network/bisq/pull/4673)
-- [Implement 'confirmpaymentsent' api method](https://github.com/bisq-network/bisq/pull/4674)
-- [Implement 'confirmpaymentreceived' api method](https://github.com/bisq-network/bisq/pull/4675)
-- [Optionally print the json contract for a given trade id](https://github.com/bisq-network/bisq/pull/4705)
-
-### Assets
-No new assets.
-
-## Verification
-
-Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
-Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
-
-Import the key:
-`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
-
-How to verify signatures?
-`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
-Replace BINARY with the file you downloaded (e.g. Bisq-1.5.0.dmg)
-
-Verify jar file inside binary:
-You can verify on OSX the jar file with:
-`shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.0.jar`
-The output need to match the value from the Bisq-1.5.0.jar.txt file.
-
-
-## Known issues with installation 
-
-### macOS Catalina:
-
-&gt; Bisq can't be opened because Apple cannot check it for malicious software
-
-This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).
-
-Workaround: Right click on the installed Bisq app &gt; Click `Open` (warning popup shown again, but with new button available) &gt; Click `Open`
-
-&gt; Bisq would like to receive keystrokes from any application.
-
-Discussed in issue https://github.com/bisq-network/bisq/issues/3373, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.
-
-### Windows:
-
-There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
-
-If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
-
-[1] Application directory (contains application installation files):
-C:\Users\&lt;username&gt;\AppData\Local\Bisq
-
-[2] Data directory (contains all Bisq data including wallet):
-C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
-
-
-### Linux:
-
-Hint for Debian users:
-If you have problems starting Bisq on Debian use: `/opt/Bisq/Bisq`
-
-If your Linux distro does not support .deb files please follow this instruction:
-```
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.5.0.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-```
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Cleanup tool for saved trades that failed market price check
-
-With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It will remove corrupt trade entries added due to bug https://github.com/bisq-network/bisq/issues/2924. Install and run once, it will shut down automatically, then install version 1.5.0 or later. You can verify the binary the same way as you do with the Bisq application.
-
-## Credits
-
-Thanks to everyone who directly contributed to this release:
-
-- Bayernatoor
-- cd2357
-- chimp1984
-- Christoph Atteneder
-- deusmax
-- Florian Reimair
-- Stan
-- James Cox
-- Luis Aranguren
-- mrosseel
-- Oscar Guindzberg
-- sqrrm
-- wiz
-
-A special thanks to our first time contributors:
-
-- Luis Aranguren
-- deusmax
-
-As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).
-</summary>
-    <title>bisq-network/bisq: v1.5.0</title>
-    <updated>2020-11-24T13:55:09Z</updated>
-    <dc:date>2020-11-24T13:55:09Z</dc:date>
-  </entry>
-  <dc:date>2021-03-23T16:53:33+00:00</dc:date>
+  <dc:date>2021-03-23T17:03:47+00:00</dc:date>
 </feed>
