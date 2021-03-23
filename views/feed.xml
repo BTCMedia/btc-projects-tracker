@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-23T13:05:18+00:00</updated>
+  <updated>2021-03-23T13:12:57+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre2</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre2"/>
@@ -8127,5 +8127,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-11-24T13:55:09Z</updated>
     <dc:date>2020-11-24T13:55:09Z</dc:date>
   </entry>
-  <dc:date>2021-03-23T13:05:18+00:00</dc:date>
+  <dc:date>2021-03-23T13:12:57+00:00</dc:date>
 </feed>
