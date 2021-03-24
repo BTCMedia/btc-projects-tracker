@@ -38,6 +38,21 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre4">v1.3.0-pre4</a>
+						    </h2>
+							<p class="card-text">Published: 2021-03-24 20:46:48 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"></p>
+					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre4" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre3">v1.3.0-pre3</a>
 						    </h2>
 							<p class="card-text">Published: 2021-03-23 16:58:56 UTC</p>
@@ -9499,139 +9514,6 @@ Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 91
 </p>
 					    <a href="https://github.com/rust-bitcoin/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.12" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bwt-dev/bwt">bwt-dev/bwt</a>: <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.0">v0.2.0</a>
-						    </h2>
-							<p class="card-text">Published: 2020-11-24 16:21:58 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>Changelog</h3>
-
-<ul>
-<li>Descriptor based tracking! ✨🎉 (#1)</li>
-</ul>
-
-<p>You can now specify output script descriptors to track via <code>--descriptor &lt;descriptor&gt;</code>. Descriptors are also used internally to represent user-provided <code>--xpub</code>s.</p>
-
-<p>The HTTP API was updated to be fully descriptor-based. Wallets and wallet origins   are now identified by the descriptor checksum, addresses have descriptors associated with them,   and a new <code>bip32_origins</code> field is available based on the descriptor origin information.</p>
-
-<ul>
-<li>Support for Electrum multi-signature wallets (#60)</li>
-</ul>
-
-<p>For a manual server setup, this requires using the <code>sortedmulti()</code> descriptor.  For example, for a 2-of-3 wallet: <code>sortedmulti(2,xpub1...,xpub2...,xpub3...)</code>.</p>
-
-<p>With the Electrum plugin, this should Just Work™.</p>
-
-<ul>
-<li><p>Alpha release of <a href="https://github.com/shesek/bwt/blob/master/doc/libbwt.md"><code>libbwt</code></a> (#64), a C FFI interface for managing the bwt servers, and of <a href="https://github.com/shesek/bwt/tree/master/contrib/nodejs-bwt-daemon"><code>nodejs-bwt-daemon</code></a> (#65), a nodejs package that wraps it.</p></li>
-<li><p>Support non-wallet transactions in <code>blockchain.transaction.get</code> / <code>GET /tx/:txid/hex</code> (requires txindex and no pruning)</p></li>
-<li><p>Emit wallet rescan and blockchain sync progress updates (via mpsc, <a href="#64">ffi</a> and the console)</p></li>
-<li><p>Support binding on ephemeral port (e.g. <code>--http-addr 127.0.0.1:0</code>) (#63)</p></li>
-<li><p>Reduce the number of dependencies (#61)</p></li>
-<li><p>Shutdown cleanly, via <code>SIGINT</code>/<code>SIGTERM</code> for CLI or a custom signal for library users (#62, #66)</p></li>
-<li><p>HTTP: Alias <code>GET /txs/since/0</code> as <code>GET /txs</code></p></li>
-<li><p>Fix <code>blockchain.scripthash.listunspent</code> / <code>Query::list_unspent</code> to return an empty set instead of erroring when there&#39;s no history.</p></li>
-<li><p>Electrum: Fix <code>mempool.get_fee_histogram</code> (5af7bfc62d7d98)</p></li>
-<li><p>Upgrade to rust-bitcoin v0.25, rust-miniscript v4.0.0 and rust-bitcoincore-rpc v0.12</p></li>
-</ul>
-
-<p>Breaking CLI changes:</p>
-
-<ul>
-<li><p>The <code>-d</code> CLI option was changed to mean <code>--descriptor</code> instead of <code>--bitcoind-dir</code> (which is now available as <code>-r</code>).</p></li>
-<li><p>Renamed <code>--http-server-addr</code> to <code>--http-addr</code> and <code>--electrum-rpc-addr</code> to <code>--electrum-addr</code></p></li>
-<li><p>The CLI now accepts a single <code>--rescan-since</code> timestamp instead of a separate one for each descriptor/xpub.</p></li>
-<li><p>The separator for environment variables with multiple values is now <code>;</code> instead of <code>,</code>.
-For example: <code>DESCRIPTORS=&quot;wpkh(xpub../0/*);wpkh(xpub../1/*)&quot;</code></p></li>
-</ul>
-
-<hr>
-
-<h3>Downloads</h3>
-
-<table><thead>
-<tr>
-<th></th>
-<th>Full Server <sup>1</sup></th>
-<th>Electrum Server <sup>2</sup></th>
-<th>Electrum Plugin <sup>3</sup></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Linux</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-x86_64-linux.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-x86_64-linux.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-x86_64-linux.tar.gz">📥 Download</a></td>
-</tr>
-<tr>
-<td><strong>macOS</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-x86_64-osx.zip">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-x86_64-osx.zip">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-x86_64-osx.zip">📥 Download</a></td>
-</tr>
-<tr>
-<td><strong>Windows</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-x86_64-win.zip">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-x86_64-win.zip">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-x86_64-win.zip">📥 Download</a></td>
-</tr>
-<tr>
-<td><strong>ARMv7</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-arm32v7.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-arm32v7.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-arm32v7.tar.gz">📥 Download</a></td>
-</tr>
-<tr>
-<td><strong>ARMv8</strong></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-arm64v8.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_only-arm64v8.tar.gz">📥 Download</a></td>
-<td><a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-electrum_plugin-arm64v8.tar.gz">📥 Download</a></tr><tr><td colspan=4><sub><sup>1</sup> Includes Electrum RPC, HTTP API and WebHooks support (<a href="https://github.com/shesek/bwt#installation">learn more</a>)<br><sup>2</sup> Includes Electrum RPC support only (<a href="https://github.com/shesek/bwt#electrum-only-server">learn more</a>)<br><sup>3</sup> Plugin with an embedded RPC server - <em>hot wallets are unsupported</em> (<a href="https://github.com/shesek/bwt#electrum-plugin">learn more</a>)</sub></td></tr></table></td>
-</tr>
-</tbody></table>
-
-<h3>Installation</h3>
-
-<p>Installation instructions are <a href="https://github.com/shesek/bwt#installation">available on the README</a>.</p>
-
-<h3>Verifying signatures</h3>
-
-<p>The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on <a href="https://keybase.io/nadav">keybase</a>, <a href="https://api.github.com/users/shesek/gpg_keys">github</a>, <a href="https://twitter.com/shesek">twitter</a> and <a href="https://news.ycombinator.com/user?id=nadaviv">HN</a>. The signature can be verified as follows (replace <code>x86_64-linux</code> with your download):</p>
-
-<p>```bash</p>
-
-<h1>Download package</h1>
-
-<p>$ wget <a href="https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-x86_64-linux.tar.gz">https://github.com/shesek/bwt/releases/download/v0.2.0/bwt-0.2.0-x86_64-linux.tar.gz</a></p>
-
-<h1>Fetch signing key</h1>
-
-<p>$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC</p>
-
-<h1>Verify signature</h1>
-
-<p>$ wget -qO - <a href="https://github.com/shesek/bwt/releases/download/v0.2.0/SHA256SUMS.asc">https://github.com/shesek/bwt/releases/download/v0.2.0/SHA256SUMS.asc</a> \
-  | gpg --decrypt - | grep &#39; bwt-0.2.0-x86_64-linux.tar.gz$&#39; | sha256sum -c -
-```</p>
-
-<p>You should see <code>Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...</code> and <code>bwt-0.2.0-x86_64-linux.tar.gz: OK</code>.</p>
-
-<h3>Reproducible builds</h3>
-
-<p>The builds are fully reproducible.</p>
-
-<p>You can verify the checksums against the v0.2.0 builds on Travis CI: <a href="https://travis-ci.org/github/shesek/bwt/builds/745668826">https://travis-ci.org/github/shesek/bwt/builds/745668826</a></p>
-
-<p>See <a href="https://github.com/shesek/bwt#reproducible-builds">more details here</a>.</p>
-</p>
-					    <a href="https://github.com/bwt-dev/bwt" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
