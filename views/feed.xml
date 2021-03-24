@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-24T01:43:05+00:00</updated>
+  <updated>2021-03-24T01:52:20+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre3</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre3"/>
@@ -8072,5 +8072,5 @@ See [more details here](https://github.com/shesek/bwt#reproducible-builds).</sum
     <updated>2020-11-24T16:21:58Z</updated>
     <dc:date>2020-11-24T16:21:58Z</dc:date>
   </entry>
-  <dc:date>2021-03-24T01:43:05+00:00</dc:date>
+  <dc:date>2021-03-24T01:52:20+00:00</dc:date>
 </feed>
