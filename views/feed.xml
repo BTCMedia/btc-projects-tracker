@@ -6,7 +6,42 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-25T10:52:38+00:00</updated>
+  <updated>2021-03-25T11:04:06+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.7</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.7"/>
+    <summary>**New**
+
+- Encrypted Message sign/verify 
+- Main SCAN button can import wallets
+- Card colors 
+- Romanian language
+- TZS currency
+
+**Fixed**
+
+- Improved accessibility 
+- Show XPUB for AEZEED wallets
+- Wallet selection was not visible
+- Coin Control handle 0 conf output correctly
+- Decrease animated QR codes density
+- Send MAX can be used with regular outputs
+
+**Languages updates**
+
+French, Chinese (Simplified), Chinese (Traditional), Finnish, German, Dutch, Portuguese Brazilian and Slovenian.
+Join us here → https://www.transifex.com/bluewallet/bluewallet
+
+**Download**
+
+[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet.6.0.7.dmg)
+
+[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet-6.0.7.apk)
+</summary>
+    <title>BlueWallet/BlueWallet: v6.0.7</title>
+    <updated>2021-03-25T11:02:37Z</updated>
+    <dc:date>2021-03-25T11:02:37Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.4</id>
     <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.4"/>
@@ -8080,13 +8115,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.14...v0.2.15</summary>
     <updated>2020-11-25T15:24:27Z</updated>
     <dc:date>2020-11-25T15:24:27Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bitcoin-core/HWI/releases/tag/1.2.1-rc.1</id>
-    <link href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.1-rc.1"/>
-    <summary>Release Candidate 1 for HWI 1.2.1</summary>
-    <title>bitcoin-core/HWI: 1.2.1-rc.1</title>
-    <updated>2020-11-25T02:49:10Z</updated>
-    <dc:date>2020-11-25T02:49:10Z</dc:date>
-  </entry>
-  <dc:date>2021-03-25T10:52:38+00:00</dc:date>
+  <dc:date>2021-03-25T11:04:06+00:00</dc:date>
 </feed>
