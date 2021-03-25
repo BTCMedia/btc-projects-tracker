@@ -38,6 +38,21 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre5">v1.3.0-pre5</a>
+						    </h2>
+							<p class="card-text">Published: 2021-03-25 11:06:04 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"></p>
+					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre5" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.7">v6.0.7</a>
 						    </h2>
 							<p class="card-text">Published: 2021-03-25 11:02:37 UTC</p>
@@ -9573,85 +9588,6 @@ Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 91
 </p>
 					    <a href="https://github.com/bitcoin-core/HWI" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.0">v1.0.6.0</a>
-						    </h2>
-							<p class="card-text">Published: 2020-11-25 15:24:27 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>Important security fix</h3>
-
-<ul>
-<li>Due to a privacy leak vulnerability, users of the payment button are strongly encouraged to update as soon as possible.</li>
-</ul>
-
-<h3>New features</h3>
-
-<ul>
-<li>Add QR code scan/show for PSBT  + Import wallet via QR <a href="https://github.com/BlockchainCommons/Research/blob/master/papers/bcr-2020-005-ur.md">spec</a> (supported by Cobo vault / Blue wallet) (#1931)</li>
-<li>Checkout experience: Unified QR Code for on-chain and offchain payment (ref #2060) (@rockstardev)</li>
-<li>Greenfield: Clean webhook API github-like (ref #2058) (@NicolasDorier @Kukks)</li>
-<li>Greenfield: Can query invoice payment data (@Kukks)</li>
-<li>Allow users to select block explorers from a list or specify their own URL  (@Kukks)</li>
-<li>Allow disabling live notifications globally and disabling specific notifications per user (ref #1991) (@Kukks)</li>
-<li>Allow custom redirect_url for PoS (ref #1924) (@mariodian)</li>
-<li>A new experimental plugin system (@Kukks)</li>
-</ul>
-
-<h3>Improvements</h3>
-
-<ul>
-<li>UI: Make store setup more intuitive (ref #2011) (@dennisreimann @dstrukt)</li>
-<li>UI: Improve payment request design (ref #2011) (@dennisreimann @dstrukt) (ref #2011) (@dennisreimann @dstrukt)</li>
-<li>UI: Improve pull payments design (ref #2011) (@dennisreimann @dstrukt)</li>
-<li>UI: Improvement of the modal checkout overlay  (see <a href="https://github.com/btcpayserver/btcpayserver/pull/1930#issuecomment-701298441">this comment</a>) (@dennisreimann)</li>
-<li>BTCPay Server vault operations can now be retried without having to refresh the page (@NicolasDorier)</li>
-<li>UX: Warning and hint system for stores not completely set up (@dennisreimann @rockstardev)</li>
-<li>Greenfield (Breaking change): Invoice state renamed <code>Confirmed/Complete</code> to <code>Settled</code>. (@NicolasDorier)</li>
-<li>Greenfield (Breaking change): Invoice state renamed <code>Paid</code> to <code>Processing</code>. (@NicolasDorier)</li>
-<li>Breaking change: Remove SQLite as the default database option (@Kukks)</li>
-<li>UI: Make sure transaction labels display correctly when there are many (ref #2076) (@ubolator)</li>
-<li>UI: Properly center payment button content (@ubolator)</li>
-<li>UI: Improvement of the lightning node info view (ref #2066) (@dennisreimann)</li>
-<li>Share the link of a pay button so one can embed in a QR code (fix #635) (@Kukks)</li>
-<li>Checkout experience: Make QR codes with bech32 uppercase again (@rockstardev)</li>
-<li>Add warning if the merchant setup invoice confirmation to zero conf (@ubolator)</li>
-<li>Adds a warning to configure the e-mail server before &quot;Requires a confirmation mail for registering&quot; checkbox can be checked if e-mail server is not configured. (@ubolator)</li>
-<li>Payment requests: Partially paid invoices are reused for future payments in payment requests. (@NicolasDorier)</li>
-<li>API Keys UI: Properly align form items (@dennisreimann)</li>
-<li>Wallets: By default, created PSBT were including previous transactions. Some hardware wallets ended up returning timeouts, so we reverted this decision. (@NicolasDorier)</li>
-</ul>
-
-<h3>Bug fixes:</h3>
-
-<ul>
-<li>Fix payment button page title (ref #1952) (@sgracia13)</li>
-<li>Do not log the database connection string (@Kukks)</li>
-<li>Payjoin: Use base64 instead of hex for BIP78 (fix #1984) (@Kukks)</li>
-<li>If a password fail to be reset by mail, show proper error (fix #1986) (@NicolasDorier)</li>
-<li>Email was not included in the invoice text search (@Kukks)</li>
-<li>Greenfield: The create invoice route should not sending back generic errors if it fails (@dennisreimann)</li>
-<li>Fix-up links which were ignoring custom root path (@ubolator)</li>
-<li>Greenfield: Opening a channel with lightning was not working properly (ref #2054) (@dennisreimann)</li>
-<li>Docs: Create invoice route was referencing the wrong type in the doc (@dennisreimann)</li>
-<li>Payment Request user input rounding issue (ref #2014) (@Kukks)</li>
-<li>In store settings, the create new token button was returning an error (@NicolasDorier)</li>
-<li>Wallet: When clicking on the app&#39;s label of a transaction, an error 404 occured (@Kukks)</li>
-<li>Checkout experience: If coinswitch was activated, the altcoin tab was missing (@Kukks)</li>
-<li>If Email verification is turned off but you requested a forgot password form, it would ignore the request internally. (@Kukks)</li>
-<li>Docs: Fix swagger format for dates (@Kukks)</li>
-<li>Payjoin: Do not include maxadditionalfeecontribution if there is no change. (ref #2007) (@NicolasDorier)</li>
-<li>Checkout: If an invoice accepting lightning payments was partially paid, the payment of the new lightning invoice was buggy. (@Kukks)</li>
-</ul>
-</p>
-					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
