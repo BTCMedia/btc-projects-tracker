@@ -107,7 +107,70 @@ $ ./bwt-0.1.5-x86</em>64-linux/bwt --xpub <xpub> ...
 							<p class="card-text">Published: 2021-03-24 20:46:48 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"></p>
+					    <p class="card-text"><h1>v1.3.0-pre4 - This is a pre-release (i.e. beta software).</h1>
+
+<h1>Use this with caution!!!</h1>
+
+<h2>Main changes to test:</h2>
+
+<ul>
+<li><strong>Bitcoin Core and Tor setup</strong>: Specter now has a new setup wizard, accessible from the main screen, which allows setting up Bitcoin Core and Tor directly from Specter. You can also setup Tor separately from the Tor settings tab. The Tor and Bitcoin Core will automatically start and stop with Specter launch/ close. (Warning: If you&#39;re already using Bitcoin Core on the machine you&#39;re testing the setup on, Specter by default will use and override existing files in the default location of Bitcoin Core - since we assume users who need Bitcoin Core installation from Specter don&#39;t have a node there already. If that is a concern for you, make sure to specify a custom path to Bitcoin Core data folder so Specter will use that instead, this can be done from the advanced section of the wizard).</li>
+<li><strong>Full RBF editing option</strong>: You can now fully edit an RBF transaction - i.e. change recipient address, add inputs, edit amounts etc.</li>
+<li><strong>HWI v2.0.0</strong>: New version of HWI with major changes, meaning all USB-connected hardware wallets should be tested to ensure the new version did not break any integration.</li>
+<li><strong>BitBox02 Multisig support</strong>: With HWI v2.0.0, Specter now supports using BitBox02 in multisig setups.</li>
+<li><strong>Async wallets loading</strong>: The process of loading existing wallets into Specter on startup has been moved to the background. Specter should now start up much faster, and you may see loading indication at first for the wallets.</li>
+<li><strong>Abandon transaction</strong>: If you sent a transaction that has been purged from the mempool, it is now possible to make your wallet forget it so that the funds are spendable again. </li>
+<li><strong>Mempool.space fee estimation</strong>: The default fee estimation source is now mempool.space. It&#39;s also possible to configure in the general settings to use either Bitcoin Core, or a self-hosted instance of mempool.space.</li>
+<li><strong>Block explorer default options</strong>: We now have default options for block explorers instead of only free text. It&#39;s still possible to use as free text by choosing <code>custom</code>.</li>
+<li><strong>HWI Bridge Redesign</strong>: The process and design of configuring Specter used on a remote machine to allow USB connections has been simplified and redesigned.</li>
+<li><strong>More currencies and precious metals in price bar</strong>: More currencies are now available for automated price pulling, also precious metals, with multiple weight unit options, are now available too.</li>
+<li><strong>Fix escaping of JSON wallet backup</strong>: Avoid escaping the JSON file downloaded on wallet backup.</li>
+<li><strong>Fix Bitcoin Core v0.21 UTXO consolidation issue</strong>: Previous version had a bug where UTXO consolidation transactions were would always show up as unconfirmed if Bitcoin Core v0.21 is used.</li>
+<li><strong>Fix Signet Nested SegWit</strong>: Nested SegWit addresses on Signet were previously generated incorrectly.</li>
+</ul>
+
+<h2>Planned release-notes:</h2>
+
+<ul>
+<li>Bugfix: bump embit version, add secp binary #1031 (Stepan Snigirev)</li>
+<li>Bugfix: consolidations issue #1034 (benk10)</li>
+<li>Bugfix: Default bitcoind timeout to 60s for all platforms #1044 (kdmukai)</li>
+<li>Bugfix: Raspberry Pi check; fixing breaking changes when not using built-in Tor #1037 (kdmukai)</li>
+<li>Bugfix: Remove potentially non-final txid #1011 (benk10)</li>
+<li>Bugfix: auto-escaping of wallet.account_map json in pdf backup #976 (djpnewton)</li>
+<li>Bugfix: typo #1008 (Jan Rothen)</li>
+<li>Bugfix: HWI2 integration issues #1045 (benk10)</li>
+<li>Chore: Bump jinja2 from 2.11.2 to 2.11.3 #1033 (dependabot[bot])</li>
+<li>Chore: Some more Cypress tests #970 (benk10)</li>
+<li>Chore: Re-applying config change to pass Black formatting #1003 (kdmukai)</li>
+<li>Chore: Cypress travis #997 (Kim Neunert)</li>
+<li>Docs: added signature-verification to FAQ #1042 (Kim Neunert)</li>
+<li>Docs: Update DEVELOPMENT.md for Raspi #1032 (kdmukai)</li>
+<li>Docs: update to specify correct docker tag #971 (kdmukai)</li>
+<li>Docs: Fixed typos in faq.md #1004 (Dimitris Tsapakidis)</li>
+<li>Docs: Add link to RaspiBlitz connection guide #1041 (d11n)</li>
+<li>Feature: Add &quot;Abandon transaction&quot; option for low fee txs that have been purged from the mempool #991 (kdmukai)</li>
+<li>Feature: Add full edit transaction for RBF #998 (benk10)</li>
+<li>Feature: Add mempool.space as an option for fee estimation and block explorer #1020 (benk10)</li>
+<li>Feature: many more currencies to the price provider #1021 (benk10)</li>
+<li>Feature: Move wallets loading process to background #1017 (benk10)</li>
+<li>Feature: Setup Bitcoin Core from Specter #1007 (benk10)</li>
+<li>Feature: Show wallets overview for / , resolves #1018 #1019 (benk10)</li>
+<li>Feature: improved the description of the CLI arguments/options #984 (8go)</li>
+<li>Feature: Logging improvements #1043 (Kim Neunert)</li>
+<li>Feature: Move to HWI v2 #1001 (benk10)</li>
+<li>Feature: Specter-DIY: add sd card support #1047 (Stepan Snigirev)</li>
+<li>UIUX: changing the background color of that input/output (using colors based on the send/receive svg icons) #989 (djpnewton)</li>
+<li>UIUX: HWI Bridge design improvement #1015 (benk10)</li>
+</ul>
+
+<h2>Signatures and hashes</h2>
+
+<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0-pre3/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @ben-kaufman&#39;s GPG key.
+You can get the public key from here: <a href="https://benkaufman.info/ben-kaufman.asc">https://benkaufman.info/ben-kaufman.asc</a>.
+It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x5D27DE564153F2BD">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD">keys.openpgp.org</a>.
+Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD</code>, short id: <code>5d27de564153f2bd</code></p>
+</p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre4" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
