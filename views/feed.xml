@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-26T17:34:55+00:00</updated>
+  <updated>2021-03-26T17:41:00+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.0</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.0"/>
@@ -8220,5 +8220,5 @@ JoinMarket with Bech32-Orderbook &amp; LNbits with Lightning Paper Vouchers.</su
     <updated>2020-12-01T09:29:20Z</updated>
     <dc:date>2020-12-01T09:29:20Z</dc:date>
   </entry>
-  <dc:date>2021-03-26T17:34:55+00:00</dc:date>
+  <dc:date>2021-03-26T17:41:00+00:00</dc:date>
 </feed>
