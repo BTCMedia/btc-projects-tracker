@@ -6,7 +6,27 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-26T12:51:41+00:00</updated>
+  <updated>2021-03-26T13:10:30+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.8</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.8"/>
+    <summary>Umbrel v0.3.8 brings the following apps up to their latest versions:
+
+- Thunderhub
+- RTL
+- BTCPay
+- Lightning Terminal
+- Specter Desktop
+- Sphinx Relay
+- Samourai Server
+ 
+If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
+
+Diff: https://github.com/getumbrel/umbrel/compare/v0.3.7...v0.3.8</summary>
+    <title>getumbrel/umbrel: v0.3.8</title>
+    <updated>2021-03-26T12:53:40Z</updated>
+    <dc:date>2021-03-26T12:53:40Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre5</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre5"/>
@@ -8046,19 +8066,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.14...v0.2.15</summary>
     <updated>2020-11-26T10:52:47Z</updated>
     <dc:date>2020-11-26T10:52:47Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bitcoin-core/HWI/releases/tag/1.2.1</id>
-    <link href="https://github.com/bitcoin-core/HWI/releases/tag/1.2.1"/>
-    <summary>Also available on [PyPi](https://pypi.org/project/hwi/) and can be installed with `pip install -U hwi`
-
-## Fixed
-
-* Compatibility with Ledger Bitcoin app 1.5.1
-* BitBox02 unlocks during `enumerate`
-</summary>
-    <title>bitcoin-core/HWI: 1.2.1</title>
-    <updated>2020-11-26T02:44:59Z</updated>
-    <dc:date>2020-11-26T02:44:59Z</dc:date>
-  </entry>
-  <dc:date>2021-03-26T12:51:41+00:00</dc:date>
+  <dc:date>2021-03-26T13:10:30+00:00</dc:date>
 </feed>
