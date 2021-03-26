@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-26T18:43:36+00:00</updated>
+  <updated>2021-03-26T18:52:18+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre6</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre6"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.3.0-pre6</title>
+    <updated>2021-03-26T18:46:17Z</updated>
+    <dc:date>2021-03-26T18:46:17Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.0</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.0"/>
@@ -8194,31 +8202,5 @@ JoinMarket with Bech32-Orderbook &amp; LNbits with Lightning Paper Vouchers.</su
     <updated>2020-12-02T01:32:47Z</updated>
     <dc:date>2020-12-02T01:32:47Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v5.6.7</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v5.6.7"/>
-    <summary>* ADD: Coin Control
-* ADD: Handle fiat rate from alternate sources
-* ADD: new languages: Bulgarian, Polish, Welsh
-* ADD: UYU currency
-* FIX: PayJoin is now BIP compliant
-* FIX: better support for BRD (aka bread) wallet with segwit
-* FIX: Disregarding current denomination on send screen, scanning address always resets it to BTC
-* FIX: import *.txn file with txhex - extra newline character prevented it from being recognized (closes #2161)
-* FIX: locale pt_BR, cs_CZ, sl_SI, es_ES, nl_NL, fi_FI, ru
-* FIX: translate message if Bitcoin address or LN invoice is in clipboard
-* FIX: Styling for large screens
-* FIX: exclude change address from recipients for Confirm screen
-* FIX: Don't show loading indicator on launch and onsnapitem
-* FIX: Show alert if storage access is denied
-* FIX: When wallet card has balance but no txs it displays 'pull to refresh'
-* FIX: broken wallet-&gt;send-&gt;longtap send btn-&gt;choose photo
-* FIX: Use system color on widgets
-* FIX: hide provide entropy button when creating Lightning or MS wallet
-* FIX: Can't paste in address block while building tx</summary>
-    <title>BlueWallet/BlueWallet: v5.6.7</title>
-    <updated>2020-12-01T09:29:20Z</updated>
-    <dc:date>2020-12-01T09:29:20Z</dc:date>
-  </entry>
-  <dc:date>2021-03-26T18:43:36+00:00</dc:date>
+  <dc:date>2021-03-26T18:52:18+00:00</dc:date>
 </feed>
