@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-26T21:43:46+00:00</updated>
+  <updated>2021-03-26T21:51:50+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre6</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre6"/>
@@ -8257,5 +8257,5 @@ JoinMarket with Bech32-Orderbook &amp; LNbits with Lightning Paper Vouchers.</su
     <updated>2020-12-02T01:32:47Z</updated>
     <dc:date>2020-12-02T01:32:47Z</dc:date>
   </entry>
-  <dc:date>2021-03-26T21:43:46+00:00</dc:date>
+  <dc:date>2021-03-26T21:51:50+00:00</dc:date>
 </feed>
