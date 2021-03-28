@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-28T19:42:45+00:00</updated>
+  <updated>2021-03-28T19:54:00+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre7</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre7"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.3.0-pre7</title>
+    <updated>2021-03-28T19:43:13Z</updated>
+    <dc:date>2021-03-28T19:43:13Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.1</id>
     <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.1"/>
@@ -8249,15 +8257,5 @@ It turns out this is not compatible with every wallets.</summary>
     <updated>2020-12-04T05:23:26Z</updated>
     <dc:date>2020-12-04T05:23:26Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.1</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.1"/>
-    <summary>### Bug fixes:
-
-* The sync popup when the nodes are synching was not showing up (@Kukks)</summary>
-    <title>btcpayserver/btcpayserver: v1.0.6.1</title>
-    <updated>2020-12-03T14:38:56Z</updated>
-    <dc:date>2020-12-03T14:38:56Z</dc:date>
-  </entry>
-  <dc:date>2021-03-28T19:42:45+00:00</dc:date>
+  <dc:date>2021-03-28T19:54:00+00:00</dc:date>
 </feed>
