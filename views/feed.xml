@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-29T17:24:01+00:00</updated>
+  <updated>2021-03-29T17:34:56+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.3.0</title>
+    <updated>2021-03-29T17:27:24Z</updated>
+    <dc:date>2021-03-29T17:27:24Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.1</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.1"/>
@@ -8326,39 +8334,5 @@ Build with .NET Core 3.1.403-win-x64.
     <updated>2020-12-08T08:59:56Z</updated>
     <dc:date>2020-12-08T08:59:56Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.3</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.3"/>
-    <summary>## Main changes
-
-#### Fixed some connection issues with peer
-
-Use ip address instead of domain name to connect to the trampoline node. This caused connectivity issues in some cases, due to IPv6 conversion.
-
-## Complete list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.2...v1.4.3
-- **core**: https://github.com/ACINQ/eclair/compare/v0.4.5-android-phoenix...v0.4.6-android-phoenix
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: https://acinq.co/pgp/padioupm.asc
-- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import padioupm.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: v1.4.3</title>
-    <updated>2020-12-07T14:22:13Z</updated>
-    <dc:date>2020-12-07T14:22:13Z</dc:date>
-  </entry>
-  <dc:date>2021-03-29T17:24:01+00:00</dc:date>
+  <dc:date>2021-03-29T17:34:56+00:00</dc:date>
 </feed>
