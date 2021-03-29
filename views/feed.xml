@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-29T05:35:06+00:00</updated>
+  <updated>2021-03-29T05:44:15+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre7</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre7"/>
@@ -8257,5 +8257,5 @@ It turns out this is not compatible with every wallets.</summary>
     <updated>2020-12-04T05:23:26Z</updated>
     <dc:date>2020-12-04T05:23:26Z</dc:date>
   </entry>
-  <dc:date>2021-03-29T05:35:06+00:00</dc:date>
+  <dc:date>2021-03-29T05:44:15+00:00</dc:date>
 </feed>
