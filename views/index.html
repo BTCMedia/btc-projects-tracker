@@ -43,7 +43,85 @@
 							<p class="card-text">Published: 2021-03-29 17:27:24 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"></p>
+					    <p class="card-text"><h1>NOT ALL BINARIES ARE CREATED YET. WE&#39;RE STILL ON PREPARING THIS RELEASE</h1>
+
+<h1>v1.3.0</h1>
+
+<h1>Binaries</h1>
+
+<p>There are two types of binaries:</p>
+
+<h2>Specter Desktop</h2>
+
+<p>It&#39;s a windowed GUI application with Specter server included.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0/Specter-Setup-v1.3.0.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0/SpecterDesktop-v1.3.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0/specter_desktop-v1.3.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
+
+<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
+
+<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
+
+<h2>specterd</h2>
+
+<p>It&#39;s a command-line program that only runs Specter server.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0/specterd-v1.3.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0/specterd-v1.3.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0/specterd-v1.3.0-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
+
+<h1>Signatures and hashes</h1>
+
+<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.0/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @stepansnigirev&#39;s GPG key.
+You can get the public key from here: <a href="https://stepansnigirev.com/ss-specter-release.asc">https://stepansnigirev.com/ss-specter-release.asc</a>.
+It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x36ED357AB24B915F">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F">keys.openpgp.org</a>.
+Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F</code>, short id: <code>36ed357ab24b915f</code></p>
+
+<h2>v1.3.0 März 29, 2021</h2>
+
+<ul>
+<li>Bugfix: bump embit version, add secp binary #1031 (Stepan Snigirev)</li>
+<li>Bugfix: consolidations issue #1034 (benk10)</li>
+<li>Bugfix: Default bitcoind timeout to 60s for all platforms #1044 (kdmukai)</li>
+<li>Bugfix: Raspberry Pi check; fixing breaking changes when not using built-in Tor #1037 (kdmukai)</li>
+<li>Bugfix: Remove potentially non-final txid #1011 (benk10)</li>
+<li>Bugfix: auto-escaping of wallet.account_map json in pdf backup #976 (djpnewton)</li>
+<li>Bugfix: typo #1008 (Jan Rothen)</li>
+<li>Bugfix: HWI2 integration issues #1045 (benk10)</li>
+<li>Bugfix: misc Fixes for pre-release, mainly proper tor shutdown (#1048) (benk10)</li>
+<li>Bugfix: fix fill_psbt #1050 (Stepan Snigirev)</li>
+<li>Bugfix: exit cleanup #1053 (benk10)</li>
+<li>Bugfix: Fix Windows pyinstaller typo #1064 (benk10)</li>
+<li>Bugfix: Pre release minor fixes #1055 (benk10)</li>
+<li>Bugfix: Remove scientific notations #1067 (benk10)</li>
+<li>Bugfix: Update Bitcoin Core data dir even when installed and update Cobo Vault instructions #1056 (benk10)</li>
+<li>Bugfix: Remove download attribute from link #1061 (Taylor Helsper)</li>
+<li>Chore: Bump jinja2 from 2.11.2 to 2.11.3 #1033 (dependabot[bot])</li>
+<li>Chore: Some more Cypress tests #970 (benk10)</li>
+<li>Chore: Re-applying config change to pass Black formatting #1003 (kdmukai)</li>
+<li>Chore: Cypress travis #997 (Kim Neunert)</li>
+<li>Chore: Bump HWI to 2.0.1 #1060 (benk10)</li>
+<li>Chore: Refactor node setup state and timeout #1058 (benk10)</li>
+<li>Docs: added signature-verification to FAQ #1042 (Kim Neunert)</li>
+<li>Docs: Update DEVELOPMENT.md for Raspi #1032 (kdmukai)</li>
+<li>Docs: update to specify correct docker tag #971 (kdmukai)</li>
+<li>Docs: Fixed typos in faq.md #1004 (Dimitris Tsapakidis)</li>
+<li>Docs: Add link to RaspiBlitz connection guide #1041 (d11n)</li>
+<li>Feature: Add &quot;Abandon transaction&quot; option for low fee txs that have been purged from the mempool #991 (kdmukai)</li>
+<li>Feature: Add full edit transaction for RBF #998 (benk10)</li>
+<li>Feature: Add mempool.space as an option for fee estimation and block explorer #1020 (benk10)</li>
+<li>Feature: many more currencies to the price provider #1021 (benk10)</li>
+<li>Feature: Move wallets loading process to background #1017 (benk10)</li>
+<li>Feature: Setup Bitcoin Core from Specter #1007 (benk10)</li>
+<li>Feature: Show wallets overview for / , resolves #1018 #1019 (benk10)</li>
+<li>Feature: improved the description of the CLI arguments/options #984 (8go)</li>
+<li>Feature: Logging improvements #1043 (Kim Neunert)</li>
+<li>Feature: Move to HWI v2 #1001 (benk10)</li>
+<li>Feature: Specter-DIY: add sd card support #1047 (Stepan Snigirev)</li>
+<li>Feature: Adding regular logs to core-settings-page #1065 (Kim Neunert)</li>
+<li>Feature: Call the checker more often if IBD #1059 (benk10)</li>
+<li>Feature: Pre download core and tor binaries #1062 (benk10)</li>
+<li>UIUX: changing the background color of that input/output (using colors based on the send/receive svg icons) #989 (djpnewton)</li>
+<li>UIUX: HWI Bridge design improvement #1015 (benk10)</li>
+<li>UIUX: Timeout management and other improvements #1057 (Kim Neunert)</li>
+<li>UIUX: Only tor quicksync warning #1054 (Kim Neunert)</li>
+</ul>
+</p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
