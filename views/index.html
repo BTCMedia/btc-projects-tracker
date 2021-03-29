@@ -38,6 +38,21 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre9">v1.3.0-pre9</a>
+						    </h2>
+							<p class="card-text">Published: 2021-03-29 13:35:01 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"></p>
+					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre9" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre8">v1.3.0-pre8</a>
 						    </h2>
 							<p class="card-text">Published: 2021-03-29 07:53:20 UTC</p>
@@ -9759,72 +9774,6 @@ Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 91
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.2">v0.10.2</a>
-						    </h2>
-							<p class="card-text">Published: 2020-12-05 13:56:43 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/Specter-Setup-v0.10.2.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/SpecterDesktop-v0.10.2.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/specter_desktop-v0.10.2-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/specterd-v0.10.2-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/specterd-v0.10.2-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/specterd-v0.10.2-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h1>Signatures and hashes</h1>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @stepansnigirev&#39;s GPG key.
-You can get public key from here: <a href="https://stepansnigirev.com/ss-specter-release.asc">https://stepansnigirev.com/ss-specter-release.asc</a>.
-It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x36ED357AB24B915F">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F">keys.openpgp.org</a>.
-Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F</code>, short id: <code>36ed357ab24b915f</code></p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>HWI: Update udev rules for Specter DIY (#742) (@stepansnigirev)</li>
-<li>HWI: Update communication with Specter DIY (#746) (@stepansnigirev)</li>
-<li>Bugfix: Fix RBF for UTXO consolidation and wrong fee on import tx (#744) (@ben-kaufman)</li>
-<li>Bugfix: Remove export wallet from cc and cobo for singlesig (#743) (@stepansnigirev)</li>
-<li>Bugfix: Fix transaction times issue with Bitcoin Core (#738) (@ben-kaufman)</li>
-<li>Bugfix: Support parsing changed electrum files from Coldcard (#736) (@stepansnigirev)</li>
-<li>Bugfix: Remove listwalletdir call from wallet manager checker (#734) (@stepansnigirev)</li>
-<li>Bugfix: Fix Trezor and Keepkey multisig address verification (#733) (@stepansnigirev)</li>
-<li>Bugfix: Show QR code address verification only for Specter-DIY (#714) (@ben-kaufman)</li>
-<li>Bugfix: Fix typo with links (target=&quot;blank&quot; =&gt; target=&quot;_blank&quot;)(#703) (@stepansnigirev)</li>
-<li>Bugfix: Add .python-version to .gitignore (#699) (@Sjors)</li>
-<li>Bugfix: Allow renaming admin account and a few bug fixes (#732) (@ben-kaufman)</li>
-<li>Bugfix: Fix typo:manual configuration (#739)</li>
-<li>Feature: Electrum import and export support (#721) (@ben-kaufman)</li>
-<li>UI: Mobile friendly UI (#731) (@ben-kaufman)</li>
-<li>UI: Add transaction data popup (#692) (@ben-kaufman)</li>
-<li>UI: Move toggling price functionality to the right toolbar (#691) (@ben-kaufman)</li>
-<li>Refactoring: Break down the controller into endpoints (#726) (@ben-kaufman)</li>
-<li>Dependencies: Update pyinstaller requirements.txt (#745) (@ben-kaufman)</li>
-<li>Dependencies: Bump embit version (#728) (@stepansnigirev)</li>
-<li>Dependencies: Update dependencies and use Bitcoin Core v0.20.1 for tests (#687) (@k9ert)</li>
-<li>Devops: Bitcoind without docker (#686) (@k9ert)</li>
-<li>Docs: Update FAQ on how to recover password (#727) (@k9ert)</li>
-<li>Docs: Update FAQ on how to upgrade Specter Desktop (#702) (@k9ert)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

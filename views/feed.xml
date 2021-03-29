@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-29T13:22:29+00:00</updated>
+  <updated>2021-03-29T13:43:57+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre9</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre9"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.3.0-pre9</title>
+    <updated>2021-03-29T13:35:01Z</updated>
+    <dc:date>2021-03-29T13:35:01Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre8</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre8"/>
@@ -8203,57 +8211,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2020-12-06T17:24:03Z</updated>
     <dc:date>2020-12-06T17:24:03Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.2</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.10.2"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/Specter-Setup-v0.10.2.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/SpecterDesktop-v0.10.2.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/specter_desktop-v0.10.2-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/specterd-v0.10.2-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/specterd-v0.10.2-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/specterd-v0.10.2-x86_64-linux-gnu.zip)
-
-# Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v0.10.2/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @stepansnigirev's GPG key.
-You can get public key from here: [https://stepansnigirev.com/ss-specter-release.asc](https://stepansnigirev.com/ss-specter-release.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x36ED357AB24B915F) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F).
-Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, short id: `36ed357ab24b915f`
-
-# Release notes
-- HWI: Update udev rules for Specter DIY (#742) (@stepansnigirev)
-- HWI: Update communication with Specter DIY (#746) (@stepansnigirev)
-- Bugfix: Fix RBF for UTXO consolidation and wrong fee on import tx (#744) (@ben-kaufman)
-- Bugfix: Remove export wallet from cc and cobo for singlesig (#743) (@stepansnigirev)
-- Bugfix: Fix transaction times issue with Bitcoin Core (#738) (@ben-kaufman)
-- Bugfix: Support parsing changed electrum files from Coldcard (#736) (@stepansnigirev)
-- Bugfix: Remove listwalletdir call from wallet manager checker (#734) (@stepansnigirev)
-- Bugfix: Fix Trezor and Keepkey multisig address verification (#733) (@stepansnigirev)
-- Bugfix: Show QR code address verification only for Specter-DIY (#714) (@ben-kaufman)
-- Bugfix: Fix typo with links (target=&quot;blank&quot; =&gt; target=&quot;_blank&quot;)(#703) (@stepansnigirev)
-- Bugfix: Add .python-version to .gitignore (#699) (@Sjors)
-- Bugfix: Allow renaming admin account and a few bug fixes (#732) (@ben-kaufman)
-- Bugfix: Fix typo:manual configuration (#739)
-- Feature: Electrum import and export support (#721) (@ben-kaufman)
-- UI: Mobile friendly UI (#731) (@ben-kaufman)
-- UI: Add transaction data popup (#692) (@ben-kaufman)
-- UI: Move toggling price functionality to the right toolbar (#691) (@ben-kaufman)
-- Refactoring: Break down the controller into endpoints (#726) (@ben-kaufman)
-- Dependencies: Update pyinstaller requirements.txt (#745) (@ben-kaufman)
-- Dependencies: Bump embit version (#728) (@stepansnigirev)
-- Dependencies: Update dependencies and use Bitcoin Core v0.20.1 for tests (#687) (@k9ert)
-- Devops: Bitcoind without docker (#686) (@k9ert)
-- Docs: Update FAQ on how to recover password (#727) (@k9ert)
-- Docs: Update FAQ on how to upgrade Specter Desktop (#702) (@k9ert)</summary>
-    <title>cryptoadvance/specter-desktop: v0.10.2</title>
-    <updated>2020-12-05T13:56:43Z</updated>
-    <dc:date>2020-12-05T13:56:43Z</dc:date>
-  </entry>
-  <dc:date>2021-03-29T13:22:29+00:00</dc:date>
+  <dc:date>2021-03-29T13:43:57+00:00</dc:date>
 </feed>
