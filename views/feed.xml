@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-29T14:10:42+00:00</updated>
+  <updated>2021-03-29T14:13:21+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.1</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.1"/>
@@ -286,7 +286,9 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.0</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.0"/>
-    <summary>## Release notes
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+## Release notes
 This release ships the official beta release for the Bisq API! It has been tested on mainnet, but is still in beta, so please be careful.
 
 Other highlights: absolute minimum deposits have now been lowered from 0.006 BTC to 0.001 BTC. Maker and taker fee transactions are now verified via mempool.space to reduce trade issues, and mediation and arbitration were improved as well. And as always, there are many bug fixes and refinements.
@@ -1104,7 +1106,9 @@ $ sha256sum -c SHA256SUMS.stripped
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.9</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.9"/>
-    <summary>This is a hotfix release that [fixes an issue when trading messages are resent on application startup](https://github.com/bisq-network/bisq/pull/5267).
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+This is a hotfix release that [fixes an issue when trading messages are resent on application startup](https://github.com/bisq-network/bisq/pull/5267).
 
 Here are the release notes from v1.5.8:
 
@@ -8356,5 +8360,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2020-12-07T14:22:13Z</updated>
     <dc:date>2020-12-07T14:22:13Z</dc:date>
   </entry>
-  <dc:date>2021-03-29T14:10:42+00:00</dc:date>
+  <dc:date>2021-03-29T14:13:21+00:00</dc:date>
 </feed>
