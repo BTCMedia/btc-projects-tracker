@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-29T07:42:21+00:00</updated>
+  <updated>2021-03-29T07:54:04+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre8</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre8"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.3.0-pre8</title>
+    <updated>2021-03-29T07:53:20Z</updated>
+    <dc:date>2021-03-29T07:53:20Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre7</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0-pre7"/>
@@ -8247,15 +8255,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2020-12-05T13:56:43Z</updated>
     <dc:date>2020-12-05T13:56:43Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.2</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.2"/>
-    <summary>*  Reverting uppercasing of Bech32 addresses in QR code (@Rockstardev) see #2100
-
-It turns out this is not compatible with every wallets.</summary>
-    <title>btcpayserver/btcpayserver: v1.0.6.2</title>
-    <updated>2020-12-04T05:23:26Z</updated>
-    <dc:date>2020-12-04T05:23:26Z</dc:date>
-  </entry>
-  <dc:date>2021-03-29T07:42:21+00:00</dc:date>
+  <dc:date>2021-03-29T07:54:04+00:00</dc:date>
 </feed>
