@@ -6,7 +6,26 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-29T18:33:44+00:00</updated>
+  <updated>2021-03-29T18:41:18+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.11</id>
+    <link href="https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.11"/>
+    <summary>Changelog for v0.18.1.11:
+
+- Specify the dynafed epoch length for liquidv1.
+
+Changelog for v0.18.1.10
+
+-    Add SIGHASH_RANGEPROOF support
+-    Add two missing dynafed fields to getblockchaininfo
+-    Support changing mainnet dynafed activation
+-    Only verify proposed dynafed parameters if they differ from current
+
+</summary>
+    <title>ElementsProject/elements: elements-0.18.1.11</title>
+    <updated>2021-03-29T18:37:42Z</updated>
+    <dc:date>2021-03-29T18:37:42Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.0"/>
@@ -8366,40 +8385,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-12-08T16:07:43Z</updated>
     <dc:date>2020-12-08T16:07:43Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.3</id>
-    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.3"/>
-    <summary># Summary
-
-This silent release fixes Ledger incompatibility.
-
-- **Ledger hardware wallet fix for Ledger 1.5.1 firmware**
-
-# Newbie Guide
-
-While setting up Wasabi is straightforward, even a Linux wizard with the longest beard can get stuck on the most basic tasks. Consider taking a look at the [Installation Instructions](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html) guide.
-
-# Advanced Guide
-
-If you want to build Wasabi from source code or update the source code check out [these instructions.](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html)
-
-From version 1.1.3 Wasabi also introduces [reproducible builds](https://reproducible-builds.org/): [Deterministic Build Guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md)
-
-Build with .NET Core 3.1.403-win-x64.
-
-## FAQ
-
-- **Frequently asked questions [here](https://docs.wasabiwallet.io/FAQ/).**
-- **Requirements?** x64, Linux, &gt;Win10, &gt;macOS 10.13.
-
-# Release Notes
-
-- **UI fixes** https://github.com/zkSNACKs/WalletWasabi/pull/4759
-- **HWI upgrade** https://github.com/zkSNACKs/WalletWasabi/pull/4497
-- **PSBT fixes** https://github.com/zkSNACKs/WalletWasabi/pull/4608 https://github.com/zkSNACKs/WalletWasabi/pull/4807</summary>
-    <title>zkSNACKs/WalletWasabi: v1.1.12.3</title>
-    <updated>2020-12-08T08:59:56Z</updated>
-    <dc:date>2020-12-08T08:59:56Z</dc:date>
-  </entry>
-  <dc:date>2021-03-29T18:33:44+00:00</dc:date>
+  <dc:date>2021-03-29T18:41:18+00:00</dc:date>
 </feed>
