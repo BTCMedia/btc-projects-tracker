@@ -38,6 +38,47 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.1">v1.0.7.1</a>
+						    </h2>
+							<p class="card-text">Published: 2021-03-30 15:16:32 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Improvements:</h3>
+
+<ul>
+<li>Add user email search/sort @bolatovumar</li>
+<li>Fix pay button link preview (see #2396) @bumbummen99 </li>
+<li>Change display date format on view pull payments (see #2339) @AlexGidge</li>
+<li>Update form required input styling (see #2373) @bolatovumar</li>
+<li>Order file uploaded list by descending timestamp (#2273) @bolatovumar</li>
+<li>Remove misleading title from hint icon @dennisreimann</li>
+<li>Make dates/timespan swagger docs more clear (#2399) @Kukks</li>
+<li>Add rate limiter for forgotpassword @NicolasDorier</li>
+<li>Upgrade Boostrap to v4.6 and jquery to 3.6.0 @dennisreimann</li>
+<li>Use better PRNG for payjoin input selection @NicolasDorier</li>
+<li>Decrease authentication cookie timeout after password change from 30min to 5min @NicolasDorier</li>
+<li>Use secure/http-only cookies for preferences @NicolasDorier</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Ensure submitting empty currency does not break update PoS page (#2376) @bolatovumar</li>
+<li>Fix point of sale item newline break (#2366) @Kukks</li>
+<li>Validate filename in file upload endpoints @NicolasDorier</li>
+<li>Turn off autocomplete for BIP39 Seed or HD private key inputs @nosovk</li>
+<li>Fix payment request template body/page height and footer style @Patrick</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/ElementsProject/elements">ElementsProject/elements</a>: <a href="https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.11">elements-0.18.1.11</a>
 						    </h2>
 							<p class="card-text">Published: 2021-03-29 18:37:42 UTC</p>
@@ -9783,203 +9824,6 @@ $ sha256sum -c SHA256SUMS.stripped
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.1">v1.5.1</a>
-						    </h2>
-							<p class="card-text">Published: 2020-12-08 16:07:43 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
-
-<p>This is a hotfix that fixes critical bugs that can occur during the trade process!</p>
-
-<p>For a full list of changes please see <a href="https://github.com/bisq-network/bisq/milestone/46">milestone v1.5.1</a> for more details.</p>
-
-<p>Here are the release notes from v1.5.0:</p>
-
-<h2>Release notes</h2>
-
-<p>This release finally brings SegWit to Bisq&#39;s trade protocol. It also implements fee optimizations enabled by SegWit, so mining fees for all BTC transactions are lower.</p>
-
-<p>There are also some notable trading-related updates: you can now edit pricing and payment methods of your live offers; account limits have been simplified (and removed where unneeded); and 3 new payment methods were added (Australian PayID, TransferWise and Amazon gift cards).</p>
-
-<p>The SegWit integration wouldn&#39;t have been possible without the anonymous sponsor who pre-funded the project, so big thanks to them! If you might be interested in pre-funding a specific feature, please contact us on Keybase in the #projects channel. Bisq is a critical element of the Bitcoin ecosystem and could really use your help.</p>
-
-<h3>DAO</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/4681">Use LegacyAddress instead of Address for BSQ</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4706">Remove outliers when calculating BSQ rate</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4739">Hide proposal delete button</a></li>
-</ul>
-
-<h3>UI</h3>
-
-<ul>
-<li>Improve labeling of charts: <a href="https://github.com/bisq-network/bisq/pull/4740">1</a>, <a href="https://github.com/bisq-network/bisq/pull/4715">2</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4718">Cleanup user interface elements in <code>Send Funds</code> screen</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4702">Add export to csv hyperlink (as button takes too much vertical space)</a></li>
-</ul>
-
-<h3>Trading</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/4612">Use SegWit for the trade protocol</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4744">Simplify limits for signed and unsigned accounts</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4728">Update <code>Edit Offer</code> to allow for change of market and payment method</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4743">Add new payment method: Australian PayID</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4726">Add new payment method: TransferWise</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4788">Add new payment method: Amazon Gift Cards</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4745">Fix bug with reading historical data</a></li>
-</ul>
-
-<h3>Wallet</h3>
-
-<ul>
-<li>Add SegWit fee estimation: <a href="https://github.com/bisq-network/bisq/pull/4710">1</a>, <a href="https://github.com/bisq-network/bisq/pull/4754">2</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4840">Speed up restore from seed</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4733">Allow user-defined block explorers</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4676">Show current tx fee rate on main screen</a></li>
-</ul>
-
-<h3>Privacy</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/4694">Update netlayer references to Bisq repository</a></li>
-</ul>
-
-<h3>Network</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/4756">Remove HitBTC as a pricenode data provider</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4768">Add new burningman address for delayed payout txs</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4751">Reduce seednode default max connections to 20</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4734">Show past deviation in monitor</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4746">Clean up mailbox messages for closed trades</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4736">Admin filter for auto-confirmation service addresses</a></li>
-</ul>
-
-<h3>API</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/4714">Implement &#39;canceloffer&#39; api method</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4711">Implement api methods &#39;keepfunds&#39;, &#39;withdrawfunds&#39;</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4704">Implement &#39;gettrade&#39; api method</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4673">Implement &#39;takeoffer&#39; api method</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4674">Implement &#39;confirmpaymentsent&#39; api method</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4675">Implement &#39;confirmpaymentreceived&#39; api method</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4705">Optionally print the json contract for a given trade id</a></li>
-</ul>
-
-<h3>Assets</h3>
-
-<p>No new assets.</p>
-
-<h2>Verification</h2>
-
-<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
-Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
-
-<p>Import the key:
-<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
-
-<p>How to verify signatures?
-<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
-Replace BINARY with the file you downloaded (e.g. Bisq-1.5.1.dmg)</p>
-
-<p>Verify jar file inside binary:
-You can verify on OSX the jar file with:
-<code>shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.1.jar</code>
-The output need to match the value from the Bisq-1.5.1.jar.txt file.</p>
-
-<h2>Known issues with installation</h2>
-
-<h3>macOS Catalina:</h3>
-
-<blockquote>
-<p>Bisq can&#39;t be opened because Apple cannot check it for malicious software</p>
-</blockquote>
-
-<p>This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).</p>
-
-<p>Workaround: Right click on the installed Bisq app &gt; Click <code>Open</code> (warning popup shown again, but with new button available) &gt; Click <code>Open</code></p>
-
-<blockquote>
-<p>Bisq would like to receive keystrokes from any application.</p>
-</blockquote>
-
-<p>Discussed in issue <a href="https://github.com/bisq-network/bisq/issues/3373">https://github.com/bisq-network/bisq/issues/3373</a>, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.</p>
-
-<h3>Windows:</h3>
-
-<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
-
-<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
-
-<p>[1] Application directory (contains application installation files):
-C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
-
-<p>[2] Data directory (contains all Bisq data including wallet):
-C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
-
-<h3>Linux:</h3>
-
-<p>Hint for Debian users:
-If you have problems starting Bisq on Debian use: <code>/opt/Bisq/Bisq</code></p>
-
-<p>If your Linux distro does not support .deb files please follow this instruction:
-<code>
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.5.1.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-</code>
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
-
-<h2>Cleanup tool for saved trades that failed market price check</h2>
-
-<p>With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It will remove corrupt trade entries added due to bug <a href="https://github.com/bisq-network/bisq/issues/2924">https://github.com/bisq-network/bisq/issues/2924</a>. Install and run once, it will shut down automatically, then install version 1.5.1 or later. You can verify the binary the same way as you do with the Bisq application.</p>
-
-<h2>Credits</h2>
-
-<p>Thanks to everyone who directly contributed to this release:</p>
-
-<ul>
-<li>Bayernatoor</li>
-<li>cd2357</li>
-<li>chimp1984</li>
-<li>Christoph Atteneder</li>
-<li>deusmax</li>
-<li>Florian Reimair</li>
-<li>Stan</li>
-<li>James Cox</li>
-<li>Luis Aranguren</li>
-<li>mrosseel</li>
-<li>Oscar Guindzberg</li>
-<li>sqrrm</li>
-<li>wiz</li>
-</ul>
-
-<p>A special thanks to our first time contributors:</p>
-
-<ul>
-<li>Luis Aranguren</li>
-<li>deusmax</li>
-</ul>
-
-<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
-</p>
-					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
