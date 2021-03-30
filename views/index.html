@@ -43,7 +43,21 @@
 							<p class="card-text">Published: 2021-03-30 15:16:32 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><h3>Improvements:</h3>
+					    <p class="card-text"><p>This is a security release that patches one critical and several low-impact vulnerabilities that affected BTCPay Server versions 1.0.7.0 and older.  </p>
+
+<p>The critical vulnerability (CVE-2021-29251) impacts users who: 
+- Use Docker Deployment 
+- Configured email server 
+- Enabled registration for users in Server Settings &gt; Policies   </p>
+
+<p>We strongly recommend affected users to update their instances to mitigate the risk. We will release a full public disclosure of vulnerabilities with the next major version of the BTCPay Server. </p>
+
+<p>We want to thank @teslamotors for filing a responsible disclosure, helping us with remediation, and handling the situation professionally.<br>
+We also want to thank Qaiser Abbas, an independent web-security researcher, for an additional responsible vulnerability disclosure that was handled in this release.   </p>
+
+<p>Thank you for keeping our users safe. </p>
+
+<h3>Improvements:</h3>
 
 <ul>
 <li>Add user email search/sort @bolatovumar</li>
