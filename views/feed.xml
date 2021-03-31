@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-31T18:24:02+00:00</updated>
+  <updated>2021-03-31T18:34:42+00:00</updated>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.7</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.7"/>
@@ -8256,5 +8256,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2020-12-15T13:09:47Z</updated>
     <dc:date>2020-12-15T13:09:47Z</dc:date>
   </entry>
-  <dc:date>2021-03-31T18:24:02+00:00</dc:date>
+  <dc:date>2021-03-31T18:34:42+00:00</dc:date>
 </feed>
