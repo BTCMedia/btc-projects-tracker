@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-31T22:11:19+00:00</updated>
+  <updated>2021-03-31T22:22:59+00:00</updated>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v0.10.0</id>
     <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.0"/>
@@ -8263,5 +8263,5 @@ yyforyongyu </summary>
     <updated>2020-12-16T03:23:56Z</updated>
     <dc:date>2020-12-16T03:23:56Z</dc:date>
   </entry>
-  <dc:date>2021-03-31T22:11:19+00:00</dc:date>
+  <dc:date>2021-03-31T22:22:59+00:00</dc:date>
 </feed>
