@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-31T07:24:40+00:00</updated>
+  <updated>2021-03-31T07:33:04+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.1</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.1"/>
@@ -8265,5 +8265,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2020-12-13T12:26:24Z</updated>
     <dc:date>2020-12-13T12:26:24Z</dc:date>
   </entry>
-  <dc:date>2021-03-31T07:24:40+00:00</dc:date>
+  <dc:date>2021-03-31T07:33:04+00:00</dc:date>
 </feed>
