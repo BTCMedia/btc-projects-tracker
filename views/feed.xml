@@ -6,7 +6,44 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-31T10:32:52+00:00</updated>
+  <updated>2021-03-31T10:43:56+00:00</updated>
+  <entry>
+    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.7</id>
+    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.7"/>
+    <summary># Summary
+
+Trezor T's firmware (v2.3.5) breaks the compatibility with Wasabi, this release fixes this. I also added some minor updates and fixes. 
+
+- **Update HWI to v2.0.1**  
+- **Update Tor to v0.4.5.7** 
+
+# Newbie Guide
+
+While setting up Wasabi is straightforward, even a Linux wizard with the longest beard can get stuck on the most basic tasks. Consider taking a look at the [Installation Instructions](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html) guide.
+
+# Advanced Guide
+
+If you want to build Wasabi from source code or update the source code check out [these instructions.](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html)
+
+From version 1.1.3 Wasabi also introduces [reproducible builds](https://reproducible-builds.org/): [Deterministic Build Guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md)
+
+Build with .NET Core 3.1.407-win-x64.
+
+## FAQ
+
+- **Frequently asked questions [here](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq).**
+- **Requirements?** x64, Linux, &gt;Win10, &gt;macOS 10.13.
+
+# Release Notes
+
+- **Update HWI** https://github.com/zkSNACKs/WalletWasabi/pull/5465
+- **RPC** https://github.com/zkSNACKs/WalletWasabi/pull/5436
+- **Fix for recovering wallet from more then 12 Recovery words** https://github.com/zkSNACKs/WalletWasabi/pull/5384
+- **Tor** https://github.com/zkSNACKs/WalletWasabi/pull/5455</summary>
+    <title>zkSNACKs/WalletWasabi: v1.1.12.7</title>
+    <updated>2021-03-31T10:39:06Z</updated>
+    <dc:date>2021-03-31T10:39:06Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.1</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.1"/>
@@ -8219,51 +8256,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2020-12-15T13:09:47Z</updated>
     <dc:date>2020-12-15T13:09:47Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.3</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.3"/>
-    <summary>### New features
-
-* Greenfield API: Can update invoice metadata @Kukks
-* Greenfield API: User notifications API @Kukks 
-* Greenfield API: Can specify the preferred language when creating an invoice @NicolasDorier
-* Greenfield API: Can specify the URL to redirect customer to when he paid when creating an invoice @NicolasDorier
-* Greenfield API: Expose the `checkoutLink` of the created invoice, where you need to redirect your customer to pay in BTC @NicolasDorier
-* Add a `Mark all as seen` button to the notification dropdown @ubolator
-* Support of Armenian language in checkout page. Thanks to Mash Mashok
-* Add ability to add custom CSS to pull payments @ubolator
-* Introduce some basic spam protection for hosts with open registration (see #2106) @Kukks
-
-
-### Improvements
-
-* Hide pagination &amp; page size when not necessary (#2122) @dennisreimann @dstrukt
-* Document in `/docs` miscellaneous features of BTCPay (such as optional arguments of the checkout page) @NicolasDorier
-* UI: Improve mobile store setup view @dennisreimann @dstrukt
-* Improve U2F support, should leverage OS support and now work properly on mobile Safari (See #2086) @dennisreimann
-* Improve how new label picked their color (See #2072) @ubolator
-* Improve the design of transaction's label dropdown to fix display issue when there are too many (see #2078) @ubolator
-
-### Bug fixes:
-
-* Ensure campaign status is shown correctly in minimal crowdfund app (#2062) @ubolator
-* Can remove automatic labels from invoices @NicolasDorier
-* Fix Pay Button Link preview when app mode chosen (#2115) @Kukks
-* If the user was not admin, the API Keys page was ignoring some of the checked permissions @NicolasDorier
-* Greenfield API: If invoice creation failed for some reason, BTCPay would give a HTTP 500 error without details helping the user. @NicolasDorier
-* Fix performance issue: Some invoice queries were causing a full table scan on all invoices rather than using an index. @NicolasDorier
-* Fix: Importing an incorrect wallet from BlueWallet was crashing (#2098) @Kukks
-* Fix classic theme for payment requests (Fix #2084) @dennisreimann
-
-### Miscellaneous:
-
-* Removing the bitpay invoice translator @NicolasDorier
-* Improve the documentation of API Keys page @NicolasDorier
-* Fix doc for create invoice request's metadata @NicolasDorier
-* Fix docs for pull payments @Kukks</summary>
-    <title>btcpayserver/btcpayserver: v1.0.6.3</title>
-    <updated>2020-12-13T12:26:24Z</updated>
-    <dc:date>2020-12-13T12:26:24Z</dc:date>
-  </entry>
-  <dc:date>2021-03-31T10:32:52+00:00</dc:date>
+  <dc:date>2021-03-31T10:43:56+00:00</dc:date>
 </feed>
