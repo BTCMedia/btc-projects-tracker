@@ -6,7 +6,51 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-03-31T20:13:39+00:00</updated>
+  <updated>2021-03-31T20:24:48+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.10.0</id>
+    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.0"/>
+    <summary>We're pleased to announce the 0.10.0 release of c-lightning, named by  @jsarenik.
+
+This is a major release, consolidating a number of features, fixes and experimental extensions.
+
+## Highlights for Users
+- `pay` has been refined and much improved across various less-common scenarios.
+- `listpeers` shows the current feerate and unilateral close fee.
+- `listforwards` can now filter by channel status, and in our out channel.
+- `fundpsbt` and `utxopsbt` have a new `excess_as_change` parameter if you don't want to add it yourself.
+- `connect` returns the address we actually connected to (and `direction` tells you if they actually connected to us instead).
+- `fundchannel_complete` takes a PSBT, removing a common cause of tragic opening failures: `txprepare` and `withdraw` now provide a PSBT for convenience too.
+- In regtest mode, we don't care that bitcoind doesn't give any fee estimates, but use the minimum.
+
+## Highlights for the Network
+- We now send `warning` messages if an error condition is possibly recoverable, rather than closing the channel and sending `error`.
+- We now implement `sync_complete` for gossip_range queries as per latest spec, with backwards compatibility for older nodes.
+- `experimental-dual-fund` config option enables the draft dual funding option for compatible nodes, which includes RBF upgrades for opening transactions.
+
+## Highlights for Developers
+- All hooks are now registerable by multiple plugins at once.
+- `experimental-shutdown-wrong-funding` allows remote nodes to close incorrectly opened channels using the new `wrong_funding` option to `close`.
+
+More details can be found in the [changelog](https://github.com/ElementsProject/lightning/blob/v0.10.0/CHANGELOG.md).
+
+Thanks to everyone for their contributions and bug reports; please keep them coming.
+
+Since 0.9.3, we've had 339 commits from 14 different authors over 69 days.
+
+A special thanks goes to the 3 first time contributors:
+
+- Matthias Debernardini
+- Luke Childs
+- Alexey Zagarin
+
+Cheers,
+Rusty, Lisa, Christian,  ZmnSCPxj
+</summary>
+    <title>ElementsProject/lightning: v0.10.0</title>
+    <updated>2021-03-31T20:14:56Z</updated>
+    <dc:date>2021-03-31T20:14:56Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.7</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.7"/>
@@ -8219,42 +8263,5 @@ yyforyongyu </summary>
     <updated>2020-12-16T03:23:56Z</updated>
     <dc:date>2020-12-16T03:23:56Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.4</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.4"/>
-    <summary>## Main changes
-
-#### Support for lightning parameters in BIP21 invoices
-
-BIP21 URIs can contain a `lightning` field if the recipient also accepts lightning payments. In that case the wallet now lets the user choose how he wants to pay the invoice.
-
-#### Improve swapout feerate
-
-Minimum feerate for swapout is now dynamic and should adjust with the state of the mempool.
-
-## Complete list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.3...v1.4.4
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: https://acinq.co/pgp/padioupm.asc
-- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import padioupm.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: v1.4.4</title>
-    <updated>2020-12-15T13:09:47Z</updated>
-    <dc:date>2020-12-15T13:09:47Z</dc:date>
-  </entry>
-  <dc:date>2021-03-31T20:13:39+00:00</dc:date>
+  <dc:date>2021-03-31T20:24:48+00:00</dc:date>
 </feed>

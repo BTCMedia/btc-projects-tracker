@@ -38,6 +38,68 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ElementsProject/lightning">ElementsProject/lightning</a>: <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.0">v0.10.0</a>
+						    </h2>
+							<p class="card-text">Published: 2021-03-31 20:14:56 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>We&#39;re pleased to announce the 0.10.0 release of c-lightning, named by  @jsarenik.</p>
+
+<p>This is a major release, consolidating a number of features, fixes and experimental extensions.</p>
+
+<h2>Highlights for Users</h2>
+
+<ul>
+<li><code>pay</code> has been refined and much improved across various less-common scenarios.</li>
+<li><code>listpeers</code> shows the current feerate and unilateral close fee.</li>
+<li><code>listforwards</code> can now filter by channel status, and in our out channel.</li>
+<li><code>fundpsbt</code> and <code>utxopsbt</code> have a new <code>excess_as_change</code> parameter if you don&#39;t want to add it yourself.</li>
+<li><code>connect</code> returns the address we actually connected to (and <code>direction</code> tells you if they actually connected to us instead).</li>
+<li><code>fundchannel_complete</code> takes a PSBT, removing a common cause of tragic opening failures: <code>txprepare</code> and <code>withdraw</code> now provide a PSBT for convenience too.</li>
+<li>In regtest mode, we don&#39;t care that bitcoind doesn&#39;t give any fee estimates, but use the minimum.</li>
+</ul>
+
+<h2>Highlights for the Network</h2>
+
+<ul>
+<li>We now send <code>warning</code> messages if an error condition is possibly recoverable, rather than closing the channel and sending <code>error</code>.</li>
+<li>We now implement <code>sync_complete</code> for gossip_range queries as per latest spec, with backwards compatibility for older nodes.</li>
+<li><code>experimental-dual-fund</code> config option enables the draft dual funding option for compatible nodes, which includes RBF upgrades for opening transactions.</li>
+</ul>
+
+<h2>Highlights for Developers</h2>
+
+<ul>
+<li>All hooks are now registerable by multiple plugins at once.</li>
+<li><code>experimental-shutdown-wrong-funding</code> allows remote nodes to close incorrectly opened channels using the new <code>wrong_funding</code> option to <code>close</code>.</li>
+</ul>
+
+<p>More details can be found in the <a href="https://github.com/ElementsProject/lightning/blob/v0.10.0/CHANGELOG.md">changelog</a>.</p>
+
+<p>Thanks to everyone for their contributions and bug reports; please keep them coming.</p>
+
+<p>Since 0.9.3, we&#39;ve had 339 commits from 14 different authors over 69 days.</p>
+
+<p>A special thanks goes to the 3 first time contributors:</p>
+
+<ul>
+<li>Matthias Debernardini</li>
+<li>Luke Childs</li>
+<li>Alexey Zagarin</li>
+</ul>
+
+<p>Cheers,
+Rusty, Lisa, Christian,  ZmnSCPxj</p>
+</p>
+					    <a href="https://github.com/ElementsProject/lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/zkSNACKs/WalletWasabi">zkSNACKs/WalletWasabi</a>: <a href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.7">v1.1.12.7</a>
 						    </h2>
 							<p class="card-text">Published: 2021-03-31 10:39:06 UTC</p>
@@ -9782,53 +9844,6 @@ yyforyongyu </p>
 </p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.4">v1.4.4</a>
-						    </h2>
-							<p class="card-text">Published: 2020-12-15 13:09:47 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>Main changes</h2>
-
-<h4>Support for lightning parameters in BIP21 invoices</h4>
-
-<p>BIP21 URIs can contain a <code>lightning</code> field if the recipient also accepts lightning payments. In that case the wallet now lets the user choose how he wants to pay the invoice.</p>
-
-<h4>Improve swapout feerate</h4>
-
-<p>Minimum feerate for swapout is now dynamic and should adjust with the state of the mempool.</p>
-
-<h2>Complete list of changes</h2>
-
-<ul>
-<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.3...v1.4.4">https://github.com/ACINQ/phoenix/compare/v1.4.3...v1.4.4</a></li>
-</ul>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
-- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import padioupm.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
