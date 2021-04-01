@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-01T11:15:05+00:00</updated>
+  <updated>2021-04-01T11:23:40+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.2</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.2"/>
@@ -212,7 +212,7 @@ This is a major release, consolidating a number of features, fixes and experimen
 ## Highlights for Users
 - `pay` has been refined and much improved across various less-common scenarios.
 - `listpeers` shows the current feerate and unilateral close fee.
-- `listforwards` can now filter by channel status, and in our out channel.
+- `listforwards` can now filter by channel status, and in or out channel.
 - `fundpsbt` and `utxopsbt` have a new `excess_as_change` parameter if you don't want to add it yourself.
 - `connect` returns the address we actually connected to (and `direction` tells you if they actually connected to us instead).
 - `fundchannel_complete` takes a PSBT, removing a common cause of tragic opening failures: `txprepare` and `withdraw` now provide a PSBT for convenience too.
@@ -8297,5 +8297,5 @@ This release is fully compatible with Eclair v0.4.2. You don't need to close you
     <updated>2020-12-18T04:03:59Z</updated>
     <dc:date>2020-12-18T04:03:59Z</dc:date>
   </entry>
-  <dc:date>2021-04-01T11:15:05+00:00</dc:date>
+  <dc:date>2021-04-01T11:23:40+00:00</dc:date>
 </feed>
