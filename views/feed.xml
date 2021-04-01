@@ -6,7 +6,20 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-01T03:14:12+00:00</updated>
+  <updated>2021-04-01T03:23:39+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.2</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.2"/>
+    <summary>Small release fixing bugs introduced in 1.0.7.1:
+
+### Bug fixes:
+
+* The date in invoice page were not showing anymore the browser date time, but the server date time. (@NicolasDorier)
+* Apps on root where not working anymore, redirecting to login page rather than showing the app (see #2414) (@bolatovumar)</summary>
+    <title>btcpayserver/btcpayserver: v1.0.7.2</title>
+    <updated>2021-04-01T03:17:19Z</updated>
+    <dc:date>2021-04-01T03:17:19Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v0.10.0</id>
     <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.0"/>
@@ -8123,145 +8136,5 @@ FIX: LNURL wallet not found</summary>
     <updated>2020-12-16T18:46:54Z</updated>
     <dc:date>2020-12-16T18:46:54Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc1</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc1"/>
-    <summary>This release marks the first major release in the `v0.12.x` series! As this is a major release several new features are included in this release including: anchor commitment types are now the default, anchor commitment support for watchtowers, new arguments to auto compact the database as well as drop the `wtxmgr` state, generic wallet PSBT crafting+signing, and more more! As usual this release contains several important bug fixes, so we recommend at all users update. 
-
-# Database Migrations
-TODO
-
-# Verifying the Release
-
-In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
-
-```
-curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
-```
-
-Once you have the required PGP keys, you can verify the release (assuming `manifest-v0.12.0-beta.rc1.txt` and `manifest-v0.12.0-beta.rc1.txt.sig` are in the current directory) with:
-
-```
-gpg --verify manifest-v0.12.0-beta.rc1.txt.sig
-```
-
-You should see the following if the verification was successful:
-
-```
-gpg: assuming signed data in 'manifest-v0.12.0-beta.rc1.txt'
-gpg: Signature made Tue Dec 15 18:57:27 2020 PST
-gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-```
-
-That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
-
-
-For this release roasbeef's signature is the secondary signature which can be verified with the following command: 
-```
-gpg --verify roasbeef-manifest-v0.12.0-beta.rc1.txt.sig manifest-v0.12.0-beta.rc1.txt
-gpg: Signature made Wed Sep 30 17:35:20 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-```
-
-## Verifying the Release Timestamp 
-
-From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-v0.12.0-beta.rc1.txt.sig.ots` and `manifest-v0.12.0-beta.rc1.txt.ots`.
-
-Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
-```
-ots verify manifest-v0.12.0-beta.rc1.txt.ots
-ots verify manifest-v0.12.0-beta.rc1.txt.sig.ots -f roasbeef-manifest-v0.12.0-beta.rc1.txt.sig
-```
-
-Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
-
-These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
-
-## Verifying the Release Binaries
-
-Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
-The release binaries are compiled with `go1.15.6`, which is required by verifiers to arrive at the same ones.
-They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, and `watchtowerrpc`. Note that these are already included in the release script, so they do not need to be provided.
-
-The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
-
-Finally, you can also verify the _tag_ itself with the following command:
-
-```
-$ git verify-tag v0.12.0-beta.rc1
-gpg: Signature made Tue 15 Dec 2020 10:31:06 PM UTC using RSA key ID 9B280306
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot;
-```
-
-# Building the Contained Release 
-
-Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
-that `vendor.tar.gz` and `lnd-source-v0.12.0-beta.rc1.tar.gz` are in the current directory, follow these steps:
-
-```
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.12.0-beta.rc1.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.12.0-beta.rc1&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.12.0-beta.rc1&quot; ./cmd/lncli
-```
-
-The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
-
-Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
-
-```
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-```
-
-⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
-
-# Release Notes
-
-TODO
-
-# Contributors (Alphabetical Order)
-
-Alex Bosworth 
-András Bánki-Horváth
-Ben Woosley 
-Bjarne Magnussen 
-Calvin Zachman 
-Carla Kirk-Cohen 
-Carsten Otto 
-Conner Fromknecht 
-Dan Janosik 
-Daniel Babbev 
-Dominik Spicher 
-Eugene 
-Federico Bond 
-Glen Cooper 
-githorray
-Graham Krizek
-Hampus Sjöberg
-Johan T. Halseth
-Joost Jager
-Juan Pablo Civile 
-Jules Lamur 
-Kartik Shah
-Marty Jones
-Matheus Degiovani 
-Mayank Chhabra
-MrManPew
-Olaoluwa Osuntokun 
-Oliver Gugger 
-positiveblue
-Roei Erez 
-Tom Kirkpatrick 
-Torkel Rogstad 
-Wilmer Paulino 
-Yaacov Akiba Slama
-Yan Pritzker 
-yyforyongyu </summary>
-    <title>lightningnetwork/lnd: v0.12.0-beta.rc1</title>
-    <updated>2020-12-16T03:23:56Z</updated>
-    <dc:date>2020-12-16T03:23:56Z</dc:date>
-  </entry>
-  <dc:date>2021-04-01T03:14:12+00:00</dc:date>
+  <dc:date>2021-04-01T03:23:39+00:00</dc:date>
 </feed>
