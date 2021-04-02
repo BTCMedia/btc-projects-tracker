@@ -6,7 +6,38 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-02T07:53:18+00:00</updated>
+  <updated>2021-04-02T08:10:55+00:00</updated>
+  <entry>
+    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.8</id>
+    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.8"/>
+    <summary># Summary
+
+This is a trivial fix for letting our users be able to recover from 12, 15, 18, 21, 24 Recovery Words. 
+
+# Newbie Guide
+
+While setting up Wasabi is straightforward, even a Linux wizard with the longest beard can get stuck on the most basic tasks. Consider taking a look at the [Installation Instructions](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html) guide.
+
+# Advanced Guide
+
+If you want to build Wasabi from source code or update the source code check out [these instructions.](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html)
+
+From version 1.1.3 Wasabi also introduces [reproducible builds](https://reproducible-builds.org/): [Deterministic Build Guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md)
+
+Build with .NET Core 3.1.407-win-x64.
+
+## FAQ
+
+- **Frequently asked questions [here](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq).**
+- **Requirements?** x64, Linux, &gt;Win10, &gt;macOS 10.13.
+
+# Release Notes
+
+- **BugFix** https://github.com/zkSNACKs/WalletWasabi/pull/5510</summary>
+    <title>zkSNACKs/WalletWasabi: v1.1.12.8</title>
+    <updated>2021-04-02T08:10:11Z</updated>
+    <dc:date>2021-04-02T08:10:11Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.2</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.2"/>
@@ -8276,26 +8307,5 @@ This release is fully compatible with Eclair v0.4.2. You don't need to close you
     <updated>2020-12-18T14:30:44Z</updated>
     <dc:date>2020-12-18T14:30:44Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.4</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.4"/>
-    <summary>### Bug fixes:
-
-* Fix coin selection label filter (@Kukks)
-* Greenfield: Fix behaviour after first admin signup (see #2150) @dennisreimann
-* Greenfield: If invoice is not found, error 404 should be returned rather than a crash @dennisreimann
-* Attempt to fix sometimes broken Mark as Seen button @NicolasDorier
-
-### Improvements
-
-* Improve the invoice details view (see #2144) @dennisreimann @dstrukt
-
-### Miscellaneous
-
-* API Keys: Add usage examples link to docs @dennisreimann</summary>
-    <title>btcpayserver/btcpayserver: v1.0.6.4</title>
-    <updated>2020-12-18T04:03:59Z</updated>
-    <dc:date>2020-12-18T04:03:59Z</dc:date>
-  </entry>
-  <dc:date>2021-04-02T07:53:18+00:00</dc:date>
+  <dc:date>2021-04-02T08:10:55+00:00</dc:date>
 </feed>
