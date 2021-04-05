@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-05T00:22:40+00:00</updated>
+  <updated>2021-04-05T00:35:10+00:00</updated>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.8</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.8"/>
@@ -8307,5 +8307,5 @@ This release is fully compatible with Eclair v0.4.2. You don't need to close you
     <updated>2020-12-18T14:30:44Z</updated>
     <dc:date>2020-12-18T14:30:44Z</dc:date>
   </entry>
-  <dc:date>2021-04-05T00:22:40+00:00</dc:date>
+  <dc:date>2021-04-05T00:35:10+00:00</dc:date>
 </feed>
