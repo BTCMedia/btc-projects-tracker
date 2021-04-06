@@ -6,7 +6,39 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-06T08:20:54+00:00</updated>
+  <updated>2021-04-06T08:32:24+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.8</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.8"/>
+    <summary>**New**
+
+- RTL language support
+- Allow send MAX and BATCH for all wallet types
+- ANG and AWG currencies
+- Show fingerprint and derivation path for HD wallets
+
+**Fixed**
+
+- Aezeed onchain correct zpub
+- Address input QRcode denomination reset
+- Currency rates loader, add LPB new rate source
+- Import procedure improvements
+
+**Languages updates**
+
+French, Chinese (Simplified), Chinese (Traditional), Finnish, German, Dutch, Portuguese Brazilian, Greek, Indonesian, Italian, Japanese, Turkish, Polish, Persian, Romanian, Spanish and Czech .
+Join us here → https://www.transifex.com/bluewallet/bluewallet
+
+**Download**
+
+[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet.6.0.7.dmg)
+
+[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet-6.0.7.apk)
+</summary>
+    <title>BlueWallet/BlueWallet: v6.0.8</title>
+    <updated>2021-04-06T08:28:57Z</updated>
+    <dc:date>2021-04-06T08:28:57Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.8</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.8"/>
@@ -8138,174 +8170,5 @@ yyforyongyu </summary>
     <updated>2020-12-18T19:51:22Z</updated>
     <dc:date>2020-12-18T19:51:22Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/eclair/releases/tag/v0.5.0</id>
-    <link href="https://github.com/ACINQ/eclair/releases/tag/v0.5.0"/>
-    <summary># Eclair v0.5.0
-
-This release includes many exciting new features, API changes as well as several bug fixes and improvements.
-It is fully compatible with 0.4.2 (and all previous versions of eclair).
-
-# Major changes
-
-### Cluster mode
-
-Eclair now allows you to scale up one _logical_ lightning node across multiple servers.
-
-Front servers take care of routing table related gossip and syncing requests from peers, which is cpu/bandwidth intensive.
-The backend server can focus on core channel management.
-BOLT 1 and BOLT 7 messages are handled in the frontend, while BOLT 2 messages go through and are processed in the backend.
-
-This new feature is key for robust and scalable enterprise deployments.
-Head over to the [documentation](./docs/Cluster.md) for more details.
-
-### Blockchain watchdogs
-
-Eclair now includes a blockchain watchdog, that fetches bitcoin headers from various sources in order to detect whether we're being [eclipsed](https://eprint.iacr.org/2015/263.pdf).
-
-The current blockchain sources we use are:
-
-- blockchainheaders.net (headers over DNS)
-- blockstream.info
-- mempool.space
-
-### Seed segregation
-
-Eclair now splits your seed into two distinct parts: `node_seed.dat` and `channel_seed.dat`.
-
-It makes sense to separate the keys that are used for connection handling and gossip (and have no impact on your funds) from the keys that are used for channel operations (and have a direct, critical impact on your funds).
-
-This change paves the way for future security improvements, such as using hardware wallets for channel keys.
-
-### Per-node feerate tolerance
-
-On-chain feerate spikes have a subtle but important impact on the security of your channel funds.
-Eclair lets you configure the tolerance you have with your peers via the `eclair.on-chain-fees.feerate-tolerance` configuration parameter.
-
-With this release, you can now override this configuration for specific nodes.
-This can be useful when one of your peer is trusted and you know it won't try to cheat you (for example because it's one of your own nodes, a family member's node or a friend).
-You can configure a higher feerate tolerance with these nodes than with nodes you don't know or trust.
-
-### Plugin improvements
-
-More plugins hooks have been added to eclair, to allow custom connection management and custom commitment formats.
-Hats off to @btcontract who was able to implement [hosted channels](https://github.com/btcontract/hosted-channels-rfc) entirely as an eclair plugin!
-
-### API changes
-
-This release contains a few improvements to existing APIs:
-
-- The `channelId` field has been added to the `channel-state-changed` websocket event
-- Initial relay fees can be configured when opening a channel with the `open` API
-
-Head over to our [API documentation](https://acinq.github.io/eclair) for more details.
-
-### Miscellaneous improvements and bug fixes
-
-- #1617 lets you redirect traffic automatically from a tor node to a normal node
-- `option_static_remotekey` is now optionally activated by default
-
-# Verifying signatures
-
-You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-
-- from our website: https://acinq.co/pgp/drouinf.asc
-- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
-
-To import our signing key:
-
-```sh
-$ gpg --import drouinf.asc
-```
-
-To verify the release file checksums and signatures:
-
-```sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```
-
-# Building
-
-Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):
-
-- Ubuntu 19.10
-- AdoptOpenJDK 11.0.6
-- Maven 3.6.3
-
-Use the following command to generate the eclair-node package:
-
-```sh
-mvn clean install -DskipTests
-```
-
-That should generate `eclair-node/target/eclair-node-0.5.0-XXXXXXX-bin.zip` with sha256 checksums that match the one we provide and sign in `SHA256SUMS.asc`
-
-(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.
-
-# Upgrading
-
-This release is fully compatible with Eclair v0.4.2. You don't need to close your channels, just stop eclair, upgrade and restart.
-
-# Changelog
-
-- 131b2e01 Add workaround for lnd sync issue (#1563)
-- bffb7a3f Fix race condition in integration test (#1564)
-- 90bf08e6 Update akka to 2.6.10 (#1568)
-- 9c16bb75 Manual watching of peer-connection actor (#1567)
-- b0716aea Make `Commitments` a trait (#1542)
-- ad17683b (Minor) Fix `Features.toString` (#1573)
-- 98508f30 Fix empty replyTo in update_relay_fee (#1572)
-- e74f3458 Clarify crossSign helper functions (#1578)
-- 28f72e41 Remote address in ConnectionInfo (#1579)
-- baa22696 Rework features compatibility (#1576)
-- 1f90e5b8 Add per-node feerate tolerance (#1575)
-- 366f9bef Add a case object to get router data (#1581)
-- c5566540 Add blockchain watchdog (#1545)
-- f32e75b0 Segregate the node seed from the channel seed (#1584)
-- 59449bfc Increase docker timeouts for electrumx in tests (#1589)
-- c0d465c4 Fix NodeRelayer flaky test (#1588)
-- e5db3147 Allow plugins to provide broken HTLCs after a restart (#1586)
-- c0e38841 Add a test to ensure `NodeParams.nodeId` always equals `NodeParams.privateKey.publicKey` (#1593)
-- 54b589cb Improve MPP-send for direct channels (#1599)
-- 407b330f Remove `timedOutOutgoingHtlcs` from AbstractCommitments (#1604)
-- 06c95a7a Clarify trampoline to legacy diagram (#1607)
-- 6b32fd06 Allow plugins to force reconnect (#1594)
-- 8bfb9f08 Clean up bitcoinheaders error logs (#1606)
-- 6330e76d [CI] Exclude tests that call external APIs (#1622)
-- 848b4338 Ack htlc settlement commands after writing state (#1615)
-- ed61b577 Improve CustomCommitmentsPlugin methods (#1613)
-- ce73ef3a Allow overriding of Tor target (#1617)
-- 8cfa3f5c Set the same priority for all routing messages (#1624)
-- a2a980c7 Add channelId to websocket event (#1605)
-- 3ebf601a Minor: Less spammy and better logs (#1618)
-- 040e6d08 Retrieve bitcoin's mempool-min-fee (#1608)
-- a4d18456 Set initial relay fees during channel open (#1610)
-- 8d6af350 Add router API for invoice routing hints (#1590)
-- 4e567053 Remove old compatibility workaround for eclair mobile (#1625)
-- 08c21fa5 Distribute connection-handling on multiple machines using akka-cluster (#1566)
-- c13ae5e1 Set min-fee-rate to 2 sat/byte (#1626)
-- 0e5ec4dc Fix bug in enforceMinimumFeerate (#1629)
-- e8b47e14 Move fee provider configuration section (#1631)
-- 0ce993d6 fixup! Distribute connection-handling (#1566) (#1634)
-- c7cc536b Improve channel exceptions (#1585)
-- df7789ed Add metrics to track utxos (#1609)
-- ade17ecb Use a local actorsystem by default (#1636)
-- bbbd2294 Accept remote's closing fee when we have nothing at stake (#1633)
-- 95b34f27 Fix duplicate implicit btc amount conversions (#1637)
-- 810323ca Settle HTLCs revoked commit (#1630)
-- 30735b40 fixup! Settle HTLCs revoked commit (#1630) (#1638)
-- 183bdde0 Activate static_remotekey by default (#1639)
-- dae5eeed Disable the distibuted pubsub extension by default (#1642)
-- 413ee29d Fix htlc origin JSON serialization (#1641)
-- 9425fd4b Make PluginParams a simple trait (#1643)
-- 370fe416 Measure the distribution of payments across nodes (#1644)
-- 5e6c28e8 ElectrumWatcher: fix for unconfirmed txs (#1647)
-- 39d9bfbe Add cluster doc, and packaging improvements (#1646)
-- d44ff85d (Minor) Improve logs (#1648)</summary>
-    <title>ACINQ/eclair: v0.5.0</title>
-    <updated>2020-12-18T14:30:44Z</updated>
-    <dc:date>2020-12-18T14:30:44Z</dc:date>
-  </entry>
-  <dc:date>2021-04-06T08:20:54+00:00</dc:date>
+  <dc:date>2021-04-06T08:32:24+00:00</dc:date>
 </feed>
