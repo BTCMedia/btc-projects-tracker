@@ -6,7 +6,39 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-15T15:24:23+00:00</updated>
+  <updated>2021-04-15T15:32:59+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.9</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.9"/>
+    <summary>## Main changes
+
+This release fixes an issue with channels opening, where on-the-fly channel creation could timeout immediately if device's clock was off.
+
+## Complete list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.8...v1.4.9
+- **core**: https://github.com/ACINQ/eclair/compare/v0.4.9-android-phoenix...v0.4.10-android-phoenix
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.9</title>
+    <updated>2021-04-15T15:30:10Z</updated>
+    <dc:date>2021-04-15T15:30:10Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.8</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.8"/>
@@ -8155,20 +8187,5 @@ yyforyongyu </summary>
     <updated>2020-12-19T01:34:49Z</updated>
     <dc:date>2020-12-19T01:34:49Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.1</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.1"/>
-    <summary>- ADD: enable batch-send on multisig wallets
-- FIX: Speed-up multisig wallets (disable handoff for multisig)
-- FIX: Import Multisig from Specter Desktop - Fingerprint is Incorrect
-- FIX: broken export .txn file on tx confirmation screen
-- FIX: backup screen would flash during loading on dark mode
-- FIX: Handle opening links if the default browser isn't Safari
-- FIX: contradiction in Vault introduction text
-- FIX: localizations for CA, DE, ES, fa_IR, sl_SI, cs_CZ, pt_BR</summary>
-    <title>BlueWallet/BlueWallet: v6.0.1</title>
-    <updated>2020-12-18T19:51:22Z</updated>
-    <dc:date>2020-12-18T19:51:22Z</dc:date>
-  </entry>
-  <dc:date>2021-04-15T15:24:23+00:00</dc:date>
+  <dc:date>2021-04-15T15:32:59+00:00</dc:date>
 </feed>

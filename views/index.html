@@ -38,6 +38,48 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.9">v1.4.9</a>
+						    </h2>
+							<p class="card-text">Published: 2021-04-15 15:30:10 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Main changes</h2>
+
+<p>This release fixes an issue with channels opening, where on-the-fly channel creation could timeout immediately if device&#39;s clock was off.</p>
+
+<h2>Complete list of changes</h2>
+
+<ul>
+<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.8...v1.4.9">https://github.com/ACINQ/phoenix/compare/v1.4.8...v1.4.9</a></li>
+<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.9-android-phoenix...v0.4.10-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.9-android-phoenix...v0.4.10-android-phoenix</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
+- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import drouinf.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.9" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.8">v6.0.8</a>
 						    </h2>
 							<p class="card-text">Published: 2021-04-06 08:28:57 UTC</p>
@@ -9761,31 +9803,6 @@ yyforyongyu </p>
 </p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc2" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.1">v6.0.1</a>
-						    </h2>
-							<p class="card-text">Published: 2020-12-18 19:51:22 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><ul>
-<li>ADD: enable batch-send on multisig wallets</li>
-<li>FIX: Speed-up multisig wallets (disable handoff for multisig)</li>
-<li>FIX: Import Multisig from Specter Desktop - Fingerprint is Incorrect</li>
-<li>FIX: broken export .txn file on tx confirmation screen</li>
-<li>FIX: backup screen would flash during loading on dark mode</li>
-<li>FIX: Handle opening links if the default browser isn&#39;t Safari</li>
-<li>FIX: contradiction in Vault introduction text</li>
-<li>FIX: localizations for CA, DE, ES, fa<em>IR, sl</em>SI, cs<em>CZ, pt</em>BR</li>
-</ul>
-</p>
-					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
