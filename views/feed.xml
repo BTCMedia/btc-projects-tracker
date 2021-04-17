@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-17T07:24:46+00:00</updated>
+  <updated>2021-04-17T07:33:35+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.9</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.9"/>
@@ -8187,5 +8187,5 @@ yyforyongyu </summary>
     <updated>2020-12-19T01:34:49Z</updated>
     <dc:date>2020-12-19T01:34:49Z</dc:date>
   </entry>
-  <dc:date>2021-04-17T07:24:46+00:00</dc:date>
+  <dc:date>2021-04-17T07:33:35+00:00</dc:date>
 </feed>
