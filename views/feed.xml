@@ -6,11 +6,13 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-20T10:42:02+00:00</updated>
+  <updated>2021-04-20T10:54:16+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1-pre2</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1-pre2"/>
-    <summary></summary>
+    <summary>This is a Pre-release. It's mostly relevant for people who want to test the Fix for the Bitbox2 issue:
+https://github.com/cryptoadvance/specter-desktop/pull/1090
+</summary>
     <title>cryptoadvance/specter-desktop: v1.3.1-pre2</title>
     <updated>2021-04-20T10:29:50Z</updated>
     <dc:date>2021-04-20T10:29:50Z</dc:date>
@@ -7776,5 +7778,5 @@ Changes to notice while testing:
     <updated>2020-12-21T13:54:58Z</updated>
     <dc:date>2020-12-21T13:54:58Z</dc:date>
   </entry>
-  <dc:date>2021-04-20T10:42:02+00:00</dc:date>
+  <dc:date>2021-04-20T10:54:16+00:00</dc:date>
 </feed>
