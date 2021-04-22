@@ -6,7 +6,46 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-22T17:22:47+00:00</updated>
+  <updated>2021-04-22T17:34:05+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.10</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.10"/>
+    <summary>## Main changes
+
+### Reject invoices that have already been paid
+
+The app now checks if an invoice has already been paid before sending. This does not work if the app has been restored and the payment is not in the database anymore.
+
+### Add information notice when the pay-to-open and swap-in features are disabled
+
+Channel creation features involve on-chain operations and may be disabled when the mempool is congested. The app now degrades gracefully and properly informs the user, and also prevents using the swap-in feature.
+
+Note that in that case the user is still able to receive using existing channels.
+
+## Complete list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.9...v1.4.10
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.10</title>
+    <updated>2021-04-22T17:30:12Z</updated>
+    <dc:date>2021-04-22T17:30:12Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1-pre2</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1-pre2"/>
@@ -7761,22 +7800,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-12-21T16:07:38Z</updated>
     <dc:date>2020-12-21T16:07:38Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre2</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre2"/>
-    <summary>### This is a pre-release! Do not use unless you're sure know what you're doing!
-
-This is a pre-release for beta-testing the next version of Specter.
-
-Changes to notice while testing:
-- Export transactions history, UTXOs, and addresses to CSV
-- Reorganize the UTXO screen
-- Label any address from any screen it is at.
-- Sorting, searching, page limit, of the transactions/ utxo lists.
-- New Tor tab in the settings for managing the connections over Tor and the Specter Tor hidden service</summary>
-    <title>cryptoadvance/specter-desktop: v0.11.0-pre2</title>
-    <updated>2020-12-21T13:54:58Z</updated>
-    <dc:date>2020-12-21T13:54:58Z</dc:date>
-  </entry>
-  <dc:date>2021-04-22T17:22:47+00:00</dc:date>
+  <dc:date>2021-04-22T17:34:05+00:00</dc:date>
 </feed>
