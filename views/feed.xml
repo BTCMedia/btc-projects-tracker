@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-23T09:05:37+00:00</updated>
+  <updated>2021-04-23T09:13:09+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.10</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.10"/>
@@ -7800,5 +7800,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-12-21T16:07:38Z</updated>
     <dc:date>2020-12-21T16:07:38Z</dc:date>
   </entry>
-  <dc:date>2021-04-23T09:05:37+00:00</dc:date>
+  <dc:date>2021-04-23T09:13:09+00:00</dc:date>
 </feed>
