@@ -6,7 +6,21 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-23T13:41:16+00:00</updated>
+  <updated>2021-04-23T13:54:16+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.9</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.9"/>
+    <summary>Umbrel v0.3.9 brings up to 5x faster performance, a brand new way to troubleshoot, always online Lightning node, wider support for SSDs and enclosures, connection support for LilyWallet, bug fixes, and more.
+
+Note: It may take up to 5 minutes for Lightning and Bitcoin Core data to appear after the update.
+
+If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
+
+Diff: https://github.com/getumbrel/umbrel/compare/v0.3.8...v0.3.9</summary>
+    <title>getumbrel/umbrel: v0.3.9</title>
+    <updated>2021-04-23T13:52:43Z</updated>
+    <dc:date>2021-04-23T13:52:43Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.10</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.10"/>
@@ -7792,13 +7806,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-12-22T15:04:56Z</updated>
     <dc:date>2020-12-22T15:04:56Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.4</id>
-    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.4"/>
-    <summary>Adding Coldcard support to caravan</summary>
-    <title>unchained-capital/caravan: v0.3.4</title>
-    <updated>2020-12-21T16:07:38Z</updated>
-    <dc:date>2020-12-21T16:07:38Z</dc:date>
-  </entry>
-  <dc:date>2021-04-23T13:41:16+00:00</dc:date>
+  <dc:date>2021-04-23T13:54:16+00:00</dc:date>
 </feed>
