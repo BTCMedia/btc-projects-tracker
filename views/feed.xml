@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-23T15:43:26+00:00</updated>
+  <updated>2021-04-23T15:51:43+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.9</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.9"/>
@@ -7806,5 +7806,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-12-22T15:04:56Z</updated>
     <dc:date>2020-12-22T15:04:56Z</dc:date>
   </entry>
-  <dc:date>2021-04-23T15:43:26+00:00</dc:date>
+  <dc:date>2021-04-23T15:51:43+00:00</dc:date>
 </feed>
