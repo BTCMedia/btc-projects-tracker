@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-25T15:54:12+00:00</updated>
+  <updated>2021-04-25T16:10:09+00:00</updated>
+  <entry>
+    <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.0</id>
+    <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.0"/>
+    <summary>Tor by default, 64-bit base image, update apps, migration from other node projects</summary>
+    <title>rootzoll/raspiblitz: v1.7.0</title>
+    <updated>2021-04-25T16:07:47Z</updated>
+    <dc:date>2021-04-25T16:07:47Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.9</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.9"/>
@@ -7620,191 +7628,5 @@ Changes to notice while testing:
     <updated>2020-12-26T16:15:48Z</updated>
     <dc:date>2020-12-26T16:15:48Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.2</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.2"/>
-    <summary>**A newer version is already available! Please don’t use this version anymore.**
-
-## Release notes
-This release improves transaction handling in certain edge cases and contains multiple fixes making Bisq more reliable in general. There are also some notable UI updates for the payment accounts and offer book screens.
-
-### DAO
-- [Fix bsq to fiat calculation](https://github.com/bisq-network/bisq/pull/4909)
-- [Use 30 days average USD/BSQ price for market cap](https://github.com/bisq-network/bisq/pull/4781)
-
-### UI
-- [Sort payment methods by display string not by id](https://github.com/bisq-network/bisq/pull/4956)
-- [Make sign age column sortable](https://github.com/bisq-network/bisq/pull/4929)
-- [Improve UI/UX for account aging column in 'Offers' section of GUI](https://github.com/bisq-network/bisq/pull/4814)
-- [Fix sorting of table columns in portfolio section](https://github.com/bisq-network/bisq/pull/4923)
-- [Improve funds and portfolio screens](https://github.com/bisq-network/bisq/pull/4933)
-- [Account management usability improvements](https://github.com/bisq-network/bisq/pull/4863)
-- [Improve usage of available space in accounts section](https://github.com/bisq-network/bisq/pull/4914)
-- [Improved Offer Book chart outlier filter](https://github.com/bisq-network/bisq/pull/4892)
-- [Prevent annoying popup errors for unhandled systray exception.](https://github.com/bisq-network/bisq/pull/4874)
-- [Fix warning about rejected transaction](https://github.com/bisq-network/bisq/pull/4877)
-- [Improve startup info display](https://github.com/bisq-network/bisq/pull/4850)
-- [Rename getsAll payout option string](https://github.com/bisq-network/bisq/pull/4825)
-- [Fix private notification style issue in dark mode](https://github.com/bisq-network/bisq/pull/4968)
-
-### Trading
-- [Handle unconfirmed deposit tx in pending trades](https://github.com/bisq-network/bisq/pull/4962)
-- [Fix bug with maker fee tx at create offer](https://github.com/bisq-network/bisq/pull/4947)
-- [Detect and handle invalid maker fee tx](https://github.com/bisq-network/bisq/pull/4917)
-- [Detect missing deposit tx to allow moving to failed trades](https://github.com/bisq-network/bisq/pull/4921)
-- [Allow take offer in case account age witness is not found and trade amount is small](https://github.com/bisq-network/bisq/pull/4897)
-- [Add taker check for deposit amount](https://github.com/bisq-network/bisq/pull/4860)
-- [Don't allow trade start if BitcoinJ is not fully synced](https://github.com/bisq-network/bisq/pull/4764)
-- [Show price deviation in % for fixed price offers and BSQ](https://github.com/bisq-network/bisq/pull/4949)
-- [Show price deviation in portfolio open offers and history view](https://github.com/bisq-network/bisq/pull/4845)
-- [Improve TransferWise account wording and defaults currency selections](https://github.com/bisq-network/bisq/pull/4944)
-- [Remove NGN (Nigerian Naira) as their central bank blocked Transferwise](https://github.com/bisq-network/bisq/pull/4976)
-- [Add extra note for Amazon gift cards](https://github.com/bisq-network/bisq/pull/4977)
-- [Add memo field at withdraw to external wallet screen after successful trade](https://github.com/bisq-network/bisq/pull/4908)
-- [Create JSON files of actively traded crypto and fiat assets](https://github.com/bisq-network/bisq/pull/4831)
-
-### Wallet
-- [Fix emergency payout](https://github.com/bisq-network/bisq/pull/4859)
-- [Prompt for confirmation before initiating SPV resync](https://github.com/bisq-network/bisq/pull/4841)
-- [Add encrypted wallet password prompt when sending funds from BSQ wallet](https://github.com/bisq-network/bisq/pull/4780)
-- [Add wallet info view](https://github.com/bisq-network/bisq/pull/4935)
-
-### Reliability
-- [Add tx broadcast to mempool explorer api](https://github.com/bisq-network/bisq/pull/4943)
-- [Refactor http client](https://github.com/bisq-network/bisq/pull/4942)
-- [Prevent that we write data at shutdown before we have read the data](https://github.com/bisq-network/bisq/pull/4907)
-- [Improve shutdown routine](https://github.com/bisq-network/bisq/pull/4927)
-- [Add 1 sec delay before calling exit](https://github.com/bisq-network/bisq/pull/4843)
-- [Call completeHandler if services in store services is empty](https://github.com/bisq-network/bisq/pull/4963)
-
-### Mediation/Arbitration
-- [Privacy improvements for manual payout](https://github.com/bisq-network/bisq/pull/4899)
-- [Option to sign single account for market bootstrapping](https://github.com/bisq-network/bisq/pull/4957)
-- [Allow sending private notifications from avatar icon at trade](https://github.com/bisq-network/bisq/pull/4952)
-- [Add error log for dispute failure](https://github.com/bisq-network/bisq/pull/4822)
-
-### Performance
-- [Various small performance improvements](https://github.com/bisq-network/bisq/pull/4954)
-- [Cache results of isFiatCurrency and isCryptoCurrency](https://github.com/bisq-network/bisq/pull/4955)
-- [Replace use of Collections to FXCollections in desktop](https://github.com/bisq-network/bisq/pull/4875)
-
-### Network
-- [Revert TTL of mailbox messages to original value of 15 days.](https://github.com/bisq-network/bisq/pull/4920)
-- [Improve filter](https://github.com/bisq-network/bisq/pull/4817)
-- [Use data store diffs also for AccountAgeWitnesses](https://github.com/bisq-network/bisq/pull/4930)
-- [Remove m52go btc node ip](https://github.com/bisq-network/bisq/pull/4961)
-- [In seednode installer, don't run random shell script to install git lfs](https://github.com/bisq-network/bisq/pull/4848)
-
-### API
-- [Add api method 'sendbtc'](https://github.com/bisq-network/bisq/pull/4901)
-- [Add api method 'getpaymentacctform'](https://github.com/bisq-network/bisq/pull/4819)
-- [Add api method 'getpaymentmethods'](https://github.com/bisq-network/bisq/pull/4818)
-- [Add api method 'getbalance(s)'](https://github.com/bisq-network/bisq/pull/4799)
-- [Add api method 'confirmpaymentreceived'](https://github.com/bisq-network/bisq/pull/4669)
-- [Add api method 'confirmpaymentsent'](https://github.com/bisq-network/bisq/pull/4668)
-- [Add api method 'takeoffer'](https://github.com/bisq-network/bisq/pull/4667)
-- Add api method 'getunusedbsqaddress': [1](https://github.com/bisq-network/bisq/pull/4798), [2](https://github.com/bisq-network/bisq/pull/4773)
-- [Add tx fee rate api methods: gettxfeerate, settxfeerate, unsettxfeerate](https://github.com/bisq-network/bisq/pull/4858)
-- [Shut down rpc service at app shut down routine](https://github.com/bisq-network/bisq/pull/4852)
-
-### Development
-- [Don't shut down seed in regtest mode if all connections lost](https://github.com/bisq-network/bisq/pull/4898)
-
-### Assets
-No new assets.
-
-## Verification
-
-Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
-Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
-
-Import the key:
-`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
-
-How to verify signatures?
-`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
-Replace BINARY with the file you downloaded (e.g. Bisq-1.5.2.dmg)
-
-Verify jar file inside binary:
-You can verify on OSX the jar file with:
-`shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.2.jar`
-The output need to match the value from the Bisq-1.5.2.jar.txt file.
-
-
-## Known issues with installation 
-
-### macOS Catalina:
-
-&gt; Bisq can't be opened because Apple cannot check it for malicious software
-
-This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).
-
-Workaround: Right click on the installed Bisq app &gt; Click `Open` (warning popup shown again, but with new button available) &gt; Click `Open`
-
-&gt; Bisq would like to receive keystrokes from any application.
-
-Discussed in issue https://github.com/bisq-network/bisq/issues/3373, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.
-
-### Windows:
-
-~The binary of this version is not signed by a code signing certificate right now as it was in previous versions. This is because of an expired certificate that wasn't renewed in-time. It will be signed on 28th of Dec with the newly received certificate and this note will be removed afterwards.~ The Windows binary was signed on Dec 27th and uploaded together with an updated signature file.
-
-There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
-
-If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
-
-[1] Application directory (contains application installation files):
-C:\Users\&lt;username&gt;\AppData\Local\Bisq
-
-[2] Data directory (contains all Bisq data including wallet):
-C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
-
-
-### Linux:
-
-Hint for Debian users:
-If you have problems starting Bisq on Debian use: `/opt/Bisq/Bisq`
-
-If your Linux distro does not support .deb files please follow this instruction:
-```
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.5.2.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-```
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Cleanup tool for saved trades that failed market price check
-
-With this release we are also shipping a cleanup tool (Bisq-cleanup-trades*). It will remove corrupt trade entries added due to bug https://github.com/bisq-network/bisq/issues/2924. Install and run once, it will shut down automatically, then install version 1.5.2 or later. You can verify the binary the same way as you do with the Bisq application.
-
-## Credits
-
-Thanks to everyone who directly contributed to this release:
-
-- @chimp1984
-- @ripcurlx 
-- @deusmax 
-- @ghubstan
-- @jmacxx 
-- @m52go 
-- @oscarguindzberg 
-- @sqrrm 
-- @stejbac 
-- @wiz
-
-A special thanks to our first time contributors:
-
-- @Jakub-CZ: [Fix warning about rejected transaction](https://github.com/bisq-network/bisq/pull/4877)
-- @huey735: [Rename getsAll payout option string](https://github.com/bisq-network/bisq/pull/4825)
-
-As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
-    <title>bisq-network/bisq: v1.5.2</title>
-    <updated>2020-12-22T15:04:56Z</updated>
-    <dc:date>2020-12-22T15:04:56Z</dc:date>
-  </entry>
-  <dc:date>2021-04-25T15:54:12+00:00</dc:date>
+  <dc:date>2021-04-25T16:10:09+00:00</dc:date>
 </feed>
