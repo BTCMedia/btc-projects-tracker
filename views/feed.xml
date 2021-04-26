@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-26T22:10:24+00:00</updated>
+  <updated>2021-04-26T22:12:22+00:00</updated>
+  <entry>
+    <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0-RC</id>
+    <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0-RC"/>
+    <summary></summary>
+    <title>rsksmart/rskj: IRIS-3.0.0-RC</title>
+    <updated>2021-04-26T22:12:17Z</updated>
+    <dc:date>2021-04-26T22:12:17Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1"/>
@@ -7643,25 +7651,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-12-30T13:52:55Z</updated>
     <dc:date>2020-12-30T13:52:55Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre4</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre4"/>
-    <summary>### This is a pre-release! Do not use unless you're sure know what you're doing!
-
-This is a pre-release for beta-testing the next version of Specter.
-
-Changes to notice while testing:
-- Fix Coldcard signing issue when exporting to Electrum
-- Fix wrong address type inPDF backup
-- Fix issue when camera is open and scanning doesn't work for too long.
-- Export transactions history, UTXOs, and addresses to CSV
-- Reorganize the UTXO screen
-- Label any address from any screen it is at.
-- Sorting, searching, page limit, of the transactions/ utxo lists.
-- New Tor tab in the settings for managing the connections over Tor and the Specter Tor hidden service</summary>
-    <title>cryptoadvance/specter-desktop: v0.11.0-pre4</title>
-    <updated>2020-12-28T13:43:43Z</updated>
-    <dc:date>2020-12-28T13:43:43Z</dc:date>
-  </entry>
-  <dc:date>2021-04-26T22:10:24+00:00</dc:date>
+  <dc:date>2021-04-26T22:12:22+00:00</dc:date>
 </feed>
