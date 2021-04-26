@@ -43,7 +43,61 @@
 							<p class="card-text">Published: 2021-04-26 12:17:02 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"></p>
+					    <p class="card-text"><h1>Binaries</h1>
+
+<p>There are two types of binaries:</p>
+
+<h2>Specter Desktop</h2>
+
+<p>It&#39;s a windowed GUI application with Specter server included.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/Specter-Setup-v1.3.1.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/SpecterDesktop-v1.3.1.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/specter_desktop-v1.3.1-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
+
+<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
+
+<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
+
+<h2>specterd</h2>
+
+<p>It&#39;s a command-line program that only runs Specter server.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/specterd-v1.3.1-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/specterd-v1.3.1-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/specterd-v1.3.1-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
+
+<h2>Signatures and hashes</h2>
+
+<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @ben-kaufman&#39;s GPG key.
+You can get the public key from here: <a href="https://benkaufman.info/ben-kaufman.asc">https://benkaufman.info/ben-kaufman.asc</a>.
+It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x5D27DE564153F2BD">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD">keys.openpgp.org</a>.
+Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD</code>, short id: <code>5d27de564153f2bd</code></p>
+
+<h1>Release notes</h1>
+
+<ul>
+<li>Feature: Add unconfirmed tx fees data  #1085 (benk10)</li>
+<li>Feature: Use RPCAuth instead of username + password #1093 (benk10)</li>
+<li>Feature: Return to/ cancel setup process #1091 (benk10)</li>
+<li>UIUX: Show user-friendly error messages when session expires #1087 (benk10)</li>
+<li>UIUX: Use Bitcoin icon set #1080 (benk10)</li>
+<li>Docs: Update faq.md #1123 (Kim Neunert)</li>
+<li>Docs: added build-instructions #1077 (Kim Neunert) </li>
+<li>Bugfix: BitBox02 timeout issue #1090 (benk10)</li>
+<li>Bugfix: Fix crash if estimatesmartfee fails #1086 (benk10)</li>
+<li>Bugfix: typo/exception #1102 (djpnewton)</li>
+<li>Bugfix: #1073 #1094 (benk10)</li>
+<li>Bugfix: #987 #1088 (benk10)</li>
+<li>Bugfix: arrow down svg #1125 (benk10)</li>
+<li>Bugfix: del user with wallets #1126 (Stepan Snigirev)</li>
+<li>Bugfix: month names #1069 (Kim Neunert)</li>
+<li>Bugfix: truncated PDF #1095 (benk10)</li>
+<li>Bugfix: UI issues #1084 (benk10)</li>
+<li>Bugfix: using correct image for gitlab #1127 (Kim Neunert)</li>
+<li>Bugfix: Improve tx-table and addresses-table render performance #1122 (Will Cosgrove)</li>
+<li>Chore: Bump y18n from 5.0.4 to 5.0.8 in /pyinstaller/electron #1114 (dependabot[bot])</li>
+<li>Chore: Refactoring new device setup #1111 (benk10)</li>
+<li>Chore: allow python version 3.9.X after upgrade to HWI 2.0.1 #1104 (djpnewton)</li>
+<li>Chore: upgrade wait-on and axios #1124 (Kim Neunert)</li>
+<li>Chore: refactor check_methods out of specter #1106 (Kim Neunert)</li>
+<li>Chore: Refactor setup wizard #1120 (benk10)</li>
+</ul>
+</p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>

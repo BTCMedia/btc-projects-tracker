@@ -6,11 +6,58 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-26T13:41:32+00:00</updated>
+  <updated>2021-04-26T13:51:07+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1"/>
-    <summary></summary>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/Specter-Setup-v1.3.1.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/SpecterDesktop-v1.3.1.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/specter_desktop-v1.3.1-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/specterd-v1.3.1-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/specterd-v1.3.1-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/specterd-v1.3.1-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.3.1/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
+You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
+It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
+Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`
+
+# Release notes
+- Feature: Add unconfirmed tx fees data  #1085 (benk10)
+- Feature: Use RPCAuth instead of username + password #1093 (benk10)
+- Feature: Return to/ cancel setup process #1091 (benk10)
+- UIUX: Show user-friendly error messages when session expires #1087 (benk10)
+- UIUX: Use Bitcoin icon set #1080 (benk10)
+- Docs: Update faq.md #1123 (Kim Neunert)
+- Docs: added build-instructions #1077 (Kim Neunert) 
+- Bugfix: BitBox02 timeout issue #1090 (benk10)
+- Bugfix: Fix crash if estimatesmartfee fails #1086 (benk10)
+- Bugfix: typo/exception #1102 (djpnewton)
+- Bugfix: #1073 #1094 (benk10)
+- Bugfix: #987 #1088 (benk10)
+- Bugfix: arrow down svg #1125 (benk10)
+- Bugfix: del user with wallets #1126 (Stepan Snigirev)
+- Bugfix: month names #1069 (Kim Neunert)
+- Bugfix: truncated PDF #1095 (benk10)
+- Bugfix: UI issues #1084 (benk10)
+- Bugfix: using correct image for gitlab #1127 (Kim Neunert)
+- Bugfix: Improve tx-table and addresses-table render performance #1122 (Will Cosgrove)
+- Chore: Bump y18n from 5.0.4 to 5.0.8 in /pyinstaller/electron #1114 (dependabot[bot])
+- Chore: Refactoring new device setup #1111 (benk10)
+- Chore: allow python version 3.9.X after upgrade to HWI 2.0.1 #1104 (djpnewton)
+- Chore: upgrade wait-on and axios #1124 (Kim Neunert)
+- Chore: refactor check_methods out of specter #1106 (Kim Neunert)
+- Chore: Refactor setup wizard #1120 (benk10)</summary>
     <title>cryptoadvance/specter-desktop: v1.3.1</title>
     <updated>2021-04-26T12:17:02Z</updated>
     <dc:date>2021-04-26T12:17:02Z</dc:date>
@@ -7616,5 +7663,5 @@ Changes to notice while testing:
     <updated>2020-12-28T13:43:43Z</updated>
     <dc:date>2020-12-28T13:43:43Z</dc:date>
   </entry>
-  <dc:date>2021-04-26T13:41:32+00:00</dc:date>
+  <dc:date>2021-04-26T13:51:07+00:00</dc:date>
 </feed>
