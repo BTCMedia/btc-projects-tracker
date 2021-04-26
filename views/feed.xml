@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-26T08:34:35+00:00</updated>
+  <updated>2021-04-26T08:43:55+00:00</updated>
   <entry>
     <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.0</id>
     <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.0"/>
@@ -7628,5 +7628,5 @@ Changes to notice while testing:
     <updated>2020-12-26T16:15:48Z</updated>
     <dc:date>2020-12-26T16:15:48Z</dc:date>
   </entry>
-  <dc:date>2021-04-26T08:34:35+00:00</dc:date>
+  <dc:date>2021-04-26T08:43:55+00:00</dc:date>
 </feed>
