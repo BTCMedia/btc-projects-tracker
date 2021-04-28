@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-04-28T06:05:18+00:00</updated>
+  <updated>2021-04-28T06:10:39+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1"/>
@@ -7663,5 +7663,5 @@ Changes to notice while testing:
     <updated>2020-12-28T13:43:43Z</updated>
     <dc:date>2020-12-28T13:43:43Z</dc:date>
   </entry>
-  <dc:date>2021-04-28T06:05:18+00:00</dc:date>
+  <dc:date>2021-04-28T06:10:39+00:00</dc:date>
 </feed>
