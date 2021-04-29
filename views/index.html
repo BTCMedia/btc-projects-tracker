@@ -38,6 +38,70 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.1.0">v1.1.0</a>
+						    </h2>
+							<p class="card-text">Published: 2021-04-29 15:20:52 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Improvements:</h3>
+
+<ul>
+<li>Improving navigation between files and storage services and rewording info text (#2272) @rockstardev</li>
+<li>UI: Header and navigation improvements (#2412 #2378) @dennisreimann @dstrukt</li>
+<li>Plugins will be disabled in the case of an unrecoverable runtime error caused by a plugin @Kukks</li>
+<li>UI: Improve Lightning setup page (#2348 #2477) @dennisreimann @dstrukt</li>
+<li>Greenfield: Provides unconf/conf balance, keypath + address + timestamp + confirmation count of utxos @Kukks</li>
+<li>Add <code>BTCPAY_TOR_SERVICES</code> configuration to expose tor services via the server settings. Useful for integration with self-hosted node such as Umbrel (#2388) @Kukks @junderw</li>
+<li>Payment methods can be toggled directly from the update store page, rather than inside the page of each payment method (#2469) @dennisreimann</li>
+<li>Start separation of Coinswitch feature and Shopify integration as plugins (#2384 #2390) @Kukks </li>
+<li>Greenfield: Ability to pass more query parameters to filter results of api/v1/invoices @SakerOmera</li>
+<li>Human friendly error if webhook or webhook delivery not found @NicolasDorier</li>
+<li>Add button to copy API key to clipboard (#2439) @ubolator</li>
+</ul>
+
+<h3>New features:</h3>
+
+<ul>
+<li>Support WebAuthN/FIDO2 as second factor @Kukks</li>
+<li>Can get a receive address in the wallet accepting Payjoin (without creating an invoice) @Kukks</li>
+<li>Can disable modification of SSH settings via the server settings to prevent escalation of privilege. (See #2468) @NicolasDorier</li>
+<li>Manual coin selection has a &quot;confirmed utxo&quot; filter @Kukks</li>
+<li>Greenfield: Can query fee rate @Kukks</li>
+<li>New setting for checkout: Ability to activate specific payment methods after the creation of the invoice @xpayserver @Kukks @rockstardev </li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Fix: Clicking on &quot;Unreserve this address&quot; was not properly reflected in the UI @Kukks</li>
+<li>Fix: Block explorer links for signet @kristapsk</li>
+<li>Fix: Typo in PoS cart view (#2428) @MaxHillebrand</li>
+<li>Allow accessing &quot;misc/lang&quot; endpoint with Greenfield auth schemes (#2471) @bolatovumar</li>
+<li>Greenfield: Fix typo of webhook type OrignalDeliveryId =&gt; OriginalDeliveryId @NicolasDorier</li>
+<li>If the posData property of invoice metadata was not a JObject, the invoice would crash @Kukks</li>
+<li>If a store was created via the Greenfield API, warning signs of unconfigured stores would not appear. (Fix #2434) @bolatovumar</li>
+<li>Do not crash if plugin folder mismatches plugin identifier @Kukks </li>
+<li>Fix notification count on mobile (#2483) @dennisreimann </li>
+<li>Fix: Passing invalid query parameters or route value in the Greenfield API should returns HTTP 422 + validation details rather than empty 400. @NicolasDorier</li>
+<li>Greenfield: Deleting a store in the server, should delete only webhooks of this store @NicolasDorier</li>
+</ul>
+
+<h3>Miscellaneous</h3>
+
+<ul>
+<li>Add user id in logs when somebody logs in. @NicolasDorier</li>
+<li>Fix: Json type in doc API @g33kme</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.1.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.3.1">v1.3.1</a>
 						    </h2>
 							<p class="card-text">Published: 2021-04-26 12:17:02 UTC</p>
@@ -9211,34 +9275,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre4">v0.11.0-pre4</a>
-						    </h2>
-							<p class="card-text">Published: 2020-12-28 13:43:43 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>This is a pre-release! Do not use unless you&#39;re sure know what you&#39;re doing!</h3>
-
-<p>This is a pre-release for beta-testing the next version of Specter.</p>
-
-<p>Changes to notice while testing:
-- Fix Coldcard signing issue when exporting to Electrum
-- Fix wrong address type inPDF backup
-- Fix issue when camera is open and scanning doesn&#39;t work for too long.
-- Export transactions history, UTXOs, and addresses to CSV
-- Reorganize the UTXO screen
-- Label any address from any screen it is at.
-- Sorting, searching, page limit, of the transactions/ utxo lists.
-- New Tor tab in the settings for managing the connections over Tor and the Specter Tor hidden service</p>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre4" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
