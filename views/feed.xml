@@ -6,7 +6,120 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-01T08:24:09+00:00</updated>
+  <updated>2021-05-01T08:35:20+00:00</updated>
+  <entry>
+    <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.3</id>
+    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.3"/>
+    <summary>## Release notes
+This release ships the remaining functionality to create BSQ SegWit transactions to save on mining fees. You can also now easily create copies of existing (and past) offers. This release also leverages a new build system using an up-to-date Java runtime (Java 15) and UI library (JavaFX 15) that produces binaries that should be more reliable. And as always...there are many bug fixes and refinements. ​
+
+### Improvements
+- [Wallet changes for SegWit BSQ implementation](https://github.com/bisq-network/bisq/pull/5109)
+- [Upgrade Java, JavaFX and binary packaging](https://github.com/bisq-network/bisq/pull/5431)
+  - Get rid of macOS security warnings and unnecessary key logging permission request
+  - Getting LTS support (security fixes,...) for upgrading to Java 11 for compilation and Java 15 for runtime
+  - Fix various UI issues on certain OSes due JavaFX upgrade to v15
+- [Functionality to duplicate an offer](https://github.com/bisq-network/bisq/pull/5423)
+- [Add custom withdrawal transaction fee options on Send funds (BTC)](https://github.com/bisq-network/bisq/pull/5312)
+- [Message sign verify functionality compatible with Bitcoin core &amp; electrum](https://github.com/bisq-network/bisq/pull/5375)
+- [Show a SPV resync suggestion if trade remains unconfirmed for 3 hours or more](https://github.com/bisq-network/bisq/pull/5427)
+- [Allow Revolut username to be minimum 3 characters](https://github.com/bisq-network/bisq/pull/5425)
+- [Disputes UI improvements](https://github.com/bisq-network/bisq/pull/5370)
+- [Hide unnecessary bank id in offer details](https://github.com/bisq-network/bisq/pull/5234)
+- [Tweak wording for takeOffer.fundsBox.isOfferAvailable](https://github.com/bisq-network/bisq/pull/5402)
+- [CashByMail show terms and conditions upon taking an offer](https://github.com/bisq-network/bisq/pull/5399)
+- [Add BTC node wubwzaadboxwiffa.onion](https://github.com/bisq-network/bisq/pull/5397)
+
+### Bug fixes
+- [Wait for AckMessage before completing BuyerSendCounterCurrencyTransferStartedMessage task](https://github.com/bisq-network/bisq/pull/5401)
+- [Fix shutdown persistence issue in Seednode](https://github.com/bisq-network/bisq/pull/5388)
+- [Handle rounding of infinite Doubles](https://github.com/bisq-network/bisq/pull/5374)
+
+### API
+- [Update apitest docs for bitcoin-core v0.21 compatibility](https://github.com/bisq-network/bisq/pull/5421)
+- [Adjust to changing minimum tx fee rates](https://github.com/bisq-network/bisq/pull/5420)
+- [Complete API support for BSQ/BTC trade pair](https://github.com/bisq-network/bisq/pull/5412)
+- [Add api method createcryptopaymentacct](https://github.com/bisq-network/bisq/pull/5356)
+- [Provide more offer &amp; contract detail to CLI](https://github.com/bisq-network/bisq/pull/5357)
+
+### Development &amp; Documentation
+- [Generate more than 1 block(regtest)](https://github.com/bisq-network/bisq/pull/5355)
+- [docs/build.md: Emphasize JDK requirements + formatting](https://github.com/bisq-network/bisq/pull/5403)
+
+### Assets
+No new assets.
+
+## Verification
+
+Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
+Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
+
+Import the key:
+`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
+
+How to verify signatures?
+`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
+Replace BINARY with the file you downloaded (e.g. Bisq-1.6.3.dmg)
+
+## Known issues with installation 
+
+### Windows:
+
+There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
+
+If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
+
+[1] Application directory (contains application installation files):
+C:\Users\&lt;username&gt;\AppData\Local\Bisq
+
+[2] Data directory (contains all Bisq data including wallet):
+C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
+
+
+### Linux:
+
+Hint for Debian users:
+If you have problems starting Bisq on Debian use: `/opt/Bisq/Bisq`
+
+If your Linux distro does not support .deb files please follow this instruction:
+```
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.6.3.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+```
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
+
+## Credits
+
+Thanks to everyone who directly contributed to this release:
+
+- @BtcContributor 
+- @cd2357 
+- @devinbileck 
+- @ghubstan
+- @huey735 
+- @jmacxx 
+- @maxim-belkin 
+- @ripcurlx 
+- @sqrrm 
+- @wallclockbuilder
+- @wiz 
+
+A special thanks to our first time contributor:
+
+- @maxim-belkin :
+   - [Tweak wording for takeOffer.fundsBox.isOfferAvailable](https://github.com/bisq-network/bisq/pull/5402)
+   - [docs/build.md: Emphasize JDK requirements + formatting](https://github.com/bisq-network/bisq/pull/5403)
+
+As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
+    <title>bisq-network/bisq: v1.6.3</title>
+    <updated>2021-05-01T08:33:02Z</updated>
+    <dc:date>2021-05-01T08:33:02Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.6</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.6"/>
@@ -7464,52 +7577,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2020-12-31T12:50:14Z</updated>
     <dc:date>2020-12-31T12:50:14Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.0</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.0"/>
-    <summary>Introducing the Umbrel App Store. You can now download and install BTCPay Server, Specter Desktop, Sphinx Relay, BTC RPC Explorer, Ride The Lightning, Lightning Terminal, and ThunderHub — all on your Umbrel in one click.
-
-Changes:
-
-- Add Electrs to README.md (#330) 7ab2d06 (@PeterXMR)
-- Add app framework (#333) ffe9e2f (@lukechilds)
-- Add btc-rpc-explorer app (#334) e9ceed5 (@lukechilds)
-- Update example app PR link in docs c114eaa (@lukechilds)
-- Tweak support link (#337) 83f7f87 (@mayankchhabra)
-- Correctly set project name for apps (#338) 433794a (@lukechilds)
-- Pass APP_HIDDEN_SERVICE environment variable to apps (#340) 56343b1 (@lukechilds)
-- Set default APP_HIDDEN_SERVICE value to &quot;notyetset.onion&quot; 9fcc687 (@lukechilds)
-- Supress errors when app hidden service does not yet exist 4b6546a (@lukechilds)
-- Only ignore top level dotfiles (#344) d7b68c6 (@lukechilds)
-- Remove quotes from .env-sample file (#346) 6f4241f (@AaronDewes)
-- Reduce dbcache post IBD (#345) 1354cdf (@lukechilds)
-- Upgrade btc-rpc-explorer to v2.1.0 (#350) 353cec4 (@lukechilds)
-- Add thunderhub app (#343) 3d9902d (@apotdevin)
-- Add sphinx-relay app (#341) 9f46a08 (@gonzaloaune)
-- Add ride-the-lightning app (#336) f8179b5 (@louneskmt @lukechilds)
-- Add lightning-terminal app (#348) 29cad06 (@louneskmt @lukechilds)
-- Add specter-desktop app (#339) 5a763f6 (@k9ert @lukechilds)
-- Exclude .gitkeep files when creating app data dir bcc71e9 (@lukechilds)
-- Add btcpay-server app (#353) 52bde35 (@louneskmt @mayankchhabra @lukechilds)
-- Remove specter-desktop authentication 9c224e8 (@lukechilds)
-- Set shutdown timeouts for all apps to 1m b658d31 (@lukechilds)
-- Update sphinx-relay to v1.3.2 6231fdb (@lukechilds)
-- Exclude app-data from UMBREL_ROOT chown (#365) 828b133 (@lukechilds)
-- Pull new app containers on update (#364) 35007d1 (@lukechilds)
-- Kill karen on update (#366) a0baddc (@lukechilds)
-- Clarify app logs (#367) b9c1bb8 (@mayankchhabra)
-- Check for empty value before pulling app (#369) 549f985 (@mayankchhabra)
-- Create app data dir before pulling images (#371) a1a41bf (@louneskmt)
-- Add apps to registry.json (#373) c3f3571 (@mayankchhabra)
-- Add debug script (#294) e5ac5e3 (@AaronDewes @louneskmt @mayankchhabra)
-- Umbrel App Framework (#374) df2d1ec (@mayankchhabra)
-- Update to getumbrel/dashboard to v0.3.14 (#375) 9575b7e (@lukechilds)
-- Update to getumbrel/manager to v0.2.8 (#376) 46de834 (@lukechilds
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.2.15...v0.3.0</summary>
-    <title>getumbrel/umbrel: v0.3.0</title>
-    <updated>2020-12-30T14:26:35Z</updated>
-    <dc:date>2020-12-30T14:26:35Z</dc:date>
-  </entry>
-  <dc:date>2021-05-01T08:24:09+00:00</dc:date>
+  <dc:date>2021-05-01T08:35:20+00:00</dc:date>
 </feed>
