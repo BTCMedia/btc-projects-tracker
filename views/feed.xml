@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-01T07:34:37+00:00</updated>
+  <updated>2021-05-01T07:43:05+00:00</updated>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.6</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.6"/>
@@ -7511,5 +7511,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.2.15...v0.3.0</summary>
     <updated>2020-12-30T14:26:35Z</updated>
     <dc:date>2020-12-30T14:26:35Z</dc:date>
   </entry>
-  <dc:date>2021-05-01T07:34:37+00:00</dc:date>
+  <dc:date>2021-05-01T07:43:05+00:00</dc:date>
 </feed>
