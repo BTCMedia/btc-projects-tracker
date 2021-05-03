@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-03T21:24:12+00:00</updated>
+  <updated>2021-05-03T21:33:58+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0"/>
@@ -749,9 +749,9 @@ Join us here → https://www.transifex.com/bluewallet/bluewallet
 
 **Download**
 
-[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet.6.1.0.dmg)
+[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet.6.1.1.dmg)
 
-[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet-6.1.0.apk)
+[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet-6.1.1.apk)
 </summary>
     <title>BlueWallet/BlueWallet: v6.1.0</title>
     <updated>2021-05-03T07:50:27Z</updated>
@@ -7630,5 +7630,5 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
     <updated>2021-01-07T22:06:03Z</updated>
     <dc:date>2021-01-07T22:06:03Z</dc:date>
   </entry>
-  <dc:date>2021-05-03T21:24:12+00:00</dc:date>
+  <dc:date>2021-05-03T21:33:58+00:00</dc:date>
 </feed>
