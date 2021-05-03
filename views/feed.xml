@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-03T15:34:03+00:00</updated>
+  <updated>2021-05-03T15:43:40+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.11</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.11"/>
@@ -7032,5 +7032,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-01-06T14:52:03Z</updated>
     <dc:date>2021-01-06T14:52:03Z</dc:date>
   </entry>
-  <dc:date>2021-05-03T15:34:03+00:00</dc:date>
+  <dc:date>2021-05-03T15:43:40+00:00</dc:date>
 </feed>
