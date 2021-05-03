@@ -6,7 +6,44 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-03T13:52:35+00:00</updated>
+  <updated>2021-05-03T14:04:45+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.11</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.11"/>
+    <summary>## Main changes
+
+### Display fees for pay-to-open in settings
+
+The fees for on-the-fly channel creation is now visible at any time in settings &gt; payments options and fees
+
+### Display swap-in fees in-view
+
+The swap-in modal dialog has been removed and information about the swap-in feature and the fees are now displayed in-view.
+
+## Complete list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.10...v1.4.11
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.11</title>
+    <updated>2021-05-03T13:59:24Z</updated>
+    <dc:date>2021-05-03T13:59:24Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.10</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.10"/>
@@ -6995,25 +7032,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-01-06T14:52:03Z</updated>
     <dc:date>2021-01-06T14:52:03Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre6</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre6"/>
-    <summary>### This is a pre-release! Do not use unless you're sure know what you're doing!
-
-This is a pre-release for beta-testing the next version of Specter.
-
-Changes to notice while testing:
-- Fix Coldcard signing issue when exporting to Electrum
-- Fix wrong address type inPDF backup
-- Fix issue when camera is open and scanning doesn't work for too long.
-- Export transactions history, UTXOs, and addresses to CSV
-- Reorganize the UTXO screen
-- Label any address from any screen it is at.
-- Sorting, searching, page limit, of the transactions/ utxo lists.
-- New Tor tab in the settings for managing the connections over Tor and the Specter Tor hidden service</summary>
-    <title>cryptoadvance/specter-desktop: v0.11.0-pre6</title>
-    <updated>2021-01-05T07:20:02Z</updated>
-    <dc:date>2021-01-05T07:20:02Z</dc:date>
-  </entry>
-  <dc:date>2021-05-03T13:52:35+00:00</dc:date>
+  <dc:date>2021-05-03T14:04:45+00:00</dc:date>
 </feed>

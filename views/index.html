@@ -38,6 +38,53 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.11">v1.4.11</a>
+						    </h2>
+							<p class="card-text">Published: 2021-05-03 13:59:24 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Main changes</h2>
+
+<h3>Display fees for pay-to-open in settings</h3>
+
+<p>The fees for on-the-fly channel creation is now visible at any time in settings &gt; payments options and fees</p>
+
+<h3>Display swap-in fees in-view</h3>
+
+<p>The swap-in modal dialog has been removed and information about the swap-in feature and the fees are now displayed in-view.</p>
+
+<h2>Complete list of changes</h2>
+
+<ul>
+<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.10...v1.4.11">https://github.com/ACINQ/phoenix/compare/v1.4.10...v1.4.11</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
+- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import drouinf.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.11" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.10">v0.3.10</a>
 						    </h2>
 							<p class="card-text">Published: 2021-05-03 11:42:46 UTC</p>
@@ -8508,34 +8555,6 @@ Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 91
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.0.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre6">v0.11.0-pre6</a>
-						    </h2>
-							<p class="card-text">Published: 2021-01-05 07:20:02 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>This is a pre-release! Do not use unless you&#39;re sure know what you&#39;re doing!</h3>
-
-<p>This is a pre-release for beta-testing the next version of Specter.</p>
-
-<p>Changes to notice while testing:
-- Fix Coldcard signing issue when exporting to Electrum
-- Fix wrong address type inPDF backup
-- Fix issue when camera is open and scanning doesn&#39;t work for too long.
-- Export transactions history, UTXOs, and addresses to CSV
-- Reorganize the UTXO screen
-- Label any address from any screen it is at.
-- Sorting, searching, page limit, of the transactions/ utxo lists.
-- New Tor tab in the settings for managing the connections over Tor and the Specter Tor hidden service</p>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v0.11.0-pre6" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
