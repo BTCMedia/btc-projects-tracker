@@ -6,7 +6,49 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-03T07:43:55+00:00</updated>
+  <updated>2021-05-03T07:52:03+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.0</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.0"/>
+    <summary>**New**
+
+- Tor support
+- Hierarchy Navigator (List of addresses)
+- Slip39 wallets (Shamir's Secret Sharing)
+- PSBT for all HD watch-only wallets
+- mempool.space as the main explorer
+
+**Fixed**
+
+- Complication was showing cents
+- Dark mode makes text illegible
+- Carousel padding and Scan button crash
+- Remove leading zero when doing local currency
+- QR code scanning from file doesn't work on Android
+- Speeded up electrum (caching of some requests)
+- Move general tools under wallet details to &quot;tools&quot; menu
+- Move Privacy under General tab
+- layout on invoice view
+- Multsig layout fixes
+- Refresh wallet if it never been done
+- Easier pairing with HW wallets
+- Derivation &amp; Fingerprint visible only in advanced mode
+
+**Languages updates**
+
+Finnish, German, Dutch, Portuguese Brazilian, Slovenian, Persian, Spanish, Polish, French, Welsh, Hebrew, Japanese, Romanian
+Join us here → https://www.transifex.com/bluewallet/bluewallet
+
+**Download**
+
+[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet.6.1.0.dmg)
+
+[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet-6.1.0.apk)
+</summary>
+    <title>BlueWallet/BlueWallet: v6.1.0</title>
+    <updated>2021-05-03T07:50:27Z</updated>
+    <dc:date>2021-05-03T07:50:27Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin/bitcoin/releases/tag/v0.21.1</id>
     <link href="https://github.com/bitcoin/bitcoin/releases/tag/v0.21.1"/>
@@ -7385,24 +7427,5 @@ yyforyongyu </summary>
     <updated>2021-01-04T04:21:01Z</updated>
     <dc:date>2021-01-04T04:21:01Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.1</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.1"/>
-    <summary>This update brings some minor bug fixes to keep your Umbrel ticking over smoothly.
-
-Changes:
-
-- Fix IP Collisions (#390) ba058d9 (@lukechilds)
-- Update to getumbrel/manager to v0.2.9 (#393) 516fe31 (@lukechilds)
-- Fix incorrect app version for sphinx-relay (#378) c303778 (@AaronDewes)
-- Fix lncli and bitcoin-cli wrapper scripts (#388) 9ef5fd7 (@AaronDewes @lukechilds)
-- Wrap sphinx-relay process with init system (#395) 8bb1d1e (@lukechilds)
-- Umbrel v0.3.1 (#394) 2735baa (@lukechilds)
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.0...v0.3.1</summary>
-    <title>getumbrel/umbrel: v0.3.1</title>
-    <updated>2021-01-03T08:53:13Z</updated>
-    <dc:date>2021-01-03T08:53:13Z</dc:date>
-  </entry>
-  <dc:date>2021-05-03T07:43:55+00:00</dc:date>
+  <dc:date>2021-05-03T07:52:03+00:00</dc:date>
 </feed>
