@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-03T19:12:39+00:00</updated>
+  <updated>2021-05-03T19:22:45+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0"/>
@@ -72,7 +72,7 @@ Example:
 UPDATE ME!!!!!!!
 ```
 $ sha256sum bitcoin-s-server-0.6.0.zip
-aa1084edb5fcd3d1dbcafe0d0fba787abf4cd455bbe38809bd9a65a49c0cd0eb bitcoin-s-server-0.6.0.zip
+48585b6cb0e4ec29773bde619486cadd5fef6c0d480df54520bb52bea2f678b6 bitcoin-s-server-0.6.0.zip
 $ gpg --verify SHA256SUMS.asc
 gpg: Signature made Thu 24 Sep 2020 12:49:39 PM CDT
 gpg:                using RSA key 339A49229576050819083EB3F99724872F822910
@@ -7614,5 +7614,5 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
     <updated>2021-01-07T22:06:03Z</updated>
     <dc:date>2021-01-07T22:06:03Z</dc:date>
   </entry>
-  <dc:date>2021-05-03T19:12:39+00:00</dc:date>
+  <dc:date>2021-05-03T19:22:45+00:00</dc:date>
 </feed>
