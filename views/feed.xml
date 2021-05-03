@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-03T10:44:18+00:00</updated>
+  <updated>2021-05-03T10:52:32+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.0</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.0"/>
@@ -7427,5 +7427,5 @@ yyforyongyu </summary>
     <updated>2021-01-04T04:21:01Z</updated>
     <dc:date>2021-01-04T04:21:01Z</dc:date>
   </entry>
-  <dc:date>2021-05-03T10:44:18+00:00</dc:date>
+  <dc:date>2021-05-03T10:52:32+00:00</dc:date>
 </feed>
