@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-03T21:41:51+00:00</updated>
+  <updated>2021-05-03T21:53:43+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0"/>
@@ -7630,5 +7630,5 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
     <updated>2021-01-07T22:06:03Z</updated>
     <dc:date>2021-01-07T22:06:03Z</dc:date>
   </entry>
-  <dc:date>2021-05-03T21:41:51+00:00</dc:date>
+  <dc:date>2021-05-03T21:53:43+00:00</dc:date>
 </feed>
