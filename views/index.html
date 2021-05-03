@@ -50,12 +50,23 @@
 <p>This release support scalajs for both the <code>crypto</code> and <code>core</code> module. You can now use these modules from javascript.</p>
 
 <p>We now support docker for our oracleServer and appServer projects.
-Follow these links for docker builds for <a href="https://bitcoin-s.org/docs/next/applications/server#docker-configuration"><code>appServer</code></a>
-and <a href="https://bitcoin-s.org/docs/next/oracle/build-oracle-server#docker-configuration"><code>oracleServer</code></a></p>
+Follow these links for docker builds for <a href="https://bitcoin-s.org/docs/next/applications/server#docker-configuration"><code>appServer</code></a> and <a href="https://bitcoin-s.org/docs/next/oracle/build-oracle-server#docker-configuration"><code>oracleServer</code></a></p>
 
 <p>We support the latest bitcoind rpc client (<code>0.21.1</code>) that has the taproot activation code baked into it.</p>
 
+<p>Our libsecp256k1 pre-compiled binaries now support <code>osx_arm64</code> which makes them compatible with the new M1 chip from Apple.</p>
+
 <p>Finally, we had to re-write the git history for this release due to #2830 . This means previous commits have been re-written.</p>
+
+<h2>Contributors</h2>
+
+<p>101  Chris Stewart
+    49  benthecarman
+    44  Scala Steward
+     6  Nadav Kohen
+     6  rorp
+     2  Aris
+     1  saguywalker</p>
 
 <h2>Running Bitcoin-S</h2>
 
@@ -92,8 +103,8 @@ signature.</p>
 
 <p>UPDATE ME!!!!!!!
 <code>
-$ sha256sum bitcoin-s-server-0.6.0.tgz
-aa1084edb5fcd3d1dbcafe0d0fba787abf4cd455bbe38809bd9a65a49c0cd0eb bitcoin-s-server-0.6.0.tgz
+$ sha256sum bitcoin-s-server-0.6.0.zip
+aa1084edb5fcd3d1dbcafe0d0fba787abf4cd455bbe38809bd9a65a49c0cd0eb bitcoin-s-server-0.6.0.zip
 $ gpg --verify SHA256SUMS.asc
 gpg: Signature made Thu 24 Sep 2020 12:49:39 PM CDT
 gpg:                using RSA key 339A49229576050819083EB3F99724872F822910
@@ -112,16 +123,6 @@ gpg: Good signature from &quot;Chris Stewart &lt;stewart.chris1234@gmail.com&gt;
 <h4>Snapshot releases</h4>
 
 <p><a href="https://oss.sonatype.org/content/repositories/snapshots/org/bitcoin-s/">https://oss.sonatype.org/content/repositories/snapshots/org/bitcoin-s/</a></p>
-
-<h3>Contributors</h3>
-
-<p>101  Chris Stewart
-    49  benthecarman
-    44  Scala Steward
-     6  Nadav Kohen
-     6  rorp
-     2  Aris
-     1  saguywalker</p>
 
 <h3>New modules</h3>
 
