@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-03T07:10:55+00:00</updated>
+  <updated>2021-05-03T07:13:14+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin/bitcoin/releases/tag/v0.21.1</id>
     <link href="https://github.com/bitcoin/bitcoin/releases/tag/v0.21.1"/>
@@ -7404,5 +7404,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.0...v0.3.1</summary>
     <updated>2021-01-03T08:53:13Z</updated>
     <dc:date>2021-01-03T08:53:13Z</dc:date>
   </entry>
-  <dc:date>2021-05-03T07:10:55+00:00</dc:date>
+  <dc:date>2021-05-03T07:13:14+00:00</dc:date>
 </feed>
