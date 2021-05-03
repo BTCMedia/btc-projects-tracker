@@ -101,15 +101,31 @@ signature.</p>
 
 <p>Example:</p>
 
-<p>UPDATE ME!!!!!!!
-<code>
+<p><code>
 $ sha256sum bitcoin-s-server-0.6.0.zip
-48585b6cb0e4ec29773bde619486cadd5fef6c0d480df54520bb52bea2f678b6 bitcoin-s-server-0.6.0.zip
-$ gpg --verify SHA256SUMS.asc
-gpg: Signature made Thu 24 Sep 2020 12:49:39 PM CDT
+48585b6cb0e4ec29773bde619486cadd5fef6c0d480df54520bb52bea2f678b6  bitcoin-s-server-0.6.0.zip
+$  gpg --verify SHA256SUMS.asc
+gpg: Signature made Thu 04 Feb 2021 12:49:59 PM CST
 gpg:                using RSA key 339A49229576050819083EB3F99724872F822910
-gpg:                issuer &quot;stewart.chris1234@gmail.com&quot;
-gpg: Good signature from &quot;Chris Stewart &lt;stewart.chris1234@gmail.com&gt;&quot;
+gpg: Good signature from &quot;Chris Stewart &lt;stewart.chris1234@gmail.com&gt;&quot; [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 339A 4922 9576 0508 1908  3EB3 F997 2487 2F82 2910
+</code></p>
+
+<p>Or you can verify all binaries at once with the following commands:</p>
+
+<p><code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+bitcoin-s-bundle-0.6.0.zip: OK
+bitcoin-s-cli-0.6.0.zip: OK
+bitcoin-s-cli-x86_64-apple-darwin: OK
+bitcoin-s-cli-x86_64-pc-linux: OK
+bitcoin-s-cli-x86_64-pc-win32.exe: OK
+bitcoin-s-gui-0.6.0.zip: OK
+bitcoin-s-oracle-server-0.6.0.zip: OK
+bitcoin-s-server-0.6.0.zip: OK
 </code></p>
 
 <h3>Website</h3>

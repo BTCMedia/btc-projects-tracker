@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-03T19:22:45+00:00</updated>
+  <updated>2021-05-03T19:33:33+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0"/>
@@ -69,15 +69,31 @@ signature.
 
 Example:
 
-UPDATE ME!!!!!!!
 ```
 $ sha256sum bitcoin-s-server-0.6.0.zip
-48585b6cb0e4ec29773bde619486cadd5fef6c0d480df54520bb52bea2f678b6 bitcoin-s-server-0.6.0.zip
-$ gpg --verify SHA256SUMS.asc
-gpg: Signature made Thu 24 Sep 2020 12:49:39 PM CDT
+48585b6cb0e4ec29773bde619486cadd5fef6c0d480df54520bb52bea2f678b6  bitcoin-s-server-0.6.0.zip
+$  gpg --verify SHA256SUMS.asc
+gpg: Signature made Thu 04 Feb 2021 12:49:59 PM CST
 gpg:                using RSA key 339A49229576050819083EB3F99724872F822910
-gpg:                issuer &quot;stewart.chris1234@gmail.com&quot;
-gpg: Good signature from &quot;Chris Stewart &lt;stewart.chris1234@gmail.com&gt;&quot;
+gpg: Good signature from &quot;Chris Stewart &lt;stewart.chris1234@gmail.com&gt;&quot; [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 339A 4922 9576 0508 1908  3EB3 F997 2487 2F82 2910
+```
+
+Or you can verify all binaries at once with the following commands:
+
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+bitcoin-s-bundle-0.6.0.zip: OK
+bitcoin-s-cli-0.6.0.zip: OK
+bitcoin-s-cli-x86_64-apple-darwin: OK
+bitcoin-s-cli-x86_64-pc-linux: OK
+bitcoin-s-cli-x86_64-pc-win32.exe: OK
+bitcoin-s-gui-0.6.0.zip: OK
+bitcoin-s-oracle-server-0.6.0.zip: OK
+bitcoin-s-server-0.6.0.zip: OK
 ```
 
 ### Website
@@ -7614,5 +7630,5 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
     <updated>2021-01-07T22:06:03Z</updated>
     <dc:date>2021-01-07T22:06:03Z</dc:date>
   </entry>
-  <dc:date>2021-05-03T19:22:45+00:00</dc:date>
+  <dc:date>2021-05-03T19:33:33+00:00</dc:date>
 </feed>
