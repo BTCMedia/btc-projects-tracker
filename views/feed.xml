@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-04T02:12:54+00:00</updated>
+  <updated>2021-05-04T02:23:08+00:00</updated>
+  <entry>
+    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.14</id>
+    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.14"/>
+    <summary></summary>
+    <title>rust-bitcoin/rust-lightning: v0.0.14</title>
+    <updated>2021-05-04T02:15:42Z</updated>
+    <dc:date>2021-05-04T02:15:42Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/v0.6.0"/>
@@ -7595,40 +7603,5 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
     <updated>2021-01-09T01:30:55Z</updated>
     <dc:date>2021-01-09T01:30:55Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.2</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.2"/>
-    <summary>* ADD: Easily share a Vault key with QR code
-* ADD: How many signatures can this Vault make
-* ADD: Electrum servers history - fast connect
-* ADD: Ability to set servers via QR code scanning 
-* ADD: CoinControl multi-selection
-* FIX: better support multisig cosigning with Electrum desktop
-* FIX: multisig 'Too many signatures' error
-* FIX: Amount displayed on success invoice payment
-* FIX: localizations for fr_FR, es_ES, de_DE, fa_IR, cs_CZ, fr_FR, nl_NL, fi_FI
-* FIX: Hide balance on reorder screen
-* FIX: disallow importing non-multisignature xpubs into multisig setup
-* FIX: better multisig wallet descriptors suppport
-* FIX: Incorrect import from Specter - p2sh wrapped segwit multisig
-* FIX: Clear quick actions if storage is encrypted
-* FIX: use dayjs localizedFormat plugin to render tx time
-* FIX: show more accurate precalculation fee on &quot;Not enough balance.&quot; exception
-* FIX: Wallet Delete on new install was not being triggered
-* FIX: Fallback to English if case isn't found
-* FIX: animated qr scan progress readability
-* FIX: rerender UI after language change
-* FIX: Hide modal when scanning
-* FIX: reorder screen bug
-* FIX: Don't show clipboard modal if user has already acted on it
-* REF: processing push notifications
-* REF: Add warning to LN
-* REF: Github link on about
-* DOC: Telegram and Discord links on about section
-</summary>
-    <title>BlueWallet/BlueWallet: v6.0.2</title>
-    <updated>2021-01-07T22:06:03Z</updated>
-    <dc:date>2021-01-07T22:06:03Z</dc:date>
-  </entry>
-  <dc:date>2021-05-04T02:12:54+00:00</dc:date>
+  <dc:date>2021-05-04T02:23:08+00:00</dc:date>
 </feed>
