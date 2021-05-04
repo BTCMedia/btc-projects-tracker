@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-04T13:05:22+00:00</updated>
+  <updated>2021-05-04T13:14:14+00:00</updated>
   <entry>
     <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.14</id>
     <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.14"/>
@@ -22,7 +22,7 @@
 
 ## Executive Summary
 
-This release support scalajs for both the `crypto` and `core` module. You can now use these modules from javascript.
+This release support [scalajs](https://www.scala-js.org/) for both the `crypto` and `core` module. You can now use these modules from javascript.
 
 We now support docker for our oracleServer and appServer projects.
 Follow these links for docker builds for [`appServer`](https://bitcoin-s.org/docs/next/applications/server#docker-configuration) and [`oracleServer`](https://bitcoin-s.org/docs/next/oracle/build-oracle-server#docker-configuration)
@@ -7603,5 +7603,5 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
     <updated>2021-01-09T01:30:55Z</updated>
     <dc:date>2021-01-09T01:30:55Z</dc:date>
   </entry>
-  <dc:date>2021-05-04T13:05:22+00:00</dc:date>
+  <dc:date>2021-05-04T13:14:14+00:00</dc:date>
 </feed>
