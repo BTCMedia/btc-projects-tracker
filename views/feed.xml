@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-05T18:51:21+00:00</updated>
+  <updated>2021-05-05T19:04:18+00:00</updated>
   <entry>
     <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.14</id>
     <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.14"/>
@@ -7603,5 +7603,5 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
     <updated>2021-01-09T01:30:55Z</updated>
     <dc:date>2021-01-09T01:30:55Z</dc:date>
   </entry>
-  <dc:date>2021-05-05T18:51:21+00:00</dc:date>
+  <dc:date>2021-05-05T19:04:18+00:00</dc:date>
 </feed>
