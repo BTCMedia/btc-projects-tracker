@@ -38,6 +38,156 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.6.4">v1.6.4</a>
+						    </h2>
+							<p class="card-text">Published: 2021-05-06 18:14:27 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This is a follow-up release that updates a <a href="https://github.com/bisq-network/bisq/pull/5453">mempool explorer address</a> and <a href="https://github.com/bisq-network/bisq/pull/5469">filters out banned seednode address with a wrong format</a>.</p>
+
+<p>For more details please see <a href="https://github.com/bisq-network/bisq/milestone/58">https://github.com/bisq-network/bisq/milestone/58</a></p>
+
+<p>Here are the release notes from v1.6.3:</p>
+
+<h2>Release notes</h2>
+
+<p>This release ships the remaining functionality to create BSQ SegWit transactions to save on mining fees. You can also now easily create copies of existing (and past) offers. This release also leverages a new build system using an up-to-date Java runtime (Java 15) and UI library (JavaFX 15) that produces binaries that should be more reliable. And as always...there are many bug fixes and refinements. ​</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5109">Wallet changes for SegWit BSQ implementation</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5431">Upgrade Java, JavaFX and binary packaging</a>
+
+<ul>
+<li>Get rid of macOS security warnings and unnecessary key logging permission request</li>
+<li>Getting LTS support (security fixes,...) for upgrading to Java 11 for compilation and Java 15 for runtime</li>
+<li>Fix various UI issues on certain OSes due JavaFX upgrade to v15</li>
+</ul></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5423">Functionality to duplicate an offer</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5312">Add custom withdrawal transaction fee options on Send funds (BTC)</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5375">Message sign verify functionality compatible with Bitcoin core &amp; electrum</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5427">Show a SPV resync suggestion if trade remains unconfirmed for 3 hours or more</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5425">Allow Revolut username to be minimum 3 characters</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5370">Disputes UI improvements</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5234">Hide unnecessary bank id in offer details</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5402">Tweak wording for takeOffer.fundsBox.isOfferAvailable</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5399">CashByMail show terms and conditions upon taking an offer</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5397">Add BTC node wubwzaadboxwiffa.onion</a></li>
+</ul>
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5401">Wait for AckMessage before completing BuyerSendCounterCurrencyTransferStartedMessage task</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5388">Fix shutdown persistence issue in Seednode</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5374">Handle rounding of infinite Doubles</a></li>
+</ul>
+
+<h3>API</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5421">Update apitest docs for bitcoin-core v0.21 compatibility</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5420">Adjust to changing minimum tx fee rates</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5412">Complete API support for BSQ/BTC trade pair</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5356">Add api method createcryptopaymentacct</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5357">Provide more offer &amp; contract detail to CLI</a></li>
+</ul>
+
+<h3>Development &amp; Documentation</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5355">Generate more than 1 block(regtest)</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5403">docs/build.md: Emphasize JDK requirements + formatting</a></li>
+</ul>
+
+<h3>Assets</h3>
+
+<p>No new assets.</p>
+
+<h2>Verification</h2>
+
+<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
+Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
+
+<p>Import the key:
+<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
+
+<p>How to verify signatures?
+<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
+Replace BINARY with the file you downloaded (e.g. Bisq-1.6.4.dmg)</p>
+
+<h2>Known issues with installation</h2>
+
+<h3>Windows:</h3>
+
+<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
+
+<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
+
+<p>[1] Application directory (contains application installation files):
+C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
+
+<p>[2] Data directory (contains all Bisq data including wallet):
+C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
+
+<h3>Linux:</h3>
+
+<p>Hint for Debian users:
+If you have problems starting Bisq on Debian use: <code>/opt/Bisq/Bisq</code></p>
+
+<p>If your Linux distro does not support .deb files please follow this instruction:
+<code>
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.6.4.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+</code>
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
+
+<h2>Credits</h2>
+
+<p>Thanks to everyone who directly contributed to this release:</p>
+
+<ul>
+<li>@BtcContributor </li>
+<li>@cd2357 </li>
+<li>@devinbileck </li>
+<li>@ghubstan</li>
+<li>@huey735 </li>
+<li>@jmacxx </li>
+<li>@maxim-belkin </li>
+<li>@ripcurlx </li>
+<li>@sqrrm </li>
+<li>@wallclockbuilder</li>
+<li>@wiz </li>
+</ul>
+
+<p>A special thanks to our first time contributor:</p>
+
+<ul>
+<li>@maxim-belkin :
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5402">Tweak wording for takeOffer.fundsBox.isOfferAvailable</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5403">docs/build.md: Emphasize JDK requirements + formatting</a></li>
+</ul></li>
+</ul>
+
+<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
+</p>
+					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.6.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/rust-bitcoin/rust-lightning">rust-bitcoin/rust-lightning</a>: <a href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.14">v0.0.14</a>
 						    </h2>
 							<p class="card-text">Published: 2021-05-04 02:15:42 UTC</p>
@@ -868,7 +1018,9 @@ Join us here → <a href="https://www.transifex.com/bluewallet/bluewallet">https
 							<p class="card-text">Published: 2021-05-01 08:33:02 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><h2>Release notes</h2>
+					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
+
+<h2>Release notes</h2>
 
 <p>This release ships the remaining functionality to create BSQ SegWit transactions to save on mining fees. You can also now easily create copies of existing (and past) offers. This release also leverages a new build system using an up-to-date Java runtime (Java 15) and UI library (JavaFX 15) that produces binaries that should be more reliable. And as always...there are many bug fixes and refinements. ​</p>
 
@@ -1395,7 +1547,9 @@ Join us here → <a href="https://www.transifex.com/bluewallet/bluewallet">https
 							<p class="card-text">Published: 2021-04-01 08:33:36 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><p>This is a hotfix release that <a href="https://github.com/bisq-network/bisq/pull/5380">fixes an issue with SPV resync introduced in v1.6.0</a> and fixes a <a href="https://github.com/bisq-network/bisq/pull/5385">minor bug in the portfolio view</a> when price nodes aren&#39;t available.</p>
+					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
+
+<p>This is a hotfix release that <a href="https://github.com/bisq-network/bisq/pull/5380">fixes an issue with SPV resync introduced in v1.6.0</a> and fixes a <a href="https://github.com/bisq-network/bisq/pull/5385">minor bug in the portfolio view</a> when price nodes aren&#39;t available.</p>
 
 <p>For more details please see <a href="https://github.com/bisq-network/bisq/milestone/56?closed=1">https://github.com/bisq-network/bisq/milestone/56?closed=1</a></p>
 
@@ -9102,21 +9256,6 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
 </p>
 					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/mempool/mempool/releases/tag/v2.0.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc5">v0.12.0-beta.rc5</a>
-						    </h2>
-							<p class="card-text">Published: 2021-01-09 01:30:55 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"></p>
-					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc5" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
