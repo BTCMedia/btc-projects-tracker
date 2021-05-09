@@ -6,7 +6,21 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-09T19:04:24+00:00</updated>
+  <updated>2021-05-09T19:13:28+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.2</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.2"/>
+    <summary>Added
+*  Opt-out of analytics tracking in settings/privacy
+
+Fixed
+
+*  Loading indicator for wallet details
+* Lightning invoice unit didn't reflect user change</summary>
+    <title>BlueWallet/BlueWallet: v6.1.2</title>
+    <updated>2021-05-09T19:08:04Z</updated>
+    <dc:date>2021-05-09T19:08:04Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.4</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.4"/>
@@ -7700,23 +7714,5 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
     <updated>2021-01-11T14:59:56Z</updated>
     <dc:date>2021-01-11T14:59:56Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/mempool/mempool/releases/tag/v2.0.0</id>
-    <link href="https://github.com/mempool/mempool/releases/tag/v2.0.0"/>
-    <summary>Mempool v2 is here!
-
-&lt;img width=&quot;1161&quot; alt=&quot;Screen Shot 2021-01-11 at 23 38 10&quot; src=&quot;https://user-images.githubusercontent.com/232186/104195536-16bfd480-5466-11eb-8c66-7e5ed81bf79d.png&quot;&gt;
-
-* Supports Bitcoin Core RPC, Electrum Server, or Esplora backends
-* Fully functional block, address, and transaction explorer with APIs
-* Dashboard layout displaying fee estimates and other real-time stats
-* Support for multiple networks including Testnet, Liquid, and Bisq
-* Optional support for Angular Universal Server Side Rendering
-* Internationalization support for 20+ languages and locales
-* And much more!</summary>
-    <title>mempool/mempool: v2.0.0</title>
-    <updated>2021-01-11T14:43:58Z</updated>
-    <dc:date>2021-01-11T14:43:58Z</dc:date>
-  </entry>
-  <dc:date>2021-05-09T19:04:24+00:00</dc:date>
+  <dc:date>2021-05-09T19:13:28+00:00</dc:date>
 </feed>
