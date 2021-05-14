@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-14T01:14:10+00:00</updated>
+  <updated>2021-05-14T01:24:26+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.2</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.2"/>
@@ -6293,5 +6293,5 @@ As such, after update, the invoice search feature of BTCPay Server might not wor
     <updated>2021-01-11T14:59:56Z</updated>
     <dc:date>2021-01-11T14:59:56Z</dc:date>
   </entry>
-  <dc:date>2021-05-14T01:14:10+00:00</dc:date>
+  <dc:date>2021-05-14T01:24:26+00:00</dc:date>
 </feed>
