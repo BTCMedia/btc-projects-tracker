@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-14T17:54:12+00:00</updated>
+  <updated>2021-05-14T18:10:34+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.1.1</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.1.1"/>
@@ -28,113 +28,6 @@
     <title>btcpayserver/btcpayserver: v1.1.1</title>
     <updated>2021-05-14T09:02:09Z</updated>
     <dc:date>2021-05-14T09:02:09Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc1</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc1"/>
-    <summary># Database Migrations
-TODO
-
-# Verifying the Release
-
-In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
-
-```
-curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
-curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
-```
-
-Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.13.0-beta.rc1.sig` and `manifest-v0.13.0-beta.rc1.txt` are in the current directory) with:
-
-```
-gpg --verify manifest-roasbeef-v0.13.0-beta.rc1.sig manifest-v0.13.0-beta.rc1.txt
-```
-
-You should see the following if the verification was successful:
-
-```
-gpg: Signature made Wed Sep 30 17:35:20 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-```
-
-That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
-
-## Verifying the Release Timestamp 
-
-From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-roasbeef-v0.13.0-beta.rc1.txt.asc.ots`.
-
-Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
-```
-ots verify manifest-roasbeef-v0.13.0-beta.rc1.sig.ots -f manifest-roasbeef-v0.13.0-beta.rc1.sig
-```
-
-Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
-
-These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
-
-## Verifying the Release Binaries
-
-Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
-The release binaries are compiled with `go1.16.3`, which is required by verifiers to arrive at the same ones.
-They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, and `watchtowerrpc`. Note that these are already included in the release script, so they do not need to be provided.
-
-The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
-
-Finally, you can also verify the _tag_ itself with the following command:
-
-```
-$ git verify-tag v0.13.0-beta.rc1
-gpg: Signature made Tue Sep 15 18:55:00 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-```
-
-## Verifying the Docker Images
-
-To verify the `lnd` and `lncli` binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):
-
-```shell
-$ docker pull lightninglabs/lnd:v0.13.0-beta.rc1
-$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.13.0-beta.rc1 /verify-install.sh
-$ OK=$?
-$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
-$ docker run lightninglabs/lnd [command-line options]
-```
-
-# Building the Contained Release 
-
-Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
-that `vendor.tar.gz` and `lnd-source-v0.13.0-beta.rc1.tar.gz` are in the current directory, follow these steps:
-
-```
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.13.0-beta.rc1.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.0-beta.rc1&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.0-beta.rc1&quot; ./cmd/lncli
-```
-
-The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
-
-Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
-
-```
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-```
-
-⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
-
-# Release Notes
-
-TODO
-
-# Contributors (Alphabetical Order)
-
-TODO
-</summary>
-    <title>lightningnetwork/lnd: v0.13.0-beta.rc1</title>
-    <updated>2021-05-14T08:58:33Z</updated>
-    <dc:date>2021-05-14T08:58:33Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.2</id>
@@ -6379,5 +6272,16 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-01-12T20:01:19Z</updated>
     <dc:date>2021-01-12T20:01:19Z</dc:date>
   </entry>
-  <dc:date>2021-05-14T17:54:12+00:00</dc:date>
+  <entry>
+    <id>https://github.com/mempool/mempool/releases/tag/v2.0.1</id>
+    <link href="https://github.com/mempool/mempool/releases/tag/v2.0.1"/>
+    <summary>Mempool v2.0.1 is a hotfix release:
+
+* Fixes memory leak by not stacking data in the scan accumulator (#273)
+* Also handle going from zero to initial graph data on dashboard</summary>
+    <title>mempool/mempool: v2.0.1</title>
+    <updated>2021-01-12T12:19:10Z</updated>
+    <dc:date>2021-01-12T12:19:10Z</dc:date>
+  </entry>
+  <dc:date>2021-05-14T18:10:34+00:00</dc:date>
 </feed>
