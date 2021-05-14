@@ -38,6 +38,155 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.1.1">v1.1.1</a>
+						    </h2>
+							<p class="card-text">Published: 2021-05-14 09:02:09 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>Minor release minor bug fixes.</p>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>Update BC-UR bundle and support decoding hex format of wallet (#2505 #2499) @Kukks</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>During refund or payout, some payments issued from BTCPay were not properly detected. (#2513 #2518) @Kukks @NicolasDorier</li>
+<li>Fix payment button steps and validation range (#2506 #2503) @Kukks</li>
+<li>The local culture of the server could break some feature on BTCPay Server (#2512) @NicolasDorier</li>
+<li>Make sure unaccounted payments (double spent payments, or payjoin original transaction), are not accounted by the payment requests and crowdfund app @NicolasDorier</li>
+<li>Coinswitch page was not reflecting correctly in the side navigation @kukks</li>
+<li>Coinswitch showed as enabled when it was configured but disabled @kukks</li>
+<li>Lightning payment were not detected if <code>Only enable the payment method after user explicitly chooses it</code> was checked for the store @kukks</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.1.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc1">v0.13.0-beta.rc1</a>
+						    </h2>
+							<p class="card-text">Published: 2021-05-14 08:58:33 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>Database Migrations</h1>
+
+<p>TODO</p>
+
+<h1>Verifying the Release</h1>
+
+<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already: </p>
+
+<p><code>
+curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
+curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
+</code></p>
+
+<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-roasbeef-v0.13.0-beta.rc1.sig</code> and <code>manifest-v0.13.0-beta.rc1.txt</code> are in the current directory) with:</p>
+
+<p><code>
+gpg --verify manifest-roasbeef-v0.13.0-beta.rc1.sig manifest-v0.13.0-beta.rc1.txt
+</code></p>
+
+<p>You should see the following if the verification was successful:</p>
+
+<p><code>
+gpg: Signature made Wed Sep 30 17:35:20 2020 PDT
+gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+</code></p>
+
+<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
+
+<h2>Verifying the Release Timestamp</h2>
+
+<p>From this new version onwards, in addition time-stamping the <em>git tag</em> with <a href="https://opentimestamps.org/">OpenTimeStamps</a>, we&#39;ll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: <code>manifest-roasbeef-v0.13.0-beta.rc1.txt.asc.ots</code>.</p>
+
+<p>Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+<code>
+ots verify manifest-roasbeef-v0.13.0-beta.rc1.sig.ots -f manifest-roasbeef-v0.13.0-beta.rc1.sig
+</code></p>
+
+<p>Alternatively, <a href="https://opentimestamps.org/">the open timestamps website</a> can be used to verify timestamps if one doesn&#39;t have a <code>bitcoind</code> instance accessible locally. </p>
+
+<p>These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. </p>
+
+<h2>Verifying the Release Binaries</h2>
+
+<p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/tree/master/build/release">reproducible builds guide</a> for how this can be achieved.
+The release binaries are compiled with <code>go1.16.3</code>, which is required by verifiers to arrive at the same ones.
+They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>routerrpc</code>, and <code>watchtowerrpc</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
+
+<p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
+
+<p>Finally, you can also verify the <em>tag</em> itself with the following command:</p>
+
+<p><code>
+$ git verify-tag v0.13.0-beta.rc1
+gpg: Signature made Tue Sep 15 18:55:00 2020 PDT
+gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+</code></p>
+
+<h2>Verifying the Docker Images</h2>
+
+<p>To verify the <code>lnd</code> and <code>lncli</code> binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):</p>
+
+<p><code>shell
+$ docker pull lightninglabs/lnd:v0.13.0-beta.rc1
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.13.0-beta.rc1 /verify-install.sh
+$ OK=$?
+$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
+$ docker run lightninglabs/lnd [command-line options]
+</code></p>
+
+<h1>Building the Contained Release</h1>
+
+<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
+that <code>vendor.tar.gz</code> and <code>lnd-source-v0.13.0-beta.rc1.tar.gz</code> are in the current directory, follow these steps:</p>
+
+<p><code>
+tar -xvzf vendor.tar.gz
+tar -xvzf lnd-source-v0.13.0-beta.rc1.tar.gz
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.0-beta.rc1&quot; ./cmd/lnd
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.0-beta.rc1&quot; ./cmd/lncli
+</code></p>
+
+<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory. </p>
+
+<p>Additionally, it&#39;s now possible to use the <a href="https://github.com/lightningnetwork/lnd/pull/2191">enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so</a>: </p>
+
+<p><code>
+make release sys=&quot;linux-arm64 darwin-amd64&quot;
+</code></p>
+
+<p>⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️</p>
+
+<h1>Release Notes</h1>
+
+<p>TODO</p>
+
+<h1>Contributors (Alphabetical Order)</h1>
+
+<p>TODO</p>
+</p>
+					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.2">v6.1.2</a>
 						    </h2>
 							<p class="card-text">Published: 2021-05-09 19:08:04 UTC</p>
@@ -7657,73 +7806,6 @@ $ ./bwt-0.1.5-x86</em>64-linux/bwt --xpub <xpub> ...
 </p>
 					    <a href="https://github.com/unchained-capital/caravan" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/mempool/mempool">mempool/mempool</a>: <a href="https://github.com/mempool/mempool/releases/tag/v2.0.1">v2.0.1</a>
-						    </h2>
-							<p class="card-text">Published: 2021-01-12 12:19:10 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Mempool v2.0.1 is a hotfix release:</p>
-
-<ul>
-<li>Fixes memory leak by not stacking data in the scan accumulator (#273)</li>
-<li>Also handle going from zero to initial graph data on dashboard</li>
-</ul>
-</p>
-					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/mempool/mempool/releases/tag/v2.0.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.5">v1.0.6.5</a>
-						    </h2>
-							<p class="card-text">Published: 2021-01-11 14:59:56 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This release includes changes in the way we index invoices for search.
-As such, after update, the invoice search feature of BTCPay Server might not work for a while. (~5min if you have lot&#39;s of invoices)</p>
-
-<h3>Improvements:</h3>
-
-<ul>
-<li>Support a subset of output descriptor in the wallet setup @Kukks</li>
-<li>Improved styling of the notification dropdown (see #2167) @ubolator @dennisreimann</li>
-<li>API keys and server&#39;s url can be shown as QR Code to facilitate pairing @Kukks</li>
-<li>Greenfield API: Add <code>DefaultPaymentMethod</code> to the store&#39;s settings @Kukks</li>
-<li>Greenfield API: Can configure on-chain payment methods @Kukks @NicolasDorier</li>
-<li>UI Improvements (see this <a href="https://github.com/btcpayserver/btcpayserver/pull/2151/commits">commit list</a>) @dennisreimann</li>
-</ul>
-
-<h3>Bug fixes:</h3>
-
-<ul>
-<li>Always normalize the invoice&#39;s currency in uppercase @NicolasDorier</li>
-<li>If a label on a wallet&#39;s transaction does not have color, it should still show it @NicolasDorier</li>
-<li>Do not include Tor Location header when querying the modal checkout (see #2180) @Kukks</li>
-<li>Webhooks should not be randomly deleted anymore. @NicolasDorier</li>
-<li>Fix header not showing properly after login to BTCPay Server (see #2155) @dennisreimann</li>
-<li>Bug: Searching invoices was timing out if there was too much invoices @rockstardev @Kukks</li>
-</ul>
-
-<h3>Miscellaneous:</h3>
-
-<ul>
-<li>Removing the old text search engine (DBreeze) @rockstardev @Kukks</li>
-<li>Add doc for asking permissions to BTCPayServer see <a href="docs/greenfield-authorization.md">link</a>. @Kukks</li>
-</ul>
-</p>
-					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
