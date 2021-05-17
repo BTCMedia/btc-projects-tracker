@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-17T23:42:53+00:00</updated>
+  <updated>2021-05-17T23:52:56+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc2</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc2"/>
@@ -81,27 +81,15 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 ```
 ⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
 
-# Release Notes
+# Release Notes (WIP)
 
 ## P2P Gossip Handling Hardening &amp; Optimizations
 
 ### Ephemeral &amp; Persistent Gossip Reject Caches 
 
-Those that run larger lnd instances may have noticed a cyclic nature of gossip
-traffic that would lead to many announcements being rejected, only to be
-processed hours later. This burst of traffic typically causes high CPU and
-memory usage, along with a large batch of blocks fetched from the node backend.
-During this release cycle we dug into the issue and found that it the culprit
-was actually a new variant of zombie channel churn: fully closed channels
-(funding UTXO spent) being continually offered by nodes that aren't (for some
-reason) pruning their channel graph. 
+Those that run larger lnd instances may have noticed a cyclic nature of gossip traffic that would lead to many announcements being rejected, only to be processed hours later. This burst of traffic typically causes high CPU and memory usage, along with a large batch of blocks fetched from the node backend. During this release cycle we dug into the issue and found that it the culprit was actually a new variant of zombie channel churn: fully closed channels (funding UTXO spent) being continually offered by nodes that aren't (for some reason) pruning their channel graph. 
 
-[In this release, we'll now add channels that fail full validation irrevocably
-to the existing zombie index
-cache](https://github.com/lightningnetwork/lnd/pull/5227). Expanding the usage
-of this cache means that new lnd nodes will only validate those spent channels
-once (as they should), then never request them again during the historical sync
-spot checks that happen periodically. 
+[In this release, we'll now add channels that fail full validation irrevocably to the existing zombie indexcache](https://github.com/lightningnetwork/lnd/pull/5227). Expanding the usage of this cache means that new lnd nodes will only validate those spent channels once (as they should), then never request them again during the historical sync spot checks that happen periodically. 
 
 ### Gossip Reject Cache 
 
@@ -115,37 +103,15 @@ Related to the above fix, [a bug has been fixed that would cause us to continual
 
 ### Strict Zombie Pruning 
 
-Typically lnd will mark a channel as a zombie when _both_ of its edges aren't
-re-advertised within a two week period. This is typically referred to as a
-channel's heartbeat update. [Analysis by Conner Fromknecht demonstrated that
-the channel graph itself could be shrunk by a
-~20%](https://github.com/lightningnetwork/lightning-rfc/pull/767) if a stricter
-pruning heuritic was adopted: pruning a channel once only a single edge fails
-the heartbeat check. [The latest version of `lnd` has implemented this stricter
-pruning variant](https://github.com/lightningnetwork/lnd/pull/5138) in an
-opt-in manner. 
+Typically lnd will mark a channel as a zombie when _both_ of its edges aren't re-advertised within a two week period. This is typically referred to as a channel's heartbeat update. [Analysis by Conner Fromknecht demonstrated that the channel graph itself could be shrunk by a ~20%](https://github.com/lightningnetwork/lightning-rfc/pull/767) if a stricter pruning heuristic was adopted: pruning a channel once only a single edge fails the heartbeat check. [The latest version of `lnd` has implemented this stricter pruning variant](https://github.com/lightningnetwork/lnd/pull/5138) in an opt-in manner. 
 
-This new graph pruning variant is on by default for neutrino nodes as it was
-common for them to never actually receive a &quot;double disable&quot; of a channel's
-edges, meaning it would never actually remove certain closed channels from its
-channel graph. Routing nodes and nodes that frequently send outbound payments
-can activate the new pruning variant with a new flag:
-`--routing.strictgraphpruning`. The new logic also requires that party that
-originally failed the heartbeat check to the be one that re-publishes the
-channel update in order for a prior zombie channel to be resourced. 
- the channel update in order for a prior zombie channel to be ressurcted. 
+This new graph pruning variant is on by default for neutrino nodes as it was common for them to never actually receive a &quot;double disable&quot; of a channel's edges, meaning it would never actually remove certain closed channels from its channel graph. Routing nodes and nodes that frequently send outbound payments can activate the new pruning variant with a new flag: `--routing.strictgraphpruning`. The new logic also requires that party that originally failed the heartbeat check to the be one that re-publishes the channel update in order for a prior zombie channel to be resourced.
 
 ## New M1 Release Target 
 
-[This is the first release that includes binaries for the recently released Apple
-Silicon (M1) architecture!](https://github.com/lightningnetwork/lnd/pull/5034) roasbeef has switched to using an M1 machine as his
-primary development machine over the past few months and hasn't reported any
-unsafe behavior. We encourage those switching to run lnd on an M1 machine to
-reach out to us if any abnormal behavior is detected. 
+[This is the first release that includes binaries for the recently released Apple Silicon (M1) architecture!](https://github.com/lightningnetwork/lnd/pull/5034) roasbeef has switched to using an M1 machine as his primary development machine over the past few months and hasn't reported any unsafe behavior. We encourage those switching to run lnd on an M1 machine to reach out to us if any abnormal behavior is detected. 
 
-For the 0.14 release, we aim to start to remove architectures for binaries
-included with the final packaged release that are either in the bottom tier of
-downloads, or have no downloads at all. 
+For the 0.14 release, we aim to start to remove architectures for binaries included with the final packaged release that are either in the bottom tier of downloads, or have no downloads at all. 
 
 ## P2P Networking 
 
@@ -153,7 +119,37 @@ downloads, or have no downloads at all.
 
 
 # Contributors (Alphabetical Order)
-TODO
+
+Alex Bosworth
+Andras Banki-Horvath 
+Anton Kovalenko 
+Bjarne Magnussen 
+Carla Kirk-Cohen 
+Conner Fromknecht 
+Elle Mouton
+Elliott Jin 
+Eugene Seigel 
+GameXG 
+Hampus Sjöberg 
+Jake Sylvestre
+Johan T. Halseth 
+Jonathan Underwood 
+Joost Jager 
+Juan Pablo Civile 
+Martin Habovštiak 
+Olaoluwa Osuntokun
+Oliver Gugger
+Pierre Rochard 
+Roei Erez 
+Tom Kirkpatrick 
+Umar Bolatov 
+Vlad Stan 
+Wilmer Paulino 
+Yaacov Akiba Slama 
+rockstardev 
+whythat 
+yuki-js 
+Yong Yu
 </summary>
     <title>lightningnetwork/lnd: v0.13.0-beta.rc2</title>
     <updated>2021-05-15T22:20:44Z</updated>
@@ -6424,5 +6420,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-01-12T20:01:19Z</updated>
     <dc:date>2021-01-12T20:01:19Z</dc:date>
   </entry>
-  <dc:date>2021-05-17T23:42:53+00:00</dc:date>
+  <dc:date>2021-05-17T23:52:56+00:00</dc:date>
 </feed>
