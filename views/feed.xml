@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-19T11:31:57+00:00</updated>
+  <updated>2021-05-19T11:43:42+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.1.2</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.1.2"/>
+    <summary>* Fix: Unable to activate shopify integration @Kukks</summary>
+    <title>btcpayserver/btcpayserver: v1.1.2</title>
+    <updated>2021-05-19T11:38:09Z</updated>
+    <dc:date>2021-05-19T11:38:09Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc2</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc2"/>
@@ -6502,13 +6510,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-01-14T02:48:02Z</updated>
     <dc:date>2021-01-14T02:48:02Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.5</id>
-    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.5"/>
-    <summary>Update `unchained-wallets` version in order to support new Coldcard firmware version.</summary>
-    <title>unchained-capital/caravan: v0.3.5</title>
-    <updated>2021-01-12T20:01:19Z</updated>
-    <dc:date>2021-01-12T20:01:19Z</dc:date>
-  </entry>
-  <dc:date>2021-05-19T11:31:57+00:00</dc:date>
+  <dc:date>2021-05-19T11:43:42+00:00</dc:date>
 </feed>
