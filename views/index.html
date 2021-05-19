@@ -38,6 +38,209 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/eclair">ACINQ/eclair</a>: <a href="https://github.com/ACINQ/eclair/releases/tag/v0.6.0">v0.6.0</a>
+						    </h2>
+							<p class="card-text">Published: 2021-05-19 13:05:56 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This release makes some core features mandatory, includes a few important bug fixes and several performance improvements.
+It is fully compatible with 0.5.1 (and all previous versions of eclair).</p>
+
+<h1>Major changes</h1>
+
+<h3>Mandatory payment secrets</h3>
+
+<p>This release makes two important features mandatory:</p>
+
+<ul>
+<li><code>var_onion_optin</code> (added to the spec in <a href="https://github.com/lightningnetwork/lightning-rfc/pull/619">July 2019</a>)</li>
+<li><code>payment_secret</code> (added to the spec in <a href="https://github.com/lightningnetwork/lightning-rfc/pull/643">December 2019</a>)</li>
+</ul>
+
+<p>These features have been widely deployed and protect against privacy attacks and stealing payments to 0-value invoices (as described <a href="https://github.com/lightningnetwork/lightning-rfc/pull/671">here</a>).
+You won&#39;t be able to connect to nodes that don&#39;t support these features nor pay invoices that don&#39;t include a <code>payment_secret</code>.</p>
+
+<h3>Improved detection of stale blocks</h3>
+
+<p>Eclair uses <a href="https://zeromq.org/">ZMQ</a> to receive blocks and transactions from your bitcoin node.
+While ZMQ is usually very reliable, we discovered that its pub/sub model has some limitations.
+If a subscriber encounters network failures, it will silently disconnect without notifying the publisher.
+This never happens when your bitcoin node is on the same machine as eclair, but may happen when bitcoin is running on a remote machine and a VPN is used between the two machines.
+Eclair now sets a TCP keep-alive on the ZMQ socket to work around this limitation and quickly reconnect.</p>
+
+<p>The blockchain watchdogs have also been improved to run at fixed intervals if no blocks are received.
+They will poll secondary blockchain sources (bitcoinheaders.net, blockstream.info, mempool.space and blockcypher.com) to detect that your eclair node is missing blocks.</p>
+
+<h3>Electrum support removed</h3>
+
+<p>This release removes support for using Electrum instead of Bitcoin Core for your bitcoin wallet.
+Electrum support was necessary for mobile wallets, but wasn&#39;t recommended for server deployments.
+Wallets are migrating to our <a href="https://github.com/acinq/lightning-kmp">Kotlin lightning stack</a>, so eclair can now target exclusively server deployments.</p>
+
+<p>Eclair depends on many low-level <code>bitcoind</code> RPCs for fee bumping which aren&#39;t available yet in Electrum.</p>
+
+<h3>Improved Postgres support</h3>
+
+<p>We previously introduced beta support for using <a href="https://github.com/ACINQ/eclair/blob/master/docs/PostgreSQL.md">PostgreSQL</a> as database backend in eclair v0.4.1.
+We&#39;ve fixed some bugs since then and improved the integration, but please note that PostgreSQL support is still in beta.
+We&#39;re actively working on finalizing this integration and making PostgreSQL production-ready in a future release.</p>
+
+<h3>Support for future segwit versions</h3>
+
+<p>This release adds support for <code>option_shutdown_anysegwit</code> (spec PR available <a href="https://github.com/lightningnetwork/lightning-rfc/pull/672">here</a>).
+Current segwit bitcoin addresses (P2WPKH and P2WSH) only use segwit version 0, but this change lets nodes use bitcoin addresses with other version numbers (taproot will use version 1).</p>
+
+<h3>API changes</h3>
+
+<p>This release updates a few APIs:</p>
+
+<ul>
+<li>Features are now displayed as a map (feature name -&gt; support) in API responses (#1715)</li>
+<li>Channel internal state tracking force-close scenarios has been enriched (#1728)</li>
+<li>A <code>--blocking=&lt;bool&gt;</code> option has been added to the <code>payinvoice</code> API (#1751)</li>
+</ul>
+
+<p>We&#39;ve also updated our internal API DSL, which paves the way for more plugin integration in a future release.
+Head over to our <a href="https://acinq.github.io/eclair">API documentation</a> for more details.</p>
+
+<h3>Miscellaneous improvements and bug fixes</h3>
+
+<ul>
+<li>Eclair now defaults to Bech32 addresses (#1717)</li>
+<li>Anchor output commitment feerate is now configurable (#1718)</li>
+<li>All outputs of revoked anchor output commitments are claimed (there is a subtle edge case, see #1738)</li>
+<li>Internal codec packages and database versions have been reworked to improve future backwards-compatibility</li>
+<li>Several improvements have been made to our path-finding algorithms, improving tail latency</li>
+<li>A bug affecting reconnections to peers has been fixed (#1760)</li>
+<li>A bug affecting transaction outputs ordering (which can lead to channel force-close) has been fixed (#1806)</li>
+</ul>
+
+<h1>Verifying signatures</h1>
+
+<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:</p>
+
+<ul>
+<li>from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a></li>
+<li>from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></li>
+</ul>
+
+<p>To import our signing key:</p>
+
+<p><code>sh
+$ gpg --import drouinf.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:</p>
+
+<p><code>sh
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+
+<h1>Building</h1>
+
+<p>Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):</p>
+
+<ul>
+<li>Ubuntu 20.04</li>
+<li>AdoptOpenJDK 11.0.6</li>
+<li>Maven 3.8.1</li>
+</ul>
+
+<p>Use the following command to generate the eclair-node package:</p>
+
+<p><code>sh
+mvn clean install -DskipTests
+</code></p>
+
+<p>That should generate <code>eclair-node/target/eclair-node-0.6.0-XXXXXXX-bin.zip</code> with sha256 checksums that match the one we provide and sign in <code>SHA256SUMS.asc</code></p>
+
+<p>(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.</p>
+
+<h1>Upgrading</h1>
+
+<p>This release is fully compatible with eclair v0.5.1. You don&#39;t need to close your channels, just stop eclair, upgrade and restart.</p>
+
+<h1>Changelog</h1>
+
+<ul>
+<li>163700a23 Set version to 0.5.2-SNAPSHOT (#1714)</li>
+<li>844829a9b Features should be a Map (#1715)</li>
+<li>afa378fbb Fix Bolt 3 spec change that broke our test suite (#1719)</li>
+<li>c4c0248ee Use bech32 addresses by default (#1717)</li>
+<li>92e53dc9a Configurable anchor output max commitment feerate (#1718)</li>
+<li>ea8f94022 Fix potential race condition in node-relay (#1716)</li>
+<li>9ff2f833e Refactor and simplify API dsl (#1690)</li>
+<li>6364ae335 Reject trampoline payments with expired outgoing cltv (#1727)</li>
+<li>277213875 Better handling of TemporaryChannelFailure (#1726)</li>
+<li>ded5ce0e1 Add metadata to local_channels table (#1724)</li>
+<li>8dc64dbaa Fix API regression (#1729)</li>
+<li>4bc2dec66 Reorganize internal codecs (master) (#1732)</li>
+<li>6d28cbc8e Rework XxxCommitPublished types (#1728)</li>
+<li>6e72785d6 fixup! Rework XxxCommitPublished types (#1728) (#1735)</li>
+<li>7819faec3 Move protocol codecs to their own package (#1736)</li>
+<li>3d3766ef5 Clarify some comments and add tests (#1734)</li>
+<li>f39718a38 Add high-level architecture diagrams (#1733)</li>
+<li>f202587e9 Clarify commit tx fee anchor cost (#1721)</li>
+<li>c37eb1ad5 Handle aggregated anchor outputs htlc txs (#1738)</li>
+<li>e5429ebdf Avoid visiting vertices multiple times in Dijkstra&#39;s algorithm (#1745)</li>
+<li>c6a76af9d Introduce actor factories (#1744)</li>
+<li>75cb777c6 Prevent loops and improve shortest paths perf (#1747)</li>
+<li>936f36b9f Refactor Postgres code (#1743)</li>
+<li>ac2b78437 Fix flaky relay-htlc-add test (#1752)</li>
+<li>5729b2891 Add blocking option to payinvoice API (#1751)</li>
+<li>89d248929 Remove Electrum support (#1750)</li>
+<li>b25e5523e Remove Docker test dependency (#1753)</li>
+<li>13217610a Make signing payment requests faster (#1754)</li>
+<li>5f68bf922 Database nits (#1755)</li>
+<li>1e2abaed0 Index database metrics by backend (#1758)</li>
+<li>6518bb47a Posgres: fix concurrency in channels db (#1762)</li>
+<li>3da0b80cb Add a list of community plugins (#1763)</li>
+<li>48c0c4c98 Extract tx publishing from watchers (#1749)</li>
+<li>357f7f994 Catch all connection failures and reconnect (#1760)</li>
+<li>205653d09 Make db errors fatal in channels (#1764)</li>
+<li>ccae92d7d (Minor) Minimize conflicts with feature branches (#1765)</li>
+<li>eb834e252 Do not explicitly provide address for ServerSocket in tests (#1766)</li>
+<li>d0e79fa31 Add shorter CI timeout (#1769)</li>
+<li>15ddc1718 Add trampoline info to auditDB (#1767)</li>
+<li>32a86a476 Ignore tests with ServerSocket (#1776)</li>
+<li>33d52b653 More database nits (#1773)</li>
+<li>e092677b9 Rework the db version management (#1775)</li>
+<li>4a1dfd2a2 Reenable ServerSocket tests (#1777)</li>
+<li>e14c40d7c Use proper data type for timestamps in Postgres (#1778)</li>
+<li>62dd3932f Use bouncycastle instead of spongycastle (#1772)</li>
+<li>3669428b5 Don&#39;t log ClosingType object (#1781)</li>
+<li>223a14cb5 Remove bintray (#1785)</li>
+<li>9e4042fd4 Migrate ZmqWatcher to akka-typed (#1759)</li>
+<li>90fbcd32f Index trampoline payments by hash and secret (#1770)</li>
+<li>3079cb4fc Remove unused class (#1792)</li>
+<li>a8d4e07bd Use less strict isolation level for channel meta (#1790)</li>
+<li>55b50ecf4 ZMQ actors should subscribe to a single topic (#1793)</li>
+<li>c64154938 Fix computation of path weight (#1794)</li>
+<li>340fd299b Update default path-finding weight ratios (#1796)</li>
+<li>55a629f11 Update instructions for downloading Tor Bundle (#1784)</li>
+<li>898c17bc7 Remove ConnectionControlPlugin trait (#1797)</li>
+<li>0805d51af Do not retry sending if payment gets confirmed on chain (#1799)</li>
+<li>ec276f8e7 Use satoshi for htlc ordering (#1806)</li>
+<li>9c3ee59cf Check blockchain watchdogs regularly (#1808)</li>
+<li>91419980b Make payment_secret mandatory (#1810)</li>
+<li>1fbede761 Add TCP keep-alive on ZMQ socket (#1807)</li>
+<li>5a92f8474 Add support for option<em>shutdown</em>anysegwit (#1801)</li>
+<li>e2b3b4735 Update Tor doc for Windows (#1811)</li>
+<li>f746ade34 Set version to 0.6.0 (#1812)</li>
+</ul>
+
+<p>Special thanks to @tompro who reworked our internal API DSL.</p>
+</p>
+					    <a href="https://github.com/ACINQ/eclair" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/eclair/releases/tag/v0.6.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.1.2">v1.1.2</a>
 						    </h2>
 							<p class="card-text">Published: 2021-05-19 11:38:09 UTC</p>
@@ -7930,22 +8133,6 @@ $ ./bwt-0.1.5-x86</em>64-linux/bwt --xpub <xpub> ...
 </p>
 					    <a href="https://github.com/bwt-dev/bwt" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/rootzoll/raspiblitz">rootzoll/raspiblitz</a>: <a href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.3">v1.6.3</a>
-						    </h2>
-							<p class="card-text">Published: 2021-01-14 02:48:02 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>with mempool 2.0.1, specter 1.0.0, joininbox v0.1.16 &amp; smaller updates + fixes</p>
-</p>
-					    <a href="https://github.com/rootzoll/raspiblitz" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.6.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
