@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-19T17:23:48+00:00</updated>
+  <updated>2021-05-19T17:33:24+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/eclair/releases/tag/v0.6.0</id>
     <link href="https://github.com/ACINQ/eclair/releases/tag/v0.6.0"/>
@@ -206,7 +206,7 @@ Special thanks to @tompro who reworked our internal API DSL.
 
 # Database Migrations
 
-TODO
+The `lnd` database is migrated to store all wire messages with an additional TLV field. See details below.
 
 # Verifying the Release
 
@@ -255,7 +255,7 @@ The `make release` command can be used to ensure one rebuilds with all the same 
 
 Finally, you can also verify the _tag_ itself with the following command:
 
-```
+```shell
 $ git verify-tag ${{ env.RELEASE_VERSION }}
 gpg: Signature made Tue Sep 15 18:55:00 2020 PDT
 gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
@@ -298,42 +298,64 @@ $ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 
 # Release Notes
 
-## P2P Gossip Handling Hardening &amp; Optimizations
+## Database and wire changes
 
-### Ephemeral &amp; Persistent Gossip Reject Caches 
+### TLV support for all messages
+The wire messages sent between LN peers have the ability to carry additional data, using the TLV format. This allows attaching data and protocol extensions to messages in a non-breaking way, paving the way for future feature upgrades to the protocol. 
+
+In this release all stored messages in the `lnd` database are [migrated to a format supporting these TLV extensions](https://github.com/lightningnetwork/lnd/pull/4923), and message parsing now always read out these fields and keep them for future handling.
+
+## Protocol updates
+
+### Anchor output channels
+The spec compliant anchor channel format introduced in v0.12 is now the default channel type if both nodes support it when opening a new channel. You can read more about it in the [v0.12.0 release notes](https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta), and it can be disabled by providing the `--protocol.no-anchors` flag at startup.
+
+Since a node having channels using this format must keep on-chain funds around in case unilateral fee bumping is needed, we reserve 10k sats per channel for this purpose. In this release we [cap this at `100k` sats](https://github.com/lightningnetwork/lnd/pull/5274), and in addition avoid reserving this value for private channels.
+
+Finally a change to breach handling has been made, to mitigate a theoretical attack the channel peer can perform by [pinning HTLC outputs](https://github.com/lightningnetwork/lightning-rfc/pull/803) on a breached commitment transaction. If we suspect such pinning is taking place, lnd will now attempt to [sweep the breached commitment outputs separately](https://github.com/lightningnetwork/lnd/pull/5036).
+
+## P2P Gossip Handling, Hardening &amp; Optimizations
+
+### Ephemeral &amp; Persistent Gossip Reject Caches
 
 Those that run larger lnd instances may have noticed a cyclic nature of gossip
 traffic that would lead to many announcements being rejected, only to be
 processed hours later. This burst of traffic typically causes high CPU and
 memory usage, along with a large batch of blocks fetched from the node backend.
-During this release cycle we dug into the issue and found that it the culprit
+During this release cycle we dug into the issue and found that the culprit
 was actually a new variant of zombie channel churn: fully closed channels
 (funding UTXO spent) being continually offered by nodes that aren't (for some
-reason) pruning their channel graph. 
+reason) pruning their channel graph.
 
 [In this release, we'll now add channels that fail full validation irrevocably
-to the existing zombie index
-cache](https://github.com/lightningnetwork/lnd/pull/5227). Expanding the usage
-of this cache means that new lnd nodes will only validate those spent channels
-once (as they should), then never request them again during the historical sync
-spot checks that happen periodically. 
+to the existing zombie index cache](https://github.com/lightningnetwork/lnd/pull/5227).
+Expanding the usage of this cache means that new lnd nodes will only validate
+those spent channels once (as they should), then never request them again
+during the historical sync spot checks that happen periodically.
 
-### Gossip Reject Cache 
+Related to the above fix, [a bug has been fixed that would cause us to
+continually re-validate a channel announcement that we had already rejected](https://github.com/lightningnetwork/lnd/pull/5192).
 
-Related to the above fix, [a bug has been fixed that would cause us to continually re-validate a channel announcement that we had already rejected](https://github.com/lightningnetwork/lnd/pull/5192). 
+### Dependent Gossip Processing
+
+`ChannelUpdate` and `NodeAnnouncement` gossip messages depend on its `ChannelAnnouncement` being processed successfully. Throughout our investigative efforts above, we also noticed that `lnd` would process these messages when their corresponding `ChannelAnnouncement`'s validation failed, which has now been [fixed](https://github.com/lightningnetwork/lnd/pull/5133/).
+
+### Improved Gossip Rate Limiting
+
+`lnd v0.12.1-beta` featured a new gossip rate limiting heuristic in which keep-alive updates were throttled to allow one per day, while non-keep-alive updates were throttled to allow one per block. The latter heuristic for non-keep-alive updates proved to be inconsistent, especially for our auto enable/disable channel behavior, as blocks are not guaranteed to arrive at a constant rate. To mitigate this, we've moved towards a token bucket based approach to allow by default one update per minute with a maximum burst tolerance of 10 updates. These defaults may change as the structure of the network does, but they can also be changed through two new config options: `gossip.channel-update-interval` and `gossip.max-channel-update-burst`.
 
 ## Routing Optimizations &amp; New Payment Types
 
-### MPP+AMP Payment Splitting on by Default 
+### MPP+AMP Payment Splitting on by Default
 
-[In this version of `lnd`, MPP payment splitting is now activated by default](https://github.com/lightningnetwork/lnd/pull/5017). Prior versions of `lnd` required a caller to _manually_ specify that they wanted their payment to possibly be split via the `MaxShards` RPC/CLI flag. The default number of attempted splits is now 16 (we'll attempt to split up to 16 times by default). In addition, a new `MaxShardAmt` flag has been added that allows the caller to control _how large_ the largest split can be. This new flag can effectively be used to force `lnd` to adhere to a given maximum payment unit expressed in satoshis, which means `lnd` may split more frequently than before. 
+[In this version of `lnd`, MPP payment splitting is now activated by default](https://github.com/lightningnetwork/lnd/pull/5017). Prior versions of `lnd` required a caller to _manually_ specify that they wanted their payment to possibly be split via the `MaxShards` RPC/CLI flag. The default number of attempted splits is now 16 (we'll attempt to split up to 16 times by default). In addition, a new `MaxShardAmt` flag has been added that allows the caller to control _how large_ the largest split can be. This new flag can effectively be used to force `lnd` to adhere to a given maximum payment unit expressed in satoshis, which means `lnd` may split more frequently than before.
 
-### Strict Zombie Pruning 
+### Strict Zombie Pruning
 
 Typically lnd will mark a channel as a zombie when _both_ of its edges aren't
 re-advertised within a two week period. This is typically referred to as a
 channel's heartbeat update. [Analysis by Conner Fromknecht demonstrated that
-the channel graph itself could be shrunk by ~20%](https://github.com/lightningnetwork/lightning-rfc/pull/767) if a stricter pruning heuristic was adopted: pruning a channel once only a single edge fails the heartbeat check. [The latest version of `lnd` has implemented this stricter pruning variant](https://github.com/lightningnetwork/lnd/pull/5138) in an opt-in manner. 
+the channel graph itself could be shrunk by ~20%](https://github.com/lightningnetwork/lightning-rfc/pull/767) if a stricter pruning heuristic was adopted: pruning a channel once only a single edge fails the heartbeat check. [The latest version of `lnd` has implemented this stricter pruning variant](https://github.com/lightningnetwork/lnd/pull/5138) in an opt-in manner.
 
 This new graph pruning variant is on by default for neutrino nodes as it was
 common for them to never actually receive a &quot;double disable&quot; of a channel's
@@ -351,54 +373,134 @@ channel update in order for a prior zombie channel to be resourced.
 Silicon (M1) architecture!](https://github.com/lightningnetwork/lnd/pull/5034) roasbeef has switched to using an M1 machine as his
 primary development machine over the past few months and hasn't reported any
 unsafe behavior. We encourage those switching to run lnd on an M1 machine to
-reach out to us if any abnormal behavior is detected. 
+reach out to us if any abnormal behavior is detected.
 
 For the 0.14 release, we aim to start to remove architectures for binaries
 included with the final packaged release that are either in the bottom tier of
-downloads, or have no downloads at all. 
+downloads, or have no downloads at all.
 
-## P2P Networking 
+## P2P Networking
 
-[A bug that wouldn't allow a node to listen on an IPv6 REST port when Tor is active](https://github.com/lightningnetwork/lnd/issues/2541) has [been fixed](https://github.com/lightningnetwork/lnd/pull/5007). 
+[A bug that wouldn't allow a node to listen on an IPv6 REST port when Tor is active](https://github.com/lightningnetwork/lnd/issues/2541) has [been fixed](https://github.com/lightningnetwork/lnd/pull/5007).
 
-## Wallet improvements
+## Wallet Enhancements
 
-### ECDH revocation seed
+This release features several improvements that will enable `lnd` (in a future release!) to operate without the access of private keys within its process.
+
+### Watch-Only Key Import
+
+The wallet is now able to [import BIP-0049 and BIP-0084 accounts/public keys as watch-only](https://github.com/lightningnetwork/lnd/pull/5047/) through xpubs! This feature was made possible by the [introduction of watch-only accounts to btcwallet](https://github.com/btcsuite/btcwallet/pull/667), our internal wallet. This functionality is exposed through two new RPCs within the `WalletKit` sub-server: `ImportAccount` and `ImportPublicKey`.
+
+Events (deposits/spends) for imported keys or keys derived from an imported account will only be detected by lnd if they happen after the import. Rescans to detect past events will be supported in a future release, so make sure to use a new unused wallet when using this functionality.
+
+TODO: Include link to documentation featuring an in-depth example of account/pubkey import.
+
+### ECDH Revocation Seed
+
 The revocation seed is used to generate revocation secrets during the lifetime of a channel. The [seed-generation code](https://github.com/lightningnetwork/lnd/pull/4517) has been updated to no longer handle raw private keys, using ECDH to achieve this.
-
-### New status RPC
 
 ### Auto-unlock wallet from password file
 
-In automated or unattended setups such as cluster/container environments, unlocking the wallet through RPC presents a set of challenges. Usually the password is present as a file somewhere in the container already anyway so writing an extra custom script for unlocking is error prone and tedious. Instead the [new `--wallet-unlock-password-file` flag was added](https://github.com/lightningnetwork/lnd/pull/5256) that can be used to read the password for an existing wallet from a file [(or device or named pipe)](https://github.com/lightningnetwork/lnd/blob/master/docs/wallet.md#auto-unlocking-a-wallet) to auto-unlock it.
+In automated or unattended setups such as cluster/container environments, unlocking the wallet through RPC presents a series of challenges. Usually, the password is present as a file somewhere in the container already anyway so writing an extra custom script for unlocking is error prone and tedious. Instead the [new `--wallet-unlock-password-file` flag was added](https://github.com/lightningnetwork/lnd/pull/5256) that can be used to read the password for an existing wallet from a file [(or device or named pipe)](https://github.com/lightningnetwork/lnd/blob/master/docs/wallet.md#auto-unlocking-a-wallet) to auto-unlock it.
 
-## Neutrino
+## Backend Enhancements &amp; Optimizations
 
-* [Reduce memory footprint by 50% during initial block header sync](https://github.com/lightninglabs/neutrino/pull/213).
-* [Validate filters against downloaded blocks and update filter header checkpoints](https://github.com/lightninglabs/neutrino/pull/215).
+### `bitcoind` Pruned Node Support
 
-## RPC 
+TODO
+
+### Neutrino Optimizations
+
+The memory footprint used throughout the initial block header sync has been [reduced by 50%](https://github.com/lightninglabs/neutrino/pull/213).
+
+The set of [filter header checkpoints for the mainnet and testnet chains have been updated](https://github.com/lightninglabs/neutrino/pull/215).
+
+### Neutrino Channel Validation
+
+Compact filters retrieved from peers to determine whether the corresponding block contains any relevant transactions are now [validated by checking whether they were constructed correctly](https://github.com/lightninglabs/neutrino/pull/215).
+
+[`lnd` instances _backed by Neutrino_ now have channel validation disabled by default](https://github.com/lightningnetwork/lnd/pull/5193). Channel validation includes obtaining the block a channel was included in and verifying the channel output remains unspent. This is an intensive process for light-clients as they don't maintain a block index and UTXO set. The `routing.assumechanvalid` config option, which disables channel validation, has now been deprecated. Channel validation can be re-enabled for Neutrino-backed lnd nodes with the new config option `neutrino.validatechannels`.
+
+### Neutrino Configuration
+
+[`neutrino.broadcasttimeout` allows users to specify how long they wish their broadcast attempts to last before giving up](https://github.com/lightningnetwork/lnd/pull/5257).
+
+[`neutrino.persistfilters` allows users to persist compact filters retrieved from the network](https://github.com/lightningnetwork/lnd/pull/5257). This will result in less bandwidth consumption at the expense of storage.
+
+[`neutrino.validatechannels` can be activated to enable channel validation](https://github.com/lightningnetwork/lnd/pull/5193). Note that light-clients are not well-equipped to perform this type of validation without SPV channel proofs (keep an eye out for this in future releases!).
+
+### Immediate graph updates for local channels
+
+In [lnd v0.12.0](https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta) we saw a massive enhancement to graph sync, since batch writing of gossip messages to the database was introduced. However, this also included local updates made, which could cause these to become slightly delayed. In this release the local updates will now get special treatment, and [are added immediately](https://github.com/lightningnetwork/lnd/pull/4964).
+
+## RPC
+
+### Unification of WalletUnlocker and Lightning services
+
+This release brings a [massive overhaul to the way the wallet is unlocked](https://github.com/lightningnetwork/lnd/pull/4985) on the backend, while staying backwards compatible.
+
+Earlier version of lnd would bring up a gRPC server that exposed the `WalletUnlocker` service, which would in turn be stopped and restarted to bring up the `Lightning` service after successful unlock. This caused issues with some clients that didn't expect the available services to change during runtime, and it also made it hard to determine the state of the wallet without string matching on the error received from calling the RPC server.
+
+In `lnd v0.13.0`, the two gRPC services (and subserver services) are available at all times such that we avoid tearing down the gRPC server at runtime. The RPC endpoints are gated by the wallet state (see below) such that only RPCs from the `WalletUnlocker` service are available as long as the wallet remains locked.
+
+If you relied on the RPC errors or availability of the different services to determine the wallet state, you should change to use the new `State` service.
+
+### New `State` Service
+
+[A new service](https://github.com/lightningnetwork/lnd/pull/5005) is now exposed on the `lnd` gRPC server: `State`. This can be used to get the state of the wallet at all times, and should be used to programatically drive the unlocking process. 
+
+The possible wallet states are `[NON_EXISTING, LOCKED, UNLOCKED, RPC_ACTIVE]` and the state can be subscribed to using the `SubscribeState` RPC, or fetched using `lncli state`.
 
 ### Mission Control
-Mission Control's parmeters can now [read and set](https://github.com/lightningnetwork/lnd/pull/4909/) while lnd is running using the `GetMissionControlConfig` and `SetMissionControlConfig` endpoints. This allows nodes to experiment with these parameters without restarting lnd. 
 
-An [experimental](https://github.com/lightningnetwork/lnd/pull/5061) `XImportMissionControl` API has been added to allow nodes to import state from other lnd nodes' `QueryMissionControl` output. This allows new nodes to start include routing insights that another node has learned, rather than starting with no information about the network. This imported information is not currently persisted. Note that sharing your `QueryMissionControl` output with another party may leak information about your payment history. 
+Mission Control's parameters can now [read and set](https://github.com/lightningnetwork/lnd/pull/4909/) while lnd is running using the `GetMissionControlConfig` and `SetMissionControlConfig` endpoints. This allows nodes to experiment with these parameters without restarting lnd.
 
-### Bi-directional stream support for REST WebSockets
+An [experimental](https://github.com/lightningnetwork/lnd/pull/5061) `XImportMissionControl` API has been added to allow nodes to import state from other lnd nodes' `QueryMissionControl` output. This allows new nodes to start include routing insights that another node has learned, rather than starting with no information about the network. This imported information is not currently persisted. Note that sharing your `QueryMissionControl` output with another party may leak information about your payment history.
+
+### Bi-directional Stream Support for REST WebSockets
 
 [A fix to the WebSocket proxy](https://github.com/lightningnetwork/lnd/pull/5237) now allows all RPCs to be used over REST/WebSockets, including the client-streaming ones (specifically `lnrpc.Lightning.ChannelAcceptor`, `lnrpc.Lightning.SendPayment` and `routerrpc.Router.HtlcInterceptor`).
+
 An [example for using the channel acceptor over REST](https://github.com/lightningnetwork/lnd/blob/master/docs/rest/websockets.md#request-streaming-rpcs) was added to the documentation.
 
-### Pprof Security
-Lnd will no longer make its pprof port accessible to the world by default, and will [instead listen on localhost if a port is specified](https://github.com/lightningnetwork/lnd/pull/5063). Exposing the pprof port is still left as an option for certain use cases.
+### Option to delete failed payments
+In earlier versions of lnd you could delete all finished payments from the database using the `DeleteAllPayments` RPC. Two new flags `failed_payments_only` and `failed_htlcs_only` have been added to this RPC, which can be used to [delete only payments (HTLCs) that failed](https://github.com/lightningnetwork/lnd/pull/3191).
+
+### `WalletKit` &amp; Wallet-Related RPCs
+
+TODO
+
+### `pprof` Security
+
+lnd will no longer make its pprof port accessible to the world by default, and will [instead listen on localhost if a port is specified](https://github.com/lightningnetwork/lnd/pull/5063). Exposing the pprof port is still left as an option for certain use cases.
+
+## Mobile
+
+### Simplified API using the State service
+Using the mobile bindings one would earlier need to wait for the `unlockerReady` callback to fire to unlock the wallet, and then the second callback`rpcReady` before the lnd RPCs were ready to be used. This was a bit awkward, and not very well supported with React Native.
+
+This release moves back to a single `rpcReady` callback, which together with the new `State` service can be used to determine the state of lnd at all times.
+
+To build lnd with these new bindings for mobile, [falafel v0.9.0](https://github.com/lightninglabs/falafel/releases/tag/v0.9.0) should be used.
+
+### Avoid killing the app on lnd failure
+Instead of killing the application in case lnd fails to start, we now [return an error back](https://github.com/lightningnetwork/lnd/pull/5086) over the API.
+
+### Delayed zombie pruning
+We [delay graph zombie pruning](https://github.com/lightningnetwork/lnd/pull/4933) on startup by 30 sec, to avoid blocking on this operation. This shortens the delay from unlocking to lnd is ready, which especially should improve the experience on mobile.
 
 ## Bug Fixes
-* A regression in the channel state-machine that would lead to de-sync and force close has been [fixed](https://github.com/lightningnetwork/lnd/pull/5231).  Channels between upgraded nodes should not experience incorrect force closes.
-* The failure message used by the HTLC Interceptor to reject HTLCs has been updated to [include a channel update](https://github.com/lightningnetwork/lnd/pull/5230) with the temporary channel failure error code. 
+
+* A regression in the channel state-machine that would lead to de-sync and force close has been [fixed](https://github.com/lightningnetwork/lnd/pull/5231). Channels between upgraded nodes should not experience incorrect force closes.
+* The failure message used by the HTLC Interceptor to reject HTLCs has been updated to [include a channel update](https://github.com/lightningnetwork/lnd/pull/5230) with the temporary channel failure error code.
+* A bug that could cause lnd to fail to startup if a new channel was in the process of being opened has [been fixed](https://github.com/lightningnetwork/lnd/pull/4958).
+* In case a channel announcment for a local channel was received after channel closure, `neutrino` backed nodes could end up re-adding the channel to the graph. This has been fixed by [ignoring all local announcements](https://github.com/lightningnetwork/lnd/pull/4899) coming from our peers. 
 * A bug in the payment state machine which would result in a payment getting stuck if it received a terminal payment error shortly before dispatching another shard has been [addressed](https://github.com/lightningnetwork/lnd/pull/5214).
 * The `SubscribeSingleInvoice` API has been [updated](https://github.com/lightningnetwork/lnd/pull/5207) to terminate the stream of events once the invoice reaches a terminal state.
 * During a block storm or integration tests the router subsystem can lag behind on its best known block due to the pruning work it has to complete for each block. Previously the `synced_to_chain` flag of the `GetInfo` RPC would only look at the best height of the wallet vs. its chain backend. To make sure the router is also up to date, [the flag now only turns `true` if the router subsystem is synced to the same height as the wallet](https://github.com/lightningnetwork/lnd/pull/5281)
 * Some terminals don't allow more than 4096 characters to be pasted if running in interactive/TTY mode. This lead to large PSBTs being cut off during channel open. This [was fixed by allowing the PSBT to be read from a file](https://github.com/lightningnetwork/lnd/pull/5083) in addition to the terminal.
+* The `GetNodeInfo` RPC has been [updated](https://github.com/lightningnetwork/lnd/pull/5295) to  output the channel policies for the requested node in the expected order. Previously, its ordering was inconsistent with `DescribeGraph` and `GetChanInfo`.
+* The `num_pending_backups` stat exposed by configured watchtower clients through the `WatchtowerClient` sub-server is now properly [decremented after a backup has been accepted](https://github.com/lightningnetwork/lnd/pull/5212) by a watchtower.
 
 # Contributors (Alphabetical Order)
 
@@ -6686,5 +6788,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-01-14T13:06:37Z</updated>
     <dc:date>2021-01-14T13:06:37Z</dc:date>
   </entry>
-  <dc:date>2021-05-19T17:23:48+00:00</dc:date>
+  <dc:date>2021-05-19T17:33:24+00:00</dc:date>
 </feed>
