@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-20T17:32:30+00:00</updated>
+  <updated>2021-05-20T17:44:10+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.12</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.12"/>
@@ -6774,5 +6774,5 @@ Preferably use the above download link, not the links provided by GitHub to down
     <updated>2021-01-15T19:52:11Z</updated>
     <dc:date>2021-01-15T19:52:11Z</dc:date>
   </entry>
-  <dc:date>2021-05-20T17:32:30+00:00</dc:date>
+  <dc:date>2021-05-20T17:44:10+00:00</dc:date>
 </feed>
