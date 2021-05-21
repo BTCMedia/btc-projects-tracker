@@ -6,7 +6,30 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-21T09:44:15+00:00</updated>
+  <updated>2021-05-21T09:52:04+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.4</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.4"/>
+    <summary>Fixed
+* File import icon was not visible 
+*  Check Bech32 uppercase address 
+* Dont display Tor text in catalyst 
+* Applied xpub to wrong object  
+* Cobo vault watch-only occasionally gets imported as wrong wallet type (closes #3152) 
+* Widgets shows wrong price in RUB currency 
+
+Added
+* Add close to modals #2584 
+
+Refactored
+* Smarter utxo selection (closes #3085) 
+
+Removed
+* Remove tooltip as its not needed on multisig create screen. </summary>
+    <title>BlueWallet/BlueWallet: v6.1.4</title>
+    <updated>2021-05-21T09:48:25Z</updated>
+    <dc:date>2021-05-21T09:48:25Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc3</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc3"/>
@@ -997,7 +1020,7 @@ Yong Yu
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.2</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.2"/>
     <summary>Added
-*  Opt-out of analytics tracking in settings/privacy
+*  Opt-out of performance and crash reports in settings/privacy
 
 Fixed
 
@@ -7107,21 +7130,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.1...v0.3.2</summary>
     <updated>2021-01-17T12:56:17Z</updated>
     <dc:date>2021-01-17T12:56:17Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.6</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.6"/>
-    <summary>### Bug fixes:
-
-* Load correct connection string when using SQLite @Kukks
-* Greenfeld API: Invoice Metadata update was not updating @saliehendricks
-* Prevent access to wallet page if wallet not set @dennisreimann
-
-### New features
-
-* Greenfield API: Can configure lightning payment methods @Kukks</summary>
-    <title>btcpayserver/btcpayserver: v1.0.6.6</title>
-    <updated>2021-01-17T10:24:33Z</updated>
-    <dc:date>2021-01-17T10:24:33Z</dc:date>
-  </entry>
-  <dc:date>2021-05-21T09:44:15+00:00</dc:date>
+  <dc:date>2021-05-21T09:52:04+00:00</dc:date>
 </feed>
