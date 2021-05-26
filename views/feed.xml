@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-26T20:14:54+00:00</updated>
+  <updated>2021-05-26T20:23:11+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0-pre1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0-pre1"/>
@@ -7152,5 +7152,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.1...v0.3.2</summary>
     <updated>2021-01-18T16:57:51Z</updated>
     <dc:date>2021-01-18T16:57:51Z</dc:date>
   </entry>
-  <dc:date>2021-05-26T20:14:54+00:00</dc:date>
+  <dc:date>2021-05-26T20:23:11+00:00</dc:date>
 </feed>
