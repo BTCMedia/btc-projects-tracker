@@ -6,11 +6,35 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-26T09:54:35+00:00</updated>
+  <updated>2021-05-26T10:04:19+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0-pre1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0-pre1"/>
-    <summary></summary>
+    <summary># This is a pre-release! Don't use it if you don't know why!
+
+## v1.4.0-pre1 May 26, 2021
+- Feature: Broadcast txs over block explorer via tor #1183 (benk10)
+- Feature: #1016 - &quot;Verify on device&quot; asks to plug in an air-gapped cold card  #1157 (Manolis)
+- Feature: Merge in Liquid branch #1174 (benk10)
+- Feature: Multiple internal nodes #1165 (benk10)
+- Feature: Support importing bip48 from json  #1156 (benk10)
+- Feature: Move backup PDF slip132 option to advanced #1168 (benk10)
+- Feature: Node manager #1146 (benk10)
+- Bugfix: improve tor resilience #1161 (Kim Neunert)
+- Bugfix: issue selecting remote USB option #1147 (benk10)
+- Bugfix: Fix #1164 #1171 (benk10)
+- Bugfix: Fix #1177 #1180 (benk10)
+- Bugfix: Hide sensitive info mode #1170 (benk10)
+- Chore: bump embit version #1186 (Stepan Snigirev)
+- Chore: Bump flask-cors from 3.0.8 to 3.0.9 #1149 (dependabot[bot])
+- Chore: Bump hosted-git-info from 2.8.8 to 2.8.9 in /pyinstaller/electron #1154 (dependabot[bot])
+- Chore: Bump lodash from 4.17.20 to 4.17.21 in /pyinstaller/electron #1159 (dependabot[bot])
+- Chore: Update hidapi to 0.10.1 #1141 (Leon Costa)
+- Chore: Update hwibridge.md #1178 (kdmukai)
+- Chore: Upgrade internal bitcoind version #1173 (benk10)
+- Docs: Update tor.md #1129 (benk10)
+- UIUX: updated change text from 'payed' to 'paid' in fee_selection file #1155 (Chris Pollard)
+</summary>
     <title>cryptoadvance/specter-desktop: v1.4.0-pre1</title>
     <updated>2021-05-26T07:22:05Z</updated>
     <dc:date>2021-05-26T07:22:05Z</dc:date>
@@ -7128,5 +7152,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.1...v0.3.2</summary>
     <updated>2021-01-18T16:57:51Z</updated>
     <dc:date>2021-01-18T16:57:51Z</dc:date>
   </entry>
-  <dc:date>2021-05-26T09:54:35+00:00</dc:date>
+  <dc:date>2021-05-26T10:04:19+00:00</dc:date>
 </feed>
