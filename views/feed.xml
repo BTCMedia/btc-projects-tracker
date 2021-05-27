@@ -6,7 +6,42 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-27T15:31:40+00:00</updated>
+  <updated>2021-05-27T15:42:05+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.13</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.13"/>
+    <summary>## Main changes
+
+### Add maximum amount for swap-out
+
+There is now a maximum amount that can be sent using swap-out (currently 20 mBTC, this value can change).
+
+### Fix a few issues and potential crashes
+
+### Full list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.12...v1.4.13
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.13</title>
+    <updated>2021-05-27T15:38:37Z</updated>
+    <dc:date>2021-05-27T15:38:37Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0-pre1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0-pre1"/>
@@ -7135,22 +7170,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.1...v0.3.2</summary>
     <updated>2021-01-19T12:25:20Z</updated>
     <dc:date>2021-01-19T12:25:20Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.3"/>
-    <summary>- Vaults coin control
-- Share panel when sharing Vault cosigner
-- Ask fp &amp; path when scanning Zpub 
-- Show spinner if Vault is trying to cosign 
-- Disable RPC batching for Fulcrum electrum
-- Coin control hangs (no connection on fetchUtxo)
-- Scanning a Vault PSBT Qr code when scanning  address
-- Some devices wouldn't allow writing files
-- Label is not set to created Vault wallet
-</summary>
-    <title>BlueWallet/BlueWallet: v6.0.3</title>
-    <updated>2021-01-18T16:57:51Z</updated>
-    <dc:date>2021-01-18T16:57:51Z</dc:date>
-  </entry>
-  <dc:date>2021-05-27T15:31:40+00:00</dc:date>
+  <dc:date>2021-05-27T15:42:05+00:00</dc:date>
 </feed>
