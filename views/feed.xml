@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-27T17:33:35+00:00</updated>
+  <updated>2021-05-27T17:44:29+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.13</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.13"/>
@@ -7170,5 +7170,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.1...v0.3.2</summary>
     <updated>2021-01-19T12:25:20Z</updated>
     <dc:date>2021-01-19T12:25:20Z</dc:date>
   </entry>
-  <dc:date>2021-05-27T17:33:35+00:00</dc:date>
+  <dc:date>2021-05-27T17:44:29+00:00</dc:date>
 </feed>
