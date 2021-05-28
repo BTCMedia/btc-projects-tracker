@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-28T09:52:10+00:00</updated>
+  <updated>2021-05-28T10:10:34+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.4.0</title>
+    <updated>2021-05-28T09:55:29Z</updated>
+    <dc:date>2021-05-28T09:55:29Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.2-rc.1</id>
     <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.2-rc.1"/>
@@ -7144,13 +7152,5 @@ Christian, Rusty, Lisa, ZmnSCPxj
     <updated>2021-01-20T17:39:58Z</updated>
     <dc:date>2021-01-20T17:39:58Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc6</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta.rc6"/>
-    <summary></summary>
-    <title>lightningnetwork/lnd: v0.12.0-beta.rc6</title>
-    <updated>2021-01-20T04:02:34Z</updated>
-    <dc:date>2021-01-20T04:02:34Z</dc:date>
-  </entry>
-  <dc:date>2021-05-28T09:52:10+00:00</dc:date>
+  <dc:date>2021-05-28T10:10:34+00:00</dc:date>
 </feed>
