@@ -38,6 +38,141 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.6.5">v1.6.5</a>
+						    </h2>
+							<p class="card-text">Published: 2021-05-29 05:38:15 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Release notes</h2>
+
+<p>This release makes DAO synchronization 30% quicker, improves BSQ SegWit fee calculation to save mining fees, and (as always) fixes many bugs across the board.</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5484">Speed up &quot;Synchronizing DAO&quot; by ~30%</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5450">Reduce BSQ fee estimation constant to reduce fees for BSQ SegWit transactions</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5499">Upgrade JavaFX to v16</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5512">Withdrawal view: reduce vertical spacing and fix issue with custom fee</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5452">Add fiat equivalent for Total Amount &amp; Security Deposit for both makers and sellers</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5448">Replace bisq.network/faq links with bisq.wiki</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5442">Replace docs.bisq.network links with bisq.wiki</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5537">Remove Bitpay as a pricenode data provider because of too low volume and high spread</a></li>
+</ul>
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5534">Prevent burning of BSQ dust in specific edge cases</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5475">Fix the formula used to calculate BSQ amount needed to avoid dust</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5489">Fix the price node lower bounds for minimum fee</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5444">Add missing check if transaction was in correct voting phase</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5483">Fix custom fee rate field when custom inputs are used</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5451">Fix string when creating a new offer</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5473">Fix focus issue when enter key used to edit offer</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5416">Fixed XRC coin title to correct one</a></li>
+</ul>
+
+<h3>Development &amp; Documentation</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5524">Build: Change default console to plain</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5502">Build: Preserve shadow plugin name</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5497">Build:Remove jcenter repository</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5515">Create Installer: Open binaries shared folder on finish</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5517">Create Installer: Enforce Java 11</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5514">Create Installer: Include build platform in fat jar filename</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5516">Create Installer: Fix Raspberry Pi build</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5487">Create Installer: Fix macOS jar hash</a></li>
+</ul>
+
+<h3>Assets</h3>
+
+<p>No new assets.</p>
+
+<h2>Verification</h2>
+
+<p>For a detailed description on how to verify your Bisq installer please have a look at our wiki: <a href="https://bisq.wiki/Downloading_and_installing#Verify_installer_file">https://bisq.wiki/Downloading_and_installing#Verify_installer_file</a></p>
+
+<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
+Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
+
+<p>Import the key:
+<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
+
+<p>How to verify signatures?
+<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
+Replace BINARY with the file you downloaded (e.g. Bisq-1.6.5.dmg)</p>
+
+<p>Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.6.5-all.jar
+The output need to match the value from the Bisq-1.6.5.jar.txt file.</p>
+
+<p><em>NEW: There are three hashes within the Bisq-1.6.5.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.6.5 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.</em></p>
+
+<h2>Known issues with installation</h2>
+
+<h3>Windows:</h3>
+
+<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
+
+<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
+
+<p>[1] Application directory (contains application installation files):
+C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
+
+<p>[2] Data directory (contains all Bisq data including wallet):
+C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
+
+<h3>Linux:</h3>
+
+<p>Hint for Debian users:
+If you have problems starting Bisq on Debian use: <code>/opt/bisq/bin/Bisq</code></p>
+
+<p>If your Linux distro does not support .deb files please follow this instruction:
+<code>
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.6.5.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+</code>
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
+
+<h2>Credits</h2>
+
+<p>Thanks to everyone who directly contributed to this release:</p>
+
+<ul>
+<li>@BtcContributor </li>
+<li>@cd2357 </li>
+<li>@chimp1984 </li>
+<li>@devinbileck </li>
+<li>@ghubstan</li>
+<li>@jmacxx </li>
+<li>@m52go </li>
+<li>@maxim-belkin </li>
+<li>@ripcurlx </li>
+<li>@sqrrm </li>
+<li>@Emzy</li>
+<li>@wiz </li>
+</ul>
+
+<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
+</p>
+					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.6.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0">v1.4.0</a>
 						    </h2>
 							<p class="card-text">Published: 2021-05-28 09:55:29 UTC</p>
@@ -8591,67 +8726,6 @@ yyforyongyu </p>
 </p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.0-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ElementsProject/lightning">ElementsProject/lightning</a>: <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3">v0.9.3</a>
-						    </h2>
-							<p class="card-text">Published: 2021-01-20 17:39:58 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>We&#39;re pleased to announce the 0.9.3 release of c-lightning, named by Karol Hosiawa.</p>
-
-<p>This is a minor release, but it also introduces a number of new features that we&#39;re really exited about, including a number of usability improvements, better access to lower-level primitives to build on top, and experimental extensions to the lightning protocol.</p>
-
-<h2>Highlights for Users</h2>
-
-<ul>
-<li>  Much improved parameter verification in <code>lightning-cli</code> makes it easier to debug why a call failed.</li>
-<li>  You can now query for the status of an invoice based on the hash or the invoice.</li>
-<li>  Plugins that are started while the node is running can now receive command line arguments as if they were provided at node startup.</li>
-<li>  The security of the <code>hsmtool</code> used to encrypt and decrypt the node&#39;s seed key was improved by switching to a passphrase prompt
-instead of a command line argument.</li>
-<li>  Multiple plugins can now register for the <code>db_write</code> hook, which means you can now run multiple backup plugins at the same time. In addition we wrote <a href="https://lightning.readthedocs.io/BACKUP.html">extensive documentation</a> on how to secure your node from dataloss.</li>
-</ul>
-
-<h2>Highlights for the Network</h2>
-
-<ul>
-<li>  No more reckless: the default network changed from <code>testnet</code> to <code>bitcoin</code>.</li>
-<li>  We have experimental support for the onion messages proposal, allowing arbitrary messages to be exchanged between nodes in the network.</li>
-<li>  We have experimental support for the offers proposal, enabling reusable invoices, refunds, invoices denominated in currencies other than bitcoins, and much much more. If you ever wanted to have an inline communication step with the other endpoint of a payment then take a look at this.</li>
-</ul>
-
-<h2>Highlights for Developers</h2>
-
-<ul>
-<li>  pyln now supports both receiving notifications from the RPC interface, as well as sending notifications in methods implemented by plugins. No more waiting in front of a blank screen for your users.</li>
-<li>  The new <code>createinvoice</code> allows you to create an invoice externally, then have your node sign it and manage it internally.</li>
-<li>  You can use <code>sendonionmessage</code> to send an onion routed message, which recipient can receive using a plugin that register for the <code>onion_message</code> or <code>onion_message_blinded</code> hook.</li>
-</ul>
-
-<p>More details can be found in the <a href="https://github.com/ElementsProject/lightning/blob/v0.9.3/CHANGELOG.md">changelog</a></p>
-
-<p>Thanks to everyone for their contributions and bug reports; please keep them coming.</p>
-
-<p>Since 0.9.2, we&#39;ve had 360 commits from 13 different authors over 60 days, an average commit rate of 6.51 commits per day 🤓</p>
-
-<p>A special thanks goes to the 2 first time contributors:</p>
-
-<ul>
-<li>  João Paulo</li>
-<li>  Karol Hosiawa</li>
-</ul>
-
-<p>Cheers,
-Christian, Rusty, Lisa, ZmnSCPxj</p>
-</p>
-					    <a href="https://github.com/ElementsProject/lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.9.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
