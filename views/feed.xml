@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-29T19:15:22+00:00</updated>
+  <updated>2021-05-29T19:24:31+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.5</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.5"/>
@@ -7266,5 +7266,5 @@ yyforyongyu </summary>
     <updated>2021-01-27T03:43:57Z</updated>
     <dc:date>2021-01-27T03:43:57Z</dc:date>
   </entry>
-  <dc:date>2021-05-29T19:15:22+00:00</dc:date>
+  <dc:date>2021-05-29T19:24:31+00:00</dc:date>
 </feed>
