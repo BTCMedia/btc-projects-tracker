@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-29T02:42:39+00:00</updated>
+  <updated>2021-05-29T02:50:46+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0"/>
@@ -7200,5 +7200,5 @@ Christian, Rusty, Lisa, ZmnSCPxj
     <updated>2021-01-20T17:39:58Z</updated>
     <dc:date>2021-01-20T17:39:58Z</dc:date>
   </entry>
-  <dc:date>2021-05-29T02:42:39+00:00</dc:date>
+  <dc:date>2021-05-29T02:50:46+00:00</dc:date>
 </feed>
