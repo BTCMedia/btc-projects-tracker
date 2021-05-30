@@ -6,11 +6,36 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-30T14:33:56+00:00</updated>
+  <updated>2021-05-30T14:43:30+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.1"/>
-    <summary></summary>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/Specter-Setup-v1.4.1.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/SpecterDesktop-v1.4.1.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/specter_desktop-v1.4.1-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/specterd-v1.4.1-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/specterd-v1.4.1-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/specterd-v1.4.1-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
+You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
+It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
+Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`
+
+# Release notes
+- Bugfix: a few typos #1201 (Roman Zeyde)
+- Bugfix: Set http as default network protocol if non specified #1199 (benk10)
+- Bugfix: Update Tor circuit every request #1200 (benk10)</summary>
     <title>cryptoadvance/specter-desktop: v1.4.1</title>
     <updated>2021-05-30T11:45:22Z</updated>
     <dc:date>2021-05-30T11:45:22Z</dc:date>
@@ -6844,5 +6869,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-01-29T02:18:21Z</updated>
     <dc:date>2021-01-29T02:18:21Z</dc:date>
   </entry>
-  <dc:date>2021-05-30T14:33:56+00:00</dc:date>
+  <dc:date>2021-05-30T14:43:30+00:00</dc:date>
 </feed>
