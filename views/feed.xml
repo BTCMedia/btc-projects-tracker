@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-31T20:09:44+00:00</updated>
+  <updated>2021-05-31T20:14:53+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.1"/>
@@ -320,22 +320,22 @@ The `lnd` database is migrated to store all wire messages with an additional TLV
 
 # Verifying the Release
 
-In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
+In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already:
 
-```
-curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
-curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
+```shell
+$ curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
+$ curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
 ```
 
-Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.13.0-beta.rc3.sig` and `manifest-v0.13.0-beta.rc3.txt` are in the current directory) with:
+Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-${{ env.RELEASE_VERSION }}.sig` and `manifest-${{ env.RELEASE_VERSION }}.txt` are in the current directory) with:
 
-```
-gpg --verify manifest-roasbeef-v0.13.0-beta.rc3.sig manifest-v0.13.0-beta.rc3.txt
+```shell
+$ gpg --verify manifest-roasbeef-${{ env.RELEASE_VERSION }}.sig manifest-${{ env.RELEASE_VERSION }}.txt
 ```
 
 You should see the following if the verification was successful:
 
-```
+```text
 gpg: Signature made Wed Sep 30 17:35:20 2020 PDT
 gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
 gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
@@ -343,31 +343,30 @@ gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot
 
 That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
 
-## Verifying the Release Timestamp 
+## Verifying the Release Timestamp
 
-From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-roasbeef-v0.13.0-beta.rc3.txt.asc.ots`.
+From this new version onward, in addition time-stamping the _git tag_ with [OpenTimestamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-roasbeef-${{ env.RELEASE_VERSION }}.txt.asc.ots`.
 
-Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+Assuming you have the OpenTimestamps client installed locally, the timestamps can be verified with the following commands:
+
+```shell
+$ ots verify manifest-roasbeef-${{ env.RELEASE_VERSION }}.sig.ots -f manifest-roasbeef-${{ env.RELEASE_VERSION }}.sig
 ```
-ots verify manifest-roasbeef-v0.13.0-beta.rc3.sig.ots -f manifest-roasbeef-v0.13.0-beta.rc3.sig
-```
 
-Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
-
-These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
+Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires.
 
 ## Verifying the Release Binaries
 
 Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
-The release binaries are compiled with `go1.16.3`, which is required by verifiers to arrive at the same ones.
-They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, and `watchtowerrpc`. Note that these are already included in the release script, so they do not need to be provided.
+The release binaries are compiled with `go${{ env.GO_VERSION }}`, which is required by verifiers to arrive at the same ones.
 
-The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
+They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, and `watchtowerrpc`. Note that these are already included in the release script, so they do not need to be provided.
+The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used.
 
 Finally, you can also verify the _tag_ itself with the following command:
 
-```
-$ git verify-tag v0.13.0-beta.rc3
+```shell
+$ git verify-tag ${{ env.RELEASE_VERSION }}
 gpg: Signature made Tue Sep 15 18:55:00 2020 PDT
 gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
 gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
@@ -378,35 +377,34 @@ gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot
 To verify the `lnd` and `lncli` binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):
 
 ```shell
-$ docker pull lightninglabs/lnd:v0.13.0-beta.rc3
-$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.13.0-beta.rc3 /verify-install.sh
+$ docker pull lightninglabs/lnd:${{ env.RELEASE_VERSION }}
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:${{ env.RELEASE_VERSION }} /verify-install.sh
 $ OK=$?
 $ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
 $ docker run lightninglabs/lnd [command-line options]
 ```
 
-# Building the Contained Release 
+# Building the Contained Release
 
 Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
-that `vendor.tar.gz` and `lnd-source-v0.13.0-beta.rc3.tar.gz` are in the current directory, follow these steps:
+that `vendor.tar.gz` and `lnd-source-${{ env.RELEASE_VERSION }}.tar.gz` are in the current directory, follow these steps:
 
+```shell
+$ tar -xvzf vendor.tar.gz
+$ tar -xvzf lnd-source-${{ env.RELEASE_VERSION }}.tar.gz
+$ GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=${{ env.RELEASE_VERSION }}&quot; ./cmd/lnd
+$ GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=${{ env.RELEASE_VERSION }}&quot; ./cmd/lncli
 ```
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.13.0-beta.rc3.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.0-beta.rc3&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.0-beta.rc3&quot; ./cmd/lncli
-```
 
-The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
+The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory.
 
-Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
+Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191):
 
-```
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
+```shell
+$ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 ```
 
 ⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
-
 
 # Release Notes
 
@@ -432,23 +430,13 @@ Finally a change to breach handling has been made, to mitigate a theoretical att
 
 ### Ephemeral &amp; Persistent Gossip Reject Caches
 
-Those that run larger lnd instances may have noticed a cyclic nature of gossip
-traffic that would lead to many announcements being rejected, only to be
-processed hours later. This burst of traffic typically causes high CPU and
-memory usage, along with a large batch of blocks fetched from the node backend.
-During this release cycle we dug into the issue and found that the culprit
-was actually a new variant of zombie channel churn: fully closed channels
-(funding UTXO spent) being continually offered by nodes that aren't (for some
-reason) pruning their channel graph.
+Those that run larger lnd instances may have noticed a cyclic nature of gossip traffic that would lead to many announcements being rejected, only to be processed hours later. This burst of traffic typically causes high CPU and memory usage, along with a large batch of blocks fetched from the node backend.
 
-[In this release, we'll now add channels that fail full validation irrevocably
-to the existing zombie index cache](https://github.com/lightningnetwork/lnd/pull/5227).
-Expanding the usage of this cache means that new lnd nodes will only validate
-those spent channels once (as they should), then never request them again
-during the historical sync spot checks that happen periodically.
+During this release cycle we dug into the issue and found that the culprit was actually a new variant of zombie channel churn: fully closed channels (funding UTXO spent) being continually offered by nodes that aren't (for some reason) pruning their channel graph.
 
-Related to the above fix, [a bug has been fixed that would cause us to
-continually re-validate a channel announcement that we had already rejected](https://github.com/lightningnetwork/lnd/pull/5192).
+[In this release, we'll now add channels that fail full validation irrevocably to the existing zombie index cache](https://github.com/lightningnetwork/lnd/pull/5227). Expanding the usage of this cache means that new lnd nodes will only validate those spent channels once (as they should), then never request them again during the historical sync spot checks that happen periodically.
+
+Related to the above fix, [a bug has been fixed that would cause us to continually re-validate a channel announcement that we had already rejected](https://github.com/lightningnetwork/lnd/pull/5192).
 
 ### Dependent Gossip Processing
 
@@ -460,38 +448,40 @@ continually re-validate a channel announcement that we had already rejected](htt
 
 ## Routing Optimizations &amp; New Payment Types
 
+### Atomic Multi-Path (AMP) Payments
+
+This version of `lnd` introduces initial support for AMP payments, which is a generalized version of the experimental keysend protocol added in [`lnd-v0.9.0-beta`](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta). While keysend payments must be fulfilled with a single HTLC, AMP offers the ability to perform multi-path spontaneous payments and leverage channel liquidity more effectively. It also offers an initial incarnation of AMP invoices, which helps to facilitate spontaneous payments to private nodes, and serve as a basis for recurring payments down the road.
+
+##### Receiving Spontaneous Payments
+
+Users can set the `accept-amp=1` configuration option to automatically accept incoming, spontaneous AMP payments. Without setting this option, all spontaneous AMP payments will be rejected.
+
+#### Sending Spontaneous Payments
+
+Users can send spontaneous AMP payments to nodes with `accept-amp=1` using `lncli`, `routerrpc.SendToRouteV2`, or `routerrpc.SendPaymentV2`.
+
+When paying with `lncli`, including the `--amp` flag, payments only need to specify the amount and pubkey of the destiation, e.g. `lncli sendpayment --amt 100 --dest 0247a5b3b2f6794da6ab930974e3396fd9973aa7dc333ea8dd3b59fb71a70165be --amp`. This will only work for nodes in public channel graph, to pay private nodes see below regarding AMP Invoices.
+
+When paying with`routerrpc.SendPaymentV2`: Manually specifiying arguments [`Amp`](https://github.com/lightningnetwork/lnd/blob/ad0ecc4d581f282686fa3355ac1e8f8be63cc50b/lnrpc/routerrpc/router.pb.go#L478)
+
+When paying with `routerrpc.SendToRouteV2`, users can force an AMP payment by setting [`AmpRecord`](https://github.com/lightningnetwork/lnd/blob/master/lnrpc/rpc.pb.go#L8321) field to a well crafted [`lnrpc.AmpRecord`](https://github.com/lightningnetwork/lnd/blob/master/lnrpc/rpc.pb.go#L8513) on the route's final [`lnrpc.Hop`](https://github.com/lightningnetwork/lnd/blob/master/lnrpc/rpc.pb.go#L8280).
+
 ### MPP+AMP Payment Splitting on by Default
 
-[In this version of `lnd`, MPP payment splitting is now activated by default](https://github.com/lightningnetwork/lnd/pull/5017). Prior versions of `lnd` required a caller to _manually_ specify that they wanted their payment to possibly be split via the `MaxShards` RPC/CLI flag. The default number of attempted splits is now 16 (we'll attempt to split up to 16 times by default). In addition, a new `MaxShardAmt` flag has been added that allows the caller to control _how large_ the largest split can be. This new flag can effectively be used to force `lnd` to adhere to a given maximum payment unit expressed in satoshis, which means `lnd` may split more frequently than before.
+[In this version of `lnd`, MPP/AMP payment splitting is now activated by default](https://github.com/lightningnetwork/lnd/pull/5017). Prior versions of `lnd` required a caller to _manually_ specify that they wanted their payment to possibly be split via the `MaxShards` RPC/CLI flag. The default number of attempted splits is now 16 (we'll attempt to split up to 16 times by default). In addition, a new `MaxShardAmt` flag has been added that allows the caller to control _how large_ the largest split can be. This new flag can effectively be used to force `lnd` to adhere to a given maximum payment unit expressed in satoshis, which means `lnd` may split more frequently than before.
 
 ### Strict Zombie Pruning
 
-Typically lnd will mark a channel as a zombie when _both_ of its edges aren't
-re-advertised within a two week period. This is typically referred to as a
-channel's heartbeat update. [Analysis by Conner Fromknecht demonstrated that
-the channel graph itself could be shrunk by ~20%](https://github.com/lightningnetwork/lightning-rfc/pull/767) if a stricter pruning heuristic was adopted: pruning a channel once only a single edge fails the heartbeat check. [The latest version of `lnd` has implemented this stricter pruning variant](https://github.com/lightningnetwork/lnd/pull/5138) in an opt-in manner.
+Typically lnd will mark a channel as a zombie when _both_ of its edges aren't re-advertised within a two week period. This is typically referred to as a channel's heartbeat update. [Analysis by Conner Fromknecht demonstrated that the channel graph itself could be shrunk by ~20%](https://github.com/lightningnetwork/lightning-rfc/pull/767) if a stricter pruning heuristic was adopted: pruning a channel once only a single edge fails the heartbeat check. [The latest version of `lnd` has implemented this stricter pruning variant](https://github.com/lightningnetwork/lnd/pull/5138) in an opt-in manner.
 
-This new graph pruning variant is on by default for neutrino nodes as it was
-common for them to never actually receive a &quot;double disable&quot; of a channel's
-edges, meaning it would never actually remove certain closed channels from its
-channel graph. Routing nodes and nodes that frequently send outbound payments
-can activate the new pruning variant with a new flag:
-`--routing.strictgraphpruning`. The new logic also requires that party that
-originally failed the heartbeat check to the be one that re-publishes the
-channel update in order for a prior zombie channel to be resourced. 
- the channel update in order for a prior zombie channel to be resurrected. 
+This new graph pruning variant is on by default for neutrino nodes as it was common for them to never actually receive a &quot;double disable&quot; of a channel's edges, meaning it would never actually remove certain closed channels from its channel graph. Routing nodes and nodes that frequently send outbound payments can activate the new pruning variant with a new flag:
+`--routing.strictgraphpruning`. The new logic also requires that party that originally failed the heartbeat check to the be one that re-publishes the channel update in order for a prior zombie channel to be resurrected. 
 
 ## New M1 Release Target 
 
-[This is the first release that includes binaries for the recently released Apple
-Silicon (M1) architecture!](https://github.com/lightningnetwork/lnd/pull/5034) roasbeef has switched to using an M1 machine as his
-primary development machine over the past few months and hasn't reported any
-unsafe behavior. We encourage those switching to run lnd on an M1 machine to
-reach out to us if any abnormal behavior is detected.
+[This is the first release that includes binaries for the recently released Apple Silicon (M1) architecture!](https://github.com/lightningnetwork/lnd/pull/5034) roasbeef has switched to using an M1 machine as his primary development machine over the past few months and hasn't reported any unsafe behavior. We encourage those switching to run lnd on an M1 machine to reach out to us if any abnormal behavior is detected.
 
-For the 0.14 release, we aim to start to remove architectures for binaries
-included with the final packaged release that are either in the bottom tier of
-downloads, or have no downloads at all.
+For the 0.14 release, we aim to start to remove architectures for binaries included with the final packaged release that are either in the bottom tier of downloads, or have no downloads at all.
 
 ## P2P Networking
 
@@ -601,6 +591,10 @@ Several existing RPCs were also [modified](https://github.com/lightningnetwork/l
 * `FundPSBT/FinalizePSBT` can now fund/finalize PSBTs from a specific account.
 * `NewAddress` can now generate addresses for a specific account.
 * `WalletBalance` now returns an additional breakdown of the total wallet balance by accounts.
+
+### Surfacing `INVALID_ONION_PAYLOAD` failures
+
+Payments that fail with [`INVALID_ONION_PAYLOAD` are now properly reported via SendToRoute and SendPaymentV2](https://github.com/lightningnetwork/lnd/pull/5074) as `lnrpc.INVALID_ONION_PAYLOAD`. Prior to 0.13 these were reported as `lnrpc.Failure_UNKNOWN_FAILURE`.
 
 ## `pprof` Security
 
@@ -6871,5 +6865,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-01-29T02:18:21Z</updated>
     <dc:date>2021-01-29T02:18:21Z</dc:date>
   </entry>
-  <dc:date>2021-05-31T20:09:44+00:00</dc:date>
+  <dc:date>2021-05-31T20:14:53+00:00</dc:date>
 </feed>
