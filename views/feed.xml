@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-05-31T09:53:06+00:00</updated>
+  <updated>2021-05-31T10:10:20+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.1"/>
@@ -1312,7 +1312,9 @@ Fixed
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.4</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.4"/>
-    <summary>This is a follow-up release that updates a [mempool explorer address](https://github.com/bisq-network/bisq/pull/5453) and [filters out banned seednode address with a wrong format](https://github.com/bisq-network/bisq/pull/5469).
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+This is a follow-up release that updates a [mempool explorer address](https://github.com/bisq-network/bisq/pull/5453) and [filters out banned seednode address with a wrong format](https://github.com/bisq-network/bisq/pull/5469).
 
 For more details please see https://github.com/bisq-network/bisq/milestone/58
 
@@ -6869,5 +6871,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-01-29T02:18:21Z</updated>
     <dc:date>2021-01-29T02:18:21Z</dc:date>
   </entry>
-  <dc:date>2021-05-31T09:53:06+00:00</dc:date>
+  <dc:date>2021-05-31T10:10:20+00:00</dc:date>
 </feed>
