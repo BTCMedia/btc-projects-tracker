@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-01T22:55:19+00:00</updated>
+  <updated>2021-06-01T23:16:17+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.2</id>
     <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.2"/>
@@ -6831,5 +6831,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-01-30T11:53:21Z</updated>
     <dc:date>2021-01-30T11:53:21Z</dc:date>
   </entry>
-  <dc:date>2021-06-01T22:55:19+00:00</dc:date>
+  <dc:date>2021-06-01T23:16:17+00:00</dc:date>
 </feed>
