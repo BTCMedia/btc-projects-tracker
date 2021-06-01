@@ -6,7 +6,23 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-01T21:55:31+00:00</updated>
+  <updated>2021-06-01T22:17:29+00:00</updated>
+  <entry>
+    <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.2</id>
+    <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.2"/>
+    <summary>Also available on [PyPi](https://pypi.org/project/hwi/) and can be installed with `pip install -U hwi`
+
+## Added
+* Message signing for BitBox02
+
+## Fixed
+* Fixed handling of multiple BitBox02s being connected
+* Fixed standalone Linux build to work on older Linux distributions
+* Always use `h` instead of `'` for hardened derivation paths</summary>
+    <title>bitcoin-core/HWI: 2.0.2</title>
+    <updated>2021-06-01T22:03:41Z</updated>
+    <dc:date>2021-06-01T22:03:41Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.2</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.2"/>
@@ -6815,18 +6831,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-01-30T11:53:21Z</updated>
     <dc:date>2021-01-30T11:53:21Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8"/>
-    <summary>This release is trying some improvement to decrease the chances of being falsy flagged by Google Safe Browsing.
-
-* Remove Tor URL from login page (useless now thanks to the url bar link) @dennisreimann
-* Remove allowtransparency from checkout overlay @dennisreimann
-* Remove clipboard code from the login page (was used to copy the tor url) @dennisreimann
-* Rename some pages from PascalCase to lowercase. (Register =&gt; register, Login =&gt; login) @dennisreimann</summary>
-    <title>btcpayserver/btcpayserver: v1.0.6.8</title>
-    <updated>2021-01-29T09:55:09Z</updated>
-    <dc:date>2021-01-29T09:55:09Z</dc:date>
-  </entry>
-  <dc:date>2021-06-01T21:55:31+00:00</dc:date>
+  <dc:date>2021-06-01T22:17:29+00:00</dc:date>
 </feed>
