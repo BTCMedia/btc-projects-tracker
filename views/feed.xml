@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-01T23:16:17+00:00</updated>
+  <updated>2021-06-01T23:25:00+00:00</updated>
+  <entry>
+    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.7</id>
+    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.7"/>
+    <summary>Adding UTXO selection in the script explorer and minor bug fixes.</summary>
+    <title>unchained-capital/caravan: v0.3.7</title>
+    <updated>2021-06-01T23:21:36Z</updated>
+    <dc:date>2021-06-01T23:21:36Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.2</id>
     <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.2"/>
@@ -6823,13 +6831,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-01-30T12:21:55Z</updated>
     <dc:date>2021-01-30T12:21:55Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.0-pre1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.0-pre1"/>
-    <summary></summary>
-    <title>cryptoadvance/specter-desktop: v1.1.0-pre1</title>
-    <updated>2021-01-30T11:53:21Z</updated>
-    <dc:date>2021-01-30T11:53:21Z</dc:date>
-  </entry>
-  <dc:date>2021-06-01T23:16:17+00:00</dc:date>
+  <dc:date>2021-06-01T23:25:00+00:00</dc:date>
 </feed>
