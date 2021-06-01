@@ -38,6 +38,21 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.2">v1.4.2</a>
+						    </h2>
+							<p class="card-text">Published: 2021-06-01 12:25:38 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"></p>
+					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.1">v1.4.1</a>
 						    </h2>
 							<p class="card-text">Published: 2021-05-30 11:45:22 UTC</p>
@@ -8247,79 +8262,6 @@ Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 91
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.6.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bwt-dev/bwt">bwt-dev/bwt</a>: <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.2">v0.2.2</a>
-						    </h2>
-							<p class="card-text">Published: 2021-01-29 02:18:21 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>Changelog</h3>
-
-<ul>
-<li><p><a href="doc/auth.md">Authentication support</a> for the Electrum and HTTP API servers (#70)</p></li>
-<li><p>Compatibility with Bitcoin Core v0.21 (#78)</p></li>
-<li><p>Support for Signet</p></li>
-<li><p>New <code>GET /bitcoin.pdf</code> HTTP API endpoint for extracting the Bitcoin whitepaper from the block chain
-(<a href="https://twitter.com/shesek/status/1352368296553836544">https://twitter.com/shesek/status/1352368296553836544</a>)</p></li>
-<li><p>New <code>--create-wallet-if-missing</code> option to ease the creation of a designated bitcoind wallet (#76)</p></li>
-<li><p>Docker: Multi-arch images for amd64, arm32v7 and arm64v8 (#79)</p></li>
-<li><p>Indexer: Fix detection of conflicted mempool transactions</p></li>
-<li><p>Support setting boolean options using environment variables
-(<code>FORCE_RESCAN</code>, <code>CREATE_WALLET_IF_MISSING</code>, <code>ELECTRUM_SKIP_MERKLE</code>, <code>NO_STARTUP_BANNER</code> and <code>VERBOSE</code>)</p></li>
-<li><p>Accept wildcard envirnoment variables for options that accept multiple values
-(<code>XPUB_*</code>, <code>DESC_*</code>/<code>DESCRIPTOR_*</code> and <code>ADDRESS_*</code>)</p></li>
-<li><p>Upgrade to rust-bitcoin v0.26.0, rust-miniscript v5.0.1 and bitcoincore-rpc v0.13.0</p></li>
-</ul>
-
-<hr>
-
-<p>Also see the v0.2.2 releases for <a href="https://github.com/bwt-dev/bwt-electrum-plugin/releases/tag/v0.2.2">bwt-electrum-plugin</a>, <a href="https://github.com/bwt-dev/libbwt/releases/tag/v0.2.2">libbwt</a>, <a href="https://github.com/bwt-dev/libbwt-nodejs/releases/tag/v0.2.2">libbwt-nodejs</a> and <a href="https://github.com/bwt-dev/libbwt-jni/releases/tag/v0.2.2">libbwt-jni</a>.</p>
-
-<h3>Installation</h3>
-
-<p>Installation instructions are <a href="https://github.com/bwt-dev/bwt#installation">available on the README</a>.</p>
-
-<h3>Verifying signatures</h3>
-
-<p>The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on the <a href="http://keys.gnupg.net/pks/lookup?op=vindex&fingerprint=on&search=0x81F6104CD0F150FC">PGP WoT</a>, <a href="https://api.github.com/users/shesek/gpg_keys">github</a>, <a href="https://twitter.com/shesek">twitter</a>, <a href="https://keybase.io/nadav">keybase</a>, <a href="https://news.ycombinator.com/user?id=nadaviv">hacker news</a> and <a href="https://youtu.be/SXJaN2T3M10?t=4">this video presentation</a>.</p>
-
-<p>```bash</p>
-
-<h1>Download (change x86_64-linux to your platform)</h1>
-
-<p>$ wget <a href="https://github.com/bwt-dev/bwt/releases/download/v0.2.2/bwt-0.2.2-x86_64-linux.tar.gz">https://github.com/bwt-dev/bwt/releases/download/v0.2.2/bwt-0.2.2-x86_64-linux.tar.gz</a></p>
-
-<h1>Fetch public key</h1>
-
-<p>$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC</p>
-
-<h1>Verify signature</h1>
-
-<p>$ wget -qO - <a href="https://github.com/bwt-dev/bwt/releases/download/v0.2.2/SHA256SUMS.asc">https://github.com/bwt-dev/bwt/releases/download/v0.2.2/SHA256SUMS.asc</a> \
-  | gpg --decrypt - | grep &#39; bwt-0.2.2-x86_64-linux.tar.gz$&#39; | sha256sum -c -</p>
-
-<p>$ tar zxvf bwt-0.2.2-x86<em>64-linux.tar.gz
-$ ./bwt-0.1.5-x86</em>64-linux/bwt --xpub <xpub> ...
-```</p>
-
-<p>The signature verification should show <code>Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...</code> and <code>bwt-0.2.2-x86_64-linux.tar.gz: OK</code>.</p>
-
-<h3>Reproducible builds</h3>
-
-<p>The builds are fully reproducible.</p>
-
-<p>You can verify the checksums against the v0.2.2 builds on Travis CI: <a href="https://travis-ci.org/github/bwt-dev/bwt/builds/756663238">https://travis-ci.org/github/bwt-dev/bwt/builds/756663238</a></p>
-
-<p>See <a href="https://github.com/bwt-dev/bwt#reproducible-builds">more details here</a>.</p>
-</p>
-					    <a href="https://github.com/bwt-dev/bwt" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
