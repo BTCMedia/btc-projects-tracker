@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-02T21:05:28+00:00</updated>
+  <updated>2021-06-02T21:12:45+00:00</updated>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.7</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.7"/>
@@ -6831,5 +6831,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-01-30T12:21:55Z</updated>
     <dc:date>2021-01-30T12:21:55Z</dc:date>
   </entry>
-  <dc:date>2021-06-02T21:05:28+00:00</dc:date>
+  <dc:date>2021-06-02T21:12:45+00:00</dc:date>
 </feed>
