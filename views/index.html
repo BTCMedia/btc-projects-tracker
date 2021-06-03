@@ -250,6 +250,10 @@ $ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 
 <p>In automated or unattended setups such as cluster/container environments, unlocking the wallet through RPC presents a series of challenges. Usually, the password is present as a file somewhere in the container already anyway so writing an extra custom script for unlocking is error prone and tedious. Instead the <a href="https://github.com/lightningnetwork/lnd/pull/5256">new <code>--wallet-unlock-password-file</code> flag was added</a> that can be used to read the password for an existing wallet from a file <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/wallet.md#auto-unlocking-a-wallet">(or device or named pipe)</a> to auto-unlock it.</p>
 
+<h3>Random Coin Selection</h3>
+
+<p>By default <code>lnd</code>&#39;s internal wallet uses a coin selection algorithm that always picks the largest UTXOs available first when crafting a transaction. This can lead to a wallet state that has many small and uneconomical UTXOs. To counteract that, a new <a href="https://github.com/lightningnetwork/lnd/pull/5155"><code>--coin-selection-strategy</code></a> flag was added that can be set to <code>random</code> instead of the default <code>larges</code> value to enable random coin selection.</p>
+
 <h2>Backend Enhancements &amp; Optimizations</h2>
 
 <h3>Daemon-Level Block Cache</h3>

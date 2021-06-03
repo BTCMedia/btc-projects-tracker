@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-03T08:24:09+00:00</updated>
+  <updated>2021-06-03T08:34:29+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc5</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc5"/>
@@ -216,6 +216,10 @@ The revocation seed is used to generate revocation secrets during the lifetime o
 ### Auto-unlock wallet from password file
 
 In automated or unattended setups such as cluster/container environments, unlocking the wallet through RPC presents a series of challenges. Usually, the password is present as a file somewhere in the container already anyway so writing an extra custom script for unlocking is error prone and tedious. Instead the [new `--wallet-unlock-password-file` flag was added](https://github.com/lightningnetwork/lnd/pull/5256) that can be used to read the password for an existing wallet from a file [(or device or named pipe)](https://github.com/lightningnetwork/lnd/blob/master/docs/wallet.md#auto-unlocking-a-wallet) to auto-unlock it.
+
+### Random Coin Selection
+
+By default `lnd`'s internal wallet uses a coin selection algorithm that always picks the largest UTXOs available first when crafting a transaction. This can lead to a wallet state that has many small and uneconomical UTXOs. To counteract that, a new [`--coin-selection-strategy`](https://github.com/lightningnetwork/lnd/pull/5155) flag was added that can be set to `random` instead of the default `larges` value to enable random coin selection.
 
 ## Backend Enhancements &amp; Optimizations
 
@@ -6854,5 +6858,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-01-30T14:59:17Z</updated>
     <dc:date>2021-01-30T14:59:17Z</dc:date>
   </entry>
-  <dc:date>2021-06-03T08:24:09+00:00</dc:date>
+  <dc:date>2021-06-03T08:34:29+00:00</dc:date>
 </feed>
