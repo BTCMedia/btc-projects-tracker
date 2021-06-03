@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-03T15:16:53+00:00</updated>
+  <updated>2021-06-03T15:23:16+00:00</updated>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.9</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.9"/>
@@ -262,7 +262,7 @@ The wallet is now able to [import BIP-0049 and BIP-0084 accounts/public keys as 
 
 **Events (deposits/spends) for imported keys or keys derived from an imported account will only be detected by lnd if they happen after the import.** Rescans to detect past events will be supported in a future release, so make sure to use a new unused wallet when using this functionality.
 
-[A new document was added](https://github.com/lightningnetwork/lnd/blob/master/docs/key_import.md) thta explains the account import and PSBT signing process.
+[A new document was added](https://github.com/lightningnetwork/lnd/blob/master/docs/key_import.md) that explains the account import and PSBT signing process.
 
 ### ECDH Revocation Seed
 
@@ -6827,5 +6827,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-02-02T09:22:14Z</updated>
     <dc:date>2021-02-02T09:22:14Z</dc:date>
   </entry>
-  <dc:date>2021-06-03T15:16:53+00:00</dc:date>
+  <dc:date>2021-06-03T15:23:16+00:00</dc:date>
 </feed>
