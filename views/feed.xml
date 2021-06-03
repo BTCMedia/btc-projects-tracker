@@ -6,7 +6,44 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-03T12:43:54+00:00</updated>
+  <updated>2021-06-03T12:51:49+00:00</updated>
+  <entry>
+    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.9</id>
+    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.9"/>
+    <summary># Summary
+
+This release contains mostly updates. With the NBitcoin update, DNS seed queries are done over Tor as well - this can fix problems for users who use an operating system that can only communicate through Tor. HWI update contains minor fixes, check the release notes [here](https://github.com/bitcoin-core/HWI/releases/tag/2.0.2).
+
+- Updated Bitcoin Hardware Wallet Interface [HWI 2.0.2](https://github.com/bitcoin-core/HWI/releases/tag/2.0.2).
+- Updated [NBitcoin 5.0.81](https://github.com/MetacoSA/NBitcoin/pull/1003).
+
+# Newbie Guide
+
+While setting up Wasabi is straightforward, even a Linux wizard with the longest beard can get stuck on the most basic tasks. Consider taking a look at the [Installation Instructions](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html) guide.
+
+# Advanced Guide
+
+If you want to build Wasabi from source code or update the source code check out [these instructions.](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html)
+
+From version 1.1.3 Wasabi also introduces [reproducible builds](https://reproducible-builds.org/): [Deterministic Build Guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md)
+
+Build with .NET Core 3.1.407-win-x64.
+
+## FAQ
+
+- **Frequently asked questions [here](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq).**
+- **Requirements?** x64, Linux, &gt;Win10, &gt;macOS 10.13.
+
+# Release Notes
+
+- **HWI** https://github.com/zkSNACKs/WalletWasabi/pull/5861 
+- **NBitcoin** https://github.com/zkSNACKs/WalletWasabi/pull/5800
+- **Wallet rescan in case of file corruption** https://github.com/zkSNACKs/WalletWasabi/pull/5508 https://github.com/zkSNACKs/WalletWasabi/pull/5537
+- **Account keypath validation on Wallet Recovery** https://github.com/zkSNACKs/WalletWasabi/pull/4070</summary>
+    <title>zkSNACKs/WalletWasabi: v1.1.12.9</title>
+    <updated>2021-06-03T12:47:10Z</updated>
+    <dc:date>2021-06-03T12:47:10Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.5</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.5"/>
@@ -6790,25 +6827,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-02-02T09:22:14Z</updated>
     <dc:date>2021-02-02T09:22:14Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.2.0</id>
-    <link href="https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.2.0"/>
-    <summary>This release contains relevant improvements from community feedback. Thanks to all **RSK buidlers** for your contributions!
-
-This is a summary of the changes included in this version:
-
-- Add *Content-Type* field in JSON RPC responses (#1390)
-- Consider minimum gas price in *eth_gasPrice* method (#1389)
-- On-the-fly block blooms cache for faster events retrieval (#1384)
-- Fix *v* value in JSON RPC transaction result (#1382)
-
-You can find a complete list of the changes introduced in [Papyrus 2.2.0 milestone](https://github.com/rsksmart/rskj/milestone/23).
-
-SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
-f7cb1e6c5568332d047c602a5b2c464c41688336b824d92ef3a40b89a8f55b60  rskj-core-2.2.0-PAPYRUS-all.jar</summary>
-    <title>rsksmart/rskj: PAPYRUS-2.2.0</title>
-    <updated>2021-02-01T22:19:58Z</updated>
-    <dc:date>2021-02-01T22:19:58Z</dc:date>
-  </entry>
-  <dc:date>2021-06-03T12:43:54+00:00</dc:date>
+  <dc:date>2021-06-03T12:51:49+00:00</dc:date>
 </feed>
