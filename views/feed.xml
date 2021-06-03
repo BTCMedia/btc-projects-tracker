@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-03T13:14:35+00:00</updated>
+  <updated>2021-06-03T13:24:38+00:00</updated>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.9</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.9"/>
@@ -6827,5 +6827,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-02-02T09:22:14Z</updated>
     <dc:date>2021-02-02T09:22:14Z</dc:date>
   </entry>
-  <dc:date>2021-06-03T13:14:35+00:00</dc:date>
+  <dc:date>2021-06-03T13:24:38+00:00</dc:date>
 </feed>
