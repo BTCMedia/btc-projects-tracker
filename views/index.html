@@ -38,6 +38,32 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.5">v6.1.5</a>
+						    </h2>
+							<p class="card-text">Published: 2021-06-03 09:27:26 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>Fixed
+  Cannot read seed words for vault key - mostly blank #3232<br>
+  LNURLPay was defaulting to sats 
+  No scroll in android sim on receive #3192<br>
+  RTL on iOS doesn&#39;t work #3122</p>
+
+<p>Refactored 
+  Storage improvements </p>
+
+<p>Added
+    Abbreviated Watch Complication Price display </p>
+</p>
+					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.0-beta.rc5">v0.13.0-beta.rc5</a>
 						    </h2>
 							<p class="card-text">Published: 2021-06-03 04:47:56 UTC</p>
@@ -8247,86 +8273,6 @@ f7cb1e6c5568332d047c602a5b2c464c41688336b824d92ef3a40b89a8f55b60  rskj-core-2.2.
 </p>
 					    <a href="https://github.com/rsksmart/rskj" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/rsksmart/rskj/releases/tag/PAPYRUS-2.2.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.0">v1.1.0</a>
-						    </h2>
-							<p class="card-text">Published: 2021-01-30 14:59:17 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.1.0/Specter-Setup-v1.1.0.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.1.0/SpecterDesktop-v1.1.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.1.0/specter_desktop-v1.1.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.1.0/specterd-v1.1.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.1.0/specterd-v1.1.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.1.0/specterd-v1.1.0-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h1>Signatures and hashes</h1>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.1.0/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @stepansnigirev&#39;s GPG key.
-You can get the public key from here: <a href="https://stepansnigirev.com/ss-specter-release.asc">https://stepansnigirev.com/ss-specter-release.asc</a>.
-It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x36ED357AB24B915F">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F">keys.openpgp.org</a>.
-Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F</code>, short id: <code>36ed357ab24b915f</code></p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Bugfix: #784 URL encode to prevent breaking characters on RPC connection #866 (Maxi Dev)</li>
-<li>Bugfix:  #829 - font size and horizontal alignment #900 (Patrick)</li>
-<li>Bugfix: Check whether tx address contains list before enumerating it #855 (Ondrej Calda)</li>
-<li>Bugfix: Fix #605 - Display UI notification after btc core connection test #912 (Patrick)</li>
-<li>Bugfix: Fix key purpose labeling being overwritten #887 (benk10)</li>
-<li>Bugfix: Fix no block height with Bitcoin Core v0.19 #859 (benk10)</li>
-<li>Bugfix: Fix tx info showing wrong input address #865 (benk10)</li>
-<li>Bugfix: ugly fix utxo blockexplorer rescan #897 (Stepan Snigirev)</li>
-<li>Bugfix: Util testing  and small bugfix about multisig treshold  #698 (Manolis)</li>
-<li>Chore: Bump electron from 10.1.3 to 10.2.0 in /pyinstaller/electron #916 (dependabot[bot])</li>
-<li>Devops: Added PyCharm IDE configuration + fixed DEVELOPMENT.md title level hierachy (incl. TOC) #892 (paeet)</li>
-<li>devops: Fixed deprecation warnings #894 (Patrick)</li>
-<li>Devops: Specify that hwi is not compatible with Python 3.9 #883 (Franck Royer)</li>
-<li>Docs: Add existing file #846 (bitballin)</li>
-<li>Docs: Add more info to connect Desktop via TOR #847 (Ramon Tayag)</li>
-<li>Docs: add multisig tradeoffs note and doc #885 (djpnewton)</li>
-<li>Docs: add notes about built in authentication methods #871 (djpnewton)</li>
-<li>Docs: Removing high level consulting request #901 (Callum Macdonald)</li>
-<li>Docs: Update connect-your-node.md #893 (fatrattombala)</li>
-<li>Feature: Add addresses tab allowing users to navigate through derived addresses #781 (jleo84)</li>
-<li>Feature: Added persistent tor setting. #848 (Raj)</li>
-<li>Feature: add rate limiting and registration link expiry #852 (djpnewton)</li>
-<li>Feature: address-tab pagination, sorting and exporting to CSV #873 (jleo84)</li>
-<li>Feature: Auth improvements #860 (benk10)</li>
-<li>Feature: Get whitepaper via timechain #905 (Manolis)</li>
-<li>Feature: improve hints for not working connections #888 (Kim Neunert)</li>
-<li>Feature: Replace address list on receive tab with addresses tab #914 (benk10)</li>
-<li>Feature: SLIP-132 switch for PDF backup key format #849 (Maxi Dev)</li>
-<li>Feature: Support Cobo single key files #915 (benk10)</li>
-<li>UIUX: Add target=&quot;_blank&quot; for help links #911 (benk10)</li>
-<li>UIUX: fixed typos in wallet<em>receive.jinja and wallet</em>settings.jinja #853 (Zach Zager)</li>
-<li>UIUX: Fixes - TX table toolbar alignment, Network label alignment #899 (Patrick)</li>
-<li>UIUX: Fix typo (puropse -&gt; purpose) #898 (Stacie)</li>
-<li>UIUX: Fix Typos #879 (Franck Royer)</li>
-<li>UIUX: Keep slashes and parentheses in tx labels #861 (Ondrej Calda)</li>
-<li>UIUX: Make <code>Add Keys</code> more obvious #884 (Franck Royer)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.1.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
