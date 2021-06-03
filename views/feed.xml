@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-03T11:11:38+00:00</updated>
+  <updated>2021-06-03T11:16:54+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.5</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.5"/>
@@ -6810,5 +6810,5 @@ f7cb1e6c5568332d047c602a5b2c464c41688336b824d92ef3a40b89a8f55b60  rskj-core-2.2.
     <updated>2021-02-01T22:19:58Z</updated>
     <dc:date>2021-02-01T22:19:58Z</dc:date>
   </entry>
-  <dc:date>2021-06-03T11:11:38+00:00</dc:date>
+  <dc:date>2021-06-03T11:16:54+00:00</dc:date>
 </feed>
