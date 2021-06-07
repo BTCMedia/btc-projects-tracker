@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-07T07:33:25+00:00</updated>
+  <updated>2021-06-07T07:41:18+00:00</updated>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.8</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.8"/>
@@ -6653,5 +6653,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-02-02T16:39:53Z</updated>
     <dc:date>2021-02-02T16:39:53Z</dc:date>
   </entry>
-  <dc:date>2021-06-07T07:33:25+00:00</dc:date>
+  <dc:date>2021-06-07T07:41:18+00:00</dc:date>
 </feed>
