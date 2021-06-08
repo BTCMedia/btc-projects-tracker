@@ -38,6 +38,396 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcsuite/btcd">btcsuite/btcd</a>: <a href="https://github.com/btcsuite/btcd/releases/tag/v0.22.0-beta">v0.22.0-beta</a>
+						    </h2>
+							<p class="card-text">Published: 2021-06-08 14:18:27 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This release of <code>btcd</code> is primarily to act as a catchup for the various changes that have accumulated.</p>
+
+<h1>Verifying the Release</h1>
+
+<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already:</p>
+
+<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-v0.22.0-beta.txt</code> and <code>manifest-v0.22.0-beta.txt.sig</code> are in the current directory) with:</p>
+
+<p><code>
+gpg --verify manifest-v0.22.0-beta.txt.sig
+</code></p>
+
+<p>You should see the following if the verification was successful:</p>
+
+<p>```
+gpg: assuming signed data in &#39;manifest-v0.22.0-beta.txt&#39;
+gpg: Signature made Tue 08 Jun 2021 10:07:53 AM EDT
+gpg:                using DSA key 0DB39EAF526568682088EEDFB15210D35378BD54
+gpg: Good signature from &quot;John C. Vernaleo <a href="mailto:john@netpurgatory.com">john@netpurgatory.com</a>&quot; [ultimate]</p>
+
+<p>```</p>
+
+<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
+
+<h2>Verifying the Release Binaries</h2>
+
+<p>As of this release, our release binaries are <strong>fully reproducible</strong> thanks to <code>go1.13</code>! Third parties are now able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/btcsuite/btcd/tree/master/release">reproducible builds guide</a> for how this can be achieved. The release binaries are compiled with <code>go1.16.5</code>, which is required by verifiers to arrive at the same ones.</p>
+
+<p>Finally, you can also verify the <em>tag</em> itself with the following command:
+<code>
+git verify-tag v0.22.0-beta
+</code></p>
+
+<p>You should see something along the lines of this in the case of a valid tag:
+<code>
+gpg: Signature made Tue 08 Jun 2021 09:42:52 AM EDT
+gpg:                using DSA key 0DB39EAF526568682088EEDFB15210D35378BD54
+gpg: Good signature from &quot;John C. Vernaleo &lt;john@netpurgatory.com&gt;&quot; [ultimate]
+</code></p>
+
+<h1>Building the Contained Release</h1>
+
+<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming that <code>vendor.tar.gz</code> and <code>btcd-source-v0.22.0-beta.tar.gz</code> are in the current directory, follow these steps:</p>
+
+<p><code>
+tar -xvzf vendor.tar.gz
+tar -xvzf btcd-source-v0.22.0.tar.gz
+GO111MODULE=on go install -v -mod=vendor
+GO111MODULE=on go install -v -mod=vendor ./cmd/btcctl
+</code></p>
+
+<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory.</p>
+
+<p>Additionally, it&#39;s also possible to use the enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so:</p>
+
+<p><code>
+BTCBUILDSYS=&quot;linux-arm64 darwin-amd64&quot; ./build/release/release.sh
+</code></p>
+
+<h1>Release Notes</h1>
+
+<p>Changes in 0.22.0 (Tue Jun 01 2021)
+  - Protocol and network-related changes:
+    - Add support for witness tx and block in notfound msg (#1625)
+    - Add support for receiving sendaddrv2 messages from a peer (#1670)
+    - Fix bug in peer package causing last block height to go backwards
+      (#1606)
+    - Add chain parameters for connecting to the public Signet network
+      (#1692, #1718)
+  - Crypto changes:
+    - Fix bug causing panic due to bad R and S signature components in
+      btcec.RecoverCompact (#1691)
+    - Set the name (secp256k1) in the CurveParams of the S256 curve
+      (#1565)
+  - Notable developer-related package changes:
+    - Remove unknown block version warning in the blockchain package,
+      due to false positives triggered by AsicBoost (#1463)
+    - Add chaincfg.RegisterHDKeyID function to populate HD key ID pairs
+      (#1617)
+    - Add new method mining.AddWitnessCommitment to add the witness
+      commitment as an OP<em>RETURN output within the coinbase transaction.
+      (#1716)
+  - RPC changes:
+    - Support Batch JSON-RPC in rpcclient and server (#1583)
+    - Add rpcclient method to invoke getdescriptorinfo JSON-RPC command
+      (#1578)
+    - Update the rpcserver handler for validateaddress JSON-RPC command to
+      have parity with the bitcoind 0.20.0 interface (#1613)
+    - Add rpcclient method to invoke getblockfilter JSON-RPC command
+      (#1579)
+    - Add signmessagewithprivkey JSON-RPC command in rpcserver (#1585)
+    - Add rpcclient method to invoke importmulti JSON-RPC command (#1579)
+    - Add watchOnly argument in rpcclient method to invoke
+      listtransactions JSON-RPC command (#1628)
+    - Update btcjson.ListTransactionsResult for compatibility with Bitcoin
+      Core 0.20.0 (#1626)
+    - Support nullable optional JSON-RPC parameters (#1594)
+    - Add rpcclient and server method to invoke getnodeaddresses JSON-RPC
+      command (#1590)
+    - Add rpcclient methods to invoke PSBT JSON-RPC commands (#1596)
+    - Add rpcclient method to invoke listsinceblock with the
+      include</em>watchonly parameter enabled (#1451)
+    - Add rpcclient method to invoke deriveaddresses JSON-RPC command
+      (#1631)
+    - Add rpcclient method to invoke getblocktemplate JSON-RPC command
+      (#1629)
+    - Add rpcclient method to invoke getaddressinfo JSON-RPC command
+      (#1633)
+    - Add rpcclient method to invoke getwalletinfo JSON-RPC command
+      (#1638)
+    - Fix error message in rpcserver when an unknown RPC command is
+      encountered (#1695)
+    - Fix error message returned by estimatefee when the number of blocks
+      exceeds the max depth (#1678)
+    - Update btcjson.GetBlockChainInfoResult to include new fields in
+      Bitcoin Core (#1676)
+    - Add ExtraHeaders in rpcclient.ConnConfig struct (#1669)
+    - Fix bitcoind compatibility issue with the sendrawtransaction
+      JSON-RPC command (#1659)
+    - Add new JSON-RPC errors to btcjson package, and documented them
+      (#1648)
+    - Add rpcclient method to invoke createwallet JSON-RPC command
+      (#1650)
+    - Add rpcclient methods to invoke backupwallet, dumpwallet, loadwallet
+      and unloadwallet JSON-RPC commands (#1645)
+    - Fix unmarshalling error in getmininginfo JSON-RPC command, for valid
+      integers in scientific notation (#1644)
+    - Add rpcclient method to invoke gettxoutsetinfo JSON-RPC command
+      (#1641)
+    - Add rpcclient method to invoke signrawtransactionwithwallet JSON-RPC
+      command (#1642)
+    - Add txid to getblocktemplate response of rpcserver (#1639)
+    - Fix monetary unit used in createrawtransaction JSON-RPC command in
+      rpcserver (#1614)
+    - Add rawtx field to btcjson.GetBlockVerboseTxResult to provide
+      backwards compatibility with older versions of Bitcoin Core (#1677)
+  - Misc changes:
+    - Update btcutil dependency (#1704)
+    - Add Dockerfile to build and run btcd on Docker (#1465)
+    - Rework documentation and publish on <a href="https://btcd.readthedocs.io">https://btcd.readthedocs.io</a> (#1468)
+    - Add support for Go 1.15 (#1619)
+    - Add Go 1.14 as the minimum supported version of Golang (#1621)
+  - Contributors (alphabetical order):
+    - 10gic
+    - Andrew Tugarinov
+    - Anirudha Bose
+    - Appelberg-s
+    - Armando Ochoa
+    - Aurèle Oulès
+    - Calvin Kim
+    - Christian Lehmann
+    - Conner Fromknecht
+    - Dan Cline
+    - David Mazary
+    - Elliott Minns
+    - Federico Bond
+    - Friedger Müffke
+    - Gustavo Chain
+    - Hanjun Kim
+    - Henry Fisher
+    - Iskander Sharipov
+    - Jake Sylvestre
+    - Johan T. Halseth
+    - John C. Vernaleo
+    - Liran Sharir
+    - Mikael Lindlof
+    - Olaoluwa Osuntokun
+    - Oliver Gugger
+    - Rjected
+    - Steven Kreuzer
+    - Torkel Rogstad
+    - Tristyn
+    - Victor Lavaud
+    - Vinayak Borkar
+    - Wilmer Paulino
+    - Yaacov Akiba Slama
+    - ebiiim
+    - ipriver
+    - wakiyamap
+    - yyforyongyu</p>
+</p>
+					    <a href="https://github.com/btcsuite/btcd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcsuite/btcd/releases/tag/v0.22.0-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/btcsuite/btcd">btcsuite/btcd</a>: <a href="https://github.com/btcsuite/btcd/releases/tag/v0.22.0-beta">v0.22.0-beta</a>
+						    </h2>
+							<p class="card-text">Published: 2021-06-08 14:18:27 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This release of <code>btcd</code> is primarily to act as a catchup for the various changes that have accumulated.</p>
+
+<h1>Verifying the Release</h1>
+
+<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already:</p>
+
+<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-v0.22.0-beta.txt</code> and <code>manifest-v0.22.0-beta.txt.sig</code> are in the current directory) with:</p>
+
+<p><code>
+gpg --verify manifest-v0.22.0-beta.txt.sig
+</code></p>
+
+<p>You should see the following if the verification was successful:</p>
+
+<p>```
+gpg: assuming signed data in &#39;manifest-v0.22.0-beta.txt&#39;
+gpg: Signature made Tue 08 Jun 2021 10:07:53 AM EDT
+gpg:                using DSA key 0DB39EAF526568682088EEDFB15210D35378BD54
+gpg: Good signature from &quot;John C. Vernaleo <a href="mailto:john@netpurgatory.com">john@netpurgatory.com</a>&quot; [ultimate]</p>
+
+<p>```</p>
+
+<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
+
+<h2>Verifying the Release Binaries</h2>
+
+<p>As of this release, our release binaries are <strong>fully reproducible</strong> thanks to <code>go1.13</code>! Third parties are now able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/btcsuite/btcd/tree/master/release">reproducible builds guide</a> for how this can be achieved. The release binaries are compiled with <code>go1.16.5</code>, which is required by verifiers to arrive at the same ones.</p>
+
+<p>Finally, you can also verify the <em>tag</em> itself with the following command:
+<code>
+git verify-tag v0.22.0-beta
+</code></p>
+
+<p>You should see something along the lines of this in the case of a valid tag:
+<code>
+gpg: Signature made Tue 08 Jun 2021 09:42:52 AM EDT
+gpg:                using DSA key 0DB39EAF526568682088EEDFB15210D35378BD54
+gpg: Good signature from &quot;John C. Vernaleo &lt;john@netpurgatory.com&gt;&quot; [ultimate]
+</code></p>
+
+<h1>Building the Contained Release</h1>
+
+<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming that <code>vendor.tar.gz</code> and <code>btcd-source-v0.22.0-beta.tar.gz</code> are in the current directory, follow these steps:</p>
+
+<p><code>
+tar -xvzf vendor.tar.gz
+tar -xvzf btcd-source-v0.22.0.tar.gz
+GO111MODULE=on go install -v -mod=vendor
+GO111MODULE=on go install -v -mod=vendor ./cmd/btcctl
+</code></p>
+
+<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory.</p>
+
+<p>Additionally, it&#39;s also possible to use the enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so:</p>
+
+<p><code>
+BTCBUILDSYS=&quot;linux-arm64 darwin-amd64&quot; ./build/release/release.sh
+</code></p>
+
+<h1>Release Notes</h1>
+
+<p>Changes in 0.22.0 (Tue Jun 01 2021)
+  - Protocol and network-related changes:
+    - Add support for witness tx and block in notfound msg (#1625)
+    - Add support for receiving sendaddrv2 messages from a peer (#1670)
+    - Fix bug in peer package causing last block height to go backwards
+      (#1606)
+    - Add chain parameters for connecting to the public Signet network
+      (#1692, #1718)
+  - Crypto changes:
+    - Fix bug causing panic due to bad R and S signature components in
+      btcec.RecoverCompact (#1691)
+    - Set the name (secp256k1) in the CurveParams of the S256 curve
+      (#1565)
+  - Notable developer-related package changes:
+    - Remove unknown block version warning in the blockchain package,
+      due to false positives triggered by AsicBoost (#1463)
+    - Add chaincfg.RegisterHDKeyID function to populate HD key ID pairs
+      (#1617)
+    - Add new method mining.AddWitnessCommitment to add the witness
+      commitment as an OP<em>RETURN output within the coinbase transaction.
+      (#1716)
+  - RPC changes:
+    - Support Batch JSON-RPC in rpcclient and server (#1583)
+    - Add rpcclient method to invoke getdescriptorinfo JSON-RPC command
+      (#1578)
+    - Update the rpcserver handler for validateaddress JSON-RPC command to
+      have parity with the bitcoind 0.20.0 interface (#1613)
+    - Add rpcclient method to invoke getblockfilter JSON-RPC command
+      (#1579)
+    - Add signmessagewithprivkey JSON-RPC command in rpcserver (#1585)
+    - Add rpcclient method to invoke importmulti JSON-RPC command (#1579)
+    - Add watchOnly argument in rpcclient method to invoke
+      listtransactions JSON-RPC command (#1628)
+    - Update btcjson.ListTransactionsResult for compatibility with Bitcoin
+      Core 0.20.0 (#1626)
+    - Support nullable optional JSON-RPC parameters (#1594)
+    - Add rpcclient and server method to invoke getnodeaddresses JSON-RPC
+      command (#1590)
+    - Add rpcclient methods to invoke PSBT JSON-RPC commands (#1596)
+    - Add rpcclient method to invoke listsinceblock with the
+      include</em>watchonly parameter enabled (#1451)
+    - Add rpcclient method to invoke deriveaddresses JSON-RPC command
+      (#1631)
+    - Add rpcclient method to invoke getblocktemplate JSON-RPC command
+      (#1629)
+    - Add rpcclient method to invoke getaddressinfo JSON-RPC command
+      (#1633)
+    - Add rpcclient method to invoke getwalletinfo JSON-RPC command
+      (#1638)
+    - Fix error message in rpcserver when an unknown RPC command is
+      encountered (#1695)
+    - Fix error message returned by estimatefee when the number of blocks
+      exceeds the max depth (#1678)
+    - Update btcjson.GetBlockChainInfoResult to include new fields in
+      Bitcoin Core (#1676)
+    - Add ExtraHeaders in rpcclient.ConnConfig struct (#1669)
+    - Fix bitcoind compatibility issue with the sendrawtransaction
+      JSON-RPC command (#1659)
+    - Add new JSON-RPC errors to btcjson package, and documented them
+      (#1648)
+    - Add rpcclient method to invoke createwallet JSON-RPC command
+      (#1650)
+    - Add rpcclient methods to invoke backupwallet, dumpwallet, loadwallet
+      and unloadwallet JSON-RPC commands (#1645)
+    - Fix unmarshalling error in getmininginfo JSON-RPC command, for valid
+      integers in scientific notation (#1644)
+    - Add rpcclient method to invoke gettxoutsetinfo JSON-RPC command
+      (#1641)
+    - Add rpcclient method to invoke signrawtransactionwithwallet JSON-RPC
+      command (#1642)
+    - Add txid to getblocktemplate response of rpcserver (#1639)
+    - Fix monetary unit used in createrawtransaction JSON-RPC command in
+      rpcserver (#1614)
+    - Add rawtx field to btcjson.GetBlockVerboseTxResult to provide
+      backwards compatibility with older versions of Bitcoin Core (#1677)
+  - Misc changes:
+    - Update btcutil dependency (#1704)
+    - Add Dockerfile to build and run btcd on Docker (#1465)
+    - Rework documentation and publish on <a href="https://btcd.readthedocs.io">https://btcd.readthedocs.io</a> (#1468)
+    - Add support for Go 1.15 (#1619)
+    - Add Go 1.14 as the minimum supported version of Golang (#1621)
+  - Contributors (alphabetical order):
+    - 10gic
+    - Andrew Tugarinov
+    - Anirudha Bose
+    - Appelberg-s
+    - Armando Ochoa
+    - Aurèle Oulès
+    - Calvin Kim
+    - Christian Lehmann
+    - Conner Fromknecht
+    - Dan Cline
+    - David Mazary
+    - Elliott Minns
+    - Federico Bond
+    - Friedger Müffke
+    - Gustavo Chain
+    - Hanjun Kim
+    - Henry Fisher
+    - Iskander Sharipov
+    - Jake Sylvestre
+    - Johan T. Halseth
+    - John C. Vernaleo
+    - Liran Sharir
+    - Mikael Lindlof
+    - Olaoluwa Osuntokun
+    - Oliver Gugger
+    - Rjected
+    - Steven Kreuzer
+    - Torkel Rogstad
+    - Tristyn
+    - Victor Lavaud
+    - Vinayak Borkar
+    - Wilmer Paulino
+    - Yaacov Akiba Slama
+    - ebiiim
+    - ipriver
+    - wakiyamap
+    - yyforyongyu</p>
+</p>
+					    <a href="https://github.com/btcsuite/btcd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcsuite/btcd/releases/tag/v0.22.0-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/unchained-capital/caravan">unchained-capital/caravan</a>: <a href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.8">v0.3.8</a>
 						    </h2>
 							<p class="card-text">Published: 2021-06-03 15:49:03 UTC</p>
@@ -7988,100 +8378,6 @@ Checkout <a href="https://bitcoin-s.org/docs/0.5.0/getting-setup#option-b-bitcoi
 </p>
 					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/mempool/mempool/releases/tag/v2.1.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6">v1.4.6</a>
-						    </h2>
-							<p class="card-text">Published: 2021-02-02 16:40:13 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>Display min amount for pay-to-open</h2>
-
-<p>The minimum amount that the wallet can receive is now displayed when the wallet does not have any channels. It is also displayed for swap-ins. This minimum amount prevents creating new channels for very small amounts.</p>
-
-<h2>Complete list of changes</h2>
-
-<ul>
-<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.5...v1.4.6">https://github.com/ACINQ/phoenix/compare/v1.4.5...v1.4.6</a></li>
-<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.7-android-phoenix...v0.4.8-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.7-android-phoenix...v0.4.8-android-phoenix</a></li>
-</ul>
-
-<p>Thanks @bitcoinuser for updating the Portuguese-Brazilian translation.</p>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
-- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import padioupm.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.5">v1.4.5</a>
-						    </h2>
-							<p class="card-text">Published: 2021-02-02 16:39:53 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>Main changes</h2>
-
-<h4>Closing logic is cooperative when we have nothing at stake</h4>
-
-<p>More information here: <a href="https://github.com/ACINQ/eclair/pull/1633">https://github.com/ACINQ/eclair/pull/1633</a></p>
-
-<h4>Add links to terms</h4>
-
-<p>A link to the <a href="https://phoenix.acinq.co/terms">terms</a> (explaining how the wallet works and what can be expected) has been added to the about and initialization screens.</p>
-
-<h2>Complete list of changes</h2>
-
-<ul>
-<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.4...v1.4.5">https://github.com/ACINQ/phoenix/compare/v1.4.4...v1.4.5</a></li>
-<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.6-android-phoenix...v0.4.7-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.6-android-phoenix...v0.4.7-android-phoenix</a></li>
-</ul>
-
-<p>Thanks @bitcoinuser for updating the Portuguese-Brazilian translation.</p>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
-- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import padioupm.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
