@@ -6,7 +6,51 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-08T17:25:32+00:00</updated>
+  <updated>2021-06-08T17:33:49+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.14</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.14"/>
+    <summary>## Main changes
+
+### Remove editable fee rate in swap-out
+
+Swap-outs (LN -&gt; on-chain) are actually spending from a shared UTXO set. To make things consistent and ensure good UX for every users, the swap-out fee rate is now defined by the swap service. 
+
+More info here: https://phoenix.acinq.co/faq#why-dont-you-let-me-set-the-feerate-myself-when-sending-on-chain
+
+### Added a button to enlarge the receive QR code
+
+This will help scanning a invoice with low resolution camera.
+
+### Added an option to disable pay-to-open
+
+On-the-fly channel creation has a fee and users may want to disable it. In that case, if a new channel was required to be created in order for a incoming payment to be received, the payment will fail and a notification will be displayed (with a cooldown to prevent notification spam).
+
+### Full list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.13...v1.4.14
+- **core**: https://github.com/ACINQ/eclair/compare/v0.4.11-android-phoenix...v0.4.12-android-phoenix
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.14</title>
+    <updated>2021-06-08T17:31:45Z</updated>
+    <dc:date>2021-06-08T17:31:45Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcsuite/btcd/releases/tag/v0.22.0-beta</id>
     <link href="https://github.com/btcsuite/btcd/releases/tag/v0.22.0-beta"/>
@@ -6926,34 +6970,5 @@ c2bf6dc4315 Update akka-actor, akka-slf4j, akka-stream, ... to 2.6.9 (#1993)
     <updated>2021-02-04T08:23:19Z</updated>
     <dc:date>2021-02-04T08:23:19Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/mempool/mempool/releases/tag/v2.1.0</id>
-    <link href="https://github.com/mempool/mempool/releases/tag/v2.1.0"/>
-    <summary>Mempool v2.1.0 is a minor release that brings bug fixes and improvements.
-
-&lt;img width=&quot;559&quot; alt=&quot;Screen Shot 2021-02-03 at 18 06 20&quot; src=&quot;https://user-images.githubusercontent.com/8561090/106738489-8e8ab480-664a-11eb-95dc-3ed8d0ec517b.png&quot;&gt;
-
-* Implement workflow to publish [mempool on DockerHub](https://hub.docker.com/u/mempool). #67
-* Add CoreRPC &quot;Minimum fee&quot; to the dashboard. #171
-* Fix for occasional inability to change language to English. #275
-* Fix for anguage dropdown select styling. #293
-* Display a red RBF button when RBF is not enabled. #279
-* Don't save disk cache on exit. Handle corrupted mempool disk cache. #304
-* Fix for fee estimate not being correct when block is almost full. #278
-* Bisq stats calculation fixed. #280
-* Fix for sub networks not detected when using languages. #287
-* Don't display fee rating when block medianFee is empty. #228
-* Display P2PK inputs as &quot;P2PK&quot; instead of empty string.  #290
-* Better identification of Lightning and Liquid scripts. #324
-* Add new languages: Hungarian and Italian
-* (Bitcoind) Return correct http status message when tx not found. #295
-* (Bitcoind) Adding missing basic API endpoints. #291
-* (Bitcoind) Parse witness scripts from P2SH transactions. #323
-* (Electrum) Hide missing address received/sent from address page. #294
-</summary>
-    <title>mempool/mempool: v2.1.0</title>
-    <updated>2021-02-04T06:17:59Z</updated>
-    <dc:date>2021-02-04T06:17:59Z</dc:date>
-  </entry>
-  <dc:date>2021-06-08T17:25:32+00:00</dc:date>
+  <dc:date>2021-06-08T17:33:49+00:00</dc:date>
 </feed>

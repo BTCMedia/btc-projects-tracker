@@ -38,6 +38,60 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.14">v1.4.14</a>
+						    </h2>
+							<p class="card-text">Published: 2021-06-08 17:31:45 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Main changes</h2>
+
+<h3>Remove editable fee rate in swap-out</h3>
+
+<p>Swap-outs (LN -&gt; on-chain) are actually spending from a shared UTXO set. To make things consistent and ensure good UX for every users, the swap-out fee rate is now defined by the swap service. </p>
+
+<p>More info here: <a href="https://phoenix.acinq.co/faq#why-dont-you-let-me-set-the-feerate-myself-when-sending-on-chain">https://phoenix.acinq.co/faq#why-dont-you-let-me-set-the-feerate-myself-when-sending-on-chain</a></p>
+
+<h3>Added a button to enlarge the receive QR code</h3>
+
+<p>This will help scanning a invoice with low resolution camera.</p>
+
+<h3>Added an option to disable pay-to-open</h3>
+
+<p>On-the-fly channel creation has a fee and users may want to disable it. In that case, if a new channel was required to be created in order for a incoming payment to be received, the payment will fail and a notification will be displayed (with a cooldown to prevent notification spam).</p>
+
+<h3>Full list of changes</h3>
+
+<ul>
+<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.13...v1.4.14">https://github.com/ACINQ/phoenix/compare/v1.4.13...v1.4.14</a></li>
+<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.11-android-phoenix...v0.4.12-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.11-android-phoenix...v0.4.12-android-phoenix</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
+- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import drouinf.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.14" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcsuite/btcd">btcsuite/btcd</a>: <a href="https://github.com/btcsuite/btcd/releases/tag/v0.22.0-beta">v0.22.0-beta</a>
 						    </h2>
 							<p class="card-text">Published: 2021-06-08 14:18:27 UTC</p>
@@ -8340,44 +8394,6 @@ Checkout <a href="https://bitcoin-s.org/docs/0.5.0/getting-setup#option-b-bitcoi
 					    <p class="card-text"></p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/mempool/mempool">mempool/mempool</a>: <a href="https://github.com/mempool/mempool/releases/tag/v2.1.0">v2.1.0</a>
-						    </h2>
-							<p class="card-text">Published: 2021-02-04 06:17:59 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Mempool v2.1.0 is a minor release that brings bug fixes and improvements.</p>
-
-<p><img width="559" alt="Screen Shot 2021-02-03 at 18 06 20" src="https://user-images.githubusercontent.com/8561090/106738489-8e8ab480-664a-11eb-95dc-3ed8d0ec517b.png"></p>
-
-<ul>
-<li>Implement workflow to publish <a href="https://hub.docker.com/u/mempool">mempool on DockerHub</a>. #67</li>
-<li>Add CoreRPC &quot;Minimum fee&quot; to the dashboard. #171</li>
-<li>Fix for occasional inability to change language to English. #275</li>
-<li>Fix for anguage dropdown select styling. #293</li>
-<li>Display a red RBF button when RBF is not enabled. #279</li>
-<li>Don&#39;t save disk cache on exit. Handle corrupted mempool disk cache. #304</li>
-<li>Fix for fee estimate not being correct when block is almost full. #278</li>
-<li>Bisq stats calculation fixed. #280</li>
-<li>Fix for sub networks not detected when using languages. #287</li>
-<li>Don&#39;t display fee rating when block medianFee is empty. #228</li>
-<li>Display P2PK inputs as &quot;P2PK&quot; instead of empty string.  #290</li>
-<li>Better identification of Lightning and Liquid scripts. #324</li>
-<li>Add new languages: Hungarian and Italian</li>
-<li>(Bitcoind) Return correct http status message when tx not found. #295</li>
-<li>(Bitcoind) Adding missing basic API endpoints. #291</li>
-<li>(Bitcoind) Parse witness scripts from P2SH transactions. #323</li>
-<li>(Electrum) Hide missing address received/sent from address page. #294</li>
-</ul>
-</p>
-					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/mempool/mempool/releases/tag/v2.1.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
