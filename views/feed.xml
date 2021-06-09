@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-09T18:34:18+00:00</updated>
+  <updated>2021-06-09T18:42:15+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.14</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.14"/>
@@ -115,126 +115,140 @@ BTCBUILDSYS=&quot;linux-arm64 darwin-amd64&quot; ./build/release/release.sh
 
 # Release Notes
 
-Changes in 0.22.0 (Tue Jun 01 2021)
-  - Protocol and network-related changes:
-    - Add support for witness tx and block in notfound msg (#1625)
-    - Add support for receiving sendaddrv2 messages from a peer (#1670)
-    - Fix bug in peer package causing last block height to go backwards
-      (#1606)
-    - Add chain parameters for connecting to the public Signet network
-      (#1692, #1718)
-  - Crypto changes:
-    - Fix bug causing panic due to bad R and S signature components in
-      btcec.RecoverCompact (#1691)
-    - Set the name (secp256k1) in the CurveParams of the S256 curve
-      (#1565)
-  - Notable developer-related package changes:
-    - Remove unknown block version warning in the blockchain package,
-      due to false positives triggered by AsicBoost (#1463)
-    - Add chaincfg.RegisterHDKeyID function to populate HD key ID pairs
-      (#1617)
-    - Add new method mining.AddWitnessCommitment to add the witness
-      commitment as an OP_RETURN output within the coinbase transaction.
-      (#1716)
-  - RPC changes:
-    - Support Batch JSON-RPC in rpcclient and server (#1583)
-    - Add rpcclient method to invoke getdescriptorinfo JSON-RPC command
-      (#1578)
-    - Update the rpcserver handler for validateaddress JSON-RPC command to
-      have parity with the bitcoind 0.20.0 interface (#1613)
-    - Add rpcclient method to invoke getblockfilter JSON-RPC command
-      (#1579)
-    - Add signmessagewithprivkey JSON-RPC command in rpcserver (#1585)
-    - Add rpcclient method to invoke importmulti JSON-RPC command (#1579)
-    - Add watchOnly argument in rpcclient method to invoke
-      listtransactions JSON-RPC command (#1628)
-    - Update btcjson.ListTransactionsResult for compatibility with Bitcoin
-      Core 0.20.0 (#1626)
-    - Support nullable optional JSON-RPC parameters (#1594)
-    - Add rpcclient and server method to invoke getnodeaddresses JSON-RPC
-      command (#1590)
-    - Add rpcclient methods to invoke PSBT JSON-RPC commands (#1596)
-    - Add rpcclient method to invoke listsinceblock with the
-      include_watchonly parameter enabled (#1451)
-    - Add rpcclient method to invoke deriveaddresses JSON-RPC command
-      (#1631)
-    - Add rpcclient method to invoke getblocktemplate JSON-RPC command
-      (#1629)
-    - Add rpcclient method to invoke getaddressinfo JSON-RPC command
-      (#1633)
-    - Add rpcclient method to invoke getwalletinfo JSON-RPC command
-      (#1638)
-    - Fix error message in rpcserver when an unknown RPC command is
-      encountered (#1695)
-    - Fix error message returned by estimatefee when the number of blocks
-      exceeds the max depth (#1678)
-    - Update btcjson.GetBlockChainInfoResult to include new fields in
-      Bitcoin Core (#1676)
-    - Add ExtraHeaders in rpcclient.ConnConfig struct (#1669)
-    - Fix bitcoind compatibility issue with the sendrawtransaction
-      JSON-RPC command (#1659)
-    - Add new JSON-RPC errors to btcjson package, and documented them
-      (#1648)
-    - Add rpcclient method to invoke createwallet JSON-RPC command
-      (#1650)
-    - Add rpcclient methods to invoke backupwallet, dumpwallet, loadwallet
-      and unloadwallet JSON-RPC commands (#1645)
-    - Fix unmarshalling error in getmininginfo JSON-RPC command, for valid
-      integers in scientific notation (#1644)
-    - Add rpcclient method to invoke gettxoutsetinfo JSON-RPC command
-      (#1641)
-    - Add rpcclient method to invoke signrawtransactionwithwallet JSON-RPC
-      command (#1642)
-    - Add txid to getblocktemplate response of rpcserver (#1639)
-    - Fix monetary unit used in createrawtransaction JSON-RPC command in
-      rpcserver (#1614)
-    - Add rawtx field to btcjson.GetBlockVerboseTxResult to provide
-      backwards compatibility with older versions of Bitcoin Core (#1677)
-  - Misc changes:
-    - Update btcutil dependency (#1704)
-    - Add Dockerfile to build and run btcd on Docker (#1465)
-    - Rework documentation and publish on https://btcd.readthedocs.io (#1468)
-    - Add support for Go 1.15 (#1619)
-    - Add Go 1.14 as the minimum supported version of Golang (#1621)
-  - Contributors (alphabetical order):
-    - 10gic
-    - Andrew Tugarinov
-    - Anirudha Bose
-    - Appelberg-s
-    - Armando Ochoa
-    - Aurèle Oulès
-    - Calvin Kim
-    - Christian Lehmann
-    - Conner Fromknecht
-    - Dan Cline
-    - David Mazary
-    - Elliott Minns
-    - Federico Bond
-    - Friedger Müffke
-    - Gustavo Chain
-    - Hanjun Kim
-    - Henry Fisher
-    - Iskander Sharipov
-    - Jake Sylvestre
-    - Johan T. Halseth
-    - John C. Vernaleo
-    - Liran Sharir
-    - Mikael Lindlof
-    - Olaoluwa Osuntokun
-    - Oliver Gugger
-    - Rjected
-    - Steven Kreuzer
-    - Torkel Rogstad
-    - Tristyn
-    - Victor Lavaud
-    - Vinayak Borkar
-    - Wilmer Paulino
-    - Yaacov Akiba Slama
-    - ebiiim
-    - ipriver
-    - wakiyamap
-    - yyforyongyu
-</summary>
+#### Protocol and network-related changes:
+
+* Added support for witness tx and block in `notfound` msg.  (#1625)
+
+* Added support for receiving `sendaddrv2` messages from a peer.  (#1670)
+
+* Fixed bug in `peer` package causing last block height to go backwards.  (#1606)
+
+* Added chain parameters for connecting to the public Signet network.  (#1692, #1718)
+
+  Also added `--signet` command line flag to `btcctl` and `btcd` utilities.
+
+#### Crypto changes:
+
+* Fixed bug causing panic due to bad R and S signature components in `btcec.RecoverCompact`.  (#1691)
+* Set the name (`secp256k1`) in the CurveParams of the S256 curve. (#1565)
+
+#### Notable developer-related package changes:
+
+* Improve gc for `txscript.IsUnspendable` method. (#1615)
+
+  Significantly reduced allocations, which should bring a performance gain during sync.
+* Used `RLock`/`RUnlock` when possible in the `addrmgr` package.  (#1697)
+* Removed unknown block version warning in the `blockchain` package, due to false positives triggered by AsicBoost.  (#1463)
+* Added proper types for flag field and improve docs, for `msgtx` in the `wire` package. (#1632)
+* Added `chaincfg.RegisterHDKeyID` function to populate HD key ID pairs.  (#1617)
+* Fixed flaky hash cache test due to resetting RNG.  (#1689)
+* Added new method `mining.AddWitnessCommitment` to add the witness commitment as an `OP_RETURN` output within the coinbase transaction.  (#1716)
+
+#### RPC changes:
+* Implemented Batch JSON-RPC in `rpcclient` and server.  (#1583)
+
+  Please refer to `rpcclient/examples/bitcoincorehttpbulk/README.md` for examples.
+
+* Implemented `rpcclient` method to invoke `getdescriptorinfo` JSON-RPC command. (#1578)
+* Updated the `rpcserver` handler for `validateaddress` JSON-RPC command to have parity with the bitcoind 0.20.0 interface.  (#1613)
+* Implemented `rpcclient` method to invoke `getblockfilter` JSON-RPC command. (#1579)
+* Implemented `signmessagewithprivkey` JSON-RPC command in rpcserver. (#1585)
+* Implemented `rpcclient` method to invoke `importmulti` JSON-RPC command. (#1579)
+* Implemented `watchOnly` argument in `rpcclient` method to invoke `listtransactions` JSON-RPC command. (#1628)
+* Updated `btcjson.ListTransactionsResult` for compatibility with Bitcoin Core 0.20.0.  (#1626)
+
+  Two new fields `BlockHeight` and `Label` were added as optional, to keep backwards compatibility.
+* Implemented nullable optional JSON-RPC parameters.  (#1594)
+
+  Fixed command marshalling dropping params that follow params with `nil` value.
+* Implemented `rpcclient` and server method to invoke `getnodeaddresses` JSON-RPC command. (#1590)
+* Implemented `rpcclient` methods to invoke PSBT JSON-RPC commands.  (#1596)
+
+  The `walletcreatefundedpsbt` and `walletprocesspsbt` commands were implemented.
+* Implemented `rpcclient` method to invoke `listsinceblock` with the `include_watchonly` parameter enabled. (#1451)
+* Implemented `rpcclient` method to invoke `deriveaddresses` JSON-RPC command. (#1631)
+* Implemented `rpcclient` method to invoke `getblocktemplate` JSON-RPC command. (#1629)
+
+  The corresponding `btcjson` structs were also updated to reflect changes in Bitcoin Core.
+* Implemented `rpcclient` method to invoke `getaddressinfo` JSON-RPC command. (#1633)
+* Implemented `rpcclient` method to invoke `getwalletinfo` JSON-RPC command. (#1638)
+* Fixed error message in rpcserver when an unknown RPC command is encountered.  (#1695)
+* Fixed error message returned by `estimatefee` when the number of blocks exceeds the max depth. (#1678)
+* Updated `btcjson.GetBlockChainInfoResult` to include new fields in Bitcoin Core.  (#1676)
+
+  Two new fields `InitialBlockDownload` and `SizeOnDisk` were added.
+* Added `ExtraHeaders` in `rpcclient.ConnConfig` struct.  (#1669)
+
+  It's useful when the RPC provider needs customized headers, for example, the `X-Auth-Token` header.
+* Fixed bitcoind compatibility issue with the `sendrawtransaction` JSON-RPC command.  (#1659)
+* Added new JSON-RPC errors to `btcjson` package, and documented them.  (#1648)
+* Implemented `rpcclient` method to invoke `createwallet` JSON-RPC command. (#1650)
+
+  This is also the first `rpcclient` method that uses the functional options pattern, which will be used more and more in future.
+* Implemented `rpcclient` methods to invoke `backupwallet`, `dumpwallet`, `loadwallet` and `unloadwallet` JSON-RPC commands. (#1645)
+* Fixed unmarshalling error in `getmininginfo` JSON-RPC command, for valid integers in scientific notation.  (#1644)
+* Implemented `rpcclient` method to invoke `gettxoutsetinfo` JSON-RPC command. (#1641)
+* Implemented `rpcclient` method to invoke `signrawtransactionwithwallet` JSON-RPC command. (#1642)
+* Added `txid` to `getblocktemplate` response of rpcserver.  (#1639)
+* Fixed monetary unit used in `createrawtransaction` JSON-RPC command in rpcserver.  (#1614)
+* Added `rawtx` field to `btcjson.GetBlockVerboseTxResult` to provide backwards compatibility with older versions of Bitcoin Core.  (#1677)
+
+#### Misc changes:
+
+* Updated `btcutil` dependency.  (#1704)
+* Updated documentation links to use https://pkg.go.dev instead of http://godoc.org.  (#1693) 
+* Added Dockerfile to build and run btcd on Docker.  (#1465)
+* Reworked documentation and published on https://btcd.readthedocs.io.  (#1468)
+* Added support for Go 1.15. (#1619)
+* Added Go 1.14 as the minimum supported version of Golang. (#1621)
+* Removed unnecessary `GOMAXPROCS` function calls.  (#1627)
+* Enabled Go Race detector and code coverage on GitHub Actions.  (#1601)
+
+## Changelog
+
+The full list of changes since `v0.21.0-beta` can be found here:
+
+* https://github.com/btcsuite/btcd/compare/v0.21.0-beta..v0.22.0-beta
+
+# Contributors (Alphabetical Order)
+
+10gic
+Andrew Tugarinov
+Anirudha Bose
+Appelberg-s
+Armando Ochoa
+Aurèle Oulès
+Calvin Kim
+Christian Lehmann
+Conner Fromknecht
+Dan Cline
+David Mazary
+Elliott Minns
+Federico Bond
+Friedger Müffke
+Gustavo Chain
+Hanjun Kim
+Henry Fisher
+Iskander Sharipov
+Jake Sylvestre
+Johan T. Halseth
+John C. Vernaleo
+Liran Sharir
+Mikael Lindlof
+Olaoluwa Osuntokun
+Oliver Gugger
+Rjected
+Steven Kreuzer
+Torkel Rogstad
+Tristyn
+Victor Lavaud
+Vinayak Borkar
+Wilmer Paulino
+Yaacov Akiba Slama
+ebiiim
+ipriver
+wakiyamap
+yyforyongyu</summary>
     <title>btcsuite/btcd: v0.22.0-beta</title>
     <updated>2021-06-08T14:18:27Z</updated>
     <dc:date>2021-06-08T14:18:27Z</dc:date>
@@ -303,126 +317,140 @@ BTCBUILDSYS=&quot;linux-arm64 darwin-amd64&quot; ./build/release/release.sh
 
 # Release Notes
 
-Changes in 0.22.0 (Tue Jun 01 2021)
-  - Protocol and network-related changes:
-    - Add support for witness tx and block in notfound msg (#1625)
-    - Add support for receiving sendaddrv2 messages from a peer (#1670)
-    - Fix bug in peer package causing last block height to go backwards
-      (#1606)
-    - Add chain parameters for connecting to the public Signet network
-      (#1692, #1718)
-  - Crypto changes:
-    - Fix bug causing panic due to bad R and S signature components in
-      btcec.RecoverCompact (#1691)
-    - Set the name (secp256k1) in the CurveParams of the S256 curve
-      (#1565)
-  - Notable developer-related package changes:
-    - Remove unknown block version warning in the blockchain package,
-      due to false positives triggered by AsicBoost (#1463)
-    - Add chaincfg.RegisterHDKeyID function to populate HD key ID pairs
-      (#1617)
-    - Add new method mining.AddWitnessCommitment to add the witness
-      commitment as an OP_RETURN output within the coinbase transaction.
-      (#1716)
-  - RPC changes:
-    - Support Batch JSON-RPC in rpcclient and server (#1583)
-    - Add rpcclient method to invoke getdescriptorinfo JSON-RPC command
-      (#1578)
-    - Update the rpcserver handler for validateaddress JSON-RPC command to
-      have parity with the bitcoind 0.20.0 interface (#1613)
-    - Add rpcclient method to invoke getblockfilter JSON-RPC command
-      (#1579)
-    - Add signmessagewithprivkey JSON-RPC command in rpcserver (#1585)
-    - Add rpcclient method to invoke importmulti JSON-RPC command (#1579)
-    - Add watchOnly argument in rpcclient method to invoke
-      listtransactions JSON-RPC command (#1628)
-    - Update btcjson.ListTransactionsResult for compatibility with Bitcoin
-      Core 0.20.0 (#1626)
-    - Support nullable optional JSON-RPC parameters (#1594)
-    - Add rpcclient and server method to invoke getnodeaddresses JSON-RPC
-      command (#1590)
-    - Add rpcclient methods to invoke PSBT JSON-RPC commands (#1596)
-    - Add rpcclient method to invoke listsinceblock with the
-      include_watchonly parameter enabled (#1451)
-    - Add rpcclient method to invoke deriveaddresses JSON-RPC command
-      (#1631)
-    - Add rpcclient method to invoke getblocktemplate JSON-RPC command
-      (#1629)
-    - Add rpcclient method to invoke getaddressinfo JSON-RPC command
-      (#1633)
-    - Add rpcclient method to invoke getwalletinfo JSON-RPC command
-      (#1638)
-    - Fix error message in rpcserver when an unknown RPC command is
-      encountered (#1695)
-    - Fix error message returned by estimatefee when the number of blocks
-      exceeds the max depth (#1678)
-    - Update btcjson.GetBlockChainInfoResult to include new fields in
-      Bitcoin Core (#1676)
-    - Add ExtraHeaders in rpcclient.ConnConfig struct (#1669)
-    - Fix bitcoind compatibility issue with the sendrawtransaction
-      JSON-RPC command (#1659)
-    - Add new JSON-RPC errors to btcjson package, and documented them
-      (#1648)
-    - Add rpcclient method to invoke createwallet JSON-RPC command
-      (#1650)
-    - Add rpcclient methods to invoke backupwallet, dumpwallet, loadwallet
-      and unloadwallet JSON-RPC commands (#1645)
-    - Fix unmarshalling error in getmininginfo JSON-RPC command, for valid
-      integers in scientific notation (#1644)
-    - Add rpcclient method to invoke gettxoutsetinfo JSON-RPC command
-      (#1641)
-    - Add rpcclient method to invoke signrawtransactionwithwallet JSON-RPC
-      command (#1642)
-    - Add txid to getblocktemplate response of rpcserver (#1639)
-    - Fix monetary unit used in createrawtransaction JSON-RPC command in
-      rpcserver (#1614)
-    - Add rawtx field to btcjson.GetBlockVerboseTxResult to provide
-      backwards compatibility with older versions of Bitcoin Core (#1677)
-  - Misc changes:
-    - Update btcutil dependency (#1704)
-    - Add Dockerfile to build and run btcd on Docker (#1465)
-    - Rework documentation and publish on https://btcd.readthedocs.io (#1468)
-    - Add support for Go 1.15 (#1619)
-    - Add Go 1.14 as the minimum supported version of Golang (#1621)
-  - Contributors (alphabetical order):
-    - 10gic
-    - Andrew Tugarinov
-    - Anirudha Bose
-    - Appelberg-s
-    - Armando Ochoa
-    - Aurèle Oulès
-    - Calvin Kim
-    - Christian Lehmann
-    - Conner Fromknecht
-    - Dan Cline
-    - David Mazary
-    - Elliott Minns
-    - Federico Bond
-    - Friedger Müffke
-    - Gustavo Chain
-    - Hanjun Kim
-    - Henry Fisher
-    - Iskander Sharipov
-    - Jake Sylvestre
-    - Johan T. Halseth
-    - John C. Vernaleo
-    - Liran Sharir
-    - Mikael Lindlof
-    - Olaoluwa Osuntokun
-    - Oliver Gugger
-    - Rjected
-    - Steven Kreuzer
-    - Torkel Rogstad
-    - Tristyn
-    - Victor Lavaud
-    - Vinayak Borkar
-    - Wilmer Paulino
-    - Yaacov Akiba Slama
-    - ebiiim
-    - ipriver
-    - wakiyamap
-    - yyforyongyu
-</summary>
+#### Protocol and network-related changes:
+
+* Added support for witness tx and block in `notfound` msg.  (#1625)
+
+* Added support for receiving `sendaddrv2` messages from a peer.  (#1670)
+
+* Fixed bug in `peer` package causing last block height to go backwards.  (#1606)
+
+* Added chain parameters for connecting to the public Signet network.  (#1692, #1718)
+
+  Also added `--signet` command line flag to `btcctl` and `btcd` utilities.
+
+#### Crypto changes:
+
+* Fixed bug causing panic due to bad R and S signature components in `btcec.RecoverCompact`.  (#1691)
+* Set the name (`secp256k1`) in the CurveParams of the S256 curve. (#1565)
+
+#### Notable developer-related package changes:
+
+* Improve gc for `txscript.IsUnspendable` method. (#1615)
+
+  Significantly reduced allocations, which should bring a performance gain during sync.
+* Used `RLock`/`RUnlock` when possible in the `addrmgr` package.  (#1697)
+* Removed unknown block version warning in the `blockchain` package, due to false positives triggered by AsicBoost.  (#1463)
+* Added proper types for flag field and improve docs, for `msgtx` in the `wire` package. (#1632)
+* Added `chaincfg.RegisterHDKeyID` function to populate HD key ID pairs.  (#1617)
+* Fixed flaky hash cache test due to resetting RNG.  (#1689)
+* Added new method `mining.AddWitnessCommitment` to add the witness commitment as an `OP_RETURN` output within the coinbase transaction.  (#1716)
+
+#### RPC changes:
+* Implemented Batch JSON-RPC in `rpcclient` and server.  (#1583)
+
+  Please refer to `rpcclient/examples/bitcoincorehttpbulk/README.md` for examples.
+
+* Implemented `rpcclient` method to invoke `getdescriptorinfo` JSON-RPC command. (#1578)
+* Updated the `rpcserver` handler for `validateaddress` JSON-RPC command to have parity with the bitcoind 0.20.0 interface.  (#1613)
+* Implemented `rpcclient` method to invoke `getblockfilter` JSON-RPC command. (#1579)
+* Implemented `signmessagewithprivkey` JSON-RPC command in rpcserver. (#1585)
+* Implemented `rpcclient` method to invoke `importmulti` JSON-RPC command. (#1579)
+* Implemented `watchOnly` argument in `rpcclient` method to invoke `listtransactions` JSON-RPC command. (#1628)
+* Updated `btcjson.ListTransactionsResult` for compatibility with Bitcoin Core 0.20.0.  (#1626)
+
+  Two new fields `BlockHeight` and `Label` were added as optional, to keep backwards compatibility.
+* Implemented nullable optional JSON-RPC parameters.  (#1594)
+
+  Fixed command marshalling dropping params that follow params with `nil` value.
+* Implemented `rpcclient` and server method to invoke `getnodeaddresses` JSON-RPC command. (#1590)
+* Implemented `rpcclient` methods to invoke PSBT JSON-RPC commands.  (#1596)
+
+  The `walletcreatefundedpsbt` and `walletprocesspsbt` commands were implemented.
+* Implemented `rpcclient` method to invoke `listsinceblock` with the `include_watchonly` parameter enabled. (#1451)
+* Implemented `rpcclient` method to invoke `deriveaddresses` JSON-RPC command. (#1631)
+* Implemented `rpcclient` method to invoke `getblocktemplate` JSON-RPC command. (#1629)
+
+  The corresponding `btcjson` structs were also updated to reflect changes in Bitcoin Core.
+* Implemented `rpcclient` method to invoke `getaddressinfo` JSON-RPC command. (#1633)
+* Implemented `rpcclient` method to invoke `getwalletinfo` JSON-RPC command. (#1638)
+* Fixed error message in rpcserver when an unknown RPC command is encountered.  (#1695)
+* Fixed error message returned by `estimatefee` when the number of blocks exceeds the max depth. (#1678)
+* Updated `btcjson.GetBlockChainInfoResult` to include new fields in Bitcoin Core.  (#1676)
+
+  Two new fields `InitialBlockDownload` and `SizeOnDisk` were added.
+* Added `ExtraHeaders` in `rpcclient.ConnConfig` struct.  (#1669)
+
+  It's useful when the RPC provider needs customized headers, for example, the `X-Auth-Token` header.
+* Fixed bitcoind compatibility issue with the `sendrawtransaction` JSON-RPC command.  (#1659)
+* Added new JSON-RPC errors to `btcjson` package, and documented them.  (#1648)
+* Implemented `rpcclient` method to invoke `createwallet` JSON-RPC command. (#1650)
+
+  This is also the first `rpcclient` method that uses the functional options pattern, which will be used more and more in future.
+* Implemented `rpcclient` methods to invoke `backupwallet`, `dumpwallet`, `loadwallet` and `unloadwallet` JSON-RPC commands. (#1645)
+* Fixed unmarshalling error in `getmininginfo` JSON-RPC command, for valid integers in scientific notation.  (#1644)
+* Implemented `rpcclient` method to invoke `gettxoutsetinfo` JSON-RPC command. (#1641)
+* Implemented `rpcclient` method to invoke `signrawtransactionwithwallet` JSON-RPC command. (#1642)
+* Added `txid` to `getblocktemplate` response of rpcserver.  (#1639)
+* Fixed monetary unit used in `createrawtransaction` JSON-RPC command in rpcserver.  (#1614)
+* Added `rawtx` field to `btcjson.GetBlockVerboseTxResult` to provide backwards compatibility with older versions of Bitcoin Core.  (#1677)
+
+#### Misc changes:
+
+* Updated `btcutil` dependency.  (#1704)
+* Updated documentation links to use https://pkg.go.dev instead of http://godoc.org.  (#1693) 
+* Added Dockerfile to build and run btcd on Docker.  (#1465)
+* Reworked documentation and published on https://btcd.readthedocs.io.  (#1468)
+* Added support for Go 1.15. (#1619)
+* Added Go 1.14 as the minimum supported version of Golang. (#1621)
+* Removed unnecessary `GOMAXPROCS` function calls.  (#1627)
+* Enabled Go Race detector and code coverage on GitHub Actions.  (#1601)
+
+## Changelog
+
+The full list of changes since `v0.21.0-beta` can be found here:
+
+* https://github.com/btcsuite/btcd/compare/v0.21.0-beta..v0.22.0-beta
+
+# Contributors (Alphabetical Order)
+
+10gic
+Andrew Tugarinov
+Anirudha Bose
+Appelberg-s
+Armando Ochoa
+Aurèle Oulès
+Calvin Kim
+Christian Lehmann
+Conner Fromknecht
+Dan Cline
+David Mazary
+Elliott Minns
+Federico Bond
+Friedger Müffke
+Gustavo Chain
+Hanjun Kim
+Henry Fisher
+Iskander Sharipov
+Jake Sylvestre
+Johan T. Halseth
+John C. Vernaleo
+Liran Sharir
+Mikael Lindlof
+Olaoluwa Osuntokun
+Oliver Gugger
+Rjected
+Steven Kreuzer
+Torkel Rogstad
+Tristyn
+Victor Lavaud
+Vinayak Borkar
+Wilmer Paulino
+Yaacov Akiba Slama
+ebiiim
+ipriver
+wakiyamap
+yyforyongyu</summary>
     <title>btcsuite/btcd: v0.22.0-beta</title>
     <updated>2021-06-08T14:18:27Z</updated>
     <dc:date>2021-06-08T14:18:27Z</dc:date>
@@ -6970,5 +6998,5 @@ c2bf6dc4315 Update akka-actor, akka-slf4j, akka-stream, ... to 2.6.9 (#1993)
     <updated>2021-02-04T08:23:19Z</updated>
     <dc:date>2021-02-04T08:23:19Z</dc:date>
   </entry>
-  <dc:date>2021-06-09T18:34:18+00:00</dc:date>
+  <dc:date>2021-06-09T18:42:15+00:00</dc:date>
 </feed>
