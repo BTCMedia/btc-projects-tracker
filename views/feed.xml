@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-09T07:54:36+00:00</updated>
+  <updated>2021-06-09T08:12:57+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.14</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.14"/>
@@ -910,7 +910,7 @@ There are two types of binaries:
 
 ## Specter Desktop
 It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/Specter-Setup-v1.4.2.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2SpecterDesktop-v1.4.2.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/specter_desktop-v1.4.2-x86_64-linux-gnu.tar.gz)
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/Specter-Setup-v1.4.2.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/SpecterDesktop-v1.4.2.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/specter_desktop-v1.4.2-x86_64-linux-gnu.tar.gz)
 
 **Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
 
@@ -6970,5 +6970,5 @@ c2bf6dc4315 Update akka-actor, akka-slf4j, akka-stream, ... to 2.6.9 (#1993)
     <updated>2021-02-04T08:23:19Z</updated>
     <dc:date>2021-02-04T08:23:19Z</dc:date>
   </entry>
-  <dc:date>2021-06-09T07:54:36+00:00</dc:date>
+  <dc:date>2021-06-09T08:12:57+00:00</dc:date>
 </feed>
