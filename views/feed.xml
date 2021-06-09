@@ -6,7 +6,21 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-09T19:11:34+00:00</updated>
+  <updated>2021-06-09T19:13:28+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.12</id>
+    <link href="https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.12"/>
+    <summary>Changelog:
+
+- Support supplying contract hash to issueasset RPC
+- Fix description of -chain parameter
+- Add liquidv1test chainparams
+- Add logging for dynafed activation and transitions
+- Undo default signalling behavior for dynafed unless enabled</summary>
+    <title>ElementsProject/elements: elements-0.18.1.12</title>
+    <updated>2021-06-09T19:11:53Z</updated>
+    <dc:date>2021-06-09T19:11:53Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.14</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.14"/>
@@ -6990,13 +7004,5 @@ c2bf6dc4315 Update akka-actor, akka-slf4j, akka-stream, ... to 2.6.9 (#1993)
     <updated>2021-02-04T19:04:36Z</updated>
     <dc:date>2021-02-04T19:04:36Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc1</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc1"/>
-    <summary></summary>
-    <title>lightningnetwork/lnd: v0.12.1-beta.rc1</title>
-    <updated>2021-02-04T08:23:19Z</updated>
-    <dc:date>2021-02-04T08:23:19Z</dc:date>
-  </entry>
-  <dc:date>2021-06-09T19:11:34+00:00</dc:date>
+  <dc:date>2021-06-09T19:13:28+00:00</dc:date>
 </feed>
