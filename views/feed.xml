@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-10T14:42:28+00:00</updated>
+  <updated>2021-06-10T14:55:07+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.11</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.11"/>
@@ -22,7 +22,31 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.10...v0.3.11</summary>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.3</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.3"/>
-    <summary></summary>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/Specter-Setup-v1.4.3.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/SpecterDesktop-v1.4.3.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/specter_desktop-v1.4.3-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/specterd-v1.4.3-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/specterd-v1.4.3-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/specterd-v1.4.3-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
+You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
+It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
+Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`
+
+# Release notes
+- Bugfix: add some liquid fixes #1194 (Stepan Snigirev)
+- Feature: Fully unblind liquid transactions sent by Specter #1220 (Stepan Snigirev)</summary>
     <title>cryptoadvance/specter-desktop: v1.4.3</title>
     <updated>2021-06-10T12:52:17Z</updated>
     <dc:date>2021-06-10T12:52:17Z</dc:date>
@@ -6153,5 +6177,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</summary>
     <updated>2021-02-11T20:26:03Z</updated>
     <dc:date>2021-02-11T20:26:03Z</dc:date>
   </entry>
-  <dc:date>2021-06-10T14:42:28+00:00</dc:date>
+  <dc:date>2021-06-10T14:55:07+00:00</dc:date>
 </feed>
