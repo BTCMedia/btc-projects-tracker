@@ -6,7 +6,19 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-10T14:33:16+00:00</updated>
+  <updated>2021-06-10T14:42:28+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.11</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.11"/>
+    <summary>Umbrel v0.3.11 is here with the latest versions of Specter Desktop, ThunderHub, Sphinx Relay, Ride The Lightning, and LNbits in the Umbrel App Store, hardware failure detection, low RAM alerts, and stability improvements.
+
+If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
+
+Diff: https://github.com/getumbrel/umbrel/compare/v0.3.10...v0.3.11</summary>
+    <title>getumbrel/umbrel: v0.3.11</title>
+    <updated>2021-06-10T14:33:56Z</updated>
+    <dc:date>2021-06-10T14:33:56Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.3</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.3"/>
@@ -6141,17 +6153,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</summary>
     <updated>2021-02-11T20:26:03Z</updated>
     <dc:date>2021-02-11T20:26:03Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/mempool/mempool/releases/tag/v2.1.1</id>
-    <link href="https://github.com/mempool/mempool/releases/tag/v2.1.1"/>
-    <summary>This update adds support for Umbrel, together with a few minor bugfixes:
-
-* Improve Docker workflow for Umbrel (#326) by @bguillaumat
-* BSQ token market cap calculation fix (#332) by @devinbileck
-* Lightning HTLC identification label fix (#320) by @fiatjaf</summary>
-    <title>mempool/mempool: v2.1.1</title>
-    <updated>2021-02-10T14:28:06Z</updated>
-    <dc:date>2021-02-10T14:28:06Z</dc:date>
-  </entry>
-  <dc:date>2021-06-10T14:33:16+00:00</dc:date>
+  <dc:date>2021-06-10T14:42:28+00:00</dc:date>
 </feed>
