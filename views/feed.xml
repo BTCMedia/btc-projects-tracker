@@ -6,7 +6,19 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-11T15:34:07+00:00</updated>
+  <updated>2021-06-11T15:44:00+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.12</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.12"/>
+    <summary>Umbrel v0.3.12 fixes a bug that made Umbrel inaccessible over Tor.
+
+If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
+
+Diff: https://github.com/getumbrel/umbrel/compare/v0.3.11...v0.3.12</summary>
+    <title>getumbrel/umbrel: v0.3.12</title>
+    <updated>2021-06-11T15:35:06Z</updated>
+    <dc:date>2021-06-11T15:35:06Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.11</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.11"/>
@@ -6139,43 +6151,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</summary>
     <updated>2021-02-12T06:30:35Z</updated>
     <dc:date>2021-02-12T06:30:35Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.4</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.4"/>
-    <summary>**New**
-
-- Fee estimation based on mempool 
-- iOS 14.5 support
-- Electrum json import support
-- AEZEED mnemonics support (LND wallet)
-- Remove Location permission (Local trader)
-- Wallet update indicator
-- Vault manage keys - show alert if unsaved
-- Lower fee value if balance is not enough
-
-**Fixed**
-
-- &quot;Can't finalize input&quot;' error (Vaults)
-- Scroll on multi sig creation (Vaults)
-- Loading on creation (Vaults)
-- Import seed hangs forever (Vaults)
-- Scanning invalid QR code throws multiple alerts
-- Cached wallet address wouldn't change
-- 'Few seconds ago' -&gt; 'pending'
-- Legacy wallet can now derive UTXO from transactions if fetching listUnspent from network is not possible
-- Biometrics with PSBT
-- Better support of coldcard's 'p2sh-p2wsh'
-- Do not show notification settings if device does not support it
-
-**Download**
-
-[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.4/BlueWallet.6.0.5.dmg)
-
-[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.4/android-6.0.5.apk)
-</summary>
-    <title>BlueWallet/BlueWallet: v6.0.4</title>
-    <updated>2021-02-11T20:26:03Z</updated>
-    <dc:date>2021-02-11T20:26:03Z</dc:date>
-  </entry>
-  <dc:date>2021-06-11T15:34:07+00:00</dc:date>
+  <dc:date>2021-06-11T15:44:00+00:00</dc:date>
 </feed>
