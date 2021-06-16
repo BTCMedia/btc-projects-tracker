@@ -6,11 +6,11 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-16T20:44:14+00:00</updated>
+  <updated>2021-06-16T20:54:40+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.5</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.5"/>
-    <summary></summary>
+    <summary>more soon here!</summary>
     <title>cryptoadvance/specter-desktop: v1.4.5</title>
     <updated>2021-06-16T19:23:37Z</updated>
     <dc:date>2021-06-16T19:23:37Z</dc:date>
@@ -18,7 +18,7 @@
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.4</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.4"/>
-    <summary></summary>
+    <summary>Deprecated. Don't use this.</summary>
     <title>cryptoadvance/specter-desktop: v1.4.4</title>
     <updated>2021-06-16T14:40:50Z</updated>
     <dc:date>2021-06-16T14:40:50Z</dc:date>
@@ -6147,5 +6147,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.3...v0.3.4</summary>
     <updated>2021-02-15T16:38:17Z</updated>
     <dc:date>2021-02-15T16:38:17Z</dc:date>
   </entry>
-  <dc:date>2021-06-16T20:44:14+00:00</dc:date>
+  <dc:date>2021-06-16T20:54:40+00:00</dc:date>
 </feed>
