@@ -6,42 +6,11 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-16T21:05:03+00:00</updated>
+  <updated>2021-06-16T21:17:48+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.5</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.5"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/Specter-Setup-v1.4.5.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/SpecterDesktop-v1.4.5.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/specter_desktop-v1.4.5-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/specterd-v1.4.5-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/specterd-v1.4.5-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/specterd-v1.4.5-x86_64-linux-gnu.zip)
-
-## Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
-You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
-Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`
-
-# Release notes
-- Feature: Add Blockstream Jade support #1234 (benk10)
-- Feature: Add SeedSigner device #1225 (Stepan Snigirev)
-- Feature: Show Liquid icon on node manager #1224 (benk10)
-- Bugfix: `non_witness_utxo` hash mismatch problem #1235 (Stepan Snigirev)
-- Bugfix: RPC-password as pin for multiple nodes #1231 (Kim Neunert)
-- Bugfix: Missing prop setter bugfix #1228 (kdmukai)
-- Bugfix: &quot;NameError: name 'protocol' is not defined&quot; #1229 (DerM007)
-- Chore: Elements testing #1212 (Kim Neunert)
-</summary>
+    <summary></summary>
     <title>cryptoadvance/specter-desktop: v1.4.5</title>
     <updated>2021-06-16T19:23:37Z</updated>
     <dc:date>2021-06-16T19:23:37Z</dc:date>
@@ -6178,5 +6147,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.3...v0.3.4</summary>
     <updated>2021-02-15T16:38:17Z</updated>
     <dc:date>2021-02-15T16:38:17Z</dc:date>
   </entry>
-  <dc:date>2021-06-16T21:05:03+00:00</dc:date>
+  <dc:date>2021-06-16T21:17:48+00:00</dc:date>
 </feed>
