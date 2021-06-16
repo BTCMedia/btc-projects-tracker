@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-16T19:23:19+00:00</updated>
+  <updated>2021-06-16T19:31:30+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.5</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.5"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.4.5</title>
+    <updated>2021-06-16T19:23:37Z</updated>
+    <dc:date>2021-06-16T19:23:37Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.4</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.4"/>
@@ -6139,17 +6147,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.3...v0.3.4</summary>
     <updated>2021-02-15T16:38:17Z</updated>
     <dc:date>2021-02-15T16:38:17Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.3</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.3"/>
-    <summary>Umbrel v0.3.3 is here with 3 brand new apps in the Umbrel App Store — Samourai Server (Dojo + Whirlpool), Mempool, LNbits —  a totally redesigned wallet connector, Lightning Pool, Bitcoin Core v0.21.0, and more.
-
-If your update gets stuck for some reason, please message us on Telegram: https://t.me/getumbrel
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</summary>
-    <title>getumbrel/umbrel: v0.3.3</title>
-    <updated>2021-02-15T13:50:58Z</updated>
-    <dc:date>2021-02-15T13:50:58Z</dc:date>
-  </entry>
-  <dc:date>2021-06-16T19:23:19+00:00</dc:date>
+  <dc:date>2021-06-16T19:31:30+00:00</dc:date>
 </feed>
