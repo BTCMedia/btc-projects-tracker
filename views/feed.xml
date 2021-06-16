@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-16T14:31:00+00:00</updated>
+  <updated>2021-06-16T14:42:57+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.4</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.4"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.4.4</title>
+    <updated>2021-06-16T14:40:50Z</updated>
+    <dc:date>2021-06-16T14:40:50Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.12</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.12"/>
@@ -6143,13 +6151,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</summary>
     <updated>2021-02-15T13:50:58Z</updated>
     <dc:date>2021-02-15T13:50:58Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc3</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc3"/>
-    <summary></summary>
-    <title>lightningnetwork/lnd: v0.12.1-beta.rc3</title>
-    <updated>2021-02-12T06:30:35Z</updated>
-    <dc:date>2021-02-12T06:30:35Z</dc:date>
-  </entry>
-  <dc:date>2021-06-16T14:31:00+00:00</dc:date>
+  <dc:date>2021-06-16T14:42:57+00:00</dc:date>
 </feed>
