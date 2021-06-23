@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-23T03:32:44+00:00</updated>
+  <updated>2021-06-23T03:45:20+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.13</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.13"/>
@@ -5988,5 +5988,5 @@ Changes:
     <updated>2021-02-18T00:33:15Z</updated>
     <dc:date>2021-02-18T00:33:15Z</dc:date>
   </entry>
-  <dc:date>2021-06-23T03:32:44+00:00</dc:date>
+  <dc:date>2021-06-23T03:45:20+00:00</dc:date>
 </feed>
