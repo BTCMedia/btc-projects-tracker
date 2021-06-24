@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-24T14:22:28+00:00</updated>
+  <updated>2021-06-24T14:32:31+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.13</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.13"/>
@@ -61,7 +61,7 @@ $ curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
 Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.13.0-beta.sig` and `manifest-v0.13.0-beta.txt` are in the current directory) with:
 
 ```shell
-$ gpg --verify manifest-roasbeef-v0.13.0-beta.sig manifest-v0.13.0-beta..txt
+$ gpg --verify manifest-roasbeef-v0.13.0-beta.sig manifest-v0.13.0-beta.txt
 ```
 
 You should see the following if the verification was successful:
@@ -5988,5 +5988,5 @@ Changes:
     <updated>2021-02-18T00:33:15Z</updated>
     <dc:date>2021-02-18T00:33:15Z</dc:date>
   </entry>
-  <dc:date>2021-06-24T14:22:28+00:00</dc:date>
+  <dc:date>2021-06-24T14:32:31+00:00</dc:date>
 </feed>
