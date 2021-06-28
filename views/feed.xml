@@ -6,10 +6,10 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-28T18:27:33+00:00</updated>
+  <updated>2021-06-28T18:36:28+00:00</updated>
   <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.0-pre</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.0-pre"/>
+    <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.0</id>
+    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.0"/>
     <summary>## Release notes
 This release prepares nodes for the upcoming Tor Onion Service upgrade to v3, makes several UI refinements, and fixes bugs across the board.
 
@@ -123,7 +123,7 @@ A special thanks to our first time contributors:
   - [Wrong information popup is shown when you click on own offer in offer book](https://github.com/bisq-network/bisq/pull/5564)
 
 As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
-    <title>bisq-network/bisq: v1.7.0-pre</title>
+    <title>bisq-network/bisq: v1.7.0</title>
     <updated>2021-06-28T18:23:01Z</updated>
     <dc:date>2021-06-28T18:23:01Z</dc:date>
   </entry>
@@ -6102,5 +6102,5 @@ Changes:
     <updated>2021-02-18T07:56:16Z</updated>
     <dc:date>2021-02-18T07:56:16Z</dc:date>
   </entry>
-  <dc:date>2021-06-28T18:27:33+00:00</dc:date>
+  <dc:date>2021-06-28T18:36:28+00:00</dc:date>
 </feed>
