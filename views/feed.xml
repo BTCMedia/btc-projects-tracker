@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-28T18:44:27+00:00</updated>
+  <updated>2021-06-28T18:55:38+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.0</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.0"/>
@@ -6102,5 +6102,5 @@ Changes:
     <updated>2021-02-18T07:56:16Z</updated>
     <dc:date>2021-02-18T07:56:16Z</dc:date>
   </entry>
-  <dc:date>2021-06-28T18:44:27+00:00</dc:date>
+  <dc:date>2021-06-28T18:55:38+00:00</dc:date>
 </feed>
