@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-29T00:54:23+00:00</updated>
+  <updated>2021-06-29T01:11:36+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.6</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.6"/>
@@ -6138,5 +6138,5 @@ Changes:
     <updated>2021-02-18T11:47:39Z</updated>
     <dc:date>2021-02-18T11:47:39Z</dc:date>
   </entry>
-  <dc:date>2021-06-29T00:54:23+00:00</dc:date>
+  <dc:date>2021-06-29T01:11:36+00:00</dc:date>
 </feed>
