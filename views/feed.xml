@@ -6,7 +6,19 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-06-29T12:43:31+00:00</updated>
+  <updated>2021-06-29T12:54:53+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.14</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.14"/>
+    <summary>This update resolves a stability issue that can cause Umbrel to randomly disconnect from the network and become inaccessible.
+
+If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
+
+Diff: https://github.com/getumbrel/umbrel/compare/v0.3.13...v0.3.14</summary>
+    <title>getumbrel/umbrel: v0.3.14</title>
+    <updated>2021-06-29T12:45:00Z</updated>
+    <dc:date>2021-06-29T12:45:00Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.6</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.6"/>
@@ -6118,25 +6130,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.4...v0.3.5</summary>
     <updated>2021-02-19T20:02:23Z</updated>
     <dc:date>2021-02-19T20:02:23Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/mempool/mempool/releases/tag/v2.1.2</id>
-    <link href="https://github.com/mempool/mempool/releases/tag/v2.1.2"/>
-    <summary>This is a patch release that optimizes memory usage for embedded devices like Raspberry Pi
-
-Notes:
-* The disk cache now has its own folder, so `mv cache*.json ./cache/` before restart to migrate
-
-Changes:
-* Optimize memory usage when writing disk cache (#342)
-* Reduce backend maximum heap size setting to 2G (#345)
-* Enable mempool clear protection on all backends (#335)
-* Make mempool clear protection timeout configurable (#343)
-* Minor tweaks to About page text, links (#350)
-* Logo design update (#349) by @pedromvpg
-* Fix style on block hover (#347) by @Czino and @Eric-Machinas</summary>
-    <title>mempool/mempool: v2.1.2</title>
-    <updated>2021-02-18T11:47:39Z</updated>
-    <dc:date>2021-02-18T11:47:39Z</dc:date>
-  </entry>
-  <dc:date>2021-06-29T12:43:31+00:00</dc:date>
+  <dc:date>2021-06-29T12:54:53+00:00</dc:date>
 </feed>
