@@ -6,7 +6,34 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-03T21:52:42+00:00</updated>
+  <updated>2021-07-03T22:04:38+00:00</updated>
+  <entry>
+    <id>https://github.com/mempool/mempool/releases/tag/v2.2.0</id>
+    <link href="https://github.com/mempool/mempool/releases/tag/v2.2.0"/>
+    <summary>This release contains many fixes and improvements from the past few months.
+All users are encouranged to upgrade.
+
+Notes:
+
+* If you maintain your own nginx.conf, update it for the new i18n locales
+
+Changelog:
+
+* CPFP effective rate calculation for all CPFP transactions (#395)
+* Difficulty adjustment calculation fixes for main dashboard (#475)
+* Bisq dashboard with market prices, graphs, other improvements (#381)
+* UX improvements for more responsive design on mobile devices (#458)
+* API docs page improvements with new mempool.js API library (#544)
+* About page now lists project contributors from GitHub API (#382)
+* FOSS license updated to dual-license of GNU AGPLv3 / GPLv3 (#410)
+
+...and much more!
+
+The complete changelog is available at: https://github.com/mempool/mempool/compare/v2.1.2...v2.2.0</summary>
+    <title>mempool/mempool: v2.2.0</title>
+    <updated>2021-07-03T21:53:58Z</updated>
+    <dc:date>2021-07-03T21:53:58Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.14</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.14"/>
@@ -6128,13 +6155,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.4...v0.3.5</summary>
     <updated>2021-02-20T10:15:13Z</updated>
     <dc:date>2021-02-20T10:15:13Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc6</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta.rc6"/>
-    <summary></summary>
-    <title>lightningnetwork/lnd: v0.12.1-beta.rc6</title>
-    <updated>2021-02-19T20:02:23Z</updated>
-    <dc:date>2021-02-19T20:02:23Z</dc:date>
-  </entry>
-  <dc:date>2021-07-03T21:52:42+00:00</dc:date>
+  <dc:date>2021-07-03T22:04:38+00:00</dc:date>
 </feed>
