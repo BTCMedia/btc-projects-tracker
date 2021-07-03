@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-03T08:53:51+00:00</updated>
+  <updated>2021-07-03T09:11:52+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.14</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.14"/>
@@ -22,13 +22,7 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.13...v0.3.14</summary>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.6</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.6"/>
-    <summary># WARNING
-THIS RELEASE CONTAINED A VIRUS IN THE `Specter-Setup-v1.4.6.exe`. This file has been removed so far but we defintely had downloads!
-PLEASE DON'T USE THIS FILE AND RMOVE IT FROM YOUR MACHINE.
-Post Mortem will follow.
-
-
-# Binaries
+    <summary># Binaries
 
 There are two types of binaries:
 
@@ -64,7 +58,13 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
 - Chore: Wallet new refactoring #1244 (Kim Neunert)
 - Chore: del elm comp from gitlab + ensure master green #1250 (Kim Neunert)
 - Chore: refactor psbt-creation #1249 (Kim Neunert)
-- Chore: Refactor wallet creation to Wallet.create method #1242 (Stepan Snigirev)</summary>
+- Chore: Refactor wallet creation to Wallet.create method #1242 (Stepan Snigirev)
+
+# Misc
+
+at 01.July there way a virus-alarm on the `Specter-Setup-v1.4.6.exe`. This alarm turned out to be a false positive. It's safe to use that file.
+A Post-Mortem will be released soon.
+Post Mortem will follow.</summary>
     <title>cryptoadvance/specter-desktop: v1.4.6</title>
     <updated>2021-06-28T19:18:16Z</updated>
     <dc:date>2021-06-28T19:18:16Z</dc:date>
@@ -6136,5 +6136,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.4...v0.3.5</summary>
     <updated>2021-02-19T20:02:23Z</updated>
     <dc:date>2021-02-19T20:02:23Z</dc:date>
   </entry>
-  <dc:date>2021-07-03T08:53:51+00:00</dc:date>
+  <dc:date>2021-07-03T09:11:52+00:00</dc:date>
 </feed>
