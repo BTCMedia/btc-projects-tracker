@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-05T21:44:15+00:00</updated>
+  <updated>2021-07-05T21:53:14+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.1-beta.rc1</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.1-beta.rc1"/>
@@ -6245,5 +6245,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-02-20T15:04:18Z</updated>
     <dc:date>2021-02-20T15:04:18Z</dc:date>
   </entry>
-  <dc:date>2021-07-05T21:44:15+00:00</dc:date>
+  <dc:date>2021-07-05T21:53:14+00:00</dc:date>
 </feed>
