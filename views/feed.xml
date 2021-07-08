@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-08T20:43:44+00:00</updated>
+  <updated>2021-07-08T20:55:45+00:00</updated>
   <entry>
     <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0</id>
     <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0"/>
@@ -6371,5 +6371,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.5...v0.3.6</summary>
     <updated>2021-02-27T16:44:00Z</updated>
     <dc:date>2021-02-27T16:44:00Z</dc:date>
   </entry>
-  <dc:date>2021-07-08T20:43:44+00:00</dc:date>
+  <dc:date>2021-07-08T20:55:45+00:00</dc:date>
 </feed>
