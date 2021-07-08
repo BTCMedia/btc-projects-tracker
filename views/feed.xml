@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-08T20:55:45+00:00</updated>
+  <updated>2021-07-08T21:06:17+00:00</updated>
   <entry>
     <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0</id>
     <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0"/>
@@ -26,7 +26,7 @@ A non-comprehensive list of consensus changes included in this version is:
 These are the most relevant non-consensus improvements included in this version:
 
 - Improvements and compatibility fixes at the JSON-RPC interface (#1481, #1482, #1483, #1451, #1352, #1299, #1339, #1284)
-- New “rewind” feature added to CLI tool (#1443)
+- New *rewind* feature added to CLI tool (#1443)
 - Block propagation enhancements (#1326)
 - Node performance improvements (#1327)
 - Use native library for recovery signature (#1258)
@@ -6371,5 +6371,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.5...v0.3.6</summary>
     <updated>2021-02-27T16:44:00Z</updated>
     <dc:date>2021-02-27T16:44:00Z</dc:date>
   </entry>
-  <dc:date>2021-07-08T20:55:45+00:00</dc:date>
+  <dc:date>2021-07-08T21:06:17+00:00</dc:date>
 </feed>
