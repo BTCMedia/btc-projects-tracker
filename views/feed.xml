@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-08T15:14:48+00:00</updated>
+  <updated>2021-07-08T15:25:04+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.7.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.7.0"/>
@@ -6733,5 +6733,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-02-21T13:31:31Z</updated>
     <dc:date>2021-02-21T13:31:31Z</dc:date>
   </entry>
-  <dc:date>2021-07-08T15:14:48+00:00</dc:date>
+  <dc:date>2021-07-08T15:25:04+00:00</dc:date>
 </feed>
