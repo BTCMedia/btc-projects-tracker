@@ -38,6 +38,112 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bitcoin-s/bitcoin-s">bitcoin-s/bitcoin-s</a>: <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.99">1.99</a>
+						    </h2>
+							<p class="card-text">Published: 2021-07-09 17:44:47 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"></p>
+					    <a href="https://github.com/bitcoin-s/bitcoin-s" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.99" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/rust-bitcoin/rust-lightning">rust-bitcoin/rust-lightning</a>: <a href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.99">v0.0.99</a>
+						    </h2>
+							<p class="card-text">Published: 2021-07-09 17:42:18 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>API Updates</h2>
+
+<ul>
+<li><code>lightning_block_sync::poll::Validate</code> is now public, allowing you to
+implement the <code>lightning_block_sync::poll::Poll</code> trait without
+<code>lightning_block_sync::poll::ChainPoller</code> (#956).</li>
+<li><code>lightning::ln::peer_handler::PeerManager</code> no longer requires that no calls
+are made to referencing the same <code>SocketDescriptor</code> after
+<code>disconnect_socket</code> returns. This makes the API significantly less
+deadlock-prone and simplifies <code>SocketDescriptor</code> implementations
+significantly. The relevant changes have been made to <code>lightning_net_tokio</code>
+and <code>PeerManager</code> documentation has been substantially rewritten (#957).</li>
+<li><code>lightning::util::message_signing</code>&#39;s <code>sign</code> and <code>verify</code> methods now take
+secret and public keys by reference instead of value (#974).</li>
+<li>Substantially more information is now exposed about channels in
+<code>ChannelDetails</code>. See documentation for more info (#984 and #988).</li>
+<li>The latest best block seen is now exposed in
+<code>ChannelManager::current_best_block</code> and
+<code>ChannelMonitor::current_best_block</code> (#984).</li>
+<li>Feerates charged when forwarding payments over channels is now set in
+<code>ChannelConfig::fee_base_msat</code> when the channel is opened. For existing
+channels, the value is set to the value provided in
+<code>ChannelManagerReadArgs::default_config::channel_options</code> the first time the
+<code>ChannelManager</code> is loaded in 0.0.99 (#975).</li>
+<li>We now reject HTLCs which are received to be forwarded over private channels
+unless <code>UserConfig::accept_forwards_to_priv_channels</code> is set. Note that
+<code>UserConfig</code> is never serialized and must be provided via
+<code>ChannelManagerReadArgs::default_config</code> at each start (#975).</li>
+</ul>
+
+<h2>Bug Fixes</h2>
+
+<ul>
+<li>We now forward gossip messages to peers instead of only relaying
+locally-generated gossip or sending gossip messages during initial sync
+(#948).</li>
+<li>Correctly send <code>channel_update</code> messages to direct peers on private channels
+(#949). Without this, a private node connected to an LDK node over a private
+channel cannot receive funds as it does not know which fees the LDK node
+will charge.</li>
+<li><code>lightning::ln::channelmanager::ChannelManager</code> no longer expects to be
+persisted spuriously after we receive a <code>channel_update</code> message about any
+channel in the routing gossip (#972).</li>
+<li>Asynchronous <code>ChannelMonitor</code> updates (using the
+<code>ChannelMonitorUpdateErr::TemporaryFailure</code> return variant) no longer cause
+spurious HTLC forwarding failures (#954).</li>
+<li>Transaction provided via <code>ChannelMonitor::transactions_confirmed</code>
+after <code>ChannelMonitor::best_block_updated</code> was called for a much later
+block now trigger all relevant actions as of the later block. Previously
+some transaction broadcasts or other responses required an additional
+block be provided via <code>ChannelMonitor::best_block_updated</code> (#970).</li>
+<li>We no longer panic in rare cases when an invoice contained last-hop route
+hints which were unusable (#958).</li>
+</ul>
+
+<h2>Node Compatibility</h2>
+
+<ul>
+<li>We now accept spurious <code>funding_locked</code> messages sent prior to
+<code>channel_reestablish</code> messages after reconnect. This is a
+<a href="https://github.com/lightningnetwork/lnd/issues/4006">known, long-standing bug in lnd</a>
+(#966).</li>
+<li>We now set the <code>first_blocknum</code> and <code>number_of_blocks</code> fields in
+<code>reply_channel_range</code> messages to values which c-lightning versions prior to
+0.10 accepted. This avoids spurious force-closes from such nodes (#961).</li>
+</ul>
+
+<h2>Serialization Compatibility</h2>
+
+<ul>
+<li>Due to a bug discovered in 0.0.98, if a <code>ChannelManager</code> is serialized on
+version 0.0.98 while an <code>Event::PaymentSent</code> is pending processing, the
+<code>ChannelManager</code> will fail to deserialize both on version 0.0.98 and later
+versions. If you have such a <code>ChannelManager</code> available, a simple patch will
+allow it to deserialize. Please file an issue if you need assistance (#973).</li>
+</ul>
+</p>
+					    <a href="https://github.com/rust-bitcoin/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.99" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.1-beta.rc2">v0.13.1-beta.rc2</a>
 						    </h2>
 							<p class="card-text">Published: 2021-07-09 01:09:10 UTC</p>
@@ -7602,229 +7708,6 @@ mvn clean install -DskipTests
 </p>
 					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.8">v1.5.8</a>
-						    </h2>
-							<p class="card-text">Published: 2021-03-01 14:26:42 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
-
-<p>This is a follow-up release that <a href="https://github.com/bisq-network/bisq/pull/5235">obtains the minimum withdrawal fee from mempool.space</a> to avoid transactions being rejected by the bitcoin network for having too low a fee.</p>
-
-<p>Here are the release notes from v1.5.7:</p>
-
-<h2>Release notes</h2>
-
-<p>This release improves DAO charts to make it easier to drill into the DAO economics, it ships improvements for Amazon eGift Cards, adds new SEPA countries and the possibility to try out pre-release versions without the need of manual downloads and verification (see settings)...and lots of bug fixes and improvements across the board.</p>
-
-<h3>DAO</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5156">Improve facts and figures</a></li>
-</ul>
-
-<h3>UI</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5198">Add colored decimal places with zeros for dark mode</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5122">Fix stale trade statistics list view when new entries arrive</a></li>
-</ul>
-
-<h3>Trading</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5117">Specify Amazon eGift Card country</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5123">Add four SEPA payment account countries: AD, SM, VA, JE</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5114">&quot;Cash by Mail&quot; instructions improvements</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5191">Fix startup error: &quot;You must have bootstrapped before adding data to the P2P network&quot;</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5175">Fix NullPointerException in trader chat when trade contract is not set</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5172">Fix NullPointerException at offer entry when trading account is switched</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5196">Prevent erroneous logging of &#39;SignaturePubKey in message does not match&#39;</a></li>
-</ul>
-
-<h3>Wallet</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5126">Check wallet is available and/or unlocked when creating an offer</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5224">Increase min withdrawal tx fee to 15 sats/vB</a></li>
-</ul>
-
-<h3>Reliability</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5108">New Feature: Pre-release notifications</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5205">Fix multiple request preliminary data calls</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5219">Fix initialization ordering issue</a></li>
-</ul>
-
-<h3>Privacy</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5245">Update to Tor version v0.4.5.6 </a></li>
-</ul>
-
-<h3>Mediation/Arbitration</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5178">Refund agent payout to use withdrawal fee rate from settings</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5099">Manual payout tool: prevent absurdly high fee payout</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5167">Fix Mediator&#39;s name</a></li>
-</ul>
-
-<h3>Performance</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5120">Speed up deposit and transactions view loads</a></li>
-</ul>
-
-<h3>Network</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5137">Replace deprecated Bisq explorer settings</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5136">Show popup if no filter is delivered</a></li>
-</ul>
-
-<h3>API</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5202">Add api method &#39;stop&#39;</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5159">Api v1 Beta Test Guide</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5084">Add core api method help docs</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5129">Add apitest rolling offer simulation script</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5103">Define gRPC api call rate constraints</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5157">Fix method help typos</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5155">Fix find pid on OSX</a></li>
-</ul>
-
-<h3>Development</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5134">Remove unused BalanceWithConfirmationTextField</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5083">Avoid reverse DNS lookup in BtcNodeConverterTest</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5111">Fix log message when opening browser link</a></li>
-</ul>
-
-<h3>Assets</h3>
-
-<p>No new assets.</p>
-
-<h2>Verification</h2>
-
-<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
-Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
-
-<p>Import the key:
-<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
-
-<p>How to verify signatures?
-<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
-Replace BINARY with the file you downloaded (e.g. Bisq-1.5.8.dmg)</p>
-
-<p>Verify jar file inside binary:
-You can verify on OSX the jar file with:
-<code>shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.8.jar</code>
-The output need to match the value from the Bisq-1.5.8.jar.txt file.</p>
-
-<h2>Known issues with installation</h2>
-
-<h3>macOS Catalina:</h3>
-
-<blockquote>
-<p>Bisq can&#39;t be opened because Apple cannot check it for malicious software</p>
-</blockquote>
-
-<p>This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).</p>
-
-<p>Workaround: Right click on the installed Bisq app &gt; Click <code>Open</code> (warning popup shown again, but with new button available) &gt; Click <code>Open</code></p>
-
-<blockquote>
-<p>Bisq would like to receive keystrokes from any application.</p>
-</blockquote>
-
-<p>Discussed in issue <a href="https://github.com/bisq-network/bisq/issues/3373">https://github.com/bisq-network/bisq/issues/3373</a>, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.</p>
-
-<h3>Windows:</h3>
-
-<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
-
-<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
-
-<p>[1] Application directory (contains application installation files):
-C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
-
-<p>[2] Data directory (contains all Bisq data including wallet):
-C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
-
-<h3>Linux:</h3>
-
-<p>Hint for Debian users:
-If you have problems starting Bisq on Debian use: <code>/opt/Bisq/Bisq</code></p>
-
-<p>If your Linux distro does not support .deb files please follow this instruction:
-<code>
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.5.8.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-</code>
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
-
-<h2>Credits</h2>
-
-<p>Thanks to everyone who directly contributed to this release:</p>
-
-<ul>
-<li>@chimp1984</li>
-<li>@ripcurlx </li>
-<li>@ghubstan</li>
-<li>@huey735 </li>
-<li>@jakub_cz</li>
-<li>@jmacxx </li>
-<li>@sqrrm </li>
-<li>@stejbac</li>
-<li>@bisqubutor</li>
-</ul>
-
-<p>A special thanks to our first time contributor:</p>
-
-<ul>
-<li>@bisqubutor: <a href="https://github.com/bisq-network/bisq/pull/5198">Add colored decimal places with zeros for dark mode</a></li>
-</ul>
-
-<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
-</p>
-					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.7">v0.3.7</a>
-						    </h2>
-							<p class="card-text">Published: 2021-02-28 15:02:41 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This update includes minor bug fixes for improved stability and security of your Umbrel.</p>
-
-<p>If you face any difficulties while updating, please message us on Telegram: <a href="https://t.me/getumbrel">https://t.me/getumbrel</a></p>
-
-<p>Diff: <a href="https://github.com/getumbrel/umbrel/compare/v0.3.6...v0.3.7">https://github.com/getumbrel/umbrel/compare/v0.3.6...v0.3.7</a></p>
-</p>
-					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
