@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-09T06:05:56+00:00</updated>
+  <updated>2021-07-09T06:16:36+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.1-beta.rc2</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.1-beta.rc2"/>
@@ -6462,5 +6462,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.6...v0.3.7</summary>
     <updated>2021-02-28T15:02:41Z</updated>
     <dc:date>2021-02-28T15:02:41Z</dc:date>
   </entry>
-  <dc:date>2021-07-09T06:05:56+00:00</dc:date>
+  <dc:date>2021-07-09T06:16:36+00:00</dc:date>
 </feed>
