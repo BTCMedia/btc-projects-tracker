@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-12T12:41:42+00:00</updated>
+  <updated>2021-07-12T12:53:16+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.0-pre4</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.0-pre4"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.5.0-pre4</title>
+    <updated>2021-07-12T12:47:35Z</updated>
+    <dc:date>2021-07-12T12:47:35Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.9</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.9"/>
@@ -6341,50 +6349,5 @@ Thanks to our new contributors, @tompro and @ariskk!</summary>
     <updated>2021-03-03T12:33:57Z</updated>
     <dc:date>2021-03-03T12:33:57Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.6</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.6"/>
-    <summary>**New**
-
-- Offline Signing and Cold Storage
-
-Allows a BlueWallet app on any mobile phone to sign transactions offline. Using PSBTs and Airgapped Animated QR codes to transmit information on the dark.
-
-- Long press on Transaction Row to get shortcuts
-- Tap and hold to Share QRCode image
-- QR code scanner to wallet/broadcast screen
-- Apple Watch Price Complication
-- Copying Block Explorer Link
-- If unable to connect to server, show alert
-
-**Fixed**
-
-- Wallet delete would cause crash
-- Browser crash when accessing wallet
-- Widgets were not showing on drawer
-- Screen titles language
-- QRCode save alert description
-- QRCode size on large devices
-- Transactions/details screen graceful error handling
-- Electrum protocol graceful error handling
-- Better bitcoinscript error handling
-- Fee selection in darkmode
-
-**Languages updates**
-
-- Arabic, Russian, Greek, Polish, Japanese, Portuguese, Portuguese Brazilian, Swedish, Thai, Finnish, Persian, Dutch, German, French and Chinese.
-
-A special shout out to @bitkarrot and @et_sam from the Hong Kong Bitcoin Association on the Chinese translation work.
-
-**Download**
-
-[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.6/BlueWallet.6.0.6.dmg)
-
-[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.6/BlueWallet-v6.0.6.apk)
-</summary>
-    <title>BlueWallet/BlueWallet: v6.0.6</title>
-    <updated>2021-03-02T14:09:23Z</updated>
-    <dc:date>2021-03-02T14:09:23Z</dc:date>
-  </entry>
-  <dc:date>2021-07-12T12:41:42+00:00</dc:date>
+  <dc:date>2021-07-12T12:53:16+00:00</dc:date>
 </feed>
