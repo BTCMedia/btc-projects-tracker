@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-12T18:34:27+00:00</updated>
+  <updated>2021-07-12T18:44:34+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.1</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.1"/>
@@ -339,7 +339,9 @@ https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-n
   <entry>
     <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0</id>
     <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0"/>
-    <summary>**IMPORTANT:** Since consensus rules have changed, this version is not compatible with previous versions. If you've been running previous versions of RSK client node, we encourage you to update to this new version. The **Mainnet** network upgrade will happen at **block number 3,589,500**. The **Testnet** network upgrade will happen at **block number 2,027,200**.
+    <summary>**PLEASE READ THIS BEFORE DOWNLOADING:** Final approval from the RSK community is pending to make this release final. Changes to block number activation may still happen. We encourage users to use this release, but only for testing purposes.
+
+**IMPORTANT:** Since consensus rules have changed, this version is not compatible with previous versions. If you've been running previous versions of RSK client node, we encourage you to update to this new version. The **Mainnet** network upgrade will happen at **block number 3,589,500 (tentative)**. The **Testnet** network upgrade will happen at **block number 2,027,200 (tentative)**.
 
 A non-comprehensive list of consensus changes included in this version is:
 
@@ -6306,5 +6308,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-03T12:38:54Z</updated>
     <dc:date>2021-03-03T12:38:54Z</dc:date>
   </entry>
-  <dc:date>2021-07-12T18:34:27+00:00</dc:date>
+  <dc:date>2021-07-12T18:44:34+00:00</dc:date>
 </feed>
