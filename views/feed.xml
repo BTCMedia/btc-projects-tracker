@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-12T18:17:09+00:00</updated>
+  <updated>2021-07-12T18:26:35+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.0-pre4</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.0-pre4"/>
@@ -6337,5 +6337,5 @@ Thanks to our new contributors, @tompro and @ariskk!</summary>
     <updated>2021-03-03T12:33:57Z</updated>
     <dc:date>2021-03-03T12:33:57Z</dc:date>
   </entry>
-  <dc:date>2021-07-12T18:17:09+00:00</dc:date>
+  <dc:date>2021-07-12T18:26:35+00:00</dc:date>
 </feed>
