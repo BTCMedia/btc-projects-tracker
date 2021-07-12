@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-12T14:43:31+00:00</updated>
+  <updated>2021-07-12T14:53:14+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.0-pre4</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.0-pre4"/>
@@ -279,18 +279,6 @@ If you want to run the standalone server binary, after verifying gpg signatures,
 can `unzip bitcoin-s-server-1.7.0.zip` and then run it with `./bin/bitcoin-s-server` to start the node. You will need to
 configure the node properly first, you can find example
 configurations [here](https://bitcoin-s.org/docs/config/configuration#example-configuration-file).
-
-You can then unzip the `bitcoin-s-cli-1.7.0.zip` folder and start using the `bitcoin-s-cli` like this:
-
-```bashrc
-./bin/bitcoin-s-cli --help
-Usage: bitcoin-s-cli [options] [&lt;cmd&gt;]
-
-  -n, --network &lt;value&gt;    Select the active network.
-  --debug                  Print debugging information
-  --rpcport &lt;value&gt;        The port to send our rpc request to on the server
-  -h, --help               Display this help message and exit
-```
 
 For more information on what commands `bitcoin-s-cli` supports check the documentation, here is where to
 start: https://bitcoin-s.org/docs/next/applications/server#server-endpoints
@@ -6349,5 +6337,5 @@ Thanks to our new contributors, @tompro and @ariskk!</summary>
     <updated>2021-03-03T12:33:57Z</updated>
     <dc:date>2021-03-03T12:33:57Z</dc:date>
   </entry>
-  <dc:date>2021-07-12T14:43:31+00:00</dc:date>
+  <dc:date>2021-07-12T14:53:14+00:00</dc:date>
 </feed>
