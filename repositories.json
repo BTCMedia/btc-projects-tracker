@@ -42,5 +42,6 @@
 	"bwt-dev/bwt",
 	"lnbits/lnbits",
 	"btcsuite/btcd",
-	"btcsuite/btcwallet"
+	"btcsuite/btcwallet",
+	"BlueWallet/rn-ldk"
 ]
