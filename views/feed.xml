@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-15T23:11:32+00:00</updated>
+  <updated>2021-07-15T23:15:10+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.1</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.1"/>
@@ -6309,5 +6309,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-03T12:38:54Z</updated>
     <dc:date>2021-03-03T12:38:54Z</dc:date>
   </entry>
-  <dc:date>2021-07-15T23:11:32+00:00</dc:date>
+  <dc:date>2021-07-15T23:15:10+00:00</dc:date>
 </feed>
