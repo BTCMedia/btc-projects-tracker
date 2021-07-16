@@ -43,7 +43,66 @@
 							<p class="card-text">Published: 2021-07-16 16:51:44 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"></p>
+					    <p class="card-text"><h1>Binaries</h1>
+
+<p>There are two types of binaries:</p>
+
+<h2>Specter Desktop</h2>
+
+<p>It&#39;s a windowed GUI application with Specter server included.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.0/Specter-Setup-v1.5.0.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.0/SpecterDesktop-v1.5.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.0/specter_desktop-v1.5.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
+
+<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
+
+<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
+
+<h2>specterd</h2>
+
+<p>It&#39;s a command-line program that only runs Specter server.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.0/specterd-v1.5.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.0/specterd-v1.5.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.0/specterd-v1.5.0-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
+
+<h2>Signatures and hashes</h2>
+
+<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.0/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @ben-kaufman&#39;s GPG key.
+You can get the public key from here: <a href="https://benkaufman.info/ben-kaufman.asc">https://benkaufman.info/ben-kaufman.asc</a>.
+It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x5D27DE564153F2BD">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD">keys.openpgp.org</a>.
+Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD</code>, short id: <code>5d27de564153f2bd</code></p>
+
+<h1>Release notes</h1>
+
+<ul>
+<li>Feature: Translation (Babel) integration and initial translations #1247 (kdmukai, 2a3dex, rafa1239, Volker Herminghaus, glowleaf, DirkVdk, mutatrum, Kryptoministern, PommbearBTC, Gummybear, sreshta suresh, KST-Energy, alltheseas, dudezoo, Sergei Tikhomirov, Bitpaint)</li>
+<li>Feature: Api framework #1232 (Kim Neunert)</li>
+<li>Bugfix: Delete raw transactions when wallet is deleted #1300 (Stepan Snigirev)</li>
+<li>Bugfix: Fix error when importing transaction #1259 (benk10)</li>
+<li>Bugfix: Fix multi-hot-multisig signing #1294 (Stepan Snigirev)</li>
+<li>Bugfix: Fix saving a transaction as pending #1261 (benk10)</li>
+<li>Bugfix: Fix test connection crash when node can&#39;t be reached #1285 (benk10)</li>
+<li>Chore: Improve logging #1282 (Kim Neunert)</li>
+<li>DevOps: Removing blobs and adjusting automations #1299 (Kim Neunert)</li>
+<li>Translation: Update Portuguese translation #1277 (bitsenca)</li>
+<li>Translation: Update Portuguese translation #1279 (KoreaComK)</li>
+<li>Translation: Update Spanish translation (2a3dex)</li>
+<li>Translation: Update Hebrew translation #1288 (Sh0ham)</li>
+<li>Translation: Update messages.po #1290 (Pat4cryptoFR)</li>
+<li>Translation: Update messages.po #1293 (alltheseas)</li>
+<li>Translation: Update French translation #1297 (KST-Energy)</li>
+<li>Translation: Update French translation #1305 (KST-Energy)</li>
+<li>Translation: Update Chinese (Simplified) translation #1275 (kdmukai)</li>
+<li>Translation: Update to Chinese (Traditional) translations #1274 (kdmukai)</li>
+<li>Docs: Adds steps to install Rust compiler dependency #1303 (kdmukai)</li>
+<li>Docs: more details about missing funds #1254 (Kim Neunert)</li>
+<li>Docs: Updates Babel README to remove temporary <code>kdmukai</code> fork references #1269 (kdmukai)</li>
+<li>Liquid: Disable elements hot wallet for bitcoin wallets #1295 (Stepan Snigirev)</li>
+<li>Liquid: Add support for unconfidential addresses #1292 (Stepan Snigirev)</li>
+<li>Liquid: Fix addressinfo lookup and category assignments #1296 (Stepan Snigirev)</li>
+<li>Liquid: Fix change address derivation #1304 (Stepan Snigirev)</li>
+<li>Liquid: Fix fee estimation on liquid #1289 (Stepan Snigirev)</li>
+<li>Liquid: Fix nested segwit wallets on liquid #1298 (Stepan Snigirev)</li>
+<li>Liquid: Minor liquid fixes #1301 (Stepan Snigirev)</li>
+<li>Liquid: TxList and AddressList classes for Liquid #1280 (Stepan Snigirev)</li>
+</ul>
+</p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
