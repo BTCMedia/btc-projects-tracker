@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-16T16:04:21+00:00</updated>
+  <updated>2021-07-16T16:15:05+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.0-pre12</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.0-pre12"/>
@@ -6163,5 +6163,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-03-04T15:20:33Z</updated>
     <dc:date>2021-03-04T15:20:33Z</dc:date>
   </entry>
-  <dc:date>2021-07-16T16:04:21+00:00</dc:date>
+  <dc:date>2021-07-16T16:15:05+00:00</dc:date>
 </feed>
