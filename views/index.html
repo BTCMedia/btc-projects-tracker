@@ -529,53 +529,6 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/rsksmart/rskj">rsksmart/rskj</a>: <a href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0">IRIS-3.0.0</a>
-						    </h2>
-							<p class="card-text">Published: 2021-07-08 20:31:13 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><strong>PLEASE READ THIS BEFORE DOWNLOADING:</strong> Final approval from the RSK community is pending to make this release final. Changes to block activation numbers may still happen. We encourage users to use this release, but only for testing purposes.</p>
-
-<p><strong>IMPORTANT:</strong> Since consensus rules have changed, this version is not compatible with previous versions. If you&#39;ve been running previous versions of RSK client node, we encourage you to update to this new version. The <strong>Mainnet</strong> network upgrade will happen at <strong>block number 3,589,500 (tentative)</strong>. The <strong>Testnet</strong> network upgrade will happen at <strong>block number 2,027,200 (tentative)</strong>.</p>
-
-<p>A non-comprehensive list of consensus changes included in this version is:</p>
-
-<ul>
-<li>Add BLAKE2 compression function F precompile (RSKIP153)</li>
-<li>Enable 2WP peg-in transactions to any RSK address (RSKIP170).</li>
-<li>Flyover protocol consensus changes (RSKIP176).</li>
-<li>BTC-RSK timestamp linking protection (RSKIP179).</li>
-<li>Enable refunds for 2WP peg-out transactions with invalid amounts (RSKIP185)</li>
-<li>Time-locked emergency multisignature (RSKIP201).</li>
-<li>Reduced 2WP peg-in and peg-out minimum amounts (RSKIP219).</li>
-<li>Open Bitcoin blockchain oracle (RSKIP220).</li>
-</ul>
-
-<p>These are the most relevant non-consensus improvements included in this version:</p>
-
-<ul>
-<li>Improvements and compatibility fixes at the JSON-RPC interface (#1481, #1482, #1483, #1451, #1352, #1299, #1339, #1284)</li>
-<li>New <em>rewind</em> feature added to CLI tool (#1443)</li>
-<li>Block propagation enhancements (#1326)</li>
-<li>Node performance improvements (#1327)</li>
-<li>Use native library for recovery signature (#1258)</li>
-<li>Add Java11 support (#1252)</li>
-</ul>
-
-<p>For a detailed description of the consensus changes introduced in this network upgrade, please refer to <a href="https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP187.md">RSKIP 187 Network Upgrade: Iris</a>. You can also find a complete list of the changes introduced in <a href="https://github.com/rsksmart/rskj/milestone/24">Iris 3.0.0 milestone</a>.</p>
-
-<p>SHA256 (see <a href="https://developers.rsk.co/rsk/node/security-chain/">Reproducible Build</a> guide for further details):
-ab8d2e2df0c58535ff437f271c9bb0faf20daabf39c9a06a77b209a56c8a5432 rskj-core-3.0.0-IRIS-all.jar</p>
-</p>
-					    <a href="https://github.com/rsksmart/rskj" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
 						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.8">v6.1.8</a>
 						    </h2>
 							<p class="card-text">Published: 2021-07-08 18:49:00 UTC</p>
@@ -7440,6 +7393,47 @@ $ ./bwt-0.1.5-x86</em>64-linux/bwt --xpub <xpub> ...
 </p>
 					    <a href="https://github.com/bitcoin-core/HWI" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.0-rc.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.8">v1.4.8</a>
+						    </h2>
+							<p class="card-text">Published: 2021-03-04 15:20:44 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Main changes</h2>
+
+<p>The channel creation fee for pay-to-open has been increased: it&#39;s still 0.1% but there is now a 1000 sat minimum. The manual confirmation dialog and asynchronous pay-to-open logic have been removed. The FTUE page regarding the channel opening cost has been updated as well as the swap-in dialog so that we can display this new fee minimum value.</p>
+
+<h2>Complete list of changes</h2>
+
+<ul>
+<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.7...v1.4.8">https://github.com/ACINQ/phoenix/compare/v1.4.7...v1.4.8</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
+- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import padioupm.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
