@@ -6,13 +6,11 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-17T16:16:04+00:00</updated>
+  <updated>2021-07-17T16:23:00+00:00</updated>
   <entry>
     <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0</id>
     <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0"/>
-    <summary>RSK Iris Release v3.0.0 - Release Candidate
-
-**PLEASE READ THIS BEFORE DOWNLOADING:** Final approval from the RSK community is pending to make this release final. Changes to block activation numbers may still happen. We encourage users to use this release, but only for testing purposes.
+    <summary>**PLEASE READ THIS BEFORE DOWNLOADING:** Final approval from the RSK community is pending to make this release final. Changes to block activation numbers may still happen. We encourage users to use this release, but only for testing purposes.
 
 **IMPORTANT:** Since consensus rules have changed, this version is not compatible with previous versions. If you've been running previous versions of RSK client node, we encourage you to update to this new version. The **Mainnet** network upgrade will happen at **block number 3,614,800 (tentative)**. The **Testnet** network upgrade will happen at **block number 2,060,500 (tentative)**.
 
@@ -6157,5 +6155,5 @@ Build with .NET Core 3.1.407-win-x64.
     <updated>2021-03-05T19:53:45Z</updated>
     <dc:date>2021-03-05T19:53:45Z</dc:date>
   </entry>
-  <dc:date>2021-07-17T16:16:04+00:00</dc:date>
+  <dc:date>2021-07-17T16:23:00+00:00</dc:date>
 </feed>
