@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-17T23:54:08+00:00</updated>
+  <updated>2021-07-18T00:13:01+00:00</updated>
   <entry>
     <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0</id>
     <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0"/>
@@ -6155,5 +6155,5 @@ Build with .NET Core 3.1.407-win-x64.
     <updated>2021-03-05T19:53:45Z</updated>
     <dc:date>2021-03-05T19:53:45Z</dc:date>
   </entry>
-  <dc:date>2021-07-17T23:54:08+00:00</dc:date>
+  <dc:date>2021-07-18T00:13:01+00:00</dc:date>
 </feed>
