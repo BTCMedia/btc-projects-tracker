@@ -43,5 +43,10 @@
 	"lnbits/lnbits",
 	"btcsuite/btcd",
 	"btcsuite/btcwallet",
-	"BlueWallet/rn-ldk"
+	"BlueWallet/rn-ldk",
+	"sparrowwallet/sparrow",
+	"jamesob/coldcore",
+	"openoms/joininbox",
+	"coinos/coinos-ui",
+	"coinos/coinos-server"
 ]
