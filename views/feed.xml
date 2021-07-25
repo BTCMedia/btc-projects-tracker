@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-25T17:08:29+00:00</updated>
+  <updated>2021-07-25T17:15:18+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.10</id>
     <link href="https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.10"/>
@@ -7239,5 +7239,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-02-02T16:40:13Z</updated>
     <dc:date>2021-02-02T16:40:13Z</dc:date>
   </entry>
-  <dc:date>2021-07-25T17:08:29+00:00</dc:date>
+  <dc:date>2021-07-25T17:15:18+00:00</dc:date>
 </feed>
