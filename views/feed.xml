@@ -6,7 +6,109 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-26T10:54:50+00:00</updated>
+  <updated>2021-07-26T11:11:21+00:00</updated>
+  <entry>
+    <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.2</id>
+    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.2"/>
+    <summary>## Release notes
+This release reduces memory consumption and fixes a couple of minor issues that were introduced in the v1.7.0 hardfork.
+
+### Improvements
+- [Optimize DaoState snapshot behaviour](https://github.com/bisq-network/bisq/pull/5609)
+- [Enable lost payment accounts to be imported from backups](https://github.com/bisq-network/bisq/pull/5615)
+- [Add Capitual payment method](https://github.com/bisq-network/bisq/pull/5501)
+- [PriceNode: exclude currencies via config to enable markets that have no reliable price ticker](https://github.com/bisq-network/bisq/pull/5582)
+- [Add don't show again option to DAO resync popup](https://github.com/bisq-network/bisq/pull/5628)
+- [Add @pazza's mediator onion address and Keybase user name](https://github.com/bisq-network/bisq/pull/5598)
+- [Mediation grammar improvements](https://github.com/bisq-network/bisq/pull/5584)
+
+### Bug fixes
+- [Fix payment account deserialize issue (e.g. CHASE_QUICK_PAY)](https://github.com/bisq-network/bisq/pull/5614)
+- [Fix bug in chat message status display](https://github.com/bisq-network/bisq/pull/5599)
+- [Fix custom withdrawal fee bug](https://github.com/bisq-network/bisq/pull/5602)
+
+### Development &amp; Documentation
+- [Update relay-node address](https://github.com/bisq-network/bisq/pull/5593)
+
+### New Assets
+- RSK Smart Bitcoin (R-BTC)
+
+## Verification
+
+For a detailed description on how to verify your Bisq installer please have a look at our wiki: https://bisq.wiki/Downloading_and_installing#Verify_installer_file
+
+Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
+Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
+
+Import the key:
+`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
+
+How to verify signatures?
+`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
+Replace BINARY with the file you downloaded (e.g. Bisq-1.7.2.dmg)
+
+Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.7.2-all.jar
+The output need to match the value from the Bisq-1.7.2.jar.txt file.
+
+*NEW: There are three hashes within the Bisq-1.7.2.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.2 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.*
+
+## Known issues with installation 
+
+### Windows:
+
+There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
+
+If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
+
+[1] Application directory (contains application installation files):
+C:\Users\&lt;username&gt;\AppData\Local\Bisq
+
+[2] Data directory (contains all Bisq data including wallet):
+C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
+
+
+### Linux:
+
+Hint for Debian users:
+If you have problems starting Bisq on Debian use: `/opt/bisq/bin/Bisq`
+
+If your Linux distro does not support .deb files please follow this instruction:
+```
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.7.2.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+```
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
+
+## Credits
+
+Thanks to everyone who directly contributed to this release:
+
+- @chimp1984 
+- @devinbileck 
+- @harrigan
+- @huey735 
+- @jmacxx 
+- @m52go
+- @ripcurlx
+- @sqrrm 
+
+A special thanks to our first time contributors:
+- @harrigan  
+  - [List RSK Smart Bitcoin (R-BTC)](https://github.com/bisq-network/bisq/pull/5611)
+
+As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
+    <title>bisq-network/bisq: v1.7.2</title>
+    <updated>2021-07-23T12:22:29Z</updated>
+    <dc:date>2021-07-23T12:22:29Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.10</id>
     <link href="https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.10"/>
@@ -1061,7 +1163,9 @@ Please refer to [our documentation](https://github.com/LN-Zap/zap-desktop#docume
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.0</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.0"/>
-    <summary>## Release notes
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+## Release notes
 This release prepares nodes for the upcoming Tor Onion Service upgrade to v3, makes several UI refinements, and fixes bugs across the board.
 
 This version also fixes a privacy issue that will be disclosed in about 1 week (that's when this version will be set as the required minimum version for trading). Please update as soon as possible!
@@ -7205,39 +7309,5 @@ c2bf6dc4315 Update akka-actor, akka-slf4j, akka-stream, ... to 2.6.9 (#1993)
     <updated>2021-02-04T06:17:59Z</updated>
     <dc:date>2021-02-04T06:17:59Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.6</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6"/>
-    <summary>## Display min amount for pay-to-open
-
-The minimum amount that the wallet can receive is now displayed when the wallet does not have any channels. It is also displayed for swap-ins. This minimum amount prevents creating new channels for very small amounts.
-
-## Complete list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.5...v1.4.6
-- **core**: https://github.com/ACINQ/eclair/compare/v0.4.7-android-phoenix...v0.4.8-android-phoenix
-
-Thanks @bitcoinuser for updating the Portuguese-Brazilian translation.
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: https://acinq.co/pgp/padioupm.asc
-- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import padioupm.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: v1.4.6</title>
-    <updated>2021-02-02T16:40:13Z</updated>
-    <dc:date>2021-02-02T16:40:13Z</dc:date>
-  </entry>
-  <dc:date>2021-07-26T10:54:50+00:00</dc:date>
+  <dc:date>2021-07-26T11:11:21+00:00</dc:date>
 </feed>

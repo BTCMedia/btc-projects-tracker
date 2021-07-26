@@ -38,6 +38,130 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.7.2">v1.7.2</a>
+						    </h2>
+							<p class="card-text">Published: 2021-07-23 12:22:29 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Release notes</h2>
+
+<p>This release reduces memory consumption and fixes a couple of minor issues that were introduced in the v1.7.0 hardfork.</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5609">Optimize DaoState snapshot behaviour</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5615">Enable lost payment accounts to be imported from backups</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5501">Add Capitual payment method</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5582">PriceNode: exclude currencies via config to enable markets that have no reliable price ticker</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5628">Add don&#39;t show again option to DAO resync popup</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5598">Add @pazza&#39;s mediator onion address and Keybase user name</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5584">Mediation grammar improvements</a></li>
+</ul>
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5614">Fix payment account deserialize issue (e.g. CHASE<em>QUICK</em>PAY)</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5599">Fix bug in chat message status display</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5602">Fix custom withdrawal fee bug</a></li>
+</ul>
+
+<h3>Development &amp; Documentation</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5593">Update relay-node address</a></li>
+</ul>
+
+<h3>New Assets</h3>
+
+<ul>
+<li>RSK Smart Bitcoin (R-BTC)</li>
+</ul>
+
+<h2>Verification</h2>
+
+<p>For a detailed description on how to verify your Bisq installer please have a look at our wiki: <a href="https://bisq.wiki/Downloading_and_installing#Verify_installer_file">https://bisq.wiki/Downloading_and_installing#Verify_installer_file</a></p>
+
+<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
+Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
+
+<p>Import the key:
+<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
+
+<p>How to verify signatures?
+<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
+Replace BINARY with the file you downloaded (e.g. Bisq-1.7.2.dmg)</p>
+
+<p>Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.7.2-all.jar
+The output need to match the value from the Bisq-1.7.2.jar.txt file.</p>
+
+<p><em>NEW: There are three hashes within the Bisq-1.7.2.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.2 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.</em></p>
+
+<h2>Known issues with installation</h2>
+
+<h3>Windows:</h3>
+
+<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
+
+<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
+
+<p>[1] Application directory (contains application installation files):
+C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
+
+<p>[2] Data directory (contains all Bisq data including wallet):
+C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
+
+<h3>Linux:</h3>
+
+<p>Hint for Debian users:
+If you have problems starting Bisq on Debian use: <code>/opt/bisq/bin/Bisq</code></p>
+
+<p>If your Linux distro does not support .deb files please follow this instruction:
+<code>
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.7.2.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+</code>
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
+
+<h2>Credits</h2>
+
+<p>Thanks to everyone who directly contributed to this release:</p>
+
+<ul>
+<li>@chimp1984 </li>
+<li>@devinbileck </li>
+<li>@harrigan</li>
+<li>@huey735 </li>
+<li>@jmacxx </li>
+<li>@m52go</li>
+<li>@ripcurlx</li>
+<li>@sqrrm </li>
+</ul>
+
+<p>A special thanks to our first time contributors:
+- @harrigan<br>
+  - <a href="https://github.com/bisq-network/bisq/pull/5611">List RSK Smart Bitcoin (R-BTC)</a></p>
+
+<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
+</p>
+					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.7.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/BlueWallet/rn-ldk">BlueWallet/rn-ldk</a>: <a href="https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.10">v0.2.10</a>
 						    </h2>
 							<p class="card-text">Published: 2021-07-22 15:27:53 UTC</p>
@@ -1210,7 +1334,9 @@ showing wallet wide PNL and rate of return.</p>
 							<p class="card-text">Published: 2021-07-06 09:15:22 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><h2>Release notes</h2>
+					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
+
+<h2>Release notes</h2>
 
 <p>This release prepares nodes for the upcoming Tor Onion Service upgrade to v3, makes several UI refinements, and fixes bugs across the board.</p>
 
@@ -8584,50 +8710,6 @@ Checkout <a href="https://bitcoin-s.org/docs/0.5.0/getting-setup#option-b-bitcoi
 </p>
 					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/mempool/mempool/releases/tag/v2.1.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6">v1.4.6</a>
-						    </h2>
-							<p class="card-text">Published: 2021-02-02 16:40:13 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>Display min amount for pay-to-open</h2>
-
-<p>The minimum amount that the wallet can receive is now displayed when the wallet does not have any channels. It is also displayed for swap-ins. This minimum amount prevents creating new channels for very small amounts.</p>
-
-<h2>Complete list of changes</h2>
-
-<ul>
-<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.5...v1.4.6">https://github.com/ACINQ/phoenix/compare/v1.4.5...v1.4.6</a></li>
-<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.7-android-phoenix...v0.4.8-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.7-android-phoenix...v0.4.8-android-phoenix</a></li>
-</ul>
-
-<p>Thanks @bitcoinuser for updating the Portuguese-Brazilian translation.</p>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
-- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import padioupm.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
