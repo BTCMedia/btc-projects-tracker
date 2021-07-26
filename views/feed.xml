@@ -6,7 +6,25 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-26T13:53:44+00:00</updated>
+  <updated>2021-07-26T14:12:36+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.1</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.1"/>
+    <summary>New:
+- Passphrase support for wallets
+- Korean language
+- Derivation path for watch only wallets
+
+Improvements:
+- Support lnurl-withdraw via Tor
+- Remove error-prone placeholder scroll calculation
+- Don't use hardcoded label
+- Backup QR doesn't have a &quot;@server&quot; suffix 
+</summary>
+    <title>BlueWallet/BlueWallet: v6.2.1</title>
+    <updated>2021-07-26T13:56:04Z</updated>
+    <dc:date>2021-07-26T13:56:04Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.2</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.2"/>
@@ -7280,34 +7298,5 @@ c2bf6dc4315 Update akka-actor, akka-slf4j, akka-stream, ... to 2.6.9 (#1993)
     <updated>2021-02-04T19:04:36Z</updated>
     <dc:date>2021-02-04T19:04:36Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/mempool/mempool/releases/tag/v2.1.0</id>
-    <link href="https://github.com/mempool/mempool/releases/tag/v2.1.0"/>
-    <summary>Mempool v2.1.0 is a minor release that brings bug fixes and improvements.
-
-&lt;img width=&quot;559&quot; alt=&quot;Screen Shot 2021-02-03 at 18 06 20&quot; src=&quot;https://user-images.githubusercontent.com/8561090/106738489-8e8ab480-664a-11eb-95dc-3ed8d0ec517b.png&quot;&gt;
-
-* Implement workflow to publish [mempool on DockerHub](https://hub.docker.com/u/mempool). #67
-* Add CoreRPC &quot;Minimum fee&quot; to the dashboard. #171
-* Fix for occasional inability to change language to English. #275
-* Fix for anguage dropdown select styling. #293
-* Display a red RBF button when RBF is not enabled. #279
-* Don't save disk cache on exit. Handle corrupted mempool disk cache. #304
-* Fix for fee estimate not being correct when block is almost full. #278
-* Bisq stats calculation fixed. #280
-* Fix for sub networks not detected when using languages. #287
-* Don't display fee rating when block medianFee is empty. #228
-* Display P2PK inputs as &quot;P2PK&quot; instead of empty string.  #290
-* Better identification of Lightning and Liquid scripts. #324
-* Add new languages: Hungarian and Italian
-* (Bitcoind) Return correct http status message when tx not found. #295
-* (Bitcoind) Adding missing basic API endpoints. #291
-* (Bitcoind) Parse witness scripts from P2SH transactions. #323
-* (Electrum) Hide missing address received/sent from address page. #294
-</summary>
-    <title>mempool/mempool: v2.1.0</title>
-    <updated>2021-02-04T06:17:59Z</updated>
-    <dc:date>2021-02-04T06:17:59Z</dc:date>
-  </entry>
-  <dc:date>2021-07-26T13:53:44+00:00</dc:date>
+  <dc:date>2021-07-26T14:12:36+00:00</dc:date>
 </feed>
