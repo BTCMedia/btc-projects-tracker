@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-26T18:16:09+00:00</updated>
+  <updated>2021-07-26T18:25:23+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.1</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.1"/>
@@ -7298,5 +7298,5 @@ c2bf6dc4315 Update akka-actor, akka-slf4j, akka-stream, ... to 2.6.9 (#1993)
     <updated>2021-02-04T19:04:36Z</updated>
     <dc:date>2021-02-04T19:04:36Z</dc:date>
   </entry>
-  <dc:date>2021-07-26T18:16:09+00:00</dc:date>
+  <dc:date>2021-07-26T18:25:23+00:00</dc:date>
 </feed>
