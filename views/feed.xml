@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-26T11:11:21+00:00</updated>
+  <updated>2021-07-26T11:15:39+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.2</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.2"/>
@@ -7309,5 +7309,5 @@ c2bf6dc4315 Update akka-actor, akka-slf4j, akka-stream, ... to 2.6.9 (#1993)
     <updated>2021-02-04T06:17:59Z</updated>
     <dc:date>2021-02-04T06:17:59Z</dc:date>
   </entry>
-  <dc:date>2021-07-26T11:11:21+00:00</dc:date>
+  <dc:date>2021-07-26T11:15:39+00:00</dc:date>
 </feed>
