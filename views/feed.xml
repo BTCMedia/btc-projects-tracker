@@ -6,7 +6,16 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-07-28T19:25:52+00:00</updated>
+  <updated>2021-07-28T19:34:09+00:00</updated>
+  <entry>
+    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.9</id>
+    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.9"/>
+    <summary>- Add utxo selection to manual spend wallet interface
+- Fix a UI bug with bip32 paths</summary>
+    <title>unchained-capital/caravan: v0.3.9</title>
+    <updated>2021-07-28T19:28:04Z</updated>
+    <dc:date>2021-07-28T19:28:04Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.2</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.2"/>
@@ -6439,17 +6448,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</summary>
     <updated>2021-02-11T20:26:03Z</updated>
     <dc:date>2021-02-11T20:26:03Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/mempool/mempool/releases/tag/v2.1.1</id>
-    <link href="https://github.com/mempool/mempool/releases/tag/v2.1.1"/>
-    <summary>This update adds support for Umbrel, together with a few minor bugfixes:
-
-* Improve Docker workflow for Umbrel (#326) by @bguillaumat
-* BSQ token market cap calculation fix (#332) by @devinbileck
-* Lightning HTLC identification label fix (#320) by @fiatjaf</summary>
-    <title>mempool/mempool: v2.1.1</title>
-    <updated>2021-02-10T14:28:06Z</updated>
-    <dc:date>2021-02-10T14:28:06Z</dc:date>
-  </entry>
-  <dc:date>2021-07-28T19:25:52+00:00</dc:date>
+  <dc:date>2021-07-28T19:34:09+00:00</dc:date>
 </feed>
