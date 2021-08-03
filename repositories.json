@@ -43,5 +43,6 @@
 	"lnbits/lnbits",
 	"btcsuite/btcd",
 	"btcsuite/btcwallet",
-	"BlueWallet/rn-ldk"
+	"BlueWallet/rn-ldk",
+	"JoinMarket-Org/joinmarket-clientserver"
 ]
