@@ -6,7 +6,19 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-05T15:35:38+00:00</updated>
+  <updated>2021-08-05T15:44:36+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.0</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.0"/>
+    <summary>Introducing Umbrel v0.4 — a personal server OS for everyone. You can now run your own personal cloud with Nextcloud, host your photos and videos with PhotoPrism, passwords with Vaultwarden, code repositories with Gitea, block ads on your entire network with Pi-hole, automate your home with Home Assistant, run your own messaging server with Matrix, stream torrents with SimpleTorrent, code in VS Code with code-server, view your RAM and storage usage, along with your uptime and Raspberry Pi’s temperature in the settings.
+
+Read the full announcement here: https://bit.ly/umbrel-v04
+
+If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel</summary>
+    <title>getumbrel/umbrel: v0.4.0</title>
+    <updated>2021-08-05T15:44:02Z</updated>
+    <dc:date>2021-08-05T15:44:02Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.10</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.10"/>
@@ -6410,43 +6422,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</summary>
     <updated>2021-02-15T13:50:58Z</updated>
     <dc:date>2021-02-15T13:50:58Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.4</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.4"/>
-    <summary>**New**
-
-- Fee estimation based on mempool 
-- iOS 14.5 support
-- Electrum json import support
-- AEZEED mnemonics support (LND wallet)
-- Remove Location permission (Local trader)
-- Wallet update indicator
-- Vault manage keys - show alert if unsaved
-- Lower fee value if balance is not enough
-
-**Fixed**
-
-- &quot;Can't finalize input&quot;' error (Vaults)
-- Scroll on multi sig creation (Vaults)
-- Loading on creation (Vaults)
-- Import seed hangs forever (Vaults)
-- Scanning invalid QR code throws multiple alerts
-- Cached wallet address wouldn't change
-- 'Few seconds ago' -&gt; 'pending'
-- Legacy wallet can now derive UTXO from transactions if fetching listUnspent from network is not possible
-- Biometrics with PSBT
-- Better support of coldcard's 'p2sh-p2wsh'
-- Do not show notification settings if device does not support it
-
-**Download**
-
-[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.4/BlueWallet.6.0.5.dmg)
-
-[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.4/android-6.0.5.apk)
-</summary>
-    <title>BlueWallet/BlueWallet: v6.0.4</title>
-    <updated>2021-02-11T20:26:03Z</updated>
-    <dc:date>2021-02-11T20:26:03Z</dc:date>
-  </entry>
-  <dc:date>2021-08-05T15:35:38+00:00</dc:date>
+  <dc:date>2021-08-05T15:44:36+00:00</dc:date>
 </feed>
