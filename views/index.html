@@ -38,6 +38,50 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.15">v1.4.15</a>
+						    </h2>
+							<p class="card-text">Published: 2021-08-06 09:38:28 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Main changes</h2>
+
+<h3>Extract invoices from images stored on device</h3>
+
+<p>You can now browse the device&#39;s file system (using the device&#39;s browser, hence not needing any permissions) to load an image containing a Lightning invoice (or a Bitcoin URI, or a LNURL) and read the invoice as usual. This is useful when trying to pay someone using a QR code image shared over the internet, for example on Twitter.</p>
+
+<h3>Full list of changes</h3>
+
+<ul>
+<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.14...v1.4.15">https://github.com/ACINQ/phoenix/compare/v1.4.14...v1.4.15</a></li>
+<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.12-android-phoenix...v0.4.13-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.12-android-phoenix...v0.4.13-android-phoenix</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
+- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import drouinf.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.15" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.0">v0.4.0</a>
 						    </h2>
 							<p class="card-text">Published: 2021-08-05 15:44:02 UTC</p>
@@ -7796,26 +7840,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.3">v0.3.3</a>
-						    </h2>
-							<p class="card-text">Published: 2021-02-15 13:50:58 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Umbrel v0.3.3 is here with 3 brand new apps in the Umbrel App Store — Samourai Server (Dojo + Whirlpool), Mempool, LNbits —  a totally redesigned wallet connector, Lightning Pool, Bitcoin Core v0.21.0, and more.</p>
-
-<p>If your update gets stuck for some reason, please message us on Telegram: <a href="https://t.me/getumbrel">https://t.me/getumbrel</a></p>
-
-<p>Diff: <a href="https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3">https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</a></p>
-</p>
-					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

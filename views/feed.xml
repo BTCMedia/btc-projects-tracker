@@ -6,7 +6,41 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-06T09:35:48+00:00</updated>
+  <updated>2021-08-06T09:45:40+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.15</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.15"/>
+    <summary>## Main changes
+
+### Extract invoices from images stored on device
+
+You can now browse the device's file system (using the device's browser, hence not needing any permissions) to load an image containing a Lightning invoice (or a Bitcoin URI, or a LNURL) and read the invoice as usual. This is useful when trying to pay someone using a QR code image shared over the internet, for example on Twitter.
+
+### Full list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.14...v1.4.15
+- **core**: https://github.com/ACINQ/eclair/compare/v0.4.12-android-phoenix...v0.4.13-android-phoenix
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.15</title>
+    <updated>2021-08-06T09:38:28Z</updated>
+    <dc:date>2021-08-06T09:38:28Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.0</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.0"/>
@@ -6410,17 +6444,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.3...v0.3.4</summary>
     <updated>2021-02-15T16:38:17Z</updated>
     <dc:date>2021-02-15T16:38:17Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.3</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.3"/>
-    <summary>Umbrel v0.3.3 is here with 3 brand new apps in the Umbrel App Store — Samourai Server (Dojo + Whirlpool), Mempool, LNbits —  a totally redesigned wallet connector, Lightning Pool, Bitcoin Core v0.21.0, and more.
-
-If your update gets stuck for some reason, please message us on Telegram: https://t.me/getumbrel
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.2...v0.3.3</summary>
-    <title>getumbrel/umbrel: v0.3.3</title>
-    <updated>2021-02-15T13:50:58Z</updated>
-    <dc:date>2021-02-15T13:50:58Z</dc:date>
-  </entry>
-  <dc:date>2021-08-06T09:35:48+00:00</dc:date>
+  <dc:date>2021-08-06T09:45:40+00:00</dc:date>
 </feed>
