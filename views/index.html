@@ -43,7 +43,50 @@
 							<p class="card-text">Published: 2021-08-10 21:06:36 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><p>IN PROGRESS, PLEASE WAIT UNTIL FINISHED</p>
+					    <p class="card-text"><h1>Binaries</h1>
+
+<p>There are two types of binaries:</p>
+
+<h2>Specter Desktop</h2>
+
+<p>It&#39;s a windowed GUI application with Specter server included.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/Specter-Setup-v1.5.1.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/SpecterDesktop-v1.5.1.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/specter_desktop-v1.5.1-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
+
+<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
+
+<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
+
+<h2>specterd</h2>
+
+<p>It&#39;s a command-line program that only runs Specter server.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/specterd-v1.5.1-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/specterd-v1.5.1-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/specterd-v1.5.1-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
+
+<h2>Signatures and hashes</h2>
+
+<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @ben-kaufman&#39;s GPG key.
+You can get the public key from here: <a href="https://benkaufman.info/ben-kaufman.asc">https://benkaufman.info/ben-kaufman.asc</a>.
+It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x5D27DE564153F2BD">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD">keys.openpgp.org</a>.
+Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD</code>, short id: <code>5d27de564153f2bd</code></p>
+
+<h1>Release notes</h1>
+
+<ul>
+<li>Bugfix: Add newline char when writing bitcoin.conf setting #1325 (jeffthibault)</li>
+<li>Bugfix: Fix specifying datadir for internal node #1315 (benk10)</li>
+<li>Bugfix: Fix login issue for non-English mode #1321 (Kim Neunert)</li>
+<li>Bugfix: Fix Electrum import issues #1318 (benk10)</li>
+<li>Bugfix: Update rpc None error #1333 (Hani Mohammed)</li>
+<li>Bugfix: Fix wallet PDF backup issues #1338 (benk10)</li>
+<li>Feature: Electrum address label import #1314 (relativisticelectron)</li>
+<li>Translation: Update Greek translation  #1317 (glowleaf)</li>
+<li>Translation: Update Hebrew translation #1308 (Sh0ham)</li>
+<li>Translation: Update French translation #1309 (KST-Energy)</li>
+<li>UIUX: Add RTL languages support #1276 (benk10)</li>
+<li>Chore: Automatic Testing and Documentation for Liquid #1286 (Kim Neunert)</li>
+<li>Chore: Refactor internal keypool management #1330 (benk10)</li>
+<li>Chore: Refactor out ugly hack in components JS #1302 (benk10)</li>
+<li>Chore: Make Specter DIY simulator connection error message more descriptive #1337 (Tushar Singla)</li>
+</ul>
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
