@@ -6,7 +6,72 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-10T00:57:34+00:00</updated>
+  <updated>2021-08-10T01:08:07+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.10.1</id>
+    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.1"/>
+    <summary>We're pleased to announce the 0.10.1 release of c-lightning, named by @nalinbhardwaj.
+
+This is a *recommended* upgrade: payment secrets in invoices are now compulsory, and offers and dual funding drafts have been updated, so these (experimental) features are incompatible with previous releases!
+
+*NOTE*: Users of the rebalance or drain [plugins](https://github.com/lightningd/plugins) MUST update, as payment secret is now compulsory.
+
+## Highlights for Users
+
+- `experimental-dual-fund` allows advertizement of funding rates which we will contribute to channels automatically, on a 1-month lease.
+- `withdraw` and `close` (if peer supports) now supports Taproot (and other future) addresses.
+- `listchannels` can now be queried by destination, as well as source.
+- `plugin rescan` now automatically reloads plugins which have changed.
+- We try to restart automatically if we notice subdaemons have been upgraded underneath us.
+- `fundpsbt` will no longer include uneconomic UTXOs (unless `all`).
+- `close` will return a stream of notifications if there is a delay in closing.
+- Unilateral close feerates were reduced from bitcoind's &quot;2 CONSERVATIVE&quot; to &quot;6 ECONOMICAL&quot;.
+- Tor v2 is deprecated: please upgrade to v3!
+- Fixed disconnection bug when an HTLC failed.
+- Fixed bug in rapid feerate changes, and make code space them out (LND compat).
+- Fixed bug where Tor on different ports could be advertized incorrectly.
+- Fixed various bugs to make `pay` more robust.
+
+## Highlights for the Network
+
+- payment secrets in invoices are now compulsory, finally closing a potential probing (or, with amountless invoices, stealing) attack.
+- `option_shutdown_anysegwit` allows peers to close channels to any future segwit version address (taproot!).
+- `keysend` now understands routehints, for routing to unpublished nodes, and sets the final CLTV to 22, for rust-lightning nodes.
+- `invoice` now allows creation of wumbo invoices (&gt; 0.0429 BTC).
+- We will now discuss old channels with peers who reconnect, even if we consider them closed.
+
+
+## Highlights for Developers
+
+- Manual pages now document *exactly* the JSON you can expect from each command (and it's tested!)
+- Plugins can now publish notifications for other plugins to listen to.
+- `force-feerates` allows complete feerate override (mainly for regtest), and a bug fixed where we could send 0 update_fee on regtest.
+- The HSM daemon is now separated into libhsmd, which also provides Python bindings.
+- `createonion` can now make variable-sized onions, and `sendonion` no longer requires `direction` and `channel` for `firsthop`.
+- `dev-sendcustommsg` is now simply `sendcustommsg`.
+- Many offers API improvements and updates, including unsigned offers (smaller QR codes!).
+
+More details can be found in the [changelog](https://github.com/ElementsProject/lightning/blob/v0.10.1/CHANGELOG.md).
+
+Thanks to everyone for their contributions and bug reports; please keep them coming.
+
+Since 0.10.0, we've had 526 commits from 15 different authors over 114 days.
+
+A special thanks goes to the 6 first time contributors:
+
+- Nalin Bhardwa 
+- Nathanael 
+- LightningHelper
+- OpenOms
+- Urza 
+- Valentine Wallace
+
+Cheers,
+Lisa, Christian,  ZmnSCPxj, Rusty.</summary>
+    <title>ElementsProject/lightning: v0.10.1</title>
+    <updated>2021-08-10T00:57:55Z</updated>
+    <dc:date>2021-08-10T00:57:55Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.15</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.15"/>
@@ -6428,21 +6493,5 @@ Build with .NET Core 3.1.403-win-x64.
     <updated>2021-02-16T15:36:21Z</updated>
     <dc:date>2021-02-16T15:36:21Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.4</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.4"/>
-    <summary>Umbrel v0.3.4 fixes a minor bug in v0.3.3 that was causing the update process to fail for some users.
-
-Here's what new in Umbrel v0.3.3:
-
-Umbrel v0.3.3 is here with 3 brand new apps in the Umbrel App Store — Samourai Server (Dojo + Whirlpool), Mempool, LNbits —  a totally redesigned wallet connector, Lightning Pool, Bitcoin Core v0.21.0, and more.
-
-If your update gets stuck for some reason, please message us on Telegram: https://t.me/getumbrel&quot;
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.3...v0.3.4</summary>
-    <title>getumbrel/umbrel: v0.3.4</title>
-    <updated>2021-02-15T16:38:17Z</updated>
-    <dc:date>2021-02-15T16:38:17Z</dc:date>
-  </entry>
-  <dc:date>2021-08-10T00:57:34+00:00</dc:date>
+  <dc:date>2021-08-10T01:08:07+00:00</dc:date>
 </feed>

@@ -38,6 +38,86 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ElementsProject/lightning">ElementsProject/lightning</a>: <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.1">v0.10.1</a>
+						    </h2>
+							<p class="card-text">Published: 2021-08-10 00:57:55 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>We&#39;re pleased to announce the 0.10.1 release of c-lightning, named by @nalinbhardwaj.</p>
+
+<p>This is a <em>recommended</em> upgrade: payment secrets in invoices are now compulsory, and offers and dual funding drafts have been updated, so these (experimental) features are incompatible with previous releases!</p>
+
+<p><em>NOTE</em>: Users of the rebalance or drain <a href="https://github.com/lightningd/plugins">plugins</a> MUST update, as payment secret is now compulsory.</p>
+
+<h2>Highlights for Users</h2>
+
+<ul>
+<li><code>experimental-dual-fund</code> allows advertizement of funding rates which we will contribute to channels automatically, on a 1-month lease.</li>
+<li><code>withdraw</code> and <code>close</code> (if peer supports) now supports Taproot (and other future) addresses.</li>
+<li><code>listchannels</code> can now be queried by destination, as well as source.</li>
+<li><code>plugin rescan</code> now automatically reloads plugins which have changed.</li>
+<li>We try to restart automatically if we notice subdaemons have been upgraded underneath us.</li>
+<li><code>fundpsbt</code> will no longer include uneconomic UTXOs (unless <code>all</code>).</li>
+<li><code>close</code> will return a stream of notifications if there is a delay in closing.</li>
+<li>Unilateral close feerates were reduced from bitcoind&#39;s &quot;2 CONSERVATIVE&quot; to &quot;6 ECONOMICAL&quot;.</li>
+<li>Tor v2 is deprecated: please upgrade to v3!</li>
+<li>Fixed disconnection bug when an HTLC failed.</li>
+<li>Fixed bug in rapid feerate changes, and make code space them out (LND compat).</li>
+<li>Fixed bug where Tor on different ports could be advertized incorrectly.</li>
+<li>Fixed various bugs to make <code>pay</code> more robust.</li>
+</ul>
+
+<h2>Highlights for the Network</h2>
+
+<ul>
+<li>payment secrets in invoices are now compulsory, finally closing a potential probing (or, with amountless invoices, stealing) attack.</li>
+<li><code>option_shutdown_anysegwit</code> allows peers to close channels to any future segwit version address (taproot!).</li>
+<li><code>keysend</code> now understands routehints, for routing to unpublished nodes, and sets the final CLTV to 22, for rust-lightning nodes.</li>
+<li><code>invoice</code> now allows creation of wumbo invoices (&gt; 0.0429 BTC).</li>
+<li>We will now discuss old channels with peers who reconnect, even if we consider them closed.</li>
+</ul>
+
+<h2>Highlights for Developers</h2>
+
+<ul>
+<li>Manual pages now document <em>exactly</em> the JSON you can expect from each command (and it&#39;s tested!)</li>
+<li>Plugins can now publish notifications for other plugins to listen to.</li>
+<li><code>force-feerates</code> allows complete feerate override (mainly for regtest), and a bug fixed where we could send 0 update_fee on regtest.</li>
+<li>The HSM daemon is now separated into libhsmd, which also provides Python bindings.</li>
+<li><code>createonion</code> can now make variable-sized onions, and <code>sendonion</code> no longer requires <code>direction</code> and <code>channel</code> for <code>firsthop</code>.</li>
+<li><code>dev-sendcustommsg</code> is now simply <code>sendcustommsg</code>.</li>
+<li>Many offers API improvements and updates, including unsigned offers (smaller QR codes!).</li>
+</ul>
+
+<p>More details can be found in the <a href="https://github.com/ElementsProject/lightning/blob/v0.10.1/CHANGELOG.md">changelog</a>.</p>
+
+<p>Thanks to everyone for their contributions and bug reports; please keep them coming.</p>
+
+<p>Since 0.10.0, we&#39;ve had 526 commits from 15 different authors over 114 days.</p>
+
+<p>A special thanks goes to the 6 first time contributors:</p>
+
+<ul>
+<li>Nalin Bhardwa </li>
+<li>Nathanael </li>
+<li>LightningHelper</li>
+<li>OpenOms</li>
+<li>Urza </li>
+<li>Valentine Wallace</li>
+</ul>
+
+<p>Cheers,
+Lisa, Christian,  ZmnSCPxj, Rusty.</p>
+</p>
+					    <a href="https://github.com/ElementsProject/lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.15">v1.4.15</a>
 						    </h2>
 							<p class="card-text">Published: 2021-08-06 09:38:28 UTC</p>
@@ -7816,30 +7896,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/zkSNACKs/WalletWasabi" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.4">v0.3.4</a>
-						    </h2>
-							<p class="card-text">Published: 2021-02-15 16:38:17 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Umbrel v0.3.4 fixes a minor bug in v0.3.3 that was causing the update process to fail for some users.</p>
-
-<p>Here&#39;s what new in Umbrel v0.3.3:</p>
-
-<p>Umbrel v0.3.3 is here with 3 brand new apps in the Umbrel App Store — Samourai Server (Dojo + Whirlpool), Mempool, LNbits —  a totally redesigned wallet connector, Lightning Pool, Bitcoin Core v0.21.0, and more.</p>
-
-<p>If your update gets stuck for some reason, please message us on Telegram: <a href="https://t.me/getumbrel">https://t.me/getumbrel</a>&quot;</p>
-
-<p>Diff: <a href="https://github.com/getumbrel/umbrel/compare/v0.3.3...v0.3.4">https://github.com/getumbrel/umbrel/compare/v0.3.3...v0.3.4</a></p>
-</p>
-					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
