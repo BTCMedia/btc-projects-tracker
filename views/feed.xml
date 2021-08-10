@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-10T06:34:03+00:00</updated>
+  <updated>2021-08-10T06:42:37+00:00</updated>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v0.10.1</id>
     <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.1"/>
@@ -6493,5 +6493,5 @@ Build with .NET Core 3.1.403-win-x64.
     <updated>2021-02-16T15:36:21Z</updated>
     <dc:date>2021-02-16T15:36:21Z</dc:date>
   </entry>
-  <dc:date>2021-08-10T06:34:03+00:00</dc:date>
+  <dc:date>2021-08-10T06:42:37+00:00</dc:date>
 </feed>
