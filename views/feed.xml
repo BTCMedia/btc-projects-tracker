@@ -6,7 +6,33 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-12T22:54:07+00:00</updated>
+  <updated>2021-08-12T23:07:08+00:00</updated>
+  <entry>
+    <id>https://github.com/mempool/mempool/releases/tag/v2.2.1</id>
+    <link href="https://github.com/mempool/mempool/releases/tag/v2.2.1"/>
+    <summary>Changelog:
+
+* UI: New component for difficult adjustment (#602)
+* UI: Add blockchain skeleton loader (#615)
+* UI: Added links to block header and transaction hex (#630) (#682)
+* UI: Reflect hash rate into mempool blocks estimations. (#637)
+* API: Add endpoint for difficulty adjustment data (#628)
+* Bug: Fix for difficulty adjustment when still synchronizing (#677)
+* Bug: Fix for transaction tracking when network goes offline (#702)
+* Bug: Fix for mempool blocks displaying wrong gradient color (#623)
+* i18n: Added support for Hindi and Catalan locales
+
+Notes:
+
+* If you maintain your own nginx.conf, update it for the new i18n locales
+
+The complete changelog is available at:
+https://github.com/mempool/mempool/compare/v2.2.0...v2.2.1
+</summary>
+    <title>mempool/mempool: v2.2.1</title>
+    <updated>2021-08-12T22:57:44Z</updated>
+    <dc:date>2021-08-12T22:57:44Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.1"/>
@@ -6360,25 +6386,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.4...v0.3.5</summary>
     <updated>2021-02-20T10:15:13Z</updated>
     <dc:date>2021-02-20T10:15:13Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/mempool/mempool/releases/tag/v2.1.2</id>
-    <link href="https://github.com/mempool/mempool/releases/tag/v2.1.2"/>
-    <summary>This is a patch release that optimizes memory usage for embedded devices like Raspberry Pi
-
-Notes:
-* The disk cache now has its own folder, so `mv cache*.json ./cache/` before restart to migrate
-
-Changes:
-* Optimize memory usage when writing disk cache (#342)
-* Reduce backend maximum heap size setting to 2G (#345)
-* Enable mempool clear protection on all backends (#335)
-* Make mempool clear protection timeout configurable (#343)
-* Minor tweaks to About page text, links (#350)
-* Logo design update (#349) by @pedromvpg
-* Fix style on block hover (#347) by @Czino and @Eric-Machinas</summary>
-    <title>mempool/mempool: v2.1.2</title>
-    <updated>2021-02-18T11:47:39Z</updated>
-    <dc:date>2021-02-18T11:47:39Z</dc:date>
-  </entry>
-  <dc:date>2021-08-12T22:54:07+00:00</dc:date>
+  <dc:date>2021-08-12T23:07:08+00:00</dc:date>
 </feed>
