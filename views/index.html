@@ -177,6 +177,90 @@ Lisa, Christian,  ZmnSCPxj, Rusty.</p>
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.0">v1.2.0</a>
+						    </h2>
+							<p class="card-text">Published: 2021-08-09 15:00:39 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Improvements:</h3>
+
+<ul>
+<li>Migrate to Bootstrap5 (#2490) @dennisreimann</li>
+<li>Greenfield: Server Info: Support all currency codes for sync status (#2511) @kukks</li>
+<li>Greenfield: Add StoreId to Invoice model (#2592)  @kukks</li>
+<li>Greenfield: Change <code>enabledOnly</code> filter to <code>enabled</code> @kukks</li>
+<li>Self host PoS app default images (#2449) @dennisreimann</li>
+<li>Various UI Tweaks and improvements (#2558 #2562 #2568 #2572 #2606 #2608 #2615 #2627 #2628 #2649 #2645 #2673 #2646 #2647 #2745 #2746) @dstrukt @dennisreimann @woutersamaey @johanf85 @bolatovumar</li>
+<li>Notify users to use newer BTCPay Vault app if necessary @nicolasdorier</li>
+<li>Set lightning invoice fallback in QR code as uppercase (#2492) @bjarnemagnussen @Kukks</li>
+<li>Optimize payout database fetching @nicolasdorier</li>
+<li>Wallet Signing UI improvements (#2559) @dennisreimann</li>
+<li>Add payjoin to hot wallet setup and turn on by default (#2450) @dennisreimann</li>
+<li>Add permission code to API page (#2599)  @woutersamaey @dennisreimann</li>
+<li>Introduce Server paging for Payouts List (#2564) @kukks @dennisreimann</li>
+<li>Hide referer URL to hide our BTCPay Server URL (#2655) @woutersamaey</li>
+<li>Deeper accessibility for plugin system @kukks</li>
+<li>Add webhook delivery status indicator (#2679) @bolatovumar</li>
+<li>Auto-select store when creating a new invoice (#2680) @bolatovumar</li>
+<li>Save paymentRequestId in Metadata when creating invoice for Payment Request (#2644) @woutersamaey</li>
+<li>Support multiple file upload (#2705) @cypherbeerus</li>
+<li>Improve Dutch translation (<a href="https://github.com/btcpayserver/btcpayserver/commit/7ac83575d4c50e42f2ecc02c8bf80f66697b6d57">https://github.com/btcpayserver/btcpayserver/commit/7ac83575d4c50e42f2ecc02c8bf80f66697b6d57</a>)  @woutersamaey </li>
+<li>Improve Portuguese translation (<a href="https://github.com/btcpayserver/btcpayserver/commit/7ac83575d4c50e42f2ecc02c8bf80f66697b6d57">https://github.com/btcpayserver/btcpayserver/commit/7ac83575d4c50e42f2ecc02c8bf80f66697b6d57</a>)  rafaelpac</li>
+<li>Improve payment view (#2748) @dennisreimann @dstrukt </li>
+<li>Improve Wallet Send UI (#2750) @dennisreimann </li>
+<li>Show new store warning icon only if neither on-chain wallet nor LN is configured (#2760) @bolatovumar </li>
+<li>Update successful refund message (#2764) @cypherbeerus</li>
+<li>Fix translation on finnish, bulgarian, Kazath (fa91174b1a310e46a37e1862f2b9c263f5e26408, 10e3595a829052573a9918eacafabc6d10e03ea6 965beebc6624906a1f3127623576088dee23e9bf) @NicolasDorier </li>
+</ul>
+
+<h3>New features:</h3>
+
+<ul>
+<li>Greenfield: Delete User API (#2340) @bolatovumar @kukks</li>
+<li>Can create invoices without a specific amount: Top-up invoices (#2730 #2659) @NicolasDorier</li>
+<li>Greenfield: Add misc/permissions to document the hierarchical structure (#2654) @nicolasdorier</li>
+<li>Greenfield: Add &quot;skip&quot; and &quot;limit&quot; params for onchain txs API endpoint (#2688) @bolatovumar</li>
+<li>Greenfield: Add <code>CanModifyInvoices</code> permission (#2595) @kukks</li>
+<li>Greenfield: Add text search terms to an invoice (#2648) @NicolasDorier</li>
+<li>Greenfield: Add Get store Payment methods API (#2545) @kukks @bolatovumar</li>
+<li>GreenField: Add Generate Store OnChain Wallet API (#2708) @kukks</li>
+<li>Test Webhooks functionality (#2474) @bolatovumar</li>
+<li>Allow marking payout as paid manually (#2539) @Kukks</li>
+<li>Pull payments: Detect External OnChain Payouts (#2462) @Kukks</li>
+<li>Auto-detect language on payment page (#2552) @woutersamaey @Kukks</li>
+<li>Support spending to Taproot (#2718) @nicolasdorier</li>
+<li>Show Immature Balance in walletsend page (#2731 @732) @sageprogrammer @nicolasdorier</li>
+<li>Add hebrew translation for checkout (<a href="https://github.com/btcpayserver/btcpayserver/commit/7ac83575d4c50e42f2ecc02c8bf80f66697b6d57">https://github.com/btcpayserver/btcpayserver/commit/7ac83575d4c50e42f2ecc02c8bf80f66697b6d57</a>) @jonathanalevi</li>
+<li>Add korean translation for checkout (<a href="https://github.com/btcpayserver/btcpayserver/commit/7ac83575d4c50e42f2ecc02c8bf80f66697b6d57">https://github.com/btcpayserver/btcpayserver/commit/7ac83575d4c50e42f2ecc02c8bf80f66697b6d57</a>)  Saeyoung Kim</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Fix issue with mysql migration and maxLength (#2541) @jkljajic</li>
+<li>Fix broken shopify links @kukks</li>
+<li>Fix bug with LN payment method API endpoint throwing 500 (#2567) @bolatovumar</li>
+<li>Fix various wording and typos @pavlenex @britttttk @Zaxounette Jimi Ford</li>
+<li>Fix visual bug with invoices search help text overlapping invoice action buttons (#2583) @bolatovumar</li>
+<li>Fix: Invoice Search Text crashes invoice creation when value is too long (#2675) @kukks</li>
+<li>Greenfield documentation fixes (#2657 #2674 #2681 #2598) @woutersamaey @bolatovumar</li>
+<li>Re-enable &quot;Create&quot; button for invoices on correct form input (#2694) @bolatovumar</li>
+<li>Fix: Payment Request status does not update on invoice marked events or when pr amount is changed (#2700) @kukks</li>
+<li>Properly clip taxIncluded and invoice&#39;s amount (#2724) @nicolasdorier</li>
+<li>Fix PoS bug on dark mode (#2743) @dennisreimann </li>
+<li>Remove support for payout to a Bitcoin Url (#2766) @NicolasDorier </li>
+<li>Fix: Support Clightning 0.10.1 @kukks</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.15">v1.4.15</a>
 						    </h2>
 							<p class="card-text">Published: 2021-08-06 09:38:28 UTC</p>
@@ -7671,238 +7755,6 @@ Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 91
 </p>
 					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/mempool/mempool/releases/tag/v2.1.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.6">v1.5.6</a>
-						    </h2>
-							<p class="card-text">Published: 2021-02-16 16:07:33 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
-
-<p>This is a hotfix that fixes a <a href="https://github.com/bisq-network/bisq/pull/5191">startup issue</a> with limit offers.</p>
-
-<p>Here are the release notes from v1.5.5:</p>
-
-<h2>Release notes</h2>
-
-<p>ATTENTION: This release changes the trade protocol. </p>
-
-<p><strong>DO NOT specify trade ID or any other value in the &#39;reason for payment&#39; field.
-LEAVE IT BLANK.</strong> </p>
-
-<p>If it is mandatory for your payment service add a dash character (&#39;-&#39;) or coordinate with your counterparty over trader chat to agree on a reason for payment.</p>
-
-<p>This change reduces the chances that certain payment accounts get flagged. 
-Please see <a href="https://github.com/bisq-network/bisq/issues/2869">https://github.com/bisq-network/bisq/issues/2869</a> for more details on this change.</p>
-
-<p>This release introduces the option to create limit offers to be able to deactivate an offer if a certain price limit is reached. It also introduces cash-by-mail as a new payment method. In addition to multiple minor UI changes, we squashed lots of bugs and improved reliability and performance of the app across the board.</p>
-
-<h3>DAO</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5054">Add CSV export to BSQ transaction view</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4988">Move BSQ price in USD at first row</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5014">Add indication of last GH CR issue</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5077">Fix request amount bounds in ReimbursementValidator</a></li>
-</ul>
-
-<h3>UI</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5066">Add toggle for displaying volume in trade statistics chart in USD</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5048">Add toggle for hiding not takable offers</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5052">Add a &#39;payment method details&#39; screen</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4985">Improve trade fee display at create and take offer screens and popups</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5090">Disable CPU-intensive animations</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4984">Improve popup text in case a local node is detected</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5087">Keep main navigation items left aligned</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5091">Reword &quot;trade started&quot; popup messages per suggestion</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5037">Update translations and fix a broken German translation</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5011">Show stacktrace in error popup at view exceptions</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5015">Fix missing apostrophe in Withdrawal view</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4987">Remove redundant popup when cancelling an offer</a></li>
-</ul>
-
-<h3>Trading</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5080">Change rule for &#39;reason for payment&#39; field to not use trade ID but leave it empty</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5001">Deactivate open offer if trigger price is reached</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5092">Add payment method &quot;Cash by mail&quot;</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5016">Change trade period for TransferWise from 1 day to 4 days</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5045">Add option to hide non supported payment methods</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5042">Select show-all currencies if TransferWise is selected</a></li>
-</ul>
-
-<h3>Wallet</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5071">Show a confirmation of successfully sending BTC or BSQ from wallet</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4991">Improve path text on wallet info screen</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5094">Fix broken <code>-ignoreLocalBtcNode</code> startup option</a></li>
-</ul>
-
-<h3>Reliability</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5072">Persist and republish mailbox messages</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5041">Request only non-seed nodes if no seed nodes are available</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5031">Access concrete data stores</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4950">Improve offer publishing</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4851">Improve getBlocks request handling</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4975">Improve CleanupMailboxMessages</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5057">Fix premature disconnections from seeds</a></li>
-</ul>
-
-<h3>Mediation/Arbitration</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5004">Add mediators keybase usernames</a></li>
-</ul>
-
-<h3>Performance</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5061">Persist failed attempts of decrypting mailbox messages</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5047">Cache signature verification results</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4953">Cache results in account witness domain</a></li>
-</ul>
-
-<h3>Network</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5078">Add 4 old v2 seed nodes</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5039">Add option to prevent periodic shutdown for seed nodes</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5038">Add filter support on network level</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5070">Improve cleanup tor dir at seeds</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4971">Avoid resync from genesis in case of dao state issues</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5040">Update inventory code</a></li>
-</ul>
-
-<h3>API</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5056">Add new api methods &#39;getmyoffers&#39; and &#39;getmyoffer&#39;</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4922">Add new api method &#39;sendbtc&#39;</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4948">Add new api method &#39;gettransaction&#39;</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4900">Add optional txFeeRate parameter to api &#39;sendbsq&#39;</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4925">Support tx memo field for btc withdrawals from api</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5053">Add protection tools</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5065">Integrate new protection tools into api&#39;s offer &amp; trade services</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4966">Prevent excessive api calls</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5081">Use posix-style CLI opts, provide method help</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5093">Add api trade simulation scripts</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4996">Pass hash to bitcoind blocknotify script</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5076">Stub out support for OpenOffer&#39;s triggerPrice in api</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4936">Use Bisq&#39;s UserThread.executor in gRPC server</a></li>
-</ul>
-
-<h3>Development</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5008">Remove awt dependencies except for webcam library</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/4893">Update installation script</a></li>
-</ul>
-
-<h3>Assets</h3>
-
-<p>No new assets.</p>
-
-<h2>Verification</h2>
-
-<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
-Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
-
-<p>Import the key:
-<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
-
-<p>How to verify signatures?
-<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
-Replace BINARY with the file you downloaded (e.g. Bisq-1.5.6.dmg)</p>
-
-<p>Verify jar file inside binary:
-You can verify on OSX the jar file with:
-<code>shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.6.jar</code>
-The output need to match the value from the Bisq-1.5.6.jar.txt file.</p>
-
-<h2>Known issues with installation</h2>
-
-<h3>macOS Catalina:</h3>
-
-<blockquote>
-<p>Bisq can&#39;t be opened because Apple cannot check it for malicious software</p>
-</blockquote>
-
-<p>This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).</p>
-
-<p>Workaround: Right click on the installed Bisq app &gt; Click <code>Open</code> (warning popup shown again, but with new button available) &gt; Click <code>Open</code></p>
-
-<blockquote>
-<p>Bisq would like to receive keystrokes from any application.</p>
-</blockquote>
-
-<p>Discussed in issue <a href="https://github.com/bisq-network/bisq/issues/3373">https://github.com/bisq-network/bisq/issues/3373</a>, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.</p>
-
-<h3>Windows:</h3>
-
-<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
-
-<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
-
-<p>[1] Application directory (contains application installation files):
-C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
-
-<p>[2] Data directory (contains all Bisq data including wallet):
-C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
-
-<h3>Linux:</h3>
-
-<p>Hint for Debian users:
-If you have problems starting Bisq on Debian use: <code>/opt/Bisq/Bisq</code></p>
-
-<p>If your Linux distro does not support .deb files please follow this instruction:
-<code>
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.5.6.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-</code>
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
-
-<h2>Credits</h2>
-
-<p>Thanks to everyone who directly contributed to this release:</p>
-
-<ul>
-<li>@chimp1984</li>
-<li>@ripcurlx </li>
-<li>@ghubstan</li>
-<li>@jakub_cz</li>
-<li>@jmacxx </li>
-<li>@m52go </li>
-<li>@sqrrm </li>
-<li>@stejbac</li>
-</ul>
-
-<p>A special thanks to our first time contributors:</p>
-
-<ul>
-<li>@81dr: <a href="https://github.com/bisq-network/bisq/pull/4893">Update installation script</a></li>
-</ul>
-
-<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
-</p>
-					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
