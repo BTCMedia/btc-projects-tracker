@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-14T09:13:54+00:00</updated>
+  <updated>2021-08-14T09:22:36+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.1</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.1"/>
@@ -6384,5 +6384,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-02-20T15:04:18Z</updated>
     <dc:date>2021-02-20T15:04:18Z</dc:date>
   </entry>
-  <dc:date>2021-08-14T09:13:54+00:00</dc:date>
+  <dc:date>2021-08-14T09:22:36+00:00</dc:date>
 </feed>
