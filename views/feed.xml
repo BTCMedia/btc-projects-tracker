@@ -6,7 +6,36 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-15T18:07:23+00:00</updated>
+  <updated>2021-08-15T18:15:35+00:00</updated>
+  <entry>
+    <id>https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.4-beta</id>
+    <link href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.4-beta"/>
+    <summary>## Release notes
+
+### Bug Fixes
+
+* **deps:** update dependency debug to v4.3.2 ([853c9b9](https://github.com/LN-Zap/zap-desktop/commit/853c9b9e528051af4871361d1044887631171ced))
+* **deps:** update dependency lodash to v4.17.21 [security] ([5a83237](https://github.com/LN-Zap/zap-desktop/commit/5a8323772ea56e401cc7e4f887f4aad93804637e))
+* **lnd:** update log parsing to detect neutrino wallet state ([1e506a3](https://github.com/LN-Zap/zap-desktop/commit/1e506a3db8082d00f9921b333103a7f980a3eb2f))
+
+
+### Features
+
+* **lnd:** depreciated assumechanvalid param ([ebff95f](https://github.com/LN-Zap/zap-desktop/commit/ebff95f9687bf4d327f689b34590e40370ef4c8b))
+* **lnd:** update lnd to v0.13.1-beta ([835d0b6](https://github.com/LN-Zap/zap-desktop/commit/835d0b66d6649b378002057adba5ec639b9d038a))
+
+### Changelog
+The full list of changes since 0.7.3-beta can be found here:
+
+https://github.com/LN-Zap/zap-desktop/compare/v0.7.3-beta...v0.7.4-beta
+
+## Verifying the Release
+
+Please refer to [our documentation](https://github.com/LN-Zap/zap-desktop#documentation) for [instructions on how to verify the release](https://github.com/LN-Zap/zap-desktop/blob/master/docs/SIGNATURES.md).</summary>
+    <title>LN-Zap/zap-desktop: v0.7.4-beta</title>
+    <updated>2021-08-15T18:10:21Z</updated>
+    <dc:date>2021-08-15T18:10:21Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.1</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.1"/>
@@ -6340,49 +6369,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-02-20T17:26:35Z</updated>
     <dc:date>2021-02-20T17:26:35Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.0</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.0"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/Specter-Setup-v1.2.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/SpecterDesktop-v1.2.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/specter_desktop-v1.2.0-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/specterd-v1.2.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/specterd-v1.2.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/specterd-v1.2.0-x86_64-linux-gnu.zip)
-
-# Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.0/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @stepansnigirev's GPG key.
-You can get the public key from here: [https://stepansnigirev.com/ss-specter-release.asc](https://stepansnigirev.com/ss-specter-release.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x36ED357AB24B915F) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F).
-Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, short id: `36ed357ab24b915f`
-
-# Release notes
-- Bugfix: a minor bug that always shows address as used #927 (jleo84)
-- Bugfix: cypress-tests #961 (Kim Neunert)
-- Bugfix: Fix key initial format in wallet info #925 (benk10)
-- Bugfix: Use the request session API for authentification #958 (Jürgen Hötzel)
-- Chore: Bump cryptography from 3.2 to 3.3.2 #943 (dependabot[bot])
-- Chore: enable dev-restart-login #960 (Kim Neunert)
-- Chore: fix release-notes #928 (Kim Neunert)
-- Docs: Typos #941 (Max Hillebrand)
-- Feature: Add failed wallets popup #952 (benk10)
-- Feature: Freeze UTXO and select UTXO for new transaction from the UTXO tab #956 (benk10)
-- Feature: Use descriptor wallet for Bitcoin Core &gt;= v0.21.0 #737 (Sjors Provoost)
-- UIUX: Add reason for why device is disabled in new wallet screen #932 (benk10)
-- UIUX: pass result of createpsbt call back to calculateEstimatedFee #945 (djpnewton)
-- UIUX: Preserve form status when creating a transaction #938 (djpnewton)</summary>
-    <title>cryptoadvance/specter-desktop: v1.2.0</title>
-    <updated>2021-02-20T15:04:18Z</updated>
-    <dc:date>2021-02-20T15:04:18Z</dc:date>
-  </entry>
-  <dc:date>2021-08-15T18:07:23+00:00</dc:date>
+  <dc:date>2021-08-15T18:15:35+00:00</dc:date>
 </feed>
