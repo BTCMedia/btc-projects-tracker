@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-19T05:35:59+00:00</updated>
+  <updated>2021-08-19T05:45:25+00:00</updated>
   <entry>
     <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.100</id>
     <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.100"/>
@@ -6420,5 +6420,5 @@ Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, 
     <updated>2021-02-21T13:31:31Z</updated>
     <dc:date>2021-02-21T13:31:31Z</dc:date>
   </entry>
-  <dc:date>2021-08-19T05:35:59+00:00</dc:date>
+  <dc:date>2021-08-19T05:45:25+00:00</dc:date>
 </feed>
