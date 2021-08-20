@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-20T12:53:48+00:00</updated>
+  <updated>2021-08-20T13:11:51+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.1</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.1"/>
+    <summary>Umbrel 0.4.1 brings LND v0.13.1, along with the latest versions of apps including Mempool, Specter Desktop, BTCPay Server, Samourai Server to the app store, visual improvements for Windows/Linux users, better Tor performance, persistent lnd.conf modifications, Tor access bugfix for Nextcloud, celsius/fahrenheit switch for CPU temperature, and more.</summary>
+    <title>getumbrel/umbrel: v0.4.1</title>
+    <updated>2021-08-20T13:03:10Z</updated>
+    <dc:date>2021-08-20T13:03:10Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.100</id>
     <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.100"/>
@@ -6373,52 +6381,5 @@ Wilmer Paulino</summary>
     <updated>2021-02-23T18:16:42Z</updated>
     <dc:date>2021-02-23T18:16:42Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.2</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.2"/>
-    <summary># v1.2.2 (Hotfix release for Send transaction error)
-# Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/Specter-Setup-v1.2.2.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/SpecterDesktop-v1.2.2.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/specter_desktop-v1.2.2-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/specterd-v1.2.2-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/specterd-v1.2.2-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/specterd-v1.2.2-x86_64-linux-gnu.zip)
-
-# Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @stepansnigirev's GPG key.
-You can get the public key from here: [https://stepansnigirev.com/ss-specter-release.asc](https://stepansnigirev.com/ss-specter-release.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x36ED357AB24B915F) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F).
-Fingerprint of the key is `6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F`, short id: `36ed357ab24b915f`
-
-# Release notes
-- Bugfix: Hot fix for: Transactions sending/ signing failure
-- Bugfix: Hot fix for Tor connections
-- Bugfix: a minor bug that always shows address as used #927 (jleo84)
-- Bugfix: cypress-tests #961 (Kim Neunert)
-- Bugfix: Fix key initial format in wallet info #925 (benk10)
-- Bugfix: Use the request session API for authentification #958 (Jürgen Hötzel)
-- Chore: Bump cryptography from 3.2 to 3.3.2 #943 (dependabot[bot])
-- Chore: enable dev-restart-login #960 (Kim Neunert)
-- Chore: fix release-notes #928 (Kim Neunert)
-- Docs: Typos #941 (Max Hillebrand)
-- Feature: Add failed wallets popup #952 (benk10)
-- Feature: Freeze UTXO and select UTXO for new transaction from the UTXO tab #956 (benk10)
-- Feature: Use descriptor wallet for Bitcoin Core &gt;= v0.21.0 #737 (Sjors Provoost)
-- UIUX: Add reason for why device is disabled in new wallet screen #932 (benk10)
-- UIUX: pass result of createpsbt call back to calculateEstimatedFee #945 (djpnewton)
-- UIUX: Preserve form status when creating a transaction #938 (djpnewton)</summary>
-    <title>cryptoadvance/specter-desktop: v1.2.2</title>
-    <updated>2021-02-21T13:31:31Z</updated>
-    <dc:date>2021-02-21T13:31:31Z</dc:date>
-  </entry>
-  <dc:date>2021-08-20T12:53:48+00:00</dc:date>
+  <dc:date>2021-08-20T13:11:51+00:00</dc:date>
 </feed>

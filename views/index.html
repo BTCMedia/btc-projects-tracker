@@ -38,6 +38,22 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.1">v0.4.1</a>
+						    </h2>
+							<p class="card-text">Published: 2021-08-20 13:03:10 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>Umbrel 0.4.1 brings LND v0.13.1, along with the latest versions of apps including Mempool, Specter Desktop, BTCPay Server, Samourai Server to the app store, visual improvements for Windows/Linux users, better Tor performance, persistent lnd.conf modifications, Tor access bugfix for Nextcloud, celsius/fahrenheit switch for CPU temperature, and more.</p>
+</p>
+					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/rust-bitcoin/rust-lightning">rust-bitcoin/rust-lightning</a>: <a href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.100">v0.0.100</a>
 						    </h2>
 							<p class="card-text">Published: 2021-08-17 18:57:15 UTC</p>
@@ -7736,68 +7752,6 @@ Wilmer Paulino</p>
 </p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.2">v1.2.2</a>
-						    </h2>
-							<p class="card-text">Published: 2021-02-21 13:31:31 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>v1.2.2 (Hotfix release for Send transaction error)</h1>
-
-<h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/Specter-Setup-v1.2.2.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/SpecterDesktop-v1.2.2.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/specter_desktop-v1.2.2-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/specterd-v1.2.2-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/specterd-v1.2.2-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/specterd-v1.2.2-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h1>Signatures and hashes</h1>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.2.2/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @stepansnigirev&#39;s GPG key.
-You can get the public key from here: <a href="https://stepansnigirev.com/ss-specter-release.asc">https://stepansnigirev.com/ss-specter-release.asc</a>.
-It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x36ED357AB24B915F">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/6F16E354F83393D6E52EC25F36ED357AB24B915F">keys.openpgp.org</a>.
-Fingerprint of the key is <code>6F16 E354 F833 93D6 E52E  C25F 36ED 357A B24B 915F</code>, short id: <code>36ed357ab24b915f</code></p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Bugfix: Hot fix for: Transactions sending/ signing failure</li>
-<li>Bugfix: Hot fix for Tor connections</li>
-<li>Bugfix: a minor bug that always shows address as used #927 (jleo84)</li>
-<li>Bugfix: cypress-tests #961 (Kim Neunert)</li>
-<li>Bugfix: Fix key initial format in wallet info #925 (benk10)</li>
-<li>Bugfix: Use the request session API for authentification #958 (Jürgen Hötzel)</li>
-<li>Chore: Bump cryptography from 3.2 to 3.3.2 #943 (dependabot[bot])</li>
-<li>Chore: enable dev-restart-login #960 (Kim Neunert)</li>
-<li>Chore: fix release-notes #928 (Kim Neunert)</li>
-<li>Docs: Typos #941 (Max Hillebrand)</li>
-<li>Feature: Add failed wallets popup #952 (benk10)</li>
-<li>Feature: Freeze UTXO and select UTXO for new transaction from the UTXO tab #956 (benk10)</li>
-<li>Feature: Use descriptor wallet for Bitcoin Core &gt;= v0.21.0 #737 (Sjors Provoost)</li>
-<li>UIUX: Add reason for why device is disabled in new wallet screen #932 (benk10)</li>
-<li>UIUX: pass result of createpsbt call back to calculateEstimatedFee #945 (djpnewton)</li>
-<li>UIUX: Preserve form status when creating a transaction #938 (djpnewton)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.2.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
