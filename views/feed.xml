@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-21T17:53:03+00:00</updated>
+  <updated>2021-08-21T18:11:39+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.1</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.1"/>
@@ -6381,5 +6381,5 @@ Wilmer Paulino</summary>
     <updated>2021-02-23T18:16:42Z</updated>
     <dc:date>2021-02-23T18:16:42Z</dc:date>
   </entry>
-  <dc:date>2021-08-21T17:53:03+00:00</dc:date>
+  <dc:date>2021-08-21T18:11:39+00:00</dc:date>
 </feed>
