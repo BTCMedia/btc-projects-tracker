@@ -6,7 +6,41 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-22T17:55:17+00:00</updated>
+  <updated>2021-08-22T18:05:31+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3"/>
+    <summary>**Added**
+
+Electrum connection toggle
+Share/Save QRCode 
+Resize selected Images for less error prone QR scanning 
+Share button on sign/verify screen
+
+**Refactored**
+
+Move LT to Tools 
+Speedup wait for electrum
+Use new UIMenu 
+Dont load address txs if &gt; 1000 
+Connect BlueElectrum explicitly 
+
+**Fixed**
+
+Realm encryption mismatch after backup restore (closes #3332) 
+Disable slower fees if they match faster fee 
+Replace ',' with '.' instead of empty string. 
+Unable to Browse Past First Wallet
+Widgets were not reloading (macOS) 
+Provide more context when local QR code scan fails 
+Update session state on app termination 
+Apple Watch invoice gets stuck #1529 
+OnePlus text cutoff 
+Don't start WatchConnectivity on macOS  </summary>
+    <title>BlueWallet/BlueWallet: v6.2.3</title>
+    <updated>2021-08-22T17:57:53Z</updated>
+    <dc:date>2021-08-22T17:57:53Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.1</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.1"/>
@@ -6157,229 +6191,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.5...v0.3.6</summary>
     <updated>2021-02-27T16:44:00Z</updated>
     <dc:date>2021-02-27T16:44:00Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.12.1-beta"/>
-    <summary># Database Migrations
-
-There are no database migrations in `v0.12.1-beta`.
-
-# Verifying the Release
-
-In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
-
-```
-curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
-curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
-```
-
-Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.12.1-beta.sig` and `manifest-v0.12.1-beta.txt` are in the current directory) with:
-
-```
-gpg --verify manifest-roasbeef-v0.12.1-beta.sig manifest-v0.12.1-beta.txt
-```
-
-You should see the following if the verification was successful:
-
-```
-gpg: Signature made Mon Feb 22 19:23:11 2021 PST
-gpg:                using RSA key 9C8D61868A7C492003B2744EE7D737B67FA592C7
-gpg: Good signature from &quot;Conner Fromknecht &lt;conner@lightning.engineering&gt;&quot; [ultimate]
-```
-
-That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
-
-## Verifying the Release Timestamp 
-
-From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-roasbeef-v0.12.1-beta.txt.asc.ots`.
-
-Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
-```
-ots verify manifest-roasbeef-v0.12.1-beta.sig.ots 
-ots verify manifest-v0.12.1-beta.txt.ots
-```
-
-Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
-
-These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
-
-## Verifying the Release Binaries
-
-Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
-The release binaries are compiled with `go1.15.7`, which is required by verifiers to arrive at the same ones.
-They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, and `watchtowerrpc`. Note that these are already included in the release script, so they do not need to be provided.
-
-The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
-
-Finally, you can also verify the _tag_ itself with the following command:
-
-```
-$ git verify-tag v0.12.1-beta
-gpg: Signature made Mon Feb 22 17:11:56 2021 PST
-gpg:                using RSA key 9C8D61868A7C492003B2744EE7D737B67FA592C7
-gpg: Good signature from &quot;Conner Fromknecht &lt;conner@lightning.engineering&gt;&quot; [ultimate]
-```
-
-## Verifying the Docker Images
-
-To verify the `lnd` and `lncli` binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):
-
-```shell
-$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.12.1-beta /verify-install.sh v0.12.1-beta
-$ OK=$?
-$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
-$ docker run lightninglabs/lnd [command-line options]
-```
-
-# Building the Contained Release 
-
-Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
-that `vendor.tar.gz` and `lnd-source-v0.12.1-beta.tar.gz` are in the current directory, follow these steps:
-
-```
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.12.1-beta.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.12.1-beta&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.12.1-beta&quot; ./cmd/lncli
-```
-
-The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
-
-Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
-
-```
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-```
-
-⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
-
-# Release Notes
-
-## Spec Compatibility
-
- - 0.12.1-beta fixes a [recently discovered edge-case in the spec](https://github.com/lightningnetwork/lightning-rfc/issues/794) surrounding retransmission of `RevokeAndAck` and `CommitSig` that can lead to channel force closures if they are not retransmitted in the same order upon reconnection. This version now [persists this extra state required to determine the correct transmission order](https://github.com/lightningnetwork/lnd/pull/4915), [in accordance with the new spec requirements](https://github.com/lightningnetwork/lightning-rfc/pull/810). This eliminates a potential vector for channel desynchronization on restart once both sides of the channel have updated and a successful state transition is performed.
- - Prior to this version, `lnd` may have incorrectly attempted an MPP payment even if the receiver's `NodeAnnouncement` or invoice did not set the MPP feature bit. This was caused by a bug that incorrectly assumed support for `payment_secrets` implied support for MPP. A fix has been applied that [limits the maximum number of splits to 1 when the receiver doesn't support MPP](https://github.com/lightningnetwork/lnd/pull/4924).
-
-## Gossip Propagation Improvements
-
-This release [reverts the removal of the premature channel update cache](https://github.com/lightningnetwork/lnd/pull/5003) that was removed in 0.12.0-beta. Absence of the cache was seen to cause issues with channel update propagation, so the change is reverted to restore the pre-0.12.0-beta behavior and stability. The current plan is to reschedule the cache's removal for 0.13 after performing more extensive investigation.
- 
-In addition, the gossip throttling adding in v0.12.0 has been [refactored to be less aggressive with respect to non-keepalive channel updates](https://github.com/lightningnetwork/lnd/pull/5006), i.e. channel updates that differ in more than just the timestamp. Previously `lnd` would drop all but the first such update that it received over the course of a block, which has reportedly been too restrictive and resulted in degraded propagation of routine channel updates.
-
-The new throttling logic now employs a directional [token bucket rate limiter](https://en.wikipedia.org/wiki/Token_bucket), the same approach used by `lnd` to rate-limit gossip requests from sync peers. Each token bucket is configured to drop non-keepalive updates arriving faster that once per minute, yet permitting bursts of up 10 updates. This improves on the previous approach in a few ways:
- - Updates are now limited with respect to a consistent time source, i.e. seconds, rather than block height. This makes it easier to reason about when channel updates might get dropped as an average user, and places a deterministic bound on the next time a normal user can reliably update their channel again.
- - The rate limits are now applied _directionally_, so that one end of the channel cannot cause their counterparty's channel updates to be dropped. This has the effect of making the penalization more precise, and better targets individuals that exhibit abusive behavior.
- - By factoring in bursts, it provides enough tolerance for cases where policy changes that may occur in quick succession, e.g. disable followed by reenable, or modifying a channel policy immediately after open.
-
-## No Gossip Mode
-
-This release includes support for a [no-graph sync mode](https://github.com/lightningnetwork/lnd/pull/4945) which can be enabled by setting `numgraphsyncpeers=0`. In prior versions, running `lnd` in this configuration would still trigger an initial historical sync with the first connected peer on each restart. The behavior was modified under the assumption that users who have already configured `lnd` to not receive gossip updates probably don't want to sync the graph at all.
-
-This mode is especially helpful to wallet developers that choose to outsource pathfinding via their own service, or purely forwarding nodes that never need to perform pathfinding.
-
-## Pinned Gossip Syncers
-
-Typically `lnd` performs this historical channel reconciliation periodically, rotating between the set of all active peers, and attempting to keep `numgraphsyncpeers` (defaults to 3) in a state where they are receiving new gossip messages. Due to the eventually consistent properties of this algorithm (and the gossip protocol in general), there are some cases that lead to long delays in a node receiving newer updates. Notably, if a node has many peers, then it may be a while before the sync rotation algorithm queries a given peer for newer updates.
-
-To provide more control, a new configuration option has been added [allowing users to _pin_ their nodes into an ActiveSync with particular nodes](https://github.com/lightningnetwork/lnd/pull/4934). Each time a connection is established with a pinned syncer, `lnd` will first perform a historical channel reconciliation, followed by a request for the pinned syncer to forward all new gossip messages. Doing so allows users to keep their routing table tightly synchronized with nodes in their list of configured, pinned syncers. Users can add one or more pinned syncers via:
-```
-gossip.pinned-syncers=&lt;pubkey1&gt;
-gossip.pinned-syncers=&lt;pubkey2&gt;
-```
-This can be especially useful for services that run multiple, well-connected `lnd` nodes, and want their own nodes to maintain similar views of the channel graph. Users can also use `gossip.pinned-syncers` in combination with `numgraphsyncpeers=0` to only sync from a specific peer.
-
-## RPC Changes
- - `lnd` 0.12.1-beta now [exposes the HTLC `attempt_id` on response from `TrackPayment`](https://github.com/lightningnetwork/lnd/pull/4956). Internally, `lnd` uses `attempt_id` as a unique identifier for each HTLC it sends out, and to provide a total ordering on all HTLC sent by the daemon.  This identifier can be used by developers to better reflect progress of a payment, making it easier to extract per-HTLC state deltas rather than displaying the full payment state every time.
-- Adds a new `MaxShardSizeMsat` argument to `SendPayment`, allowing users to cap the maximum value of any MPP shard sent out by `lnd`. Users can now set this from `lncli` via either the `max_shard_size_sat` or `max_shard_size_msat` field. 
-
-
-## Deterministic Build / Release Verification
- - The signature verification script [was fixed to no longer fail if a public key of a signature is missing](https://github.com/lightningnetwork/lnd/pull/4963) and @halseth's [signing public keys were added](https://github.com/lightningnetwork/lnd/pull/4962).
- - The [golang version `1.15.7`](https://github.com/lightningnetwork/lnd/pull/4961) is now used for compilation across all build processes.
- - The release process has been modified to [clean any generated mobile stubs before packaging/verifying the release](https://github.com/lightningnetwork/lnd/pull/4983). Without doing so, users would arrive at a different `vendor.tar.gz` depending on whether or not they had previously run `make mobile` due to small differences in the imports present in the project.
- - Fixed an issue that allowed GO_VERSION of the release toolchain to be spuriously updated to newer releases of go. This was hit unexpectedly in the v0.12.1-beta.rc2 release cycle where the release binaries were built with go1.15.8, which had been released earlier in the week, rather than go1.15.7 which is pinned in our release/verify docker containers. As a result, building the release locally did not match the binaries uploaded by github to the release. We resolved this by _exactly_ [pinning the GO_VERSION used to compile the release binaries](https://github.com/lightningnetwork/lnd/pull/5013).
- - Allows users to [pass custom paths for `lnd` or `lncli` when verifying binaries](https://github.com/lightningnetwork/lnd/pull/5021).
- - Switches the [signing on the release manfest to use detached signatures](https://github.com/lightningnetwork/lnd/pull/5019) rather than clear signing the manifest.
- - The release [verification script now requires 5 of the 7 developer signatures on the manifest](https://github.com/lightningnetwork/lnd/pull/5023) before attempting to verify the hashes of `lnd` or `lncli`.
- - The release [verification script now selects either `sha256sum` or `shasum`](https://github.com/lightningnetwork/lnd/pull/5037) to increase portability and fix the docker `verify-install.sh` command.
- - Fixed an issue that would cause[ `make docker-release` to pull in the go version of the host machine](https://github.com/lightningnetwork/lnd/pull/5037), rather than the go version pinned inside the docker container.
-
-## Developer Toolchain
- - Some of the GitHub Action scripts [were replaced by vendored scripts](https://github.com/lightningnetwork/lnd/pull/4952) to prevent secret extraction through malicious code.
- - The build process was [enhanced with a `make imports`](https://github.com/lightningnetwork/lnd/pull/2162) command that organizes all golang import statements.
- - The protobuf definitions are now compiled [using docker](https://github.com/lightningnetwork/lnd/pull/4911) to avoid needing to install a set of binaries and libraries with exact pinned versions. The instructions on how to [format the proto files with MacOS](https://github.com/lightningnetwork/lnd/pull/4944) were added as well.
-
-## Bug Fixes
- - Fixes a bug that can result in a [panic when generating hodl invoices for private channels](https://github.com/lightningnetwork/lnd/pull/4978). An [itest has also been added for generating hodl invoices using private channels](https://github.com/lightningnetwork/lnd/pull/4996) to provide more complete coverage of this area going forward.
- - Fixes a [resource utilization issue cause by too many concurrent block fetches from the backend](https://github.com/lightningnetwork/lnd/pull/5043) that would cause the rpc interface to hang.
- - Squashes a bug that results in a [startup error when the daemon exits while in the middle of processing graph updates for its own channels](https://github.com/lightningnetwork/lnd/pull/4958).
- - Creates a [fast-path for persisting locally-created gossip messages](https://github.com/lightningnetwork/lnd/pull/4964) rather than waiting to be batched with remote graph updates. This reduces the likelihood of partially-writes for local graph updates, which was partially patched in https://github.com/lightningnetwork/lnd/pull/4958.
- - The development docker files were [fixed by adding an extra listener](https://github.com/lightningnetwork/lnd/pull/4938) to make sure the beginner tutorial can be followed without running into errors.
- - Fixes an [error message returned when attempting to bind a REST listener on a public interface without authentication](https://github.com/lightningnetwork/lnd/pull/4993), such that it returns the relevant configuration flag (`no-rest-tls`).
- - Fixes an issue with [IPv6 address resolution when using `tor.active`](https://github.com/lightningnetwork/lnd/pull/4988) such that `lnd` will fall back to the system resolver.
- - Fixes an issue with [IP alias resolution](https://github.com/lightningnetwork/lnd/pull/5007) such that `lnd` will fall back to the system resolver.
- - Fixes a bug where [SCB file paths weren't properly expanded when in the home directory](https://github.com/lightningnetwork/lnd/pull/5020).
- - Fixes some itest flakes caused by [stray logs that were not in the error whitelist](https://github.com/lightningnetwork/lnd/pull/5016).
- - Resolves some [htlcswitch unit test flakes that would trigger if the test ran longer than expected](https://github.com/lightningnetwork/lnd/pull/5026).
-
-## Full Changelog
- - https://github.com/lightningnetwork/lnd/pull/4958 - netann: ignore unknown channel update on startup
- - https://github.com/lightningnetwork/lnd/pull/4962 - scripts: add halseth key to verify script
- - https://github.com/lightningnetwork/lnd/pull/4938 - docker: add an extra listener for localhost
- - https://github.com/lightningnetwork/lnd/pull/4944 - docs: Add clang-format instructions for mac
- - https://github.com/lightningnetwork/lnd/pull/4956 - lnrpc: add htlc attempt id
- - https://github.com/lightningnetwork/lnd/pull/4952 - Github: use vendored actions for steps with sensitive info
- - https://github.com/lightningnetwork/lnd/pull/4963 - scripts: don't fail signature verification on missing public key
- - https://github.com/lightningnetwork/lnd/pull/2162 - Makefile: define `make imports`
- - https://github.com/lightningnetwork/lnd/pull/4911 - lnrpc/mobile: use docker to compile/format protos
- - https://github.com/lightningnetwork/lnd/pull/4974 - Fix typo in restorechanbackup command description
- - https://github.com/lightningnetwork/lnd/pull/4902 - lntest/channels: introduce subpackage to deduplicate structs
- - https://github.com/lightningnetwork/lnd/pull/4978 - invoices+rpc: add missing channel graph to the AddInvoiceConfig
- - https://github.com/lightningnetwork/lnd/pull/4934 - discovery: pinned syncers
- - https://github.com/lightningnetwork/lnd/pull/4924 - routerrpc,routing: limit max parts if the invoice doesn't declare MPP support
- - https://github.com/lightningnetwork/lnd/pull/4961 - build: update CI builds to use go 1.15.7
- - https://github.com/lightningnetwork/lnd/pull/4979 - routing: add new TestPaymentAddrOnlyNoSplit test case
- - https://github.com/lightningnetwork/lnd/pull/4915 - multi: store bool to determine retransmission ordering
- - https://github.com/lightningnetwork/lnd/pull/4981 - docs: correct sign command
- - https://github.com/lightningnetwork/lnd/pull/4983 - make: clean mobile stubs before building release
- - https://github.com/lightningnetwork/lnd/pull/4993 - fix: correct no-rest-tls parameter in error message
- - https://github.com/lightningnetwork/lnd/pull/5003 - Revert: https://github.com/lightningnetwork/lnd/pull/4895 to store premature channel updates
- - https://github.com/lightningnetwork/lnd/pull/4996 - itest: add coverage for hold invoices with hop hints
- - https://github.com/lightningnetwork/lnd/pull/4945 - discovery: no graph sync
- - https://github.com/lightningnetwork/lnd/pull/4964 - channeldb+routing+gossiper: add local updates to graph immediately
- - https://github.com/lightningnetwork/lnd/pull/5006 - discovery: use token bucket based rate limiting to throttle gossip
- - https://github.com/lightningnetwork/lnd/pull/4988 - add isIPv6Host helper to force v6 addrs through system resolver
- - https://github.com/lightningnetwork/lnd/pull/5007 - lncfg: add IPv6 resolution bypass &amp; account for local hostname aliases
- - https://github.com/lightningnetwork/lnd/pull/5013 - github/workflows: pin exact docker release
- - https://github.com/lightningnetwork/lnd/pull/5021 - scripts: allow verification of custom binary
- - https://github.com/lightningnetwork/lnd/pull/5020 - config: clean and expand backup file path
- - https://github.com/lightningnetwork/lnd/pull/5019 - release: create and verify detached signatures, fix hashing command on MacOS
- - https://github.com/lightningnetwork/lnd/pull/5023 - scripts/verify-install: require 5-of-7 signatures before accepting
- - https://github.com/lightningnetwork/lnd/pull/5016 - lntest: update error whitelist
- - https://github.com/lightningnetwork/lnd/pull/5026 - htlcswitch: init mockFeeEstimator in other ChannelLinkConfigs
- - https://github.com/lightningnetwork/lnd/pull/5017 - routing: if MaxShardAmt is set, then use that as a ceiling for our splits (does not change default to 16 for MaxParts)
-- https://github.com/lightningnetwork/lnd/pull/5037 - release: fix golang version issue in docker-release and shasum issue in verification script
-- https://github.com/lightningnetwork/lnd/pull/5043 - routing: dial back max concurrent block fetches
-
-# Contributors (Alphabetical Order)
-
-Andras Banki-Horvath
-Carla Kirk-Cohen
-Conner Fromknecht
-Eugene Siegel
-Jake Sylvestre
-Johan T. Halseth
-Joost Jager
-Juan Pablo Civile
-Olaoluwa Osuntokun
-Oliver Gugger
-rockstardev
-Umar Bolatov
-Vlad Stan
-Wilmer Paulino</summary>
-    <title>lightningnetwork/lnd: v0.12.1-beta</title>
-    <updated>2021-02-23T18:16:42Z</updated>
-    <dc:date>2021-02-23T18:16:42Z</dc:date>
-  </entry>
-  <dc:date>2021-08-22T17:55:17+00:00</dc:date>
+  <dc:date>2021-08-22T18:05:31+00:00</dc:date>
 </feed>
