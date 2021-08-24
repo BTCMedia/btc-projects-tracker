@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-24T15:16:34+00:00</updated>
+  <updated>2021-08-24T15:24:18+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3"/>
@@ -40,6 +40,23 @@ Don't start WatchConnectivity on macOS  </summary>
     <title>BlueWallet/BlueWallet: v6.2.3</title>
     <updated>2021-08-22T17:57:53Z</updated>
     <dc:date>2021-08-22T17:57:53Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.1</id>
+    <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.1"/>
+    <summary>This a **patch release** that contains a fix for a known issue where -under certain conditions- calls to the *eth_getLogs* method would return incorrect results (see issue #1600).
+
+This is a **non-mandatory upgrade**, however we encourage users to upgrade to this version if they are running nodes used to retrieve blockchain event logs.
+
+These are the changes included in this version:
+- Fix data retrieval for eth_getLogs method (#1605)
+- Ignore ‘type’ argument in JSON-RPC calls (#1606).
+
+SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
+a6223f3a9d289f1d5a4ab535b5e748f43b5829ab6274050b93f86d2c77223683  rskj-core-3.0.1-IRIS-all.jar</summary>
+    <title>rsksmart/rskj: IRIS-3.0.1</title>
+    <updated>2021-08-20T21:34:52Z</updated>
+    <dc:date>2021-08-20T21:34:52Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.1</id>
@@ -6179,17 +6196,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.6...v0.3.7</summary>
     <updated>2021-02-28T15:02:41Z</updated>
     <dc:date>2021-02-28T15:02:41Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.6</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.6"/>
-    <summary>Umbrel v0.3.6 brings some performance improvements to the Mempool app, updates LND to v0.12.1, and includes some other small bug fixes.
-
-If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.5...v0.3.6</summary>
-    <title>getumbrel/umbrel: v0.3.6</title>
-    <updated>2021-02-27T16:44:00Z</updated>
-    <dc:date>2021-02-27T16:44:00Z</dc:date>
-  </entry>
-  <dc:date>2021-08-24T15:16:34+00:00</dc:date>
+  <dc:date>2021-08-24T15:24:18+00:00</dc:date>
 </feed>
