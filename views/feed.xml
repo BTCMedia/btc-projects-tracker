@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-27T15:36:33+00:00</updated>
+  <updated>2021-08-27T15:42:20+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.0</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.0"/>
+    <summary>NEW RELEASE IN PROGRESS. PLEASE WAIT UNTIL COMPLETE.</summary>
+    <title>cryptoadvance/specter-desktop: v1.6.0</title>
+    <updated>2021-08-27T15:37:41Z</updated>
+    <dc:date>2021-08-27T15:37:41Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3"/>
@@ -6184,17 +6192,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-01T14:26:42Z</updated>
     <dc:date>2021-03-01T14:26:42Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.7</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.7"/>
-    <summary>This update includes minor bug fixes for improved stability and security of your Umbrel.
-
-If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.6...v0.3.7</summary>
-    <title>getumbrel/umbrel: v0.3.7</title>
-    <updated>2021-02-28T15:02:41Z</updated>
-    <dc:date>2021-02-28T15:02:41Z</dc:date>
-  </entry>
-  <dc:date>2021-08-27T15:36:33+00:00</dc:date>
+  <dc:date>2021-08-27T15:42:20+00:00</dc:date>
 </feed>
