@@ -6,11 +6,53 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-27T15:54:12+00:00</updated>
+  <updated>2021-08-27T16:05:19+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.0"/>
-    <summary>NEW RELEASE IN PROGRESS. PLEASE WAIT UNTIL COMPLETE.</summary>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/Specter-Setup-v1.6.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/SpecterDesktop-v1.6.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/specter_desktop-v1.6.0-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/specterd-v1.6.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/specterd-v1.6.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/specterd-v1.6.0-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
+You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
+It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
+Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`
+
+# Release notes
+- Devices: Add Passport support #1343 (benk10)
+- Devices: Improved Liquid support for Specter-DIY #1358 (Stepan Snigirev)
+- Bugfix: Fix Liquid addresses UTXO count #1350 (benk10)
+- Bugfix: Fix add keys #1355 (Tushar Singla)
+- Bugfix: Fix key import on liquid #1370 (Stepan Snigirev)
+- Bugfix: Fix imported labels not being saved #1362 (relativisticelectron)
+- Bugfix: Fix add key functionality for hot wallets #1354 (Tushar Singla)
+- Bugfix: Use the configured bitcoind data directory #1348 (Nadav Ivgi)
+- Bugfix: Delete pending psbts if inputs were spent #1366 (Stepan Snigirev)
+- Bugfix: Fix amount and label parsing #1368 (Stepan Snigirev)
+- Bugfix: Fix assetlabel and default asset properties for bitcoin #1351 (Stepan Snigirev)
+- Feature: Add Export Specter Format for wallets #1345 (Hani Mohammed)
+- Feature: Add assets registry for Liquid wallets #1360 (benk10)
+- Feature: Add single-key taproot support #1364 (Stepan Snigirev)
+- Docs: run tests and avoid elm-tests if you don't want them #1326 (Kim Neunert)
+- UI: More information while backing up specter data #1346 (Tushar Singla)
+- UI: Warn user when hidden advanced fields are not empty #1356 (benk10)
+- UI: Fetch asset labels #1352 (Stepan Snigirev)
+- Chore: Bump path-parse from 1.0.6 to 1.0.7 in /pyinstaller/electron #1344 (dependabot[bot])
+- Chore: pytest for Electrum address label import #1363 (relativisticelectron)</summary>
     <title>cryptoadvance/specter-desktop: v1.6.0</title>
     <updated>2021-08-27T15:37:41Z</updated>
     <dc:date>2021-08-27T15:37:41Z</dc:date>
@@ -6192,5 +6234,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-01T14:26:42Z</updated>
     <dc:date>2021-03-01T14:26:42Z</dc:date>
   </entry>
-  <dc:date>2021-08-27T15:54:12+00:00</dc:date>
+  <dc:date>2021-08-27T16:05:19+00:00</dc:date>
 </feed>

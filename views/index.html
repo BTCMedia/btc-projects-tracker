@@ -43,7 +43,55 @@
 							<p class="card-text">Published: 2021-08-27 15:37:41 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><p>NEW RELEASE IN PROGRESS. PLEASE WAIT UNTIL COMPLETE.</p>
+					    <p class="card-text"><h1>Binaries</h1>
+
+<p>There are two types of binaries:</p>
+
+<h2>Specter Desktop</h2>
+
+<p>It&#39;s a windowed GUI application with Specter server included.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/Specter-Setup-v1.6.0.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/SpecterDesktop-v1.6.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/specter_desktop-v1.6.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
+
+<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
+
+<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
+
+<h2>specterd</h2>
+
+<p>It&#39;s a command-line program that only runs Specter server.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/specterd-v1.6.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/specterd-v1.6.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/specterd-v1.6.0-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
+
+<h2>Signatures and hashes</h2>
+
+<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.6.0/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @ben-kaufman&#39;s GPG key.
+You can get the public key from here: <a href="https://benkaufman.info/ben-kaufman.asc">https://benkaufman.info/ben-kaufman.asc</a>.
+It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x5D27DE564153F2BD">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD">keys.openpgp.org</a>.
+Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD</code>, short id: <code>5d27de564153f2bd</code></p>
+
+<h1>Release notes</h1>
+
+<ul>
+<li>Devices: Add Passport support #1343 (benk10)</li>
+<li>Devices: Improved Liquid support for Specter-DIY #1358 (Stepan Snigirev)</li>
+<li>Bugfix: Fix Liquid addresses UTXO count #1350 (benk10)</li>
+<li>Bugfix: Fix add keys #1355 (Tushar Singla)</li>
+<li>Bugfix: Fix key import on liquid #1370 (Stepan Snigirev)</li>
+<li>Bugfix: Fix imported labels not being saved #1362 (relativisticelectron)</li>
+<li>Bugfix: Fix add key functionality for hot wallets #1354 (Tushar Singla)</li>
+<li>Bugfix: Use the configured bitcoind data directory #1348 (Nadav Ivgi)</li>
+<li>Bugfix: Delete pending psbts if inputs were spent #1366 (Stepan Snigirev)</li>
+<li>Bugfix: Fix amount and label parsing #1368 (Stepan Snigirev)</li>
+<li>Bugfix: Fix assetlabel and default asset properties for bitcoin #1351 (Stepan Snigirev)</li>
+<li>Feature: Add Export Specter Format for wallets #1345 (Hani Mohammed)</li>
+<li>Feature: Add assets registry for Liquid wallets #1360 (benk10)</li>
+<li>Feature: Add single-key taproot support #1364 (Stepan Snigirev)</li>
+<li>Docs: run tests and avoid elm-tests if you don&#39;t want them #1326 (Kim Neunert)</li>
+<li>UI: More information while backing up specter data #1346 (Tushar Singla)</li>
+<li>UI: Warn user when hidden advanced fields are not empty #1356 (benk10)</li>
+<li>UI: Fetch asset labels #1352 (Stepan Snigirev)</li>
+<li>Chore: Bump path-parse from 1.0.6 to 1.0.7 in /pyinstaller/electron #1344 (dependabot[bot])</li>
+<li>Chore: pytest for Electrum address label import #1363 (relativisticelectron)</li>
+</ul>
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
