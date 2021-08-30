@@ -6,7 +6,104 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-30T10:54:18+00:00</updated>
+  <updated>2021-08-30T11:11:30+00:00</updated>
+  <entry>
+    <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.3</id>
+    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.3"/>
+    <summary>## Release notes
+This summer vacation release fixes some minor bugs.
+
+### Improvements
+- [Improved tooltip for signed and unsigned accounts](https://github.com/bisq-network/bisq/pull/5625)
+- [Allow LTC accounts to use SegWit addresses](https://github.com/bisq-network/bisq/pull/5639)
+
+### Bug fixes
+- [Fix issue with extraData field when editing offer](https://github.com/bisq-network/bisq/pull/5651)
+- [Fix issue for deprecated payment account imported from backup](https://github.com/bisq-network/bisq/pull/5644)
+- [Prevent negative suggested mining fee when burning BSQ for fees](https://github.com/bisq-network/bisq/pull/5643)
+- [Arbitration: Avoid creating more than one refund payout](https://github.com/bisq-network/bisq/pull/5649)
+- [Update @ripcurlx expired public key](https://github.com/bisq-network/bisq/pull/5640)
+
+### Development &amp; Documentation
+- [Pricenode: Remove the Exmo exchange as a price provider](https://github.com/bisq-network/bisq/pull/5671)
+- [Pricenode: Only bind jmxremote management interface to 127.0.0.1](https://github.com/bisq-network/bisq/pull/5670)
+
+### New Assets
+No new assets were added.
+
+## Verification
+
+For a detailed description on how to verify your Bisq installer please have a look at our wiki: https://bisq.wiki/Downloading_and_installing#Verify_installer_file
+
+Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
+Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
+
+Import the key:
+`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
+
+How to verify signatures?
+`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
+Replace BINARY with the file you downloaded (e.g. Bisq-1.7.3.dmg)
+
+Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.7.3-all.jar
+The output need to match the value from the Bisq-1.7.3.jar.txt file.
+
+*NEW: There are three hashes within the Bisq-1.7.3.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.3 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.*
+
+## Known issues with installation 
+
+### Windows:
+
+There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
+
+If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
+
+[1] Application directory (contains application installation files):
+C:\Users\&lt;username&gt;\AppData\Local\Bisq
+
+[2] Data directory (contains all Bisq data including wallet):
+C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
+
+
+### Linux:
+
+Hint for Debian users:
+If you have problems starting Bisq on Debian use: `/opt/bisq/bin/Bisq`
+
+If your Linux distro does not support .deb files please follow this instruction:
+```
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.7.3.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+```
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
+
+## Credits
+
+Thanks to everyone who directly contributed to this release:
+
+- @BtcContributor
+- @jmacxx 
+- @ripcurlx
+- @sqrrm
+- @xyzmaker123
+
+A special thanks to our first time contributors:
+- @xyzmaker123
+  - [Improved tooltip for signed and unsigned accounts](https://github.com/bisq-network/bisq/pull/5625)
+
+As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
+    <title>bisq-network/bisq: v1.7.3</title>
+    <updated>2021-08-28T17:03:06Z</updated>
+    <dc:date>2021-08-28T17:03:06Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.0"/>
@@ -552,7 +649,9 @@ Improvements:
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.2</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.2"/>
-    <summary>## Release notes
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+## Release notes
 This release reduces memory consumption and fixes a couple of minor issues that were introduced in the v1.7.0 hardfork.
 
 ### Improvements
@@ -6080,159 +6179,5 @@ A special shout out to @bitkarrot and @et_sam from the Hong Kong Bitcoin Associa
     <updated>2021-03-02T14:09:23Z</updated>
     <dc:date>2021-03-02T14:09:23Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.5.8</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.5.8"/>
-    <summary>**A newer version is already available! Please don’t use this version anymore.**
-
-This is a follow-up release that [obtains the minimum withdrawal fee from mempool.space](https://github.com/bisq-network/bisq/pull/5235) to avoid transactions being rejected by the bitcoin network for having too low a fee.
-
-Here are the release notes from v1.5.7:
-
-## Release notes
-This release improves DAO charts to make it easier to drill into the DAO economics, it ships improvements for Amazon eGift Cards, adds new SEPA countries and the possibility to try out pre-release versions without the need of manual downloads and verification (see settings)...and lots of bug fixes and improvements across the board.
-
-### DAO
-- [Improve facts and figures](https://github.com/bisq-network/bisq/pull/5156)
-
-### UI
-- [Add colored decimal places with zeros for dark mode](https://github.com/bisq-network/bisq/pull/5198)
-- [Fix stale trade statistics list view when new entries arrive](https://github.com/bisq-network/bisq/pull/5122)
-
-### Trading
-- [Specify Amazon eGift Card country](https://github.com/bisq-network/bisq/pull/5117)
-- [Add four SEPA payment account countries: AD, SM, VA, JE](https://github.com/bisq-network/bisq/pull/5123)
-- [&quot;Cash by Mail&quot; instructions improvements](https://github.com/bisq-network/bisq/pull/5114)
-- [Fix startup error: &quot;You must have bootstrapped before adding data to the P2P network&quot;](https://github.com/bisq-network/bisq/pull/5191)
-- [Fix NullPointerException in trader chat when trade contract is not set](https://github.com/bisq-network/bisq/pull/5175)
-- [Fix NullPointerException at offer entry when trading account is switched](https://github.com/bisq-network/bisq/pull/5172)
-- [Prevent erroneous logging of 'SignaturePubKey in message does not match'](https://github.com/bisq-network/bisq/pull/5196)
-
-### Wallet
-- [Check wallet is available and/or unlocked when creating an offer](https://github.com/bisq-network/bisq/pull/5126)
-- [Increase min withdrawal tx fee to 15 sats/vB](https://github.com/bisq-network/bisq/pull/5224)
-
-### Reliability
-- [New Feature: Pre-release notifications](https://github.com/bisq-network/bisq/pull/5108)
-- [Fix multiple request preliminary data calls](https://github.com/bisq-network/bisq/pull/5205)
-- [Fix initialization ordering issue](https://github.com/bisq-network/bisq/pull/5219)
-
-### Privacy
-- [Update to Tor version v0.4.5.6 ](https://github.com/bisq-network/bisq/pull/5245)
-
-### Mediation/Arbitration
-- [Refund agent payout to use withdrawal fee rate from settings](https://github.com/bisq-network/bisq/pull/5178)
-- [Manual payout tool: prevent absurdly high fee payout](https://github.com/bisq-network/bisq/pull/5099)
-- [Fix Mediator's name](https://github.com/bisq-network/bisq/pull/5167)
-
-### Performance
-- [Speed up deposit and transactions view loads](https://github.com/bisq-network/bisq/pull/5120)
-
-### Network
-- [Replace deprecated Bisq explorer settings](https://github.com/bisq-network/bisq/pull/5137)
-- [Show popup if no filter is delivered](https://github.com/bisq-network/bisq/pull/5136)
-
-### API
-- [Add api method 'stop'](https://github.com/bisq-network/bisq/pull/5202)
-- [Api v1 Beta Test Guide](https://github.com/bisq-network/bisq/pull/5159)
-- [Add core api method help docs](https://github.com/bisq-network/bisq/pull/5084)
-- [Add apitest rolling offer simulation script](https://github.com/bisq-network/bisq/pull/5129)
-- [Define gRPC api call rate constraints](https://github.com/bisq-network/bisq/pull/5103)
-- [Fix method help typos](https://github.com/bisq-network/bisq/pull/5157)
-- [Fix find pid on OSX](https://github.com/bisq-network/bisq/pull/5155)
-
-### Development
-- [Remove unused BalanceWithConfirmationTextField](https://github.com/bisq-network/bisq/pull/5134)
-- [Avoid reverse DNS lookup in BtcNodeConverterTest](https://github.com/bisq-network/bisq/pull/5083)
-- [Fix log message when opening browser link](https://github.com/bisq-network/bisq/pull/5111)
-
-### Assets
-No new assets.
-
-## Verification
-
-Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
-Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
-
-Import the key:
-`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
-
-How to verify signatures?
-`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
-Replace BINARY with the file you downloaded (e.g. Bisq-1.5.8.dmg)
-
-Verify jar file inside binary:
-You can verify on OSX the jar file with:
-`shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/Java/Bisq-1.5.8.jar`
-The output need to match the value from the Bisq-1.5.8.jar.txt file.
-
-
-## Known issues with installation 
-
-### macOS Catalina:
-
-&gt; Bisq can't be opened because Apple cannot check it for malicious software
-
-This happens the first time Bisq is run on macOS Catalina. It is because a new security feature in Catalina has newer requirements of how apps are packaged. We are working on ways to address this (see #3402 and #4196 for details).
-
-Workaround: Right click on the installed Bisq app &gt; Click `Open` (warning popup shown again, but with new button available) &gt; Click `Open`
-
-&gt; Bisq would like to receive keystrokes from any application.
-
-Discussed in issue https://github.com/bisq-network/bisq/issues/3373, you will see a permission request in the latest macOS version that Bisq wants to receive keystrokes from any application. Unfortunately that is an issue for all Java applications that are run on Catalina right now. We are investigating already how to solve this issue and will fix in one of our next updates.
-
-### Windows:
-
-There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
-
-If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
-
-[1] Application directory (contains application installation files):
-C:\Users\&lt;username&gt;\AppData\Local\Bisq
-
-[2] Data directory (contains all Bisq data including wallet):
-C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
-
-
-### Linux:
-
-Hint for Debian users:
-If you have problems starting Bisq on Debian use: `/opt/Bisq/Bisq`
-
-If your Linux distro does not support .deb files please follow this instruction:
-```
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.5.8.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-```
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Credits
-
-Thanks to everyone who directly contributed to this release:
-
-- @chimp1984
-- @ripcurlx 
-- @ghubstan
-- @huey735 
-- @jakub_cz
-- @jmacxx 
-- @sqrrm 
-- @stejbac
-- @bisqubutor
-
-A special thanks to our first time contributor:
-
-- @bisqubutor: [Add colored decimal places with zeros for dark mode](https://github.com/bisq-network/bisq/pull/5198)
-
-As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
-    <title>bisq-network/bisq: v1.5.8</title>
-    <updated>2021-03-01T14:26:42Z</updated>
-    <dc:date>2021-03-01T14:26:42Z</dc:date>
-  </entry>
-  <dc:date>2021-08-30T10:54:18+00:00</dc:date>
+  <dc:date>2021-08-30T11:11:30+00:00</dc:date>
 </feed>
