@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-08-31T02:44:39+00:00</updated>
+  <updated>2021-08-31T02:54:56+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.3</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.3"/>
@@ -6179,5 +6179,5 @@ A special shout out to @bitkarrot and @et_sam from the Hong Kong Bitcoin Associa
     <updated>2021-03-02T14:09:23Z</updated>
     <dc:date>2021-03-02T14:09:23Z</dc:date>
   </entry>
-  <dc:date>2021-08-31T02:44:39+00:00</dc:date>
+  <dc:date>2021-08-31T02:54:56+00:00</dc:date>
 </feed>
