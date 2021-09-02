@@ -6,7 +6,38 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-02T14:14:06+00:00</updated>
+  <updated>2021-09-02T14:26:55+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4"/>
+    <summary>* ADD: Open Receive screen on push 
+* FIX: Address list would crash on lack of item 
+* ADD: lightning address send support (closes #3690) 
+* FIX: Use preferred unit for min and max information 
+* FIX: Update UI for Send screen if new deeplink data is available 
+* FIX: Expand option was available even after use 
+* FIX: When selecting to send MAX on part or a X is shown in amount. #2412 
+* ADD: pending transaction status screen UX (closes #3183) 
+* ADD: onchain receive address now shows ETA on incomming transaction (rel #3183) 
+* FIX: Disable toggle if server is for Tor 
+* FIX: small RTL alignment issue #3677 
+* FIX: multisig cosigner type inferred from the path (closes #3653) 
+* FIX: Reordering Wallets UX 
+* FIX: If Tor is not supported, throw alert. 
+* FIX: If offline mode, disable import button 
+* FIX: ImagePicker wasnt processing selected asset 
+* REF: Localization for QR 
+* FIX: lnurl-pay comment 
+* ADD: Enhance offline mode UI 
+* ADD: Borders to Dynamic QR Code 
+* REF: Use ContextButton for advanced options 
+* ADD: lnurl-pay comments (closes #3617) 
+* FIX: single-address realm txs storage 
+* REF: store HD wallets txs in realm properly, one per row (closes #3357)</summary>
+    <title>BlueWallet/BlueWallet: v6.2.4</title>
+    <updated>2021-09-02T14:22:07Z</updated>
+    <dc:date>2021-09-02T14:22:07Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.2</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.2"/>
@@ -5992,164 +6023,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-03T12:38:54Z</updated>
     <dc:date>2021-03-03T12:38:54Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/eclair/releases/tag/v0.5.1</id>
-    <link href="https://github.com/ACINQ/eclair/releases/tag/v0.5.1"/>
-    <summary>This release includes many bug fixes and improvements, a new API and monitoring updates.
-It is fully compatible with 0.5.0 (and all previous versions of eclair).
-
-# Major changes
-
-### Improved startup performance
-
-When eclair starts up and restores channels, it makes a lot of calls to `bitcoind` to check the status of each channel.
-We improved our calling pattern to greatly reduce the number of calls made when some channels are closing.
-This is particularly noticeable when the mempool is quite full and you have many channels.
-
-See #1699 for details.
-
-### Gossip sync improvements
-
-Most of the bandwidth consumed by lightning nodes is due to gossip (syncing the network graph).
-When your eclair node has a lot of peers and doesn't use a `sync-whitelist`, you may end up syncing with many different peers and obtaining redundant information, thus wasting bandwidth.
-Eclair now only syncs with peers you have a channel with to reduce bandwidth usage.
-
-### Anchor outputs
-
-This release contains a lot of changes for the upcoming anchor outputs commitment format:
-
-- the feerate of the commitment transaction is kept low to improve off-chain channel usage
-- transactions with multiple inputs and outputs are now supported
-- CPFP and RBF utilities have been added to increase the feerate of commitment and htlc transactions
-
-While you can start experimenting with this commitment format, it is still not safe to activate in production.
-Anchor outputs is a complex and subtle change that requires re-architecting most of our transaction broadcasting logic and utxo management.
-We are making steady progress towards that, but we're not there yet.
-
-### Monitoring changes
-
-Kamon tracing has been removed in this release.
-It was too invasive in the codebase, generally unused and was costing some bandwidth.
-We've found that metrics and logs are enough to correctly monitor your eclair node.
-
-Additional metrics to monitor transaction signing have been added.
-The rate of transaction signatures is a good indicator of how busy your node is.
-
-### API changes
-
-This release adds a new path-finding API:
-
-- `findroutebetweennodes` lets you inspect the network graph by looking for routes between two nodes (whereas `findroute` only allowed finding routes between your node and a remote node)
-
-Head over to our [API documentation](https://acinq.github.io/eclair) for more details.
-
-### Miscellaneous improvements and bug fixes
-
-- Correctly sort addresses in its `node_announcement` (#1693)
-- Allow 2016 blocks before unconfirmed channels are forgotten (#1692)
-- Re-emit private channel updates more frequently, improving payments to mobile wallets (#1671)
-- Correctly handle channel failures in private routing hints, fixing an edge case for payments to mobile wallets (#1675)
-- Drop support for `initial_routing_sync`: this was bandwidth-heavy and now unnecessary (#1683)
-- Fix an MPP-send edge-case (#1685)
-- Fix race condition between outgoing payment and peer disconnection (#1688)
-- Fix race condition between `update_fee` and `shutdown`, which could lead to channels stuck in `shutdown` (#1661)
-- Ensure transactions we publish always meet bitcoin's `min_relay_fee` (#1687)
-- Fix an edge case where an HTLC failure was not correctly relayed upstream if `revoke_and_ack` had not been received (#1706)
-
-# Verifying signatures
-
-You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-
-- from our website: https://acinq.co/pgp/drouinf.asc
-- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
-
-To import our signing key:
-
-```sh
-$ gpg --import drouinf.asc
-```
-
-To verify the release file checksums and signatures:
-
-```sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```
-
-# Building
-
-Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):
-
-- Ubuntu 19.10
-- AdoptOpenJDK 11.0.6
-- Maven 3.6.3
-
-Use the following command to generate the eclair-node package:
-
-```sh
-mvn clean install -DskipTests
-```
-
-That should generate `eclair-node/target/eclair-node-0.5.1-XXXXXXX-bin.zip` with sha256 checksums that match the one we provide and sign in `SHA256SUMS.asc`
-
-(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.
-
-# Upgrading
-
-This release is fully compatible with Eclair v0.5.0. You don't need to close your channels, just stop eclair, upgrade and restart.
-
-# Changelog
-
-- 923ca26f Set version to 0.5.1-SNAPSHOT (#1651)
-- b75f6c36 Fix duplicate commit id in awseb bundle (#1650)
-- 5f9d0d91 Relax cltv-expiry-delta requirement when selecting a channel to relay (#1655)
-- dd8975ae Make ChannelVersion methods public (#1656)
-- 7343283f Add test for duplicate temporary channel id (#1660)
-- 629c2e69 Fix rare race conditions in integration tests (#1653)
-- b477d179 Update build instructions for front (#1658)
-- e369ba9a More aggressively re-emit private channel updates (#1671)
-- d40b321d Blockchain watchdogs use unique actor name (#1667)
-- 9c4ab7d9 Fix HTLC fulfill race condition in integration spec (#1666)
-- 81f15aab Refactor and improve some channel tests (#1654)
-- 54ca2922 Remove kamon tracing (#1662)
-- 34e901db Clarify default relay fee change (#1673)
-- c75d9143 Fix failing reconnection tests (#1678)
-- 0127ace4 Remote failure updating routing hint (#1675)
-- ac054a2b Only sync with channel peers (#1587)
-- d0531883 Truncate hex strings in front logs (#1679)
-- 49023625 Refactor channel test helpers (#1682)
-- f241ef93 Remove support for initial_routing_sync (#1683)
-- 63d972bd Fix a few typos (#1684)
-- 5d3958dd Fix MPP path-finding edge case (#1685)
-- 15c1837d Add tx signing metrics (#1659)
-- 72179de0 PaymentLifecycle handle disconnected peers (#1688)
-- fdeb3ce7 Correctly set gossip sync_complete (#1668)
-- 36e8c056 Shutdown and UpdateFee should not be intertwined (#1661)
-- 2a359c6a Publish txs with min-relay-fee met (#1687)
-- 82e5b596 Sort addresses in node announcement (#1693)
-- 3a94a804 Reject unreasonable remote dust limit (#1694)
-- fdb57b43 Find route between nodes (#1695)
-- 9618a6a7 Add a maximum fee threshold for anchor outputs (#1672)
-- ab89851c Relax single tx input requirements (#1677)
-- 08351508 Update funding timeout fundee (#1692)
-- d9c0b862 Refactor bitcoin clients (#1697)
-- 5163749a [eclair-cli] Use multiplatform escape sequence
-- fa759f1e Fix PaymentLifecycle warning (#1703)
-- c1bf9bd1 Optimize watching for spending txs (#1699)
-- d02b900a Fix annoying compiler warning (#1704)
-- a3c477e3 Address all intellij warnings for Channel.scala (#1705)
-- bf2a35f7 Relay partially failed htlcs when closing (#1706)
-- 5d662fc3 Set anchor output feerates when force-closing (#1702)
-- 8065d0bb Add a serializer for `DoSync` (#1708)
-- 8d4da2fa Improve channel state tests (#1709)
-- 26468862 fixup! Improve channel state tests (#1709) (#1712)
-- 34796691 Disable jdbc instrumentation by default (#1713)
-- 98bb7be7 Set version to 0.5.1 (#1707)
-
-Thanks to our new contributors, @tompro and @ariskk!</summary>
-    <title>ACINQ/eclair: v0.5.1</title>
-    <updated>2021-03-03T12:33:57Z</updated>
-    <dc:date>2021-03-03T12:33:57Z</dc:date>
-  </entry>
-  <dc:date>2021-09-02T14:14:06+00:00</dc:date>
+  <dc:date>2021-09-02T14:26:55+00:00</dc:date>
 </feed>

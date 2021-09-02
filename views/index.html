@@ -38,6 +38,47 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4">v6.2.4</a>
+						    </h2>
+							<p class="card-text">Published: 2021-09-02 14:22:07 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><ul>
+<li>ADD: Open Receive screen on push </li>
+<li>FIX: Address list would crash on lack of item </li>
+<li>ADD: lightning address send support (closes #3690) </li>
+<li>FIX: Use preferred unit for min and max information </li>
+<li>FIX: Update UI for Send screen if new deeplink data is available </li>
+<li>FIX: Expand option was available even after use </li>
+<li>FIX: When selecting to send MAX on part or a X is shown in amount. #2412 </li>
+<li>ADD: pending transaction status screen UX (closes #3183) </li>
+<li>ADD: onchain receive address now shows ETA on incomming transaction (rel #3183) </li>
+<li>FIX: Disable toggle if server is for Tor </li>
+<li>FIX: small RTL alignment issue #3677 </li>
+<li>FIX: multisig cosigner type inferred from the path (closes #3653) </li>
+<li>FIX: Reordering Wallets UX </li>
+<li>FIX: If Tor is not supported, throw alert. </li>
+<li>FIX: If offline mode, disable import button </li>
+<li>FIX: ImagePicker wasnt processing selected asset </li>
+<li>REF: Localization for QR </li>
+<li>FIX: lnurl-pay comment </li>
+<li>ADD: Enhance offline mode UI </li>
+<li>ADD: Borders to Dynamic QR Code </li>
+<li>REF: Use ContextButton for advanced options </li>
+<li>ADD: lnurl-pay comments (closes #3617) </li>
+<li>FIX: single-address realm txs storage </li>
+<li>REF: store HD wallets txs in realm properly, one per row (closes #3357)</li>
+</ul>
+</p>
+					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.2">v1.2.2</a>
 						    </h2>
 							<p class="card-text">Published: 2021-08-31 07:26:13 UTC</p>
@@ -7293,185 +7334,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.5.9" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/eclair">ACINQ/eclair</a>: <a href="https://github.com/ACINQ/eclair/releases/tag/v0.5.1">v0.5.1</a>
-						    </h2>
-							<p class="card-text">Published: 2021-03-03 12:33:57 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This release includes many bug fixes and improvements, a new API and monitoring updates.
-It is fully compatible with 0.5.0 (and all previous versions of eclair).</p>
-
-<h1>Major changes</h1>
-
-<h3>Improved startup performance</h3>
-
-<p>When eclair starts up and restores channels, it makes a lot of calls to <code>bitcoind</code> to check the status of each channel.
-We improved our calling pattern to greatly reduce the number of calls made when some channels are closing.
-This is particularly noticeable when the mempool is quite full and you have many channels.</p>
-
-<p>See #1699 for details.</p>
-
-<h3>Gossip sync improvements</h3>
-
-<p>Most of the bandwidth consumed by lightning nodes is due to gossip (syncing the network graph).
-When your eclair node has a lot of peers and doesn&#39;t use a <code>sync-whitelist</code>, you may end up syncing with many different peers and obtaining redundant information, thus wasting bandwidth.
-Eclair now only syncs with peers you have a channel with to reduce bandwidth usage.</p>
-
-<h3>Anchor outputs</h3>
-
-<p>This release contains a lot of changes for the upcoming anchor outputs commitment format:</p>
-
-<ul>
-<li>the feerate of the commitment transaction is kept low to improve off-chain channel usage</li>
-<li>transactions with multiple inputs and outputs are now supported</li>
-<li>CPFP and RBF utilities have been added to increase the feerate of commitment and htlc transactions</li>
-</ul>
-
-<p>While you can start experimenting with this commitment format, it is still not safe to activate in production.
-Anchor outputs is a complex and subtle change that requires re-architecting most of our transaction broadcasting logic and utxo management.
-We are making steady progress towards that, but we&#39;re not there yet.</p>
-
-<h3>Monitoring changes</h3>
-
-<p>Kamon tracing has been removed in this release.
-It was too invasive in the codebase, generally unused and was costing some bandwidth.
-We&#39;ve found that metrics and logs are enough to correctly monitor your eclair node.</p>
-
-<p>Additional metrics to monitor transaction signing have been added.
-The rate of transaction signatures is a good indicator of how busy your node is.</p>
-
-<h3>API changes</h3>
-
-<p>This release adds a new path-finding API:</p>
-
-<ul>
-<li><code>findroutebetweennodes</code> lets you inspect the network graph by looking for routes between two nodes (whereas <code>findroute</code> only allowed finding routes between your node and a remote node)</li>
-</ul>
-
-<p>Head over to our <a href="https://acinq.github.io/eclair">API documentation</a> for more details.</p>
-
-<h3>Miscellaneous improvements and bug fixes</h3>
-
-<ul>
-<li>Correctly sort addresses in its <code>node_announcement</code> (#1693)</li>
-<li>Allow 2016 blocks before unconfirmed channels are forgotten (#1692)</li>
-<li>Re-emit private channel updates more frequently, improving payments to mobile wallets (#1671)</li>
-<li>Correctly handle channel failures in private routing hints, fixing an edge case for payments to mobile wallets (#1675)</li>
-<li>Drop support for <code>initial_routing_sync</code>: this was bandwidth-heavy and now unnecessary (#1683)</li>
-<li>Fix an MPP-send edge-case (#1685)</li>
-<li>Fix race condition between outgoing payment and peer disconnection (#1688)</li>
-<li>Fix race condition between <code>update_fee</code> and <code>shutdown</code>, which could lead to channels stuck in <code>shutdown</code> (#1661)</li>
-<li>Ensure transactions we publish always meet bitcoin&#39;s <code>min_relay_fee</code> (#1687)</li>
-<li>Fix an edge case where an HTLC failure was not correctly relayed upstream if <code>revoke_and_ack</code> had not been received (#1706)</li>
-</ul>
-
-<h1>Verifying signatures</h1>
-
-<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:</p>
-
-<ul>
-<li>from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a></li>
-<li>from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></li>
-</ul>
-
-<p>To import our signing key:</p>
-
-<p><code>sh
-$ gpg --import drouinf.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:</p>
-
-<p><code>sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-
-<h1>Building</h1>
-
-<p>Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):</p>
-
-<ul>
-<li>Ubuntu 19.10</li>
-<li>AdoptOpenJDK 11.0.6</li>
-<li>Maven 3.6.3</li>
-</ul>
-
-<p>Use the following command to generate the eclair-node package:</p>
-
-<p><code>sh
-mvn clean install -DskipTests
-</code></p>
-
-<p>That should generate <code>eclair-node/target/eclair-node-0.5.1-XXXXXXX-bin.zip</code> with sha256 checksums that match the one we provide and sign in <code>SHA256SUMS.asc</code></p>
-
-<p>(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.</p>
-
-<h1>Upgrading</h1>
-
-<p>This release is fully compatible with Eclair v0.5.0. You don&#39;t need to close your channels, just stop eclair, upgrade and restart.</p>
-
-<h1>Changelog</h1>
-
-<ul>
-<li>923ca26f Set version to 0.5.1-SNAPSHOT (#1651)</li>
-<li>b75f6c36 Fix duplicate commit id in awseb bundle (#1650)</li>
-<li>5f9d0d91 Relax cltv-expiry-delta requirement when selecting a channel to relay (#1655)</li>
-<li>dd8975ae Make ChannelVersion methods public (#1656)</li>
-<li>7343283f Add test for duplicate temporary channel id (#1660)</li>
-<li>629c2e69 Fix rare race conditions in integration tests (#1653)</li>
-<li>b477d179 Update build instructions for front (#1658)</li>
-<li>e369ba9a More aggressively re-emit private channel updates (#1671)</li>
-<li>d40b321d Blockchain watchdogs use unique actor name (#1667)</li>
-<li>9c4ab7d9 Fix HTLC fulfill race condition in integration spec (#1666)</li>
-<li>81f15aab Refactor and improve some channel tests (#1654)</li>
-<li>54ca2922 Remove kamon tracing (#1662)</li>
-<li>34e901db Clarify default relay fee change (#1673)</li>
-<li>c75d9143 Fix failing reconnection tests (#1678)</li>
-<li>0127ace4 Remote failure updating routing hint (#1675)</li>
-<li>ac054a2b Only sync with channel peers (#1587)</li>
-<li>d0531883 Truncate hex strings in front logs (#1679)</li>
-<li>49023625 Refactor channel test helpers (#1682)</li>
-<li>f241ef93 Remove support for initial<em>routing</em>sync (#1683)</li>
-<li>63d972bd Fix a few typos (#1684)</li>
-<li>5d3958dd Fix MPP path-finding edge case (#1685)</li>
-<li>15c1837d Add tx signing metrics (#1659)</li>
-<li>72179de0 PaymentLifecycle handle disconnected peers (#1688)</li>
-<li>fdeb3ce7 Correctly set gossip sync_complete (#1668)</li>
-<li>36e8c056 Shutdown and UpdateFee should not be intertwined (#1661)</li>
-<li>2a359c6a Publish txs with min-relay-fee met (#1687)</li>
-<li>82e5b596 Sort addresses in node announcement (#1693)</li>
-<li>3a94a804 Reject unreasonable remote dust limit (#1694)</li>
-<li>fdb57b43 Find route between nodes (#1695)</li>
-<li>9618a6a7 Add a maximum fee threshold for anchor outputs (#1672)</li>
-<li>ab89851c Relax single tx input requirements (#1677)</li>
-<li>08351508 Update funding timeout fundee (#1692)</li>
-<li>d9c0b862 Refactor bitcoin clients (#1697)</li>
-<li>5163749a [eclair-cli] Use multiplatform escape sequence</li>
-<li>fa759f1e Fix PaymentLifecycle warning (#1703)</li>
-<li>c1bf9bd1 Optimize watching for spending txs (#1699)</li>
-<li>d02b900a Fix annoying compiler warning (#1704)</li>
-<li>a3c477e3 Address all intellij warnings for Channel.scala (#1705)</li>
-<li>bf2a35f7 Relay partially failed htlcs when closing (#1706)</li>
-<li>5d662fc3 Set anchor output feerates when force-closing (#1702)</li>
-<li>8065d0bb Add a serializer for <code>DoSync</code> (#1708)</li>
-<li>8d4da2fa Improve channel state tests (#1709)</li>
-<li>26468862 fixup! Improve channel state tests (#1709) (#1712)</li>
-<li>34796691 Disable jdbc instrumentation by default (#1713)</li>
-<li>98bb7be7 Set version to 0.5.1 (#1707)</li>
-</ul>
-
-<p>Thanks to our new contributors, @tompro and @ariskk!</p>
-</p>
-					    <a href="https://github.com/ACINQ/eclair" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/eclair/releases/tag/v0.5.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
