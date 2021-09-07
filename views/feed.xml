@@ -6,7 +6,45 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-07T08:42:36+00:00</updated>
+  <updated>2021-09-07T08:55:15+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.17</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.17"/>
+    <summary>## Main changes
+
+### Manual input support and sending to Lightning addresses
+
+You can now pay [lightning addresses over LNUrl-pay](https://lightningaddress.com/) with Phoenix. Go to the Send screen &gt; Manual input to enter an address. You can also manually enter a Bitcoin address or a BOLT11 invoice if you want to.
+
+### Arabic translation
+
+The app has been translated to Arabic. Thanks @EZ0010 for the translation, and @Jean-Gray for the review.
+
+### Full list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.15...v1.4.17
+- **core**: https://github.com/ACINQ/eclair/compare/v0.4.13-android-phoenix...v0.4.14-android-phoenix
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: https://acinq.co/pgp/padioupm.asc
+- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import padioupm.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: v1.4.17</title>
+    <updated>2021-09-07T08:42:54Z</updated>
+    <dc:date>2021-09-07T08:42:54Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.11</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11"/>
@@ -5835,47 +5873,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-03-04T15:20:44Z</updated>
     <dc:date>2021-03-04T15:20:44Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.7</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.7"/>
-    <summary>## Main changes
-
-### Improve LNURL error feedback
-
-Errors returned by LNURL services were not properly handled and information was lost, causing confusion, especially for LNURL-withdraw.
-
-### Notify user when channel opening is rejected
-
-If a new channel must be created to receive an incoming payment but the amount is below the channel creation threshold, a notification is displayed. Note that this is not enabled yet because changes on the peer side are also needed.
-
--- edit: this is now enabled.
-
-## Complete list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.6...v1.4.7
-- **core**: https://github.com/ACINQ/eclair/compare/v0.4.8-android-phoenix...v0.4.9-android-phoenix
-
-Thanks again @bitcoinuser for updating the Portuguese-Brazilian translation.
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: https://acinq.co/pgp/padioupm.asc
-- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import padioupm.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: v1.4.7</title>
-    <updated>2021-03-04T15:20:33Z</updated>
-    <dc:date>2021-03-04T15:20:33Z</dc:date>
-  </entry>
-  <dc:date>2021-09-07T08:42:36+00:00</dc:date>
+  <dc:date>2021-09-07T08:55:15+00:00</dc:date>
 </feed>

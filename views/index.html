@@ -38,6 +38,54 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.17">v1.4.17</a>
+						    </h2>
+							<p class="card-text">Published: 2021-09-07 08:42:54 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Main changes</h2>
+
+<h3>Manual input support and sending to Lightning addresses</h3>
+
+<p>You can now pay <a href="https://lightningaddress.com/">lightning addresses over LNUrl-pay</a> with Phoenix. Go to the Send screen &gt; Manual input to enter an address. You can also manually enter a Bitcoin address or a BOLT11 invoice if you want to.</p>
+
+<h3>Arabic translation</h3>
+
+<p>The app has been translated to Arabic. Thanks @EZ0010 for the translation, and @Jean-Gray for the review.</p>
+
+<h3>Full list of changes</h3>
+
+<ul>
+<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.15...v1.4.17">https://github.com/ACINQ/phoenix/compare/v1.4.15...v1.4.17</a></li>
+<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.13-android-phoenix...v0.4.14-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.13-android-phoenix...v0.4.14-android-phoenix</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
+- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import padioupm.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.17" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/unchained-capital/caravan">unchained-capital/caravan</a>: <a href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11">v0.3.11</a>
 						    </h2>
 							<p class="card-text">Published: 2021-09-02 20:15:44 UTC</p>
@@ -7095,58 +7143,6 @@ $ sha256sum -c SHA256SUMS.stripped
 </p>
 					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.7">v1.4.7</a>
-						    </h2>
-							<p class="card-text">Published: 2021-03-04 15:20:33 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>Main changes</h2>
-
-<h3>Improve LNURL error feedback</h3>
-
-<p>Errors returned by LNURL services were not properly handled and information was lost, causing confusion, especially for LNURL-withdraw.</p>
-
-<h3>Notify user when channel opening is rejected</h3>
-
-<p>If a new channel must be created to receive an incoming payment but the amount is below the channel creation threshold, a notification is displayed. Note that this is not enabled yet because changes on the peer side are also needed.</p>
-
-<p>-- edit: this is now enabled.</p>
-
-<h2>Complete list of changes</h2>
-
-<ul>
-<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.6...v1.4.7">https://github.com/ACINQ/phoenix/compare/v1.4.6...v1.4.7</a></li>
-<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.8-android-phoenix...v0.4.9-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.8-android-phoenix...v0.4.9-android-phoenix</a></li>
-</ul>
-
-<p>Thanks again @bitcoinuser for updating the Portuguese-Brazilian translation.</p>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
-- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import padioupm.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
