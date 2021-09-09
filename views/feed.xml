@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-09T07:45:43+00:00</updated>
+  <updated>2021-09-09T07:53:42+00:00</updated>
   <entry>
     <id>https://github.com/mempool/mempool/releases/tag/v2.2.2</id>
     <link href="https://github.com/mempool/mempool/releases/tag/v2.2.2"/>
@@ -5865,5 +5865,5 @@ Build with .NET Core 3.1.407-win-x64.
     <updated>2021-03-11T14:50:16Z</updated>
     <dc:date>2021-03-11T14:50:16Z</dc:date>
   </entry>
-  <dc:date>2021-09-09T07:45:43+00:00</dc:date>
+  <dc:date>2021-09-09T07:53:42+00:00</dc:date>
 </feed>
