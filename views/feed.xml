@@ -6,7 +6,23 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-09T09:48:18+00:00</updated>
+  <updated>2021-09-09T09:53:44+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.5</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.5"/>
+    <summary>* ADD: support for truncated BIP39 wordlist (3-4 chars per word)
+* FIX: Lightning address error when typing anything after @
+* FIX: storage issues
+* FIX: Cosign for multisig was not a visible option
+* FIX: Localize LN Invoice Expire time
+* FIX: Unit wasnt defaulting to BTC
+* FIX: localizations ar, es, he, ko, de, fa_IR
+* REF: Update details UI to match design
+* REF: Update payjoin-client</summary>
+    <title>BlueWallet/BlueWallet: v6.2.5</title>
+    <updated>2021-09-09T09:48:56Z</updated>
+    <dc:date>2021-09-09T09:48:56Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/mempool/mempool/releases/tag/v2.2.2</id>
     <link href="https://github.com/mempool/mempool/releases/tag/v2.2.2"/>
@@ -5824,46 +5840,5 @@ Build with .NET Core 3.1.407-win-x64.
     <updated>2021-03-15T18:00:02Z</updated>
     <dc:date>2021-03-15T18:00:02Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.0</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.0.7.0"/>
-    <summary>See [blog post](https://blog.btcpayserver.org/btcpay-server-v1-0-7-0/) for more details.
-
-### Features:
-
-* New Wallet Setup UI (see #2164, #2296) @dennisreimann @dstrukt
-* Greenfield: New on-chain wallet API @Kukks
-* Greenfield: Ability to configure store's lightning payment methods @Kukks
-* Allow an invoice to be marked invalid/complete even from the `new` state @Kukks
-* Point of Sale and Crowdfund: Allow custom buy button text (see #2299) @dennisreimann
-* Specter wallet file import (see #2252) @dennisreimann
-
-### Improvements:
-
-* Reenabling uppercase BECH32 in QR codes (see #2110) @rockstardev
-* If a store is set to internal node, use &quot;Internal Node&quot; as connection string rather than the actual connection string. @NicolasDorier
-* Improve Policies options UX in server settings (see #2307) @dstrukt @dennisreimann
-* Fix view payment request loading spinner alignment @bumbummen99 
-* Fix cart pay button loading spinner vertical alignment @bumbummen99
-* Invoices list: Remove icon indicator for onchain (see #2240) @dennisreimann
-* Login: Improve tab navigation for input fields (see #2258) @dennisreimann
-
-### Bug fixes:
-
-* Hovering the mouse pointer on invoice logs row would make them unreadable @bolatovumar
-* Remove exchange rates that lost support in Coingecko @NicolasDorier
-* Get invoice in greenfield was crashing if invoiceId did not exist @NicolasDorier
-* Getting a file from the storage service which did not exist would return http 500 instead of 404 @NicolasDorier
-* Fix direct URL for local storage with custom root path #2318 @bolatovumar
-* The pay button would not show up properly on some websites @bolatovumar
-* Profile email change should check email's availability @NicolasDorier
-* Fixed mysql/sqlite support @ketominer
-* Checkout: Fix scan/copy tab sizes with varying content (see #2264) @dennisreimann
-* Greenfield: Lightning API would return HTTP 500 if store owner did not set the connection string @dennisreimann
-* Point of Sale: The custom price was not properly working (see #2248) @bolatovumar</summary>
-    <title>btcpayserver/btcpayserver: v1.0.7.0</title>
-    <updated>2021-03-11T14:50:16Z</updated>
-    <dc:date>2021-03-11T14:50:16Z</dc:date>
-  </entry>
-  <dc:date>2021-09-09T09:48:18+00:00</dc:date>
+  <dc:date>2021-09-09T09:53:44+00:00</dc:date>
 </feed>
