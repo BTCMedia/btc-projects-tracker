@@ -6,7 +6,30 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-09T07:23:56+00:00</updated>
+  <updated>2021-09-09T07:40:32+00:00</updated>
+  <entry>
+    <id>https://github.com/mempool/mempool/releases/tag/v2.2.2</id>
+    <link href="https://github.com/mempool/mempool/releases/tag/v2.2.2"/>
+    <summary>This is a minor release for fixes and minor enhancements.
+All users are encouraged to upgrade.
+
+Changelog:
+
+* Fix memory leaks in the frontend causing webapp to crash (#755)
+* Fix median fee not displayed when viewing a block page (#749)
+* Fix incorrect API documentation and related examples (#716)
+* Fix displaying significant digits of transaction fee (#722)
+* Fix search bar addresses types and case sensitivity (#765)
+* Fix current difficulty period progress calculation (#746)
+* Add block navigation arrows for next and previous (#710)
+* Add base module setting for Liquid / Bisq builds (#669)
+
+The complete changelog is available at:
+https://github.com/mempool/mempool/compare/v2.2.1...v2.2.2</summary>
+    <title>mempool/mempool: v2.2.2</title>
+    <updated>2021-09-09T07:36:28Z</updated>
+    <dc:date>2021-09-09T07:36:28Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.17</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.17"/>
@@ -5842,36 +5865,5 @@ Build with .NET Core 3.1.407-win-x64.
     <updated>2021-03-11T14:50:16Z</updated>
     <dc:date>2021-03-11T14:50:16Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.8</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.8"/>
-    <summary>## Main changes
-
-The channel creation fee for pay-to-open has been increased: it's still 0.1% but there is now a 1000 sat minimum. The manual confirmation dialog and asynchronous pay-to-open logic have been removed. The FTUE page regarding the channel opening cost has been updated as well as the swap-in dialog so that we can display this new fee minimum value.
-
-## Complete list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.7...v1.4.8
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: https://acinq.co/pgp/padioupm.asc
-- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import padioupm.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: v1.4.8</title>
-    <updated>2021-03-04T15:20:44Z</updated>
-    <dc:date>2021-03-04T15:20:44Z</dc:date>
-  </entry>
-  <dc:date>2021-09-09T07:23:56+00:00</dc:date>
+  <dc:date>2021-09-09T07:40:32+00:00</dc:date>
 </feed>
