@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-09T14:26:34+00:00</updated>
+  <updated>2021-09-09T14:36:08+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.5</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.5"/>
@@ -5840,5 +5840,5 @@ Build with .NET Core 3.1.407-win-x64.
     <updated>2021-03-15T18:00:02Z</updated>
     <dc:date>2021-03-15T18:00:02Z</dc:date>
   </entry>
-  <dc:date>2021-09-09T14:26:34+00:00</dc:date>
+  <dc:date>2021-09-09T14:36:08+00:00</dc:date>
 </feed>
