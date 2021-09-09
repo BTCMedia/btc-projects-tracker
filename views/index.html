@@ -38,6 +38,36 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.3">v1.2.3</a>
+						    </h2>
+							<p class="card-text">Published: 2021-09-09 13:18:45 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This release fixes three XSS vulnerabilities. Those vulnerabilities only impacts shared BTCPay instances.
+Special thanks to Ajmal &quot;@b3ef&quot; Aboobacker and Abdul &quot;@b1nslashsh&quot; muhaimin for finding them who contacted us through @huntrdev.
+See <a href="https://huntr.dev/bounties/ffabdac8-7280-4806-b70c-9b0d1aafbb6e/">1</a>, <a href="https://www.huntr.dev/bounties/32e30ecf-31fa-45f6-8552-47250ef0e613/">2</a> and <a href="https://huntr.dev/bounties/0fcdee5f-1f07-47ce-b650-ea8b4a7d35d8/">3</a>.</p>
+
+<h1>Bug fixes:</h1>
+
+<ul>
+<li>Use CSP to prevent future XSS attacks. (#2856, #2863) @NicolasDorier</li>
+<li>Fix XSS vulnerabilities in summernote, the rich text editor (#2859) @dennisreimann</li>
+<li>The page could crash if the user clicks too many time on Notificate &#39;Mark as Seen&#39; @NicolasDorier </li>
+<li>Fix plugins page crashing @Kukks</li>
+<li>Fix page crash of the perk editor in the crowdfund settings when the title is not set @dennisreimann</li>
+<li>Do not generate payment methods when 0 amount invoice (#2776)</li>
+<li>When using the BTCPay Vault, some hardware wallet types were considered unknown @NicolasDorier</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.5">v6.2.5</a>
 						    </h2>
 							<p class="card-text">Published: 2021-09-09 09:48:56 UTC</p>
@@ -7046,66 +7076,6 @@ $ ./bwt-0.1.5-x86</em>64-linux/bwt --xpub <xpub> ...
 </p>
 					    <a href="https://github.com/zkSNACKs/WalletWasabi" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bitcoin-core/HWI">bitcoin-core/HWI</a>: <a href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.0">2.0.0</a>
-						    </h2>
-							<p class="card-text">Published: 2021-03-15 18:00:02 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Also available on <a href="https://pypi.org/project/hwi/">PyPi</a> and can be installed with <code>pip install -U hwi</code></p>
-
-<h2>Added</h2>
-
-<ul>
-<li>BitBox02 multisig signing.</li>
-<li>Documentation automatically generated with sphinx and hosted on <a href="https://hwi.readthedocs.io">https://hwi.readthedocs.io</a>.</li>
-<li>Support for Python 3.9.</li>
-<li>Trezor allows transactions with OP_RETURN outputs.</li>
-<li>Full type annotations within <code>hwilib</code> and type checking.</li>
-<li>Updated documentation for Bitcoin Core descriptor wallets.</li>
-<li>Device support policy</li>
-<li>Enforce that the Ledger is in either the Bitcoin or Bitcoin Testnet apps.</li>
-</ul>
-
-<h2>Changed</h2>
-
-<ul>
-<li><code>--sh_wpkh</code> and <code>--wpkh</code> options have been replaced with <code>--addr-type</code> with the options <code>legacy</code>, <code>sh_wit</code>, and <code>wit</code>.</li>
-<li><code>--testnet</code> option replaced with <code>--chain</code> with the options <code>main</code>, <code>test</code>, <code>signet</code>, and <code>regtest</code>.</li>
-<li>Overhauled descriptors implementation to be similar to Bitcoin Core&#39;s descriptors implementation.</li>
-<li>Replaced <code>HardwareWalletClient.display_address</code> with <code>display_singlesig_address</code> and <code>display_multisig_address</code>.</li>
-<li>Overhauled <code>HardwareWalletClient</code> functions to return the correct objects rather than string dictionaries.</li>
-<li>Raise errors and exceptions instead of returning string dictionary containing error.</li>
-<li><code>bech32.py</code>, <code>base58.py</code>, <code>cli.py</code>, and <code>gui.py</code> are made internal modules.</li>
-<li><code>serializations.py</code> is split into <code>tx.py</code>, <code>psbt.py</code> with some functions made internal with <code>_script.py</code> and <code>_serialize.py</code>.</li>
-<li><code>getmasterxpub</code> takes options for chain type, address type, and BIP 44 account in order to provide the master xpub accordingly.</li>
-</ul>
-
-<h2>Removed</h2>
-
-<ul>
-<li>Removed option to provide redeem script to <code>displayaddress</code>.</li>
-</ul>
-
-<h2>Fixed</h2>
-
-<ul>
-<li>Fixed Ledger change path detection.</li>
-<li>Fixed Ledger message signing when the signature is shorter than expected.</li>
-<li>Fixed Trezor One pin sending when a passphrase is expected.</li>
-<li>Fixed handling of <code>sortedmulti()</code> descriptors. Some devices which only supported key sorting will be no longer allow <code>multi()</code> descriptors. The multisigs that devices use when given a <code>sortedmulti()</code> descriptor will now match what Bitcoin Core derives for those descriptors.</li>
-<li>Several fixes to device enumeration.</li>
-<li><code>installudevrules</code> will search for the correct binaries in the PATH rather than assuming their locations.</li>
-</ul>
-</p>
-					    <a href="https://github.com/bitcoin-core/HWI" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
