@@ -38,6 +38,24 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.2">v0.4.2</a>
+						    </h2>
+							<p class="card-text">Published: 2021-09-13 15:31:28 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>Umbrel 0.4.2 brings the latest versions of Samourai Server, Mempool, Home Assistant, BTCPay Server, Nextcloud, BTC RPC Explorer, Pi-hole, Synapse, Element, LNbits, Gitea, code-server, and a brand new app — Squeaknode, to the Umbrel App Store, along with an updated Electrum server, performance upgrades, bug fixes, and more.</p>
+
+<p>If you face any difficulties while updating, please message us on Telegram: <a href="https://t.me/getumbrel">https://t.me/getumbrel</a></p>
+</p>
+					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/BlueWallet/rn-ldk">BlueWallet/rn-ldk</a>: <a href="https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.13">v0.2.13</a>
 						    </h2>
 							<p class="card-text">Published: 2021-09-10 20:19:54 UTC</p>
@@ -6952,93 +6970,6 @@ $ ./bwt-0.1.5-x86</em>64-linux/bwt --xpub <xpub> ...
 </p>
 					    <a href="https://github.com/zkSNACKs/WalletWasabi" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bwt-dev/bwt">bwt-dev/bwt</a>: <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.3">v0.2.3</a>
-						    </h2>
-							<p class="card-text">Published: 2021-03-17 04:02:43 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>Changelog</h3>
-
-<ul>
-<li>New <code>--prune-until &lt;target&gt;</code> option to automatically prune the chain up to the given target (height, unix timestamp or YYYY-MM-DD formatted date)</li>
-</ul>
-
-<p>Require configuring bitcoind with <code>prune=1</code> to allow manual pruning via the RPC.</p>
-
-<ul>
-<li>New <code>--no-wait-sync</code> option to allow importing addresses without waiting for bitcoind to finish syncing first</li>
-</ul>
-
-<p>Useful for tracking wallets during the IBD of a pruned node, so transactions could be indexed before the blocks get pruned.</p>
-
-<ul>
-<li><p>Fix compatibility with the upcoming v0.22 Bitcoin Core release (<a href="https://github.com/sparrowwallet/sparrow/issues/67#issuecomment-791522237">https://github.com/sparrowwallet/sparrow/issues/67#issuecomment-791522237</a>)</p></li>
-<li><p>HTTP: Set the <code>WWW-Authenticate</code> header to make logging-in possible via web browsers</p></li>
-<li><p>Implement an <a href="https://skarnet.org/software/s6/notifywhenup.html">fd-based daemon readiness notification mechanism</a>, enabled with <code>FD_NOTIFY=&lt;fd&gt;</code></p></li>
-<li><p>Fix whitepaper extractor</p></li>
-<li><p>UX touchups for progress indicator, welcome banner and logs</p></li>
-<li><p>Allow setting <code>UNIX_LISTENER_MODE</code> to control permissions for the unix socket notification listener</p></li>
-<li><p>Allow setting <code>NO_REQUIRE_ADDRESSES</code> as an env variable</p></li>
-</ul>
-
-<p>Breaking CLI changes:</p>
-
-<ul>
-<li>The Electrum SOCKS5-based authentication needs to be explicitly enabled with <code>--electrum-socks-auth</code>,
-in addition to enabling the <code>--auth-*</code> options. By default, authentication will only be enabled for
-the HTTP API server.</li>
-</ul>
-
-<hr>
-
-<p>Also see the v0.2.3 releases for <a href="https://github.com/bwt-dev/bwt-electrum-plugin/releases/tag/v0.2.3">bwt-electrum-plugin</a>, <a href="https://github.com/bwt-dev/libbwt/releases/tag/v0.2.3">libbwt</a>, <a href="https://github.com/bwt-dev/libbwt-nodejs/releases/tag/v0.2.3">libbwt-nodejs</a> and <a href="https://github.com/bwt-dev/libbwt-jni/releases/tag/v0.2.3">libbwt-jni</a>.</p>
-
-<h3>Installation</h3>
-
-<p>Installation instructions are <a href="https://github.com/bwt-dev/bwt#installation">available on the README</a>.</p>
-
-<h3>Verifying signatures</h3>
-
-<p>The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on the <a href="http://keys.gnupg.net/pks/lookup?op=vindex&fingerprint=on&search=0x81F6104CD0F150FC">PGP WoT</a>, <a href="https://api.github.com/users/shesek/gpg_keys">github</a>, <a href="https://twitter.com/shesek">twitter</a>, <a href="https://keybase.io/nadav">keybase</a>, <a href="https://news.ycombinator.com/user?id=nadaviv">hacker news</a> and <a href="https://youtu.be/SXJaN2T3M10?t=4">this video presentation</a>.</p>
-
-<p>```bash</p>
-
-<h1>Download (change x86_64-linux to your platform)</h1>
-
-<p>$ wget <a href="https://github.com/bwt-dev/bwt/releases/download/v0.2.3/bwt-0.2.3-x86_64-linux.tar.gz">https://github.com/bwt-dev/bwt/releases/download/v0.2.3/bwt-0.2.3-x86_64-linux.tar.gz</a></p>
-
-<h1>Fetch public key</h1>
-
-<p>$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC</p>
-
-<h1>Verify signature</h1>
-
-<p>$ wget -qO - <a href="https://github.com/bwt-dev/bwt/releases/download/v0.2.3/SHA256SUMS.asc">https://github.com/bwt-dev/bwt/releases/download/v0.2.3/SHA256SUMS.asc</a> \
-  | gpg --decrypt - | grep &#39; bwt-0.2.3-x86_64-linux.tar.gz$&#39; | sha256sum -c -</p>
-
-<p>$ tar zxvf bwt-0.2.3-x86<em>64-linux.tar.gz
-$ ./bwt-0.1.5-x86</em>64-linux/bwt --xpub <xpub> ...
-```</p>
-
-<p>The signature verification should show <code>Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...</code> and <code>bwt-0.2.3-x86_64-linux.tar.gz: OK</code>.</p>
-
-<h3>Reproducible builds</h3>
-
-<p>The builds are fully reproducible.</p>
-
-<p>You can verify the checksums against the v0.2.3 builds on Travis CI: <a href="https://travis-ci.org/github/bwt-dev/bwt/builds/763199070">https://travis-ci.org/github/bwt-dev/bwt/builds/763199070</a></p>
-
-<p>See <a href="https://github.com/bwt-dev/bwt#reproducible-builds">more details here</a>.</p>
-</p>
-					    <a href="https://github.com/bwt-dev/bwt" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
