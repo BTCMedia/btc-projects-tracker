@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-15T15:24:52+00:00</updated>
+  <updated>2021-09-15T15:35:39+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin/bitcoin/releases/tag/v22.0</id>
     <link href="https://github.com/bitcoin/bitcoin/releases/tag/v22.0"/>
@@ -102,8 +102,8 @@ https://github.com/mempool/mempool/compare/v2.2.1...v2.2.2</summary>
     <dc:date>2021-09-09T07:36:28Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.17</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.17"/>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.17</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.17"/>
     <summary>## Main changes
 
 ### Manual input support and sending to Lightning addresses
@@ -135,7 +135,7 @@ To verify the release file checksums and signatures:
 $ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
 $ sha256sum -c SHA256SUMS.stripped
 ```</summary>
-    <title>ACINQ/phoenix: v1.4.17</title>
+    <title>ACINQ/phoenix: android-legacy-v1.4.17</title>
     <updated>2021-09-07T08:42:54Z</updated>
     <dc:date>2021-09-07T08:42:54Z</dc:date>
   </entry>
@@ -742,8 +742,8 @@ Lisa, Christian,  ZmnSCPxj, Rusty.</summary>
     <dc:date>2021-08-09T15:00:39Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.15</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.15"/>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.15</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.15"/>
     <summary>## Main changes
 
 ### Extract invoices from images stored on device
@@ -771,7 +771,7 @@ To verify the release file checksums and signatures:
 $ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
 $ sha256sum -c SHA256SUMS.stripped
 ```</summary>
-    <title>ACINQ/phoenix: v1.4.15</title>
+    <title>ACINQ/phoenix: android-legacy-v1.4.15</title>
     <updated>2021-08-06T09:38:28Z</updated>
     <dc:date>2021-08-06T09:38:28Z</dc:date>
   </entry>
@@ -2718,8 +2718,8 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <dc:date>2021-06-09T19:11:53Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.14</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.14"/>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.14</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.14"/>
     <summary>## Main changes
 
 ### Remove editable fee rate in swap-out
@@ -2757,7 +2757,7 @@ To verify the release file checksums and signatures:
 $ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
 $ sha256sum -c SHA256SUMS.stripped
 ```</summary>
-    <title>ACINQ/phoenix: v1.4.14</title>
+    <title>ACINQ/phoenix: android-legacy-v1.4.14</title>
     <updated>2021-06-08T17:31:45Z</updated>
     <dc:date>2021-06-08T17:31:45Z</dc:date>
   </entry>
@@ -3492,8 +3492,8 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <dc:date>2021-05-28T09:55:29Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.13</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.13"/>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.13</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.13"/>
     <summary>## Main changes
 
 ### Add maximum amount for swap-out
@@ -3522,7 +3522,7 @@ To verify the release file checksums and signatures:
 $ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
 $ sha256sum -c SHA256SUMS.stripped
 ```</summary>
-    <title>ACINQ/phoenix: v1.4.13</title>
+    <title>ACINQ/phoenix: android-legacy-v1.4.13</title>
     <updated>2021-05-27T15:38:37Z</updated>
     <dc:date>2021-05-27T15:38:37Z</dc:date>
   </entry>
@@ -3550,8 +3550,8 @@ Removed
     <dc:date>2021-05-21T09:48:25Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.12</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.12"/>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.12</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.12"/>
     <summary>## Main changes
 
 ### Add support for LNURL-pay
@@ -3589,7 +3589,7 @@ To verify the release file checksums and signatures:
 $ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
 $ sha256sum -c SHA256SUMS.stripped
 ```</summary>
-    <title>ACINQ/phoenix: v1.4.12</title>
+    <title>ACINQ/phoenix: android-legacy-v1.4.12</title>
     <updated>2021-05-20T14:52:36Z</updated>
     <dc:date>2021-05-20T14:52:36Z</dc:date>
   </entry>
@@ -4610,8 +4610,8 @@ a5d592ac404 Update javafx-base, javafx-controls, ... to 16-ea+7 (#2654)
     <dc:date>2021-05-03T18:51:48Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.11</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.11"/>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.11</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.11"/>
     <summary>## Main changes
 
 ### Display fees for pay-to-open in settings
@@ -4642,7 +4642,7 @@ To verify the release file checksums and signatures:
 $ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
 $ sha256sum -c SHA256SUMS.stripped
 ```</summary>
-    <title>ACINQ/phoenix: v1.4.11</title>
+    <title>ACINQ/phoenix: android-legacy-v1.4.11</title>
     <updated>2021-05-03T13:59:24Z</updated>
     <dc:date>2021-05-03T13:59:24Z</dc:date>
   </entry>
@@ -4853,8 +4853,8 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.8...v0.3.9</summary>
     <dc:date>2021-04-23T13:52:43Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.10</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.10"/>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.10</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.10"/>
     <summary>## Main changes
 
 ### Reject invoices that have already been paid
@@ -4887,13 +4887,13 @@ To verify the release file checksums and signatures:
 $ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
 $ sha256sum -c SHA256SUMS.stripped
 ```</summary>
-    <title>ACINQ/phoenix: v1.4.10</title>
+    <title>ACINQ/phoenix: android-legacy-v1.4.10</title>
     <updated>2021-04-22T17:30:12Z</updated>
     <dc:date>2021-04-22T17:30:12Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/v1.4.9</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/v1.4.9"/>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.9</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.9"/>
     <summary>## Main changes
 
 This release fixes an issue with channels opening, where on-the-fly channel creation could timeout immediately if device's clock was off.
@@ -4919,7 +4919,7 @@ To verify the release file checksums and signatures:
 $ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
 $ sha256sum -c SHA256SUMS.stripped
 ```</summary>
-    <title>ACINQ/phoenix: v1.4.9</title>
+    <title>ACINQ/phoenix: android-legacy-v1.4.9</title>
     <updated>2021-04-15T15:30:10Z</updated>
     <dc:date>2021-04-15T15:30:10Z</dc:date>
   </entry>
@@ -5708,5 +5708,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-03-22T16:49:11Z</updated>
     <dc:date>2021-03-22T16:49:11Z</dc:date>
   </entry>
-  <dc:date>2021-09-15T15:24:52+00:00</dc:date>
+  <dc:date>2021-09-15T15:35:39+00:00</dc:date>
 </feed>
