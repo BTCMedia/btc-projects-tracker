@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-17T13:04:40+00:00</updated>
+  <updated>2021-09-17T13:15:37+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin/bitcoin/releases/tag/v22.0</id>
     <link href="https://github.com/bitcoin/bitcoin/releases/tag/v22.0"/>
@@ -5708,5 +5708,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-03-22T16:49:11Z</updated>
     <dc:date>2021-03-22T16:49:11Z</dc:date>
   </entry>
-  <dc:date>2021-09-17T13:04:40+00:00</dc:date>
+  <dc:date>2021-09-17T13:15:37+00:00</dc:date>
 </feed>
