@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-19T20:55:34+00:00</updated>
+  <updated>2021-09-19T21:16:44+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.1-pre5</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.1-pre5"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.6.1-pre5</title>
+    <updated>2021-09-19T21:06:04Z</updated>
+    <dc:date>2021-09-19T21:06:04Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.7</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.7"/>
@@ -5665,59 +5673,5 @@ Join us here → https://www.transifex.com/bluewallet/bluewallet
     <updated>2021-03-25T11:02:37Z</updated>
     <dc:date>2021-03-25T11:02:37Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bwt-dev/bwt/releases/tag/v0.2.4</id>
-    <link href="https://github.com/bwt-dev/bwt/releases/tag/v0.2.4"/>
-    <summary>### Changelog
-
-- Allow specifying an explicit script type for xpubs using `-x &lt;xpub&gt;:wpkh`, `-x &lt;xpub&gt;:shwpkh` or `-x &lt;xpub&gt;:pkh`.
-
-- Fix `blockchain.block.headers` sending wrong number of headers (#87, thanks @stevenroose!)
-
-- Check testmempoolaccept prior to custom broadcast (#80)
-
-- Dependency updates and various small enhancements
-
-
-------------
-
-Also see the v0.2.4 releases for [bwt-electrum-plugin](https://github.com/bwt-dev/bwt-electrum-plugin/releases/tag/v0.2.4), [libbwt](https://github.com/bwt-dev/libbwt/releases/tag/v0.2.4), [libbwt-nodejs](https://github.com/bwt-dev/libbwt-nodejs/releases/tag/v0.2.4) and [libbwt-jni](https://github.com/bwt-dev/libbwt-jni/releases/tag/v0.2.4).
-
-### Installation
-
-Installation instructions are [available on the README](https://github.com/bwt-dev/bwt#installation).
-
-### Verifying signatures
-
-The releases are signed by Nadav Ivgi (@shesek). The public key can be verified on the [PGP WoT](http://keys.gnupg.net/pks/lookup?op=vindex&amp;fingerprint=on&amp;search=0x81F6104CD0F150FC), [github](https://api.github.com/users/shesek/gpg_keys), [twitter](https://twitter.com/shesek), [keybase](https://keybase.io/nadav), [hacker news](https://news.ycombinator.com/user?id=nadaviv) and [this video presentation](https://youtu.be/SXJaN2T3M10?t=4).
-
-```bash
-# Download (change x86_64-linux to your platform)
-$ wget https://github.com/bwt-dev/bwt/releases/download/v0.2.4/bwt-0.2.4-x86_64-linux.tar.gz
-
-# Fetch public key
-$ gpg --keyserver keyserver.ubuntu.com --recv-keys FCF19B67866562F08A43AAD681F6104CD0F150FC
-
-# Verify signature
-$ wget -qO - https://github.com/bwt-dev/bwt/releases/download/v0.2.4/SHA256SUMS.asc \
-  | gpg --decrypt - | grep ' bwt-0.2.4-x86_64-linux.tar.gz$' | sha256sum -c -
-
-$ tar zxvf bwt-0.2.4-x86_64-linux.tar.gz
-$ ./bwt-0.1.5-x86_64-linux/bwt --xpub &lt;xpub&gt; ...
-```
-
-The signature verification should show `Good signature from &quot;Nadav Ivgi &lt;nadav@shesek.info&gt;&quot; ... Primary key fingerprint: FCF1 9B67 ...` and `bwt-0.2.4-x86_64-linux.tar.gz: OK`.
-
-### Reproducible builds
-
-The builds are fully reproducible.
-
-You can verify the checksums against the v0.2.4 builds on Travis CI: https://travis-ci.org/github/bwt-dev/bwt/builds/764306060
-
-See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</summary>
-    <title>bwt-dev/bwt: v0.2.4</title>
-    <updated>2021-03-24T23:50:08Z</updated>
-    <dc:date>2021-03-24T23:50:08Z</dc:date>
-  </entry>
-  <dc:date>2021-09-19T20:55:34+00:00</dc:date>
+  <dc:date>2021-09-19T21:16:44+00:00</dc:date>
 </feed>
