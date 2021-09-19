@@ -6,7 +6,26 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-19T19:50:42+00:00</updated>
+  <updated>2021-09-19T20:11:34+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.7</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.7"/>
+    <summary>**Highlights:**
+- Sat/vByte instead of sat/byte 
+- Tor stability on android
+- Faster native navigation 
+
+**Improvements:**
+- Typos in language file 
+- Display built branch on about screen 
+- Remove blur package. Use builtin solution 
+- Pause QRCode during Export
+- Cobo Vault compatibility
+- Improved currency exchange module</summary>
+    <title>BlueWallet/BlueWallet: v6.2.7</title>
+    <updated>2021-09-19T20:11:04Z</updated>
+    <dc:date>2021-09-19T20:11:04Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin/bitcoin/releases/tag/v22.0</id>
     <link href="https://github.com/bitcoin/bitcoin/releases/tag/v22.0"/>
@@ -5700,13 +5719,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-03-24T23:50:08Z</updated>
     <dc:date>2021-03-24T23:50:08Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.13</id>
-    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.13"/>
-    <summary></summary>
-    <title>rust-bitcoin/rust-lightning: v0.0.13</title>
-    <updated>2021-03-22T16:49:11Z</updated>
-    <dc:date>2021-03-22T16:49:11Z</dc:date>
-  </entry>
-  <dc:date>2021-09-19T19:50:42+00:00</dc:date>
+  <dc:date>2021-09-19T20:11:34+00:00</dc:date>
 </feed>
