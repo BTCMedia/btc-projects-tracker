@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-19T20:12:47+00:00</updated>
+  <updated>2021-09-19T20:25:37+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.7</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.7"/>
@@ -5719,5 +5719,5 @@ See [more details here](https://github.com/bwt-dev/bwt#reproducible-builds).</su
     <updated>2021-03-24T23:50:08Z</updated>
     <dc:date>2021-03-24T23:50:08Z</dc:date>
   </entry>
-  <dc:date>2021-09-19T20:12:47+00:00</dc:date>
+  <dc:date>2021-09-19T20:25:37+00:00</dc:date>
 </feed>
