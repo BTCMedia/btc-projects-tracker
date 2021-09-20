@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-20T12:34:22+00:00</updated>
+  <updated>2021-09-20T12:46:18+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.1-pre5</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.1-pre5"/>
@@ -5673,5 +5673,5 @@ Join us here → https://www.transifex.com/bluewallet/bluewallet
     <updated>2021-03-25T11:02:37Z</updated>
     <dc:date>2021-03-25T11:02:37Z</dc:date>
   </entry>
-  <dc:date>2021-09-20T12:34:22+00:00</dc:date>
+  <dc:date>2021-09-20T12:46:18+00:00</dc:date>
 </feed>
