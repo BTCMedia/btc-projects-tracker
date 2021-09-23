@@ -38,6 +38,128 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/rust-bitcoin/rust-lightning">rust-bitcoin/rust-lightning</a>: <a href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.101">v0.0.101</a>
+						    </h2>
+							<p class="card-text">Published: 2021-09-23 18:14:00 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>API Updates</h2>
+
+<ul>
+<li>Custom message types are now supported directly in the <code>PeerManager</code>,
+allowing you to send and receive messages of any type that is not natively
+understood by LDK. This requires a new type bound on <code>PeerManager</code>, a
+<code>CustomMessageHandler</code>. <code>IgnoringMessageHandler</code> provides a simple default
+for this new bound for ignoring unknown messages (#1031, #1074).</li>
+<li>Route graph updates as a result of failed payments are no longer provided as
+<code>MessageSendEvent::PaymentFailureNetworkUpdate</code> but instead included in a
+new field in the <code>Event::PaymentFailed</code> events. Generally, this means route
+graph updates are no longer handled as a part of the <code>PeerManager</code> but
+instead through the new <code>EventHandler</code> implementation for
+<code>NetGraphMsgHandler</code>. To make this easy, a new parameter to
+<code>lightning-background-processor::BackgroundProcessor::start</code> is added, which
+contains an <code>Option</code>al <code>NetGraphmsgHandler</code>. If provided as <code>Some</code>, relevant
+events will be processed by the <code>NetGraphMsgHandler</code> prior to normal event
+handling (#1043).</li>
+<li><code>NetworkGraph</code> is now, itself, thread-safe. Accordingly, most functions now
+take <code>&amp;self</code> instead of <code>&amp;mut self</code> and the graph data can be accessed
+through <code>NetworkGraph.read_only</code> (#1043).</li>
+<li>The balances available on-chain to claim after a channel has been closed are
+now exposed via <code>ChannelMonitor::get_claimable_balances</code> and
+<code>ChainMonitor::get_claimable_balances</code>. The second can be used to get
+information about all closed channels which still have on-chain balances
+associated with them. See enum variants of <code>ln::channelmonitor::Balance</code> and
+method documentation for the above methods for more information on the types
+of balances exposed (#1034).</li>
+<li>When one HTLC of a multi-path payment fails, the new field <code>all_paths_failed</code>
+in <code>Event::PaymentFailed</code> is set to <code>false</code>. This implies that the payment
+has not failed, but only one part. Payment resolution is only indicated by an
+<code>Event::PaymentSent</code> event or an <code>Event::PaymentFailed</code> with
+<code>all_paths_failed</code> set to <code>true</code>, which is also set for the last remaining
+part of a multi-path payment (#1053).</li>
+<li>To better capture the context described above, <code>Event::PaymentFailed</code> has
+been renamed to <code>Event::PaymentPathFailed</code> (#1084).</li>
+<li>A new event, <code>ChannelClosed</code>, is provided by <code>ChannelManager</code> when a channel
+is closed, including a reason and error message (if relevant, #997).</li>
+<li><code>lightning-invoice</code> now considers invoices with sub-millisatoshi precision
+to be invalid, and requires millisatoshi values during construction (thus
+you must call <code>amount_milli_satoshis</code> instead of <code>amount_pico_btc</code>, #1057).</li>
+<li>The <code>BaseSign</code> interface now includes two new hooks which provide additional
+information about commitment transaction signatures and revocation secrets
+provided by our counterparty, allowing additional verification (#1039).</li>
+<li>The <code>BaseSign</code> interface now includes additional information for cooperative
+close transactions, making it easier for a signer to verify requests (#1064).</li>
+<li><code>Route</code> has two additional helper methods to get fees and amounts (#1063).</li>
+<li><code>Txid</code> and <code>Transaction</code> objects can now be deserialized from responses when
+using the HTTP client in the <code>lightning-block-sync</code> crate (#1037, #1061).</li>
+</ul>
+
+<h2>Bug Fixes</h2>
+
+<ul>
+<li>Fix a panic when reading a lightning invoice with a non-recoverable
+signature. Further, restrict lightning invoice parsing to require payment
+secrets and better handle a few edge cases as required by BOLT 11 (#1057).</li>
+<li>Fix a panic when receiving multiple messages (such as HTLC fulfill messages)
+after a call to <code>chain::Watch::update_channel</code> returned
+<code>Err(ChannelMonitorUpdateErr::TemporaryFailure)</code> with no
+<code>ChannelManager::channel_monitor_updated</code> call in between (#1066).</li>
+<li>For multi-path payments, <code>Event::PaymentSent</code> is no longer generated
+multiple times, once for each independent part (#1053).</li>
+<li>Multi-hop route hints in invoices are now considered in the default router
+provided via <code>get_route</code> (#1040).</li>
+<li>The time peers have to respond to pings has been increased when building
+with debug assertions enabled. This avoids peer disconnections on slow hosts
+when running in debug mode (#1051).</li>
+<li>The timeout for the first byte of a response for requests from the
+<code>lightning-block-sync</code> crate has been increased to 300 seconds to better
+handle the long hangs in Bitcoin Core when it syncs to disk (#1090).</li>
+</ul>
+
+<h2>Serialization Compatibility</h2>
+
+<ul>
+<li>Due to a bug in 0.0.100, <code>Event</code>s written by 0.0.101 which are of a type not
+understood by 0.0.100 may lead to <code>Err(DecodeError::InvalidValue)</code> or corrupt
+deserialized objects in 0.100. Such <code>Event</code>s will lead to an
+<code>Err(DecodeError::InvalidValue)</code> in versions prior to 0.0.100. The only such
+new event written by 0.0.101 is <code>Event::ChannelClosed</code> (#1087).</li>
+<li>Payments that were initiated in versions prior to 0.0.101 may still
+generate duplicate <code>PaymentSent</code> <code>Event</code>s or may have spurious values for
+<code>Event::PaymentPathFailed::all_paths_failed</code> (#1053).</li>
+<li>The return values of <code>ChannelMonitor::get_claimable_balances</code> (and, thus,
+<code>ChainMonitor::get_claimable_balances</code>) may be spurious for channels where
+the spend of the funding transaction appeared on chain while running a
+version prior to 0.0.101. <code>Balance</code> information should only be relied upon
+for channels that were closed while running 0.0.101+ (#1034).</li>
+<li>Payments failed while running versions prior to 0.0.101 will never have a
+<code>Some</code> for the <code>network_update</code> field (#1043).</li>
+</ul>
+
+<p>In total, this release features 67 files changed, 4980 insertions, 1888
+deletions in 89 commits from 12 authors, in alphabetical order:
+ * Antoine Riard
+ * Devrandom
+ * Galder Zamarreño
+ * Giles Cope
+ * Jeffrey Czyz
+ * Joseph Goulden
+ * Matt Corallo
+ * Sergi Delgado Segura
+ * Tibo-lg
+ * Valentine Wallace
+ * abhik-99
+ * vss96</p>
+</p>
+					    <a href="https://github.com/rust-bitcoin/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.101" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.1-pre5">v1.6.1-pre5</a>
 						    </h2>
 							<p class="card-text">Published: 2021-09-19 21:06:04 UTC</p>
@@ -6864,52 +6986,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.7">v6.0.7</a>
-						    </h2>
-							<p class="card-text">Published: 2021-03-25 11:02:37 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><strong>New</strong></p>
-
-<ul>
-<li>Encrypted Message sign/verify </li>
-<li>Main SCAN button can import wallets</li>
-<li>Card colors </li>
-<li>Romanian language</li>
-<li>TZS currency</li>
-</ul>
-
-<p><strong>Fixed</strong></p>
-
-<ul>
-<li>Improved accessibility </li>
-<li>Show XPUB for AEZEED wallets</li>
-<li>Wallet selection was not visible</li>
-<li>Coin Control handle 0 conf output correctly</li>
-<li>Decrease animated QR codes density</li>
-<li>Send MAX can be used with regular outputs</li>
-</ul>
-
-<p><strong>Languages updates</strong></p>
-
-<p>French, Chinese (Simplified), Chinese (Traditional), Finnish, German, Dutch, Portuguese Brazilian and Slovenian.
-Join us here → <a href="https://www.transifex.com/bluewallet/bluewallet">https://www.transifex.com/bluewallet/bluewallet</a></p>
-
-<p><strong>Download</strong></p>
-
-<p><a href="https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet.6.0.7.dmg"><img src="https://bluewallet.io/uploads/app-store-badge-blue.svg" alt="Appstore"></a></p>
-
-<p><a href="https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet-6.0.7.apk"><img src="https://bluewallet.io/uploads/play-store-badge-blue.svg" alt="Playstore"></a></p>
-</p>
-					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
