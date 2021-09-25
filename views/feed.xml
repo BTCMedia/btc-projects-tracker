@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-25T05:43:40+00:00</updated>
+  <updated>2021-09-25T05:53:29+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.14</id>
     <link href="https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.14"/>
@@ -5731,5 +5731,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-27T17:55:57Z</updated>
     <dc:date>2021-03-27T17:55:57Z</dc:date>
   </entry>
-  <dc:date>2021-09-25T05:43:40+00:00</dc:date>
+  <dc:date>2021-09-25T05:53:29+00:00</dc:date>
 </feed>
