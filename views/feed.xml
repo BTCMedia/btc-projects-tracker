@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-27T16:57:32+00:00</updated>
+  <updated>2021-09-27T17:16:27+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.1-pre15</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.1-pre15"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.6.1-pre15</title>
+    <updated>2021-09-27T17:03:30Z</updated>
+    <dc:date>2021-09-27T17:03:30Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4"/>
@@ -5742,40 +5750,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.7...v0.3.8</summary>
     <updated>2021-03-26T12:53:40Z</updated>
     <dc:date>2021-03-26T12:53:40Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.7</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.7"/>
-    <summary>**New**
-
-- Encrypted Message sign/verify 
-- Main SCAN button can import wallets
-- Card colors 
-- Romanian language
-- TZS currency
-
-**Fixed**
-
-- Improved accessibility 
-- Show XPUB for AEZEED wallets
-- Wallet selection was not visible
-- Coin Control handle 0 conf output correctly
-- Decrease animated QR codes density
-- Send MAX can be used with regular outputs
-
-**Languages updates**
-
-French, Chinese (Simplified), Chinese (Traditional), Finnish, German, Dutch, Portuguese Brazilian and Slovenian.
-Join us here → https://www.transifex.com/bluewallet/bluewallet
-
-**Download**
-
-[![Appstore](https://bluewallet.io/uploads/app-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet.6.0.7.dmg)
-
-[![Playstore](https://bluewallet.io/uploads/play-store-badge-blue.svg)](https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet-6.0.7.apk)
-</summary>
-    <title>BlueWallet/BlueWallet: v6.0.7</title>
-    <updated>2021-03-25T11:02:37Z</updated>
-    <dc:date>2021-03-25T11:02:37Z</dc:date>
-  </entry>
-  <dc:date>2021-09-27T16:57:32+00:00</dc:date>
+  <dc:date>2021-09-27T17:16:27+00:00</dc:date>
 </feed>
