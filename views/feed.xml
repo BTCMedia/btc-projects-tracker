@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-27T11:53:30+00:00</updated>
+  <updated>2021-09-27T12:12:55+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4"/>
@@ -21,14 +21,6 @@
     <title>btcpayserver/btcpayserver: v1.2.4</title>
     <updated>2021-09-26T05:45:16Z</updated>
     <dc:date>2021-09-26T05:45:16Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.14</id>
-    <link href="https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.14"/>
-    <summary></summary>
-    <title>BlueWallet/rn-ldk: v0.2.14</title>
-    <updated>2021-09-24T13:26:58Z</updated>
-    <dc:date>2021-09-24T13:26:58Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.101</id>
@@ -188,14 +180,6 @@ If you face any difficulties while updating, please message us on Telegram: http
     <title>getumbrel/umbrel: v0.4.2</title>
     <updated>2021-09-13T15:31:28Z</updated>
     <dc:date>2021-09-13T15:31:28Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.13</id>
-    <link href="https://github.com/BlueWallet/rn-ldk/releases/tag/v0.2.13"/>
-    <summary></summary>
-    <title>BlueWallet/rn-ldk: v0.2.13</title>
-    <updated>2021-09-10T20:19:54Z</updated>
-    <dc:date>2021-09-10T20:19:54Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.3</id>
@@ -5734,5 +5718,37 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-29T14:04:50Z</updated>
     <dc:date>2021-03-29T14:04:50Z</dc:date>
   </entry>
-  <dc:date>2021-09-27T11:53:30+00:00</dc:date>
+  <entry>
+    <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.1</id>
+    <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.1"/>
+    <summary>Also available on [PyPi](https://pypi.org/project/hwi/) and can be installed with `pip install -U hwi`
+
+## Fixed
+* Fixed Trezor T on device passphrase entry
+* Fixed `hwi-qt` Linux binary crashing when using keyboard shortcuts</summary>
+    <title>bitcoin-core/HWI: 2.0.1</title>
+    <updated>2021-03-27T17:55:57Z</updated>
+    <dc:date>2021-03-27T17:55:57Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.8</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.8"/>
+    <summary>Umbrel v0.3.8 brings the following apps up to their latest versions:
+
+- Thunderhub
+- RTL
+- BTCPay
+- Lightning Terminal
+- Specter Desktop
+- Sphinx Relay
+- Samourai Server
+ 
+If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
+
+Diff: https://github.com/getumbrel/umbrel/compare/v0.3.7...v0.3.8</summary>
+    <title>getumbrel/umbrel: v0.3.8</title>
+    <updated>2021-03-26T12:53:40Z</updated>
+    <dc:date>2021-03-26T12:53:40Z</dc:date>
+  </entry>
+  <dc:date>2021-09-27T12:12:55+00:00</dc:date>
 </feed>
