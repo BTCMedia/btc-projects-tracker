@@ -63,6 +63,126 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.7.4">v1.7.4</a>
+						    </h2>
+							<p class="card-text">Published: 2021-09-24 13:12:32 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Release notes</h2>
+
+<p>This release enables you to connect to a Bitcoin Core node with a Tor v3 address.</p>
+
+<p><strong>Tor v2 addresses will not be supported after October 15th, so please update your Bitcoin and Bisq nodes ASAP.</strong></p>
+
+<p>This version also introduces three new payment methods: SWIFT, Paysera, and Paxum. As always, there are many additional bug fixes and minor improvements across the board as well.</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5686">Add bitcoinj Tor v3 support</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5713">Update to BTC node Tor v3 onions</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5672">Add SWIFT payment method</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5673">Add Payment Methods: Paysera and Paxum</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5681">Allow user to initiate arbitration once locktime has expired</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5710">Update @leo816&#39;s onion address</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5694">Improve japanese bank branch validation</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5682">Reduce # of hash calculations in UI OfferBook view</a></li>
+</ul>
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5679">Fix failed trade / missing payment information</a></li>
+</ul>
+
+<h3>Development &amp; Documentation</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5683">Override/disable gRPC call rate meters in test harness driver</a></li>
+<li>Add new api method <code>editoffer</code>: <a href="https://github.com/bisq-network/bisq/pull/5572">1</a>, <a href="https://github.com/bisq-network/bisq/pull/5571">2</a>, <a href="https://github.com/bisq-network/bisq/pull/5576">3</a></li>
+</ul>
+
+<h3>New Assets</h3>
+
+<p>No new assets were added.</p>
+
+<h2>Verification</h2>
+
+<p>For a detailed description on how to verify your Bisq installer please have a look at our wiki: <a href="https://bisq.wiki/Downloading_and_installing#Verify_installer_file">https://bisq.wiki/Downloading_and_installing#Verify_installer_file</a></p>
+
+<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
+Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
+
+<p>Import the key:
+<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
+
+<p>How to verify signatures?
+<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
+Replace BINARY with the file you downloaded (e.g. Bisq-1.7.4.dmg)</p>
+
+<p>Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.7.4-all.jar
+The output need to match the value from the Bisq-1.7.4.jar.txt file.</p>
+
+<p>There are three hashes within the Bisq-1.7.4.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.4 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.</p>
+
+<h2>Known issues with installation</h2>
+
+<h3>Windows:</h3>
+
+<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
+
+<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
+
+<p>[1] Application directory (contains application installation files):
+C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
+
+<p>[2] Data directory (contains all Bisq data including wallet):
+C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
+
+<h3>Linux:</h3>
+
+<p>Hint for Debian users:
+If you have problems starting Bisq on Debian use: <code>/opt/bisq/bin/Bisq</code></p>
+
+<p>If your Linux distro does not support .deb files please follow this instruction:
+<code>
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.7.4.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+</code>
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
+
+<h2>Credits</h2>
+
+<p>Thanks to everyone who directly contributed to this release:</p>
+
+<ul>
+<li>@Emzy </li>
+<li>@ghubstan </li>
+<li>@jmacxx </li>
+<li>@ripcurlx</li>
+<li>@sqrrm</li>
+<li>@wiz </li>
+</ul>
+
+<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
+</p>
+					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.7.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/rust-bitcoin/rust-lightning">rust-bitcoin/rust-lightning</a>: <a href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.101">v0.0.101</a>
 						    </h2>
 							<p class="card-text">Published: 2021-09-23 18:47:46 UTC</p>
@@ -480,7 +600,9 @@ $ sha256sum -c SHA256SUMS.stripped
 							<p class="card-text">Published: 2021-08-28 17:03:06 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><h2>Release notes</h2>
+					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
+
+<h2>Release notes</h2>
 
 <p>This summer vacation release fixes some minor bugs.</p>
 
@@ -6981,52 +7103,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.7">v6.0.7</a>
-						    </h2>
-							<p class="card-text">Published: 2021-03-25 11:02:37 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><strong>New</strong></p>
-
-<ul>
-<li>Encrypted Message sign/verify </li>
-<li>Main SCAN button can import wallets</li>
-<li>Card colors </li>
-<li>Romanian language</li>
-<li>TZS currency</li>
-</ul>
-
-<p><strong>Fixed</strong></p>
-
-<ul>
-<li>Improved accessibility </li>
-<li>Show XPUB for AEZEED wallets</li>
-<li>Wallet selection was not visible</li>
-<li>Coin Control handle 0 conf output correctly</li>
-<li>Decrease animated QR codes density</li>
-<li>Send MAX can be used with regular outputs</li>
-</ul>
-
-<p><strong>Languages updates</strong></p>
-
-<p>French, Chinese (Simplified), Chinese (Traditional), Finnish, German, Dutch, Portuguese Brazilian and Slovenian.
-Join us here → <a href="https://www.transifex.com/bluewallet/bluewallet">https://www.transifex.com/bluewallet/bluewallet</a></p>
-
-<p><strong>Download</strong></p>
-
-<p><a href="https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet.6.0.7.dmg"><img src="https://bluewallet.io/uploads/app-store-badge-blue.svg" alt="Appstore"></a></p>
-
-<p><a href="https://github.com/BlueWallet/BlueWallet/releases/download/v6.0.7/BlueWallet-6.0.7.apk"><img src="https://bluewallet.io/uploads/play-store-badge-blue.svg" alt="Playstore"></a></p>
-</p>
-					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.0.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
