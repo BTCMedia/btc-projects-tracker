@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-28T01:09:28+00:00</updated>
+  <updated>2021-09-28T01:16:24+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4"/>
@@ -5777,5 +5777,5 @@ Join us here → https://www.transifex.com/bluewallet/bluewallet
     <updated>2021-03-25T11:02:37Z</updated>
     <dc:date>2021-03-25T11:02:37Z</dc:date>
   </entry>
-  <dc:date>2021-09-28T01:09:28+00:00</dc:date>
+  <dc:date>2021-09-28T01:16:24+00:00</dc:date>
 </feed>
