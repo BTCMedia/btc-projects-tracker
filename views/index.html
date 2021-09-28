@@ -1591,9 +1591,9 @@ gpg --verify manifest-roasbeef-v0.13.1-beta.sig manifest-v0.13.1-beta.txt
 <p>You should see the following if the verification was successful:</p>
 
 <p><code>
-gpg: Signature made Wed Sep 30 17:35:20 2020 PDT
-gpg:                using RSA key 4AB7F8DA6FAEBB3B70B1F903BC13F65E2DC84465
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+gpg: Signature made Mon Jul 19 23:41:37 2021 CEST
+gpg: using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun laolu32@gmail.com&quot; [ultimate]
 </code></p>
 
 <p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
