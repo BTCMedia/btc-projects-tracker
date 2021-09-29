@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-29T13:37:20+00:00</updated>
+  <updated>2021-09-29T13:44:04+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4"/>
@@ -5844,5 +5844,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.7...v0.3.8</summary>
     <updated>2021-03-26T12:53:40Z</updated>
     <dc:date>2021-03-26T12:53:40Z</dc:date>
   </entry>
-  <dc:date>2021-09-29T13:37:20+00:00</dc:date>
+  <dc:date>2021-09-29T13:44:04+00:00</dc:date>
 </feed>
