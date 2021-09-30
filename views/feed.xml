@@ -6,7 +6,31 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-09-30T12:08:44+00:00</updated>
+  <updated>2021-09-30T12:16:26+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.8</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.8"/>
+    <summary>**Highlights:**
+
+- Wallet accounts search &amp; discovery
+- Offline wallet import
+- Custom derivation paths
+- Passphrases in advanced mode
+- Toggle for disabling Tor 
+- Sinhala language
+
+**Improvements:**
+
+- View QRCode button on 'is it my address'
+- Support for electrum with bitcoin core 22+
+- Proper fee estimation for multisig
+- Handoff in-app rather than browser 
+- Prompts were inaccessible on macOS 
+- Screenshot prevented in onchain receive</summary>
+    <title>BlueWallet/BlueWallet: v6.2.8</title>
+    <updated>2021-09-30T12:10:40Z</updated>
+    <dc:date>2021-09-30T12:10:40Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.4"/>
@@ -5824,25 +5848,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-27T17:55:57Z</updated>
     <dc:date>2021-03-27T17:55:57Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.8</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.8"/>
-    <summary>Umbrel v0.3.8 brings the following apps up to their latest versions:
-
-- Thunderhub
-- RTL
-- BTCPay
-- Lightning Terminal
-- Specter Desktop
-- Sphinx Relay
-- Samourai Server
- 
-If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.7...v0.3.8</summary>
-    <title>getumbrel/umbrel: v0.3.8</title>
-    <updated>2021-03-26T12:53:40Z</updated>
-    <dc:date>2021-03-26T12:53:40Z</dc:date>
-  </entry>
-  <dc:date>2021-09-30T12:08:44+00:00</dc:date>
+  <dc:date>2021-09-30T12:16:26+00:00</dc:date>
 </feed>
