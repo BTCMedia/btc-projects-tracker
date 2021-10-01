@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-10-01T06:29:16+00:00</updated>
+  <updated>2021-10-01T06:37:35+00:00</updated>
+  <entry>
+    <id>https://github.com/romanz/electrs/releases/tag/v0.9.0</id>
+    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.0"/>
+    <summary></summary>
+    <title>romanz/electrs: v0.9.0</title>
+    <updated>2021-10-01T06:29:37Z</updated>
+    <dc:date>2021-10-01T06:29:37Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.8</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.8"/>
@@ -5836,17 +5844,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-29T14:04:50Z</updated>
     <dc:date>2021-03-29T14:04:50Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bitcoin-core/HWI/releases/tag/2.0.1</id>
-    <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.0.1"/>
-    <summary>Also available on [PyPi](https://pypi.org/project/hwi/) and can be installed with `pip install -U hwi`
-
-## Fixed
-* Fixed Trezor T on device passphrase entry
-* Fixed `hwi-qt` Linux binary crashing when using keyboard shortcuts</summary>
-    <title>bitcoin-core/HWI: 2.0.1</title>
-    <updated>2021-03-27T17:55:57Z</updated>
-    <dc:date>2021-03-27T17:55:57Z</dc:date>
-  </entry>
-  <dc:date>2021-10-01T06:29:16+00:00</dc:date>
+  <dc:date>2021-10-01T06:37:35+00:00</dc:date>
 </feed>
