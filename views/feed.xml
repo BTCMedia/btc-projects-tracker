@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-10-01T11:18:16+00:00</updated>
+  <updated>2021-10-01T11:26:16+00:00</updated>
   <entry>
     <id>https://github.com/romanz/electrs/releases/tag/v0.9.0</id>
     <link href="https://github.com/romanz/electrs/releases/tag/v0.9.0"/>
@@ -5844,5 +5844,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-29T14:04:50Z</updated>
     <dc:date>2021-03-29T14:04:50Z</dc:date>
   </entry>
-  <dc:date>2021-10-01T11:18:16+00:00</dc:date>
+  <dc:date>2021-10-01T11:26:16+00:00</dc:date>
 </feed>
