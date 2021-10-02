@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-10-02T17:47:41+00:00</updated>
+  <updated>2021-10-02T17:24:09+00:00</updated>
   <entry>
     <id>https://github.com/romanz/electrs/releases/tag/v0.9.0</id>
     <link href="https://github.com/romanz/electrs/releases/tag/v0.9.0"/>
@@ -421,14 +421,14 @@ $ sha256sum -c SHA256SUMS.stripped
 * FIX: Expand option was available even after use 
 * FIX: When selecting to send MAX on part or a X is shown in amount. #2412 
 * ADD: pending transaction status screen UX (closes #3183) 
-* ADD: onchain receive address now shows ETA on incomming transaction (rel #3183) 
+* ADD: onchain receive address now shows ETA on incoming transaction (rel #3183) 
 * FIX: Disable toggle if server is for Tor 
 * FIX: small RTL alignment issue #3677 
 * FIX: multisig cosigner type inferred from the path (closes #3653) 
 * FIX: Reordering Wallets UX 
 * FIX: If Tor is not supported, throw alert. 
 * FIX: If offline mode, disable import button 
-* FIX: ImagePicker wasnt processing selected asset 
+* FIX: ImagePicker wasn't processing selected asset 
 * REF: Localization for QR 
 * FIX: lnurl-pay comment 
 * ADD: Enhance offline mode UI 
@@ -505,7 +505,7 @@ shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.7.3-all.jar
 The output need to match the value from the Bisq-1.7.3.jar.txt file.
 
 *NEW: There are three hashes within the Bisq-1.7.3.jar.txt file (macOS, Windows, Linux).
-If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.3 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.*
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.3 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS, it is not possible to create the same jar on macOS.*
 
 ## Known issues with installation 
 
@@ -5844,5 +5844,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-03-29T14:04:50Z</updated>
     <dc:date>2021-03-29T14:04:50Z</dc:date>
   </entry>
-  <dc:date>2021-10-02T17:47:41+00:00</dc:date>
+  <dc:date>2021-10-02T17:24:09+00:00</dc:date>
 </feed>
