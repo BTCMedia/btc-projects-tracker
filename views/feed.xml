@@ -6,7 +6,17 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-10T12:22:14+00:00</updated>
+  <updated>2021-11-10T12:30:52+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.7</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.7"/>
+    <summary>This version of Umbrel brings LND 0.13.4 and updated apps (BTCPay Server, Specter Desktop, Pi-hole, Lightning Terminal, and more) to the Umbrel App Store.
+
+LND 0.13.4 fixes a bug discovered in the previous version which will break Neutrino functionality after the Taproot activation in ~3 days. Because Neutrino is only used when Bitcoin Core is still syncing, in short: if Bitcoin Core on your Umbrel hasn't finished syncing, please update immediately. If Bitcoin Core on your Umbrel is 100% synced already, you remain unaffected by this bug and can update at your convenience.</summary>
+    <title>getumbrel/umbrel: v0.4.7</title>
+    <updated>2021-11-10T12:22:19Z</updated>
+    <dc:date>2021-11-10T12:22:19Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.4-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.4-beta"/>
@@ -5563,40 +5573,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-05-28T09:55:29Z</updated>
     <dc:date>2021-05-28T09:55:29Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.13</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.13"/>
-    <summary>## Main changes
-
-### Add maximum amount for swap-out
-
-There is now a maximum amount that can be sent using swap-out (currently 20 mBTC, this value can change).
-
-### Fix a few issues and potential crashes
-
-### Full list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.12...v1.4.13
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-- from our website: https://acinq.co/pgp/drouinf.asc
-- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import drouinf.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: android-legacy-v1.4.13</title>
-    <updated>2021-05-27T15:38:37Z</updated>
-    <dc:date>2021-05-27T15:38:37Z</dc:date>
-  </entry>
-  <dc:date>2021-11-10T12:22:14+00:00</dc:date>
+  <dc:date>2021-11-10T12:30:52+00:00</dc:date>
 </feed>

@@ -38,6 +38,24 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.7">v0.4.7</a>
+						    </h2>
+							<p class="card-text">Published: 2021-11-10 12:22:19 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This version of Umbrel brings LND 0.13.4 and updated apps (BTCPay Server, Specter Desktop, Pi-hole, Lightning Terminal, and more) to the Umbrel App Store.</p>
+
+<p>LND 0.13.4 fixes a bug discovered in the previous version which will break Neutrino functionality after the Taproot activation in ~3 days. Because Neutrino is only used when Bitcoin Core is still syncing, in short: if Bitcoin Core on your Umbrel hasn&#39;t finished syncing, please update immediately. If Bitcoin Core on your Umbrel is 100% synced already, you remain unaffected by this bug and can update at your convenience.</p>
+</p>
+					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.4-beta">v0.13.4-beta</a>
 						    </h2>
 							<p class="card-text">Published: 2021-11-09 19:19:31 UTC</p>
@@ -6717,51 +6735,6 @@ Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.13">android-legacy-v1.4.13</a>
-						    </h2>
-							<p class="card-text">Published: 2021-05-27 15:38:37 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>Main changes</h2>
-
-<h3>Add maximum amount for swap-out</h3>
-
-<p>There is now a maximum amount that can be sent using swap-out (currently 20 mBTC, this value can change).</p>
-
-<h3>Fix a few issues and potential crashes</h3>
-
-<h3>Full list of changes</h3>
-
-<ul>
-<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.12...v1.4.13">https://github.com/ACINQ/phoenix/compare/v1.4.12...v1.4.13</a></li>
-</ul>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
-- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import drouinf.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.13" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
