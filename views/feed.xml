@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-10T01:40:43+00:00</updated>
+  <updated>2021-11-10T01:53:38+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.4-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.4-beta"/>
@@ -131,7 +131,7 @@ Olaoluwa Osuntokun
 
 ### Improvements:
 
-* Point of Sale Print view improvements (#3050) @satwo
+* Point of Sale Print view improvements (#3050) @satwo @dennisreimann
 * Upgrade to Bootstrap 5.1.3 @dennisreimann
 * Updates display names (#3036) @dstrukt</summary>
     <title>btcpayserver/btcpayserver: v1.3.4</title>
@@ -5598,5 +5598,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-05-27T15:38:37Z</updated>
     <dc:date>2021-05-27T15:38:37Z</dc:date>
   </entry>
-  <dc:date>2021-11-10T01:40:43+00:00</dc:date>
+  <dc:date>2021-11-10T01:53:38+00:00</dc:date>
 </feed>
