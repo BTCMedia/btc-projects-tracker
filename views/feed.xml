@@ -6,7 +6,27 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-15T13:54:12+00:00</updated>
+  <updated>2021-11-15T14:04:46+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.5</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.5"/>
+    <summary>### Bug fixes:
+
+* Fix: Checkout page of for invoices of 0 amount shouldn't crash, but 404 @NicolasDorier
+* Swagger doc: Fix type of property cryptoCode (#3088) @ndeet
+* Fix bug with fraction amount display in crowdfund app (#3098) @bolatovumar
+* Swagger doc: Update Swagger docs for webhook event types (#3104) @bolatovumar
+* Payout/pull payment page would crash if no payment method are set on the store @satwo
+
+### Improvements:
+
+* Add crypto code for invoice and pull payment payout API response (#3099) @bolatovumar
+* Prevent creation of on-chain invoices below the dust limit (#3082) @satwo
+</summary>
+    <title>btcpayserver/btcpayserver: v1.3.5</title>
+    <updated>2021-11-15T13:57:07Z</updated>
+    <dc:date>2021-11-15T13:57:07Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.8</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.8"/>
@@ -5410,122 +5430,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-05-30T11:45:22Z</updated>
     <dc:date>2021-05-30T11:45:22Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.6.5</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.6.5"/>
-    <summary>**A newer version is already available! Please don’t use this version anymore.**
-
-## Release notes
-This release makes DAO synchronization 30% quicker, improves BSQ SegWit fee calculation to save mining fees, and (as always) fixes many bugs across the board.
-
-### Improvements
-- [Speed up &quot;Synchronizing DAO&quot; by ~30%](https://github.com/bisq-network/bisq/pull/5484)
-- [Reduce BSQ fee estimation constant to reduce fees for BSQ SegWit transactions](https://github.com/bisq-network/bisq/pull/5450)
-- [Upgrade JavaFX to v16](https://github.com/bisq-network/bisq/pull/5499)
-- [Withdrawal view: reduce vertical spacing and fix issue with custom fee](https://github.com/bisq-network/bisq/pull/5512)
-- [Add fiat equivalent for Total Amount &amp; Security Deposit for both makers and sellers](https://github.com/bisq-network/bisq/pull/5452)
-- [Replace bisq.network/faq links with bisq.wiki](https://github.com/bisq-network/bisq/pull/5448)
-- [Replace docs.bisq.network links with bisq.wiki](https://github.com/bisq-network/bisq/pull/5442)
-- [Remove Bitpay as a pricenode data provider because of too low volume and high spread](https://github.com/bisq-network/bisq/pull/5537)
-
-### Bug fixes
-- [Prevent burning of BSQ dust in specific edge cases](https://github.com/bisq-network/bisq/pull/5534)
-- [Fix the formula used to calculate BSQ amount needed to avoid dust](https://github.com/bisq-network/bisq/pull/5475)
-- [Fix the price node lower bounds for minimum fee](https://github.com/bisq-network/bisq/pull/5489)
-- [Add missing check if transaction was in correct voting phase](https://github.com/bisq-network/bisq/pull/5444)
-- [Fix custom fee rate field when custom inputs are used](https://github.com/bisq-network/bisq/pull/5483)
-- [Fix string when creating a new offer](https://github.com/bisq-network/bisq/pull/5451)
-- [Fix focus issue when enter key used to edit offer](https://github.com/bisq-network/bisq/pull/5473)
-- [Fixed XRC coin title to correct one](https://github.com/bisq-network/bisq/pull/5416)
-
-### Development &amp; Documentation
-- [Build: Change default console to plain](https://github.com/bisq-network/bisq/pull/5524)
-- [Build: Preserve shadow plugin name](https://github.com/bisq-network/bisq/pull/5502)
-- [Build:Remove jcenter repository](https://github.com/bisq-network/bisq/pull/5497)
-- [Create Installer: Open binaries shared folder on finish](https://github.com/bisq-network/bisq/pull/5515)
-- [Create Installer: Enforce Java 11](https://github.com/bisq-network/bisq/pull/5517)
-- [Create Installer: Include build platform in fat jar filename](https://github.com/bisq-network/bisq/pull/5514)
-- [Create Installer: Fix Raspberry Pi build](https://github.com/bisq-network/bisq/pull/5516)
-- [Create Installer: Fix macOS jar hash](https://github.com/bisq-network/bisq/pull/5487)
-
-### Assets
-No new assets.
-
-## Verification
-
-For a detailed description on how to verify your Bisq installer please have a look at our wiki: https://bisq.wiki/Downloading_and_installing#Verify_installer_file
-
-Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
-Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
-
-Import the key:
-`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
-
-How to verify signatures?
-`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
-Replace BINARY with the file you downloaded (e.g. Bisq-1.6.5.dmg)
-
-Verify jar file inside binary:
-You can verify on OSX the jar file with:
-shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.6.5-all.jar
-The output need to match the value from the Bisq-1.6.5.jar.txt file.
-
-*NEW: There are three hashes within the Bisq-1.6.5.jar.txt file (macOS, Windows, Linux).
-If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.6.5 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.*
-
-## Known issues with installation 
-
-### Windows:
-
-There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
-
-If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
-
-[1] Application directory (contains application installation files):
-C:\Users\&lt;username&gt;\AppData\Local\Bisq
-
-[2] Data directory (contains all Bisq data including wallet):
-C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
-
-
-### Linux:
-
-Hint for Debian users:
-If you have problems starting Bisq on Debian use: `/opt/bisq/bin/Bisq`
-
-If your Linux distro does not support .deb files please follow this instruction:
-```
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.6.5.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-```
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Credits
-
-Thanks to everyone who directly contributed to this release:
-
-- @BtcContributor 
-- @cd2357 
-- @chimp1984 
-- @devinbileck 
-- @ghubstan
-- @jmacxx 
-- @m52go 
-- @maxim-belkin 
-- @ripcurlx 
-- @sqrrm 
-- @Emzy
-- @wiz 
-
-As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
-    <title>bisq-network/bisq: v1.6.5</title>
-    <updated>2021-05-29T05:38:15Z</updated>
-    <dc:date>2021-05-29T05:38:15Z</dc:date>
-  </entry>
-  <dc:date>2021-11-15T13:54:12+00:00</dc:date>
+  <dc:date>2021-11-15T14:04:46+00:00</dc:date>
 </feed>
