@@ -38,6 +38,24 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.8">v0.4.8</a>
+						    </h2>
+							<p class="card-text">Published: 2021-11-15 13:45:11 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>Umbrel 0.4.8 brings a new security feature — unique cryptographically secure default app passwords derived from your 24 secret words. This will help protect your Umbrel even if an app&#39;s unique Tor URL gets leaked and you have not changed that app&#39;s default password.</p>
+
+<p>If you have currently installed ThunderHub, Lightning Terminal, Ride The Lightning, Squeaknode or Code Server on your Umbrel, their default passwords will automatically upgrade to the newer, more secure passwords which can be found on their app store listing pages. In case you have already updated passwords of these apps manually, you can continue to use the same.</p>
+</p>
+					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.7">v0.4.7</a>
 						    </h2>
 							<p class="card-text">Published: 2021-11-10 12:22:19 UTC</p>
@@ -6665,76 +6683,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.6.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0">v1.4.0</a>
-						    </h2>
-							<p class="card-text">Published: 2021-05-28 09:55:29 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.0/Specter-Setup-v1.4.0.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.0/SpecterDesktop-v1.4.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.0/specter_desktop-v1.4.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.0/specterd-v1.4.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.0/specterd-v1.4.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.0/specterd-v1.4.0-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h2>Signatures and hashes</h2>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.0/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @ben-kaufman&#39;s GPG key.
-You can get the public key from here: <a href="https://benkaufman.info/ben-kaufman.asc">https://benkaufman.info/ben-kaufman.asc</a>.
-It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x5D27DE564153F2BD">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD">keys.openpgp.org</a>.
-Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD</code>, short id: <code>5d27de564153f2bd</code></p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Feature: Broadcast transactions over block explorer via Tor #1183 (benk10)</li>
-<li>Feature: &quot;Verify on device&quot; with Coldcard sugggest using airgap instead of USB connection #1157 (Manolis)</li>
-<li>Feature: Merge in Liquid branch (preparation for Liquid support) #1174 (benk10)</li>
-<li>Feature: Support importing BIP48 xpubs from JSON #1156 (benk10)</li>
-<li>Feature: Managing more than one Node-connection and switch between them #1146 (benk10)</li>
-<li>Feature: Managing multiple internal nodes with testnet(s) support #1165 (benk10)</li>
-<li>Feature: Hide sensitive info mode #1170 (benk10)</li>
-<li>Feature: Add cancel transaction with RBF button and show cancelled transactions status #1197 (benk10)</li>
-<li>UIUX: Updated change text from &#39;payed&#39; to &#39;paid&#39; in fee_selection file #1155 (Chris Pollard)</li>
-<li>UIUX: Move backup PDF SLIP132 option to advanced section #1168 (benk10)</li>
-<li>Docs: Update tor.md #1129 (benk10)</li>
-<li>Bugfix: Improve Tor resilience #1161 (Kim Neunert)</li>
-<li>Bugfix: Fix issue with selecting remote USB option #1147 (benk10)</li>
-<li>Bugfix: Fix unremovable linebreak in address label #1171 (benk10)</li>
-<li>Bugfix: Update compatibility for Bitcoin Core v22 &quot;addresses&quot; RPC changes #1180 (benk10)</li>
-<li>Bugfix: Fix broadcast via block explorer #1191 (benk10)</li>
-<li>Bugfix: Fix sensitive info notification and xpub hiding #1189 (benk10)</li>
-<li>Bugfix: Fix xpub format when no node is used #1188 (benk10)</li>
-<li>Bugfix: Fix updating addresses list caching for wallets using Bitcoin Core native wallet descriptors #1193 (benk10)</li>
-<li>Chore: Bump embit version #1186 (Stepan Snigirev)</li>
-<li>Chore: Bump flask-cors from 3.0.8 to 3.0.9 #1149 (dependabot[bot])</li>
-<li>Chore: Bump hosted-git-info from 2.8.8 to 2.8.9 in /pyinstaller/electron #1154 (dependabot[bot])</li>
-<li>Chore: Bump lodash from 4.17.20 to 4.17.21 in /pyinstaller/electron #1159 (dependabot[bot])</li>
-<li>Chore: Update hidapi to 0.10.1 #1141 (Leon Costa)</li>
-<li>Chore: Update hwibridge.md #1178 (kdmukai)</li>
-<li>Chore: Upgrade internal bitcoind version to v0.21.1 #1173 (benk10)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
