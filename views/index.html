@@ -38,6 +38,162 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.0-beta">v0.14.0-beta</a>
+						    </h2>
+							<p class="card-text">Published: 2021-11-17 21:22:27 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>Database Migrations</h1>
+
+<p>There are two database migrations for this version in <code>lnd</code>: One optimizes the storage structure of HTLCs for faster payments and the other removes old channel state data from closed channels to free up disk space. See the <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md">release notes</a> for more information.</p>
+
+<p>NOTE: Compacting the DB is recommended after running the migration to reclaim the freed up space.</p>
+
+<h1>Verifying the Release</h1>
+
+<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already: </p>
+
+<p><code>
+curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/roasbeef.asc | gpg --import
+</code></p>
+
+<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-roasbeef-v0.14.0-beta.sig</code> and <code>manifest-v0.14.0-beta.txt</code> are in the current directory) with:</p>
+
+<p><code>
+gpg --verify manifest-roasbeef-v0.14.0-beta.sig manifest-v0.14.0-beta.txt
+</code></p>
+
+<p>You should see the following if the verification was successful:</p>
+
+<p><code>
+gpg: Signature made Wed Nov 17 13:20:26 2021 PST
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+</code></p>
+
+<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
+
+<h2>Verifying the Release Timestamp</h2>
+
+<p>From this new version onwards, in addition time-stamping the <em>git tag</em> with <a href="https://opentimestamps.org/">OpenTimeStamps</a>, we&#39;ll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: <code>manifest-roasbeef-v0.14.0-beta.txt.asc.ots</code>.</p>
+
+<p>Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+<code>
+ots verify manifest-roasbeef-v0.14.0-beta.sig.ots -f manifest-roasbeef-v0.14.0-beta.sig
+</code></p>
+
+<p>Alternatively, <a href="https://opentimestamps.org/">the open timestamps website</a> can be used to verify timestamps if one doesn&#39;t have a <code>bitcoind</code> instance accessible locally. </p>
+
+<p>These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. </p>
+
+<h2>Verifying the Release Binaries</h2>
+
+<p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/tree/master/build/release">reproducible builds guide</a> for how this can be achieved.
+The release binaries are compiled with <code>go1.17.3</code>, which is required by verifiers to arrive at the same ones.
+They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>routerrpc</code>, <code>watchtowerrpc</code> and <code>monitoring</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
+
+<p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
+
+<p>Finally, you can also verify the <em>tag</em> itself with the following command:</p>
+
+<p><code>
+$ git verify-tag v0.14.0-beta
+gpg: Signature made Wed 17 Nov 2021 08:04:23 PM UTC using RSA key ID 9B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot;
+</code></p>
+
+<h2>Verifying the Docker Images</h2>
+
+<p>To verify the <code>lnd</code> and <code>lncli</code> binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):</p>
+
+<p><code>shell
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.14.0-beta /verify-install.sh v0.14.0-beta
+$ OK=$?
+$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
+$ docker run lightninglabs/lnd [command-line options]
+</code></p>
+
+<h1>Building the Contained Release</h1>
+
+<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
+that <code>vendor.tar.gz</code> and <code>lnd-source-v0.14.0-beta.tar.gz</code> are in the current directory, follow these steps:</p>
+
+<p><code>
+tar -xvzf vendor.tar.gz
+tar -xvzf lnd-source-v0.14.0-beta.tar.gz
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.0-beta&quot; ./cmd/lnd
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.0-beta&quot; ./cmd/lncli
+</code></p>
+
+<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory. </p>
+
+<p>Additionally, it&#39;s now possible to use the <a href="https://github.com/lightningnetwork/lnd/pull/2191">enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so</a>: </p>
+
+<p><code>
+make release sys=&quot;linux-arm64 darwin-amd64&quot;
+</code></p>
+
+<p>⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️</p>
+
+<h1>Release Notes</h1>
+
+<p>Read the full release notes here: <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md">https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md</a></p>
+
+<h1>Contributors (Alphabetical Order)</h1>
+
+<p>Abubakar Nur Khalil
+Adrian-Stefan Mares
+Alex Bosworth
+Alyssa Hertig
+András Bánki-Horváth
+Bjarne Magnussen
+Carsten Otto
+Conner Fromknecht
+Elle Mouton
+ErikEk
+Eugene Siegel
+Hampus Sjöberg
+Harsha Goli
+Jesse de Wit
+Johan T. Halseth
+Johnny Holton
+Joost Jager
+Jordi Montes
+Juan Pablo Civile
+Kishin Kato
+Leonhard Weese
+Martin Habovštiak
+Michael Rhee
+Naveen Srinivasan
+Olaoluwa Osuntokun
+Oliver Gugger
+Priyansh Rastogi
+Roei Erez
+Simon Males
+Stevie Zollo
+Torkel Rogstad
+Wilmer Paulino
+Yong Yu
+Zero-1729
+benthecarman
+carla
+de6df1re
+github2k20
+mateuszmp
+nathanael
+offerm
+positiveblue
+xanoni</p>
+</p>
+					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.0-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.5">v1.3.5</a>
 						    </h2>
 							<p class="card-text">Published: 2021-11-15 13:57:07 UTC</p>
@@ -6530,53 +6686,6 @@ Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.1">v1.4.1</a>
-						    </h2>
-							<p class="card-text">Published: 2021-05-30 11:45:22 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/Specter-Setup-v1.4.1.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/SpecterDesktop-v1.4.1.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/specter_desktop-v1.4.1-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/specterd-v1.4.1-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/specterd-v1.4.1-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/specterd-v1.4.1-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h2>Signatures and hashes</h2>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.1/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @ben-kaufman&#39;s GPG key.
-You can get the public key from here: <a href="https://benkaufman.info/ben-kaufman.asc">https://benkaufman.info/ben-kaufman.asc</a>.
-It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x5D27DE564153F2BD">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD">keys.openpgp.org</a>.
-Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD</code>, short id: <code>5d27de564153f2bd</code></p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Bugfix: a few typos #1201 (Roman Zeyde)</li>
-<li>Bugfix: Set http as default network protocol if non specified #1199 (benk10)</li>
-<li>Bugfix: Update Tor circuit every request #1200 (benk10)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
