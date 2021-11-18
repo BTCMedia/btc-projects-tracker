@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-18T00:14:55+00:00</updated>
+  <updated>2021-11-18T00:22:06+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.0-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.0-beta"/>
@@ -54,7 +54,7 @@ These timestamps should give users confidence in the integrity of this release e
 
 ## Verifying the Release Binaries
 
-Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
+Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/blob/master/docs/release.md) for how this can be achieved.
 The release binaries are compiled with `go1.17.3`, which is required by verifiers to arrive at the same ones.
 They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, `watchtowerrpc` and `monitoring`. Note that these are already included in the release script, so they do not need to be provided.
 
@@ -5545,5 +5545,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-06-01T12:25:38Z</updated>
     <dc:date>2021-06-01T12:25:38Z</dc:date>
   </entry>
-  <dc:date>2021-11-18T00:14:55+00:00</dc:date>
+  <dc:date>2021-11-18T00:22:06+00:00</dc:date>
 </feed>
