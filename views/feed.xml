@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-19T20:53:18+00:00</updated>
+  <updated>2021-11-19T21:10:00+00:00</updated>
+  <entry>
+    <id>https://github.com/romanz/electrs/releases/tag/v0.9.3</id>
+    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.3"/>
+    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#093-nov-20-2021</summary>
+    <title>romanz/electrs: v0.9.3</title>
+    <updated>2021-11-19T21:05:07Z</updated>
+    <dc:date>2021-11-19T21:05:07Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.0-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.0-beta"/>
@@ -5513,37 +5521,5 @@ Added
     <updated>2021-06-01T22:03:41Z</updated>
     <dc:date>2021-06-01T22:03:41Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.2</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.2"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/Specter-Setup-v1.4.2.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/SpecterDesktop-v1.4.2.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/specter_desktop-v1.4.2-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/specterd-v1.4.2-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/specterd-v1.4.2-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/specterd-v1.4.2-x86_64-linux-gnu.zip)
-
-## Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.2/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
-You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
-Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`
-
-# Release notes
-- Bugfix: unconventional derivations fail regexes #1204 (Stepan Snigirev)
-- Chore: Simplify emptiness checks in txlist #1202 (Roman Zeyde)</summary>
-    <title>cryptoadvance/specter-desktop: v1.4.2</title>
-    <updated>2021-06-01T12:25:38Z</updated>
-    <dc:date>2021-06-01T12:25:38Z</dc:date>
-  </entry>
-  <dc:date>2021-11-19T20:53:18+00:00</dc:date>
+  <dc:date>2021-11-19T21:10:00+00:00</dc:date>
 </feed>
