@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-20T07:32:40+00:00</updated>
+  <updated>2021-11-20T07:41:25+00:00</updated>
   <entry>
     <id>https://github.com/romanz/electrs/releases/tag/v0.9.3</id>
     <link href="https://github.com/romanz/electrs/releases/tag/v0.9.3"/>
@@ -5521,5 +5521,5 @@ Added
     <updated>2021-06-01T22:03:41Z</updated>
     <dc:date>2021-06-01T22:03:41Z</dc:date>
   </entry>
-  <dc:date>2021-11-20T07:32:40+00:00</dc:date>
+  <dc:date>2021-11-20T07:41:25+00:00</dc:date>
 </feed>
