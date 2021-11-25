@@ -6,11 +6,11 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-25T09:51:14+00:00</updated>
+  <updated>2021-11-25T10:03:51+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta"/>
-    <summary>This marks the first minor release of the `0.14.x` release cycle! This primarily a bug fix release that fixes: an issue that would arise with `lnd` nodes older than 2 years in certain circumstances, a fix to ensure we always advertise a consistent of feature bits, and most importantly **a fix to ensure compatibility for new channel opens with the latest versions of c-lightning+eclair**. 
+    <summary>This marks the first minor release of the `0.14.x` release cycle! This is primarily a bug fix release that fixes: an issue that would arise with `lnd` nodes older than 2 years in certain circumstances, a fix to ensure we always advertise a consistent of feature bits, and most importantly **a fix to ensure compatibility for new channel opens with the latest versions of c-lightning+eclair**. 
 
 # Database Migrations
 
@@ -5663,5 +5663,5 @@ Added
     <updated>2021-06-03T09:27:26Z</updated>
     <dc:date>2021-06-03T09:27:26Z</dc:date>
   </entry>
-  <dc:date>2021-11-25T09:51:14+00:00</dc:date>
+  <dc:date>2021-11-25T10:03:51+00:00</dc:date>
 </feed>
