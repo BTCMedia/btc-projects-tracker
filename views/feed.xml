@@ -6,7 +6,36 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-25T14:41:02+00:00</updated>
+  <updated>2021-11-25T14:50:40+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.13</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.13"/>
+    <summary>* ADD: Rate last updated date 
+* ADD: Danish currency. 
+* ADD: Truncate prop on Copy to Clipboard component 
+* ADD: Update Outdated Rate 
+* ADD: Log openURL error 
+
+* FIX: Can't adjust multisig setting on 4&quot; iPhone #4206 
+* FIX: Rare crash on multisig wallet details screen
+* FIX: Use containedModal on macOS to unblock prompt UI 
+* FIX: Pull-to-refresh on main screen 
+* FIX: refresh lndhub wallet balance after paying for invoice by scanning qrcode on main screen 
+* FIX: import custom derivation path with passphrase 
+* FIX: 0 amounts in custom receive would result in undefined 
+* FIX: lnPayURL scan wallet currency in BTC or local currency 
+* FIX: Use haptic system settings for  biometrics use 
+* FIX: scroll index was being reset on focus 
+* FIX: lightning address should now work with .onion addresses 
+* FIX: Dont allow navigation to other screens when loading 
+
+* DEL: Remove contextMenuHidden 
+* TST: cosign with non-zero account (HD single-sig) 
+</summary>
+    <title>BlueWallet/BlueWallet: v6.2.13</title>
+    <updated>2021-11-25T14:43:12Z</updated>
+    <dc:date>2021-11-25T14:43:12Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta"/>
@@ -5645,23 +5674,5 @@ Build with .NET Core 3.1.407-win-x64.
     <updated>2021-06-03T12:47:10Z</updated>
     <dc:date>2021-06-03T12:47:10Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.5</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.5"/>
-    <summary>Fixed
-  Cannot read seed words for vault key - mostly blank #3232  
-  LNURLPay was defaulting to sats 
-  No scroll in android sim on receive #3192  
-  RTL on iOS doesn't work #3122
-
-Refactored 
-  Storage improvements 
-
-Added
-    Abbreviated Watch Complication Price display </summary>
-    <title>BlueWallet/BlueWallet: v6.1.5</title>
-    <updated>2021-06-03T09:27:26Z</updated>
-    <dc:date>2021-06-03T09:27:26Z</dc:date>
-  </entry>
-  <dc:date>2021-11-25T14:41:02+00:00</dc:date>
+  <dc:date>2021-11-25T14:50:40+00:00</dc:date>
 </feed>
