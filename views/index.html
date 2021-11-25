@@ -43,9 +43,11 @@
 							<p class="card-text">Published: 2021-11-24 23:33:17 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><h1>Database Migrations</h1>
+					    <p class="card-text"><p>This marks the first minor release of the <code>0.14.x</code> release cycle! This primarily a bug fix release that fixes: an issue that would arise with <code>lnd</code> nodes older than 2 years in certain circumstances, a fix to ensure we always advertise a consistent of feature bits, and most importantly <strong>a fix to ensure compatibility for new channel opens with the latest versions of c-lightning+eclair</strong>. </p>
 
-<p>There are two database migrations for this version in <code>lnd</code>: One optimizes the storage structure of HTLCs for faster payments and the other removes old channel state data from closed channels to free up disk space. See the <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md">release notes <code>v0.14.0-beta</code></a> (and <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md"><code>v0.14.1-beta</code></a>) for more information.</p>
+<h1>Database Migrations</h1>
+
+<p>There are two database migrations for this version in <code>lnd</code> (that were included in 0.14.0): One optimizes the storage structure of HTLCs for faster payments and the other removes old channel state data from closed channels to free up disk space. See the <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md">release notes <code>v0.14.0-beta</code></a> (and <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md"><code>v0.14.1-beta</code></a>) for more information.</p>
 
 <p>NOTE: Compacting the DB is recommended after running the migration to reclaim the freed up space.</p>
 
@@ -143,7 +145,7 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 <p>Read the full release notes here: <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md">https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md</a>
 and here: <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md">https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md</a></p>
 
-<h1>Contributors (Alphabetical Order)</h1>
+<h1>Contributors (Alphabetical Order) -- combined 0.14+0.14.1</h1>
 
 <p>Abubakar Nur Khalil
 Adrian-Stefan Mares

@@ -6,13 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-25T01:21:32+00:00</updated>
+  <updated>2021-11-25T01:34:38+00:00</updated>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta"/>
-    <summary># Database Migrations
+    <summary>This marks the first minor release of the `0.14.x` release cycle! This primarily a bug fix release that fixes: an issue that would arise with `lnd` nodes older than 2 years in certain circumstances, a fix to ensure we always advertise a consistent of feature bits, and most importantly **a fix to ensure compatibility for new channel opens with the latest versions of c-lightning+eclair**. 
 
-There are two database migrations for this version in `lnd`: One optimizes the storage structure of HTLCs for faster payments and the other removes old channel state data from closed channels to free up disk space. See the [release notes `v0.14.0-beta`](https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md) (and [`v0.14.1-beta`](https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md)) for more information.
+# Database Migrations
+
+There are two database migrations for this version in `lnd` (that were included in 0.14.0): One optimizes the storage structure of HTLCs for faster payments and the other removes old channel state data from closed channels to free up disk space. See the [release notes `v0.14.0-beta`](https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md) (and [`v0.14.1-beta`](https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md)) for more information.
 
 NOTE: Compacting the DB is recommended after running the migration to reclaim the freed up space.
 # Verifying the Release
@@ -109,7 +111,7 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 Read the full release notes here: https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md
 and here: https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md
 
-# Contributors (Alphabetical Order)
+# Contributors (Alphabetical Order) -- combined 0.14+0.14.1
 
 Abubakar Nur Khalil
 Adrian-Stefan Mares
@@ -5661,5 +5663,5 @@ Added
     <updated>2021-06-03T09:27:26Z</updated>
     <dc:date>2021-06-03T09:27:26Z</dc:date>
   </entry>
-  <dc:date>2021-11-25T01:21:32+00:00</dc:date>
+  <dc:date>2021-11-25T01:34:38+00:00</dc:date>
 </feed>
