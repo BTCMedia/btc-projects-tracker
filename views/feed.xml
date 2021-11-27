@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-27T13:21:53+00:00</updated>
+  <updated>2021-11-27T13:32:33+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.9</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.9"/>
+    <summary>Umbrel 0.4.9 brings two-factor authentication (2FA) to add an extra layer of security to your Umbrel, LND 0.14.1, two brand new apps in the Umbrel App Store — Tallycoin Connect and Syncthing, updated apps, bug fixes, and more.</summary>
+    <title>getumbrel/umbrel: v0.4.9</title>
+    <updated>2021-11-27T13:22:11Z</updated>
+    <dc:date>2021-11-27T13:22:11Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.13</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.13"/>
@@ -5637,42 +5645,5 @@ yyforyongyu</summary>
     <updated>2021-06-03T15:49:03Z</updated>
     <dc:date>2021-06-03T15:49:03Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.9</id>
-    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.12.9"/>
-    <summary># Summary
-
-This release contains mostly updates. With the NBitcoin update, DNS seed queries are done over Tor as well - this can fix problems for users who use an operating system that can only communicate through Tor. HWI update contains minor fixes, check the release notes [here](https://github.com/bitcoin-core/HWI/releases/tag/2.0.2).
-
-- Updated Bitcoin Hardware Wallet Interface [HWI 2.0.2](https://github.com/bitcoin-core/HWI/releases/tag/2.0.2).
-- Updated [NBitcoin 5.0.81](https://github.com/MetacoSA/NBitcoin/pull/1003).
-
-# Newbie Guide
-
-While setting up Wasabi is straightforward, even a Linux wizard with the longest beard can get stuck on the most basic tasks. Consider taking a look at the [Installation Instructions](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html) guide.
-
-# Advanced Guide
-
-If you want to build Wasabi from source code or update the source code check out [these instructions.](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html)
-
-From version 1.1.3 Wasabi also introduces [reproducible builds](https://reproducible-builds.org/): [Deterministic Build Guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md)
-
-Build with .NET Core 3.1.407-win-x64.
-
-## FAQ
-
-- **Frequently asked questions [here](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq).**
-- **Requirements?** x64, Linux, &gt;Win10, &gt;macOS 10.13.
-
-# Release Notes
-
-- **HWI** https://github.com/zkSNACKs/WalletWasabi/pull/5861 
-- **NBitcoin** https://github.com/zkSNACKs/WalletWasabi/pull/5800
-- **Wallet rescan in case of file corruption** https://github.com/zkSNACKs/WalletWasabi/pull/5508 https://github.com/zkSNACKs/WalletWasabi/pull/5537
-- **Account keypath validation on Wallet Recovery** https://github.com/zkSNACKs/WalletWasabi/pull/4070</summary>
-    <title>zkSNACKs/WalletWasabi: v1.1.12.9</title>
-    <updated>2021-06-03T12:47:10Z</updated>
-    <dc:date>2021-06-03T12:47:10Z</dc:date>
-  </entry>
-  <dc:date>2021-11-27T13:21:53+00:00</dc:date>
+  <dc:date>2021-11-27T13:32:33+00:00</dc:date>
 </feed>
