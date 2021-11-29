@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-29T18:41:29+00:00</updated>
+  <updated>2021-11-29T18:53:32+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.9</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.9"/>
@@ -667,8 +667,8 @@ Christian, Rusty, Lisa.</summary>
     <dc:date>2021-11-03T17:48:57Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.103</id>
-    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.103"/>
+    <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.103</id>
+    <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.103"/>
     <summary>## API Updates
  * This release is almost entirely focused on a new API in the
    `lightning-invoice` crate - the `InvoicePayer`. `InvoicePayer` is a
@@ -737,7 +737,7 @@ deletions in 71 commits from 2 authors, in alphabetical order:
 
  * Jeffrey Czyz
  * Matt Corallo</summary>
-    <title>rust-bitcoin/rust-lightning: v0.0.103</title>
+    <title>lightningdevkit/rust-lightning: v0.0.103</title>
     <updated>2021-11-03T03:33:02Z</updated>
     <dc:date>2021-11-03T03:33:02Z</dc:date>
   </entry>
@@ -1163,8 +1163,8 @@ Fingerprint of the key is `ECC0 B4AB D74E 716F 5ADE 0952 28B3 58A8 843B 0109`
     <dc:date>2021-10-19T10:59:01Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.102</id>
-    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.102"/>
+    <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.102</id>
+    <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.102"/>
     <summary>## API Updates
  * `get_route` now takes a `Score` as an argument. `Score` is queried during
    the route-finding process, returning the absolute amounts which you are
@@ -1239,7 +1239,7 @@ deletions in 51 commits from 7 authors, in alphabetical order:
  * Jeffrey Czyz
  * Matt Corallo
  * Valentine Wallace</summary>
-    <title>rust-bitcoin/rust-lightning: v0.0.102</title>
+    <title>lightningdevkit/rust-lightning: v0.0.102</title>
     <updated>2021-10-18T19:27:25Z</updated>
     <dc:date>2021-10-18T19:27:25Z</dc:date>
   </entry>
@@ -2362,8 +2362,8 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <dc:date>2021-09-24T13:12:32Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.101</id>
-    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.101"/>
+    <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.101</id>
+    <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.101"/>
     <summary>## API Updates
  * Custom message types are now supported directly in the `PeerManager`,
    allowing you to send and receive messages of any type that is not natively
@@ -2462,7 +2462,7 @@ deletions in 89 commits from 12 authors, in alphabetical order:
  * Valentine Wallace
  * abhik-99
  * vss96</summary>
-    <title>rust-bitcoin/rust-lightning: v0.0.101</title>
+    <title>lightningdevkit/rust-lightning: v0.0.101</title>
     <updated>2021-09-23T18:47:46Z</updated>
     <dc:date>2021-09-23T18:47:46Z</dc:date>
   </entry>
@@ -2873,8 +2873,8 @@ a6223f3a9d289f1d5a4ab535b5e748f43b5829ab6274050b93f86d2c77223683  rskj-core-3.0.
     <dc:date>2021-08-20T13:03:10Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.100</id>
-    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.100"/>
+    <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.100</id>
+    <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.100"/>
     <summary>## API Updates
  * The `lightning` crate can now be built in no_std mode, making it easy to
    target embedded hardware for rust users. Note that mutexes are replaced with
@@ -2965,7 +2965,7 @@ a6223f3a9d289f1d5a4ab535b5e748f43b5829ab6274050b93f86d2c77223683  rskj-core-3.0.
 In total, this release features 59 files changed, 5861 insertions, and 2082
 deletions in 95 commits from 6 authors.
 </summary>
-    <title>rust-bitcoin/rust-lightning: v0.0.100</title>
+    <title>lightningdevkit/rust-lightning: v0.0.100</title>
     <updated>2021-08-17T18:57:15Z</updated>
     <dc:date>2021-08-17T18:57:15Z</dc:date>
   </entry>
@@ -3785,8 +3785,8 @@ Fixes:
     <dc:date>2021-07-10T17:08:44Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.99</id>
-    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.99"/>
+    <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.99</id>
+    <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.99"/>
     <summary>
 ## API Updates
 
@@ -3856,7 +3856,7 @@ Fixes:
    `ChannelManager` will fail to deserialize both on version 0.0.98 and later
    versions. If you have such a `ChannelManager` available, a simple patch will
    allow it to deserialize. Please file an issue if you need assistance (#973).</summary>
-    <title>rust-bitcoin/rust-lightning: v0.0.99</title>
+    <title>lightningdevkit/rust-lightning: v0.0.99</title>
     <updated>2021-07-09T17:42:18Z</updated>
     <dc:date>2021-07-09T17:42:18Z</dc:date>
   </entry>
@@ -4689,10 +4689,10 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.12...v0.3.13</summary>
     <dc:date>2021-06-21T08:16:50Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.98</id>
-    <link href="https://github.com/rust-bitcoin/rust-lightning/releases/tag/v0.0.98"/>
+    <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.98</id>
+    <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.98"/>
     <summary>0.0.98 should be considered a release candidate to the first alpha release of Rust-Lightning and the broader LDK. It represents several years of work designing and fine-tuning a flexible API for integrating lightning into any application. LDK should make it easy to build a lightning node or client which meets specific requirements that other lightning node software cannot. As lightning continues to evolve, and new use-cases for lightning develop, the API of LDK will continue to change and expand. However, starting with version 0.1, objects serialized with prior versions will be readable with the latest LDK. While Rust-Lightning is approaching the 0.1 milestone, language bindings components of LDK available at https://github.com/lightningdevkit are still of varying quality. Some are also approaching an 0.1 release, while others are still much more experimental. Please note that, at 0.0.98, using Rust-Lightning on mainnet is strongly discouraged.</summary>
-    <title>rust-bitcoin/rust-lightning: v0.0.98</title>
+    <title>lightningdevkit/rust-lightning: v0.0.98</title>
     <updated>2021-06-20T20:02:22Z</updated>
     <dc:date>2021-06-20T20:02:22Z</dc:date>
   </entry>
@@ -5645,5 +5645,5 @@ yyforyongyu</summary>
     <updated>2021-06-03T15:49:03Z</updated>
     <dc:date>2021-06-03T15:49:03Z</dc:date>
   </entry>
-  <dc:date>2021-11-29T18:41:29+00:00</dc:date>
+  <dc:date>2021-11-29T18:53:32+00:00</dc:date>
 </feed>
