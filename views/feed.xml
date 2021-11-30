@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-11-30T11:32:58+00:00</updated>
+  <updated>2021-11-30T11:43:44+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.7.2</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.7.2"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.7.2</title>
+    <updated>2021-11-30T11:39:32Z</updated>
+    <dc:date>2021-11-30T11:39:32Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.9</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.9"/>
@@ -5636,14 +5644,5 @@ yyforyongyu</summary>
     <updated>2021-06-08T14:18:27Z</updated>
     <dc:date>2021-06-08T14:18:27Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.8</id>
-    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.8"/>
-    <summary>Upgrade unchained-bitcoin and unchained-wallets to the latest versions primarily to fix Ledger WebUSB in MacOS Chrome.
-</summary>
-    <title>unchained-capital/caravan: v0.3.8</title>
-    <updated>2021-06-03T15:49:03Z</updated>
-    <dc:date>2021-06-03T15:49:03Z</dc:date>
-  </entry>
-  <dc:date>2021-11-30T11:32:58+00:00</dc:date>
+  <dc:date>2021-11-30T11:43:44+00:00</dc:date>
 </feed>
