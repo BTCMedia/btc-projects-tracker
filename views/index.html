@@ -43,7 +43,49 @@
 							<p class="card-text">Published: 2021-11-30 11:39:32 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"></p>
+					    <p class="card-text"><h1>Binaries</h1>
+
+<p>There are two types of binaries:</p>
+
+<h2>Specter Desktop</h2>
+
+<p>It&#39;s a windowed GUI application with Specter server included.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.2/Specter-Setup-v1.7.2.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.2/SpecterDesktop-v1.7.2.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.2/specter_desktop-v1.7.2-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
+
+<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
+
+<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
+
+<h2>specterd</h2>
+
+<p>It&#39;s a command-line program that only runs Specter server.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.2/specterd-v1.7.2-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.2/specterd-v1.7.2-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.2/specterd-v1.7.2-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
+
+<h2>Signatures and hashes</h2>
+
+<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.7.2/SHA256SUMS">SHA256SUMS</a> file contains sha256 hashes of all binary files and signed with &quot;Specter Signer&#39;s&quot; GPG key.
+You can get the public key from <a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7">here</a>.
+Fingerprint of the key is <code>785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7</code>
+This key has been signed by @k9ert&#39;s key which you might have used for validating th 1.7.0 release.</p>
+
+<h1>Release notes</h1>
+
+<ul>
+<li>Feature: Default blockchain rescan to first Taproot block for Taproot wallets #1479 (kdmukai)</li>
+<li>Feature: Encrypted user data storage #1453 (kdmukai)</li>
+<li>Feature: More options for address labels imports #1470 (Manolis)</li>
+<li>Feature: Improved export and restore hot wallet process #1495 (singlatushar07)</li>
+<li>Bugfix: Adds <code>no_wait</code> option to rpc calls #1485 (kdmukai)</li>
+<li>Bugfix: Adjust build-badge to Cirrus #1464 (Kim Neunert)</li>
+<li>Bugfix: csrf-exempt for /toggle<em>hide</em>sensitive_info endpoint #1478 (Kim Neunert)</li>
+<li>Bugfix: Custom autohide bugfix #1468 (kdmukai)</li>
+<li>Bugfix: Default state for left nav &quot;Devices&quot; should be hidden #1481 (kdmukai)</li>
+<li>Bugfix: &#39;Specter&#39; object has no attribute &#39;user_manager&#39; #1476 (Manolis)</li>
+<li>Bugfix: tests on master #1465 (Kim Neunert)</li>
+<li>Documentation: hosted at docs.specter.solutions #1463 (Kim Neunert)</li>
+<li>Chore: Taproot test case #1482 (kdmukai)</li>
+</ul>
+</p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.7.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
