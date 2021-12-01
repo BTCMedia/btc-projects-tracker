@@ -352,7 +352,11 @@ xanoni</p>
 							<p class="card-text">Published: 2021-11-17 21:22:27 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><h1>Database Migrations</h1>
+					    <p class="card-text"><h1>Note</h1>
+
+<p><code>lnd</code> 0.14.0 has a known issue regarding channel negotiation (e.g. opening channels) with other Lightning implementations. Please upgrade to <code>lnd</code> 0.14.1 which mitigates this issue.</p>
+
+<h1>Database Migrations</h1>
 
 <p>There are two database migrations for this version in <code>lnd</code>: One optimizes the storage structure of HTLCs for faster payments and the other removes old channel state data from closed channels to free up disk space. See the <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md">release notes</a> for more information.</p>
 

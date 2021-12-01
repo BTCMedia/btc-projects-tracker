@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-01T18:43:54+00:00</updated>
+  <updated>2021-12-01T18:53:10+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.7.2</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.7.2"/>
@@ -264,7 +264,10 @@ xanoni
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.0-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.0-beta"/>
-    <summary># Database Migrations
+    <summary># Note
+`lnd` 0.14.0 has a known issue regarding channel negotiation (e.g. opening channels) with other Lightning implementations. Please upgrade to `lnd` 0.14.1 which mitigates this issue.
+
+# Database Migrations
 
 There are two database migrations for this version in `lnd`: One optimizes the storage structure of HTLCs for faster payments and the other removes old channel state data from closed channels to free up disk space. See the [release notes](https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md) for more information.
 
@@ -5679,5 +5682,5 @@ yyforyongyu</summary>
     <updated>2021-06-08T14:18:27Z</updated>
     <dc:date>2021-06-08T14:18:27Z</dc:date>
   </entry>
-  <dc:date>2021-12-01T18:43:54+00:00</dc:date>
+  <dc:date>2021-12-01T18:53:10+00:00</dc:date>
 </feed>
