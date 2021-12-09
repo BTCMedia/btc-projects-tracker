@@ -6,14 +6,14 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-09T21:33:45+00:00</updated>
+  <updated>2021-12-09T21:42:45+00:00</updated>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.12</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.12"/>
     <summary>Dependabot updates and pinning unchained-libraries</summary>
     <title>unchained-capital/caravan: v0.3.12</title>
-    <updated>2021-12-09T19:58:02Z</updated>
-    <dc:date>2021-12-09T19:58:02Z</dc:date>
+    <updated>2021-12-09T21:42:01Z</updated>
+    <dc:date>2021-12-09T21:42:01Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/ElementsProject/elements/releases/tag/elements-0.21.0.1</id>
@@ -5300,5 +5300,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-06-08T17:31:45Z</updated>
     <dc:date>2021-06-08T17:31:45Z</dc:date>
   </entry>
-  <dc:date>2021-12-09T21:33:45+00:00</dc:date>
+  <dc:date>2021-12-09T21:42:45+00:00</dc:date>
 </feed>
