@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-09T21:42:45+00:00</updated>
+  <updated>2021-12-09T21:51:23+00:00</updated>
+  <entry>
+    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.13</id>
+    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.13"/>
+    <summary>Dependabot updates and pinning unchained-libraries</summary>
+    <title>unchained-capital/caravan: v0.3.13</title>
+    <updated>2021-12-09T21:48:57Z</updated>
+    <dc:date>2021-12-09T21:48:57Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.12</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.12"/>
@@ -5256,49 +5264,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-06-09T19:11:53Z</updated>
     <dc:date>2021-06-09T19:11:53Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.14</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.14"/>
-    <summary>## Main changes
-
-### Remove editable fee rate in swap-out
-
-Swap-outs (LN -&gt; on-chain) are actually spending from a shared UTXO set. To make things consistent and ensure good UX for every users, the swap-out fee rate is now defined by the swap service. 
-
-More info here: https://phoenix.acinq.co/faq#why-dont-you-let-me-set-the-feerate-myself-when-sending-on-chain
-
-### Added a button to enlarge the receive QR code
-
-This will help scanning a invoice with low resolution camera.
-
-### Added an option to disable pay-to-open
-
-On-the-fly channel creation has a fee and users may want to disable it. In that case, if a new channel was required to be created in order for a incoming payment to be received, the payment will fail and a notification will be displayed (with a cooldown to prevent notification spam).
-
-### Full list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.13...v1.4.14
-- **core**: https://github.com/ACINQ/eclair/compare/v0.4.11-android-phoenix...v0.4.12-android-phoenix
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-- from our website: https://acinq.co/pgp/drouinf.asc
-- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import drouinf.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: android-legacy-v1.4.14</title>
-    <updated>2021-06-08T17:31:45Z</updated>
-    <dc:date>2021-06-08T17:31:45Z</dc:date>
-  </entry>
-  <dc:date>2021-12-09T21:42:45+00:00</dc:date>
+  <dc:date>2021-12-09T21:51:23+00:00</dc:date>
 </feed>
