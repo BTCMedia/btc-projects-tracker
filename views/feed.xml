@@ -6,7 +6,28 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-12T21:11:41+00:00</updated>
+  <updated>2021-12-12T21:23:15+00:00</updated>
+  <entry>
+    <id>https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.5-beta</id>
+    <link href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.5-beta"/>
+    <summary>## Release notes
+
+### Features
+
+* add support for lnd 0.14.1 ([25756a5](https://github.com/LN-Zap/zap-desktop/commit/25756a5cf5457625a2a5850a5219e61df01f0649))
+
+### Changelog
+The full list of changes since 0.7.4-beta can be found here:
+
+https://github.com/LN-Zap/zap-desktop/compare/v0.7.4-beta...v0.7.5-beta
+
+## Verifying the Release
+
+Please refer to [our documentation](https://github.com/LN-Zap/zap-desktop#documentation) for [instructions on how to verify the release](https://github.com/LN-Zap/zap-desktop/blob/master/docs/SIGNATURES.md).</summary>
+    <title>LN-Zap/zap-desktop: v0.7.5-beta</title>
+    <updated>2021-12-12T21:14:45Z</updated>
+    <dc:date>2021-12-12T21:14:45Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.13</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.13"/>
@@ -5250,19 +5271,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-06-10T12:52:17Z</updated>
     <dc:date>2021-06-10T12:52:17Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.12</id>
-    <link href="https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.12"/>
-    <summary>Changelog:
-
-- Support supplying contract hash to issueasset RPC
-- Fix description of -chain parameter
-- Add liquidv1test chainparams
-- Add logging for dynafed activation and transitions
-- Undo default signalling behavior for dynafed unless enabled</summary>
-    <title>ElementsProject/elements: elements-0.18.1.12</title>
-    <updated>2021-06-09T19:11:53Z</updated>
-    <dc:date>2021-06-09T19:11:53Z</dc:date>
-  </entry>
-  <dc:date>2021-12-12T21:11:41+00:00</dc:date>
+  <dc:date>2021-12-12T21:23:15+00:00</dc:date>
 </feed>
