@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-13T01:12:50+00:00</updated>
+  <updated>2021-12-13T01:21:48+00:00</updated>
   <entry>
     <id>https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.5-beta</id>
     <link href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.5-beta"/>
@@ -5271,5 +5271,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-06-10T12:52:17Z</updated>
     <dc:date>2021-06-10T12:52:17Z</dc:date>
   </entry>
-  <dc:date>2021-12-13T01:12:50+00:00</dc:date>
+  <dc:date>2021-12-13T01:21:48+00:00</dc:date>
 </feed>
