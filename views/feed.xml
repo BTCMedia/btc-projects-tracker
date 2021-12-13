@@ -6,7 +6,21 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-13T16:22:03+00:00</updated>
+  <updated>2021-12-13T16:32:55+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.14</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.14"/>
+    <summary>* ADD: Send support for Taproot address type
+* FIX: Statusbar style on sign/verify 
+* FIX: reject unknown segwit versions as invalid address 
+* FIX: scan BC-UR Crypto-Account animated 
+* FIX: reject unknown segwit versions as invalid address 
+* FIX: Multisig Provide signature button not scrollable #4238 
+* FIX: open bankid and external explorer</summary>
+    <title>BlueWallet/BlueWallet: v6.2.14</title>
+    <updated>2021-12-13T16:27:17Z</updated>
+    <dc:date>2021-12-13T16:27:17Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.10</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.10"/>
@@ -5353,17 +5367,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-06-16T19:23:37Z</updated>
     <dc:date>2021-06-16T19:23:37Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.12</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.12"/>
-    <summary>Umbrel v0.3.12 fixes a bug that made Umbrel inaccessible over Tor.
-
-If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.11...v0.3.12</summary>
-    <title>getumbrel/umbrel: v0.3.12</title>
-    <updated>2021-06-11T15:35:06Z</updated>
-    <dc:date>2021-06-11T15:35:06Z</dc:date>
-  </entry>
-  <dc:date>2021-12-13T16:22:03+00:00</dc:date>
+  <dc:date>2021-12-13T16:32:55+00:00</dc:date>
 </feed>
