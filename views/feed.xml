@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-13T10:31:52+00:00</updated>
+  <updated>2021-12-13T10:42:09+00:00</updated>
   <entry>
     <id>https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.5-beta</id>
     <link href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.5-beta"/>
@@ -27,6 +27,132 @@ Please refer to [our documentation](https://github.com/LN-Zap/zap-desktop#docume
     <title>LN-Zap/zap-desktop: v0.7.5-beta</title>
     <updated>2021-12-12T21:14:45Z</updated>
     <dc:date>2021-12-12T21:14:45Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/bisq-network/bisq/releases/tag/v1.8.0</id>
+    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.8.0"/>
+    <summary>## Release notes
+This release introduces [BSQ swaps](https://bisq.wiki/BSQ_swaps): an instant, trustless, and cheaper way to exchange BTC with BSQ.
+It also ships four new payment methods: ACH Transfer, Domestic Wire Transfer, Tikkie and TransferWise-USD.
+In addition, this release significantly reduces resources necessary for parsing DAO blocks. You'll find further improvements and bug fixes across the board!
+
+### Improvements
+- BSQ swaps: [1](https://github.com/bisq-network/bisq/pull/5775), [2](https://github.com/bisq-network/bisq/pull/5729), [3](https://github.com/bisq-network/bisq/pull/5886), [4](https://github.com/bisq-network/bisq/pull/5858), [5](https://github.com/bisq-network/bisq/pull/5889)
+- [Add payment methods ACH Transfer and Domestic Wire Transfer](https://github.com/bisq-network/bisq/pull/5823)
+- [Add payment methods Tikkie and TransferWise-USD](https://github.com/bisq-network/bisq/pull/5821)
+- Optimize DAO charts: [1](https://github.com/bisq-network/bisq/pull/5795), [2](https://github.com/bisq-network/bisq/pull/5855)
+- [Optimize trade chart view](https://github.com/bisq-network/bisq/pull/5794)
+- [Extract persistence of BSQ blocks out of DaoStateStore](https://github.com/bisq-network/bisq/pull/5790)
+- [Improve DAO state monitoring](https://github.com/bisq-network/bisq/pull/5782)
+- [Improve fee handling](https://github.com/bisq-network/bisq/pull/5826)
+- [Improve FilterManager](https://github.com/bisq-network/bisq/pull/5854)
+- [Avoid that outdated donation and fee addresses are used.](https://github.com/bisq-network/bisq/pull/5764)
+- [Add penalty calculation to dispute agent UI](https://github.com/bisq-network/bisq/pull/5834)
+- [Option to not repeat popup message of locked up funds from failed trade](https://github.com/bisq-network/bisq/pull/5771)
+- [Confirm button state for BTC seller to be disabled in mediation](https://github.com/bisq-network/bisq/pull/5808)
+- [Add &quot;Buy BSQ&quot; button next to trade fee selector](https://github.com/bisq-network/bisq/pull/5055)
+- [Improve shutdown process](https://github.com/bisq-network/bisq/pull/5905)
+- [Increase trade protocol timeout from 60 sec to 120 sec](https://github.com/bisq-network/bisq/pull/5904)
+- [Add Polish translation](https://github.com/bisq-network/bisq/pull/5883)
+- Improve trade statistics validation: [1](https://github.com/bisq-network/bisq/pull/5853), [2](https://github.com/bisq-network/bisq/pull/5849)
+
+### Bug fixes
+- [Fix calculation &amp; display of Locked Funds](https://github.com/bisq-network/bisq/pull/5813)
+- [Fix display of missing Failed Trade tab](https://github.com/bisq-network/bisq/pull/5831)
+- [Fix blockchain reorg handling](https://github.com/bisq-network/bisq/pull/5819)
+- [Fix incorrect app initialization](https://github.com/bisq-network/bisq/pull/5817)
+- [Fix incorrect re-opening of dispute ticket by mailbox message](https://github.com/bisq-network/bisq/pull/5878)
+- [Prevent NPE in case delayedPayoutTx is not present (failed trade)](https://github.com/bisq-network/bisq/pull/5797)
+- [Include holder name field for Monese &amp; Satispay accounts](https://github.com/bisq-network/bisq/pull/5791)
+- [Gracefully handle null data in refresh offer message and log error](https://github.com/bisq-network/bisq/pull/5788)
+- [Always use fresh address for MULTI_SIG context to prevent problems with address re-usage when funding](https://github.com/bisq-network/bisq/pull/5885)
+- [Fix updating of Locked Balance display](https://github.com/bisq-network/bisq/pull/5842)
+- [Fix Exception in Portfolio History when a canceled offer with a different onion address os displayed](https://github.com/bisq-network/bisq/pull/5842)
+- [Avoid Log4J &quot;Log4Shell&quot; exploit](https://github.com/bisq-network/bisq/pull/5910)
+
+### Development &amp; Documentation
+- Upgrade to Gradle 7.3: [1](https://github.com/bisq-network/bisq/pull/5824), [2](https://github.com/bisq-network/bisq/pull/5838), [3](https://github.com/bisq-network/bisq/pull/5839), [4](https://github.com/bisq-network/bisq/pull/5851)
+- [Small debugging utils](https://github.com/bisq-network/bisq/pull/5818)
+- [API: Deprecate and replace hard-coded CLI console output formatters](https://github.com/bisq-network/bisq/pull/5812)
+- [GitHub build: Cache gradle dependencies](https://github.com/bisq-network/bisq/pull/5805)
+- [Add I2P as enum entry](https://github.com/bisq-network/bisq/pull/5840)
+- [Update package.gradle: rely on local JDK 15](https://github.com/bisq-network/bisq/pull/5864)
+
+### New Assets
+- [Changes required for GRIN re-listing](https://github.com/bisq-network/bisq/pull/5820)
+
+## Verification
+
+For a detailed description on how to verify your Bisq installer please have a look at our wiki: https://bisq.wiki/Downloading_and_installing#Verify_installer_file
+
+Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
+Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
+
+Import the key:
+`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
+
+How to verify signatures?
+`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
+Replace BINARY with the file you downloaded (e.g. Bisq-1.8.0.dmg)
+
+Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.8.0-all.jar
+The output need to match the value from the Bisq-1.8.0.jar.txt file.
+
+There are three hashes within the Bisq-1.8.0.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 15.0.5 and the v1.8.0 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.
+
+## Known issues with installation 
+
+### Windows:
+
+There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
+
+If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
+
+[1] Application directory (contains application installation files):
+C:\Users\&lt;username&gt;\AppData\Local\Bisq
+
+[2] Data directory (contains all Bisq data including wallet):
+C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
+
+
+### Linux:
+
+Hint for Debian users:
+If you have problems starting Bisq on Debian use: `/opt/bisq/bin/Bisq`
+
+If your Linux distro does not support .deb files please follow this instruction:
+```
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.8.0.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+```
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
+
+## Credits
+
+Thanks to everyone who directly contributed to this release:
+- @cbeams 
+- @cd2357 
+- @chimp1984 
+- @ghubstan 
+- @Jakub-CZ 
+- @jmacxx 
+- @m52go 
+- @ripcurlx 
+- @sqrrm  
+- @wiz 
+
+As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
+    <title>bisq-network/bisq: v1.8.0</title>
+    <updated>2021-12-10T18:25:56Z</updated>
+    <dc:date>2021-12-10T18:25:56Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.13</id>
@@ -1024,7 +1150,9 @@ $ sha256sum -c SHA256SUMS.stripped
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.5</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.5"/>
-    <summary>## Release notes
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+## Release notes
 This release introduces 13 new payment methods: Strike, Verse, Monese, Satispay, Bizum, Pix, Nequi, CelPay, PayTM, UPI, RTGS, NEFT and IMPS. It also upgrades Tor to the its latest version and moves all remaining nodes to Tor v3 addresses. And as always, there are many additional bug fixes and minor improvements across the board.
 
 ### Improvements
@@ -5239,37 +5367,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.10...v0.3.11</summary>
     <updated>2021-06-10T14:33:56Z</updated>
     <dc:date>2021-06-10T14:33:56Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.3</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.3"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/Specter-Setup-v1.4.3.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/SpecterDesktop-v1.4.3.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/specter_desktop-v1.4.3-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/specterd-v1.4.3-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/specterd-v1.4.3-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/specterd-v1.4.3-x86_64-linux-gnu.zip)
-
-## Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.3/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
-You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
-Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`
-
-# Release notes
-- Bugfix: add some liquid fixes #1194 (Stepan Snigirev)
-- Feature: Fully unblind liquid transactions sent by Specter #1220 (Stepan Snigirev)</summary>
-    <title>cryptoadvance/specter-desktop: v1.4.3</title>
-    <updated>2021-06-10T12:52:17Z</updated>
-    <dc:date>2021-06-10T12:52:17Z</dc:date>
-  </entry>
-  <dc:date>2021-12-13T10:31:52+00:00</dc:date>
+  <dc:date>2021-12-13T10:42:09+00:00</dc:date>
 </feed>
