@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-13T16:32:55+00:00</updated>
+  <updated>2021-12-13T16:43:21+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.14</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.14"/>
@@ -5367,5 +5367,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-06-16T19:23:37Z</updated>
     <dc:date>2021-06-16T19:23:37Z</dc:date>
   </entry>
-  <dc:date>2021-12-13T16:32:55+00:00</dc:date>
+  <dc:date>2021-12-13T16:43:21+00:00</dc:date>
 </feed>
