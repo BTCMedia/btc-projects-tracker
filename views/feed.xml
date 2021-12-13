@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-13T11:51:18+00:00</updated>
+  <updated>2021-12-13T12:03:59+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.10</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.10"/>
+    <summary>Umbrel 0.4.10 brings a brand new app to the Umbrel App Store — Uptime Kuma, support for Boltz swaps in Ride The Lightning app, updated apps including the latest Lightning Terminal app which contains an important security fix, bug fixes, and more.</summary>
+    <title>getumbrel/umbrel: v0.4.10</title>
+    <updated>2021-12-13T11:59:12Z</updated>
+    <dc:date>2021-12-13T11:59:12Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.5-beta</id>
     <link href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.5-beta"/>
@@ -5355,17 +5363,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.11...v0.3.12</summary>
     <updated>2021-06-11T15:35:06Z</updated>
     <dc:date>2021-06-11T15:35:06Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.11</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.11"/>
-    <summary>Umbrel v0.3.11 is here with the latest versions of Specter Desktop, ThunderHub, Sphinx Relay, Ride The Lightning, and LNbits in the Umbrel App Store, hardware failure detection, low RAM alerts, and stability improvements.
-
-If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.10...v0.3.11</summary>
-    <title>getumbrel/umbrel: v0.3.11</title>
-    <updated>2021-06-10T14:33:56Z</updated>
-    <dc:date>2021-06-10T14:33:56Z</dc:date>
-  </entry>
-  <dc:date>2021-12-13T11:51:18+00:00</dc:date>
+  <dc:date>2021-12-13T12:03:59+00:00</dc:date>
 </feed>
