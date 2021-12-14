@@ -6,7 +6,27 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-14T03:12:30+00:00</updated>
+  <updated>2021-12-14T03:21:38+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.7</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.7"/>
+    <summary>### Improvements:
+
+* Update of Bitbank rate provider (#3157) @junderw
+
+### Bug fixes:
+
+* Fix visual bug when decoding PSBT (#3172) @dennisreimann
+* Swagger fixes: improve API docs and property types (#3170) @woutersamaey
+* Fix copy pay button code (#3175) @dennisreimann
+* Fix LN Node availability check (#3189) @dennisreimann
+* `available` property of nodes returned by /api/v1/server/info wasn't actually set (ee1a034c0ab7744a2988e5da874084bc7dfa8b73) @NicolasDorier
+* Format perk value correctly in crowdfund app (#3141) @bolatovumar
+* Invoice page: Dropdown magically disappears (#3167 #3169) @trigger67</summary>
+    <title>btcpayserver/btcpayserver: v1.3.7</title>
+    <updated>2021-12-14T03:21:10Z</updated>
+    <dc:date>2021-12-14T03:21:10Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.14</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.14"/>
@@ -5329,43 +5349,5 @@ Yong Yu</summary>
     <updated>2021-06-17T19:12:26Z</updated>
     <dc:date>2021-06-17T19:12:26Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.5</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.5"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/Specter-Setup-v1.4.5.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/SpecterDesktop-v1.4.5.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/specter_desktop-v1.4.5-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/specterd-v1.4.5-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/specterd-v1.4.5-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/specterd-v1.4.5-x86_64-linux-gnu.zip)
-
-## Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.5/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
-You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
-Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`
-
-# Release notes
-- Feature: Add Blockstream Jade support #1234 (benk10)
-- Feature: Add SeedSigner device #1225 (Stepan Snigirev)
-- Feature: Show Liquid icon on node manager #1224 (benk10)
-- Bugfix: `non_witness_utxo` hash mismatch problem #1235 (Stepan Snigirev)
-- Bugfix: RPC-password as pin for multiple nodes #1231 (Kim Neunert)
-- Bugfix: Missing prop setter bugfix #1228 (kdmukai)
-- Bugfix: &quot;NameError: name 'protocol' is not defined&quot; #1229 (DerM007)
-- Chore: Elements testing #1212 (Kim Neunert)</summary>
-    <title>cryptoadvance/specter-desktop: v1.4.5</title>
-    <updated>2021-06-16T19:23:37Z</updated>
-    <dc:date>2021-06-16T19:23:37Z</dc:date>
-  </entry>
-  <dc:date>2021-12-14T03:12:30+00:00</dc:date>
+  <dc:date>2021-12-14T03:21:38+00:00</dc:date>
 </feed>
