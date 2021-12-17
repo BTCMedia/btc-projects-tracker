@@ -38,6 +38,130 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.104">v0.0.104</a>
+						    </h2>
+							<p class="card-text">Published: 2021-12-17 23:36:26 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>API Updates</h2>
+
+<ul>
+<li>A <code>PaymentFailed</code> event is now provided to indicate a payment has failed
+fully. This event is generated either after
+<code>ChannelManager::abandon_payment</code> is called for a given payment, or the
+payment times out, and there are no further pending HTLCs for the payment.
+This event should be used to detect payment failure instead of
+<code>PaymentPathFailed::all_paths_failed</code>, unless no payment retries occur via
+<code>ChannelManager::retry_payment</code> (#1202).</li>
+<li>Payment secrets are now generated deterministically using material from
+the new <code>KeysInterface::get_inbound_payment_key_material</code> (#1177).</li>
+<li>A <code>PaymentPathSuccessful</code> event has been added to ease passing success info
+to a scorer, along with a <code>Score::payment_path_successful</code> method to accept
+such info (#1178, #1197).</li>
+<li><code>Score::channel_penalty_msat</code> has additional arguments describing the
+channel&#39;s capacity and the HTLC amount being sent over the channel (#1166).</li>
+<li>A new log level <code>Gossip</code> has been added, which is used for verbose
+information generated during network graph sync. Enabling the
+<code>max_level_trace</code> feature or ignoring <code>Gossip</code> log entries reduces log
+growth during initial start up from many GiB to several MiB (#1145).</li>
+<li>The <code>allow_wallclock_use</code> feature has been removed in favor of only using
+the <code>std</code> and <code>no-std</code> features (#1212).</li>
+<li><code>NetworkGraph</code> can now remove channels that we haven&#39;t heard updates for in
+two weeks with <code>NetworkGraph::remove_stale_channels{,with_time}</code>. The first
+is called automatically if a <code>NetGraphMsgHandler</code> is passed to
+<code>BackgroundProcessor::start</code> (#1212).</li>
+<li><code>InvoicePayer::pay_pubkey</code> was added to enable sending &quot;keysend&quot; payments to
+supported recipients, using the <code>InvoicePayer</code> to handle retires (#1160).</li>
+<li><code>user_payment_id</code> has been removed from <code>PaymentPurpose</code>, and
+<code>ChannelManager::create_inbound_payment{,_for_hash}</code> (#1180).</li>
+<li>Updated documentation for several <code>ChannelManager</code> functions to remove stale
+references to panics which no longer occur (#1201).</li>
+<li>The <code>Score</code> and <code>LockableScore</code> objects have moved into the
+<code>routing::scoring</code> module instead of being in the <code>routing</code> module (#1166).</li>
+<li>The <code>Time</code> parameter to <code>ScorerWithTime</code> is no longer longer exposed,
+instead being fixed based on the <code>std</code>/<code>no-std</code> feature (#1184).</li>
+<li><code>ChannelDetails::balance_msat</code> was added to fetch a channel&#39;s balance
+without subtracting the reserve values, lining up with on-chain claim amounts
+less on-chain fees (#1203).</li>
+<li>An explicit <code>UserConfig::accept_inbound_channels</code> flag is now provided,
+removing the need to set <code>min_funding_satoshis</code> to &gt; 21 million BTC (#1173).</li>
+<li>Inbound channels that fail to see the funding transaction confirm within
+2016 blocks are automatically force-closed with
+<code>ClosureReason::FundingTimedOut</code> (#1083).</li>
+<li>We now accept a channel_reserve value of 0 from counterparties, as it is
+insecure for our counterparty but not us (#1163).</li>
+<li><code>NetAddress::OnionV2</code> parsing was removed as version 2 onion services are no
+longer supported in modern Tor (#1204).</li>
+<li>Generation and signing of anchor outputs is now supported in the
+<code>KeysInterface</code>, though no support for them exists in the channel itself (#1176)</li>
+</ul>
+
+<h2>Bug Fixes</h2>
+
+<ul>
+<li>Fixed a race condition in <code>InvoicePayer</code> where paths may be retried after
+the retry count has been exceeded. In this case the
+<code>Event::PaymentPathFailed::all_paths_failed</code> field is not a reliable payment
+failure indicator. There was no acceptable alternative indicator,
+<code>Event::PaymentFailed</code> as been added to provide one (#1202).</li>
+<li>Reduced the blocks-before-timeout we expect of outgoing HTLCs before
+refusing to forward. This check was overly strict and resulted in refusing
+to forward som HTLCs to a next hop that had a lower security threshold than
+us (#1119).</li>
+<li>LDK no longer attempt to update the channel fee for outbound channels when
+we cannot afford the new fee. This could have caused force-closure by our
+channel counterparty (#1054).</li>
+<li>Fixed several bugs which may have prevented the reliable broadcast of our
+own channel announcements and updates (#1169).</li>
+<li>Fixed a rare bug which may have resulted in spurious route finding failures
+when using last-hop hints and MPP with large value payments (#1168).</li>
+<li><code>KeysManager::spend_spendable_outputs</code> no longer adds a change output that
+is below the dust threshold for non-standard change scripts (#1131).</li>
+<li>Fixed a minor memory leak when attempting to send a payment that fails due
+to an error when updating the <code>ChannelMonitor</code> (#1143).</li>
+<li>Fixed a bug where a <code>FeeEstimator</code> that returns values rounded to the next
+sat/vbyte may result in force-closures (#1208).</li>
+<li>Handle MPP timeout HTLC error codes, instead of considering the recipient to
+have sent an invalid error, removing them from the network graph (#1148)</li>
+</ul>
+
+<h2>Serialization Compatibility</h2>
+
+<ul>
+<li>All above new events/fields are ignored by prior clients. All above new
+events/fields are not present when reading objects serialized by prior
+versions of the library.</li>
+<li>Payment secrets are now generated deterministically. This reduces the memory
+footprint for inbound payments, however, newly-generated inbound payments
+using <code>ChannelManager::create_inbound_payment{,_for_hash}</code> will not be
+receivable using versions prior to 0.0.104.
+<code>ChannelManager::create_inbound_payment{,_for_hash}_legacy</code> are provided for
+backwards compatibility (#1177).</li>
+<li><code>PaymentPurpose::InvoicePayment::user_payment_id</code> will be 0 when reading
+objects written with 0.0.104 when read by 0.0.103 and previous (#1180).</li>
+</ul>
+
+<p>In total, this release features 51 files changed, 5356 insertions, 2238
+deletions in 107 commits from 9 authors, in alphabetical order:
+ * Antoine Riard
+ * Conor Okus
+ * Devrandom
+ * Duncan Dean
+ * Elias Rohrer
+ * Jeffrey Czyz
+ * Ken Sedgwick
+ * Matt Corallo
+ * Valentine Wallace</p>
+</p>
+					    <a href="https://github.com/lightningdevkit/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.104" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.15">v6.2.15</a>
 						    </h2>
 							<p class="card-text">Published: 2021-12-15 06:49:39 UTC</p>
@@ -6068,22 +6192,6 @@ Post Mortem will follow.</p>
 </p>
 					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.98">v0.0.98</a>
-						    </h2>
-							<p class="card-text">Published: 2021-06-20 20:02:22 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>0.0.98 should be considered a release candidate to the first alpha release of Rust-Lightning and the broader LDK. It represents several years of work designing and fine-tuning a flexible API for integrating lightning into any application. LDK should make it easy to build a lightning node or client which meets specific requirements that other lightning node software cannot. As lightning continues to evolve, and new use-cases for lightning develop, the API of LDK will continue to change and expand. However, starting with version 0.1, objects serialized with prior versions will be readable with the latest LDK. While Rust-Lightning is approaching the 0.1 milestone, language bindings components of LDK available at <a href="https://github.com/lightningdevkit">https://github.com/lightningdevkit</a> are still of varying quality. Some are also approaching an 0.1 release, while others are still much more experimental. Please note that, at 0.0.98, using Rust-Lightning on mainnet is strongly discouraged.</p>
-</p>
-					    <a href="https://github.com/lightningdevkit/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.98" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
