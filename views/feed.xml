@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2021-12-19T21:51:53+00:00</updated>
+  <updated>2021-12-19T22:04:13+00:00</updated>
   <entry>
     <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.104</id>
     <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.104"/>
@@ -5072,5 +5072,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.12...v0.3.13</summary>
     <updated>2021-06-21T08:16:50Z</updated>
     <dc:date>2021-06-21T08:16:50Z</dc:date>
   </entry>
-  <dc:date>2021-12-19T21:51:53+00:00</dc:date>
+  <dc:date>2021-12-19T22:04:13+00:00</dc:date>
 </feed>
