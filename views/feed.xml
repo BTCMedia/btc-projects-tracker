@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-02T15:31:35+00:00</updated>
+  <updated>2022-01-02T15:43:54+00:00</updated>
   <entry>
     <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.4.0</id>
     <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.4.0"/>
@@ -5067,5 +5067,5 @@ Diff: https://github.com/getumbrel/umbrel/compare/v0.3.12...v0.3.13</summary>
     <updated>2021-06-22T14:44:42Z</updated>
     <dc:date>2021-06-22T14:44:42Z</dc:date>
   </entry>
-  <dc:date>2022-01-02T15:31:35+00:00</dc:date>
+  <dc:date>2022-01-02T15:43:54+00:00</dc:date>
 </feed>
