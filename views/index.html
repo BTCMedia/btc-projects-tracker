@@ -38,6 +38,28 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.16">v6.2.16</a>
+						    </h2>
+							<p class="card-text">Published: 2022-01-03 22:59:22 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><ul>
+<li>ADD: show frozen amount on send screen, warn in case of send MAX or amount exceeds balance </li>
+<li>ADD: MZN Fiat </li>
+<li>ADD: support truncated words during slip39 wallet import </li>
+<li>FIX: Show alert when unsupported server is attempted to be saved </li>
+<li>FIX: Incorrect side of transactions displayed when both send and receive wallets are on same device </li>
+</ul>
+</p>
+					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.16" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/romanz/electrs">romanz/electrs</a>: <a href="https://github.com/romanz/electrs/releases/tag/v0.9.4">v0.9.4</a>
 						    </h2>
 							<p class="card-text">Published: 2022-01-03 16:40:56 UTC</p>
@@ -6118,70 +6140,6 @@ All users are encouranged to upgrade.</p>
 </p>
 					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.14" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.6">v1.4.6</a>
-						    </h2>
-							<p class="card-text">Published: 2021-06-28 19:18:16 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.6/Specter-Setup-v1.4.6.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.6/SpecterDesktop-v1.4.6.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.6/specter_desktop-v1.4.6-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.6/specterd-v1.4.6-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.6/specterd-v1.4.6-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.6/specterd-v1.4.6-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h2>Signatures and hashes</h2>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.4.6/sha256.signed.txt">sha256.signed.txt</a> file contains sha256 hashes of all binary files and signed with @ben-kaufman&#39;s GPG key.
-You can get the public key from here: <a href="https://benkaufman.info/ben-kaufman.asc">https://benkaufman.info/ben-kaufman.asc</a>.
-It is also available via <a href="http://keys.gnupg.net/pks/lookup?op=get&search=0x5D27DE564153F2BD">keys.gnupg.net</a> or <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD">keys.openpgp.org</a>.
-Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD</code>, short id: <code>5d27de564153f2bd</code></p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Feature: Add Keystone device #1237 (Stepan Snigirev)</li>
-<li>Feature: Export device types and labels #1226 (kdmukai)</li>
-<li>Feauture: Liquid - asset support #1216 (Stepan Snigirev)</li>
-<li>UIUX: Redesign the Tor settings screen #1245 (benk10)</li>
-<li>Bugfix: Apostrophes in device labels need proper escaping in PDF export template #1246 (kdmukai)</li>
-<li>Bugfix: cleanup annoying test_artifacts #1236 (Kim Neunert)</li>
-<li>Bugfix: Filter non liquid devices from create liquid wallet #1243 (benk10)</li>
-<li>Bugfix: fix elementsd process #1240 (Stepan Snigirev)</li>
-<li>Chore: Bump normalize-url from 4.5.0 to 4.5.1 in /pyinstaller/electron #1223 (dependabot[bot])</li>
-<li>Chore: Bump urllib3 from 1.25.10 to 1.26.5 #1211 (dependabot[bot])</li>
-<li>Chore: Wallet new refactoring #1244 (Kim Neunert)</li>
-<li>Chore: del elm comp from gitlab + ensure master green #1250 (Kim Neunert)</li>
-<li>Chore: refactor psbt-creation #1249 (Kim Neunert)</li>
-<li>Chore: Refactor wallet creation to Wallet.create method #1242 (Stepan Snigirev)</li>
-</ul>
-
-<h1>Misc</h1>
-
-<p>at 01.July there way a virus-alarm on the <code>Specter-Setup-v1.4.6.exe</code>. This alarm turned out to be a false positive. It&#39;s safe to use that file.
-A Post-Mortem will be released soon.
-Post Mortem will follow.</p>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.4.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
