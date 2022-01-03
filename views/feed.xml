@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-03T19:12:30+00:00</updated>
+  <updated>2022-01-03T19:22:56+00:00</updated>
   <entry>
     <id>https://github.com/romanz/electrs/releases/tag/v0.9.4</id>
     <link href="https://github.com/romanz/electrs/releases/tag/v0.9.4"/>
@@ -5063,5 +5063,5 @@ Post Mortem will follow.</summary>
     <updated>2021-06-28T19:18:16Z</updated>
     <dc:date>2021-06-28T19:18:16Z</dc:date>
   </entry>
-  <dc:date>2022-01-03T19:12:30+00:00</dc:date>
+  <dc:date>2022-01-03T19:22:56+00:00</dc:date>
 </feed>
