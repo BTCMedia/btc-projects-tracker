@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-03T16:31:58+00:00</updated>
+  <updated>2022-01-03T16:41:25+00:00</updated>
+  <entry>
+    <id>https://github.com/romanz/electrs/releases/tag/v0.9.4</id>
+    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.4"/>
+    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#094-dec-30-2021</summary>
+    <title>romanz/electrs: v0.9.4</title>
+    <updated>2022-01-03T16:40:56Z</updated>
+    <dc:date>2022-01-03T16:40:56Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.4.0</id>
     <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.4.0"/>
@@ -5055,17 +5063,5 @@ Post Mortem will follow.</summary>
     <updated>2021-06-28T19:18:16Z</updated>
     <dc:date>2021-06-28T19:18:16Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.13</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.13"/>
-    <summary>Umbrel v0.3.13 brings the latest versions of Ride The Lightning, Specter Desktop, ThunderHub and LNbits in the Umbrel App Store. The new Ride The Lightning version includes an important security fix and updating quickly is strongly recommended.
-
-If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.12...v0.3.13</summary>
-    <title>getumbrel/umbrel: v0.3.13</title>
-    <updated>2021-06-22T14:44:42Z</updated>
-    <dc:date>2021-06-22T14:44:42Z</dc:date>
-  </entry>
-  <dc:date>2022-01-03T16:31:58+00:00</dc:date>
+  <dc:date>2022-01-03T16:41:25+00:00</dc:date>
 </feed>
