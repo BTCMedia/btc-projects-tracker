@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-14T11:53:54+00:00</updated>
+  <updated>2022-01-14T12:10:28+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre1</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre1"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.8.0-pre1</title>
+    <updated>2022-01-14T12:02:28Z</updated>
+    <dc:date>2022-01-14T12:02:28Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.16</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.16"/>
@@ -5013,17 +5021,5 @@ The complete changelog is available at: https://github.com/mempool/mempool/compa
     <updated>2021-07-03T21:53:58Z</updated>
     <dc:date>2021-07-03T21:53:58Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.3.14</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.3.14"/>
-    <summary>This update resolves a stability issue that can cause Umbrel to randomly disconnect from the network and become inaccessible.
-
-If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel
-
-Diff: https://github.com/getumbrel/umbrel/compare/v0.3.13...v0.3.14</summary>
-    <title>getumbrel/umbrel: v0.3.14</title>
-    <updated>2021-06-29T12:45:00Z</updated>
-    <dc:date>2021-06-29T12:45:00Z</dc:date>
-  </entry>
-  <dc:date>2022-01-14T11:53:54+00:00</dc:date>
+  <dc:date>2022-01-14T12:10:28+00:00</dc:date>
 </feed>
