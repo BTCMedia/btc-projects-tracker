@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-14T23:42:21+00:00</updated>
+  <updated>2022-01-14T23:52:11+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre1"/>
@@ -5021,5 +5021,5 @@ The complete changelog is available at: https://github.com/mempool/mempool/compa
     <updated>2021-07-03T21:53:58Z</updated>
     <dc:date>2021-07-03T21:53:58Z</dc:date>
   </entry>
-  <dc:date>2022-01-14T23:42:21+00:00</dc:date>
+  <dc:date>2022-01-14T23:52:11+00:00</dc:date>
 </feed>
