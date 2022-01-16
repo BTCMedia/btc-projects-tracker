@@ -38,6 +38,256 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/mempool/mempool">mempool/mempool</a>: <a href="https://github.com/mempool/mempool/releases/tag/v2.3.0">v2.3.0</a>
+						    </h2>
+							<p class="card-text">Published: 2022-01-16 08:13:39 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This release introduces a new design for our historical mempool chart legend and API documentation, and improves support for Bitcoin Core v22 and Taproot transactions, among many other enhancements and fixes. All users are encouraged to upgrade.</p>
+
+<p><img width="1234" alt="Screen Shot 2022-01-12 at 20 13 28" src="https://user-images.githubusercontent.com/232186/149650209-80434411-8c4d-4a0f-a573-2684823648fe.png"></p>
+
+<h2>Notes</h2>
+
+<ul>
+<li>Requires Node.js v16.10.0, npm 7.24.0, MariaDB v10.5</li>
+<li>Requires manually updating nginx.conf if not using Docker</li>
+<li>Docker installation config vars have changed, see README</li>
+<li>MySQL tables now automatically created and/or migrated</li>
+<li>Bitcoin, Liquid, and Bisq now hosted on separate FQDNs</li>
+</ul>
+
+<h2>Highlights</h2>
+
+<ul>
+<li>Replaced chartist library with apache/echarts (#738)</li>
+<li>Upgraded to Angular 13.1 and NgBootstrap 11 (#1124)</li>
+<li>Fixed display of mempool graphs data on time axis (#1004)</li>
+<li>Fixed off-by-one fee rate tier in mempool graphs data (#908)</li>
+<li>Fixed addresses not displaying using Bitcoin Core v22 (#779)</li>
+<li>Improved data resolution of historical mempool graphs (#1044)</li>
+<li>Improved layout design of API docs page (#994, #1027)</li>
+<li>Added new chart timespans for 2 year / 3 year (#905)</li>
+<li>Added ability to drag blockchain horizontally (#1024)</li>
+<li>Added ability to highlight outputs using vout index (#880)</li>
+<li>Added web form to Broadcast Transaction using raw hex (#881)</li>
+<li>Added tag for transactions that spend Taproot outputs (#918)</li>
+<li>Added version and locktime data to transaction page (#930)</li>
+<li>Added halving and event countdown with fireworks (#912, #923)</li>
+<li>Added locales Romanian, Macedonian and Thai (#791, #792, #942)</li>
+<li>Added graph for L-BTC in circulation on Liquid dashboard (#799)</li>
+<li>Added support for Liquid Testnet (#1052, #1053, #1131)</li>
+</ul>
+
+<h2>Changelog</h2>
+
+<ul>
+<li>Fix API docs examples for Raspberry Pi users using romanz/electrs by @wiz in <a href="https://github.com/mempool/mempool/pull/772">https://github.com/mempool/mempool/pull/772</a></li>
+<li>Feature: New charts library. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/738">https://github.com/mempool/mempool/pull/738</a></li>
+<li>Disable mouseover legend for mobile users. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/789">https://github.com/mempool/mempool/pull/789</a></li>
+<li>Fix RTL issues by @TechMiX in <a href="https://github.com/mempool/mempool/pull/782">https://github.com/mempool/mempool/pull/782</a></li>
+<li>Add new locale: Romanian (ro) by @wiz in <a href="https://github.com/mempool/mempool/pull/791">https://github.com/mempool/mempool/pull/791</a></li>
+<li>Add new locale: Macedonian (mk) by @wiz in <a href="https://github.com/mempool/mempool/pull/792">https://github.com/mempool/mempool/pull/792</a></li>
+<li>Set canonical URLs for new 3 site structure by @wiz in <a href="https://github.com/mempool/mempool/pull/775">https://github.com/mempool/mempool/pull/775</a></li>
+<li>Credit Romanian and Macedonian translators. by @softsimon in <a href="https://github.com/mempool/mempool/pull/793">https://github.com/mempool/mempool/pull/793</a></li>
+<li>Pulled from transifex by @softsimon in <a href="https://github.com/mempool/mempool/pull/794">https://github.com/mempool/mempool/pull/794</a></li>
+<li>Handle changes to address RPC api in bitcoin core 22 by @softsimon in <a href="https://github.com/mempool/mempool/pull/779">https://github.com/mempool/mempool/pull/779</a></li>
+<li>Always use local hostname for API examples. by @softsimon in <a href="https://github.com/mempool/mempool/pull/800">https://github.com/mempool/mempool/pull/800</a></li>
+<li>Transifex language fixes to Romanian, Makedonian and Hungarian. by @softsimon in <a href="https://github.com/mempool/mempool/pull/801">https://github.com/mempool/mempool/pull/801</a></li>
+<li>Add Zeus LN as Community Integration by @wiz in <a href="https://github.com/mempool/mempool/pull/803">https://github.com/mempool/mempool/pull/803</a></li>
+<li>UI/UX: Fix charts css styling. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/795">https://github.com/mempool/mempool/pull/795</a></li>
+<li>Remove warden from list of Community Integrations by @wiz in <a href="https://github.com/mempool/mempool/pull/804">https://github.com/mempool/mempool/pull/804</a></li>
+<li>Update the URL for Unchained Capital to unchained.com by @wiz in <a href="https://github.com/mempool/mempool/pull/805">https://github.com/mempool/mempool/pull/805</a></li>
+<li>Upgrading to Angular 12 and NgBootstrap 10 by @softsimon in <a href="https://github.com/mempool/mempool/pull/806">https://github.com/mempool/mempool/pull/806</a></li>
+<li>Liquid L-BTC widgets (Backend) by @softsimon in <a href="https://github.com/mempool/mempool/pull/799">https://github.com/mempool/mempool/pull/799</a></li>
+<li>Update production backend configuration files by @wiz in <a href="https://github.com/mempool/mempool/pull/809">https://github.com/mempool/mempool/pull/809</a></li>
+<li>L-BTC in circulation dashboard widgete by @softsimon in <a href="https://github.com/mempool/mempool/pull/810">https://github.com/mempool/mempool/pull/810</a></li>
+<li>Handle search for Liquid block hashes in search bar. by @softsimon in <a href="https://github.com/mempool/mempool/pull/812">https://github.com/mempool/mempool/pull/812</a></li>
+<li>Fix for fee rounding not using locale by @softsimon in <a href="https://github.com/mempool/mempool/pull/813">https://github.com/mempool/mempool/pull/813</a></li>
+<li>Check for data to possibly fix Liquid test by @softsimon in <a href="https://github.com/mempool/mempool/pull/819">https://github.com/mempool/mempool/pull/819</a></li>
+<li>UI/UX: Add inverted feature to mempool fee chart. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/820">https://github.com/mempool/mempool/pull/820</a></li>
+<li>Adding POST /tx API to bitcoind mode by @softsimon in <a href="https://github.com/mempool/mempool/pull/821">https://github.com/mempool/mempool/pull/821</a></li>
+<li>Fix tooltip mempool chart hover selection. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/823">https://github.com/mempool/mempool/pull/823</a></li>
+<li>Sort block transactions first by height and then time by @softsimon in <a href="https://github.com/mempool/mempool/pull/814">https://github.com/mempool/mempool/pull/814</a></li>
+<li>L-BTC graph: Minor styling update by @softsimon in <a href="https://github.com/mempool/mempool/pull/824">https://github.com/mempool/mempool/pull/824</a></li>
+<li>Fix the focus effect on the mempool graph. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/825">https://github.com/mempool/mempool/pull/825</a></li>
+<li>Fix for stuck Bisq transaction page when filtering by @softsimon in <a href="https://github.com/mempool/mempool/pull/826">https://github.com/mempool/mempool/pull/826</a></li>
+<li>Change total sum column to fixed color. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/831">https://github.com/mempool/mempool/pull/831</a></li>
+<li>Remove circle symbols when hovering the series. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/837">https://github.com/mempool/mempool/pull/837</a></li>
+<li>Fix parse numbers localized. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/838">https://github.com/mempool/mempool/pull/838</a></li>
+<li>Fix lint &#39;no-shadowed-variable&#39;. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/839">https://github.com/mempool/mempool/pull/839</a></li>
+<li>Fix total percentage bar value. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/843">https://github.com/mempool/mempool/pull/843</a></li>
+<li>Fix confirmations button positioning. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/840">https://github.com/mempool/mempool/pull/840</a></li>
+<li>Remove vbytesPipe from series data. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/846">https://github.com/mempool/mempool/pull/846</a></li>
+<li>Add mark line to mempool chart. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/845">https://github.com/mempool/mempool/pull/845</a></li>
+<li>Update README preview image by @softsimon in <a href="https://github.com/mempool/mempool/pull/848">https://github.com/mempool/mempool/pull/848</a></li>
+<li>Use MEMPOOL<em>BLOCKS</em>AMOUNT config in the frontend by @softsimon in <a href="https://github.com/mempool/mempool/pull/853">https://github.com/mempool/mempool/pull/853</a></li>
+<li>Display mempool graph on the Liquid dashboard by @softsimon in <a href="https://github.com/mempool/mempool/pull/855">https://github.com/mempool/mempool/pull/855</a></li>
+<li>Remove sitemap.xml from robots.txt by @wiz in <a href="https://github.com/mempool/mempool/pull/857">https://github.com/mempool/mempool/pull/857</a></li>
+<li>Display correct amount of mempool blocks on mobile by @softsimon in <a href="https://github.com/mempool/mempool/pull/856">https://github.com/mempool/mempool/pull/856</a></li>
+<li>Add mempool chart filtering. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/847">https://github.com/mempool/mempool/pull/847</a></li>
+<li>UI/UX: Make tooltip looks bigger on mempool fee chart. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/862">https://github.com/mempool/mempool/pull/862</a></li>
+<li>Set the iOS status bar when viewing as progressive web app by @wiz in <a href="https://github.com/mempool/mempool/pull/866">https://github.com/mempool/mempool/pull/866</a></li>
+<li>UI/UX: Fix fee rate tiers on graphs. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/867">https://github.com/mempool/mempool/pull/867</a></li>
+<li>UI/UX: Fix mempool chart tooltip at dashboard component. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/868">https://github.com/mempool/mempool/pull/868</a></li>
+<li>Ref: Fix typo. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/874">https://github.com/mempool/mempool/pull/874</a></li>
+<li>Broadcast transaction form by @softsimon in <a href="https://github.com/mempool/mempool/pull/879">https://github.com/mempool/mempool/pull/879</a></li>
+<li>Add output ID to transaction info by @softsimon in <a href="https://github.com/mempool/mempool/pull/880">https://github.com/mempool/mempool/pull/880</a></li>
+<li>Fix ws api docs by @knorrium in <a href="https://github.com/mempool/mempool/pull/887">https://github.com/mempool/mempool/pull/887</a></li>
+<li>Add instructions on how to contribute to the Frontend codebase by @knorrium in <a href="https://github.com/mempool/mempool/pull/894">https://github.com/mempool/mempool/pull/894</a></li>
+<li>e2e BASE_MODULE cleanup by @knorrium in <a href="https://github.com/mempool/mempool/pull/893">https://github.com/mempool/mempool/pull/893</a></li>
+<li>Handle new type of Electrum Server error. by @softsimon in <a href="https://github.com/mempool/mempool/pull/884">https://github.com/mempool/mempool/pull/884</a></li>
+<li>UI/UX: Fix height inconsistencies between components. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/873">https://github.com/mempool/mempool/pull/873</a></li>
+<li>UI/UX: Fix Liquid.network missing tooltip series name. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/892">https://github.com/mempool/mempool/pull/892</a></li>
+<li>UI/UX: Fix buttons positions at graphs page. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/890">https://github.com/mempool/mempool/pull/890</a></li>
+<li>UI/UX: Add 2y and 3y statistics time span. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/905">https://github.com/mempool/mempool/pull/905</a></li>
+<li>UI/UX: Fix rtl mobile header menu. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/897">https://github.com/mempool/mempool/pull/897</a></li>
+<li>Enable address autocomplete for all networks by @wiz in <a href="https://github.com/mempool/mempool/pull/916">https://github.com/mempool/mempool/pull/916</a></li>
+<li>Doc: Fix nginx package name. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/902">https://github.com/mempool/mempool/pull/902</a></li>
+<li>Adding Taproot transaction tag by @softsimon in <a href="https://github.com/mempool/mempool/pull/918">https://github.com/mempool/mempool/pull/918</a></li>
+<li>Display previous output types by @softsimon in <a href="https://github.com/mempool/mempool/pull/920">https://github.com/mempool/mempool/pull/920</a></li>
+<li>Fix menu button styles. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/921">https://github.com/mempool/mempool/pull/921</a></li>
+<li>Localization: Add localize strings at echarts tooltip. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/898">https://github.com/mempool/mempool/pull/898</a></li>
+<li>Update mainnet partial address tests by @knorrium in <a href="https://github.com/mempool/mempool/pull/922">https://github.com/mempool/mempool/pull/922</a></li>
+<li>Add special blocks animation: fireworks. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/912">https://github.com/mempool/mempool/pull/912</a></li>
+<li>Adding taproot countdown by @softsimon in <a href="https://github.com/mempool/mempool/pull/923">https://github.com/mempool/mempool/pull/923</a></li>
+<li>Fix: mempool empty block. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/932">https://github.com/mempool/mempool/pull/932</a></li>
+<li>Adding version and locktime to transaction details by @softsimon in <a href="https://github.com/mempool/mempool/pull/930">https://github.com/mempool/mempool/pull/930</a></li>
+<li>Fix local dev proxy by @knorrium in <a href="https://github.com/mempool/mempool/pull/928">https://github.com/mempool/mempool/pull/928</a></li>
+<li>Display lower &lt;1 s/vB fee rate tiers for Liquid by @softsimon in <a href="https://github.com/mempool/mempool/pull/910">https://github.com/mempool/mempool/pull/910</a></li>
+<li>Handle recent difficulty adjustment estimate gracefully by @softsimon in <a href="https://github.com/mempool/mempool/pull/941">https://github.com/mempool/mempool/pull/941</a></li>
+<li>Fix for empty mempool block position by @softsimon in <a href="https://github.com/mempool/mempool/pull/940">https://github.com/mempool/mempool/pull/940</a></li>
+<li>Fix: op_return tooltip position. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/935">https://github.com/mempool/mempool/pull/935</a></li>
+<li>Enable i18n locale Thai (th) by @wiz in <a href="https://github.com/mempool/mempool/pull/942">https://github.com/mempool/mempool/pull/942</a></li>
+<li>Delete nginx logs after 10 days and explain this in our Privacy Policy by @wiz in <a href="https://github.com/mempool/mempool/pull/943">https://github.com/mempool/mempool/pull/943</a></li>
+<li>Post TX API for HTML forms by @softsimon in <a href="https://github.com/mempool/mempool/pull/881">https://github.com/mempool/mempool/pull/881</a></li>
+<li>Fix time span menu styles. by @MiguelMedeiros in <a href="https://github.com/mempool/mempool/pull/950">https://github.com/mempool/mempool/pull/950</a></li>
+<li>Fixing Bisq transactions page and skeleton loaders by @softsimon in <a href="https://github.com/mempool/mempool/pull/954">https://github.com/mempool/mempool/pull/954</a></li>
+<li>Moving chart loading spinner to chart component by @softsimon in <a href="https://github.com/mempool/mempool/pull/944">https://github.com/mempool/mempool/pull/944</a></li>
+<li>Extracting i18n from templates by @softsimon in <a href="https://github.com/mempool/mempool/pull/956">https://github.com/mempool/mempool/pull/956</a></li>
+<li>Merged block header and markets i18n strings by @softsimon in <a href="https://github.com/mempool/mempool/pull/957">https://github.com/mempool/mempool/pull/957</a></li>
+<li>Adding missing loading spinner to L-BTC peg graph by @softsimon in <a href="https://github.com/mempool/mempool/pull/959">https://github.com/mempool/mempool/pull/959</a></li>
+<li>Handle database disabled config when running Liquid by @softsimon in <a href="https://github.com/mempool/mempool/pull/963">https://github.com/mempool/mempool/pull/963</a></li>
+<li>Remodeling how historical fees are stored and presented. by @softsimon in <a href="https://github.com/mempool/mempool/pull/961">https://github.com/mempool/mempool/pull/961</a></li>
+<li>Update i18n strings from Transifex by @wiz in <a href="https://github.com/mempool/mempool/pull/968">https://github.com/mempool/mempool/pull/968</a></li>
+<li>Square -&gt; Spiral 🌀 by @wiz in <a href="https://github.com/mempool/mempool/pull/967">https://github.com/mempool/mempool/pull/967</a></li>
+<li>Center the Enterprise Sponsor logos on About page by @wiz in <a href="https://github.com/mempool/mempool/pull/970">https://github.com/mempool/mempool/pull/970</a></li>
+<li>Display missing taproot inner script by @softsimon in <a href="https://github.com/mempool/mempool/pull/974">https://github.com/mempool/mempool/pull/974</a></li>
+<li>Set Dockerfiles to use Node v16.10.0 by @knorrium in <a href="https://github.com/mempool/mempool/pull/980">https://github.com/mempool/mempool/pull/980</a></li>
+<li>Adding Core Contributors on the About page by @softsimon in <a href="https://github.com/mempool/mempool/pull/982">https://github.com/mempool/mempool/pull/982</a></li>
+<li>Update README for upcoming v2.3.0 release by @wiz in <a href="https://github.com/mempool/mempool/pull/984">https://github.com/mempool/mempool/pull/984</a></li>
+<li>Move npm deps in package.json to fix <code>npm install --prod</code> by @wiz in <a href="https://github.com/mempool/mempool/pull/981">https://github.com/mempool/mempool/pull/981</a></li>
+<li>Fix string for Project Staff on About page by @wiz in <a href="https://github.com/mempool/mempool/pull/983">https://github.com/mempool/mempool/pull/983</a></li>
+<li>Pin node version on e2e GHA by @knorrium in <a href="https://github.com/mempool/mempool/pull/988">https://github.com/mempool/mempool/pull/988</a></li>
+<li>Update Cypress dependencies by @knorrium in <a href="https://github.com/mempool/mempool/pull/989">https://github.com/mempool/mempool/pull/989</a></li>
+<li>Add .nvmrc file by @knorrium in <a href="https://github.com/mempool/mempool/pull/991">https://github.com/mempool/mempool/pull/991</a></li>
+<li>Fixing broken Liquid peg-in and peg-out links by @softsimon in <a href="https://github.com/mempool/mempool/pull/986">https://github.com/mempool/mempool/pull/986</a></li>
+<li>Upgrading frontend to Angular 13 by @softsimon in <a href="https://github.com/mempool/mempool/pull/993">https://github.com/mempool/mempool/pull/993</a></li>
+<li>Fix graph issue in #992 by @hunicus in <a href="https://github.com/mempool/mempool/pull/995">https://github.com/mempool/mempool/pull/995</a></li>
+<li>Upgrading backend libraries by @softsimon in <a href="https://github.com/mempool/mempool/pull/997">https://github.com/mempool/mempool/pull/997</a></li>
+<li>Tweak upgrade script to search for remote origin branches by @wiz in <a href="https://github.com/mempool/mempool/pull/996">https://github.com/mempool/mempool/pull/996</a></li>
+<li>Move /api to /docs/api by @hunicus in <a href="https://github.com/mempool/mempool/pull/994">https://github.com/mempool/mempool/pull/994</a></li>
+<li>Pulling from Transifex by @softsimon in <a href="https://github.com/mempool/mempool/pull/998">https://github.com/mempool/mempool/pull/998</a></li>
+<li>Documentation i18n title by @softsimon in <a href="https://github.com/mempool/mempool/pull/999">https://github.com/mempool/mempool/pull/999</a></li>
+<li>Add Liquid peg in and peg out tests by @knorrium in <a href="https://github.com/mempool/mempool/pull/1000">https://github.com/mempool/mempool/pull/1000</a></li>
+<li>Extracting updated i18n strings by @softsimon in <a href="https://github.com/mempool/mempool/pull/1001">https://github.com/mempool/mempool/pull/1001</a></li>
+<li>Improve x-axis labels and graph data ticks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1004">https://github.com/mempool/mempool/pull/1004</a></li>
+<li>Add Blockstream as Enterprise Sponsor by @wiz in <a href="https://github.com/mempool/mempool/pull/1008">https://github.com/mempool/mempool/pull/1008</a></li>
+<li>Tweak the graph x-axis label date formatting for better i18n by @wiz in <a href="https://github.com/mempool/mempool/pull/1009">https://github.com/mempool/mempool/pull/1009</a></li>
+<li>Fixing broken RBF alert by @softsimon in <a href="https://github.com/mempool/mempool/pull/1011">https://github.com/mempool/mempool/pull/1011</a></li>
+<li>Correcting CPFP button position on mobile by @softsimon in <a href="https://github.com/mempool/mempool/pull/1012">https://github.com/mempool/mempool/pull/1012</a></li>
+<li>Add tests for RBF txs by @knorrium in <a href="https://github.com/mempool/mempool/pull/1015">https://github.com/mempool/mempool/pull/1015</a></li>
+<li>Revert &quot;Remove dead code FeeDistributionGraphComponent&quot; by @softsimon in <a href="https://github.com/mempool/mempool/pull/1017">https://github.com/mempool/mempool/pull/1017</a></li>
+<li>Correcting minor interface typing error by @softsimon in <a href="https://github.com/mempool/mempool/pull/1019">https://github.com/mempool/mempool/pull/1019</a></li>
+<li>UX: Fixing overflowing unconfidential Liquid address by @softsimon in <a href="https://github.com/mempool/mempool/pull/1018">https://github.com/mempool/mempool/pull/1018</a></li>
+<li>Add failing test for Liquid unconfidential address layout issue by @knorrium in <a href="https://github.com/mempool/mempool/pull/1016">https://github.com/mempool/mempool/pull/1016</a></li>
+<li>User can drag the blockchain blocks horizontally with the mouse by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1024">https://github.com/mempool/mempool/pull/1024</a></li>
+<li>Update GitHub issue templates to redirect support requests to chat by @wiz in <a href="https://github.com/mempool/mempool/pull/1031">https://github.com/mempool/mempool/pull/1031</a></li>
+<li>Update links on About page by @wiz in <a href="https://github.com/mempool/mempool/pull/1032">https://github.com/mempool/mempool/pull/1032</a></li>
+<li>Revamp docs layout by @hunicus in <a href="https://github.com/mempool/mempool/pull/1027">https://github.com/mempool/mempool/pull/1027</a></li>
+<li>Extracting i18n string by @softsimon in <a href="https://github.com/mempool/mempool/pull/1033">https://github.com/mempool/mempool/pull/1033</a></li>
+<li>Switch the 24h chart to 1 min data ticks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1038">https://github.com/mempool/mempool/pull/1038</a></li>
+<li>Liquid icons api by @softsimon in <a href="https://github.com/mempool/mempool/pull/1010">https://github.com/mempool/mempool/pull/1010</a></li>
+<li>Automated database creation and migration by @softsimon in <a href="https://github.com/mempool/mempool/pull/1003">https://github.com/mempool/mempool/pull/1003</a></li>
+<li>Pulled from transifex by @softsimon in <a href="https://github.com/mempool/mempool/pull/1043">https://github.com/mempool/mempool/pull/1043</a></li>
+<li>Increase graphs data resolution by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1044">https://github.com/mempool/mempool/pull/1044</a></li>
+<li>Add support for liquidtestnet in production backend and nginx by @wiz in <a href="https://github.com/mempool/mempool/pull/1053">https://github.com/mempool/mempool/pull/1053</a></li>
+<li>Update Specter logo on About page by @wiz in <a href="https://github.com/mempool/mempool/pull/1056">https://github.com/mempool/mempool/pull/1056</a></li>
+<li>Tweak hover effect on profile photos on About page by @wiz in <a href="https://github.com/mempool/mempool/pull/1057">https://github.com/mempool/mempool/pull/1057</a></li>
+<li>Adding Liquid Testnet as frontend option by @softsimon in <a href="https://github.com/mempool/mempool/pull/1052">https://github.com/mempool/mempool/pull/1052</a></li>
+<li>Fixing misplaced Unknown text after the Coinbase by @softsimon in <a href="https://github.com/mempool/mempool/pull/1060">https://github.com/mempool/mempool/pull/1060</a></li>
+<li>Fix backend support for &#39;liquidtestnet&#39; network by @softsimon in <a href="https://github.com/mempool/mempool/pull/1062">https://github.com/mempool/mempool/pull/1062</a></li>
+<li>Add missing liquidtestnet backend to upgrade script by @wiz in <a href="https://github.com/mempool/mempool/pull/1064">https://github.com/mempool/mempool/pull/1064</a></li>
+<li>Block navigation routing fix by @softsimon in <a href="https://github.com/mempool/mempool/pull/1065">https://github.com/mempool/mempool/pull/1065</a></li>
+<li>Refactoring the Liquid and LiquidTestnet check to a common function. by @softsimon in <a href="https://github.com/mempool/mempool/pull/1066">https://github.com/mempool/mempool/pull/1066</a></li>
+<li>Fixing missing assets data for Liquid Testnet native asset by @softsimon in <a href="https://github.com/mempool/mempool/pull/1080">https://github.com/mempool/mempool/pull/1080</a></li>
+<li>Liquid testnet navbar color by @softsimon in <a href="https://github.com/mempool/mempool/pull/1067">https://github.com/mempool/mempool/pull/1067</a></li>
+<li>Liquid support to the Graph fee filter dropdown by @softsimon in <a href="https://github.com/mempool/mempool/pull/1079">https://github.com/mempool/mempool/pull/1079</a></li>
+<li>Transifex pull by @softsimon in <a href="https://github.com/mempool/mempool/pull/1083">https://github.com/mempool/mempool/pull/1083</a></li>
+<li>Tweak html description meta tags / SEO service page titles by @wiz in <a href="https://github.com/mempool/mempool/pull/1084">https://github.com/mempool/mempool/pull/1084</a></li>
+<li>Add Citadel as Community Integration on About page by @wiz in <a href="https://github.com/mempool/mempool/pull/1085">https://github.com/mempool/mempool/pull/1085</a></li>
+<li>Transifex pull by @softsimon in <a href="https://github.com/mempool/mempool/pull/1086">https://github.com/mempool/mempool/pull/1086</a></li>
+<li>Update production configurations + README for v2.3 by @wiz in <a href="https://github.com/mempool/mempool/pull/1081">https://github.com/mempool/mempool/pull/1081</a></li>
+<li>Remove all references to SQL tables import by @softsimon in <a href="https://github.com/mempool/mempool/pull/1087">https://github.com/mempool/mempool/pull/1087</a></li>
+<li>Transifex pull by @softsimon in <a href="https://github.com/mempool/mempool/pull/1092">https://github.com/mempool/mempool/pull/1092</a></li>
+<li>Transifex pull by @softsimon in <a href="https://github.com/mempool/mempool/pull/1093">https://github.com/mempool/mempool/pull/1093</a></li>
+<li>Transifex pull by @softsimon in <a href="https://github.com/mempool/mempool/pull/1099">https://github.com/mempool/mempool/pull/1099</a></li>
+<li>Bisq: Adding missing privacy policy, locale selector by @softsimon in <a href="https://github.com/mempool/mempool/pull/1102">https://github.com/mempool/mempool/pull/1102</a></li>
+<li>Making frontend network URLs configurable by @softsimon in <a href="https://github.com/mempool/mempool/pull/1100">https://github.com/mempool/mempool/pull/1100</a></li>
+<li>Fix matomo hostname for bisq.markets html by @wiz in <a href="https://github.com/mempool/mempool/pull/1103">https://github.com/mempool/mempool/pull/1103</a></li>
+<li>Ending support for /bisq /liquid and /liquidtestnet by @softsimon in <a href="https://github.com/mempool/mempool/pull/1104">https://github.com/mempool/mempool/pull/1104</a></li>
+<li>Pull translated strings from Transifex by @wiz in <a href="https://github.com/mempool/mempool/pull/1107">https://github.com/mempool/mempool/pull/1107</a></li>
+<li>Pull translated strings from Transifex by @wiz in <a href="https://github.com/mempool/mempool/pull/1109">https://github.com/mempool/mempool/pull/1109</a></li>
+<li>Bumping mempool.js lib to 2.3.0 by @softsimon in <a href="https://github.com/mempool/mempool/pull/1114">https://github.com/mempool/mempool/pull/1114</a></li>
+<li>Cap extreme vbytes<em>per</em>second values by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1110">https://github.com/mempool/mempool/pull/1110</a></li>
+<li>INDEX &#39;added&#39; in statistics table by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1112">https://github.com/mempool/mempool/pull/1112</a></li>
+<li>Pull translated strings from Transifex by @wiz in <a href="https://github.com/mempool/mempool/pull/1116">https://github.com/mempool/mempool/pull/1116</a></li>
+<li>Mouse scroll is not captured anymore by graphs in the dashboard page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1118">https://github.com/mempool/mempool/pull/1118</a></li>
+<li>statistics: <code>ORDER BY id</code> =&gt; <code>ORDER BY added</code> by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1119">https://github.com/mempool/mempool/pull/1119</a></li>
+<li>Link the git commit hash to GitHub on the About page by @knorrium in <a href="https://github.com/mempool/mempool/pull/1125">https://github.com/mempool/mempool/pull/1125</a></li>
+<li>Bumping minor Angular version and major ngBootstrap by @softsimon in <a href="https://github.com/mempool/mempool/pull/1124">https://github.com/mempool/mempool/pull/1124</a></li>
+<li>Add production Tor configuration to repo by @wiz in <a href="https://github.com/mempool/mempool/pull/1111">https://github.com/mempool/mempool/pull/1111</a></li>
+<li>Wrap migration with transactions by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1121">https://github.com/mempool/mempool/pull/1121</a></li>
+<li>Adding current language to network dropdown links by @softsimon in <a href="https://github.com/mempool/mempool/pull/1113">https://github.com/mempool/mempool/pull/1113</a></li>
+<li>Improve nginx caching and use redirects for i18n by @wiz in <a href="https://github.com/mempool/mempool/pull/1129">https://github.com/mempool/mempool/pull/1129</a></li>
+<li>Update liquidtestnet docs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1131">https://github.com/mempool/mempool/pull/1131</a></li>
+<li>Removing statistics cache and setting headers by @softsimon in <a href="https://github.com/mempool/mempool/pull/1130">https://github.com/mempool/mempool/pull/1130</a></li>
+<li>Disable graph touch interaction in dashboard on mobile so we can scroll properly by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1133">https://github.com/mempool/mempool/pull/1133</a></li>
+<li>Add nginx cache warmer script for production use by @wiz in <a href="https://github.com/mempool/mempool/pull/1134">https://github.com/mempool/mempool/pull/1134</a></li>
+<li>Updates to the docker-compose setup by @knorrium in <a href="https://github.com/mempool/mempool/pull/1120">https://github.com/mempool/mempool/pull/1120</a></li>
+<li>Fix typo in nginx-cache-warmer script by @wiz in <a href="https://github.com/mempool/mempool/pull/1135">https://github.com/mempool/mempool/pull/1135</a></li>
+<li>Fix Docker README by @knorrium in <a href="https://github.com/mempool/mempool/pull/1136">https://github.com/mempool/mempool/pull/1136</a></li>
+<li>Order by native <code>statistics.added</code> field for better query performances by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1139">https://github.com/mempool/mempool/pull/1139</a></li>
+<li>Remove unused fields from statistics queries since we don&#39;t use them in the front end by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1141">https://github.com/mempool/mempool/pull/1141</a></li>
+<li>Fix newsyslog.conf owner and pidfile location by @wiz in <a href="https://github.com/mempool/mempool/pull/1140">https://github.com/mempool/mempool/pull/1140</a></li>
+<li>Fixing high vulnerabilities by @softsimon in <a href="https://github.com/mempool/mempool/pull/1143">https://github.com/mempool/mempool/pull/1143</a></li>
+<li>Update production nginx.conf resource cache times by @wiz in <a href="https://github.com/mempool/mempool/pull/1144">https://github.com/mempool/mempool/pull/1144</a></li>
+<li>Update nginx.conf for mempool.space services APIs by @wiz in <a href="https://github.com/mempool/mempool/pull/1142">https://github.com/mempool/mempool/pull/1142</a></li>
+<li>Adding translators to About page by @softsimon in <a href="https://github.com/mempool/mempool/pull/1132">https://github.com/mempool/mempool/pull/1132</a></li>
+<li>Fix HTML theme color for iOS status bar by @wiz in <a href="https://github.com/mempool/mempool/pull/1145">https://github.com/mempool/mempool/pull/1145</a></li>
+<li>Adding missing Liquid Testnet Status page by @softsimon in <a href="https://github.com/mempool/mempool/pull/1148">https://github.com/mempool/mempool/pull/1148</a></li>
+<li>Utilize gettxout to display spent/unspent by @softsimon in <a href="https://github.com/mempool/mempool/pull/1147">https://github.com/mempool/mempool/pull/1147</a></li>
+<li>Pull translated strings from Transifex by @wiz in <a href="https://github.com/mempool/mempool/pull/1149">https://github.com/mempool/mempool/pull/1149</a></li>
+</ul>
+
+<h2>New Contributors</h2>
+
+<ul>
+<li>@hunicus made their first contribution in <a href="https://github.com/mempool/mempool/pull/995">https://github.com/mempool/mempool/pull/995</a></li>
+<li>@nymkappa made their first contribution in <a href="https://github.com/mempool/mempool/pull/1004">https://github.com/mempool/mempool/pull/1004</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/mempool/mempool/compare/v2.2.2...v2.3.0">https://github.com/mempool/mempool/compare/v2.2.2...v2.3.0</a></p>
+</p>
+					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/mempool/mempool/releases/tag/v2.3.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre1">v1.8.0-pre1</a>
 						    </h2>
 							<p class="card-text">Published: 2022-01-14 12:02:28 UTC</p>
@@ -6096,45 +6346,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.7.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/mempool/mempool">mempool/mempool</a>: <a href="https://github.com/mempool/mempool/releases/tag/v2.2.0">v2.2.0</a>
-						    </h2>
-							<p class="card-text">Published: 2021-07-03 21:53:58 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This release contains many fixes and improvements from the past few months.
-All users are encouranged to upgrade.</p>
-
-<p>Notes:</p>
-
-<ul>
-<li>If you maintain your own nginx.conf, update it for the new i18n locales</li>
-</ul>
-
-<p>Changelog:</p>
-
-<ul>
-<li>CPFP effective rate calculation for all CPFP transactions (#395)</li>
-<li>Difficulty adjustment calculation fixes for main dashboard (#475)</li>
-<li>Bisq dashboard with market prices, graphs, other improvements (#381)</li>
-<li>UX improvements for more responsive design on mobile devices (#458)</li>
-<li>API docs page improvements with new mempool.js API library (#544)</li>
-<li>About page now lists project contributors from GitHub API (#382)</li>
-<li>FOSS license updated to dual-license of GNU AGPLv3 / GPLv3 (#410)</li>
-</ul>
-
-<p>...and much more!</p>
-
-<p>The complete changelog is available at: <a href="https://github.com/mempool/mempool/compare/v2.1.2...v2.2.0">https://github.com/mempool/mempool/compare/v2.1.2...v2.2.0</a></p>
-</p>
-					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/mempool/mempool/releases/tag/v2.2.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
