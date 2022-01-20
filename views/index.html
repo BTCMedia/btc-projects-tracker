@@ -38,6 +38,53 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.20">android-legacy-v1.4.20</a>
+						    </h2>
+							<p class="card-text">Published: 2022-01-20 19:19:18 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Main changes</h2>
+
+<h3>Payment expiry can be modified</h3>
+
+<p>Invoice default expiry is still 1 week, but can now be modified in the payment options screen.</p>
+
+<h3>Prevent sending more than twice the requested amount</h3>
+
+<p>This is to prevent a frustrating scenario for the user where the app will let you overpay more than twice an invoice, even though we know the receiving node will most certainly reject the payment in accordance to BOLT11. (See #232)</p>
+
+<h3>Full list of changes</h3>
+
+<ul>
+<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.19...android-legacy-v1.4.20">https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.19...android-legacy-v1.4.20</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
+- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import drouinf.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.20" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.11">v0.4.11</a>
 						    </h2>
 							<p class="card-text">Published: 2022-01-17 13:12:32 UTC</p>
@@ -6207,148 +6254,6 @@ showing wallet wide PNL and rate of return.</p>
 </p>
 					    <a href="https://github.com/LN-Zap/zap-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.3-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.7.0">v1.7.0</a>
-						    </h2>
-							<p class="card-text">Published: 2021-07-06 09:15:22 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
-
-<h2>Release notes</h2>
-
-<p>This release prepares nodes for the upcoming Tor Onion Service upgrade to v3, makes several UI refinements, and fixes bugs across the board.</p>
-
-<p>This version also fixes a privacy issue that will be disclosed in about 1 week (that&#39;s when this version will be set as the required minimum version for trading). Please update as soon as possible!</p>
-
-<h3>Improvements</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5542">Set custom security deposit when cloning an offer</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5551">Improve chat message reliability</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5552">Remind user when their DAO state needs to be refreshed</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5559">Enable disputes user avatars and tag editing</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5500">Add Account owner full name field to Uphold payment method</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5556">Remove Chase QuickPay as a payment method</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5573">Add hint to upgrade to Tor Onion Service v3</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5557">Add a placeholder on the &quot;Search Disputes&quot; field</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5543">Remove old feature information popups</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5508">Remove borders on separators in main nav</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5521">Improve translations</a></li>
-</ul>
-
-<h3>Bug fixes</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5528">Add pending callbacks to FeeService</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5563">Fix incorrect address link to explorer in dispute details</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5564">Wrong information popup is shown when you click on own offer in offer book</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5562">Disable payment received button after mediation has been accepted</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5536">Fix broken translation in &quot;DAO requires restart&quot; popup</a></li>
-</ul>
-
-<h3>Development &amp; Documentation</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5553">Add mempool fees to PriceServer getAllMarketPrices endpoint</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5570">Remove create CHASE<em>QUICK</em>PAY apitest case</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5568">Bump Google Guice version to fix startup warnings</a></li>
-</ul>
-
-<h3>Assets</h3>
-
-<p>No new assets.</p>
-
-<h2>Verification</h2>
-
-<p>For a detailed description on how to verify your Bisq installer please have a look at our wiki: <a href="https://bisq.wiki/Downloading_and_installing#Verify_installer_file">https://bisq.wiki/Downloading_and_installing#Verify_installer_file</a></p>
-
-<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
-Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
-
-<p>Import the key:
-<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
-
-<p>How to verify signatures?
-<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
-Replace BINARY with the file you downloaded (e.g. Bisq-1.7.0.dmg)</p>
-
-<p>Verify jar file inside binary:
-You can verify on OSX the jar file with:
-shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.7.0-all.jar
-The output need to match the value from the Bisq-1.7.0.jar.txt file.</p>
-
-<p><em>NEW: There are three hashes within the Bisq-1.7.0.jar.txt file (macOS, Windows, Linux).
-If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.0 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.</em></p>
-
-<h2>Known issues with installation</h2>
-
-<h3>Windows:</h3>
-
-<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
-
-<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
-
-<p>[1] Application directory (contains application installation files):
-C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
-
-<p>[2] Data directory (contains all Bisq data including wallet):
-C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
-
-<h3>Linux:</h3>
-
-<p>Hint for Debian users:
-If you have problems starting Bisq on Debian use: <code>/opt/bisq/bin/Bisq</code></p>
-
-<p>If your Linux distro does not support .deb files please follow this instruction:
-<code>
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.7.0.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-</code>
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
-
-<h2>Credits</h2>
-
-<p>Thanks to everyone who directly contributed to this release:</p>
-
-<ul>
-<li>@andyheko </li>
-<li>@BtcContributor </li>
-<li>@cd2357 </li>
-<li>@chimp1984 </li>
-<li>@ghubstan</li>
-<li>@jmacxx </li>
-<li>@m52go </li>
-<li>@ripcurlx </li>
-<li>@sqrrm </li>
-<li>@Emzy</li>
-<li>@xyzmaker123 </li>
-</ul>
-
-<p>A special thanks to our first time contributors:
-- @andyheko 
-  - <a href="https://github.com/bisq-network/bisq/pull/5556">Remove Chase QuickPay as a payment method</a>
-  - <a href="https://github.com/bisq-network/bisq/pull/5557">Add a placeholder on the &quot;Search Disputes&quot; field</a>
-  - <a href="https://github.com/bisq-network/bisq/pull/5508">Remove borders on separators in main nav</a>
-- @xyzmaker123 
-  - <a href="https://github.com/bisq-network/bisq/pull/5563">Fix incorrect address link to explorer in dispute details</a>
-  - <a href="https://github.com/bisq-network/bisq/pull/5564">Wrong information popup is shown when you click on own offer in offer book</a></p>
-
-<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
-</p>
-					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.7.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

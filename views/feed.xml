@@ -6,7 +6,44 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-20T19:11:53+00:00</updated>
+  <updated>2022-01-20T19:23:35+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.20</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.20"/>
+    <summary>## Main changes
+
+### Payment expiry can be modified
+
+Invoice default expiry is still 1 week, but can now be modified in the payment options screen.
+
+### Prevent sending more than twice the requested amount
+
+This is to prevent a frustrating scenario for the user where the app will let you overpay more than twice an invoice, even though we know the receiving node will most certainly reject the payment in accordance to BOLT11. (See #232)
+
+### Full list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.19...android-legacy-v1.4.20
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: android-legacy-v1.4.20</title>
+    <updated>2022-01-20T19:19:18Z</updated>
+    <dc:date>2022-01-20T19:19:18Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.11</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.11"/>
@@ -5104,127 +5141,5 @@ Please refer to [our documentation](https://github.com/LN-Zap/zap-desktop#docume
     <updated>2021-07-06T18:29:43Z</updated>
     <dc:date>2021-07-06T18:29:43Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.0</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.0"/>
-    <summary>**A newer version is already available! Please don’t use this version anymore.**
-
-## Release notes
-This release prepares nodes for the upcoming Tor Onion Service upgrade to v3, makes several UI refinements, and fixes bugs across the board.
-
-This version also fixes a privacy issue that will be disclosed in about 1 week (that's when this version will be set as the required minimum version for trading). Please update as soon as possible!
-
-### Improvements
-- [Set custom security deposit when cloning an offer](https://github.com/bisq-network/bisq/pull/5542)
-- [Improve chat message reliability](https://github.com/bisq-network/bisq/pull/5551)
-- [Remind user when their DAO state needs to be refreshed](https://github.com/bisq-network/bisq/pull/5552)
-- [Enable disputes user avatars and tag editing](https://github.com/bisq-network/bisq/pull/5559)
-- [Add Account owner full name field to Uphold payment method](https://github.com/bisq-network/bisq/pull/5500)
-- [Remove Chase QuickPay as a payment method](https://github.com/bisq-network/bisq/pull/5556)
-- [Add hint to upgrade to Tor Onion Service v3](https://github.com/bisq-network/bisq/pull/5573)
-- [Add a placeholder on the &quot;Search Disputes&quot; field](https://github.com/bisq-network/bisq/pull/5557)
-- [Remove old feature information popups](https://github.com/bisq-network/bisq/pull/5543)
-- [Remove borders on separators in main nav](https://github.com/bisq-network/bisq/pull/5508)
-- [Improve translations](https://github.com/bisq-network/bisq/pull/5521)
-
-### Bug fixes
-- [Add pending callbacks to FeeService](https://github.com/bisq-network/bisq/pull/5528)
-- [Fix incorrect address link to explorer in dispute details](https://github.com/bisq-network/bisq/pull/5563)
-- [Wrong information popup is shown when you click on own offer in offer book](https://github.com/bisq-network/bisq/pull/5564)
-- [Disable payment received button after mediation has been accepted](https://github.com/bisq-network/bisq/pull/5562)
-- [Fix broken translation in &quot;DAO requires restart&quot; popup](https://github.com/bisq-network/bisq/pull/5536)
-
-### Development &amp; Documentation
-- [Add mempool fees to PriceServer getAllMarketPrices endpoint](https://github.com/bisq-network/bisq/pull/5553)
-- [Remove create CHASE_QUICK_PAY apitest case](https://github.com/bisq-network/bisq/pull/5570)
-- [Bump Google Guice version to fix startup warnings](https://github.com/bisq-network/bisq/pull/5568)
-
-### Assets
-No new assets.
-
-## Verification
-
-For a detailed description on how to verify your Bisq installer please have a look at our wiki: https://bisq.wiki/Downloading_and_installing#Verify_installer_file
-
-Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
-Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
-
-Import the key:
-`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
-
-How to verify signatures?
-`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
-Replace BINARY with the file you downloaded (e.g. Bisq-1.7.0.dmg)
-
-Verify jar file inside binary:
-You can verify on OSX the jar file with:
-shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.7.0-all.jar
-The output need to match the value from the Bisq-1.7.0.jar.txt file.
-
-*NEW: There are three hashes within the Bisq-1.7.0.jar.txt file (macOS, Windows, Linux).
-If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.0 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.*
-
-## Known issues with installation 
-
-### Windows:
-
-There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
-
-If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
-
-[1] Application directory (contains application installation files):
-C:\Users\&lt;username&gt;\AppData\Local\Bisq
-
-[2] Data directory (contains all Bisq data including wallet):
-C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
-
-
-### Linux:
-
-Hint for Debian users:
-If you have problems starting Bisq on Debian use: `/opt/bisq/bin/Bisq`
-
-If your Linux distro does not support .deb files please follow this instruction:
-```
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.7.0.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-```
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Credits
-
-Thanks to everyone who directly contributed to this release:
-
-- @andyheko 
-- @BtcContributor 
-- @cd2357 
-- @chimp1984 
-- @ghubstan
-- @jmacxx 
-- @m52go 
-- @ripcurlx 
-- @sqrrm 
-- @Emzy
-- @xyzmaker123 
-
-A special thanks to our first time contributors:
-- @andyheko 
-  - [Remove Chase QuickPay as a payment method](https://github.com/bisq-network/bisq/pull/5556)
-  - [Add a placeholder on the &quot;Search Disputes&quot; field](https://github.com/bisq-network/bisq/pull/5557)
-  - [Remove borders on separators in main nav](https://github.com/bisq-network/bisq/pull/5508)
-- @xyzmaker123 
-  - [Fix incorrect address link to explorer in dispute details](https://github.com/bisq-network/bisq/pull/5563)
-  - [Wrong information popup is shown when you click on own offer in offer book](https://github.com/bisq-network/bisq/pull/5564)
-
-As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
-    <title>bisq-network/bisq: v1.7.0</title>
-    <updated>2021-07-06T09:15:22Z</updated>
-    <dc:date>2021-07-06T09:15:22Z</dc:date>
-  </entry>
-  <dc:date>2022-01-20T19:11:53+00:00</dc:date>
+  <dc:date>2022-01-20T19:23:35+00:00</dc:date>
 </feed>
