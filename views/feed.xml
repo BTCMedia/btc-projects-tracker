@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-21T01:34:08+00:00</updated>
+  <updated>2022-01-21T01:42:27+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.20</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.20"/>
@@ -5141,5 +5141,5 @@ Please refer to [our documentation](https://github.com/LN-Zap/zap-desktop#docume
     <updated>2021-07-06T18:29:43Z</updated>
     <dc:date>2021-07-06T18:29:43Z</dc:date>
   </entry>
-  <dc:date>2022-01-21T01:34:08+00:00</dc:date>
+  <dc:date>2022-01-21T01:42:27+00:00</dc:date>
 </feed>
