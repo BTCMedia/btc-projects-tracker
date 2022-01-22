@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-22T18:51:45+00:00</updated>
+  <updated>2022-01-22T19:11:19+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre3</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre3"/>
@@ -5068,5 +5068,5 @@ d25dff14b46 Add 0.6.0 website (#3020)
     <updated>2021-07-08T13:36:31Z</updated>
     <dc:date>2021-07-08T13:36:31Z</dc:date>
   </entry>
-  <dc:date>2022-01-22T18:51:45+00:00</dc:date>
+  <dc:date>2022-01-22T19:11:19+00:00</dc:date>
 </feed>
