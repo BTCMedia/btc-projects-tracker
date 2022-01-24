@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-24T14:08:55+00:00</updated>
+  <updated>2022-01-24T14:11:48+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre4</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre4"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.8.0-pre4</title>
+    <updated>2022-01-24T14:11:27Z</updated>
+    <dc:date>2022-01-24T14:11:27Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.8.2</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.8.2"/>
@@ -4716,21 +4724,5 @@ Wallet carousel was not rending properly on large screens
     <updated>2021-07-08T18:49:00Z</updated>
     <dc:date>2021-07-08T18:49:00Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.7</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.7"/>
-    <summary>ADD: Hierarchy navigator screen
-ADD: IRR currency
-ADD: better accessibility for buttons
-FIX: hardware wallet with BIP44/BIP49 wallet reports incorrect change address in PSBT
-FIX: for slip39 wallets import bech32 even if no tx found
-FIX: Scanning for a batch tx would reset contentOffset
-FIX: Re-order wallet bug
-FIX: Typing 1 would turn into 10 due to default custom value
-FIX: Ports from previous scan were not cleared</summary>
-    <title>BlueWallet/BlueWallet: v6.1.7</title>
-    <updated>2021-07-08T16:03:18Z</updated>
-    <dc:date>2021-07-08T16:03:18Z</dc:date>
-  </entry>
-  <dc:date>2022-01-24T14:08:55+00:00</dc:date>
+  <dc:date>2022-01-24T14:11:48+00:00</dc:date>
 </feed>
