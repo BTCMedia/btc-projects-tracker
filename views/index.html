@@ -38,6 +38,157 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.8.2">v1.8.2</a>
+						    </h2>
+							<p class="card-text">Published: 2022-01-24 10:03:34 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This is a follow-up release that temporarily deactivates the <code>DAO needs to resync</code> popup to prevent presenting too many false positives to the user. It will be re-enabled again in the release after.</p>
+
+<p>See <a href="https://github.com/bisq-network/bisq/commit/013dc982366ba348bcc8c179caad7dc498bc8535">https://github.com/bisq-network/bisq/commit/013dc982366ba348bcc8c179caad7dc498bc8535</a>.</p>
+
+<p>Here are the release notes from v1.8.1:</p>
+
+<h2>Release notes</h2>
+
+<p>This release improves mediation, extends API capabilities (still in beta), and fixes lots of smaller issues across the board.</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5953">Add option to automatically send log files to mediators in chat</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5870">Improve user experience once mediation has been accepted by both parties</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5960">Enable fractional percentages in dispute payout calculation field</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5930">SEPA Account: Make account name and accepted countries editable</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5955">Add <code>Edit offer</code> button in offer book for own offers</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5957">Wording for BSQ swap cancellation popups &amp; withdrawal prompt</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5962">Increase dark mode contrast for fillable fields</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5950">Adapt edit explorer indicator styling</a></li>
+</ul>
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5949">Fix trade fee validation bug for multiple BSQ UTXOs inputs</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5914">Fix fat finger protection during offer creation</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5933">Fix exception while taking offer when an account has no selected currency</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5907">OfferBook: Show complete text of action button if enough space is available</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5931">Reset the icon color properly for market price margin information/warning</a></li>
+</ul>
+
+<h3>Development &amp; Documentation</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/5961">API: Add methods <code>failtrade</code>, <code>unfailtrade</code></a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5951">API: Rename method <code>keepfunds</code> to <code>closetrade</code></a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5938">API: Deprecate <code>getmyoffer</code></a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5939">API: Fix CLI&#39;s <code>--payment-account-id</code> option name, document <code>createcryptopaymentacct</code></a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5893">API: XMR/BTC trading pair support</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5852">API: Support and test creation of Swift accounts</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5827">API: <code>getoffer</code> &amp; <code>gettrade</code> support for BSQ swaps</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5935">Improve DAO state store persistence and statistics logging</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5943">CI Security: Use Github actions via sha1 (not tags) and keep them updated via dependabot</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5928">Upgrade log4j 2.15.0 =&gt; 2.17.0</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5860">Set Gradle java src &amp; target compatibility to version 11</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5892">Fixed annoying semicolon colors.</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5879">Make all scripts executable</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/5918">Add @KanoczTomas BTC node with onion v3 address</a></li>
+</ul>
+
+<h3>New Assets</h3>
+
+<p>No new assets were added.</p>
+
+<h2>Verification</h2>
+
+<p>For a detailed description on how to verify your Bisq installer please have a look at our wiki: <a href="https://bisq.wiki/Downloading_and_installing#Verify_installer_file">https://bisq.wiki/Downloading_and_installing#Verify_installer_file</a></p>
+
+<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
+Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
+
+<p>Import the key:
+<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
+
+<p>How to verify signatures?
+<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
+Replace BINARY with the file you downloaded (e.g. Bisq-1.8.2.dmg)</p>
+
+<p>Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.8.2-all.jar
+The output need to match the value from the Bisq-1.8.2.jar.txt file.</p>
+
+<p>There are three hashes within the Bisq-1.8.2.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 15.0.5 and the v1.8.2 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.</p>
+
+<h2>Known issues with installation</h2>
+
+<h3>Windows:</h3>
+
+<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
+
+<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
+
+<p>[1] Application directory (contains application installation files):
+C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
+
+<p>[2] Data directory (contains all Bisq data including wallet):
+C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
+
+<h3>Linux:</h3>
+
+<p>Hint for Debian users:
+If you have problems starting Bisq on Debian use: <code>/opt/bisq/bin/Bisq</code></p>
+
+<p>If your Linux distro does not support .deb files please follow this instruction:
+<code>
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.8.2.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+</code>
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
+
+<h2>Credits</h2>
+
+<p>Thanks to everyone who directly contributed to this release:
+- @alvasw 
+- @cbeams
+- @cd2357<br>
+- @chimp1984 
+- @dbast
+- @Emzy
+- @ghubstan 
+- @jmacxx 
+- @KanoczTomas 
+- @MwithM 
+- @nutel65
+- @ripcurlx 
+- @sqrrm 
+- @stejbac 
+- @xyzmaker123 </p>
+
+<p>A special thanks to our first time contributors:
+- @dbast
+  - <a href="https://github.com/bisq-network/bisq/pull/5943">CI Security: Use Github actions via sha1 (not tags) and keep them updated via dependabot</a>
+  - <a href="https://github.com/bisq-network/bisq/pull/5936">Update Gradle wrapper to 7.3.3</a>
+- @nutel65 
+  - <a href="https://github.com/bisq-network/bisq/pull/5892">Fixed annoying semicolon colors</a></p>
+
+<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
+</p>
+					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.8.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/LN-Zap/zap-desktop">LN-Zap/zap-desktop</a>: <a href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.6-beta">v0.7.6-beta</a>
 						    </h2>
 							<p class="card-text">Published: 2022-01-23 14:01:34 UTC</p>
@@ -706,7 +857,9 @@ deletions in 107 commits from 9 authors, in alphabetical order:
 							<p class="card-text">Published: 2021-12-10 18:25:56 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><h2>Release notes</h2>
+					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
+
+<h2>Release notes</h2>
 
 <p>This release introduces <a href="https://bisq.wiki/BSQ_swaps">BSQ swaps</a>: an instant, trustless, and cheaper way to exchange BTC with BSQ.
 It also ships four new payment methods: ACH Transfer, Domestic Wire Transfer, Tikkie and TransferWise-USD.
@@ -5693,30 +5846,6 @@ allow it to deserialize. Please file an issue if you need assistance (#973).</li
 </p>
 					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.7">v6.1.7</a>
-						    </h2>
-							<p class="card-text">Published: 2021-07-08 16:03:18 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>ADD: Hierarchy navigator screen
-ADD: IRR currency
-ADD: better accessibility for buttons
-FIX: hardware wallet with BIP44/BIP49 wallet reports incorrect change address in PSBT
-FIX: for slip39 wallets import bech32 even if no tx found
-FIX: Scanning for a batch tx would reset contentOffset
-FIX: Re-order wallet bug
-FIX: Typing 1 would turn into 10 due to default custom value
-FIX: Ports from previous scan were not cleared</p>
-</p>
-					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
