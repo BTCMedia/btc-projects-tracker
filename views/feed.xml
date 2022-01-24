@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-24T00:41:16+00:00</updated>
+  <updated>2022-01-24T00:52:01+00:00</updated>
   <entry>
     <id>https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.6-beta</id>
     <link href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.6-beta"/>
@@ -4605,5 +4605,5 @@ FIX: Ports from previous scan were not cleared</summary>
     <updated>2021-07-08T16:03:18Z</updated>
     <dc:date>2021-07-08T16:03:18Z</dc:date>
   </entry>
-  <dc:date>2022-01-24T00:41:16+00:00</dc:date>
+  <dc:date>2022-01-24T00:52:01+00:00</dc:date>
 </feed>
