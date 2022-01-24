@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-24T14:42:22+00:00</updated>
+  <updated>2022-01-24T14:51:19+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre4</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre4"/>
@@ -4724,5 +4724,5 @@ Wallet carousel was not rending properly on large screens
     <updated>2021-07-08T18:49:00Z</updated>
     <dc:date>2021-07-08T18:49:00Z</dc:date>
   </entry>
-  <dc:date>2022-01-24T14:42:22+00:00</dc:date>
+  <dc:date>2022-01-24T14:51:19+00:00</dc:date>
 </feed>
