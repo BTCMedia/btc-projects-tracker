@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-24T12:41:09+00:00</updated>
+  <updated>2022-01-24T12:51:34+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.8.2</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.8.2"/>
@@ -4724,5 +4724,5 @@ Wallet carousel was not rending properly on large screens
     <updated>2021-07-08T18:49:00Z</updated>
     <dc:date>2021-07-08T18:49:00Z</dc:date>
   </entry>
-  <dc:date>2022-01-24T12:41:09+00:00</dc:date>
+  <dc:date>2022-01-24T12:51:34+00:00</dc:date>
 </feed>
