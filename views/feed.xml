@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-26T15:09:15+00:00</updated>
+  <updated>2022-01-26T15:11:51+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.8.2</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.8.2"/>
@@ -4732,5 +4732,5 @@ FIX: Ports from previous scan were not cleared</summary>
     <updated>2021-07-08T16:03:18Z</updated>
     <dc:date>2021-07-08T16:03:18Z</dc:date>
   </entry>
-  <dc:date>2022-01-26T15:09:15+00:00</dc:date>
+  <dc:date>2022-01-26T15:11:51+00:00</dc:date>
 </feed>
