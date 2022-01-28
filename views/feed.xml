@@ -6,7 +6,17 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-28T01:41:03+00:00</updated>
+  <updated>2022-01-28T01:51:02+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.1</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.1"/>
+    <summary>Bug fixes:
+
+Fix: Existing Lightning addresses were not loaded (#3367 #3368) @Kukks</summary>
+    <title>btcpayserver/btcpayserver: v1.4.1</title>
+    <updated>2022-01-28T01:48:32Z</updated>
+    <dc:date>2022-01-28T01:48:32Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.0</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.0"/>
@@ -4774,16 +4784,5 @@ Fixes:
     <updated>2021-07-09T17:42:18Z</updated>
     <dc:date>2021-07-09T17:42:18Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.8</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.8"/>
-    <summary>Fixes:
-
-Wallet carousel was not rending properly on large screens
-</summary>
-    <title>BlueWallet/BlueWallet: v6.1.8</title>
-    <updated>2021-07-08T18:49:00Z</updated>
-    <dc:date>2021-07-08T18:49:00Z</dc:date>
-  </entry>
-  <dc:date>2022-01-28T01:41:03+00:00</dc:date>
+  <dc:date>2022-01-28T01:51:02+00:00</dc:date>
 </feed>
