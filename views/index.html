@@ -38,6 +38,30 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/mempool/mempool">mempool/mempool</a>: <a href="https://github.com/mempool/mempool/releases/tag/v2.3.1">v2.3.1</a>
+						    </h2>
+							<p class="card-text">Published: 2022-01-28 04:48:57 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This is a minor bug fix release for an issue that may cause historical mempool graphs to appear incorrectly after upgrading from v2.2 - we recommend upgrading directly to v2.3.1 instead of v2.3.0 if you are currently using v2.2</p>
+
+<h3>Changelog</h3>
+
+<ul>
+<li>Don&#39;t set <code>autocommit=0</code> flag when migrating SQL database </li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/mempool/mempool/compare/v2.3.0...v2.3.1">https://github.com/mempool/mempool/compare/v2.3.0...v2.3.1</a></p>
+</p>
+					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/mempool/mempool/releases/tag/v2.3.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.1">v1.4.1</a>
 						    </h2>
 							<p class="card-text">Published: 2022-01-28 01:48:32 UTC</p>
@@ -5824,97 +5848,6 @@ Fingerprint of the key is <code>5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2
 </p>
 					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.9" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.99">v0.0.99</a>
-						    </h2>
-							<p class="card-text">Published: 2021-07-09 17:42:18 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>API Updates</h2>
-
-<ul>
-<li><code>lightning_block_sync::poll::Validate</code> is now public, allowing you to
-implement the <code>lightning_block_sync::poll::Poll</code> trait without
-<code>lightning_block_sync::poll::ChainPoller</code> (#956).</li>
-<li><code>lightning::ln::peer_handler::PeerManager</code> no longer requires that no calls
-are made to referencing the same <code>SocketDescriptor</code> after
-<code>disconnect_socket</code> returns. This makes the API significantly less
-deadlock-prone and simplifies <code>SocketDescriptor</code> implementations
-significantly. The relevant changes have been made to <code>lightning_net_tokio</code>
-and <code>PeerManager</code> documentation has been substantially rewritten (#957).</li>
-<li><code>lightning::util::message_signing</code>&#39;s <code>sign</code> and <code>verify</code> methods now take
-secret and public keys by reference instead of value (#974).</li>
-<li>Substantially more information is now exposed about channels in
-<code>ChannelDetails</code>. See documentation for more info (#984 and #988).</li>
-<li>The latest best block seen is now exposed in
-<code>ChannelManager::current_best_block</code> and
-<code>ChannelMonitor::current_best_block</code> (#984).</li>
-<li>Feerates charged when forwarding payments over channels is now set in
-<code>ChannelConfig::fee_base_msat</code> when the channel is opened. For existing
-channels, the value is set to the value provided in
-<code>ChannelManagerReadArgs::default_config::channel_options</code> the first time the
-<code>ChannelManager</code> is loaded in 0.0.99 (#975).</li>
-<li>We now reject HTLCs which are received to be forwarded over private channels
-unless <code>UserConfig::accept_forwards_to_priv_channels</code> is set. Note that
-<code>UserConfig</code> is never serialized and must be provided via
-<code>ChannelManagerReadArgs::default_config</code> at each start (#975).</li>
-</ul>
-
-<h2>Bug Fixes</h2>
-
-<ul>
-<li>We now forward gossip messages to peers instead of only relaying
-locally-generated gossip or sending gossip messages during initial sync
-(#948).</li>
-<li>Correctly send <code>channel_update</code> messages to direct peers on private channels
-(#949). Without this, a private node connected to an LDK node over a private
-channel cannot receive funds as it does not know which fees the LDK node
-will charge.</li>
-<li><code>lightning::ln::channelmanager::ChannelManager</code> no longer expects to be
-persisted spuriously after we receive a <code>channel_update</code> message about any
-channel in the routing gossip (#972).</li>
-<li>Asynchronous <code>ChannelMonitor</code> updates (using the
-<code>ChannelMonitorUpdateErr::TemporaryFailure</code> return variant) no longer cause
-spurious HTLC forwarding failures (#954).</li>
-<li>Transaction provided via <code>ChannelMonitor::transactions_confirmed</code>
-after <code>ChannelMonitor::best_block_updated</code> was called for a much later
-block now trigger all relevant actions as of the later block. Previously
-some transaction broadcasts or other responses required an additional
-block be provided via <code>ChannelMonitor::best_block_updated</code> (#970).</li>
-<li>We no longer panic in rare cases when an invoice contained last-hop route
-hints which were unusable (#958).</li>
-</ul>
-
-<h2>Node Compatibility</h2>
-
-<ul>
-<li>We now accept spurious <code>funding_locked</code> messages sent prior to
-<code>channel_reestablish</code> messages after reconnect. This is a
-<a href="https://github.com/lightningnetwork/lnd/issues/4006">known, long-standing bug in lnd</a>
-(#966).</li>
-<li>We now set the <code>first_blocknum</code> and <code>number_of_blocks</code> fields in
-<code>reply_channel_range</code> messages to values which c-lightning versions prior to
-0.10 accepted. This avoids spurious force-closes from such nodes (#961).</li>
-</ul>
-
-<h2>Serialization Compatibility</h2>
-
-<ul>
-<li>Due to a bug discovered in 0.0.98, if a <code>ChannelManager</code> is serialized on
-version 0.0.98 while an <code>Event::PaymentSent</code> is pending processing, the
-<code>ChannelManager</code> will fail to deserialize both on version 0.0.98 and later
-versions. If you have such a <code>ChannelManager</code> available, a simple patch will
-allow it to deserialize. Please file an issue if you need assistance (#973).</li>
-</ul>
-</p>
-					    <a href="https://github.com/lightningdevkit/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.99" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
