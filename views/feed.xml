@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-28T11:50:46+00:00</updated>
+  <updated>2022-01-28T12:04:53+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre6</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre6"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.8.0-pre6</title>
+    <updated>2022-01-28T12:04:34Z</updated>
+    <dc:date>2022-01-28T12:04:34Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/mempool/mempool/releases/tag/v2.3.1</id>
     <link href="https://github.com/mempool/mempool/releases/tag/v2.3.1"/>
@@ -4708,19 +4716,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-07-16T16:51:44Z</updated>
     <dc:date>2021-07-16T16:51:44Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.9</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.1.9"/>
-    <summary>Added:
-* Support for URv2 QR codes
-* Offer additional file save destinations on Android
-* macOS Widgets
-
-Fixes:
-* PSBT File save would fail on Android</summary>
-    <title>BlueWallet/BlueWallet: v6.1.9</title>
-    <updated>2021-07-10T17:08:44Z</updated>
-    <dc:date>2021-07-10T17:08:44Z</dc:date>
-  </entry>
-  <dc:date>2022-01-28T11:50:46+00:00</dc:date>
+  <dc:date>2022-01-28T12:04:53+00:00</dc:date>
 </feed>
