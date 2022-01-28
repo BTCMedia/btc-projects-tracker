@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-28T07:51:03+00:00</updated>
+  <updated>2022-01-28T08:05:17+00:00</updated>
   <entry>
     <id>https://github.com/mempool/mempool/releases/tag/v2.3.1</id>
     <link href="https://github.com/mempool/mempool/releases/tag/v2.3.1"/>
@@ -4722,5 +4722,5 @@ Fixes:
     <updated>2021-07-10T17:08:44Z</updated>
     <dc:date>2021-07-10T17:08:44Z</dc:date>
   </entry>
-  <dc:date>2022-01-28T07:51:03+00:00</dc:date>
+  <dc:date>2022-01-28T08:05:17+00:00</dc:date>
 </feed>
