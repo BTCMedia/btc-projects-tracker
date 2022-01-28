@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-28T17:51:19+00:00</updated>
+  <updated>2022-01-28T18:11:59+00:00</updated>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre7</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre7"/>
@@ -4668,5 +4668,5 @@ SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-cha
     <updated>2021-07-16T23:11:36Z</updated>
     <dc:date>2021-07-16T23:11:36Z</dc:date>
   </entry>
-  <dc:date>2022-01-28T17:51:19+00:00</dc:date>
+  <dc:date>2022-01-28T18:11:59+00:00</dc:date>
 </feed>
