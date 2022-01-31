@@ -6,7 +6,18 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-01-31T20:41:55+00:00</updated>
+  <updated>2022-01-31T20:52:08+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17"/>
+    <summary>* ADD: show selected coins summary on CoinControl screen 
+* ADD: Navigate to selected wallet 
+* DEL: AOPP 
+* FIX: Reorder wallet is clunky to use. #4405</summary>
+    <title>BlueWallet/BlueWallet: v6.2.17</title>
+    <updated>2022-01-31T20:46:04Z</updated>
+    <dc:date>2022-01-31T20:46:04Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0"/>
@@ -4689,38 +4700,5 @@ c8c5e76d2 Update akka-http-json4s dependency (#1889)
     <updated>2021-07-19T14:33:22Z</updated>
     <dc:date>2021-07-19T14:33:22Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0</id>
-    <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.0"/>
-    <summary>**IMPORTANT:** Since consensus rules have changed, this version is not compatible with previous versions. If you've been running previous versions of RSK client node, we encourage you to update to this new version. The **Mainnet** network upgrade will happen at **block number 3,614,800**. The **Testnet** network upgrade will happen at **block number 2,060,500**.
-
-A non-comprehensive list of consensus changes included in this version is:
-
-- Add BLAKE2 compression function F precompile (RSKIP153)
-- Enable 2WP peg-in transactions to any RSK address (RSKIP170).
-- Flyover protocol consensus changes (RSKIP176).
-- BTC-RSK timestamp linking protection (RSKIP179).
-- Enable refunds for 2WP peg-out transactions with invalid amounts (RSKIP185)
-- Time-locked emergency multisignature (RSKIP201).
-- Reduced 2WP peg-in and peg-out minimum amounts (RSKIP219).
-- Open Bitcoin blockchain oracle (RSKIP220).
-
-These are the most relevant non-consensus improvements included in this version:
-
-- Improvements and compatibility fixes at the JSON-RPC interface (#1481, #1482, #1483, #1451, #1352, #1299, #1339, #1284)
-- New *rewind* feature added to CLI tool (#1443)
-- Block propagation enhancements (#1326)
-- Node performance improvements (#1327)
-- Use native library for recovery signature (#1258)
-- Add Java11 support (#1252)
-
-For a detailed description of the consensus changes introduced in this network upgrade, please refer to [RSKIP 187 Network Upgrade: Iris](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP187.md). You can also find a complete list of the changes introduced in [Iris 3.0.0 milestone](https://github.com/rsksmart/rskj/milestone/24).
-
-SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
-8c975d8489599dbe551e90f96b450ec8a2589385c3176e4ce6ced9d44b09782b  rskj-core-3.0.0-IRIS-all.jar</summary>
-    <title>rsksmart/rskj: IRIS-3.0.0</title>
-    <updated>2021-07-16T23:11:36Z</updated>
-    <dc:date>2021-07-16T23:11:36Z</dc:date>
-  </entry>
-  <dc:date>2022-01-31T20:41:55+00:00</dc:date>
+  <dc:date>2022-01-31T20:52:08+00:00</dc:date>
 </feed>
