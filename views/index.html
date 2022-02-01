@@ -38,6 +38,76 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/eclair">ACINQ/eclair</a>: <a href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0">v0.7.0</a>
+						    </h2>
+							<p class="card-text">Published: 2022-02-01 09:15:56 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>Eclair v0.7.0</h1>
+
+<p>This release adds official support for two long-awaited lightning features: anchor outputs and onion messages.
+Support for the PostreSQL database backend is also now production ready!
+This release also includes a few bug fixes and many new (smaller) features.
+It is fully compatible with 0.6.2 (and all previous versions of eclair).</p>
+
+<p>Because this release changes the default type of channels that your node will use, make sure you read the release notes carefully!
+The release notes can be found <a href="https://github.com/ACINQ/eclair/blob/master/docs/release-notes/eclair-v0.7.0.md">here</a>.</p>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:</p>
+
+<ul>
+<li>from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a></li>
+<li>from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></li>
+</ul>
+
+<p>To import our signing key:</p>
+
+<p><code>sh
+$ gpg --import drouinf.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:</p>
+
+<p><code>sh
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+
+<h2>Building</h2>
+
+<p>Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):</p>
+
+<ul>
+<li>Ubuntu 20.04</li>
+<li>AdoptOpenJDK 11.0.6</li>
+<li>Maven 3.8.1</li>
+</ul>
+
+<p>Use the following command to generate the eclair-node package:</p>
+
+<p><code>sh
+mvn clean install -DskipTests
+</code></p>
+
+<p>That should generate <code>eclair-node/target/eclair-node-0.7.0-a804905-bin.zip</code> with sha256 checksums that match the one we provide and sign in <code>SHA256SUMS.asc</code></p>
+
+<p>(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.</p>
+
+<h2>Upgrading</h2>
+
+<p>This release is fully compatible with previous eclair versions. You don&#39;t need to close your channels, just stop eclair, upgrade and restart.</p>
+</p>
+					    <a href="https://github.com/ACINQ/eclair" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17">v6.2.17</a>
 						    </h2>
 							<p class="card-text">Published: 2022-01-31 20:46:04 UTC</p>
@@ -5642,188 +5712,6 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 </p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.1-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/eclair">ACINQ/eclair</a>: <a href="https://github.com/ACINQ/eclair/releases/tag/v0.6.1">v0.6.1</a>
-						    </h2>
-							<p class="card-text">Published: 2021-07-19 14:33:22 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Eclair v0.6.1</h1>
-
-<p>This release makes major performance improvements, includes a few bug fixes and several new features.
-It is fully compatible with 0.6.0 (and all previous versions of eclair).</p>
-
-<h1>Major changes</h1>
-
-<h3>Performance improvements</h3>
-
-<h4>Sqlite</h4>
-
-<p>Eclair now uses <a href="https://sqlite.org/wal.html">write-ahead logging</a> in Sqlite (#1871). WAL is better suited to our DB access patterns, and is both much more performant and safer than the default <a href="https://sqlite.org/lockingv3.html#rollback">rollback journal</a> that we were using previously.</p>
-
-<blockquote>
-<ol>
-<li>WAL is significantly faster in most scenarios.</li>
-<li>WAL provides more concurrency as readers do not block writers and a writer does not block readers.</li>
-<li>Disk I/O operations tends to be more sequential using WAL.</li>
-<li>WAL uses many fewer fsync() operations.</li>
-</ol>
-</blockquote>
-
-<p>This small change improves performance by more than 5x.</p>
-
-<h4>Payment Handling</h4>
-
-<p>Invoice generation (#1878) and handling of incoming payments (#1880) are now processed in parallel, resulting in a higher throughput under load.</p>
-
-<h3>Improved Postgres support</h3>
-
-<p>This is the continuation of an effort to make PosgreSQL production-ready. The database schema has been reworked (#1866) and is now better organized, with appropriate types for timestamps (#1862). There have been several concurrency-related bug fixes.</p>
-
-<p>We  have also added <code>JSONB</code> columns for local channels and for network announcements (#1865). All individual data fields can now be accessed from SQL and indexed, which is very convenient for advanced analysis and tuning of a routing node.</p>
-
-<h3>Upfront shutdown script</h3>
-
-<p>This release adds support for <code>option_upfront_shutdown_script</code> (feature bits 4/5).
-This feature lets you specify a closing address when you open a channel: your peer will ensure that when you close, your funds can only go to that address.</p>
-
-<p>It can be useful to protect against future hacks of your node, because the attacker won&#39;t be able to close your channels and send the funds to an address that he controls. However, it doesn&#39;t prevent the attacker from exfiltrating funds by paying lightning invoices, so you shouldn&#39;t rely on this feature alone to make your node hack-proof.</p>
-
-<p>This option is disabled by default, but can be enabled in your <code>eclair.conf</code>.
-Note that if you enable it, the closing address will be automatically generated by your <code>bitcoind</code> node.</p>
-
-<h3>Transaction publishing improvements</h3>
-
-<p>This release reworks our internal transaction publishing architecture (see #1844 for details).
-The new architecture is more flexible, provides better logging and makes it easy to add dynamic fee bumping in the future for anchor output channels.
-It will also make it easier to automatically use CPFP to ensure funding transactions confirm before the <a href="https://github.com/lightningnetwork/lightning-rfc/pull/839">2016 blocks timeout</a> is reached.</p>
-
-<h3>API changes</h3>
-
-<p>This release updates a few APIs:</p>
-
-<ul>
-<li><code>parseinvoice</code> displays Bolt 11 invoices routing hints (#1833)</li>
-<li>Plugins can inject their own routes into the API instead of spawning a separate HTTP server (#1805 and #1819)</li>
-</ul>
-
-<h3>Miscellaneous improvements and bug fixes</h3>
-
-<ul>
-<li>Eclair now uses Bitcoin Core 0.21.1 by default (#taproot)</li>
-<li>Eclair now supports <a href="https://github.com/lightningnetwork/lightning-rfc/pull/834">warning messages</a></li>
-<li>Eclair uses additional entropy on top of the operating system RNG to mitigate random number generation failures (#1774)</li>
-</ul>
-
-<h1>Verifying signatures</h1>
-
-<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:</p>
-
-<ul>
-<li>from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a></li>
-<li>from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></li>
-</ul>
-
-<p>To import our signing key:</p>
-
-<p><code>sh
-$ gpg --import drouinf.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:</p>
-
-<p><code>sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-
-<h1>Building</h1>
-
-<p>Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):</p>
-
-<ul>
-<li>Ubuntu 20.04</li>
-<li>AdoptOpenJDK 11.0.6</li>
-<li>Maven 3.8.1</li>
-</ul>
-
-<p>Use the following command to generate the eclair-node package:</p>
-
-<p><code>sh
-mvn clean install -DskipTests
-</code></p>
-
-<p>That should generate <code>eclair-node/target/eclair-node-0.6.1-XXXXXXX-bin.zip</code> with sha256 checksums that match the one we provide and sign in <code>SHA256SUMS.asc</code></p>
-
-<p>(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.</p>
-
-<h1>Upgrading</h1>
-
-<p>This release is fully compatible with eclair v0.6.0. You don&#39;t need to close your channels, just stop eclair, upgrade and restart.</p>
-
-<h1>Changelog</h1>
-
-<p>a658fa26f Set version to 0.6.1-SNAPSHOT (#1813)
-76894bd2e Add additional PRNG (#1774)
-9a20aade0 Allow plugins to inject their own routes into API (#1805)
-d437ea1ed Improve API plugin support (#1819)
-98cae455f Rename pending<em>relay to pending</em>commands (#1822)
-e8c33baf5 Various improvements and fixes (#1817)
-f829a2e8c Add json type hints on channel data (#1824)
-4dc2910c4 Make result set an iterable (#1823)
-6f6c458a2 Add metrics on channels processing time (#1826)
-43a89f865 Add a random delay before processing blocks (#1825)
-af618bc44 Symmetrical HTLC limits (#1828)
-dbecb28d9 Include routing hints in parseinvoice API call response (#1833)
-2b6d564d2 Expose eclair datadir to plugins (#1837)
-bd6bad1bf Fix eventually statements (#1835)
-a7bb2c2b2 Do not store <code>CannotAffordFees</code> errors (#1834)
-d4b25d565 Udpate to Bitcoin Core 0.21.1 (#1841)
-e750474c7 Use bitcoin-lib 0.19 (#1839)
-bbfbad597 Validate payment secret when decoding (#1840)
-afb1b41ea Update bolt 3 spec test vectors (#1669)
-d43d06f6e Rework TxPublisher (#1844)
-45204e238 Schedule backup at regular interval (#1845)
-85ed4338a Reject 0-value trampoline payments (#1851)
-f857368ea Make trampoline payments use per-channel fee and cltv (#1853)
-f52c3dd3f Decode warning messages (#1854)
-516929b1a Fix default file backup config (#1857)
-4ca5c62ab Remove println in tests (#1861)
-291c128ca Reduce some log levels (#1864)
-d9a03a52b Use warning messages for connection issues (#1863)
-af8394a28 Add support for dual db backend (#1746)
-3a573e267 Improve message for <code>CannotRetrieveFeerates</code> error (#1859)
-bd57d41ef Add a globalbalance api call (#1737)
-08faf3b7f Add json columns in Postgres (#1865)
-f8feb1959 Use schemas in Postgres (#1866)
-cea3fc026 Use proper data type for timestamps in Postgres 2 (#1862)
-95fffe348 Reduce pg transaction isolation (#1860)
-547d7e700 Create chain directory (#1872)
-e9df4eece Channels data format migration (#1849)
-733c6e768 Refactor global balance tests (#1874)
-ca51a2d16 Enable WAL mode on Sqlite (#1871)
-3ae9a4ae3 Additional reestablish test (#1875)
-d02760d96 Fail unsigned outgoing htlcs on force-close (#1832)
-3bb7ee8a3 Parallel payment request generation (#1878)
-51824028b Fix flaky channel integration tests (#1879)
-b4183edfa Fetch incoming payments in parallel (#1880)
-8c49f779a Fix payment handler tests (#1882)
-01b40730f Implement option-upfront-shutdown-script (#1846)
-79729c78c Update README (#1881)
-c22596bb9 Update dependencies and enable fatal warnings (#1885)
-adf36de0e Fix yet another flaky test (#1886)
-3f1c2506a Fix watcher flaky test (#1883)
-c8c5e76d2 Update akka-http-json4s dependency (#1889)
-5fa8fedb9 Set version to 0.6.1 (#1887)</p>
-</p>
-					    <a href="https://github.com/ACINQ/eclair" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/eclair/releases/tag/v0.6.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
