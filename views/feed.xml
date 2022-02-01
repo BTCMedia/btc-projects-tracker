@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-01T00:21:30+00:00</updated>
+  <updated>2022-02-01T00:32:02+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17"/>
@@ -4700,5 +4700,5 @@ c8c5e76d2 Update akka-http-json4s dependency (#1889)
     <updated>2021-07-19T14:33:22Z</updated>
     <dc:date>2021-07-19T14:33:22Z</dc:date>
   </entry>
-  <dc:date>2022-02-01T00:21:30+00:00</dc:date>
+  <dc:date>2022-02-01T00:32:02+00:00</dc:date>
 </feed>
