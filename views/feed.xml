@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-01T09:40:46+00:00</updated>
+  <updated>2022-02-01T09:51:01+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/eclair/releases/tag/v0.7.0</id>
     <link href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0"/>
@@ -4597,5 +4597,5 @@ https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-n
     <updated>2021-07-19T21:45:04Z</updated>
     <dc:date>2021-07-19T21:45:04Z</dc:date>
   </entry>
-  <dc:date>2022-02-01T09:40:46+00:00</dc:date>
+  <dc:date>2022-02-01T09:51:01+00:00</dc:date>
 </feed>
