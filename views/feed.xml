@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-02T12:31:12+00:00</updated>
+  <updated>2022-02-02T12:41:16+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.3</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.3"/>
@@ -4447,5 +4447,5 @@ Refactored:
     <updated>2021-07-28T18:53:25Z</updated>
     <dc:date>2021-07-28T18:53:25Z</dc:date>
   </entry>
-  <dc:date>2022-02-02T12:31:12+00:00</dc:date>
+  <dc:date>2022-02-02T12:41:16+00:00</dc:date>
 </feed>
