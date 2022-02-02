@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-02T16:41:54+00:00</updated>
+  <updated>2022-02-02T16:51:51+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.13</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.13"/>
@@ -4447,5 +4447,5 @@ If you face any difficulties while updating, please message us on Telegram: http
     <updated>2021-07-29T00:22:00Z</updated>
     <dc:date>2021-07-29T00:22:00Z</dc:date>
   </entry>
-  <dc:date>2022-02-02T16:41:54+00:00</dc:date>
+  <dc:date>2022-02-02T16:51:51+00:00</dc:date>
 </feed>
