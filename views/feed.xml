@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-02T12:59:10+00:00</updated>
+  <updated>2022-02-02T14:16:23+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.12</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.12"/>
+    <summary>Umbrel 0.4.12 brings four brand new apps in the Umbrel App Store — Kollider, Bitfeed, Suredbits Wallet, and LNDg, updated apps, a security patch, bug fixes, and more.</summary>
+    <title>getumbrel/umbrel: v0.4.12</title>
+    <updated>2022-02-02T13:53:43Z</updated>
+    <dc:date>2022-02-02T13:53:43Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.3</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.3"/>
@@ -4435,17 +4443,5 @@ If you face any difficulties while updating, please message us on Telegram: http
     <updated>2021-07-28T19:28:04Z</updated>
     <dc:date>2021-07-28T19:28:04Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.2</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.2"/>
-    <summary>Added:
-- UI for import electrum wallet with passphrase 
-Refactored: 
-- Better handling large transactions from electrum
-</summary>
-    <title>BlueWallet/BlueWallet: v6.2.2</title>
-    <updated>2021-07-28T18:53:25Z</updated>
-    <dc:date>2021-07-28T18:53:25Z</dc:date>
-  </entry>
-  <dc:date>2022-02-02T12:59:10+00:00</dc:date>
+  <dc:date>2022-02-02T14:16:23+00:00</dc:date>
 </feed>
