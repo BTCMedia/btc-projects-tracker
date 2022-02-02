@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-02T20:41:40+00:00</updated>
+  <updated>2022-02-02T20:50:57+00:00</updated>
   <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.18</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.18"/>
@@ -4446,5 +4446,5 @@ If you face any difficulties while updating, please message us on Telegram: http
     <updated>2021-08-05T15:44:02Z</updated>
     <dc:date>2021-08-05T15:44:02Z</dc:date>
   </entry>
-  <dc:date>2022-02-02T20:41:40+00:00</dc:date>
+  <dc:date>2022-02-02T20:50:57+00:00</dc:date>
 </feed>
