@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-04T10:32:11+00:00</updated>
+  <updated>2022-02-04T10:40:49+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.2-pre1</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.2-pre1"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.8.2-pre1</title>
+    <updated>2022-02-04T10:38:41Z</updated>
+    <dc:date>2022-02-04T10:38:41Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta"/>
@@ -4499,39 +4507,5 @@ Lisa, Christian,  ZmnSCPxj, Rusty.</summary>
     <updated>2021-08-09T15:00:39Z</updated>
     <dc:date>2021-08-09T15:00:39Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.15</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.15"/>
-    <summary>## Main changes
-
-### Extract invoices from images stored on device
-
-You can now browse the device's file system (using the device's browser, hence not needing any permissions) to load an image containing a Lightning invoice (or a Bitcoin URI, or a LNURL) and read the invoice as usual. This is useful when trying to pay someone using a QR code image shared over the internet, for example on Twitter.
-
-### Full list of changes
-
-- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.14...v1.4.15
-- **core**: https://github.com/ACINQ/eclair/compare/v0.4.12-android-phoenix...v0.4.13-android-phoenix
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-- from our website: https://acinq.co/pgp/drouinf.asc
-- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import drouinf.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: android-legacy-v1.4.15</title>
-    <updated>2021-08-06T09:38:28Z</updated>
-    <dc:date>2021-08-06T09:38:28Z</dc:date>
-  </entry>
-  <dc:date>2022-02-04T10:32:11+00:00</dc:date>
+  <dc:date>2022-02-04T10:40:49+00:00</dc:date>
 </feed>
