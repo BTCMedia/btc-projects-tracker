@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-05T23:40:48+00:00</updated>
+  <updated>2022-02-05T23:52:02+00:00</updated>
   <entry>
     <id>https://github.com/romanz/electrs/releases/tag/v0.9.5</id>
     <link href="https://github.com/romanz/electrs/releases/tag/v0.9.5"/>
@@ -4447,5 +4447,5 @@ Lisa, Christian,  ZmnSCPxj, Rusty.</summary>
     <updated>2021-08-10T00:57:55Z</updated>
     <dc:date>2021-08-10T00:57:55Z</dc:date>
   </entry>
-  <dc:date>2022-02-05T23:40:48+00:00</dc:date>
+  <dc:date>2022-02-05T23:52:02+00:00</dc:date>
 </feed>
