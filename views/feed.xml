@@ -6,7 +6,17 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-07T13:31:52+00:00</updated>
+  <updated>2022-02-07T13:41:59+00:00</updated>
+  <entry>
+    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.5.0</id>
+    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.5.0"/>
+    <summary>Updated LNURLPoS to LNURLDevices, to give the extension greater scope
+Added admin users to allow easy debiting of admin accounts
+Added FakeWallet, so LNbits can be used completely detached from bitcoin as a centralised payment server (for use as voucher system in schools, universities, businesses, events, etc)</summary>
+    <title>lnbits/lnbits-legend: 0.5.0</title>
+    <updated>2022-02-07T13:41:11Z</updated>
+    <dc:date>2022-02-07T13:41:11Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/romanz/electrs/releases/tag/v0.9.5</id>
     <link href="https://github.com/romanz/electrs/releases/tag/v0.9.5"/>
@@ -4382,70 +4392,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-08-10T21:06:36Z</updated>
     <dc:date>2021-08-10T21:06:36Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.10.1</id>
-    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.10.1"/>
-    <summary>We're pleased to announce the 0.10.1 release of c-lightning, named by @nalinbhardwaj.
-
-This is a *recommended* upgrade: payment secrets in invoices are now compulsory, and offers and dual funding drafts have been updated, so these (experimental) features are incompatible with previous releases!
-
-*NOTE*: Users of the rebalance or drain [plugins](https://github.com/lightningd/plugins) MUST update, as payment secret is now compulsory.
-
-## Highlights for Users
-
-- `experimental-dual-fund` allows advertizement of funding rates which we will contribute to channels automatically, on a 1-month lease.
-- `withdraw` and `close` (if peer supports) now supports Taproot (and other future) addresses.
-- `listchannels` can now be queried by destination, as well as source.
-- `plugin rescan` now automatically reloads plugins which have changed.
-- We try to restart automatically if we notice subdaemons have been upgraded underneath us.
-- `fundpsbt` will no longer include uneconomic UTXOs (unless `all`).
-- `close` will return a stream of notifications if there is a delay in closing.
-- Unilateral close feerates were reduced from bitcoind's &quot;2 CONSERVATIVE&quot; to &quot;6 ECONOMICAL&quot;.
-- Tor v2 is deprecated: please upgrade to v3!
-- Fixed disconnection bug when an HTLC failed.
-- Fixed bug in rapid feerate changes, and make code space them out (LND compat).
-- Fixed bug where Tor on different ports could be advertized incorrectly.
-- Fixed various bugs to make `pay` more robust.
-
-## Highlights for the Network
-
-- payment secrets in invoices are now compulsory, finally closing a potential probing (or, with amountless invoices, stealing) attack.
-- `option_shutdown_anysegwit` allows peers to close channels to any future segwit version address (taproot!).
-- `keysend` now understands routehints, for routing to unpublished nodes, and sets the final CLTV to 22, for rust-lightning nodes.
-- `invoice` now allows creation of wumbo invoices (&gt; 0.0429 BTC).
-- We will now discuss old channels with peers who reconnect, even if we consider them closed.
-
-
-## Highlights for Developers
-
-- Manual pages now document *exactly* the JSON you can expect from each command (and it's tested!)
-- Plugins can now publish notifications for other plugins to listen to.
-- `force-feerates` allows complete feerate override (mainly for regtest), and a bug fixed where we could send 0 update_fee on regtest.
-- The HSM daemon is now separated into libhsmd, which also provides Python bindings.
-- `createonion` can now make variable-sized onions, and `sendonion` no longer requires `direction` and `channel` for `firsthop`.
-- `dev-sendcustommsg` is now simply `sendcustommsg`.
-- Many offers API improvements and updates, including unsigned offers (smaller QR codes!).
-
-More details can be found in the [changelog](https://github.com/ElementsProject/lightning/blob/v0.10.1/CHANGELOG.md).
-
-Thanks to everyone for their contributions and bug reports; please keep them coming.
-
-Since 0.10.0, we've had 526 commits from 15 different authors over 114 days.
-
-A special thanks goes to the 6 first time contributors:
-
-- Nalin Bhardwa 
-- Nathanael 
-- LightningHelper
-- OpenOms
-- Urza 
-- Valentine Wallace
-
-Cheers,
-Lisa, Christian,  ZmnSCPxj, Rusty.</summary>
-    <title>ElementsProject/lightning: v0.10.1</title>
-    <updated>2021-08-10T00:57:55Z</updated>
-    <dc:date>2021-08-10T00:57:55Z</dc:date>
-  </entry>
-  <dc:date>2022-02-07T13:31:52+00:00</dc:date>
+  <dc:date>2022-02-07T13:41:59+00:00</dc:date>
 </feed>
