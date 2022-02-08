@@ -6,7 +6,26 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-08T04:51:48+00:00</updated>
+  <updated>2022-02-08T05:12:10+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4"/>
+    <summary>### Bug fixes:
+
+* Ensure compresed public key is used for SIN generation even if uncompressed key was provided (fix #3432) (#3433) @CherryDT
+* After login, redirect user to the main page even if a root app configured (#3429) @NicolasDorier
+* docker-entrypoint would crash if missing ssh pubkey, but not the private key @NicolasDorier
+* Error messages when starting BTCPay Server where not shown (Fix #3404) @NicolasDorier
+
+### Improvements:
+
+* UI: Use sticky headers for pages with tab navigation. (#3416) @dennisreimann
+* UI: Prevent initial scroll to section nav (#3411) @dennisreimann
+</summary>
+    <title>btcpayserver/btcpayserver: v1.4.4</title>
+    <updated>2022-02-08T04:51:41Z</updated>
+    <dc:date>2022-02-08T04:51:41Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0</id>
     <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0"/>
@@ -4347,50 +4366,5 @@ https://github.com/mempool/mempool/compare/v2.2.0...v2.2.1
     <updated>2021-08-12T22:57:44Z</updated>
     <dc:date>2021-08-12T22:57:44Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.5.1"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/Specter-Setup-v1.5.1.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/SpecterDesktop-v1.5.1.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/specter_desktop-v1.5.1-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/specterd-v1.5.1-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/specterd-v1.5.1-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/specterd-v1.5.1-x86_64-linux-gnu.zip)
-
-## Signatures and hashes
-[sha256.signed.txt](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.5.1/sha256.signed.txt) file contains sha256 hashes of all binary files and signed with @ben-kaufman's GPG key.
-You can get the public key from here: [https://benkaufman.info/ben-kaufman.asc](https://benkaufman.info/ben-kaufman.asc).
-It is also available via [keys.gnupg.net](http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x5D27DE564153F2BD) or [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/5DF6A7601DB8B78EBDEC18DB5D27DE564153F2BD).
-Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, short id: `5d27de564153f2bd`
-
-# Release notes
- - Bugfix: Add newline char when writing bitcoin.conf setting #1325 (jeffthibault)
- - Bugfix: Fix specifying datadir for internal node #1315 (benk10)
- - Bugfix: Fix login issue for non-English mode #1321 (Kim Neunert)
- - Bugfix: Fix Electrum import issues #1318 (benk10)
- - Bugfix: Update rpc None error #1333 (Hani Mohammed)
- - Bugfix: Fix wallet PDF backup issues #1338 (benk10)
- - Feature: Electrum address label import #1314 (relativisticelectron)
- - Translation: Update Greek translation  #1317 (glowleaf)
- - Translation: Update Hebrew translation #1308 (Sh0ham)
- - Translation: Update French translation #1309 (KST-Energy)
- - UIUX: Add RTL languages support #1276 (benk10)
- - Chore: Automatic Testing and Documentation for Liquid #1286 (Kim Neunert)
- - Chore: Refactor internal keypool management #1330 (benk10)
- - Chore: Refactor out ugly hack in components JS #1302 (benk10)
- - Chore: Make Specter DIY simulator connection error message more descriptive #1337 (Tushar Singla)</summary>
-    <title>cryptoadvance/specter-desktop: v1.5.1</title>
-    <updated>2021-08-10T21:06:36Z</updated>
-    <dc:date>2021-08-10T21:06:36Z</dc:date>
-  </entry>
-  <dc:date>2022-02-08T04:51:48+00:00</dc:date>
+  <dc:date>2022-02-08T05:12:10+00:00</dc:date>
 </feed>
