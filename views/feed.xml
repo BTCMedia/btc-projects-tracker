@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-15T10:11:38+00:00</updated>
+  <updated>2022-02-15T10:21:44+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.5</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.5"/>
@@ -4363,5 +4363,5 @@ Please refer to [our documentation](https://github.com/LN-Zap/zap-desktop#docume
     <updated>2021-08-15T18:10:21Z</updated>
     <dc:date>2021-08-15T18:10:21Z</dc:date>
   </entry>
-  <dc:date>2022-02-15T10:11:38+00:00</dc:date>
+  <dc:date>2022-02-15T10:21:44+00:00</dc:date>
 </feed>
