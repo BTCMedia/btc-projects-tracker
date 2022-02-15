@@ -6,7 +6,32 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-15T05:51:42+00:00</updated>
+  <updated>2022-02-15T06:12:04+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.5</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.5"/>
+    <summary>### New features:
+
+* Ability to bump fees of transactions and invoices via CPFP (#3395) @NicolasDorier
+* Add ability to add description to pull payment (#3363) @ubolator
+* Greenfield: Can add store guest/owner to a store (#3363) @Kukks
+
+### Bug fixes:
+
+* Fix payment request archival actions (#3443) @dennisreimann
+* Fix: filtering paid invoices in the invoice list wasn't working anymore (#3434) @dennisreimann @NicolasDorier
+* Fix: Clicking any per-store nav links from the pairing approval page fails with 404 (#3431 #3438) @dennisreimann
+
+### Improvements:
+
+* UI improvements for the crowdfund settings (#3437 #3422) @dstrukt @dennisreimann
+* Redirect to transactions list after wallet creation (#3451) @dennisreimann
+* Setup guide: Link wallet setup always to BTC (#3442)
+</summary>
+    <title>btcpayserver/btcpayserver: v1.4.5</title>
+    <updated>2022-02-15T06:07:59Z</updated>
+    <dc:date>2022-02-15T06:07:59Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.14</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.14"/>
@@ -4338,15 +4363,5 @@ Please refer to [our documentation](https://github.com/LN-Zap/zap-desktop#docume
     <updated>2021-08-15T18:10:21Z</updated>
     <dc:date>2021-08-15T18:10:21Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.1</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.2.1"/>
-    <summary>### Bug fix:
-
-* Fix Display app on website root feature @NicolasDorier</summary>
-    <title>btcpayserver/btcpayserver: v1.2.1</title>
-    <updated>2021-08-13T07:02:03Z</updated>
-    <dc:date>2021-08-13T07:02:03Z</dc:date>
-  </entry>
-  <dc:date>2022-02-15T05:51:42+00:00</dc:date>
+  <dc:date>2022-02-15T06:12:04+00:00</dc:date>
 </feed>
