@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-17T23:11:00+00:00</updated>
+  <updated>2022-02-17T23:20:45+00:00</updated>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.0"/>
@@ -4730,5 +4730,5 @@ deletions in 95 commits from 6 authors.
     <updated>2021-08-17T18:57:15Z</updated>
     <dc:date>2021-08-17T18:57:15Z</dc:date>
   </entry>
-  <dc:date>2022-02-17T23:11:00+00:00</dc:date>
+  <dc:date>2022-02-17T23:20:45+00:00</dc:date>
 </feed>
