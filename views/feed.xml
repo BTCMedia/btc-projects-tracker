@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-20T23:22:03+00:00</updated>
+  <updated>2022-02-20T23:31:03+00:00</updated>
+  <entry>
+    <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.2</id>
+    <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.2"/>
+    <summary>Cache &amp; Backgroundscan refactor &amp; new apps: LNbits c-lightning, Tallycoin Connect, Helipad, ...</summary>
+    <title>rootzoll/raspiblitz: v1.7.2</title>
+    <updated>2022-02-20T23:28:13Z</updated>
+    <dc:date>2022-02-20T23:28:13Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.7.0</id>
     <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.7.0"/>
@@ -4637,13 +4645,5 @@ a6223f3a9d289f1d5a4ab535b5e748f43b5829ab6274050b93f86d2c77223683  rskj-core-3.0.
     <updated>2021-08-20T21:34:52Z</updated>
     <dc:date>2021-08-20T21:34:52Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.1</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.1"/>
-    <summary>Umbrel 0.4.1 brings LND v0.13.1, along with the latest versions of apps including Mempool, Specter Desktop, BTCPay Server, Samourai Server to the app store, visual improvements for Windows/Linux users, better Tor performance, persistent lnd.conf modifications, Tor access bugfix for Nextcloud, celsius/fahrenheit switch for CPU temperature, and more.</summary>
-    <title>getumbrel/umbrel: v0.4.1</title>
-    <updated>2021-08-20T13:03:10Z</updated>
-    <dc:date>2021-08-20T13:03:10Z</dc:date>
-  </entry>
-  <dc:date>2022-02-20T23:22:03+00:00</dc:date>
+  <dc:date>2022-02-20T23:31:03+00:00</dc:date>
 </feed>
