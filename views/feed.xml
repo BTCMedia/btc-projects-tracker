@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-20T03:41:21+00:00</updated>
+  <updated>2022-02-20T03:50:50+00:00</updated>
   <entry>
     <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.7.0</id>
     <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.7.0"/>
@@ -4645,5 +4645,5 @@ a6223f3a9d289f1d5a4ab535b5e748f43b5829ab6274050b93f86d2c77223683  rskj-core-3.0.
     <updated>2021-08-20T13:03:10Z</updated>
     <dc:date>2021-08-20T13:03:10Z</dc:date>
   </entry>
-  <dc:date>2022-02-20T03:41:21+00:00</dc:date>
+  <dc:date>2022-02-20T03:50:50+00:00</dc:date>
 </feed>
