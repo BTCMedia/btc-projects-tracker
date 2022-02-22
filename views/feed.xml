@@ -6,14 +6,14 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-22T04:41:41+00:00</updated>
+  <updated>2022-02-22T04:50:54+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6"/>
     <summary>### New features:
 
 * Greenfield: Exposes LNUrl's comment and LN address in invoice's payment method (#3427) @Kukks
-* Greenfield: Add maxFeePercent/maxFeeFlat to the lightning payment API (#3454) @denniseimann @NicolasDorier
+* Greenfield: Add maxFeePercent/maxFeeFlat to the lightning payment API (#3454) @dennisreimann @NicolasDorier
 * Greenfield: Find 1 user by ID or by email, or list all users. (#3176) @woutersamaey
 
 ### Bug fixes:
@@ -4654,5 +4654,5 @@ Don't start WatchConnectivity on macOS  </summary>
     <updated>2021-08-22T17:57:53Z</updated>
     <dc:date>2021-08-22T17:57:53Z</dc:date>
   </entry>
-  <dc:date>2022-02-22T04:41:41+00:00</dc:date>
+  <dc:date>2022-02-22T04:50:54+00:00</dc:date>
 </feed>
