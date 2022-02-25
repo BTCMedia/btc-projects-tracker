@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-25T04:02:05+00:00</updated>
+  <updated>2022-02-25T04:10:58+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6"/>
@@ -2730,6 +2730,122 @@ $ sha256sum -c SHA256SUMS.stripped
     <dc:date>2021-10-26T22:12:33Z</dc:date>
   </entry>
   <entry>
+    <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.5</id>
+    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.5"/>
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+## Release notes
+This release introduces 13 new payment methods: Strike, Verse, Monese, Satispay, Bizum, Pix, Nequi, CelPay, PayTM, UPI, RTGS, NEFT and IMPS. It also upgrades Tor to the its latest version and moves all remaining nodes to Tor v3 addresses. And as always, there are many additional bug fixes and minor improvements across the board.
+
+### Improvements
+- [Allow standard mark &amp; copy functionality for displayed text fields](https://github.com/bisq-network/bisq/pull/5747)
+- [Allow trader chat to continue after trade complete](https://github.com/bisq-network/bisq/pull/5742)
+- [Show a warning if PC has been in sleep mode](https://github.com/bisq-network/bisq/pull/5719)
+- [Display support agent's Keybase link when opening mediation / arbitration](https://github.com/bisq-network/bisq/pull/5716)
+- [Add payment methods Strike and Verse](https://github.com/bisq-network/bisq/pull/5752)
+- [Add payment methods Monese and Satispay](https://github.com/bisq-network/bisq/pull/5745)
+- [Add payment methods Bizum and Pix](https://github.com/bisq-network/bisq/pull/5741)
+- [Add payment methods Nequi and CelPay](https://github.com/bisq-network/bisq/pull/5724)
+- [Add five Indian payment methods: PayTM, UPI, RTGS, NEFT and IMPS](https://github.com/bisq-network/bisq/pull/5696)
+- [Remove trade id reference for Amazon gift card](https://github.com/bisq-network/bisq/pull/5727)
+- [Add new v3 onions for wiz's bitcoin nodes](https://github.com/bisq-network/bisq/pull/5767)
+- [Upgrade Tor to v0.4.5.10](https://github.com/bisq-network/bisq/pull/5763)
+
+### Bug fixes
+- [Fix issue of Trade Step 1 validation done too soon](https://github.com/bisq-network/bisq/pull/5746)
+- [Fix exception in create offer screen](https://github.com/bisq-network/bisq/pull/5753)
+- [Fix logic of SEPA country comparison routine](https://github.com/bisq-network/bisq/pull/5748)
+- [Disable GC calls if fullDaoNode is set (like in case of seed nodes)](https://github.com/bisq-network/bisq/pull/5728)
+- [Fix data handling if DAO is deactivated](https://github.com/bisq-network/bisq/pull/5711)
+- [Fix typo (SHA)](https://github.com/bisq-network/bisq/pull/5760)
+
+### Development &amp; Documentation
+- [Update Tor upgrade documentation](https://github.com/bisq-network/bisq/pull/5758)
+- [Remove v2 nodes and backup nodes from DAO monitor](https://github.com/bisq-network/bisq/pull/5731)
+- [Replace Adopt with Zulu for GitHub builds](https://github.com/bisq-network/bisq/pull/5676)
+- [Refactor desktop Closed Tradable model utils for API](https://github.com/bisq-network/bisq/pull/5743)
+- [Move volume formatting from DisplayUtils to VolumeUtil](https://github.com/bisq-network/bisq/pull/5740)
+- [Call `keepfunds` (close trade) on both sides of trade simulation](https://github.com/bisq-network/bisq/pull/5708)
+- [CLI bug fix: show trade's contract volume, not moving offer volume](https://github.com/bisq-network/bisq/pull/5704)
+- [Add custom bisq.properties to API test harness](https://github.com/bisq-network/bisq/pull/5718)
+
+### New Assets
+- [Add Tether (ERC20)](https://github.com/bisq-network/bisq/pull/5735).
+
+## Verification
+
+For a detailed description on how to verify your Bisq installer please have a look at our wiki: https://bisq.wiki/Downloading_and_installing#Verify_installer_file
+
+Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
+Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
+
+Import the key:
+`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
+
+How to verify signatures?
+`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
+Replace BINARY with the file you downloaded (e.g. Bisq-1.7.4.dmg)
+
+Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.7.4-all.jar
+The output need to match the value from the Bisq-1.7.4.jar.txt file.
+
+There are three hashes within the Bisq-1.7.4.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.4 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.
+
+## Known issues with installation 
+
+### Windows:
+
+There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
+
+If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
+
+[1] Application directory (contains application installation files):
+C:\Users\&lt;username&gt;\AppData\Local\Bisq
+
+[2] Data directory (contains all Bisq data including wallet):
+C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
+
+
+### Linux:
+
+Hint for Debian users:
+If you have problems starting Bisq on Debian use: `/opt/bisq/bin/Bisq`
+
+If your Linux distro does not support .deb files please follow this instruction:
+```
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.7.4.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+```
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
+
+## Credits
+
+Thanks to everyone who directly contributed to this release:
+
+- @cd2357 
+- @chimp1984 
+- @Emzy 
+- @geertjanw 
+- @ghubstan 
+- @Jakub-CZ 
+- @jmacxx 
+- @ripcurlx 
+- @sqrrm  
+
+As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
+    <title>bisq-network/bisq: v1.7.5</title>
+    <updated>2021-10-26T20:11:11Z</updated>
+    <dc:date>2021-10-26T20:11:11Z</dc:date>
+  </entry>
+  <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.6</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.6"/>
     <summary>This version of Umbrel contains a bugfix for the Samourai Server app's connectivity issue. If you're facing an issue with it currently, please try re-installing the app again after the update.</summary>
@@ -4356,6 +4472,105 @@ $ sha256sum -c SHA256SUMS.stripped
     <dc:date>2021-08-31T07:26:13Z</dc:date>
   </entry>
   <entry>
+    <id>https://github.com/bisq-network/bisq/releases/tag/v1.7.3</id>
+    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.7.3"/>
+    <summary>**A newer version is already available! Please don’t use this version anymore.**
+
+## Release notes
+This summer vacation release fixes some minor bugs.
+
+### Improvements
+- [Improved tooltip for signed and unsigned accounts](https://github.com/bisq-network/bisq/pull/5625)
+- [Allow LTC accounts to use SegWit addresses](https://github.com/bisq-network/bisq/pull/5639)
+
+### Bug fixes
+- [Fix issue with extraData field when editing offer](https://github.com/bisq-network/bisq/pull/5651)
+- [Fix issue for deprecated payment account imported from backup](https://github.com/bisq-network/bisq/pull/5644)
+- [Prevent negative suggested mining fee when burning BSQ for fees](https://github.com/bisq-network/bisq/pull/5643)
+- [Arbitration: Avoid creating more than one refund payout](https://github.com/bisq-network/bisq/pull/5649)
+- [Update @ripcurlx expired public key](https://github.com/bisq-network/bisq/pull/5640)
+
+### Development &amp; Documentation
+- [Pricenode: Remove the Exmo exchange as a price provider](https://github.com/bisq-network/bisq/pull/5671)
+- [Pricenode: Only bind jmxremote management interface to 127.0.0.1](https://github.com/bisq-network/bisq/pull/5670)
+
+### New Assets
+No new assets were added.
+
+## Verification
+
+For a detailed description on how to verify your Bisq installer please have a look at our wiki: https://bisq.wiki/Downloading_and_installing#Verify_installer_file
+
+Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
+Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
+
+Import the key:
+`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
+
+How to verify signatures?
+`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
+Replace BINARY with the file you downloaded (e.g. Bisq-1.7.3.dmg)
+
+Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.7.3-all.jar
+The output need to match the value from the Bisq-1.7.3.jar.txt file.
+
+*NEW: There are three hashes within the Bisq-1.7.3.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 11.0.10 and the v1.7.3 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.*
+
+## Known issues with installation 
+
+### Windows:
+
+There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
+
+If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
+
+[1] Application directory (contains application installation files):
+C:\Users\&lt;username&gt;\AppData\Local\Bisq
+
+[2] Data directory (contains all Bisq data including wallet):
+C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
+
+
+### Linux:
+
+Hint for Debian users:
+If you have problems starting Bisq on Debian use: `/opt/bisq/bin/Bisq`
+
+If your Linux distro does not support .deb files please follow this instruction:
+```
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.7.3.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+```
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
+
+## Credits
+
+Thanks to everyone who directly contributed to this release:
+
+- @BtcContributor
+- @jmacxx 
+- @ripcurlx
+- @sqrrm
+- @xyzmaker123
+
+A special thanks to our first time contributors:
+- @xyzmaker123
+  - [Improved tooltip for signed and unsigned accounts](https://github.com/bisq-network/bisq/pull/5625)
+
+As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
+    <title>bisq-network/bisq: v1.7.3</title>
+    <updated>2021-08-28T17:03:06Z</updated>
+    <dc:date>2021-08-28T17:03:06Z</dc:date>
+  </entry>
+  <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.6.0"/>
     <summary># Binaries
@@ -4439,30 +4654,5 @@ Don't start WatchConnectivity on macOS  </summary>
     <updated>2021-08-22T17:57:53Z</updated>
     <dc:date>2021-08-22T17:57:53Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.1</id>
-    <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.1"/>
-    <summary>This a **patch release** that contains a fix for a known issue where -under certain conditions- calls to the *eth_getLogs* method would return incorrect results (see issue #1600).
-
-This is a **non-mandatory upgrade**, however we encourage users to upgrade to this version if they are running nodes used to retrieve blockchain event logs.
-
-These are the changes included in this version:
-- Fix data retrieval for eth_getLogs method (#1605)
-- Ignore ‘type’ argument in JSON-RPC calls (#1606).
-
-SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
-a6223f3a9d289f1d5a4ab535b5e748f43b5829ab6274050b93f86d2c77223683  rskj-core-3.0.1-IRIS-all.jar</summary>
-    <title>rsksmart/rskj: IRIS-3.0.1</title>
-    <updated>2021-08-20T21:34:52Z</updated>
-    <dc:date>2021-08-20T21:34:52Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.1</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.1"/>
-    <summary>Umbrel 0.4.1 brings LND v0.13.1, along with the latest versions of apps including Mempool, Specter Desktop, BTCPay Server, Samourai Server to the app store, visual improvements for Windows/Linux users, better Tor performance, persistent lnd.conf modifications, Tor access bugfix for Nextcloud, celsius/fahrenheit switch for CPU temperature, and more.</summary>
-    <title>getumbrel/umbrel: v0.4.1</title>
-    <updated>2021-08-20T13:03:10Z</updated>
-    <dc:date>2021-08-20T13:03:10Z</dc:date>
-  </entry>
-  <dc:date>2022-02-25T04:02:05+00:00</dc:date>
+  <dc:date>2022-02-25T04:10:58+00:00</dc:date>
 </feed>
