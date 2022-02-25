@@ -6,15 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-25T16:51:48+00:00</updated>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0-pre1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0-pre1"/>
-    <summary></summary>
-    <title>cryptoadvance/specter-desktop: v1.9.0-pre1</title>
-    <updated>2022-02-25T16:47:30Z</updated>
-    <dc:date>2022-02-25T16:47:30Z</dc:date>
-  </entry>
+  <updated>2022-02-25T17:09:14+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6"/>
@@ -4628,5 +4620,39 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-08-27T15:37:41Z</updated>
     <dc:date>2021-08-27T15:37:41Z</dc:date>
   </entry>
-  <dc:date>2022-02-25T16:51:48+00:00</dc:date>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3"/>
+    <summary>**Added**
+
+Electrum connection toggle
+Share/Save QRCode 
+Resize selected Images for less error prone QR scanning 
+Share button on sign/verify screen
+
+**Refactored**
+
+Move LT to Tools 
+Speedup wait for electrum
+Use new UIMenu 
+Dont load address txs if &gt; 1000 
+Connect BlueElectrum explicitly 
+
+**Fixed**
+
+Realm encryption mismatch after backup restore (closes #3332) 
+Disable slower fees if they match faster fee 
+Replace ',' with '.' instead of empty string. 
+Unable to Browse Past First Wallet
+Widgets were not reloading (macOS) 
+Provide more context when local QR code scan fails 
+Update session state on app termination 
+Apple Watch invoice gets stuck #1529 
+OnePlus text cutoff 
+Don't start WatchConnectivity on macOS  </summary>
+    <title>BlueWallet/BlueWallet: v6.2.3</title>
+    <updated>2021-08-22T17:57:53Z</updated>
+    <dc:date>2021-08-22T17:57:53Z</dc:date>
+  </entry>
+  <dc:date>2022-02-25T17:09:14+00:00</dc:date>
 </feed>
