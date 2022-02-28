@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-02-28T13:40:35+00:00</updated>
+  <updated>2022-02-28T13:51:24+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6"/>
@@ -518,14 +518,6 @@ Added FakeWallet, so LNbits can be used completely detached from bitcoin as a ce
     <title>romanz/electrs: v0.9.5</title>
     <updated>2022-02-04T15:45:49Z</updated>
     <dc:date>2022-02-04T15:45:49Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.2-pre1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.2-pre1"/>
-    <summary></summary>
-    <title>cryptoadvance/specter-desktop: v1.8.2-pre1</title>
-    <updated>2022-02-04T10:38:41Z</updated>
-    <dc:date>2022-02-04T10:38:41Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta</id>
@@ -4654,5 +4646,22 @@ Don't start WatchConnectivity on macOS  </summary>
     <updated>2021-08-22T17:57:53Z</updated>
     <dc:date>2021-08-22T17:57:53Z</dc:date>
   </entry>
-  <dc:date>2022-02-28T13:40:35+00:00</dc:date>
+  <entry>
+    <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.1</id>
+    <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.0.1"/>
+    <summary>This a **patch release** that contains a fix for a known issue where -under certain conditions- calls to the *eth_getLogs* method would return incorrect results (see issue #1600).
+
+This is a **non-mandatory upgrade**, however we encourage users to upgrade to this version if they are running nodes used to retrieve blockchain event logs.
+
+These are the changes included in this version:
+- Fix data retrieval for eth_getLogs method (#1605)
+- Ignore ‘type’ argument in JSON-RPC calls (#1606).
+
+SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
+a6223f3a9d289f1d5a4ab535b5e748f43b5829ab6274050b93f86d2c77223683  rskj-core-3.0.1-IRIS-all.jar</summary>
+    <title>rsksmart/rskj: IRIS-3.0.1</title>
+    <updated>2021-08-20T21:34:52Z</updated>
+    <dc:date>2021-08-20T21:34:52Z</dc:date>
+  </entry>
+  <dc:date>2022-02-28T13:51:24+00:00</dc:date>
 </feed>
