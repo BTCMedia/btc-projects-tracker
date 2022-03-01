@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-01T08:02:24+00:00</updated>
+  <updated>2022-03-01T08:11:21+00:00</updated>
   <entry>
     <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.105</id>
     <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.105"/>
@@ -4760,5 +4760,5 @@ Don't start WatchConnectivity on macOS  </summary>
     <updated>2021-08-22T17:57:53Z</updated>
     <dc:date>2021-08-22T17:57:53Z</dc:date>
   </entry>
-  <dc:date>2022-03-01T08:02:24+00:00</dc:date>
+  <dc:date>2022-03-01T08:11:21+00:00</dc:date>
 </feed>
