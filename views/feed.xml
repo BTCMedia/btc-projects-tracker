@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-01T03:41:33+00:00</updated>
+  <updated>2022-03-01T03:50:41+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6"/>
@@ -4663,5 +4663,5 @@ a6223f3a9d289f1d5a4ab535b5e748f43b5829ab6274050b93f86d2c77223683  rskj-core-3.0.
     <updated>2021-08-20T21:34:52Z</updated>
     <dc:date>2021-08-20T21:34:52Z</dc:date>
   </entry>
-  <dc:date>2022-03-01T03:41:33+00:00</dc:date>
+  <dc:date>2022-03-01T03:50:41+00:00</dc:date>
 </feed>
