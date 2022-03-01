@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-01T14:01:42+00:00</updated>
+  <updated>2022-03-01T14:11:36+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.15</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.15"/>
+    <summary>This update brings three brand new apps to the Umbrel App Store — Jam (JoinMarket UI), Snowflake Tor Proxy, and Bleskomat Server, along with updated apps and bugfixes.</summary>
+    <title>getumbrel/umbrel: v0.4.15</title>
+    <updated>2022-03-01T14:07:30Z</updated>
+    <dc:date>2022-03-01T14:07:30Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.105</id>
     <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.105"/>
@@ -4726,39 +4734,5 @@ Fingerprint of the key is `5DF6 A760 1DB8 B78E BDEC  18DB 5D27 DE56 4153 F2BD`, 
     <updated>2021-08-27T15:37:41Z</updated>
     <dc:date>2021-08-27T15:37:41Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.3"/>
-    <summary>**Added**
-
-Electrum connection toggle
-Share/Save QRCode 
-Resize selected Images for less error prone QR scanning 
-Share button on sign/verify screen
-
-**Refactored**
-
-Move LT to Tools 
-Speedup wait for electrum
-Use new UIMenu 
-Dont load address txs if &gt; 1000 
-Connect BlueElectrum explicitly 
-
-**Fixed**
-
-Realm encryption mismatch after backup restore (closes #3332) 
-Disable slower fees if they match faster fee 
-Replace ',' with '.' instead of empty string. 
-Unable to Browse Past First Wallet
-Widgets were not reloading (macOS) 
-Provide more context when local QR code scan fails 
-Update session state on app termination 
-Apple Watch invoice gets stuck #1529 
-OnePlus text cutoff 
-Don't start WatchConnectivity on macOS  </summary>
-    <title>BlueWallet/BlueWallet: v6.2.3</title>
-    <updated>2021-08-22T17:57:53Z</updated>
-    <dc:date>2021-08-22T17:57:53Z</dc:date>
-  </entry>
-  <dc:date>2022-03-01T14:01:42+00:00</dc:date>
+  <dc:date>2022-03-01T14:11:36+00:00</dc:date>
 </feed>
