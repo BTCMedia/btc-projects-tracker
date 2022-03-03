@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-03T08:10:13+00:00</updated>
+  <updated>2022-03-03T08:11:50+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.7</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.7"/>
@@ -4706,5 +4706,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2021-08-28T17:03:06Z</updated>
     <dc:date>2021-08-28T17:03:06Z</dc:date>
   </entry>
-  <dc:date>2022-03-03T08:10:13+00:00</dc:date>
+  <dc:date>2022-03-03T08:11:50+00:00</dc:date>
 </feed>
