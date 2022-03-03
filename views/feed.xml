@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-03T17:50:32+00:00</updated>
+  <updated>2022-03-03T18:05:01+00:00</updated>
   <entry>
     <id>https://github.com/ElementsProject/elements/releases/tag/elements-0.21.0.2</id>
     <link href="https://github.com/ElementsProject/elements/releases/tag/elements-0.21.0.2"/>
@@ -4618,5 +4618,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-08-31T07:26:13Z</updated>
     <dc:date>2021-08-31T07:26:13Z</dc:date>
   </entry>
-  <dc:date>2022-03-03T17:50:32+00:00</dc:date>
+  <dc:date>2022-03-03T18:05:01+00:00</dc:date>
 </feed>
