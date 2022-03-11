@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-11T19:02:36+00:00</updated>
+  <updated>2022-03-11T19:11:54+00:00</updated>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.8.4</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.8.4"/>
@@ -2135,6 +2135,162 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <title>BlueWallet/BlueWallet: v6.2.13</title>
     <updated>2021-11-25T14:43:12Z</updated>
     <dc:date>2021-11-25T14:43:12Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta</id>
+    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta"/>
+    <summary>This marks the first minor release of the `0.14.x` release cycle! This is primarily a bug fix release that fixes: an issue that would arise with `lnd` nodes older than 2 years in certain circumstances, a fix to ensure we always advertise a consistent of feature bits, and most importantly **a fix to ensure compatibility for new channel opens with the latest versions of c-lightning+eclair**. 
+
+# Database Migrations
+
+There are two database migrations for this version in `lnd` (that were included in 0.14.0): One optimizes the storage structure of HTLCs for faster payments and the other removes old channel state data from closed channels to free up disk space. See the [release notes `v0.14.0-beta`](https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md) (and [`v0.14.1-beta`](https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md)) for more information.
+
+NOTE: Compacting the DB is recommended after running the migration to reclaim the freed up space.
+# Verifying the Release
+
+In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
+
+```
+curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/guggero.asc | gpg --import
+```
+
+Once you have the required PGP keys, you can verify the release (assuming `manifest-guggero-v0.14.1-beta.sig` and `manifest-v0.14.1-beta.txt` are in the current directory) with:
+
+```
+gpg --verify manifest-guggero-v0.14.1-beta.sig manifest-v0.14.1-beta.txt
+```
+
+You should see the following if the verification was successful:
+
+```
+gpg: Signature made Wed 24 Nov 2021 11:15:46 PM CET
+gpg:                using RSA key F4FC70F07310028424EFC20A8E4256593F177720
+gpg: Good signature from &quot;Oliver Gugger &lt;gugger@gmail.com&gt;&quot; [ultimate]
+Primary key fingerprint: F4FC 70F0 7310 0284 24EF  C20A 8E42 5659 3F17 7720
+```
+
+That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
+
+## Verifying the Release Timestamp 
+
+From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-guggero-v0.14.1-beta.sig.ots`.
+
+Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+```
+ots verify manifest-guggero-v0.14.1-beta.sig.ots -f manifest-guggero-v0.14.1-beta.sig
+```
+
+Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
+
+These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
+
+## Verifying the Release Binaries
+
+Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/blob/master/docs/release.md) for how this can be achieved.
+The release binaries are compiled with `go1.17.3`, which is required by verifiers to arrive at the same ones.
+They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, `watchtowerrpc` and `monitoring`. Note that these are already included in the release script, so they do not need to be provided.
+
+The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
+
+Finally, you can also verify the _tag_ itself with the following command:
+
+```
+$ git verify-tag v0.14.1-beta
+gpg: Signature made Wed 24 Nov 2021 11:04:06 PM CET
+gpg:                using RSA key F4FC70F07310028424EFC20A8E4256593F177720
+gpg: Good signature from &quot;Oliver Gugger &lt;gugger@gmail.com&gt;&quot; [ultimate]
+Primary key fingerprint: F4FC 70F0 7310 0284 24EF  C20A 8E42 5659 3F17 7720
+```
+
+## Verifying the Docker Images
+
+To verify the `lnd` and `lncli` binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):
+
+```shell
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.14.1-beta /verify-install.sh v0.14.1-beta
+$ OK=$?
+$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
+$ docker run lightninglabs/lnd [command-line options]
+```
+
+# Building the Contained Release 
+
+Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
+that `vendor.tar.gz` and `lnd-source-v0.14.1-beta.tar.gz` are in the current directory, follow these steps:
+
+```
+tar -xvzf vendor.tar.gz
+tar -xvzf lnd-source-v0.14.1-beta.tar.gz
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.1-beta&quot; ./cmd/lnd
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.1-beta&quot; ./cmd/lncli
+```
+
+The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
+
+Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
+
+```
+make release sys=&quot;linux-arm64 darwin-amd64&quot;
+```
+
+⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
+
+# Release Notes
+
+Read the full release notes here: https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md
+and here: https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md
+
+# Contributors (Alphabetical Order) -- combined 0.14+0.14.1
+
+Abubakar Nur Khalil
+Adrian-Stefan Mares
+Alex Bosworth
+Alyssa Hertig
+András Bánki-Horváth
+Bjarne Magnussen
+Carla Kirk-Cohen
+Carsten Otto
+Conner Fromknecht
+Elle Mouton
+ErikEk
+Eugene Siegel
+Hampus Sjöberg
+Harsha Goli
+Jamie Turley
+Jesse de Wit
+Johan T. Halseth
+Johnny Holton
+Joost Jager
+Jordi Montes
+Juan Pablo Civile
+Kishin Kato
+Leonhard Weese
+Martin Habovštiak
+Michael Rhee
+Naveen Srinivasan
+Olaoluwa Osuntokun
+Oliver Gugger
+Priyansh Rastogi
+Roei Erez
+Simon Males
+Stevie Zollo
+Torkel Rogstad
+Wilmer Paulino
+Yong Yu
+Zero-1729
+benthecarman
+de6df1re
+github2k20
+mateuszmp
+nathanael
+nayuta-ueno
+offerm
+positiveblue
+xanoni
+</summary>
+    <title>lightningnetwork/lnd: v0.14.1-beta</title>
+    <updated>2021-11-24T23:33:17Z</updated>
+    <dc:date>2021-11-24T23:33:17Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.6</id>
@@ -4557,36 +4713,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-09-02T20:15:44Z</updated>
     <dc:date>2021-09-02T20:15:44Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4"/>
-    <summary>* ADD: Open Receive screen on push 
-* FIX: Address list would crash on lack of item 
-* ADD: lightning address send support (closes #3690) 
-* FIX: Use preferred unit for min and max information 
-* FIX: Update UI for Send screen if new deeplink data is available 
-* FIX: Expand option was available even after use 
-* FIX: When selecting to send MAX on part or a X is shown in amount. #2412 
-* ADD: pending transaction status screen UX (closes #3183) 
-* ADD: onchain receive address now shows ETA on incomming transaction (rel #3183) 
-* FIX: Disable toggle if server is for Tor 
-* FIX: small RTL alignment issue #3677 
-* FIX: multisig cosigner type inferred from the path (closes #3653) 
-* FIX: Reordering Wallets UX 
-* FIX: If Tor is not supported, throw alert. 
-* FIX: If offline mode, disable import button 
-* FIX: ImagePicker wasnt processing selected asset 
-* REF: Localization for QR 
-* FIX: lnurl-pay comment 
-* ADD: Enhance offline mode UI 
-* ADD: Borders to Dynamic QR Code 
-* REF: Use ContextButton for advanced options 
-* ADD: lnurl-pay comments (closes #3617) 
-* FIX: single-address realm txs storage 
-* REF: store HD wallets txs in realm properly, one per row (closes #3357)</summary>
-    <title>BlueWallet/BlueWallet: v6.2.4</title>
-    <updated>2021-09-02T14:22:07Z</updated>
-    <dc:date>2021-09-02T14:22:07Z</dc:date>
-  </entry>
-  <dc:date>2022-03-11T19:02:36+00:00</dc:date>
+  <dc:date>2022-03-11T19:11:54+00:00</dc:date>
 </feed>
