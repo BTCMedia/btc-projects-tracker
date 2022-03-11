@@ -2716,170 +2716,6 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta">v0.14.1-beta</a>
-						    </h2>
-							<p class="card-text">Published: 2021-11-24 23:33:17 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This marks the first minor release of the <code>0.14.x</code> release cycle! This is primarily a bug fix release that fixes: an issue that would arise with <code>lnd</code> nodes older than 2 years in certain circumstances, a fix to ensure we always advertise a consistent of feature bits, and most importantly <strong>a fix to ensure compatibility for new channel opens with the latest versions of c-lightning+eclair</strong>. </p>
-
-<h1>Database Migrations</h1>
-
-<p>There are two database migrations for this version in <code>lnd</code> (that were included in 0.14.0): One optimizes the storage structure of HTLCs for faster payments and the other removes old channel state data from closed channels to free up disk space. See the <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md">release notes <code>v0.14.0-beta</code></a> (and <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md"><code>v0.14.1-beta</code></a>) for more information.</p>
-
-<p>NOTE: Compacting the DB is recommended after running the migration to reclaim the freed up space.</p>
-
-<h1>Verifying the Release</h1>
-
-<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already: </p>
-
-<p><code>
-curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/guggero.asc | gpg --import
-</code></p>
-
-<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-guggero-v0.14.1-beta.sig</code> and <code>manifest-v0.14.1-beta.txt</code> are in the current directory) with:</p>
-
-<p><code>
-gpg --verify manifest-guggero-v0.14.1-beta.sig manifest-v0.14.1-beta.txt
-</code></p>
-
-<p>You should see the following if the verification was successful:</p>
-
-<p><code>
-gpg: Signature made Wed 24 Nov 2021 11:15:46 PM CET
-gpg:                using RSA key F4FC70F07310028424EFC20A8E4256593F177720
-gpg: Good signature from &quot;Oliver Gugger &lt;gugger@gmail.com&gt;&quot; [ultimate]
-Primary key fingerprint: F4FC 70F0 7310 0284 24EF  C20A 8E42 5659 3F17 7720
-</code></p>
-
-<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
-
-<h2>Verifying the Release Timestamp</h2>
-
-<p>From this new version onwards, in addition time-stamping the <em>git tag</em> with <a href="https://opentimestamps.org/">OpenTimeStamps</a>, we&#39;ll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: <code>manifest-guggero-v0.14.1-beta.sig.ots</code>.</p>
-
-<p>Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
-<code>
-ots verify manifest-guggero-v0.14.1-beta.sig.ots -f manifest-guggero-v0.14.1-beta.sig
-</code></p>
-
-<p>Alternatively, <a href="https://opentimestamps.org/">the open timestamps website</a> can be used to verify timestamps if one doesn&#39;t have a <code>bitcoind</code> instance accessible locally. </p>
-
-<p>These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. </p>
-
-<h2>Verifying the Release Binaries</h2>
-
-<p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release.md">reproducible builds guide</a> for how this can be achieved.
-The release binaries are compiled with <code>go1.17.3</code>, which is required by verifiers to arrive at the same ones.
-They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>routerrpc</code>, <code>watchtowerrpc</code> and <code>monitoring</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
-
-<p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
-
-<p>Finally, you can also verify the <em>tag</em> itself with the following command:</p>
-
-<p><code>
-$ git verify-tag v0.14.1-beta
-gpg: Signature made Wed 24 Nov 2021 11:04:06 PM CET
-gpg:                using RSA key F4FC70F07310028424EFC20A8E4256593F177720
-gpg: Good signature from &quot;Oliver Gugger &lt;gugger@gmail.com&gt;&quot; [ultimate]
-Primary key fingerprint: F4FC 70F0 7310 0284 24EF  C20A 8E42 5659 3F17 7720
-</code></p>
-
-<h2>Verifying the Docker Images</h2>
-
-<p>To verify the <code>lnd</code> and <code>lncli</code> binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):</p>
-
-<p><code>shell
-$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.14.1-beta /verify-install.sh v0.14.1-beta
-$ OK=$?
-$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
-$ docker run lightninglabs/lnd [command-line options]
-</code></p>
-
-<h1>Building the Contained Release</h1>
-
-<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
-that <code>vendor.tar.gz</code> and <code>lnd-source-v0.14.1-beta.tar.gz</code> are in the current directory, follow these steps:</p>
-
-<p><code>
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.14.1-beta.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.1-beta&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.1-beta&quot; ./cmd/lncli
-</code></p>
-
-<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory. </p>
-
-<p>Additionally, it&#39;s now possible to use the <a href="https://github.com/lightningnetwork/lnd/pull/2191">enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so</a>: </p>
-
-<p><code>
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-</code></p>
-
-<p>⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️</p>
-
-<h1>Release Notes</h1>
-
-<p>Read the full release notes here: <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md">https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.0.md</a>
-and here: <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md">https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.1.md</a></p>
-
-<h1>Contributors (Alphabetical Order) -- combined 0.14+0.14.1</h1>
-
-<p>Abubakar Nur Khalil
-Adrian-Stefan Mares
-Alex Bosworth
-Alyssa Hertig
-András Bánki-Horváth
-Bjarne Magnussen
-Carla Kirk-Cohen
-Carsten Otto
-Conner Fromknecht
-Elle Mouton
-ErikEk
-Eugene Siegel
-Hampus Sjöberg
-Harsha Goli
-Jamie Turley
-Jesse de Wit
-Johan T. Halseth
-Johnny Holton
-Joost Jager
-Jordi Montes
-Juan Pablo Civile
-Kishin Kato
-Leonhard Weese
-Martin Habovštiak
-Michael Rhee
-Naveen Srinivasan
-Olaoluwa Osuntokun
-Oliver Gugger
-Priyansh Rastogi
-Roei Erez
-Simon Males
-Stevie Zollo
-Torkel Rogstad
-Wilmer Paulino
-Yong Yu
-Zero-1729
-benthecarman
-de6df1re
-github2k20
-mateuszmp
-nathanael
-nayuta-ueno
-offerm
-positiveblue
-xanoni</p>
-</p>
-					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.1-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.6">v1.3.6</a>
 						    </h2>
 							<p class="card-text">Published: 2021-11-20 13:53:08 UTC</p>
@@ -5818,6 +5654,47 @@ $ sha256sum -c SHA256SUMS.stripped
 </p>
 					    <a href="https://github.com/unchained-capital/caravan" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4">v6.2.4</a>
+						    </h2>
+							<p class="card-text">Published: 2021-09-02 14:22:07 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><ul>
+<li>ADD: Open Receive screen on push </li>
+<li>FIX: Address list would crash on lack of item </li>
+<li>ADD: lightning address send support (closes #3690) </li>
+<li>FIX: Use preferred unit for min and max information </li>
+<li>FIX: Update UI for Send screen if new deeplink data is available </li>
+<li>FIX: Expand option was available even after use </li>
+<li>FIX: When selecting to send MAX on part or a X is shown in amount. #2412 </li>
+<li>ADD: pending transaction status screen UX (closes #3183) </li>
+<li>ADD: onchain receive address now shows ETA on incomming transaction (rel #3183) </li>
+<li>FIX: Disable toggle if server is for Tor </li>
+<li>FIX: small RTL alignment issue #3677 </li>
+<li>FIX: multisig cosigner type inferred from the path (closes #3653) </li>
+<li>FIX: Reordering Wallets UX </li>
+<li>FIX: If Tor is not supported, throw alert. </li>
+<li>FIX: If offline mode, disable import button </li>
+<li>FIX: ImagePicker wasnt processing selected asset </li>
+<li>REF: Localization for QR </li>
+<li>FIX: lnurl-pay comment </li>
+<li>ADD: Enhance offline mode UI </li>
+<li>ADD: Borders to Dynamic QR Code </li>
+<li>REF: Use ContextButton for advanced options </li>
+<li>ADD: lnurl-pay comments (closes #3617) </li>
+<li>FIX: single-address realm txs storage </li>
+<li>REF: store HD wallets txs in realm properly, one per row (closes #3357)</li>
+</ul>
+</p>
+					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
