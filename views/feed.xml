@@ -6,7 +6,21 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-15T11:51:04+00:00</updated>
+  <updated>2022-03-15T12:10:09+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.13</id>
+    <link href="https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.13"/>
+    <summary>Changelog:
+
+- fix for syncing while parent chain daemon is down
+- fix for duplicate header syncing
+- make dynafed signalling opt-out again
+- raise max p2p message size
+- logging fixes</summary>
+    <title>ElementsProject/elements: elements-0.18.1.13</title>
+    <updated>2022-03-15T12:01:01Z</updated>
+    <dc:date>2022-03-15T12:01:01Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bisq-network/bisq/releases/tag/v1.8.4</id>
     <link href="https://github.com/bisq-network/bisq/releases/tag/v1.8.4"/>
@@ -4705,13 +4719,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-09-07T08:42:54Z</updated>
     <dc:date>2021-09-07T08:42:54Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.11</id>
-    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11"/>
-    <summary>Fix to test suite for Coldcard</summary>
-    <title>unchained-capital/caravan: v0.3.11</title>
-    <updated>2021-09-02T20:15:44Z</updated>
-    <dc:date>2021-09-02T20:15:44Z</dc:date>
-  </entry>
-  <dc:date>2022-03-15T11:51:04+00:00</dc:date>
+  <dc:date>2022-03-15T12:10:09+00:00</dc:date>
 </feed>
