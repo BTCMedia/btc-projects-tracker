@@ -990,6 +990,36 @@ e5707d5002 Fix broken website examples (#4085)
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4">v1.4.4</a>
+						    </h2>
+							<p class="card-text">Published: 2022-02-08 04:51:41 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Bug fixes:</h3>
+
+<ul>
+<li>Ensure compresed public key is used for SIN generation even if uncompressed key was provided (fix #3432) (#3433) @CherryDT</li>
+<li>After login, redirect user to the main page even if a root app configured (#3429) @NicolasDorier</li>
+<li>docker-entrypoint would crash if missing ssh pubkey, but not the private key @NicolasDorier</li>
+<li>Error messages when starting BTCPay Server where not shown (Fix #3404) @NicolasDorier</li>
+</ul>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>UI: Use sticky headers for pages with tab navigation. (#3416) @dennisreimann</li>
+<li>UI: Prevent initial scroll to section nav (#3411) @dennisreimann</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lnbits/lnbits-legend">lnbits/lnbits-legend</a>: <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0">0.6.0</a>
 						    </h2>
 							<p class="card-text">Published: 2022-02-07 13:41:11 UTC</p>
@@ -1487,6 +1517,90 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.0">v1.4.0</a>
+						    </h2>
+							<p class="card-text">Published: 2022-01-27 13:26:33 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>BTCPay Server started in August 2017 and meanwhile has been evolving incrementally thanks to the feedback of the community.</p>
+
+<p>It was finally time to cleanup the UI/UX and technical debt we accumulated over the years.</p>
+
+<p>We enumerate here a lot of new features and bug fixes, but we do not enumerate the UI/UX changes, we dedicated a separate <a href="https://blog.btcpayserver.org/btcpay-server-1-4-0/">blog post for this topic</a>.</p>
+
+<p>The heavy lifting of this work has been mainly brought to you thanks to the collaboration of @dstrukt and @dennisreimann.
+We thank also all the testers we brought us feedback, and all of you who participated in the weekly design meetings.</p>
+
+<p>The work on the UI/UX is however never over and we will keep on improving it based on your feedback.</p>
+
+<p>Note: If you are using our docker deployment on a raspberry pi 4, there is a small chance your docker version does not support the new docker image.
+If you have any issue with raspberry pi 4, you need to update your docker version following steps on <a href="https://blog.samcater.com/fix-workaround-rpi4-docker-libseccomp2-docker-20/">this blog post</a>.
+Note that you do not need to update libseccomp2, our update process does this for you automatically.</p>
+
+<h3>New features:</h3>
+
+<ul>
+<li>Greenfield: Add a <code>missingPermission</code> field to 403 errors (#3195) @NicolasDorier @woutersamaey</li>
+<li>Support for new TLS version of SMTP server (#3202) @NicolasDorier</li>
+<li>Greenfield: Added field &quot;StoreId&quot; to a Payment Request (#3223) @woutersamaey</li>
+<li>Greenfield: Can create a payment request without specifying currency (would then use store&#39;s default currency) (#3222) @NicolasDorier</li>
+<li>Add login code, for easy login to BTCPay Server via a mobile device (#2504) @Kukks</li>
+<li>Add LNUrl Auth support as second factor auth (#3083) @Kukks</li>
+<li>Batch unarchive invoices (#3264) @dennisreimann</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Fix: BTCPay would crash if running in an unexpected working directory (#1894 #3295) @NicolasDorier</li>
+<li>Fix: Can&#39;t add security device on safari (#3197 #3322) @Kukks</li>
+<li>If a root path was used, the Notification dropdown wouldn&#39;t automatically fetch new notifications @NicolasDorier</li>
+<li>Clipboard wasn&#39;t working over http, mainly used in at home setups (#3296) @dennisreimann</li>
+<li>Greenfield: Creating a payment request would fail if expiry was specified (#3222) @NicolasDorier</li>
+<li>In wallet&#39;s receive if you copy a p2sh address, it would be truncated (#3218) @dennisreimann</li>
+<li>Shopify: Fix partial payments. Generate an invoice based on outstanding amount instead of total. (#3193 #3203) @Kukks</li>
+<li>BTCPay Server instance sends 2 emails after invoice is set as expired, paid or confirmed/complete (#968) @NicolasDorier</li>
+<li>Greenfield: Payment Method update was impossible if using internal ln node while being guest (#2860) @NicolasDorier</li>
+<li>Checkout: Error when changing payment method in invoice (#3075) @dennisreimann</li>
+<li>Greenfield: <code>created</code> field of payment request should be a unix timestamp @woutersamaey (#3221)</li>
+<li>Fix LN Node availability check (#3189) @dennisreimann</li>
+<li>Fix CSP violations in payment button page (#3334) @dennisreimann</li>
+</ul>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>Use the invoice terminology Processing/Settled in the UI rather than Paid/Confirmed/Complete.</li>
+<li>Add loading indicator for &quot;Pay&quot; button in POS terminal app (#3342 #3336) @ubolator</li>
+<li>Do not use uppercase in urls (#921) @NicolasDorier</li>
+<li>Add a copy Tor URL in the footer (#2692 #3290) @dennisreimann</li>
+<li>Improve permissions error messages of Greenfield API (#3256 #3212 #3220 #3204 #2795) @NicolasDorier @Kukks</li>
+<li>Greenfield API: Remove redundant/unused parameters in payment methods @ubolator</li>
+<li>Greenfield: Getting the fee rate should work with CanViewStoreSettings permission (#3217) @woutersamaey</li>
+<li>Add suggestion list for currency text inputs (#3347) @NicolasDorier</li>
+<li>Add warning about the security tradeoff the paybutton (#3340) @NicolasDorier</li>
+<li>Migrating from .NET 3.1 to .NET 6.0 @NicolasDorier</li>
+<li>Use C# 10.0 @NicolasDorier</li>
+</ul>
+
+<h3>Breaking changes:</h3>
+
+<ul>
+<li>If you activated plugins, you will need to update them.</li>
+<li>We removed support for ETH/ERC20</li>
+<li>Greenfield: <code>created</code> field of payment request should be a unix timestamp @woutersamaey (#3221)</li>
+<li>Some Rapsberry PI 4 deployment with old version of docker might experience issues (see <a href="https://blog.samcater.com/fix-workaround-rpi4-docker-libseccomp2-docker-20/">this blog post</a> to update docker, libseccomp2 is already updated as part of our update flow)</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -3282,6 +3396,52 @@ Fingerprint of the key is <code>785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.2">v1.3.2</a>
+						    </h2>
+							<p class="card-text">Published: 2021-11-04 15:38:13 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This feature include a critical security patch. The vulnerability impacts owner of shared instances which share their internal lightning nodes. Credits to @yilakb to have noticed us.</p>
+
+<h3>New Features:</h3>
+
+<ul>
+<li>Greenfield: Adds the Archive status to Invoice model @TheHazeEffect</li>
+<li>Greenfield: Add pagination to the get invoices operation @TheHazeEffect</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Crowdfunding topup invoice doesn&#39;t work when there isn&#39;t a perk added (#3048 #3064) @satwo</li>
+<li>Crowdfund: Fix perk value display (#3060) @dennisreimann</li>
+<li>LNAddress wasn&#39;t working if the store supported an altcoin @NicolasDorier</li>
+<li>Lightning address payment would fail if millisatoshi is not 0 mod 1000 on LND (#3056) @NicolasDorier</li>
+<li>The Test Connection feature during lightning setup was hidding cause of failure @NicolasDorier</li>
+<li>Creating a new invoice in payment request with LNURL activated would crash @NicolasDorier</li>
+<li>Improve error reporting in (#3065) @NicolasDorier</li>
+<li>After loading the Update PoS Settings page and selecting an item to edit, it will always show the price type selected as Fixed regardless of what the actual price type is. (#3049) @fabu21</li>
+<li>Fixes label on Point of Sale page (#3037) @dstrukt</li>
+</ul>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>If no default payment method, the fallback should be in order of preference: BTC, then Lightning (via BOLT11)</li>
+<li>UI Improvement of the maintenance page @dstrukt</li>
+<li>In the invoice&#39;s details page, show the url of webhook&#39;s deliveries (#3034) @satwo</li>
+<li>Improves upload button for files  (#3044) @dstrukt</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -5634,111 +5794,6 @@ All users are encouraged to upgrade.</p>
 </p>
 					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/mempool/mempool/releases/tag/v2.2.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.17">android-legacy-v1.4.17</a>
-						    </h2>
-							<p class="card-text">Published: 2021-09-07 08:42:54 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>Main changes</h2>
-
-<h3>Manual input support and sending to Lightning addresses</h3>
-
-<p>You can now pay <a href="https://lightningaddress.com/">lightning addresses over LNUrl-pay</a> with Phoenix. Go to the Send screen &gt; Manual input to enter an address. You can also manually enter a Bitcoin address or a BOLT11 invoice if you want to.</p>
-
-<h3>Arabic translation</h3>
-
-<p>The app has been translated to Arabic. Thanks @EZ0010 for the translation, and @Jean-Gray for the review.</p>
-
-<h3>Full list of changes</h3>
-
-<ul>
-<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/v1.4.15...v1.4.17">https://github.com/ACINQ/phoenix/compare/v1.4.15...v1.4.17</a></li>
-<li><strong>core</strong>: <a href="https://github.com/ACINQ/eclair/compare/v0.4.13-android-phoenix...v0.4.14-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.13-android-phoenix...v0.4.14-android-phoenix</a></li>
-</ul>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
-- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import padioupm.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.17" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/unchained-capital/caravan">unchained-capital/caravan</a>: <a href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11">v0.3.11</a>
-						    </h2>
-							<p class="card-text">Published: 2021-09-02 20:15:44 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Fix to test suite for Coldcard</p>
-</p>
-					    <a href="https://github.com/unchained-capital/caravan" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4">v6.2.4</a>
-						    </h2>
-							<p class="card-text">Published: 2021-09-02 14:22:07 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><ul>
-<li>ADD: Open Receive screen on push </li>
-<li>FIX: Address list would crash on lack of item </li>
-<li>ADD: lightning address send support (closes #3690) </li>
-<li>FIX: Use preferred unit for min and max information </li>
-<li>FIX: Update UI for Send screen if new deeplink data is available </li>
-<li>FIX: Expand option was available even after use </li>
-<li>FIX: When selecting to send MAX on part or a X is shown in amount. #2412 </li>
-<li>ADD: pending transaction status screen UX (closes #3183) </li>
-<li>ADD: onchain receive address now shows ETA on incomming transaction (rel #3183) </li>
-<li>FIX: Disable toggle if server is for Tor </li>
-<li>FIX: small RTL alignment issue #3677 </li>
-<li>FIX: multisig cosigner type inferred from the path (closes #3653) </li>
-<li>FIX: Reordering Wallets UX </li>
-<li>FIX: If Tor is not supported, throw alert. </li>
-<li>FIX: If offline mode, disable import button </li>
-<li>FIX: ImagePicker wasnt processing selected asset </li>
-<li>REF: Localization for QR </li>
-<li>FIX: lnurl-pay comment </li>
-<li>ADD: Enhance offline mode UI </li>
-<li>ADD: Borders to Dynamic QR Code </li>
-<li>REF: Use ContextButton for advanced options </li>
-<li>ADD: lnurl-pay comments (closes #3617) </li>
-<li>FIX: single-address realm txs storage </li>
-<li>REF: store HD wallets txs in realm properly, one per row (closes #3357)</li>
-</ul>
-</p>
-					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
