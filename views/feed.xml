@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-17T22:11:31+00:00</updated>
+  <updated>2022-03-17T22:21:04+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.16</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.16"/>
@@ -3349,14 +3349,6 @@ deletions in 51 commits from 7 authors, in alphabetical order:
     <dc:date>2021-10-18T19:27:25Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/romanz/electrs/releases/tag/v0.9.1</id>
-    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.1"/>
-    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#091-oct-19-2021</summary>
-    <title>romanz/electrs: v0.9.1</title>
-    <updated>2021-10-18T10:45:13Z</updated>
-    <dc:date>2021-10-18T10:45:13Z</dc:date>
-  </entry>
-  <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.8.0</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.8.0"/>
     <summary># 1.8.0 DLC Wallet Tor negotiation
@@ -4318,14 +4310,6 @@ https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-n
     <dc:date>2021-10-04T15:23:25Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/romanz/electrs/releases/tag/v0.9.0</id>
-    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.0"/>
-    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#090-sep-30-2021</summary>
-    <title>romanz/electrs: v0.9.0</title>
-    <updated>2021-10-01T06:29:37Z</updated>
-    <dc:date>2021-10-01T06:29:37Z</dc:date>
-  </entry>
-  <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.8</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.8"/>
     <summary>**Highlights:**
@@ -4713,5 +4697,44 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-09-07T08:42:54Z</updated>
     <dc:date>2021-09-07T08:42:54Z</dc:date>
   </entry>
-  <dc:date>2022-03-17T22:11:31+00:00</dc:date>
+  <entry>
+    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.11</id>
+    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11"/>
+    <summary>Fix to test suite for Coldcard</summary>
+    <title>unchained-capital/caravan: v0.3.11</title>
+    <updated>2021-09-02T20:15:44Z</updated>
+    <dc:date>2021-09-02T20:15:44Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4"/>
+    <summary>* ADD: Open Receive screen on push 
+* FIX: Address list would crash on lack of item 
+* ADD: lightning address send support (closes #3690) 
+* FIX: Use preferred unit for min and max information 
+* FIX: Update UI for Send screen if new deeplink data is available 
+* FIX: Expand option was available even after use 
+* FIX: When selecting to send MAX on part or a X is shown in amount. #2412 
+* ADD: pending transaction status screen UX (closes #3183) 
+* ADD: onchain receive address now shows ETA on incomming transaction (rel #3183) 
+* FIX: Disable toggle if server is for Tor 
+* FIX: small RTL alignment issue #3677 
+* FIX: multisig cosigner type inferred from the path (closes #3653) 
+* FIX: Reordering Wallets UX 
+* FIX: If Tor is not supported, throw alert. 
+* FIX: If offline mode, disable import button 
+* FIX: ImagePicker wasnt processing selected asset 
+* REF: Localization for QR 
+* FIX: lnurl-pay comment 
+* ADD: Enhance offline mode UI 
+* ADD: Borders to Dynamic QR Code 
+* REF: Use ContextButton for advanced options 
+* ADD: lnurl-pay comments (closes #3617) 
+* FIX: single-address realm txs storage 
+* REF: store HD wallets txs in realm properly, one per row (closes #3357)</summary>
+    <title>BlueWallet/BlueWallet: v6.2.4</title>
+    <updated>2021-09-02T14:22:07Z</updated>
+    <dc:date>2021-09-02T14:22:07Z</dc:date>
+  </entry>
+  <dc:date>2022-03-17T22:21:04+00:00</dc:date>
 </feed>
