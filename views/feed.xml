@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-17T06:21:42+00:00</updated>
+  <updated>2022-03-17T06:31:15+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.16</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.16"/>
@@ -801,25 +801,6 @@ e5707d5002 Fix broken website examples (#4085)
     <dc:date>2022-02-09T15:35:35Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4"/>
-    <summary>### Bug fixes:
-
-* Ensure compresed public key is used for SIN generation even if uncompressed key was provided (fix #3432) (#3433) @CherryDT
-* After login, redirect user to the main page even if a root app configured (#3429) @NicolasDorier
-* docker-entrypoint would crash if missing ssh pubkey, but not the private key @NicolasDorier
-* Error messages when starting BTCPay Server where not shown (Fix #3404) @NicolasDorier
-
-### Improvements:
-
-* UI: Use sticky headers for pages with tab navigation. (#3416) @dennisreimann
-* UI: Prevent initial scroll to section nav (#3411) @dennisreimann
-</summary>
-    <title>btcpayserver/btcpayserver: v1.4.4</title>
-    <updated>2022-02-08T04:51:41Z</updated>
-    <dc:date>2022-02-08T04:51:41Z</dc:date>
-  </entry>
-  <entry>
     <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0</id>
     <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0"/>
     <summary>Updated LNURLPoS to LNURLDevices, to give the extension greater scope
@@ -1185,75 +1166,6 @@ Fix: Existing Lightning addresses were not loaded (#3367 #3368) @Kukks</summary>
     <title>btcpayserver/btcpayserver: v1.4.1</title>
     <updated>2022-01-28T01:48:32Z</updated>
     <dc:date>2022-01-28T01:48:32Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.0</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.0"/>
-    <summary>BTCPay Server started in August 2017 and meanwhile has been evolving incrementally thanks to the feedback of the community.
-
-It was finally time to cleanup the UI/UX and technical debt we accumulated over the years.
-
-We enumerate here a lot of new features and bug fixes, but we do not enumerate the UI/UX changes, we dedicated a separate [blog post for this topic](https://blog.btcpayserver.org/btcpay-server-1-4-0/).
-
-The heavy lifting of this work has been mainly brought to you thanks to the collaboration of @dstrukt and @dennisreimann.
-We thank also all the testers we brought us feedback, and all of you who participated in the weekly design meetings.
-
-The work on the UI/UX is however never over and we will keep on improving it based on your feedback.
-
-Note: If you are using our docker deployment on a raspberry pi 4, there is a small chance your docker version does not support the new docker image.
-If you have any issue with raspberry pi 4, you need to update your docker version following steps on [this blog post](https://blog.samcater.com/fix-workaround-rpi4-docker-libseccomp2-docker-20/).
-Note that you do not need to update libseccomp2, our update process does this for you automatically.
-
-### New features:
-
-* Greenfield: Add a `missingPermission` field to 403 errors (#3195) @NicolasDorier @woutersamaey
-* Support for new TLS version of SMTP server (#3202) @NicolasDorier
-* Greenfield: Added field &quot;StoreId&quot; to a Payment Request (#3223) @woutersamaey
-* Greenfield: Can create a payment request without specifying currency (would then use store's default currency) (#3222) @NicolasDorier
-* Add login code, for easy login to BTCPay Server via a mobile device (#2504) @Kukks
-* Add LNUrl Auth support as second factor auth (#3083) @Kukks
-* Batch unarchive invoices (#3264) @dennisreimann
-
-### Bug fixes:
-
-* Fix: BTCPay would crash if running in an unexpected working directory (#1894 #3295) @NicolasDorier
-* Fix: Can't add security device on safari (#3197 #3322) @Kukks
-* If a root path was used, the Notification dropdown wouldn't automatically fetch new notifications @NicolasDorier
-* Clipboard wasn't working over http, mainly used in at home setups (#3296) @dennisreimann
-* Greenfield: Creating a payment request would fail if expiry was specified (#3222) @NicolasDorier
-* In wallet's receive if you copy a p2sh address, it would be truncated (#3218) @dennisreimann
-* Shopify: Fix partial payments. Generate an invoice based on outstanding amount instead of total. (#3193 #3203) @Kukks
-* BTCPay Server instance sends 2 emails after invoice is set as expired, paid or confirmed/complete (#968) @NicolasDorier
-* Greenfield: Payment Method update was impossible if using internal ln node while being guest (#2860) @NicolasDorier
-* Checkout: Error when changing payment method in invoice (#3075) @dennisreimann
-* Greenfield: `created` field of payment request should be a unix timestamp @woutersamaey (#3221)
-* Fix LN Node availability check (#3189) @dennisreimann
-* Fix CSP violations in payment button page (#3334) @dennisreimann
-
-### Improvements:
-
-* Use the invoice terminology Processing/Settled in the UI rather than Paid/Confirmed/Complete.
-* Add loading indicator for &quot;Pay&quot; button in POS terminal app (#3342 #3336) @ubolator
-* Do not use uppercase in urls (#921) @NicolasDorier
-* Add a copy Tor URL in the footer (#2692 #3290) @dennisreimann
-* Improve permissions error messages of Greenfield API (#3256 #3212 #3220 #3204 #2795) @NicolasDorier @Kukks
-* Greenfield API: Remove redundant/unused parameters in payment methods @ubolator
-* Greenfield: Getting the fee rate should work with CanViewStoreSettings permission (#3217) @woutersamaey
-* Add suggestion list for currency text inputs (#3347) @NicolasDorier
-* Add warning about the security tradeoff the paybutton (#3340) @NicolasDorier
-* Migrating from .NET 3.1 to .NET 6.0 @NicolasDorier
-* Use C# 10.0 @NicolasDorier
-
-### Breaking changes:
-
-* If you activated plugins, you will need to update them.
-* We removed support for ETH/ERC20
-* Greenfield: `created` field of payment request should be a unix timestamp @woutersamaey (#3221)
-* Some Rapsberry PI 4 deployment with old version of docker might experience issues (see [this blog post](https://blog.samcater.com/fix-workaround-rpi4-docker-libseccomp2-docker-20/) to update docker, libseccomp2 is already updated as part of our update flow)
-</summary>
-    <title>btcpayserver/btcpayserver: v1.4.0</title>
-    <updated>2022-01-27T13:26:33Z</updated>
-    <dc:date>2022-01-27T13:26:33Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.2.0</id>
@@ -2700,38 +2612,6 @@ Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
     <title>btcpayserver/btcpayserver: v1.3.3</title>
     <updated>2021-11-05T03:38:10Z</updated>
     <dc:date>2021-11-05T03:38:10Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.2</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.3.2"/>
-    <summary>This feature include a critical security patch. The vulnerability impacts owner of shared instances which share their internal lightning nodes. Credits to @yilakb to have noticed us.
-
-### New Features:
-
-* Greenfield: Adds the Archive status to Invoice model @TheHazeEffect
-* Greenfield: Add pagination to the get invoices operation @TheHazeEffect
-
-### Bug fixes:
-
-* Crowdfunding topup invoice doesn't work when there isn't a perk added (#3048 #3064) @satwo
-* Crowdfund: Fix perk value display (#3060) @dennisreimann
-* LNAddress wasn't working if the store supported an altcoin @NicolasDorier
-* Lightning address payment would fail if millisatoshi is not 0 mod 1000 on LND (#3056) @NicolasDorier
-* The Test Connection feature during lightning setup was hidding cause of failure @NicolasDorier
-* Creating a new invoice in payment request with LNURL activated would crash @NicolasDorier
-* Improve error reporting in (#3065) @NicolasDorier
-* After loading the Update PoS Settings page and selecting an item to edit, it will always show the price type selected as Fixed regardless of what the actual price type is. (#3049) @fabu21
-* Fixes label on Point of Sale page (#3037) @dstrukt
-
-### Improvements:
-
-* If no default payment method, the fallback should be in order of preference: BTC, then Lightning (via BOLT11)
-* UI Improvement of the maintenance page @dstrukt
-* In the invoice's details page, show the url of webhook's deliveries (#3034) @satwo
-* Improves upload button for files  (#3044) @dstrukt</summary>
-    <title>btcpayserver/btcpayserver: v1.3.2</title>
-    <updated>2021-11-04T15:38:13Z</updated>
-    <dc:date>2021-11-04T15:38:13Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v0.10.2</id>
@@ -4689,5 +4569,82 @@ https://github.com/mempool/mempool/compare/v2.2.1...v2.2.2</summary>
     <updated>2021-09-09T07:36:28Z</updated>
     <dc:date>2021-09-09T07:36:28Z</dc:date>
   </entry>
-  <dc:date>2022-03-17T06:21:42+00:00</dc:date>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.17</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.17"/>
+    <summary>## Main changes
+
+### Manual input support and sending to Lightning addresses
+
+You can now pay [lightning addresses over LNUrl-pay](https://lightningaddress.com/) with Phoenix. Go to the Send screen &gt; Manual input to enter an address. You can also manually enter a Bitcoin address or a BOLT11 invoice if you want to.
+
+### Arabic translation
+
+The app has been translated to Arabic. Thanks @EZ0010 for the translation, and @Jean-Gray for the review.
+
+### Full list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.15...v1.4.17
+- **core**: https://github.com/ACINQ/eclair/compare/v0.4.13-android-phoenix...v0.4.14-android-phoenix
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: https://acinq.co/pgp/padioupm.asc
+- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import padioupm.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: android-legacy-v1.4.17</title>
+    <updated>2021-09-07T08:42:54Z</updated>
+    <dc:date>2021-09-07T08:42:54Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.11</id>
+    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11"/>
+    <summary>Fix to test suite for Coldcard</summary>
+    <title>unchained-capital/caravan: v0.3.11</title>
+    <updated>2021-09-02T20:15:44Z</updated>
+    <dc:date>2021-09-02T20:15:44Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.4"/>
+    <summary>* ADD: Open Receive screen on push 
+* FIX: Address list would crash on lack of item 
+* ADD: lightning address send support (closes #3690) 
+* FIX: Use preferred unit for min and max information 
+* FIX: Update UI for Send screen if new deeplink data is available 
+* FIX: Expand option was available even after use 
+* FIX: When selecting to send MAX on part or a X is shown in amount. #2412 
+* ADD: pending transaction status screen UX (closes #3183) 
+* ADD: onchain receive address now shows ETA on incomming transaction (rel #3183) 
+* FIX: Disable toggle if server is for Tor 
+* FIX: small RTL alignment issue #3677 
+* FIX: multisig cosigner type inferred from the path (closes #3653) 
+* FIX: Reordering Wallets UX 
+* FIX: If Tor is not supported, throw alert. 
+* FIX: If offline mode, disable import button 
+* FIX: ImagePicker wasnt processing selected asset 
+* REF: Localization for QR 
+* FIX: lnurl-pay comment 
+* ADD: Enhance offline mode UI 
+* ADD: Borders to Dynamic QR Code 
+* REF: Use ContextButton for advanced options 
+* ADD: lnurl-pay comments (closes #3617) 
+* FIX: single-address realm txs storage 
+* REF: store HD wallets txs in realm properly, one per row (closes #3357)</summary>
+    <title>BlueWallet/BlueWallet: v6.2.4</title>
+    <updated>2021-09-02T14:22:07Z</updated>
+    <dc:date>2021-09-02T14:22:07Z</dc:date>
+  </entry>
+  <dc:date>2022-03-17T06:31:15+00:00</dc:date>
 </feed>
