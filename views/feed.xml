@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-17T15:41:39+00:00</updated>
+  <updated>2022-03-17T15:52:16+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/elements/releases/tag/github-latest-0.21.0.1</id>
+    <link href="https://github.com/ElementsProject/elements/releases/tag/github-latest-0.21.0.1"/>
+    <summary>The current latest version Elements release is [Elements v0.21.0.2](https://github.com/ElementsProject/elements/releases/tag/elements-0.21.0.2).</summary>
+    <title>ElementsProject/elements: github-latest-0.21.0.1</title>
+    <updated>2022-03-17T15:51:04Z</updated>
+    <dc:date>2022-03-17T15:51:04Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.16</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.16"/>
@@ -4666,28 +4674,5 @@ See [1](https://huntr.dev/bounties/ffabdac8-7280-4806-b70c-9b0d1aafbb6e/), [2](h
     <updated>2021-09-09T09:48:56Z</updated>
     <dc:date>2021-09-09T09:48:56Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/mempool/mempool/releases/tag/v2.2.2</id>
-    <link href="https://github.com/mempool/mempool/releases/tag/v2.2.2"/>
-    <summary>This is a minor release for fixes and minor enhancements.
-All users are encouraged to upgrade.
-
-Changelog:
-
-* Fix memory leaks in the frontend causing webapp to crash (#755)
-* Fix median fee not displayed when viewing a block page (#749)
-* Fix incorrect API documentation and related examples (#716)
-* Fix displaying significant digits of transaction fee (#722)
-* Fix search bar addresses types and case sensitivity (#765)
-* Fix current difficulty period progress calculation (#746)
-* Add block navigation arrows for next and previous (#710)
-* Add base module setting for Liquid / Bisq builds (#669)
-
-The complete changelog is available at:
-https://github.com/mempool/mempool/compare/v2.2.1...v2.2.2</summary>
-    <title>mempool/mempool: v2.2.2</title>
-    <updated>2021-09-09T07:36:28Z</updated>
-    <dc:date>2021-09-09T07:36:28Z</dc:date>
-  </entry>
-  <dc:date>2022-03-17T15:41:39+00:00</dc:date>
+  <dc:date>2022-03-17T15:52:16+00:00</dc:date>
 </feed>
