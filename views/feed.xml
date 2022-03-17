@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-17T01:21:53+00:00</updated>
+  <updated>2022-03-17T01:30:57+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.16</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.16"/>
@@ -4689,5 +4689,5 @@ https://github.com/mempool/mempool/compare/v2.2.1...v2.2.2</summary>
     <updated>2021-09-09T07:36:28Z</updated>
     <dc:date>2021-09-09T07:36:28Z</dc:date>
   </entry>
-  <dc:date>2022-03-17T01:21:53+00:00</dc:date>
+  <dc:date>2022-03-17T01:30:57+00:00</dc:date>
 </feed>
