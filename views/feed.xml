@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-18T04:41:42+00:00</updated>
+  <updated>2022-03-18T04:51:09+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.16</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.16"/>
@@ -4713,5 +4713,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-09-07T08:42:54Z</updated>
     <dc:date>2021-09-07T08:42:54Z</dc:date>
   </entry>
-  <dc:date>2022-03-18T04:41:42+00:00</dc:date>
+  <dc:date>2022-03-18T04:51:09+00:00</dc:date>
 </feed>
