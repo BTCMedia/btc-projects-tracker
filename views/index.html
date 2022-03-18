@@ -5168,6 +5168,136 @@ mvn clean install -DskipTests
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.3-beta">v0.13.3-beta</a>
+						    </h2>
+							<p class="card-text">Published: 2021-10-04 15:23:25 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>Security Fixes</h1>
+
+<p>This release contains a security fix for <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41593">CVE-2021-41593</a> which would allow an attacker to cause loss of funds through a griefing vector related to high accepted dust values. This release addresses the issue by enforcing stricter clamps on accepted dust values during channel funding, and also adds <code>hltcswitch</code> level dust accounting to limit the total dust exposure (triggered by an instantaneous force close) at any moment. The default allotted fully forwarded dust exposure level is set at <code>500k sats</code>, this value can be tweaked with a new config flag: <code>--dust-threshold=</code>. </p>
+
+<p>If upgrading is not possible to prevent CVE-2021-41593, the <a href="https://github.com/lightninglabs/dust-tool"><code>dust-tool</code></a> can intercept bad <code>open_channel</code> parameters and reject them via our <code>ChannelAcceptor</code>. In addition, it can also scan your node&#39;s current set of confirmed channels and recommend closing potentially risky ones out.</p>
+
+<p>Alternatively, your node&#39;s advertised <code>min_htlc</code> value can be increased to ensure it is well above all the dust limits of its active channels. </p>
+
+<h1>Database Migrations</h1>
+
+<p>This release does not contain any database migrations.</p>
+
+<h1>Verifying the Release</h1>
+
+<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already: </p>
+
+<p><code>
+curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
+curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
+</code></p>
+
+<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-roasbeef-v0.13.3-beta.sig</code> and <code>manifest-v0.13.3-beta.txt</code> are in the current directory) with:</p>
+
+<p><code>
+gpg --verify manifest-roasbeef-v0.13.3-beta.sig manifest-v0.13.3-beta.txt
+</code></p>
+
+<p>You should see the following if the verification was successful:</p>
+
+<p>```
+gpg: Signature made Mon Oct  4 08:20:20 2021 PDT
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun <a href="mailto:laolu32@gmail.com">laolu32@gmail.com</a>&quot; [ultimate]</p>
+
+<p>```</p>
+
+<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
+
+<h2>Verifying the Release Timestamp</h2>
+
+<p>From this new version onwards, in addition time-stamping the <em>git tag</em> with <a href="https://opentimestamps.org/">OpenTimeStamps</a>, we&#39;ll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: <code>manifest-roasbeef-v0.13.3-beta.txt.asc.ots</code>.</p>
+
+<p>Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+<code>
+ots verify manifest-roasbeef-v0.13.3-beta.sig.ots -f manifest-roasbeef-v0.13.3-beta.sig
+</code></p>
+
+<p>Alternatively, <a href="https://opentimestamps.org/">the open timestamps website</a> can be used to verify timestamps if one doesn&#39;t have a <code>bitcoind</code> instance accessible locally. </p>
+
+<p>These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. </p>
+
+<h2>Verifying the Release Binaries</h2>
+
+<p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/tree/master/build/release">reproducible builds guide</a> for how this can be achieved.
+The release binaries are compiled with <code>go1.16.3</code>, which is required by verifiers to arrive at the same ones.
+They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>routerrpc</code>, <code>watchtowerrpc</code> and <code>monitoring</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
+
+<p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
+
+<p>Finally, you can also verify the <em>tag</em> itself with the following command:</p>
+
+<p><code>
+$ git verify-tag v0.13.3-beta
+gpg: Signature made Mo 04 Okt 2021 16:08:05 CEST
+gpg:                using RSA key F4FC70F07310028424EFC20A8E4256593F177720
+gpg: Good signature from &quot;Oliver Gugger &lt;gugger@gmail.com&gt;&quot; [unknown]
+</code></p>
+
+<h2>Verifying the Docker Images</h2>
+
+<p>To verify the <code>lnd</code> and <code>lncli</code> binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):</p>
+
+<p><code>shell
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.13.3-beta /verify-install.sh v0.13.3-beta
+$ OK=$?
+$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
+$ docker run lightninglabs/lnd [command-line options]
+</code></p>
+
+<h1>Building the Contained Release</h1>
+
+<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
+that <code>vendor.tar.gz</code> and <code>lnd-source-v0.13.3-beta.tar.gz</code> are in the current directory, follow these steps:</p>
+
+<p><code>
+tar -xvzf vendor.tar.gz
+tar -xvzf lnd-source-v0.13.3-beta.tar.gz
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.3-beta&quot; ./cmd/lnd
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.3-beta&quot; ./cmd/lncli
+</code></p>
+
+<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory. </p>
+
+<p>Additionally, it&#39;s now possible to use the <a href="https://github.com/lightningnetwork/lnd/pull/2191">enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so</a>: </p>
+
+<p><code>
+make release sys=&quot;linux-arm64 darwin-amd64&quot;
+</code></p>
+
+<p>⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️</p>
+
+<h1>Release Notes</h1>
+
+<p><a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.13.3.md">https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.13.3.md</a></p>
+
+<h1>Contributors (Alphabetical Order)</h1>
+
+<ul>
+<li>Conner Fromknecht</li>
+<li>Eugene Siegel</li>
+<li>Harsha Goli</li>
+<li>Jordi Montes</li>
+<li>Olaoluwa Osuntokun</li>
+<li>Oliver Gugger</li>
+</ul>
+</p>
+					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.3-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/romanz/electrs">romanz/electrs</a>: <a href="https://github.com/romanz/electrs/releases/tag/v0.9.0">v0.9.0</a>
 						    </h2>
 							<p class="card-text">Published: 2021-10-01 06:29:37 UTC</p>
@@ -5688,22 +5818,6 @@ $ sha256sum -c SHA256SUMS.stripped
 </p>
 					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.17" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/unchained-capital/caravan">unchained-capital/caravan</a>: <a href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11">v0.3.11</a>
-						    </h2>
-							<p class="card-text">Published: 2021-09-02 20:15:44 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Fix to test suite for Coldcard</p>
-</p>
-					    <a href="https://github.com/unchained-capital/caravan" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-18T06:41:20+00:00</updated>
+  <updated>2022-03-18T06:51:26+00:00</updated>
   <entry>
     <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.16</id>
     <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.16"/>
@@ -4198,6 +4198,126 @@ If you face any difficulties while updating, please message us on Telegram: http
     <dc:date>2021-10-04T17:52:00Z</dc:date>
   </entry>
   <entry>
+    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.13.3-beta</id>
+    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.13.3-beta"/>
+    <summary># Security Fixes
+
+This release contains a security fix for [CVE-2021-41593](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41593) which would allow an attacker to cause loss of funds through a griefing vector related to high accepted dust values. This release addresses the issue by enforcing stricter clamps on accepted dust values during channel funding, and also adds `hltcswitch` level dust accounting to limit the total dust exposure (triggered by an instantaneous force close) at any moment. The default allotted fully forwarded dust exposure level is set at `500k sats`, this value can be tweaked with a new config flag: `--dust-threshold=`. 
+
+If upgrading is not possible to prevent CVE-2021-41593, the [`dust-tool`](https://github.com/lightninglabs/dust-tool) can intercept bad `open_channel` parameters and reject them via our `ChannelAcceptor`. In addition, it can also scan your node's current set of confirmed channels and recommend closing potentially risky ones out.
+
+Alternatively, your node's advertised `min_htlc` value can be increased to ensure it is well above all the dust limits of its active channels. 
+
+# Database Migrations
+This release does not contain any database migrations.
+
+# Verifying the Release
+
+In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
+
+```
+curl https://keybase.io/bitconner/pgp_keys.asc | gpg --import
+curl https://keybase.io/roasbeef/pgp_keys.asc | gpg --import
+```
+
+Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.13.3-beta.sig` and `manifest-v0.13.3-beta.txt` are in the current directory) with:
+
+```
+gpg --verify manifest-roasbeef-v0.13.3-beta.sig manifest-v0.13.3-beta.txt
+```
+
+You should see the following if the verification was successful:
+
+```
+gpg: Signature made Mon Oct  4 08:20:20 2021 PDT
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+
+```
+
+That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
+
+## Verifying the Release Timestamp 
+
+From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-roasbeef-v0.13.3-beta.txt.asc.ots`.
+
+Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+```
+ots verify manifest-roasbeef-v0.13.3-beta.sig.ots -f manifest-roasbeef-v0.13.3-beta.sig
+```
+
+Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
+
+These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
+
+## Verifying the Release Binaries
+
+Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
+The release binaries are compiled with `go1.16.3`, which is required by verifiers to arrive at the same ones.
+They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, `watchtowerrpc` and `monitoring`. Note that these are already included in the release script, so they do not need to be provided.
+
+The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
+
+Finally, you can also verify the _tag_ itself with the following command:
+
+```
+$ git verify-tag v0.13.3-beta
+gpg: Signature made Mo 04 Okt 2021 16:08:05 CEST
+gpg:                using RSA key F4FC70F07310028424EFC20A8E4256593F177720
+gpg: Good signature from &quot;Oliver Gugger &lt;gugger@gmail.com&gt;&quot; [unknown]
+```
+
+## Verifying the Docker Images
+
+To verify the `lnd` and `lncli` binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):
+
+```shell
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.13.3-beta /verify-install.sh v0.13.3-beta
+$ OK=$?
+$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
+$ docker run lightninglabs/lnd [command-line options]
+```
+
+# Building the Contained Release 
+
+Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
+that `vendor.tar.gz` and `lnd-source-v0.13.3-beta.tar.gz` are in the current directory, follow these steps:
+
+```
+tar -xvzf vendor.tar.gz
+tar -xvzf lnd-source-v0.13.3-beta.tar.gz
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.3-beta&quot; ./cmd/lnd
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.13.3-beta&quot; ./cmd/lncli
+```
+
+The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
+
+Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
+
+```
+make release sys=&quot;linux-arm64 darwin-amd64&quot;
+```
+
+⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
+
+# Release Notes
+
+https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.13.3.md
+
+# Contributors (Alphabetical Order)
+
+* Conner Fromknecht
+* Eugene Siegel
+* Harsha Goli
+* Jordi Montes
+* Olaoluwa Osuntokun
+* Oliver Gugger
+</summary>
+    <title>lightningnetwork/lnd: v0.13.3-beta</title>
+    <updated>2021-10-04T15:23:25Z</updated>
+    <dc:date>2021-10-04T15:23:25Z</dc:date>
+  </entry>
+  <entry>
     <id>https://github.com/romanz/electrs/releases/tag/v0.9.0</id>
     <link href="https://github.com/romanz/electrs/releases/tag/v0.9.0"/>
     <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#090-sep-30-2021</summary>
@@ -4593,13 +4713,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2021-09-07T08:42:54Z</updated>
     <dc:date>2021-09-07T08:42:54Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/unchained-capital/caravan/releases/tag/v0.3.11</id>
-    <link href="https://github.com/unchained-capital/caravan/releases/tag/v0.3.11"/>
-    <summary>Fix to test suite for Coldcard</summary>
-    <title>unchained-capital/caravan: v0.3.11</title>
-    <updated>2021-09-02T20:15:44Z</updated>
-    <dc:date>2021-09-02T20:15:44Z</dc:date>
-  </entry>
-  <dc:date>2022-03-18T06:41:20+00:00</dc:date>
+  <dc:date>2022-03-18T06:51:26+00:00</dc:date>
 </feed>
