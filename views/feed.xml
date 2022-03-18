@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-18T23:31:03+00:00</updated>
+  <updated>2022-03-18T23:41:36+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.21</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.21"/>
@@ -4706,5 +4706,5 @@ https://github.com/mempool/mempool/compare/v2.2.1...v2.2.2</summary>
     <updated>2021-09-09T07:36:28Z</updated>
     <dc:date>2021-09-09T07:36:28Z</dc:date>
   </entry>
-  <dc:date>2022-03-18T23:31:03+00:00</dc:date>
+  <dc:date>2022-03-18T23:41:36+00:00</dc:date>
 </feed>
