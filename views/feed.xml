@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-03-19T12:12:11+00:00</updated>
+  <updated>2022-03-19T12:21:56+00:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.21</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.21"/>
@@ -4114,14 +4114,6 @@ SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-cha
     <dc:date>2021-10-15T16:41:33Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.1</id>
-    <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.1"/>
-    <summary>c-lightning integration &amp; refactor of setup process (prepare for upcomming WebUI)</summary>
-    <title>rootzoll/raspiblitz: v1.7.1</title>
-    <updated>2021-10-12T14:11:32Z</updated>
-    <dc:date>2021-10-12T14:11:32Z</dc:date>
-  </entry>
-  <entry>
     <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.10</id>
     <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.10"/>
     <summary>* ADD: ISK Fiat 
@@ -4706,5 +4698,43 @@ https://github.com/mempool/mempool/compare/v2.2.1...v2.2.2</summary>
     <updated>2021-09-09T07:36:28Z</updated>
     <dc:date>2021-09-09T07:36:28Z</dc:date>
   </entry>
-  <dc:date>2022-03-19T12:12:11+00:00</dc:date>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.17</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.17"/>
+    <summary>## Main changes
+
+### Manual input support and sending to Lightning addresses
+
+You can now pay [lightning addresses over LNUrl-pay](https://lightningaddress.com/) with Phoenix. Go to the Send screen &gt; Manual input to enter an address. You can also manually enter a Bitcoin address or a BOLT11 invoice if you want to.
+
+### Arabic translation
+
+The app has been translated to Arabic. Thanks @EZ0010 for the translation, and @Jean-Gray for the review.
+
+### Full list of changes
+
+- **app**: https://github.com/ACINQ/phoenix/compare/v1.4.15...v1.4.17
+- **core**: https://github.com/ACINQ/eclair/compare/v0.4.13-android-phoenix...v0.4.14-android-phoenix
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: https://acinq.co/pgp/padioupm.asc
+- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import padioupm.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: android-legacy-v1.4.17</title>
+    <updated>2021-09-07T08:42:54Z</updated>
+    <dc:date>2021-09-07T08:42:54Z</dc:date>
+  </entry>
+  <dc:date>2022-03-19T12:21:56+00:00</dc:date>
 </feed>
