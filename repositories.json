@@ -20,6 +20,7 @@
 	"romanz/electrs",
 	"cryptoadvance/specter-desktop",
 	"joule-labs/joule-extension",
+	"Start9Labs/embassy-os",
 	"mempool/mempool",
 	"mynodebtc/mynode",
 	"getumbrel/umbrel",
@@ -44,5 +45,6 @@
 	"btcsuite/btcd",
 	"btcsuite/btcwallet",
 	"BlueWallet/rn-ldk",
-	"vulpemventures/marina"
+	"vulpemventures/marina",
+	"sparrowwallet/sparrow"
 ]
