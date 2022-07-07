@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-07T03:51:42+00:00</updated>
+  <updated>2022-07-07T04:09:15+00:00</updated>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.1</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.1"/>
@@ -5094,5 +5094,5 @@ Thanks to @prusnak and @tlindi for helping with the electrs update and @nevets96
     <updated>2022-01-16T08:13:39Z</updated>
     <dc:date>2022-01-16T08:13:39Z</dc:date>
   </entry>
-  <dc:date>2022-07-07T03:51:42+00:00</dc:date>
+  <dc:date>2022-07-07T04:09:15+00:00</dc:date>
 </feed>
