@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Bitcoin Project Release Tracker</title>
+</head>
+
+<style type="text/css">
+	.container {
+		margin-top: 20px;
+	}
+
+	.introduction {
+		margin: 20px 0;
+	}
+
+	.card {
+		margin-bottom: 20px;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="introduction">
+	                <h1>Bitcoin Project Release Tracker</h1>
+	            </div>
+
+	            <% @releases.each do |release| %>
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="<%= release.repo.html_url%>"><%= release.repo.full_name %></a>: <a href="<%= release.html_url %>"><%= release.tag_name %></a>
+						    </h2>
+							<p class="card-text">Published: <%= release.published_at %></p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><%= @markdown.render(release.body) %></p>
+					    <a href="<%= release.repo.html_url %>" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="<%= release.html_url %>" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            <% end %>
+			</div>
+
+		 	<div class="col-md-4 sidenav">
+		 		<img src="/img/rss.png" style="width:21px; height:21px;">
+		 		<strong>Follow the <a href='<%= "/rss" %>'>RSS Feed</a>!</strong>
+		 		<hr/>
+		 		<h4>Featured Repos</h4>
+	            <ul>
+	                <% @repos.each do |repo| %>
+		                <li>
+		                	<a href="https://github.com/<%= repo.full_name %>"><%= repo.full_name %></a>
+		                </li>
+	                <% end %>
+	            </ul>
+	            <hr />
+	            <p>Want to add another project? <a href='<%= "https://github.com/#{@repo_name}/blob/main/repositories.json" %>'>Make a PR!</a></p>
+		 	</div>
+		</div>
+	</div>
+
+	<footer class="container">
+    	<p class="float-right"><a href="#">Back to top</a></p>
+    	<p>© 2020 BTC, Inc.</p>
+  	</footer>
+
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+</body>
+
+</html>
