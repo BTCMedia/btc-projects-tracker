@@ -38,12 +38,40 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.1">v1.6.1</a>
+						    </h2>
+							<p class="card-text">Published: 2022-07-11 14:47:42 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This fix a critical issue introduced by 1.6.0.
+If you are using altcoins integration, you need to update urgently as some change rate may be inverted for some pairs.</p>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Fix stack overflow if ripio rate provider is unavailable @NicolasDorier</li>
+<li>Fix: For some asset pair the kraken rate was inverted (#3957) @NicolasDorier</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.0">v1.6.0</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-08 14:37:14 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><h3>New features:</h3>
+					    <p class="card-text"><p>In the past six months, we fixed a critical security vulnerability in one of BTCPay&#39;s versions. The security vulnerability has been disclosed responsibly, and we granted a bounty to the security researcher who discovered it. As far as we know, this particular vulnerability has not been exploited in the wild as it depends on multiple factors. For security reasons, we will not publicly disclose details yet. Timeframe for public disclosure is 6-12 months. We already have a CVE number reserved for it.</p>
+
+<p>It&#39;s very likely that by updating BTCPay Server in the past six months, you&#39;ve already patched this vulnerability. To be safe, update your instance if you haven&#39;t done so in a long time.</p>
+
+<h3>New features:</h3>
 
 <ul>
 <li>Dashboard: Add Lightning balances and easy access to lightning services (#3838) @dennisreimann</li>
@@ -103,6 +131,189 @@
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.9.4">v1.9.4</a>
+						    </h2>
+							<p class="card-text">Published: 2022-07-05 09:57:40 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This is a follow-up release that adds the latest Tor version (v0.4.7.8) to improve Tor connectivity.</p>
+
+<p>See <a href="https://github.com/bisq-network/bisq/milestone/74?closed=1">https://github.com/bisq-network/bisq/milestone/74?closed=1</a> for more details.</p>
+
+<p>Here are the release notes from v1.9.3:</p>
+
+<h2>Release notes</h2>
+
+<p>This release improves XMR trade security by using subaddresses, improves Tor connectivity, and ships bug fixes and minor improvements across the board.</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/6236">Create new XMR subaddress for each trade</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6217">Improve XMR proof service</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6275">Reset Tor directory when a new release is downloaded</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6239">Adopt economyFee recommendation from Mempool rate provider</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6204">Add chart series for total trade fees</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6106">Show changes in BSQ Supply over time</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6235">Prevent account creation for banned Revolut GBP sort code 040075</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6213">Improve wording &amp; appearance of trade shutdown dialog</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6211">Prevent shutdown if trade is in process of being taken</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6188">Mark user&#39;s own offers in Market -&gt; Offer book</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6206">Attempt self-ping 3 times before reporting error with connectivity</a></li>
+</ul>
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/6233">NPE when duplicate offer with deleted account</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6241">Include payment screen ref text message &amp; fix sizing issues</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6197">Signed account must show signed age</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6234">Australia PayID was not displaying payment info on buyer trade</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6200">Refactor BSQ fee validation to handle multiple tx inputs</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6201">Fix refresh issue with x-axis tick labels (Market/Trade charts)</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6192">Transactions view: fix NPE in column sorting when Memo is empty</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6209">Update matching account toggle state when tab is selected</a></li>
+</ul>
+
+<h3>Development &amp; Documentation</h3>
+
+<ul>
+<li><a href="https://github.com/bisq-network/bisq/pull/6254">Seednode: Install tor from tor repository and add external tor as default</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6237">Seednode: Update Java version for install script</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6231">Seednode: Clean up tor files at seed node startup</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6230">Pricenode: Add JVM flag ExitOnOutOfMemoryError</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6229">Pricenode: Upgrade to XChange 5.0.13</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6227">Pricenode: configurable exclusion by provider currency</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6253">API: Block API attempt to swap BSQ with insufficient funds</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6250">API: Add API method <code>getavgbsqprice</code></a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6249">API: Add API method <code>getnetwork</code></a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6248">API: Make API getoffers (altcoin) offer list order match UI</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6247">API: Conditionally block API&#39;s send payment sent/rcvd msgs</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6214">API: Remove legacy bitcoind txindex param from apitest harness</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6221">API: Block API takeoffer attempt if !sufficient btc in wallet</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6207">API: Fix API CLI gettrades bug: category param can be uppercase</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6202">API: Fix API editoffer bug: set fixed-price=0 on margin offers</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6228">Bisq 2: Use bisq2 rest infrastructure for daonode</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6190">Bisq 2: Tiny daonode rest service with 1 endpoint</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6195">Bump actions/setup-java from 3.2.0 to 3.3.0</a></li>
+<li><a href="https://github.com/bisq-network/bisq/pull/6185">Bump actions/setup-java from 3.1.1 to 3.2.0</a></li>
+</ul>
+
+<h3>New Assets</h3>
+
+<p>No new assets added.</p>
+
+<h2>Verification</h2>
+
+<p>For a detailed description on how to verify your Bisq installer please have a look at our wiki: <a href="https://bisq.wiki/Downloading_and_installing#Verify_installer_file">https://bisq.wiki/Downloading_and_installing#Verify_installer_file</a></p>
+
+<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
+Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
+
+<p>Import the key:
+<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
+GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
+
+<p>How to verify signatures?
+<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
+Replace BINARY with the file you downloaded (e.g. Bisq-1.9.4.dmg)</p>
+
+<p>Verify jar file inside binary:
+You can verify on OSX the jar file with:
+shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.9.4-all.jar
+The output need to match the value from the Bisq-1.9.4.jar.txt file.</p>
+
+<p>There are three hashes within the Bisq-1.9.4.jar.txt file (macOS, Windows, Linux).
+If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 15.0.6 and the v1.9.4 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.</p>
+
+<h2>API</h2>
+
+<p>Starting with v1.9.0 you can use pre-built versions of the Bisq cli (bisq-cli-v1.9.4.zip) and Bisq daemon (bisq-daemon-v1.9.4.zip) to use Bisq without touching the user interface.</p>
+
+<p>Just download the archives and extract them locally. You have to run the daemon to access the local Bisq daemon API endpoints.</p>
+
+<p>To run daemon.jar on Mainnet:
+<code>bash
+$ java -jar daemon.jar --apiPassword=becareful
+</code></p>
+
+<p>If you just want to control your headless daemon within your terminal you have to run the Bisq cli as well.</p>
+
+<p>Again just download the bisq-cli archive and extract it locally.</p>
+
+<p>To call getversion from cli.jar
+<code>bash
+$ java -jar cli.jar --password=becareful getversion
+</code></p>
+
+<p>You can use the Bisq API to access local Bisq daemon API endpoints, which provide a subset of the Bisq Desktop application&#39;s feature set: check balances, transfer BTC and BSQ, create payment accounts, view offers, create and take offers, and execute trades.</p>
+
+<p>The Bisq API is based on the gRPC framework, and any supported gRPC language binding can be used to call Bisq API endpoints.</p>
+
+<p>You&#39;ll find in-depth documentation and examples under following link: <a href="https://bisq-network.github.io/slate/#introduction">https://bisq-network.github.io/slate/#introduction</a></p>
+
+<p>Bisq gRPC API reference documentation example source code is hosted on GitHub at <a href="https://github.com/bisq-network/bisq-api-reference">https://github.com/bisq-network/bisq-api-reference</a>. Java and Python developers interested in bot development may find this Intellij project useful for running the existing examples, and writing their own bots.</p>
+
+<p>For additional developer support please join <a href="https://matrix.to/#/%23bisq.dev:bitcoin.kyoto">Development - Bisq v1</a> on Matrix.</p>
+
+<h2>Known issues with installation</h2>
+
+<h3>Windows:</h3>
+
+<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
+
+<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
+
+<p>[1] Application directory (contains application installation files):
+C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
+
+<p>[2] Data directory (contains all Bisq data including wallet):
+C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
+
+<h3>Linux:</h3>
+
+<p>Hint for Debian users:
+If you have problems starting Bisq on Debian use: <code>/opt/bisq/bin/Bisq</code></p>
+
+<p>If your Linux distro does not support .deb files please follow this instruction:
+<code>
+cd ~/Downloads  
+mkdir tmp  
+cd tmp   
+ar x ../Bisq-64bit-1.9.4.deb  
+sudo tar Jxvf data.tar.xz  
+sudo cp -rp opt/Bisq /opt/
+</code>
+That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
+
+<h2>Credits</h2>
+
+<p>Thanks to everyone who directly contributed to this release:</p>
+
+<ul>
+<li>@alkum </li>
+<li>@chimp1984 </li>
+<li>@Emzy </li>
+<li>@ghubstan<br></li>
+<li>@jmacxx </li>
+<li>@ripcurlx </li>
+<li>@xyzmaker123 </li>
+</ul>
+
+<p>A special thanks to our first time contributors:
+  - @alkum: <a href="https://github.com/bisq-network/bisq/pull/6230">Pricenode: Add JVM flag ExitOnOutOfMemoryError</a></p>
+
+<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
+</p>
+					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.9.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -264,6 +475,9 @@ never route through during path finding (#1550).</li>
 option to prefer channels which afford better privacy when routing (#1555).</li>
 <li><code>ProbabilisticScorer</code> now provides access to its estimated liquidity range
 for a given channel via <code>estimated_channel_liquidity_range</code> (#1549).</li>
+<li><code>ChannelManager::force_close_channel</code> has been renamed
+<code>force_close_broadcasting_latest_txn</code> and
+<code>force_close_without_broadcasting_txn</code> has been added (#1564).</li>
 <li>Options which cannot be changed at runtime have been moved from
 <code>ChannelConfig</code> to <code>ChannelHandshakeConfig</code> (#1529).</li>
 <li><code>find_route</code> takes <code>&amp;NetworkGraph</code> instead of `ReadOnlyNetworkGraph (#1583).</li>
@@ -6022,71 +6236,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/LN-Zap/zap-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.6-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.20">android-legacy-v1.4.20</a>
-						    </h2>
-							<p class="card-text">Published: 2022-01-20 19:19:18 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>Main changes</h2>
-
-<h3>Payment expiry can be modified</h3>
-
-<p>Invoice default expiry is still 1 week, but can now be modified in the payment options screen.</p>
-
-<h3>Prevent sending more than twice the requested amount</h3>
-
-<p>This is to prevent a frustrating scenario for the user where the app will let you overpay more than twice an invoice, even though we know the receiving node will most certainly reject the payment in accordance to BOLT11. (See #232)</p>
-
-<h3>Full list of changes</h3>
-
-<ul>
-<li><strong>app</strong>: <a href="https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.19...android-legacy-v1.4.20">https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.19...android-legacy-v1.4.20</a></li>
-</ul>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
-- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import drouinf.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.20" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.11">v0.4.11</a>
-						    </h2>
-							<p class="card-text">Published: 2022-01-17 13:12:32 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Umbrel 0.4.11 brings 4 brand new apps in the Umbrel App Store — ItchySats, Lightning Shell, Helipad, and SatSale, updated apps, latest Electrum server, performance improvements, bug fixes, and more.</p>
-
-<p>Thanks to @prusnak and @tlindi for helping with the electrs update and @nevets963 for reporting missing JWT auth on some API endpoints 👏💜</p>
-</p>
-					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.11" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
