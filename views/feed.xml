@@ -6,7 +6,134 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-11T14:51:54+00:00</updated>
+  <updated>2022-07-11T16:41:01+00:00</updated>
+  <entry>
+    <id>https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.1</id>
+    <link href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.1"/>
+    <summary>## What's Changed
+* Feat  bulk locking by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1422
+* Switching SSH keys to start9 user by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1321
+* chore: Convert from ajv to ts-matches by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1415
+* Fix/id params by @elvece in https://github.com/Start9Labs/embassy-os/pull/1414
+* make nicer update sound by @ProofOfKeags in https://github.com/Start9Labs/embassy-os/pull/1438
+* adds product key to error message in setup flow when there is mismatch by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1436
+* Update README.md to include yq by @cryptodread in https://github.com/Start9Labs/embassy-os/pull/1385
+* ☯️ For the peace of mind ☯️ by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1444
+* Feature/update sound by @ProofOfKeags in https://github.com/Start9Labs/embassy-os/pull/1439
+* Feature/script packing by @ProofOfKeags in https://github.com/Start9Labs/embassy-os/pull/1435
+* rename ActionImplementation to PackageProcedure by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1448
+* Chore/warning cleanse by @ProofOfKeags in https://github.com/Start9Labs/embassy-os/pull/1447
+* refactor packing to async by @ProofOfKeags in https://github.com/Start9Labs/embassy-os/pull/1453
+* Add nginx config for proxy redirect by @yzernik in https://github.com/Start9Labs/embassy-os/pull/1421
+* Proxy local frontend to remote backend by @elvece in https://github.com/Start9Labs/embassy-os/pull/1452
+* Feat/js action by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1437
+* Fix/making js work by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1456
+* fix: Dependency vs dependents by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1462
+* refactor: isolate network toast and login redirect to separate services by @waterplea in https://github.com/Start9Labs/embassy-os/pull/1412
+* Fix links in CONTRIBUTING.md, update ToC by @BBlackwo in https://github.com/Start9Labs/embassy-os/pull/1463
+* Feature/require script consistency by @ProofOfKeags in https://github.com/Start9Labs/embassy-os/pull/1451
+* Chore/version 0 3 1 0 by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1475
+* remove interactive TTY requirement from scripts by @moerketh in https://github.com/Start9Labs/embassy-os/pull/1469
+* Disable view in marketplace button when side-loaded by @BBlackwo in https://github.com/Start9Labs/embassy-os/pull/1471
+* Link to tor address on LAN setup page (#1277) by @BBlackwo in https://github.com/Start9Labs/embassy-os/pull/1466
+* UI version updates and welcome message for 0.3.1 by @elvece in https://github.com/Start9Labs/embassy-os/pull/1479
+* Update contribution and frontend readme by @BBlackwo in https://github.com/Start9Labs/embassy-os/pull/1467
+* Clean up config by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1484
+* Enable Control Groups for Docker containers by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1468
+* Fix/patch db unwrap remove by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1481
+* handles spaces in working dir in make-image.sh by @moerketh in https://github.com/Start9Labs/embassy-os/pull/1487
+* UI cosmetic improvements by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1486
+* chore: fix the master by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1495
+* generate unique ca names based off of server id by @ProofOfKeags in https://github.com/Start9Labs/embassy-os/pull/1500
+* allow embassy-cli not as root by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1501
+* fix: potential fix for the docker leaking the errors and such by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1496
+* Fix/memory leak docker by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1505
+* fixes serialization of regex pattern + description by @ProofOfKeags in https://github.com/Start9Labs/embassy-os/pull/1509
+* allow interactive TTY if available by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1508
+* fix &quot;missing proxy&quot; error in embassy-cli by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1516
+* Feat/js known errors by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1514
+* fixes a bug where nginx will crash if eos goes into diagnostic mode a… by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1506
+* fix: restart/ uninstall sometimes didn't work by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1527
+* add &quot;error_for_status&quot; to static file downloads by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1532
+* fixes #1169 by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1533
+* disable unnecessary services by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1535
+* chore: Update types to match embassyd by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1539
+* fix: found a unsaturaded args fix by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1540
+* chore: Update the lite types to include the union and enum by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1542
+* Feat: Make the js check for health by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1543
+* fix incorrect error message for deserialization in ValueSpecString by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1547
+* fix dependency/dependent id issue by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1546
+* add textarea to ValueSpecString by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1534
+* Feat/js metadata by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1548
+* feat: uid/gid/mode added to metadata by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1551
+* Strict null checks by @waterplea in https://github.com/Start9Labs/embassy-os/pull/1464
+* fix backend builds for safe git config by @elvece in https://github.com/Start9Labs/embassy-os/pull/1549
+* update should send version not version spec by @elvece in https://github.com/Start9Labs/embassy-os/pull/1559
+* chore: Add tracing for debuging the js procedure slowness by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1552
+* Reset password through setup wizard by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1490
+* feat: Make sdk by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1564
+* fix: Missing a feature flat cfg by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1563
+* fixed sentence that didn't make sense by @BitcoinMechanic in https://github.com/Start9Labs/embassy-os/pull/1565
+* refactor(patch-db): use PatchDB class declaratively by @waterplea in https://github.com/Start9Labs/embassy-os/pull/1562
+* fix bugs with config and clean up dev options by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1558
+* fix: Make it so we only need the password on the backup by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1566
+* kill all sessions and remove ripple effect by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1567
+* adjust service marketplace button for installation source relevance by @elvece in https://github.com/Start9Labs/embassy-os/pull/1571
+* fix connection failure display monitoring and other style changes by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1573
+* add dns server to embassy-os by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1572
+* Fix/mask generic inputs by @elvece in https://github.com/Start9Labs/embassy-os/pull/1570
+* Fix/sideload icon type by @elvece in https://github.com/Start9Labs/embassy-os/pull/1577
+* add avahi conditional compilation flags to dns by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1579
+* selective backups and better drive selection interface by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1576
+* Feat/use modern tor by @kn0wmad in https://github.com/Start9Labs/embassy-os/pull/1575
+* update welcome notes for 031 by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1580
+* fix: Properties had a null description by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1581
+* fix backup lock ordering by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1582
+* Bugfix/backup lock order by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1583
+* preload redacted and visibility hidden by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1584
+* turn chevron red in config if error by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1586
+* switch to utc by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1587
+* update patchdb for array patch fix by @elvece in https://github.com/Start9Labs/embassy-os/pull/1588
+* filter package ids when backing up by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1589
+* add select/deselect all to backups and enum lists by @elvece in https://github.com/Start9Labs/embassy-os/pull/1590
+* fix: Stop the buffer from dropped pre-maturly by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1591
+* chore: commit the snapshots by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1592
+* nest new entries and message updates better by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1595
+* fix html parsing in logs by @elvece in https://github.com/Start9Labs/embassy-os/pull/1598
+* don't crash service if io-format is set for main by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1599
+* strip html from colors from logs by @elvece in https://github.com/Start9Labs/embassy-os/pull/1604
+* feat: fetch effect by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1605
+* Fix/UI misc by @elvece in https://github.com/Start9Labs/embassy-os/pull/1606
+* display bottom item in backup list and refactor for cleanliness by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1609
+* fix: Closed file by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1608
+* fix conditional display state by @elvece in https://github.com/Start9Labs/embassy-os/pull/1612
+* release lock on update progress by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1614
+* show available marketplace updates in menu by @elvece in https://github.com/Start9Labs/embassy-os/pull/1613
+* Default to https:// urls for repositories, remove apt-transport-https by @gStart9 in https://github.com/Start9Labs/embassy-os/pull/1610
+* Add basic GitHub workflows builds by @moerketh in https://github.com/Start9Labs/embassy-os/pull/1578
+* remove beta flag actions from UI config build by @elvece in https://github.com/Start9Labs/embassy-os/pull/1617
+* handle current-dependents properly during update by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1621
+* Fix/misc UI by @elvece in https://github.com/Start9Labs/embassy-os/pull/1622
+* Fix/adjust pipeline by @moerketh in https://github.com/Start9Labs/embassy-os/pull/1619
+* fix icons for sideloaded packages by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1624
+* keep status if package has no config by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1626
+* Tor repository fix for arm64 by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1623
+* fix display of comma between breakages by @elvece in https://github.com/Start9Labs/embassy-os/pull/1628
+* chore: updating lock just from make clean; make by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1631
+
+## New Contributors
+* @cryptodread made their first contribution in https://github.com/Start9Labs/embassy-os/pull/1385
+* @yzernik made their first contribution in https://github.com/Start9Labs/embassy-os/pull/1421
+* @BBlackwo made their first contribution in https://github.com/Start9Labs/embassy-os/pull/1463
+* @moerketh made their first contribution in https://github.com/Start9Labs/embassy-os/pull/1469
+* @BitcoinMechanic made their first contribution in https://github.com/Start9Labs/embassy-os/pull/1565
+* @gStart9 made their first contribution in https://github.com/Start9Labs/embassy-os/pull/1610
+
+**Full Changelog**: https://github.com/Start9Labs/embassy-os/compare/v0.3.0.3...v0.3.1</summary>
+    <title>Start9Labs/embassy-os: v0.3.1</title>
+    <updated>2022-07-11T16:40:40Z</updated>
+    <dc:date>2022-07-11T16:40:40Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.1</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.1"/>
@@ -5039,26 +5166,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-01-24T10:03:34Z</updated>
     <dc:date>2022-01-24T10:03:34Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.6-beta</id>
-    <link href="https://github.com/LN-Zap/zap-desktop/releases/tag/v0.7.6-beta"/>
-    <summary>## Release notes
-
-### Bug Fixes
-
-* **lnd:** improve handling for detecting wallet state ([d0c1702](https://github.com/LN-Zap/zap-desktop/commit/d0c17028796decfc0803a7330d839e22e3015aa9))
-
-### Changelog
-The full list of changes since 0.7.5-beta can be found here:
-
-https://github.com/LN-Zap/zap-desktop/compare/v0.7.5-beta...v0.7.6-beta
-
-## Verifying the Release
-
-Please refer to [our documentation](https://github.com/LN-Zap/zap-desktop#documentation) for [instructions on how to verify the release](https://github.com/LN-Zap/zap-desktop/blob/master/docs/SIGNATURES.md).</summary>
-    <title>LN-Zap/zap-desktop: v0.7.6-beta</title>
-    <updated>2022-01-23T14:01:34Z</updated>
-    <dc:date>2022-01-23T14:01:34Z</dc:date>
-  </entry>
-  <dc:date>2022-07-11T14:51:54+00:00</dc:date>
+  <dc:date>2022-07-11T16:41:01+00:00</dc:date>
 </feed>
