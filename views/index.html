@@ -38,6 +38,98 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/zkSNACKs/WalletWasabi">zkSNACKs/WalletWasabi</a>: <a href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.2">v2.0.1.2</a>
+						    </h2>
+							<p class="card-text">Published: 2022-07-13 12:09:06 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>Summary</h1>
+
+<p><em>PRIVACY IS YOUR ABILITY TO SELECTIVELY REVEAL YOURSELF TO THE WORLD</em></p>
+
+<p>This PR includes a couple of stabilization improvements mostly around network communication, but also adds new features. </p>
+
+<ul>
+<li>Fixing the problem when Tor gets stuck with TtlExpired error. </li>
+<li>Adds RedCoinIsolation <a href="https://github.com/zkSNACKs/WalletWasabi/issues/8516">feature</a>.</li>
+<li>Minor improvement in CoinJoin coin <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8659">selector algorithm</a>.</li>
+<li>Crash fixes. </li>
+</ul>
+
+<h1>Newbie Guide</h1>
+
+<p>While setting up Wasabi is straightforward, even a Linux wizard with the longest beard can get stuck on the most basic tasks. Consider taking a look at the <a href="https://youtu.be/bQKU2khua-8">How To Use</a> guide.</p>
+
+<h1>Advanced Guide</h1>
+
+<p>If you want to build Wasabi from source code or update the source code check out <a href="https://docs.wasabiwallet.io/using-wasabi/BuildSource.html">these instructions.</a></p>
+
+<p>From version 1.1.3 Wasabi also introduces <a href="https://reproducible-builds.org/">reproducible builds</a>: <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md">Deterministic Build Guide</a></p>
+
+<p>Build with .NET 6.0.300.</p>
+
+<h2>FAQ</h2>
+
+<ul>
+<li><strong>Frequently asked questions <a href="https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq">here</a>.</strong></li>
+<li><strong>Requirements?</strong> x64, Linux, &gt;Win10, &gt;macOS 10.15.</li>
+</ul>
+
+<h2>What&#39;s Changed</h2>
+
+<ul>
+<li>[VDG] Fix possibly null reference in QrCode by @wieslawsoltes in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8627">https://github.com/zkSNACKs/WalletWasabi/pull/8627</a></li>
+<li><code>TorHttpPool</code>: Catch even <code>TorConnectCommandFailedException</code> without <code>TtlExpired</code> flag. by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8553">https://github.com/zkSNACKs/WalletWasabi/pull/8553</a></li>
+<li><code>TorTcpConnectionFactory</code>: Log only on trace level by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8629">https://github.com/zkSNACKs/WalletWasabi/pull/8629</a></li>
+<li>Remove unnecessary logging to console by @onvej-sl in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8624">https://github.com/zkSNACKs/WalletWasabi/pull/8624</a></li>
+<li>Remove WW1 <em>client</em> code. by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8639">https://github.com/zkSNACKs/WalletWasabi/pull/8639</a></li>
+<li>Fix rounding error in anonscore calculation by @nopara73 in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8633">https://github.com/zkSNACKs/WalletWasabi/pull/8633</a></li>
+<li>[Trivial] Fix code factor issues by @yahiheb in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8634">https://github.com/zkSNACKs/WalletWasabi/pull/8634</a></li>
+<li>[VDG] Discreet Mode for wallet coins by @MarnixCroes in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8188">https://github.com/zkSNACKs/WalletWasabi/pull/8188</a></li>
+<li>[VDG] Modify <code>RxApp.DefaultExceptionHandler</code> by @soosr in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/7478">https://github.com/zkSNACKs/WalletWasabi/pull/7478</a></li>
+<li>Backend: Additional Docker stuff by @Kukks in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8596">https://github.com/zkSNACKs/WalletWasabi/pull/8596</a></li>
+<li>Add RedCoinIsolation by @nopara73 in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8522">https://github.com/zkSNACKs/WalletWasabi/pull/8522</a></li>
+<li>[Trivial] Update tooltip for Red coin isolation by @Szpoti in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8644">https://github.com/zkSNACKs/WalletWasabi/pull/8644</a></li>
+<li>Update CoinJoinProfile equalities + remove redundant code by @adamPetho in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8643">https://github.com/zkSNACKs/WalletWasabi/pull/8643</a></li>
+<li>[VDG] change item order in Transaction Details by @MarnixCroes in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8645">https://github.com/zkSNACKs/WalletWasabi/pull/8645</a></li>
+<li><code>WasabiSynchronizer</code>: Remove request blocking by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8640">https://github.com/zkSNACKs/WalletWasabi/pull/8640</a></li>
+<li>Return ownership proofs by @onvej-sl in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8635">https://github.com/zkSNACKs/WalletWasabi/pull/8635</a></li>
+<li>Fix fallback  by @nopara73 in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8654">https://github.com/zkSNACKs/WalletWasabi/pull/8654</a></li>
+<li>[VDG] WalletManagerViewModel - cleanup by @soosr in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8652">https://github.com/zkSNACKs/WalletWasabi/pull/8652</a></li>
+<li>[VDG] WalletViewModelBase - Cleanup by @soosr in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8651">https://github.com/zkSNACKs/WalletWasabi/pull/8651</a></li>
+<li>[Trivial] Order elements (CodeFactor) by @yahiheb in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8657">https://github.com/zkSNACKs/WalletWasabi/pull/8657</a></li>
+<li>Use <code>NoAuthenticationRequired</code> for DefaultCircuit by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8660">https://github.com/zkSNACKs/WalletWasabi/pull/8660</a></li>
+<li>[Trivial] Fix Codefactor issues by @yahiheb in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8658">https://github.com/zkSNACKs/WalletWasabi/pull/8658</a></li>
+<li>[VDG] Update to Avalonia 0.10.16 by @wieslawsoltes in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8663">https://github.com/zkSNACKs/WalletWasabi/pull/8663</a></li>
+<li>[Trivial] Remove unused code by @nopara73 in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8668">https://github.com/zkSNACKs/WalletWasabi/pull/8668</a></li>
+<li>Revert &quot;Return ownership proofs&quot; by @nopara73 in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8671">https://github.com/zkSNACKs/WalletWasabi/pull/8671</a></li>
+<li>Don&#39;t swallow exception by @nopara73 in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8673">https://github.com/zkSNACKs/WalletWasabi/pull/8673</a></li>
+<li>Make AliceClient handle Protocol exceptions by @adamPetho in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8675">https://github.com/zkSNACKs/WalletWasabi/pull/8675</a></li>
+<li>Tor: remove digest line for macOS by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8628">https://github.com/zkSNACKs/WalletWasabi/pull/8628</a></li>
+<li>[VDG] NavBarViewModel - cleanup by @soosr in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8666">https://github.com/zkSNACKs/WalletWasabi/pull/8666</a></li>
+<li><code>WasabiSynchronizer</code>: Improve exception handling by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8641">https://github.com/zkSNACKs/WalletWasabi/pull/8641</a></li>
+<li>[VDG] Fix LabelsPanel not displaying all items by @wieslawsoltes in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8683">https://github.com/zkSNACKs/WalletWasabi/pull/8683</a></li>
+<li>[VDG] wallet stats lowercase writing by @MarnixCroes in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8686">https://github.com/zkSNACKs/WalletWasabi/pull/8686</a></li>
+<li>[VDG] NavBarItemViewModel - cleanup by @soosr in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8667">https://github.com/zkSNACKs/WalletWasabi/pull/8667</a></li>
+<li>[VDG] Fix NavBarItem shaking title by @wieslawsoltes in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8688">https://github.com/zkSNACKs/WalletWasabi/pull/8688</a></li>
+<li>Weakly consider AS for coin selection by @nopara73 in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8659">https://github.com/zkSNACKs/WalletWasabi/pull/8659</a></li>
+<li><code>TorMonitor</code>: Add restarting capability by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8669">https://github.com/zkSNACKs/WalletWasabi/pull/8669</a></li>
+<li>Allow only single run of <code>PrivacySuggestionsFlyoutViewModel.BuildPrivacySuggestionsAsync</code> by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8594">https://github.com/zkSNACKs/WalletWasabi/pull/8594</a></li>
+<li>Update Website main image by @CAnorbo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8702">https://github.com/zkSNACKs/WalletWasabi/pull/8702</a></li>
+<li>macOS: Tor control failed to initialize by @kiminuo in <a href="https://github.com/zkSNACKs/WalletWasabi/pull/8700">https://github.com/zkSNACKs/WalletWasabi/pull/8700</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/zkSNACKs/WalletWasabi/compare/v2.0.1.1...v2.0.1.2">https://github.com/zkSNACKs/WalletWasabi/compare/v2.0.1.1...v2.0.1.2</a></p>
+</p>
+					    <a href="https://github.com/zkSNACKs/WalletWasabi" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/Start9Labs/embassy-os">Start9Labs/embassy-os</a>: <a href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.1">v0.3.1</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-11 16:40:40 UTC</p>
@@ -6195,159 +6287,6 @@ fe8432293600ba403e48e50253c5cdf322d8ec578b1984d17a26bf508a061c8a  rskj-core-3.2.
 					  </div>
 					</div>
 	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.8.2">v1.8.2</a>
-						    </h2>
-							<p class="card-text">Published: 2022-01-24 10:03:34 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
-
-<p>This is a follow-up release that temporarily deactivates the <code>DAO needs to resync</code> popup to prevent presenting too many false positives to the user. It will be re-enabled again in the release after.</p>
-
-<p>See <a href="https://github.com/bisq-network/bisq/commit/013dc982366ba348bcc8c179caad7dc498bc8535">https://github.com/bisq-network/bisq/commit/013dc982366ba348bcc8c179caad7dc498bc8535</a>.</p>
-
-<p>Here are the release notes from v1.8.1:</p>
-
-<h2>Release notes</h2>
-
-<p>This release improves mediation, extends API capabilities (still in beta), and fixes lots of smaller issues across the board.</p>
-
-<h3>Improvements</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5953">Add option to automatically send log files to mediators in chat</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5870">Improve user experience once mediation has been accepted by both parties</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5960">Enable fractional percentages in dispute payout calculation field</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5930">SEPA Account: Make account name and accepted countries editable</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5955">Add <code>Edit offer</code> button in offer book for own offers</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5957">Wording for BSQ swap cancellation popups &amp; withdrawal prompt</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5962">Increase dark mode contrast for fillable fields</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5950">Adapt edit explorer indicator styling</a></li>
-</ul>
-
-<h3>Bug fixes</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5949">Fix trade fee validation bug for multiple BSQ UTXOs inputs</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5914">Fix fat finger protection during offer creation</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5933">Fix exception while taking offer when an account has no selected currency</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5907">OfferBook: Show complete text of action button if enough space is available</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5931">Reset the icon color properly for market price margin information/warning</a></li>
-</ul>
-
-<h3>Development &amp; Documentation</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/5961">API: Add methods <code>failtrade</code>, <code>unfailtrade</code></a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5951">API: Rename method <code>keepfunds</code> to <code>closetrade</code></a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5938">API: Deprecate <code>getmyoffer</code></a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5939">API: Fix CLI&#39;s <code>--payment-account-id</code> option name, document <code>createcryptopaymentacct</code></a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5893">API: XMR/BTC trading pair support</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5852">API: Support and test creation of Swift accounts</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5827">API: <code>getoffer</code> &amp; <code>gettrade</code> support for BSQ swaps</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5935">Improve DAO state store persistence and statistics logging</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5943">CI Security: Use Github actions via sha1 (not tags) and keep them updated via dependabot</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5928">Upgrade log4j 2.15.0 =&gt; 2.17.0</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5860">Set Gradle java src &amp; target compatibility to version 11</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5892">Fixed annoying semicolon colors.</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5879">Make all scripts executable</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/5918">Add @KanoczTomas BTC node with onion v3 address</a></li>
-</ul>
-
-<h3>New Assets</h3>
-
-<p>No new assets were added.</p>
-
-<h2>Verification</h2>
-
-<p>For a detailed description on how to verify your Bisq installer please have a look at our wiki: <a href="https://bisq.wiki/Downloading_and_installing#Verify_installer_file">https://bisq.wiki/Downloading_and_installing#Verify_installer_file</a></p>
-
-<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
-Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
-
-<p>Import the key:
-<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
-
-<p>How to verify signatures?
-<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
-Replace BINARY with the file you downloaded (e.g. Bisq-1.8.2.dmg)</p>
-
-<p>Verify jar file inside binary:
-You can verify on OSX the jar file with:
-shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.8.2-all.jar
-The output need to match the value from the Bisq-1.8.2.jar.txt file.</p>
-
-<p>There are three hashes within the Bisq-1.8.2.jar.txt file (macOS, Windows, Linux).
-If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 15.0.5 and the v1.8.2 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.</p>
-
-<h2>Known issues with installation</h2>
-
-<h3>Windows:</h3>
-
-<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
-
-<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
-
-<p>[1] Application directory (contains application installation files):
-C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
-
-<p>[2] Data directory (contains all Bisq data including wallet):
-C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
-
-<h3>Linux:</h3>
-
-<p>Hint for Debian users:
-If you have problems starting Bisq on Debian use: <code>/opt/bisq/bin/Bisq</code></p>
-
-<p>If your Linux distro does not support .deb files please follow this instruction:
-<code>
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.8.2.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-</code>
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
-
-<h2>Credits</h2>
-
-<p>Thanks to everyone who directly contributed to this release:
-- @alvasw 
-- @cbeams
-- @cd2357<br>
-- @chimp1984 
-- @dbast
-- @Emzy
-- @ghubstan 
-- @jmacxx 
-- @KanoczTomas 
-- @MwithM 
-- @nutel65
-- @ripcurlx 
-- @sqrrm 
-- @stejbac 
-- @xyzmaker123 </p>
-
-<p>A special thanks to our first time contributors:
-- @dbast
-  - <a href="https://github.com/bisq-network/bisq/pull/5943">CI Security: Use Github actions via sha1 (not tags) and keep them updated via dependabot</a>
-  - <a href="https://github.com/bisq-network/bisq/pull/5936">Update Gradle wrapper to 7.3.3</a>
-- @nutel65 
-  - <a href="https://github.com/bisq-network/bisq/pull/5892">Fixed annoying semicolon colors</a></p>
-
-<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
-</p>
-					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.8.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
 			</div>
 
 		 	<div class="col-md-4 sidenav">
@@ -6482,11 +6421,11 @@ That instruction is not tested on many different distros. If you encounter probl
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/joule-labs/joule-extension">joule-labs/joule-extension</a>
+		                	<a href="https://github.com/bitcoin-core/HWI">bitcoin-core/HWI</a>
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/bitcoin-core/HWI">bitcoin-core/HWI</a>
+		                	<a href="https://github.com/joule-labs/joule-extension">joule-labs/joule-extension</a>
 		                </li>
 	                
 		                <li>
