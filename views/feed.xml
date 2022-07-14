@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-13T12:31:13+00:00</updated>
+  <updated>2022-07-14T12:05:08+00:00</updated>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.5.1</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.5.1"/>
+    <summary>This update brings several bugfixes, performance improvements, and the ability to see what’s changed in new app updates before installing them.</summary>
+    <title>getumbrel/umbrel: v0.5.1</title>
+    <updated>2022-07-14T12:04:38Z</updated>
+    <dc:date>2022-07-14T12:04:38Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.2</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.2"/>
@@ -5085,29 +5093,5 @@ Note that you do not need to update libseccomp2, our update process does this fo
     <updated>2022-01-27T13:26:33Z</updated>
     <dc:date>2022-01-27T13:26:33Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.2.0</id>
-    <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.2.0"/>
-    <summary>**IMPORTANT:** RSK Testnet consensus rules have changed in this version, and it is not compatible with previous versions (**only for Testnet, this doesn't apply to Mainnet**). If you've been running previous versions of the RSK client node in Testnet, we encourage you to update to this new version. The **Testnet** network upgrade will happen at **block number 2,581,800**. This is a non-mandatory upgrade for RSK Mainnet nodes.
-
-This release contains enhancements to the node's JSON-RPC interface, as well as Ethereum compatibility fixes. It also introduces a consensus change for Testnet that increases the minimum block difficulty and avoids scenarios where a huge number of blocks would be mined in a short period of time if the difficulty dropped to the minimum levels (doesn't apply to Mainnet).
-
-This is a summary of the changes included in this version:
-
-- Improved message queue expiration policy (#1610)
-- Added support for `pending` parameter in `eth_getBlockByNumber` JSON-RPC method (#1627)
-- JSON-RPC compatibility fixes (#1623, #1629)
-- Fixed `eth_isSyncing` method which was not working as expected (#1618)
-- Introduced gas exactimation enhancements to the `eth_estimateGas` method (#1548)
-- Mining rate limiting and updated minimum block difficulty for RSK Testnet (#1615, #1671)
-
-You can find a complete list of the changes introduced in [Iris 3.2.0 milestone](https://github.com/rsksmart/rskj/milestone/27).
-
-SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
-fe8432293600ba403e48e50253c5cdf322d8ec578b1984d17a26bf508a061c8a  rskj-core-3.2.0-IRIS-all.jar</summary>
-    <title>rsksmart/rskj: IRIS-3.2.0</title>
-    <updated>2022-01-26T02:06:18Z</updated>
-    <dc:date>2022-01-26T02:06:18Z</dc:date>
-  </entry>
-  <dc:date>2022-07-13T12:31:13+00:00</dc:date>
+  <dc:date>2022-07-14T12:05:08+00:00</dc:date>
 </feed>
