@@ -6,7 +6,63 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-15T04:09:24+00:00</updated>
+  <updated>2022-07-18T11:09:20+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/eclair/releases/tag/v0.7.0-patch-disconnect</id>
+    <link href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0-patch-disconnect"/>
+    <summary># Eclair v0.7.0-patch-disconnect
+
+This is a patch release which adds two commits:
+- Add option to disable sending remote addr in init (#2285)
+- Resume reading after processing unknown messages (#2332)
+
+It addresses unwanted disconnections with peers that use unknown messages.
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+
+```sh
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+
+```sh
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```
+
+## Building
+
+Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):
+
+- Ubuntu 20.04
+- AdoptOpenJDK 11.0.6
+- Maven 3.8.1
+
+Use the following command to generate the eclair-node package:
+
+```sh
+mvn clean install -DskipTests
+```
+
+That should generate `eclair-node/target/eclair-node-0.7.0-cad88bf-bin.zip` with sha256 checksums that match the one we provide and sign in `SHA256SUMS.asc`
+
+(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.
+
+## Upgrading
+
+This release is fully compatible with previous eclair versions. You don't need to close your channels, just stop eclair, upgrade and restart.</summary>
+    <title>ACINQ/eclair: v0.7.0-patch-disconnect</title>
+    <updated>2022-07-18T11:06:03Z</updated>
+    <dc:date>2022-07-18T11:06:03Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.2</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.2"/>
@@ -5034,15 +5090,5 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <updated>2022-01-28T04:48:57Z</updated>
     <dc:date>2022-01-28T04:48:57Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.1</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.1"/>
-    <summary>Bug fixes:
-
-Fix: Existing Lightning addresses were not loaded (#3367 #3368) @Kukks</summary>
-    <title>btcpayserver/btcpayserver: v1.4.1</title>
-    <updated>2022-01-28T01:48:32Z</updated>
-    <dc:date>2022-01-28T01:48:32Z</dc:date>
-  </entry>
-  <dc:date>2022-07-15T04:09:24+00:00</dc:date>
+  <dc:date>2022-07-18T11:09:20+00:00</dc:date>
 </feed>
