@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-18T11:09:20+00:00</updated>
+  <updated>2022-07-19T15:05:06+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.4</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.4"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.10.4</title>
+    <updated>2022-07-19T15:01:41Z</updated>
+    <dc:date>2022-07-19T15:01:41Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/eclair/releases/tag/v0.7.0-patch-disconnect</id>
     <link href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0-patch-disconnect"/>
@@ -5076,19 +5084,5 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <updated>2022-01-28T13:58:43Z</updated>
     <dc:date>2022-01-28T13:58:43Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/mempool/mempool/releases/tag/v2.3.1</id>
-    <link href="https://github.com/mempool/mempool/releases/tag/v2.3.1"/>
-    <summary>This is a minor bug fix release for an issue that may cause historical mempool graphs to appear incorrectly after upgrading from v2.2 - we recommend upgrading directly to v2.3.1 instead of v2.3.0 if you are currently using v2.2
-
-### Changelog
-
-* Don't set `autocommit=0` flag when migrating SQL database 
-
-**Full Changelog**: https://github.com/mempool/mempool/compare/v2.3.0...v2.3.1</summary>
-    <title>mempool/mempool: v2.3.1</title>
-    <updated>2022-01-28T04:48:57Z</updated>
-    <dc:date>2022-01-28T04:48:57Z</dc:date>
-  </entry>
-  <dc:date>2022-07-18T11:09:20+00:00</dc:date>
+  <dc:date>2022-07-19T15:05:06+00:00</dc:date>
 </feed>
