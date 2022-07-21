@@ -6,11 +6,67 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-19T15:05:06+00:00</updated>
+  <updated>2022-07-21T19:42:09+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.4-pre4</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.4-pre4"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.10.4-pre4</title>
+    <updated>2022-07-21T19:41:48Z</updated>
+    <dc:date>2022-07-21T19:41:48Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.5</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.5"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.10.5</title>
+    <updated>2022-07-21T19:33:56Z</updated>
+    <dc:date>2022-07-21T19:33:56Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.4</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.4"/>
-    <summary></summary>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.10.4/Specter-Setup-v1.10.4.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.10.4/Specter-v1.10.4.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.10.4/specter_desktop-v1.10.4-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.10.4/specterd-v1.10.4-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.10.4/specterd-v1.10.4-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.10.4/specterd-v1.10.4-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[SHA256SUMS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.10.4/SHA256SUMS) file contains sha256 hashes of all binary files and signed with &quot;Specter Signer's&quot; GPG key.
+You can get the public key from [here](http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7).
+Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
+This key has been signed by @k9ert's key which you might have used for validating th 1.7.0 release.
+
+# Release notes
+- Bugfix: Better error-management for run the numbers #1790 (k9ert)
+- Bugfix: Consecutively uploading same file twice #1776 (relativisticelectron)
+- Bugfix: Fix the messed up translated html #1810 (relativisticelectron)
+- Bugfix: make translations safe in jinja2 #1793 (relativisticelectron)
+- Bugfix: NoneType has not attribute get in certain circumstances #1802 (k9ert)
+- Bugfix: Pagination in transactions and coin selection #1778 (Manolis Mandrapilias)
+- Bugfix: Search container overlaying #1787 (Manolis Mandrapilias)
+- Bugfix: support extracting xpub of master xkey derivation #1797 (hodlwave)
+- Chore: fix broken cirrus build cache for bitcoind #1786 (k9ert)
+- Chore: migrating to hwi 2.1.0 #1693 (k9ert)
+- Docs: added necessary command to build instructions #1808 (relativisticelectron)
+- Docs: Mentioning Acronis as endless pacman cause #1767 (k9ert)
+- Feature: Add nix shell #1798 (hodlwave)
+- Feature: Extensions - Making more than one Blueprint possible  #1764 (k9ert)
+- Feature: Rescan button for empty wallet #1779 (yogendra sankhla)
+- UIUX: Improve the transactions view #1746 (Manolis Mandrapilias)
+- UIUX: tooltips fix #1806 (relativisticelectron)
+</summary>
     <title>cryptoadvance/specter-desktop: v1.10.4</title>
     <updated>2022-07-19T15:01:41Z</updated>
     <dc:date>2022-07-19T15:01:41Z</dc:date>
@@ -5010,79 +5066,5 @@ This release is fully compatible with previous eclair versions. You don't need t
     <updated>2022-01-31T20:46:04Z</updated>
     <dc:date>2022-01-31T20:46:04Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/Specter-Setup-v1.8.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/SpecterDesktop-v1.8.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specter_desktop-v1.8.0-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-x86_64-linux-gnu.zip)
-
-## Signatures and hashes
-[SHA256SUMS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/SHA256SUMS) file contains sha256 hashes of all binary files and signed with &quot;Specter Signer's&quot; GPG key.
-You can get the public key from [here](http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7).
-Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
-This key has been signed by @k9ert's key which you might have used for validating th 1.7.0 release.
-
-# Release notes
-
-- Feature: Add Jade multisig support #1520 (Stepan Snigirev)
-- Feature: add liquid-testnet support #1527 (Stepan Snigirev)
-- Feature: Allow descriptors with xpubs but without derivations (just wpkh(xpub) ) for wallet imports  #1519 (Stepan Snigirev)
-- Feature: search improvements #1497 (Kim Neunert)
-- Feature: Send dialog refactored and sped up #1454 (Kim Neunert)
-- Feature: Service integration - Swan #1517 (kdmukai)
-- Bugfix: Coin selection - unselection via toggle #1536 (Manolis)
-- Bugfix: deactivate internal Tor for non-AppImages #1499 (Kim Neunert)
-- Bugfix: Edge case for electrum label import #1542 (relativisticelectron)
-- Bugfix/Feature: Restoring send functionalities and better address validation and fee selection #1532 (Manolis)
-- Bugfix: Final Swan service updates #1533 (kdmukai)
-- Bugfix: fix jade signing of unconfidential inputs #1528 (Stepan Snigirev)
-- Bugfix: fix keypoolrefill perfomance and adjusted callback logic #1508 (Kim Neunert)
-- Bugfix: Multiple send bug fixes #1538 (Manolis)
-- Bugfix: prevent using keys twice #1500 (Kim Neunert)
-- Bugfix: Restore ability to import address labels of unlabeled addresses #1511 (relativisticelectron)
-- Bugfix: Revision of test-new-releases.md #1529 (Manolis)
-- Bugfix: Servicediscovery in pyinstaller-packages (specterd) #1531 (Kim Neunert)
-- Bugfix: service icons breaking liquid #1534 (Stepan Snigirev)
-- Bugfix: Very last fixes for Service swan #1537 (Kim Neunert)
-- Documentation: message signature #1310 (Kim Neunert)
-- Documentation: added endless pacman troubleshooting Guide #1498 (Kim Neunert)
-- Documentation: Create document for testing-setups and cleaning up swan #1526 (Kim Neunert)
-- Documentation: Update Donation Link #1514 (Moritz)
-- I18N: Fixed the translation error. #1507 (2a3dex)
-- UIUX: Added suggestion to quit other wallet software when connecting HWI over USB #1535 (Lobbelt)
-- UIUX: Improve behaviour for apps #1540 (Kim Neunert)
-- UIUX: Fixed help text #1510 (relativisticelectron)
-- Chore: Bump HWI to 2.0.2 #1522 (Michael Henke)
-- Chore: Fix running bitcoind with docker #1523 (Kim Neunert)
-</summary>
-    <title>cryptoadvance/specter-desktop: v1.8.0</title>
-    <updated>2022-01-29T12:15:02Z</updated>
-    <dc:date>2022-01-29T12:15:02Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.2</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.2"/>
-    <summary>### Bug fixes:
-
-* Newly created guest cannot login (#3373) @dennisreimann
-* Guest users shouldn't see Payouts menu item @NicolasDorier
-* Add plugins link in server nav @Kukks</summary>
-    <title>btcpayserver/btcpayserver: v1.4.2</title>
-    <updated>2022-01-28T13:58:43Z</updated>
-    <dc:date>2022-01-28T13:58:43Z</dc:date>
-  </entry>
-  <dc:date>2022-07-19T15:05:06+00:00</dc:date>
+  <dc:date>2022-07-21T19:42:09+00:00</dc:date>
 </feed>
