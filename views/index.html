@@ -38,21 +38,6 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.4-pre4">v1.10.4-pre4</a>
-						    </h2>
-							<p class="card-text">Published: 2022-07-21 19:41:48 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"></p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.4-pre4" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.5">v1.10.5</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-21 19:33:56 UTC</p>
@@ -6235,6 +6220,80 @@ mvn clean install -DskipTests
 </p>
 					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0">v1.8.0</a>
+						    </h2>
+							<p class="card-text">Published: 2022-01-29 12:15:02 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>Binaries</h1>
+
+<p>There are two types of binaries:</p>
+
+<h2>Specter Desktop</h2>
+
+<p>It&#39;s a windowed GUI application with Specter server included.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/Specter-Setup-v1.8.0.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/SpecterDesktop-v1.8.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specter_desktop-v1.8.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
+
+<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
+
+<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
+
+<h2>specterd</h2>
+
+<p>It&#39;s a command-line program that only runs Specter server.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
+
+<h2>Signatures and hashes</h2>
+
+<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/SHA256SUMS">SHA256SUMS</a> file contains sha256 hashes of all binary files and signed with &quot;Specter Signer&#39;s&quot; GPG key.
+You can get the public key from <a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7">here</a>.
+Fingerprint of the key is <code>785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7</code>
+This key has been signed by @k9ert&#39;s key which you might have used for validating th 1.7.0 release.</p>
+
+<h1>Release notes</h1>
+
+<ul>
+<li>Feature: Add Jade multisig support #1520 (Stepan Snigirev)</li>
+<li>Feature: add liquid-testnet support #1527 (Stepan Snigirev)</li>
+<li>Feature: Allow descriptors with xpubs but without derivations (just wpkh(xpub) ) for wallet imports  #1519 (Stepan Snigirev)</li>
+<li>Feature: search improvements #1497 (Kim Neunert)</li>
+<li>Feature: Send dialog refactored and sped up #1454 (Kim Neunert)</li>
+<li>Feature: Service integration - Swan #1517 (kdmukai)</li>
+<li>Bugfix: Coin selection - unselection via toggle #1536 (Manolis)</li>
+<li>Bugfix: deactivate internal Tor for non-AppImages #1499 (Kim Neunert)</li>
+<li>Bugfix: Edge case for electrum label import #1542 (relativisticelectron)</li>
+<li>Bugfix/Feature: Restoring send functionalities and better address validation and fee selection #1532 (Manolis)</li>
+<li>Bugfix: Final Swan service updates #1533 (kdmukai)</li>
+<li>Bugfix: fix jade signing of unconfidential inputs #1528 (Stepan Snigirev)</li>
+<li>Bugfix: fix keypoolrefill perfomance and adjusted callback logic #1508 (Kim Neunert)</li>
+<li>Bugfix: Multiple send bug fixes #1538 (Manolis)</li>
+<li>Bugfix: prevent using keys twice #1500 (Kim Neunert)</li>
+<li>Bugfix: Restore ability to import address labels of unlabeled addresses #1511 (relativisticelectron)</li>
+<li>Bugfix: Revision of test-new-releases.md #1529 (Manolis)</li>
+<li>Bugfix: Servicediscovery in pyinstaller-packages (specterd) #1531 (Kim Neunert)</li>
+<li>Bugfix: service icons breaking liquid #1534 (Stepan Snigirev)</li>
+<li>Bugfix: Very last fixes for Service swan #1537 (Kim Neunert)</li>
+<li>Documentation: message signature #1310 (Kim Neunert)</li>
+<li>Documentation: added endless pacman troubleshooting Guide #1498 (Kim Neunert)</li>
+<li>Documentation: Create document for testing-setups and cleaning up swan #1526 (Kim Neunert)</li>
+<li>Documentation: Update Donation Link #1514 (Moritz)</li>
+<li>I18N: Fixed the translation error. #1507 (2a3dex)</li>
+<li>UIUX: Added suggestion to quit other wallet software when connecting HWI over USB #1535 (Lobbelt)</li>
+<li>UIUX: Improve behaviour for apps #1540 (Kim Neunert)</li>
+<li>UIUX: Fixed help text #1510 (relativisticelectron)</li>
+<li>Chore: Bump HWI to 2.0.2 #1522 (Michael Henke)</li>
+<li>Chore: Fix running bitcoind with docker #1523 (Kim Neunert)</li>
+</ul>
+</p>
+					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
