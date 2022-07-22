@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-22T15:02:11+00:00</updated>
+  <updated>2022-07-22T15:22:10+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.0-pre23</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.0-pre23"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.10.0-pre23</title>
+    <updated>2022-07-22T15:19:38Z</updated>
+    <dc:date>2022-07-22T15:19:38Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.0-pre22</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.0-pre22"/>
@@ -5030,63 +5038,5 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <updated>2022-02-01T15:37:31Z</updated>
     <dc:date>2022-02-01T15:37:31Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/eclair/releases/tag/v0.7.0</id>
-    <link href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0"/>
-    <summary># Eclair v0.7.0
-
-This release adds official support for two long-awaited lightning features: anchor outputs and onion messages.
-Support for the PostreSQL database backend is also now production ready!
-This release also includes a few bug fixes and many new (smaller) features.
-It is fully compatible with 0.6.2 (and all previous versions of eclair).
-
-Because this release changes the default type of channels that your node will use, make sure you read the release notes carefully!
-The release notes can be found [here](https://github.com/ACINQ/eclair/blob/master/docs/release-notes/eclair-v0.7.0.md).
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-
-- from our website: https://acinq.co/pgp/drouinf.asc
-- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
-
-To import our signing key:
-
-```sh
-$ gpg --import drouinf.asc
-```
-
-To verify the release file checksums and signatures:
-
-```sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```
-
-## Building
-
-Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):
-
-- Ubuntu 20.04
-- AdoptOpenJDK 11.0.6
-- Maven 3.8.1
-
-Use the following command to generate the eclair-node package:
-
-```sh
-mvn clean install -DskipTests
-```
-
-That should generate `eclair-node/target/eclair-node-0.7.0-a804905-bin.zip` with sha256 checksums that match the one we provide and sign in `SHA256SUMS.asc`
-
-(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.
-
-## Upgrading
-
-This release is fully compatible with previous eclair versions. You don't need to close your channels, just stop eclair, upgrade and restart.</summary>
-    <title>ACINQ/eclair: v0.7.0</title>
-    <updated>2022-02-01T09:15:56Z</updated>
-    <dc:date>2022-02-01T09:15:56Z</dc:date>
-  </entry>
-  <dc:date>2022-07-22T15:02:11+00:00</dc:date>
+  <dc:date>2022-07-22T15:22:10+00:00</dc:date>
 </feed>

@@ -38,6 +38,21 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.0-pre23">v1.10.0-pre23</a>
+						    </h2>
+							<p class="card-text">Published: 2022-07-22 15:19:38 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"></p>
+					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.0-pre23" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.10.0-pre22">v1.10.0-pre22</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-22 14:54:32 UTC</p>
@@ -6190,76 +6205,6 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/eclair">ACINQ/eclair</a>: <a href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0">v0.7.0</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-01 09:15:56 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Eclair v0.7.0</h1>
-
-<p>This release adds official support for two long-awaited lightning features: anchor outputs and onion messages.
-Support for the PostreSQL database backend is also now production ready!
-This release also includes a few bug fixes and many new (smaller) features.
-It is fully compatible with 0.6.2 (and all previous versions of eclair).</p>
-
-<p>Because this release changes the default type of channels that your node will use, make sure you read the release notes carefully!
-The release notes can be found <a href="https://github.com/ACINQ/eclair/blob/master/docs/release-notes/eclair-v0.7.0.md">here</a>.</p>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:</p>
-
-<ul>
-<li>from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a></li>
-<li>from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></li>
-</ul>
-
-<p>To import our signing key:</p>
-
-<p><code>sh
-$ gpg --import drouinf.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:</p>
-
-<p><code>sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-
-<h2>Building</h2>
-
-<p>Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):</p>
-
-<ul>
-<li>Ubuntu 20.04</li>
-<li>AdoptOpenJDK 11.0.6</li>
-<li>Maven 3.8.1</li>
-</ul>
-
-<p>Use the following command to generate the eclair-node package:</p>
-
-<p><code>sh
-mvn clean install -DskipTests
-</code></p>
-
-<p>That should generate <code>eclair-node/target/eclair-node-0.7.0-a804905-bin.zip</code> with sha256 checksums that match the one we provide and sign in <code>SHA256SUMS.asc</code></p>
-
-<p>(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.</p>
-
-<h2>Upgrading</h2>
-
-<p>This release is fully compatible with previous eclair versions. You don&#39;t need to close your channels, just stop eclair, upgrade and restart.</p>
-</p>
-					    <a href="https://github.com/ACINQ/eclair" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
