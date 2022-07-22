@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-22T19:11:56+00:00</updated>
+  <updated>2022-07-22T20:22:11+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0-pre6</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0-pre6"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.9.0-pre6</title>
+    <updated>2022-07-22T20:21:45Z</updated>
+    <dc:date>2022-07-22T20:21:45Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre5</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0-pre5"/>
@@ -4991,13 +4999,5 @@ If you face any difficulties while updating, please message us on Telegram: http
     <updated>2022-02-02T15:30:28Z</updated>
     <dc:date>2022-02-02T15:30:28Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.12</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.12"/>
-    <summary>Umbrel 0.4.12 brings four brand new apps in the Umbrel App Store — Kollider, Bitfeed, Suredbits Wallet, and LNDg, updated apps, a security patch, bug fixes, and more.</summary>
-    <title>getumbrel/umbrel: v0.4.12</title>
-    <updated>2022-02-02T13:53:43Z</updated>
-    <dc:date>2022-02-02T13:53:43Z</dc:date>
-  </entry>
-  <dc:date>2022-07-22T19:11:56+00:00</dc:date>
+  <dc:date>2022-07-22T20:22:11+00:00</dc:date>
 </feed>
