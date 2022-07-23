@@ -6,7 +6,32 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-22T20:22:11+00:00</updated>
+  <updated>2022-07-23T12:01:50+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.3</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.3"/>
+    <summary>### New feature:
+
+* Point of Sale: Add discount option for Keypad view (#3991) @bolatovumar
+
+### Bug fixes:
+
+* When a payjoin label was applied, coin selection filter would not work (#3986) @Kukks
+* When a payjoin happened with a receive address wallet, the payjoin label was not applied (#3986) @Kukks
+* Crowdfund: Show free when invoice is fixed and 0 amount in apps (#3994) @Kukks
+* Crowdfund: Animations on crowdfund not enabled broke JS (#3994) @Kukks
+* Crowdfund: Perk expansion in crowdfund was broken (#3994) @Kukks
+* Redirect instead of show 404 on 0 amount invoices (#3904) @Kukks
+
+### Improvements:
+
+* A few design brush up @dennisreimann @dstrukt
+* Coin Selection: Fix responsive display (#3992, #3985) @dennisreimann
+* Point of Sale: In the receipt, the Order Id is now a link pointing to the point of sale (#3995) @Kukks</summary>
+    <title>btcpayserver/btcpayserver: v1.6.3</title>
+    <updated>2022-07-23T12:00:22Z</updated>
+    <dc:date>2022-07-23T12:00:22Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0-pre6</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0-pre6"/>
@@ -4987,17 +5012,5 @@ The release notes can be found here: https://github.com/lightningnetwork/lnd/blo
     <updated>2022-02-02T20:13:32Z</updated>
     <dc:date>2022-02-02T20:13:32Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.13</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.13"/>
-    <summary>This update includes the latest Kollider app which contains a bugfix.
-
-Umbrel 0.4.12 brings four brand new apps in the Umbrel App Store — Kollider, Bitfeed, Suredbits Wallet, and LNDg, updated apps, a security patch, bug fixes, and more.
-
-If you face any difficulties while updating, please message us on Telegram: https://t.me/getumbrel</summary>
-    <title>getumbrel/umbrel: v0.4.13</title>
-    <updated>2022-02-02T15:30:28Z</updated>
-    <dc:date>2022-02-02T15:30:28Z</dc:date>
-  </entry>
-  <dc:date>2022-07-22T20:22:11+00:00</dc:date>
+  <dc:date>2022-07-23T12:01:50+00:00</dc:date>
 </feed>
