@@ -38,6 +38,84 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.110">v0.0.110</a>
+						    </h2>
+							<p class="card-text">Published: 2022-07-26 23:43:38 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>API Updates</h2>
+
+<ul>
+<li><code>ChannelManager::send_probe</code> and <code>Score::probe_{failed,successful}</code> have
+been added to make probing more explicit, as well as new
+<code>Event::Probe{Failed,Successful}</code> events (#1567).</li>
+<li><code>ProbabilisticScoringParameters::banned_nodes</code> has been renamed
+<code>manual_node_penalties</code> and changed to take msat penalties (#1592).</li>
+<li>Per-payment tracking of failed paths was added to enable configuration of
+<code>ProbabilisticScoringParameters::considered_impossible_penalty_msat</code> (#1600)</li>
+<li><code>ProbabilisticScoringParameters::base_penalty_amount_multiplier_msat</code> was
+added to allow a penalty that is only amount-dependent (#1617).</li>
+<li><code>ProbabilisticScoringParameters::amount_penalty_multiplier_msat</code> was renamed
+<code>liquidity_penalty_amount_multiplier_msat</code> (#1617).</li>
+<li>A new <code>Event::HTLCHandlingFailed</code> has been added which provides visibility
+into failures to forward/claim accepted HTLCs (#1403).</li>
+<li>Support has been added for DNS hostnames in the <code>NetAddress</code> type, see
+<a href="https://github.com/lightning/bolts/pull/911">BOLT PR #911</a> (#1553).</li>
+<li><code>GossipSync</code> now has <code>rapid</code>, <code>p2p</code>, and <code>none</code> constructors (#1618).</li>
+<li><code>lightning-net-tokio</code> no longer requires types to be in <code>Arc</code>s (#1623).</li>
+<li>The <code>htlc_maximum_msat</code> field is now required in <code>ChannelUpdate</code> gossip
+messages. In tests this rejects &lt; 1% of channels (#1519).</li>
+<li><code>ReadOnlyNetworkGraph::{channel,node}</code> have been added to query for
+individual channel/node data, primarily for bindings users (#1543).</li>
+<li><code>FeeEstimator</code> implementations are now wrapped internally to ensure values
+below 253 sats/kW are never used (#1552).</li>
+<li>Route selection no longer attempts to randomize path selection. This is
+unlikely to lead to a material change in the paths selected (#1610).</li>
+</ul>
+
+<h2>Bug Fixes</h2>
+
+<ul>
+<li>Fixed a panic when deserializing <code>ChannelDetails</code> objects (#1588).</li>
+<li>When routing, channels are no longer fully saturated before MPP splits are
+generated, instead a configuration knob was added as
+<code>PaymentParameters::max_channel_saturation_power_of_half</code> (#1605).</li>
+<li>Fixed a panic which occurred in <code>ProbabilisticScorer</code> when wallclock time
+goes backwards across a restart (#1603).</li>
+</ul>
+
+<h2>Serialization Compatibility</h2>
+
+<ul>
+<li>All new fields are ignored by prior versions of LDK. All new fields are not
+present when reading objects serialized by prior versions of LDK.</li>
+<li>Channel information written in the <code>NetworkGraph</code> which is missing
+<code>htlc_maximum_msat</code> may be dropped on deserialization (#1519).</li>
+<li>Similarly, node information written in the <code>NetworkGraph</code> which contains an
+invalid hostname may be dropped on deserialization (#1519).</li>
+</ul>
+
+<p>In total, this release features 79 files changed, 2935 insertions, 1363
+deletions in 52 commits from 9 authors, in alphabetical order:
+ * Duncan Dean
+ * Elias Rohrer
+ * Jeffrey Czyz
+ * Matt Corallo
+ * Max Fang
+ * Viktor Tigerström
+ * Willem Van Lint
+ * Wilmer Paulino
+ * jurvis</p>
+</p>
+					    <a href="https://github.com/lightningdevkit/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.110" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.3">v1.6.3</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-23 12:00:22 UTC</p>
@@ -6157,24 +6235,6 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 					  </div>
 					</div>
 	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.18">v6.2.18</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-02 20:13:32 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><ul>
-<li>FIX: Reorder wallets screen crash on macOS</li>
-</ul>
-</p>
-					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.18" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
 			</div>
 
 		 	<div class="col-md-4 sidenav">
@@ -6293,11 +6353,11 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/mynodebtc/mynode">mynodebtc/mynode</a>
+		                	<a href="https://github.com/sparrowwallet/sparrow">sparrowwallet/sparrow</a>
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/sparrowwallet/sparrow">sparrowwallet/sparrow</a>
+		                	<a href="https://github.com/mynodebtc/mynode">mynodebtc/mynode</a>
 		                </li>
 	                
 		                <li>
