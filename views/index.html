@@ -38,6 +38,45 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/lnbits/lnbits-legend">lnbits/lnbits-legend</a>: <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0">0.9.0</a>
+						    </h2>
+							<p class="card-text">Published: 2022-07-27 20:27:15 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>Core</h2>
+
+<ul>
+<li>Added Poetry as a python package manager option
+
+<ul>
+<li>Added Nix flake for immutable reproducible builds</li>
+<li>Stopped transpile_scss dynamically generating code speeding up frontend</li>
+</ul></li>
+<li> New testing suite 
+
+<ul>
+<li>Improved postgres migration workflow</li>
+</ul></li>
+</ul>
+
+<h2>Extension  updates</h2>
+
+<ul>
+<li>Search feature</li>
+<li>Software PoS can do tips</li>
+<li>Spotify jukebox improved UI</li>
+<li>General enhancements and improvements</li>
+</ul>
+</p>
+					    <a href="https://github.com/lnbits/lnbits-legend" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.110">v0.0.110</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-26 23:43:38 UTC</p>
@@ -477,7 +516,7 @@ mvn clean install -DskipTests
 
 <p><em>PRIVACY IS YOUR ABILITY TO SELECTIVELY REVEAL YOURSELF TO THE WORLD</em></p>
 
-<p>This PR includes a couple of stabilization improvements mostly around network communication, but also adds new features. </p>
+<p>This release includes a couple of stabilization improvements mostly around network communication, but also adds new features. </p>
 
 <ul>
 <li>Fixing the problem when Tor gets stuck with TtlExpired error. </li>
@@ -6184,54 +6223,6 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 </p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/sparrowwallet/sparrow">sparrowwallet/sparrow</a>: <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.5.6">1.5.6</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-03 12:04:52 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><ul>
-<li>Add wallet search dialog for labels, address, values and txids across all wallet accounts (View menu)</li>
-<li>Add dialog to sweep a private key in WIF format (e.g. Opendime) to any address (Tools menu)</li>
-<li>Expand transaction diagram in popup by clicking on it to display more inputs, outputs and their values</li>
-<li>Do database updates in a background thread and improve efficiency when refreshing a deep wallet</li>
-<li>Improve deep wallet loading performance by adding a setting to watch only the last X used addresses plus the gap limit (Settings &gt; Advanced)</li>
-<li>General wallet loading performance improvements</li>
-<li>Add broadcasting step to Soroban initiator dialog and indicate when the transaction has been successfully broadcasted</li>
-<li>Add fee rate, RBF and vB from tip information to the tooltip for unconfirmed transactions in transactions tab</li>
-<li>Remove AOPP</li>
-<li>Pass PSBTs and messages to HWI on stdin to avoid overly long process arguments</li>
-<li>Support retrieving a keystore from a scanned crypto-output QR</li>
-<li>Indicate output descriptor key expressions are shown in canonical order</li>
-<li>Indicate payment label is required</li>
-<li>Request focus on password field for encrypted locked wallets when wallet window becomes active</li>
-<li>Increase maximum number of UTXO chart bars</li>
-<li>(Re)allow full addresses in Whirlpool child wallet address CSV exports</li>
-<li>Ensure monotonically increasing ids are used for all JSON-RPC requests in a session</li>
-<li>Tune batch page size for better performance over Tor (maxPageSize config setting)</li>
-<li>Detect Fulcrum version to enable batching (&gt; 1.6.0)</li>
-<li>Upgrade to H2 2.0.206</li>
-<li>Bug fix: Fix memory leak in Jetty ShutdownThread when mixing</li>
-<li>Bug fix: Fix regression selecting a public server in regtest</li>
-<li>Bug fix: Don&#39;t enable the Max button when Clear is pressed</li>
-<li>Bug fix: Use unique (per session) integers as ids for all paged server queries</li>
-<li>Bug fix: Adapt to non-commented derivation entries for multiple derivation path wallets in Coldcard export file (firmware &gt; 3.2.1)</li>
-<li>Bug fix: Fix incorrect mix out probability percentage shown in tooltip</li>
-<li>Bug fix: Fix NPE when performing Soroban reply without UTXOs</li>
-<li>Bug fix: Only retain one day of mempool rate sizes to keep memory usage bounded</li>
-<li>Bug fix: Fix reversion of transaction labels when switching servers</li>
-<li>Bug fix: Fix disappearing watch only accounts with the same derivation path</li>
-<li>Bug fix: Improve label cell performance by avoiding clipboard retrieval on creation</li>
-</ul>
-</p>
-					    <a href="https://github.com/sparrowwallet/sparrow" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.5.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

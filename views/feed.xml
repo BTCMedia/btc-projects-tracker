@@ -6,7 +6,28 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-26T23:52:11+00:00</updated>
+  <updated>2022-07-27T20:31:09+00:00</updated>
+  <entry>
+    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0</id>
+    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0"/>
+    <summary>## Core 
+* Added Poetry as a python package manager option
+ * Added Nix flake for immutable reproducible builds
+ * Stopped transpile_scss dynamically generating code speeding up frontend
+*  New testing suite 
+ * Improved postgres migration workflow
+ 
+## Extension  updates
+* Search feature
+* Software PoS can do tips
+* Spotify jukebox improved UI
+* General enhancements and improvements
+
+</summary>
+    <title>lnbits/lnbits-legend: 0.9.0</title>
+    <updated>2022-07-27T20:27:15Z</updated>
+    <dc:date>2022-07-27T20:27:15Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.110</id>
     <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.110"/>
@@ -313,7 +334,7 @@ Thank you @kroese and @jordi-adame for your contributions!</summary>
 
 _PRIVACY IS YOUR ABILITY TO SELECTIVELY REVEAL YOURSELF TO THE WORLD_
 
-This PR includes a couple of stabilization improvements mostly around network communication, but also adds new features. 
+This release includes a couple of stabilization improvements mostly around network communication, but also adds new features. 
 
 - Fixing the problem when Tor gets stuck with TtlExpired error. 
 - Adds RedCoinIsolation [feature](https://github.com/zkSNACKs/WalletWasabi/issues/8516).
@@ -5027,43 +5048,5 @@ The release notes can be found here: https://github.com/lightningnetwork/lnd/blo
     <updated>2022-02-03T22:33:20Z</updated>
     <dc:date>2022-02-03T22:33:20Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.5.6</id>
-    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.5.6"/>
-    <summary>- Add wallet search dialog for labels, address, values and txids across all wallet accounts (View menu)
-- Add dialog to sweep a private key in WIF format (e.g. Opendime) to any address (Tools menu)
-- Expand transaction diagram in popup by clicking on it to display more inputs, outputs and their values
-- Do database updates in a background thread and improve efficiency when refreshing a deep wallet
-- Improve deep wallet loading performance by adding a setting to watch only the last X used addresses plus the gap limit (Settings &gt; Advanced)
-- General wallet loading performance improvements
-- Add broadcasting step to Soroban initiator dialog and indicate when the transaction has been successfully broadcasted
-- Add fee rate, RBF and vB from tip information to the tooltip for unconfirmed transactions in transactions tab
-- Remove AOPP
-- Pass PSBTs and messages to HWI on stdin to avoid overly long process arguments
-- Support retrieving a keystore from a scanned crypto-output QR
-- Indicate output descriptor key expressions are shown in canonical order
-- Indicate payment label is required
-- Request focus on password field for encrypted locked wallets when wallet window becomes active
-- Increase maximum number of UTXO chart bars
-- (Re)allow full addresses in Whirlpool child wallet address CSV exports
-- Ensure monotonically increasing ids are used for all JSON-RPC requests in a session
-- Tune batch page size for better performance over Tor (maxPageSize config setting)
-- Detect Fulcrum version to enable batching (&gt; 1.6.0)
-- Upgrade to H2 2.0.206
-- Bug fix: Fix memory leak in Jetty ShutdownThread when mixing
-- Bug fix: Fix regression selecting a public server in regtest
-- Bug fix: Don't enable the Max button when Clear is pressed
-- Bug fix: Use unique (per session) integers as ids for all paged server queries
-- Bug fix: Adapt to non-commented derivation entries for multiple derivation path wallets in Coldcard export file (firmware &gt; 3.2.1)
-- Bug fix: Fix incorrect mix out probability percentage shown in tooltip
-- Bug fix: Fix NPE when performing Soroban reply without UTXOs
-- Bug fix: Only retain one day of mempool rate sizes to keep memory usage bounded
-- Bug fix: Fix reversion of transaction labels when switching servers
-- Bug fix: Fix disappearing watch only accounts with the same derivation path
-- Bug fix: Improve label cell performance by avoiding clipboard retrieval on creation</summary>
-    <title>sparrowwallet/sparrow: 1.5.6</title>
-    <updated>2022-02-03T12:04:52Z</updated>
-    <dc:date>2022-02-03T12:04:52Z</dc:date>
-  </entry>
-  <dc:date>2022-07-26T23:52:11+00:00</dc:date>
+  <dc:date>2022-07-27T20:31:09+00:00</dc:date>
 </feed>
