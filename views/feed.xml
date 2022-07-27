@@ -6,7 +6,56 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-27T20:31:09+00:00</updated>
+  <updated>2022-07-27T22:09:59+00:00</updated>
+  <entry>
+    <id>https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.1.1</id>
+    <link href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.1.1"/>
+    <summary>## What's Changed
+* 🐋 docker stats fix by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1630
+* update backend dependencies by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1637
+* Fix/receipts health by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1616
+* return correct error on failed os download by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1636
+* fix build by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1639
+* Update product.yaml by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1638
+* handle case where selected union enum is invalid after migration by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1658
+* fix: Resolve fighting with NM by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1660
+* sdk: don't allow mounts in inject actions by @chrisguida in https://github.com/Start9Labs/embassy-os/pull/1653
+* feat: Variable args by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1667
+* add readme to system-images folder by @elvece in https://github.com/Start9Labs/embassy-os/pull/1665
+* Mask chars beyond 16 by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1666
+* chore: Update to have the new version 0.3.1.1 by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1668
+* feat: Make the rename effect by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1669
+* fix migration, add logging by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1674
+* run build checks only when relevant FE changes by @elvece in https://github.com/Start9Labs/embassy-os/pull/1664
+* trust local ca by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1670
+* lower log level for docker deser fallback message by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1672
+* refactor build process by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1675
+* chore: enable strict mode by @waterplea in https://github.com/Start9Labs/embassy-os/pull/1569
+* draft releases notes for 0311 by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1677
+* add standby mode by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1671
+* feat: atomic writing by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1673
+* allow server.update to update to current version by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1679
+* allow falsey rpc response by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1680
+* issue notification when individual package restore fails by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1685
+* replace bang with question mark in html by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1683
+* only validate mounts for inject if eos `&gt;=0.3.1.1` by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1686
+* add marketplace_url to backup metadata for service by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1688
+* marketplace published at for service by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1689
+* sync data to fs before shutdown by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1690
+* messaging for restart, shutdown, rebuild by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1691
+* honor shutdown from diagnostic ui by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1692
+* ask for sudo password immediately during make by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1693
+* sync blockdev after update by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1694
+* set Matt as default assignee by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1697
+* NO_KEY for CI images by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1700
+* fix typo by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1702
+
+
+**Full Changelog**: https://github.com/Start9Labs/embassy-os/compare/v0.3.1...v0.3.1.1</summary>
+    <title>Start9Labs/embassy-os: v0.3.1.1</title>
+    <updated>2022-07-27T21:54:25Z</updated>
+    <dc:date>2022-07-27T21:54:25Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0</id>
     <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0"/>
@@ -4949,104 +4998,5 @@ Added FakeWallet, so LNbits can be used completely detached from bitcoin as a ce
     <updated>2022-02-04T15:45:49Z</updated>
     <dc:date>2022-02-04T15:45:49Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta</id>
-    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta"/>
-    <summary>This is the second minor release of the 0.14x cycle! This release contains no new larger/major features, and instead packages up a series of bug fixes (several obscure crash fixes), and enhancements (like begin able to convert a node to a watch-only mode for use with the remote signer feature).
-
-We strongly recommend that all users update!
-
-# Verifying the Release
-
-In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
-
-```
-curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/roasbeef.asc | gpg --import
-```
-
-Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.14.2-beta.sig` and `manifest-v0.14.2-beta.txt` are in the current directory) with:
-
-```
-gpg --verify manifest-roasbeef-v0.14.2-beta.sig manifest-v0.14.2-beta.txt
-```
-
-You should see the following if the verification was successful:
-
-```
-gpg: Signature made Thu Feb  3 13:55:45 2022 PST
-gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-```
-
-That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
-
-## Verifying the Release Timestamp 
-
-From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-roasbeef-v0.14.2-beta.txt.asc.ots`.
-
-Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
-```
-ots verify manifest-roasbeef-v0.14.2-beta.sig.ots -f manifest-roasbeef-v0.14.2-beta.sig
-```
-
-Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
-
-These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
-
-## Verifying the Release Binaries
-
-Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
-The release binaries are compiled with `go1.17.3`, which is required by verifiers to arrive at the same ones.
-They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, `watchtowerrpc` and `monitoring`. Note that these are already included in the release script, so they do not need to be provided.
-
-The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
-
-Finally, you can also verify the _tag_ itself with the following command:
-
-```
-$ git verify-tag v0.14.2-beta
-gpg: Signature made Thu 03 Feb 2022 08:21:05 PM UTC using RSA key ID 9B280306
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot;
-```
-
-## Verifying the Docker Images
-
-To verify the `lnd` and `lncli` binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):
-
-```shell
-$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.14.2-beta /verify-install.sh v0.14.2-beta
-$ OK=$?
-$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
-$ docker run lightninglabs/lnd [command-line options]
-```
-
-# Building the Contained Release 
-
-Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
-that `vendor.tar.gz` and `lnd-source-v0.14.2-beta.tar.gz` are in the current directory, follow these steps:
-
-```
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.14.2-beta.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.2-beta&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.2-beta&quot; ./cmd/lncli
-```
-
-The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
-
-Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
-
-```
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-```
-
-⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
-
-The release notes can be found here: https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.2.md 
-</summary>
-    <title>lightningnetwork/lnd: v0.14.2-beta</title>
-    <updated>2022-02-03T22:33:20Z</updated>
-    <dc:date>2022-02-03T22:33:20Z</dc:date>
-  </entry>
-  <dc:date>2022-07-27T20:31:09+00:00</dc:date>
+  <dc:date>2022-07-27T22:09:59+00:00</dc:date>
 </feed>
