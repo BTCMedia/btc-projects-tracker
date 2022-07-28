@@ -6,7 +6,103 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-27T22:09:59+00:00</updated>
+  <updated>2022-07-28T12:09:21+00:00</updated>
+  <entry>
+    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.3</id>
+    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.3"/>
+    <summary>### _[Wasabi](https://WasabiWallet.io) is an easy to use, privacy-focused, open-source, non-custodial, Bitcoin wallet_
+
+# Download
+
+:window: [Windows](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3.msi)
+:green_apple: [Apple M1](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3-arm64.dmg)
+:apple: [Apple Intel](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3.dmg)
+:penguin: [Ubuntu / Debian](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3.deb)
+:penguin: [Other Linus](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3.tar.gz)
+
+## Summary
+
+This minor release includes dependency updates of Avalonia and HWI, reduces the number of coins a coinjoin wallet will generate, as well as numerous bug fixes and stability improvements.
+
+## Highlights
+
+:coin: Less utxos created in coinjoins make it cheaper.
+:computer: Hardware wallet bug fixes and UI improvements.
+:arrow_up: UI crash and minor bug fixes
+:scroll: Improvements to the scroll bar and table sorting.
+:person_curly_hair: Show the recipient on the transaction preview screen.
+
+---
+
+## Installation Guide
+
+Download the operating system relevant software package and install Wasabi like you would any other software on your computer. For a detailed installation guide, including **signature verification**, see [the documentation](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html).
+
+## Advanced Guide
+
+If you want to build or update Wasabi from source code, check out [these easy instructions](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html).
+
+Wasabi uses [reproducible builds](https://reproducible-builds.org/), which you can verify with [this guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md).
+
+Build with .NET 6.0.300.
+
+## Documentation
+
+:spider_web: [Website](https://wasabiwallet.io)
+:onion: [Tor onion site](http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion/)
+:grey_question: [FAQ](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq)
+
+
+## Requirements 
+- Windows 10+
+- macOs 10.15+
+- Ubuntu 16.04, 18.04, 20.04+
+- Fedora 33+
+- Debian 10+
+
+---
+
+## What's Changed
+* Make OperationCanceledException log only in Debug mode in CoinJoinClient by @adamPetho in https://github.com/zkSNACKs/WalletWasabi/pull/8698
+* [trivial] Fix namespace for `NBitcoinExtension` class and `Extensions` class by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8184
+* Change WW2 monitor timeout from 1h to 3h by @nopara73 in https://github.com/zkSNACKs/WalletWasabi/pull/8721
+* [Trivial] Improve message to detect HW by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/8726
+* [VDG] Add HasChildren method to history item by @wieslawsoltes in https://github.com/zkSNACKs/WalletWasabi/pull/8728
+* [VDG] searchbar wording Bitcoin Knots by @MarnixCroes in https://github.com/zkSNACKs/WalletWasabi/pull/8736
+* [VDG] lowercase writing musicbox ellipse by @MarnixCroes in https://github.com/zkSNACKs/WalletWasabi/pull/8737
+* [VDG] Decrease show delay for scroll bars to improve user experience by @wieslawsoltes in https://github.com/zkSNACKs/WalletWasabi/pull/8740
+* [VDG] tooltip coinjoin time preference by @MarnixCroes in https://github.com/zkSNACKs/WalletWasabi/pull/8749
+* [Trivial] Move classes into there own files by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/8679
+* Fix logs by @nopara73 in https://github.com/zkSNACKs/WalletWasabi/pull/8756
+* update README Download image by @MarnixCroes in https://github.com/zkSNACKs/WalletWasabi/pull/8638
+* [VDG] Round to significant figures in Change Avoidance Suggestions by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8752
+* Fix infinite loop in CoinSelector by @molnard in https://github.com/zkSNACKs/WalletWasabi/pull/8367
+* [VDG] Fee Slider - full labels by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8704
+* Update avalonia 0.10.17 by @danwalmsley in https://github.com/zkSNACKs/WalletWasabi/pull/8716
+* [VDG] Remember window size by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8650
+* [VDG] Recipient on txn preview by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8563
+* `TorMonitor`: Report that &quot;we are no longer confident that we can build Tor circuits&quot; by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8711
+* [VDG] Add ability to sort coins in Coin List by indicators by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8760
+* Add original round id to log message when creating blame round by @molnard in https://github.com/zkSNACKs/WalletWasabi/pull/8762
+* [VDG] WalletManagerViewModel - simplification by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8692
+* [VDG] Fix for focus loss after window becomes inactive by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8759
+* [VDG] MainViewModel - cleanup &amp; simplification by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8236
+* Remove unused methods from LinqExtensions.cs by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/8755
+* [VDG] hww not connected text wording by @MarnixCroes in https://github.com/zkSNACKs/WalletWasabi/pull/8782
+* [VDG] Use ItemTemplate instead of DataTemplates by @wieslawsoltes in https://github.com/zkSNACKs/WalletWasabi/pull/8776
+* Return ownership proofs by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8708
+* Target low UTXO count by @nopara73 in https://github.com/zkSNACKs/WalletWasabi/pull/8768
+* Update HWI &amp; Ledger Katas by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/8792
+* Update HWI to 2.1.1 by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/7791
+* [VDG] Fee Chart - Fix labels plural form by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8795
+
+@BTCparadigm 
+
+**Full Changelog**: https://github.com/zkSNACKs/WalletWasabi/compare/v2.0.1.2...v2.0.1.3</summary>
+    <title>zkSNACKs/WalletWasabi: v2.0.1.3</title>
+    <updated>2022-07-28T11:56:31Z</updated>
+    <dc:date>2022-07-28T11:56:31Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.1.1</id>
     <link href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.1.1"/>
@@ -4990,13 +5086,5 @@ Added FakeWallet, so LNbits can be used completely detached from bitcoin as a ce
     <updated>2022-02-04T16:49:04Z</updated>
     <dc:date>2022-02-04T16:49:04Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/romanz/electrs/releases/tag/v0.9.5</id>
-    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.5"/>
-    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#095-feb-4-2022</summary>
-    <title>romanz/electrs: v0.9.5</title>
-    <updated>2022-02-04T15:45:49Z</updated>
-    <dc:date>2022-02-04T15:45:49Z</dc:date>
-  </entry>
-  <dc:date>2022-07-27T22:09:59+00:00</dc:date>
+  <dc:date>2022-07-28T12:09:21+00:00</dc:date>
 </feed>
