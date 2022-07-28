@@ -6,7 +6,20 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-28T12:09:21+00:00</updated>
+  <updated>2022-07-28T14:02:22+00:00</updated>
+  <entry>
+    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.9.1</id>
+    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.1"/>
+    <summary>## Core
+* Hotfix for `venv` install guide for building static files
+## Extensions
+* Onchain Wallet (formally known as Watch Only), scrapes for funds and gives total balance + allow psbt construction
+* Satspayserver now shows pending balance and keeps updated via mempool.space websocket
+* SCRUB extension, pushes payments going to a wallet to an LNURLpay or LNaddress</summary>
+    <title>lnbits/lnbits-legend: 0.9.1</title>
+    <updated>2022-07-28T13:52:16Z</updated>
+    <dc:date>2022-07-28T13:52:16Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.3</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.3"/>
@@ -18,7 +31,7 @@
 :green_apple: [Apple M1](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3-arm64.dmg)
 :apple: [Apple Intel](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3.dmg)
 :penguin: [Ubuntu / Debian](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3.deb)
-:penguin: [Other Linus](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3.tar.gz)
+:penguin: [Other Linux](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.3/Wasabi-2.0.1.3.tar.gz)
 
 ## Summary
 
@@ -95,8 +108,6 @@ Build with .NET 6.0.300.
 * Update HWI &amp; Ledger Katas by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/8792
 * Update HWI to 2.1.1 by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/7791
 * [VDG] Fee Chart - Fix labels plural form by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8795
-
-@BTCparadigm 
 
 **Full Changelog**: https://github.com/zkSNACKs/WalletWasabi/compare/v2.0.1.2...v2.0.1.3</summary>
     <title>zkSNACKs/WalletWasabi: v2.0.1.3</title>
@@ -5078,13 +5089,5 @@ Added FakeWallet, so LNbits can be used completely detached from bitcoin as a ce
     <updated>2022-02-07T09:07:03Z</updated>
     <dc:date>2022-02-07T09:07:03Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.0</id>
-    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.0"/>
-    <summary></summary>
-    <title>vulpemventures/marina: v0.4.0</title>
-    <updated>2022-02-04T16:49:04Z</updated>
-    <dc:date>2022-02-04T16:49:04Z</dc:date>
-  </entry>
-  <dc:date>2022-07-28T12:09:21+00:00</dc:date>
+  <dc:date>2022-07-28T14:02:22+00:00</dc:date>
 </feed>
