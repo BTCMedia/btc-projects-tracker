@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-28T14:02:22+00:00</updated>
+  <updated>2022-07-28T17:31:09+00:00</updated>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.9</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.9"/>
+    <summary></summary>
+    <title>vulpemventures/marina: v0.4.9</title>
+    <updated>2022-07-28T17:30:17Z</updated>
+    <dc:date>2022-07-28T17:30:17Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.9.1</id>
     <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.1"/>
@@ -5081,13 +5089,5 @@ Added FakeWallet, so LNbits can be used completely detached from bitcoin as a ce
     <updated>2022-02-07T13:41:11Z</updated>
     <dc:date>2022-02-07T13:41:11Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.1</id>
-    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.1"/>
-    <summary></summary>
-    <title>vulpemventures/marina: v0.4.1</title>
-    <updated>2022-02-07T09:07:03Z</updated>
-    <dc:date>2022-02-07T09:07:03Z</dc:date>
-  </entry>
-  <dc:date>2022-07-28T14:02:22+00:00</dc:date>
+  <dc:date>2022-07-28T17:31:09+00:00</dc:date>
 </feed>
