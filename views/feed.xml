@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-28T17:31:09+00:00</updated>
+  <updated>2022-07-29T09:31:49+00:00</updated>
+  <entry>
+    <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.8.0</id>
+    <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.8.0"/>
+    <summary>Introduction of WebUI &amp; API</summary>
+    <title>rootzoll/raspiblitz: v1.8.0</title>
+    <updated>2022-07-29T09:27:59Z</updated>
+    <dc:date>2022-07-29T09:27:59Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.9</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.9"/>
@@ -5079,15 +5087,5 @@ e5707d5002 Fix broken website examples (#4085)
     <updated>2022-02-08T04:51:41Z</updated>
     <dc:date>2022-02-08T04:51:41Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0</id>
-    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0"/>
-    <summary>Updated LNURLPoS to LNURLDevices, to give the extension greater scope
-Added admin users to allow easy debiting of admin accounts, and admin only extensions
-Added FakeWallet, so LNbits can be used completely detached from bitcoin as a centralised payment server (for use as voucher system in schools, universities, businesses, events, etc)</summary>
-    <title>lnbits/lnbits-legend: 0.6.0</title>
-    <updated>2022-02-07T13:41:11Z</updated>
-    <dc:date>2022-02-07T13:41:11Z</dc:date>
-  </entry>
-  <dc:date>2022-07-28T17:31:09+00:00</dc:date>
+  <dc:date>2022-07-29T09:31:49+00:00</dc:date>
 </feed>
