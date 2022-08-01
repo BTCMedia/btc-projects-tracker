@@ -46,5 +46,6 @@
 	"btcsuite/btcwallet",
 	"BlueWallet/rn-ldk",
 	"vulpemventures/marina",
-	"sparrowwallet/sparrow"
+	"sparrowwallet/sparrow",
+	"btcontract/IMMORTAN"
 ]
