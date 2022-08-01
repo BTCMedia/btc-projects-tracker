@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-07-29T09:31:49+00:00</updated>
+  <updated>2022-08-01T15:32:11+00:00</updated>
   <entry>
     <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.8.0</id>
     <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.8.0"/>
@@ -5087,5 +5087,5 @@ e5707d5002 Fix broken website examples (#4085)
     <updated>2022-02-08T04:51:41Z</updated>
     <dc:date>2022-02-08T04:51:41Z</dc:date>
   </entry>
-  <dc:date>2022-07-29T09:31:49+00:00</dc:date>
+  <dc:date>2022-08-01T15:32:11+00:00</dc:date>
 </feed>
