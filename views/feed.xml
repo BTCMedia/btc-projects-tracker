@@ -6,15 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-01T15:32:11+00:00</updated>
-  <entry>
-    <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.8.0</id>
-    <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.8.0"/>
-    <summary>Introduction of WebUI &amp; API</summary>
-    <title>rootzoll/raspiblitz: v1.8.0</title>
-    <updated>2022-07-29T09:27:59Z</updated>
-    <dc:date>2022-07-29T09:27:59Z</dc:date>
-  </entry>
+  <updated>2022-08-02T19:12:51+00:00</updated>
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.9</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.9"/>
@@ -414,62 +406,6 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <title>cryptoadvance/specter-desktop: v1.10.4</title>
     <updated>2022-07-19T15:01:41Z</updated>
     <dc:date>2022-07-19T15:01:41Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/ACINQ/eclair/releases/tag/v0.7.0-patch-disconnect</id>
-    <link href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0-patch-disconnect"/>
-    <summary># Eclair v0.7.0-patch-disconnect
-
-This is a patch release which adds two commits:
-- Add option to disable sending remote addr in init (#2285)
-- Resume reading after processing unknown messages (#2332)
-
-It addresses unwanted disconnections with peers that use unknown messages.
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-
-- from our website: https://acinq.co/pgp/drouinf.asc
-- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
-
-To import our signing key:
-
-```sh
-$ gpg --import drouinf.asc
-```
-
-To verify the release file checksums and signatures:
-
-```sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```
-
-## Building
-
-Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):
-
-- Ubuntu 20.04
-- AdoptOpenJDK 11.0.6
-- Maven 3.8.1
-
-Use the following command to generate the eclair-node package:
-
-```sh
-mvn clean install -DskipTests
-```
-
-That should generate `eclair-node/target/eclair-node-0.7.0-cad88bf-bin.zip` with sha256 checksums that match the one we provide and sign in `SHA256SUMS.asc`
-
-(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.
-
-## Upgrading
-
-This release is fully compatible with previous eclair versions. You don't need to close your channels, just stop eclair, upgrade and restart.</summary>
-    <title>ACINQ/eclair: v0.7.0-patch-disconnect</title>
-    <updated>2022-07-18T11:06:03Z</updated>
-    <dc:date>2022-07-18T11:06:03Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.2</id>
@@ -1045,14 +981,6 @@ Build with .NET 6.0.300.
     <title>zkSNACKs/WalletWasabi: v2.0.1.1</title>
     <updated>2022-07-04T15:25:44Z</updated>
     <dc:date>2022-07-04T15:25:44Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.3.1</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.3.1"/>
-    <summary>* FIX: Lightning Wallets would fail under Tor</summary>
-    <title>BlueWallet/BlueWallet: v6.3.1</title>
-    <updated>2022-07-03T21:20:44Z</updated>
-    <dc:date>2022-07-03T21:20:44Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.109</id>
@@ -2846,52 +2774,6 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <dc:date>2022-05-19T12:17:13Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.11.1</id>
-    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.11.1"/>
-    <summary>This is a minor release, highly recommended, which fixes two problems with the v0.11.0.1 release:
-
-1. Unwanted unilateral closes.  We could get confused by reconnections, and think that a peer had sent us out-of-date &quot;channel_reestablish&quot; data.  This caused us to complain about e.g. &quot;bad reestablish revocation_number: 7457 vs 7462&quot; and send an error and close the channel.
-2. An overzealous check in `connectd`, particularly when reconnecting with multiple channels, which intermittently crashed the node.
-
-Thanks to all the people who reported bugs!
-Rusty.</summary>
-    <title>ElementsProject/lightning: v0.11.1</title>
-    <updated>2022-05-16T01:19:32Z</updated>
-    <dc:date>2022-05-16T01:19:32Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.18</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.18"/>
-    <summary>This update brings two brand new apps to the Umbrel App Store — Elements Core and IPFS Podcasting, along with updated apps and bugfixes.</summary>
-    <title>getumbrel/umbrel: v0.4.18</title>
-    <updated>2022-05-13T13:26:45Z</updated>
-    <dc:date>2022-05-13T13:26:45Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.0.3</id>
-    <link href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.0.3"/>
-    <summary>## What's Changed
-* refactor: decompose app component by @waterplea in https://github.com/Start9Labs/embassy-os/pull/1359
-* Update Makefile by @kn0wmad in https://github.com/Start9Labs/embassy-os/pull/1400
-* ⬐ smarter wget by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1401
-* prevent the kernel from OOMKilling embassyd by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1402
-* attempt to heal when health check passes by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1420
-* Feat  new locking by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1384
-* version bump by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1423
-* Update server-show.page.ts by @chrisguida in https://github.com/Start9Labs/embassy-os/pull/1424
-* Bump async from 2.6.3 to 2.6.4 in /frontend by @dependabot in https://github.com/Start9Labs/embassy-os/pull/1426
-* Update index.html by @mirkoRainer in https://github.com/Start9Labs/embassy-os/pull/1419
-
-## New Contributors
-* @dependabot made their first contribution in https://github.com/Start9Labs/embassy-os/pull/1426
-* @mirkoRainer made their first contribution in https://github.com/Start9Labs/embassy-os/pull/1419
-
-**Full Changelog**: https://github.com/Start9Labs/embassy-os/compare/v0.3.0.2...v0.3.0.3</summary>
-    <title>Start9Labs/embassy-os: v0.3.0.3</title>
-    <updated>2022-05-09T20:06:31Z</updated>
-    <dc:date>2022-05-09T20:06:31Z</dc:date>
-  </entry>
-  <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.2</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.2"/>
     <summary>### Bug fixes:
@@ -3190,77 +3072,6 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <title>cryptoadvance/specter-desktop: v1.9.4</title>
     <updated>2022-04-28T11:55:21Z</updated>
     <dc:date>2022-04-28T11:55:21Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.11.0.1</id>
-    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.11.0.1"/>
-    <summary>We're pleased to announce the 0.11.0 release of c-lightning, named on behalf of @SimonVrouwe.
-
-This release is the first under the rebranded &quot;Core Lightning&quot; name.
-(Note: binaries are labelled v0.11.0.1 due to a minor bugfix required for reproducible builds).
-
-## Highlights for Users
-
-* We now finally support multiple live channels to the same peer!
-* If we detect rust support, we'll build the `cln-grpc` plugin for full native GRPC support.
-* We advertize an external IP address if it's reported by two or more peers (`disable-ip-discovery` or `always-use-proxy` disables).
-* You can specify two databases with --wallet, and we'll write to both at once (sqlite3 only).
-* `pay` supports BOLT 11 payment metadata: we'll send it if it's in the invoice.
-* New `setchannel` command (deprecates `setchannelfee`) allows setting max and min HTLC amounts.  Try `lightning-cli setchannel all 0` for #zerobasefee.
-* `pay` can be forced to exclude channels or nodes with the `exclude` 
-* Significant speedup in start times for old nodes with many historical HTLCs.
-
-# Highlights for the Network
-
-* We send the remote node's IP address in the `init` message, so they can tell what it is. (https://github.com/lightning/bolts/pull/917)
-* We are more aggressive in sending our own gossip to peers, to help propagation.
-* Default port is set by network, so regtest and testnet defaults are different. (https://github.com/lightning/bolts/pull/968)
-* We never generate legacy onions, it's always TLV.  We still forward legacy onions for now.
-* We flush sockets before closing, so errors are more likely to reach the peer.
-* Experimental support for announcing DNS addresses in node_announcement (https://github.com/lightning/bolts/pull/911)
-
- 
-# Highlights for Developers
-
-* `pay` has a `maxfee` parameter, which sets a simple LND-style upper fee (vs using `maxfeepercent` and `exemptfee`)
-* You can create invoices with only a description hash, using `deschashonly`.  We still store the full description, so use restraint!
-* `pay` has deprecated paying solely by description hash: you should provide the full description, too.
-* `delinvoice` has a new `desconly` parameter to simply trim the descriptions, but leave the rest intact.
-* We have a rust crate `cln-rpc` to easily interact with our JSON-RPC.
-* `msggen` tool allows easy generation of language bindings for our JSON RPC interface.
-
-More details can be found in the changelog.
-
-Thanks to everyone for their contributions and bug reports; please keep them coming.
-
-Since 0.10.2, we've had 712 commits from 37 different authors over 170 days.
-
-A special thanks goes to the 18 first time contributors (a new record!):
-
-* Aaron Dewes
-* Tim W
-* manreo
-* Gregory Sanders
-* zero fee routing
-* Stephen Webel
-* Michael Dance
-* Marnix
-* lightning-developer
-* kiwiidb
-* Jules Comte
-* JohnOnGit
-* GoofyAF
-* Denis Ahrens
-* Clay Shoaf
-* benthecarman
-* azuchi
-* Anand Suresh
-
-Cheers,
-Christian, Rusty, Lisa.</summary>
-    <title>ElementsProject/lightning: v0.11.0.1</title>
-    <updated>2022-04-26T21:48:40Z</updated>
-    <dc:date>2022-04-26T21:48:40Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/bitcoin/bitcoin/releases/tag/v23.0</id>
@@ -3658,36 +3469,6 @@ d7f12be1d4 Update scalafx to 17.0.1-R26 (#3874)
     <dc:date>2022-04-18T17:44:34Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/bitcoin-core/HWI/releases/tag/2.1.0</id>
-    <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.1.0"/>
-    <summary>Also available on [PyPi](https://pypi.org/project/hwi/2.1.0/) and can be installed with `pip install -U hwi`
-
-# Added
-
-* Blockstream Jade is now supported
-* Taproot support
-  * Taproot signing support for Trezors and Ledger
-  * Taproot PSBT fields
-  * `tr()` descriptors and `tap` address type
-* Support for Ledger Bitcoin App 2.0. Note that the 2.0 app changes what the Ledger will sign and may break some workflows.
-* Trezor multisig change address verification
-* `signtx` will return a status indicating whether the PSBT was signed
-* Trezor labels will be output in `enumerate`
-* PSBTv2 support
-
-# Removed
-
-* For Trezor Ones with firmware 1.10.6 and greater and Trezor Ts with firmware 2.4.4 and greater will not be able to sign transactions containing external inputs
-
-# Fixed
-
-* Keepkeys will no longer also appear as Trezors
-* Nonresponse with some Trezors/Keepkeys when sending PIN</summary>
-    <title>bitcoin-core/HWI: 2.1.0</title>
-    <updated>2022-04-15T21:41:28Z</updated>
-    <dc:date>2022-04-15T21:41:28Z</dc:date>
-  </entry>
-  <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.5</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.5"/>
     <summary></summary>
@@ -3714,14 +3495,6 @@ d7f12be1d4 Update scalafx to 17.0.1-R26 (#3874)
     <title>Start9Labs/embassy-os: v0.3.0.1</title>
     <updated>2022-04-07T04:40:20Z</updated>
     <dc:date>2022-04-07T04:40:20Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.17</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.17"/>
-    <summary>This update brings two brand new apps to the Umbrel App Store — Agora and sparkkiosk, along with updated apps and bugfixes.</summary>
-    <title>getumbrel/umbrel: v0.4.17</title>
-    <updated>2022-04-05T12:02:34Z</updated>
-    <dc:date>2022-04-05T12:02:34Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.2</id>
@@ -4195,139 +3968,6 @@ $ sha256sum -c SHA256SUMS.stripped
     <title>vulpemventures/marina: v0.4.4</title>
     <updated>2022-03-10T13:04:25Z</updated>
     <dc:date>2022-03-10T13:04:25Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/bisq-network/bisq/releases/tag/v1.8.4</id>
-    <link href="https://github.com/bisq-network/bisq/releases/tag/v1.8.4"/>
-    <summary>This is a follow-up release that fixes the news badge on `Settings` for existing Bisq users and handles an additional case where the DAO needs resync.
-
-See https://github.com/bisq-network/bisq/milestone/69?closed=1 for more details.
-
-Here are the release notes from v1.8.3:
-
-## Release notes
-This release improves privacy by automatically deleting past trade data, improves the UI in many places, and fixes bugs across the board (as always).
-
-### Improvements
-- [Clear payment account payload info from closed trades](https://github.com/bisq-network/bisq/pull/6001)
-- [Allow dispute to be closed if trade has paid out](https://github.com/bisq-network/bisq/pull/6015)
-- [Include penalty for exceeding transfer limits](https://github.com/bisq-network/bisq/pull/5965)
-- [Show buyer/seller in terms of BTC](https://github.com/bisq-network/bisq/pull/6049)
-- [Show signed payment account status when applicable in Trade &amp; Dispute information screens](https://github.com/bisq-network/bisq/pull/6053)
-- [Show proposal transaction ID with explore and copy icons](https://github.com/bisq-network/bisq/pull/5977)
-- [Sign/Verify message for DAO bonded roles](https://github.com/bisq-network/bisq/pull/6032)
-- [Obtain trade fee settings from filter](https://github.com/bisq-network/bisq/pull/6048)
-- [Warn and prompt for password before showing wallet keys](https://github.com/bisq-network/bisq/pull/6021)
-- [Add ability to copy popup text to clipboard](https://github.com/bisq-network/bisq/pull/6054)
-- [Add support/help links on the UI](https://github.com/bisq-network/bisq/pull/5985)
-- [Add filter option to lists](https://github.com/bisq-network/bisq/pull/5963)
-- [Improve text and icon colors for disabled offers](https://github.com/bisq-network/bisq/pull/6017)
-- [Remove references to Keybase and switch to Matrix](https://github.com/bisq-network/bisq/pull/6005)
-- [Improve BSQ swap error messaging &amp; DAO resync popup](https://github.com/bisq-network/bisq/pull/6063)
-
-### Bug fixes
-- [Fix exception: heightOfLastBlock must match chainHeight](https://github.com/bisq-network/bisq/pull/6018)
-- [Fix issue selecting specific BSQ UTXO for sending BSQ](https://github.com/bisq-network/bisq/pull/6040)
-- [Fix error in failed trades view when trade contract is null](https://github.com/bisq-network/bisq/pull/6045)
-- [Fix NullPointerException when editing a new payment account](https://github.com/bisq-network/bisq/pull/6058)
-- [Fix unhandled exception when locale specifies unknown country/region code.](https://github.com/bisq-network/bisq/pull/6029)
-- [Fix column sorting](https://github.com/bisq-network/bisq/pull/6019)
-- [Fix sorting on bonded roles view](https://github.com/bisq-network/bisq/pull/6002)
-- [Prevent reset offer values after switch to same currency payment account](https://github.com/bisq-network/bisq/pull/5983)
-- [Filter out the BSQ swap payment method from dropdown on edit/duplicate offer](https://github.com/bisq-network/bisq/pull/5984)
-- [Fix CSV export issue on open offers view](https://github.com/bisq-network/bisq/pull/5991)
-- [Enable Tor bridges set in application settings](https://github.com/bisq-network/bisq/pull/5966)
-- Get payment method ID from offerPayload: [1](https://github.com/bisq-network/bisq/pull/6072), [2](https://github.com/bisq-network/bisq/pull/6069)
-- [Disable roll over popups in combobox item renderers.](https://github.com/bisq-network/bisq/pull/6070)
-
-### Development &amp; Documentation
-- API: [Add API `gettrades` method](https://github.com/bisq-network/bisq/pull/5976)
-- API: [Fix FeeService NullPointerException](https://github.com/bisq-network/bisq/pull/6052)
-- [Update copyright string for Windows](https://github.com/bisq-network/bisq/pull/5998)
-- [Update copyright string for macOS](https://github.com/bisq-network/bisq/pull/5997)
-- [Cleanup: remove unused classes](https://github.com/bisq-network/bisq/pull/5987)
-- [Improve instructions and wording](https://github.com/bisq-network/bisq/pull/5994)
-- [Update hostname of BSQ explorer mempool.emzy.de](https://github.com/bisq-network/bisq/pull/5981)
-
-### New Assets
-No new assets were added.
-
-## Verification
-
-For a detailed description on how to verify your Bisq installer please have a look at our wiki: https://bisq.wiki/Downloading_and_installing#Verify_installer_file
-
-Url of the signing key (Christoph Atteneder): https://bisq.network/pubkey/29CDFD3B.asc
-Full fingerprint: `CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B`
-
-Import the key:
-`curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import`
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key for background information what it means.
-
-How to verify signatures?
-`gpg --digest-algo SHA256 --verify BINARY{.asc*,}`
-Replace BINARY with the file you downloaded (e.g. Bisq-1.8.4.dmg)
-
-Verify jar file inside binary:
-You can verify on OSX the jar file with:
-shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.8.4-all.jar
-The output need to match the value from the Bisq-1.8.4.jar.txt file.
-
-There are three hashes within the Bisq-1.8.4.jar.txt file (macOS, Windows, Linux).
-If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 15.0.5 and the v1.8.4 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.
-
-## Known issues with installation 
-
-### Windows:
-
-There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.
-
-If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.
-
-[1] Application directory (contains application installation files):
-C:\Users\&lt;username&gt;\AppData\Local\Bisq
-
-[2] Data directory (contains all Bisq data including wallet):
-C:\Users\&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)
-
-
-### Linux:
-
-Hint for Debian users:
-If you have problems starting Bisq on Debian use: `/opt/bisq/bin/Bisq`
-
-If your Linux distro does not support .deb files please follow this instruction:
-```
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.8.4.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-```
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. 
-
-## Credits
-
-Thanks to everyone who directly contributed to this release:
-
-- @Emzy
-- @ghubstan
-- @jmacxx 
-- @MarnixCroes 
-- @MwithM 
-- @ripcurlx 
-- @sqrrm 
-- @w0000000t 
-- @wiz 
-- @xyzmaker123 
-
-A special thanks to our first time contributors:
-  - @MarnixCroes: [Update Apple plist copyright notice](https://github.com/bisq-network/bisq/pull/5997)
-
-As well as to everyone that helped with translations on [Transifex](https://transifex.com/bisq/bisq-desktop).</summary>
-    <title>bisq-network/bisq: v1.8.4</title>
-    <updated>2022-03-08T10:37:06Z</updated>
-    <dc:date>2022-03-08T10:37:06Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.6.1</id>
@@ -5061,14 +4701,6 @@ e5707d5002 Fix broken website examples (#4085)
     <dc:date>2022-02-11T17:28:39Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.14</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.14"/>
-    <summary>This update brings four brand new apps to the Umbrel App Store — Urbit, Urbit Bitcoin Connector, Tailscale, and usocial, along with LND 0.14.2, updated apps, and Nunchuk wallet connection support.</summary>
-    <title>getumbrel/umbrel: v0.4.14</title>
-    <updated>2022-02-09T15:35:35Z</updated>
-    <dc:date>2022-02-09T15:35:35Z</dc:date>
-  </entry>
-  <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4"/>
     <summary>### Bug fixes:
@@ -5087,5 +4719,297 @@ e5707d5002 Fix broken website examples (#4085)
     <updated>2022-02-08T04:51:41Z</updated>
     <dc:date>2022-02-08T04:51:41Z</dc:date>
   </entry>
-  <dc:date>2022-08-01T15:32:11+00:00</dc:date>
+  <entry>
+    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0</id>
+    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0"/>
+    <summary>Updated LNURLPoS to LNURLDevices, to give the extension greater scope
+Added admin users to allow easy debiting of admin accounts, and admin only extensions
+Added FakeWallet, so LNbits can be used completely detached from bitcoin as a centralised payment server (for use as voucher system in schools, universities, businesses, events, etc)</summary>
+    <title>lnbits/lnbits-legend: 0.6.0</title>
+    <updated>2022-02-07T13:41:11Z</updated>
+    <dc:date>2022-02-07T13:41:11Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.1</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.1"/>
+    <summary></summary>
+    <title>vulpemventures/marina: v0.4.1</title>
+    <updated>2022-02-07T09:07:03Z</updated>
+    <dc:date>2022-02-07T09:07:03Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.0</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.0"/>
+    <summary></summary>
+    <title>vulpemventures/marina: v0.4.0</title>
+    <updated>2022-02-04T16:49:04Z</updated>
+    <dc:date>2022-02-04T16:49:04Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/romanz/electrs/releases/tag/v0.9.5</id>
+    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.5"/>
+    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#095-feb-4-2022</summary>
+    <title>romanz/electrs: v0.9.5</title>
+    <updated>2022-02-04T15:45:49Z</updated>
+    <dc:date>2022-02-04T15:45:49Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta</id>
+    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta"/>
+    <summary>This is the second minor release of the 0.14x cycle! This release contains no new larger/major features, and instead packages up a series of bug fixes (several obscure crash fixes), and enhancements (like begin able to convert a node to a watch-only mode for use with the remote signer feature).
+
+We strongly recommend that all users update!
+
+# Verifying the Release
+
+In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
+
+```
+curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/roasbeef.asc | gpg --import
+```
+
+Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.14.2-beta.sig` and `manifest-v0.14.2-beta.txt` are in the current directory) with:
+
+```
+gpg --verify manifest-roasbeef-v0.14.2-beta.sig manifest-v0.14.2-beta.txt
+```
+
+You should see the following if the verification was successful:
+
+```
+gpg: Signature made Thu Feb  3 13:55:45 2022 PST
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+```
+
+That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
+
+## Verifying the Release Timestamp 
+
+From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-roasbeef-v0.14.2-beta.txt.asc.ots`.
+
+Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+```
+ots verify manifest-roasbeef-v0.14.2-beta.sig.ots -f manifest-roasbeef-v0.14.2-beta.sig
+```
+
+Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
+
+These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
+
+## Verifying the Release Binaries
+
+Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
+The release binaries are compiled with `go1.17.3`, which is required by verifiers to arrive at the same ones.
+They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, `watchtowerrpc` and `monitoring`. Note that these are already included in the release script, so they do not need to be provided.
+
+The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
+
+Finally, you can also verify the _tag_ itself with the following command:
+
+```
+$ git verify-tag v0.14.2-beta
+gpg: Signature made Thu 03 Feb 2022 08:21:05 PM UTC using RSA key ID 9B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot;
+```
+
+## Verifying the Docker Images
+
+To verify the `lnd` and `lncli` binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):
+
+```shell
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.14.2-beta /verify-install.sh v0.14.2-beta
+$ OK=$?
+$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
+$ docker run lightninglabs/lnd [command-line options]
+```
+
+# Building the Contained Release 
+
+Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
+that `vendor.tar.gz` and `lnd-source-v0.14.2-beta.tar.gz` are in the current directory, follow these steps:
+
+```
+tar -xvzf vendor.tar.gz
+tar -xvzf lnd-source-v0.14.2-beta.tar.gz
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.2-beta&quot; ./cmd/lnd
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.2-beta&quot; ./cmd/lncli
+```
+
+The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
+
+Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
+
+```
+make release sys=&quot;linux-arm64 darwin-amd64&quot;
+```
+
+⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
+
+The release notes can be found here: https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.2.md 
+</summary>
+    <title>lightningnetwork/lnd: v0.14.2-beta</title>
+    <updated>2022-02-03T22:33:20Z</updated>
+    <dc:date>2022-02-03T22:33:20Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.5.6</id>
+    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.5.6"/>
+    <summary>- Add wallet search dialog for labels, address, values and txids across all wallet accounts (View menu)
+- Add dialog to sweep a private key in WIF format (e.g. Opendime) to any address (Tools menu)
+- Expand transaction diagram in popup by clicking on it to display more inputs, outputs and their values
+- Do database updates in a background thread and improve efficiency when refreshing a deep wallet
+- Improve deep wallet loading performance by adding a setting to watch only the last X used addresses plus the gap limit (Settings &gt; Advanced)
+- General wallet loading performance improvements
+- Add broadcasting step to Soroban initiator dialog and indicate when the transaction has been successfully broadcasted
+- Add fee rate, RBF and vB from tip information to the tooltip for unconfirmed transactions in transactions tab
+- Remove AOPP
+- Pass PSBTs and messages to HWI on stdin to avoid overly long process arguments
+- Support retrieving a keystore from a scanned crypto-output QR
+- Indicate output descriptor key expressions are shown in canonical order
+- Indicate payment label is required
+- Request focus on password field for encrypted locked wallets when wallet window becomes active
+- Increase maximum number of UTXO chart bars
+- (Re)allow full addresses in Whirlpool child wallet address CSV exports
+- Ensure monotonically increasing ids are used for all JSON-RPC requests in a session
+- Tune batch page size for better performance over Tor (maxPageSize config setting)
+- Detect Fulcrum version to enable batching (&gt; 1.6.0)
+- Upgrade to H2 2.0.206
+- Bug fix: Fix memory leak in Jetty ShutdownThread when mixing
+- Bug fix: Fix regression selecting a public server in regtest
+- Bug fix: Don't enable the Max button when Clear is pressed
+- Bug fix: Use unique (per session) integers as ids for all paged server queries
+- Bug fix: Adapt to non-commented derivation entries for multiple derivation path wallets in Coldcard export file (firmware &gt; 3.2.1)
+- Bug fix: Fix incorrect mix out probability percentage shown in tooltip
+- Bug fix: Fix NPE when performing Soroban reply without UTXOs
+- Bug fix: Only retain one day of mempool rate sizes to keep memory usage bounded
+- Bug fix: Fix reversion of transaction labels when switching servers
+- Bug fix: Fix disappearing watch only accounts with the same derivation path
+- Bug fix: Improve label cell performance by avoiding clipboard retrieval on creation</summary>
+    <title>sparrowwallet/sparrow: 1.5.6</title>
+    <updated>2022-02-03T12:04:52Z</updated>
+    <dc:date>2022-02-03T12:04:52Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.18</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.18"/>
+    <summary>* FIX: Reorder wallets screen crash on macOS</summary>
+    <title>BlueWallet/BlueWallet: v6.2.18</title>
+    <updated>2022-02-02T20:13:32Z</updated>
+    <dc:date>2022-02-02T20:13:32Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.12</id>
+    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.12"/>
+    <summary>Umbrel 0.4.12 brings four brand new apps in the Umbrel App Store — Kollider, Bitfeed, Suredbits Wallet, and LNDg, updated apps, a security patch, bug fixes, and more.</summary>
+    <title>getumbrel/umbrel: v0.4.12</title>
+    <updated>2022-02-02T13:53:43Z</updated>
+    <dc:date>2022-02-02T13:53:43Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.1</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.1"/>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/Specter-Setup-v1.8.1.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/SpecterDesktop-v1.8.1.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/specter_desktop-v1.8.1-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/specterd-v1.8.1-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/specterd-v1.8.1-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/specterd-v1.8.1-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[SHA256SUMS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/SHA256SUMS) file contains sha256 hashes of all binary files and signed with &quot;Specter Signer's&quot; GPG key.
+You can get the public key from [here](http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7).
+Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
+This key has been signed by @k9ert's key which you might have used for validating th 1.7.0 release.
+
+# Release notes
+* Bugfix: Import electrum multisig wallet (with available seed) (#1543 relativisticelectron) 
+* Feature: Adds JS polling to improve Swan integration flow completion (#1546 kdmukai )</summary>
+    <title>cryptoadvance/specter-desktop: v1.8.1</title>
+    <updated>2022-02-01T15:37:31Z</updated>
+    <dc:date>2022-02-01T15:37:31Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17"/>
+    <summary>* ADD: show selected coins summary on CoinControl screen 
+* ADD: Navigate to selected wallet 
+* DEL: AOPP 
+* FIX: Reorder wallet is clunky to use. #4405</summary>
+    <title>BlueWallet/BlueWallet: v6.2.17</title>
+    <updated>2022-01-31T20:46:04Z</updated>
+    <dc:date>2022-01-31T20:46:04Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0"/>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/Specter-Setup-v1.8.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/SpecterDesktop-v1.8.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specter_desktop-v1.8.0-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[SHA256SUMS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/SHA256SUMS) file contains sha256 hashes of all binary files and signed with &quot;Specter Signer's&quot; GPG key.
+You can get the public key from [here](http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7).
+Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
+This key has been signed by @k9ert's key which you might have used for validating th 1.7.0 release.
+
+# Release notes
+
+- Feature: Add Jade multisig support #1520 (Stepan Snigirev)
+- Feature: add liquid-testnet support #1527 (Stepan Snigirev)
+- Feature: Allow descriptors with xpubs but without derivations (just wpkh(xpub) ) for wallet imports  #1519 (Stepan Snigirev)
+- Feature: search improvements #1497 (Kim Neunert)
+- Feature: Send dialog refactored and sped up #1454 (Kim Neunert)
+- Feature: Service integration - Swan #1517 (kdmukai)
+- Bugfix: Coin selection - unselection via toggle #1536 (Manolis)
+- Bugfix: deactivate internal Tor for non-AppImages #1499 (Kim Neunert)
+- Bugfix: Edge case for electrum label import #1542 (relativisticelectron)
+- Bugfix/Feature: Restoring send functionalities and better address validation and fee selection #1532 (Manolis)
+- Bugfix: Final Swan service updates #1533 (kdmukai)
+- Bugfix: fix jade signing of unconfidential inputs #1528 (Stepan Snigirev)
+- Bugfix: fix keypoolrefill perfomance and adjusted callback logic #1508 (Kim Neunert)
+- Bugfix: Multiple send bug fixes #1538 (Manolis)
+- Bugfix: prevent using keys twice #1500 (Kim Neunert)
+- Bugfix: Restore ability to import address labels of unlabeled addresses #1511 (relativisticelectron)
+- Bugfix: Revision of test-new-releases.md #1529 (Manolis)
+- Bugfix: Servicediscovery in pyinstaller-packages (specterd) #1531 (Kim Neunert)
+- Bugfix: service icons breaking liquid #1534 (Stepan Snigirev)
+- Bugfix: Very last fixes for Service swan #1537 (Kim Neunert)
+- Documentation: message signature #1310 (Kim Neunert)
+- Documentation: added endless pacman troubleshooting Guide #1498 (Kim Neunert)
+- Documentation: Create document for testing-setups and cleaning up swan #1526 (Kim Neunert)
+- Documentation: Update Donation Link #1514 (Moritz)
+- I18N: Fixed the translation error. #1507 (2a3dex)
+- UIUX: Added suggestion to quit other wallet software when connecting HWI over USB #1535 (Lobbelt)
+- UIUX: Improve behaviour for apps #1540 (Kim Neunert)
+- UIUX: Fixed help text #1510 (relativisticelectron)
+- Chore: Bump HWI to 2.0.2 #1522 (Michael Henke)
+- Chore: Fix running bitcoind with docker #1523 (Kim Neunert)
+</summary>
+    <title>cryptoadvance/specter-desktop: v1.8.0</title>
+    <updated>2022-01-29T12:15:02Z</updated>
+    <dc:date>2022-01-29T12:15:02Z</dc:date>
+  </entry>
+  <dc:date>2022-08-02T19:12:51+00:00</dc:date>
 </feed>
