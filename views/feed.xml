@@ -6,29 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-03T13:21:49+00:00</updated>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.4</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.4"/>
-    <summary>### Improvement:
-
-* If a webhook is the loopback address, skip SSL verification @Kukks
-
-### Bug fixes:
-
-* Minor checkout UI fix (#4015) @dennisreimann
-* Greenfield: Update webhook would reset the secret (#4010) @Kukks
-* Fix crash when BTC network isn't available (#4007) @Kukks
-* Make InvoicePaymentSettled return correct afterExpiration value (#3966) @Kukks
-* Greenfield: Allow tagging a transaction even if it hasn't been yet broadcasted @Kukks
-
-### Improvements:
-
-* The invoice filter dropdown list labels should be &quot;Settled invoice&quot; rather than &quot;Paid invoice&quot; (#4000 #3573) @BitcoinABee</summary>
-    <title>btcpayserver/btcpayserver: v1.6.4</title>
-    <updated>2022-08-03T13:19:15Z</updated>
-    <dc:date>2022-08-03T13:19:15Z</dc:date>
-  </entry>
+  <updated>2022-08-03T14:11:47+00:00</updated>
   <entry>
     <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.8.0</id>
     <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.8.0"/>
@@ -3974,29 +3952,6 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <dc:date>2022-03-31T13:44:20Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.8</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.8"/>
-    <summary>### New features:
-* Greenfield: Send email via store (#3181) @woutersamaey @kukks
-* Greenfield: Configure store email settings (#3554) @kukks
-* Greenfield: Create lightning invoice with description hash (#3559) @dennisreimann
-
-### Bug fixes:
-* Fix crash on Wallet send page @bolatovumar
-* Various UI fixes (#3519 #3522 #3543 #3553 #3584 #3578) @dennisreimann @bolatovumar @dafunction
-* Fix plugin listing error due to Github rate limiting (#3502) @kukks
-* Fix shopify integration (#3589) @kukks
-* Fix order id in invoices updating (#3521) @woutersamaey
-* Fix missing permissions in API keys creation pages @Kukks
-
-### Improvements:
-* Various improvements around plugin system @dennisreimann @kukks
-* Various tweaks around copy in UI @phershbe @dennisreimann @kukks @pavlenex</summary>
-    <title>btcpayserver/btcpayserver: v1.4.8</title>
-    <updated>2022-03-31T11:41:00Z</updated>
-    <dc:date>2022-03-31T11:41:00Z</dc:date>
-  </entry>
-  <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0"/>
     <summary># Binaries
@@ -5090,5 +5045,34 @@ e5707d5002 Fix broken website examples (#4085)
     <updated>2022-02-09T15:35:35Z</updated>
     <dc:date>2022-02-09T15:35:35Z</dc:date>
   </entry>
-  <dc:date>2022-08-03T13:21:49+00:00</dc:date>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.4"/>
+    <summary>### Bug fixes:
+
+* Ensure compresed public key is used for SIN generation even if uncompressed key was provided (fix #3432) (#3433) @CherryDT
+* After login, redirect user to the main page even if a root app configured (#3429) @NicolasDorier
+* docker-entrypoint would crash if missing ssh pubkey, but not the private key @NicolasDorier
+* Error messages when starting BTCPay Server where not shown (Fix #3404) @NicolasDorier
+
+### Improvements:
+
+* UI: Use sticky headers for pages with tab navigation. (#3416) @dennisreimann
+* UI: Prevent initial scroll to section nav (#3411) @dennisreimann
+</summary>
+    <title>btcpayserver/btcpayserver: v1.4.4</title>
+    <updated>2022-02-08T04:51:41Z</updated>
+    <dc:date>2022-02-08T04:51:41Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0</id>
+    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0"/>
+    <summary>Updated LNURLPoS to LNURLDevices, to give the extension greater scope
+Added admin users to allow easy debiting of admin accounts, and admin only extensions
+Added FakeWallet, so LNbits can be used completely detached from bitcoin as a centralised payment server (for use as voucher system in schools, universities, businesses, events, etc)</summary>
+    <title>lnbits/lnbits-legend: 0.6.0</title>
+    <updated>2022-02-07T13:41:11Z</updated>
+    <dc:date>2022-02-07T13:41:11Z</dc:date>
+  </entry>
+  <dc:date>2022-08-03T14:11:47+00:00</dc:date>
 </feed>
