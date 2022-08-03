@@ -38,6 +38,42 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.4">v1.6.4</a>
+						    </h2>
+							<p class="card-text">Published: 2022-08-03 13:19:15 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Improvement:</h3>
+
+<ul>
+<li>If a webhook is the loopback address, skip SSL verification @Kukks</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Minor checkout UI fix (#4015) @dennisreimann</li>
+<li>Greenfield: Update webhook would reset the secret (#4010) @Kukks</li>
+<li>Fix crash when BTC network isn&#39;t available (#4007) @Kukks</li>
+<li>Make InvoicePaymentSettled return correct afterExpiration value (#3966) @Kukks</li>
+<li>Greenfield: Allow tagging a transaction even if it hasn&#39;t been yet broadcasted @Kukks</li>
+</ul>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>The invoice filter dropdown list labels should be &quot;Settled invoice&quot; rather than &quot;Paid invoice&quot; (#4000 #3573) @BitcoinABee</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.4" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/rootzoll/raspiblitz">rootzoll/raspiblitz</a>: <a href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.8.0">v1.8.0</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-29 09:27:59 UTC</p>
@@ -680,6 +716,36 @@ mvn clean install -DskipTests
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.2">v1.6.2</a>
+						    </h2>
+							<p class="card-text">Published: 2022-07-15 03:52:53 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Bug fixes:</h3>
+
+<ul>
+<li>Fix: Cannot withdraw refund (payouts) with LNURL (#3953 #3953) @Kukks</li>
+<li>Fix: Cannot withdraw refund (payouts) with LN Address (#3953 #3960) @Kukks</li>
+<li>Fix: Missing pager in the wallet transaction list @NicolasDorier</li>
+<li>Fix: webhook &quot;Send specific events&quot; display issue (#3959) @rustywave</li>
+</ul>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>Added HRF and Strike to the list of supporters #3965 @dennisreimann</li>
+<li>Invoice summary: Fix indentation and heading levels (#3956) @dennisreimann</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.5.1">v0.5.1</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-14 12:04:38 UTC</p>
@@ -948,6 +1014,82 @@ If you are using altcoins integration, you need to update urgently as some chang
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.0">v1.6.0</a>
+						    </h2>
+							<p class="card-text">Published: 2022-07-08 14:37:14 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>In the past six months, we fixed a critical security vulnerability in one of BTCPay&#39;s versions. The security vulnerability has been disclosed responsibly, and we granted a bounty to the security researcher who discovered it. As far as we know, this particular vulnerability has not been exploited in the wild as it depends on multiple factors. For security reasons, we will not publicly disclose details yet. Timeframe for public disclosure is 6-12 months. We already have a CVE number reserved for it.</p>
+
+<p>It&#39;s very likely that by updating BTCPay Server in the past six months, you&#39;ve already patched this vulnerability. To be safe, update your instance if you haven&#39;t done so in a long time.</p>
+
+<h3>New features:</h3>
+
+<ul>
+<li>Dashboard: Add Lightning balances and easy access to lightning services (#3838) @dennisreimann</li>
+<li>Dashboard: Add Point Of Sale data (#3897) @dennisreimann @dstrukt</li>
+<li>Greenfield: Basic API Get and Delete operations for apps (#3894) @bolatovumar</li>
+<li>Greenfield: Add Lightning balance endpoint (#3887) @dennisreimann</li>
+<li>Greenfield: Allow excluding unconfirmed UTXOs when creating a new transaction (#3737) @bolatovumar</li>
+<li>Checkout: Public invoice&#39;s receipt (#3612) @Kukks</li>
+<li>Can disable TLS certificate check for email servers @NicolasDorier</li>
+<li>Can add sender&#39;s name to any field accepting an email destination, for example <code>Nicolas Dorier &lt;blah@example.com&gt;</code> rather than just <code>blah@example.com</code> (#3891) @NicolasDorier</li>
+<li>Support LNURL Withdraw in payouts (#3709) @Kukks</li>
+<li>Can send parametized emails based on invoice events (#3611) @Kukks</li>
+<li>Dashboard: Added toggle button to switch to store default currency (#3752) @SakshamSolanki @dennisreimann </li>
+<li>Support Lightning node connection string with onion addresses (#3845) @Kukks</li>
+<li>New rate provider: BUDA a chilean exchange (#3766) @Kukks</li>
+<li>Add Refunds list to Invoice details page (#3815) @Kukks</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>UI: Fix cancel plugin command (#3903) @dennisreimann </li>
+<li>Crowdfunding: Fix the links for the default Quake sounds (#3745) @dennisreimann</li>
+<li>UI: Fix nav height issue on mobile devices (#3888) @bolatovumar</li>
+<li>UI: Fix mark all notifications as seen return URL (#3848) @dennisreimann</li>
+<li>UI: When disabling a user, then it as an admin, attempting to remove or enable the user would fail while showing success in the UI (#3829 #3832) @rustywave</li>
+<li>Deleting an admin gives a 500 error, and cannot disable the same user (#3785 #3818) @rustywave</li>
+<li>Fix some rate providers (#3813) @Kukks</li>
+<li>Dashboard: Do not display archived invoices in recent invoices (#3783) @dennisreimann</li>
+<li>Error happening when broadcasting transactions weren&#39;t shown in the UI @NicolasDorier</li>
+<li>If LNURL for standard invoice was disabled, and PoS print view used, the QR code would throw error 404 (#3930) @Kukks</li>
+</ul>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>Don&#39;t show &quot;Set up a Lightning node&quot; when LN is not supported (#3935) @bolatovumar</li>
+<li>Redirect to invoice details instead of list upon creation (#3936) @bolatovumar</li>
+<li>Better UI/UX for on-chain send and receive (#3921) @dennisreimann @dstrukt</li>
+<li>Add refund badge to invoice lists (#3918) @Kukks</li>
+<li>Creating and editing a payment request now redirect to the payment request list (#3825) @rustywave</li>
+<li>Crowdfunding: Several UI/UX improvement for the settings (#3708 #3488) @dennisreimann @dstrukt</li>
+<li>Improve the refund flow (#3715 #3731) @dstrukt @dennisreimann</li>
+<li>Improve email settings validation and UX (#3891) @NicolasDorier</li>
+<li>Add spam rate limits for public invoice endpoints (#3782 #3889) @NicolasDorier</li>
+<li>Greenfield doc: Adding description to <code>speedPolicy</code> parameter (#3877) @ndeet</li>
+<li>UI: Improvement of Crowdfund &amp; PoS Modal (#3806) @dstrukt @dennisreimann</li>
+<li>Server Settings: Consolidate Storage and Files (#3863) @dennisreimann</li>
+<li>Move <code>View</code> action to the <code>Name</code> column in Payouts &amp; Payment Requests (#3873) @dstrukt @dennisreimann</li>
+<li>UI: Properly report Shopify errors when testing new settings (#3853) @NicolasDorier</li>
+<li>Mobile header improvements (#3826) @dennisreimann</li>
+<li>Notification modal improvements (#3784) @dstrukt</li>
+<li>Improve payouts UI (#3792) @dstrukt @dennisreimann</li>
+<li>Update language to explicitly request view-only wallet files (b1f62f74cde09d124fe308f5af9e255522add288) @sethforprivacy</li>
+<li>Open public app views in new tab/window (#3920) @dennisreimann</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -1253,6 +1395,24 @@ This is why Wasabi Wallet is programmed to be a zero-knowledge software. Develop
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.3.1">v6.3.1</a>
+						    </h2>
+							<p class="card-text">Published: 2022-07-03 21:20:44 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><ul>
+<li>FIX: Lightning Wallets would fail under Tor</li>
+</ul>
+</p>
+					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.3.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.109">v0.0.109</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-01 17:40:13 UTC</p>
@@ -1342,6 +1502,55 @@ deletions in 33 commits from 9 authors, in alphabetical order:
 </p>
 					    <a href="https://github.com/lightningdevkit/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.109" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.3.0">v6.3.0</a>
+						    </h2>
+							<p class="card-text">Published: 2022-06-29 14:27:09 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p><strong>Highlights:</strong></p>
+
+<ul>
+<li>Passphrase support on Multisig</li>
+<li>Import BIP39 multi language </li>
+<li>LNurl-Auth (Login with Lightning)</li>
+</ul>
+
+<p><strong>Changelog:</strong></p>
+
+<ul>
+<li>ADD: Multisig seed with passphrase export/import </li>
+<li>ADD: import bip39 multilang mnemonics </li>
+<li>ADD: Copy and View Wallet options </li>
+<li>ADD: Nepali lang. Sync sk_sk, he </li>
+<li>ADD: ask passphrase during multisig cosigners edit </li>
+<li>ADD: ask passphrase during multisig cosigners edit, change replace cosigners functions </li>
+<li>ADD: Close button for Select Wallet </li>
+<li>ADD lnurl-auth support (@gocedoko) </li>
+<li>FIX: better support parsing taproot addresses from Electrum (rel #4749) </li>
+<li>FIX: broken kebab-horizontal icon </li>
+<li>FIX: cant open block explorer in browser (closes #4244) </li>
+<li>FIX: typo that might cause incorrect &#39;openSignedTransaction&#39; procedure </li>
+<li>FIX: LnURL pay animation </li>
+<li>FIX: lnurl-withdrawal bug when it says &#39;Maximum amount is X  sats&#39; </li>
+<li>FIX: Save button matches other screens </li>
+<li>FIX: electrs-esplora &#39;verbose transactions are currently unsupported&#39; (closes #3985) </li>
+<li>FIX: &#39;min relay fee not met&#39; - better estimation of tx size for feerate calculation when creating a tx (closes #4352) </li>
+<li>FIX: allow user to choose wallet type when importing empty WIF </li>
+<li>FIX: Animations woulndt autoPlay </li>
+<li>FIX: min/max in lndCreateInvoice </li>
+<li>FIX: If you create a lightning wallet and have a bad URL (enter &quot;x&quot;) the app crashes. #4449 </li>
+<li>FIX: cosigner deletion should delete its passphrase</li>
+</ul>
+</p>
+					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.3.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -2328,6 +2537,425 @@ deletions in 5 commits from 4 authors, in alphabetical order:
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/mempool/mempool">mempool/mempool</a>: <a href="https://github.com/mempool/mempool/releases/tag/v2.4.0">v2.4.0</a>
+						    </h2>
+							<p class="card-text">Published: 2022-06-09 15:25:19 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>The Mempool Open Source Project v2.4.0</h2>
+
+<p><img width="400" src="https://user-images.githubusercontent.com/232186/172827460-0749f324-6f2d-4fa1-be0f-bd252d5962f8.png"><img width="400" src="https://user-images.githubusercontent.com/232186/172827530-ea2899fc-7a1b-4337-b9e7-38caf204d7ee.png"></p>
+
+<p><img width="200" src="https://user-images.githubusercontent.com/232186/172835000-807d1590-547a-4ea4-abc0-ba01d2964bf0.gif"><img width="200" src="https://user-images.githubusercontent.com/232186/172830590-2b3e44dc-c66d-4310-ac89-b3fe73ed6975.png"><img width="200" src="https://user-images.githubusercontent.com/232186/172830598-387d33a0-54e8-4050-a0a2-942ce072b69e.png"><img width="200" src="https://user-images.githubusercontent.com/232186/172830576-8456996c-4cc0-486b-8a35-5ddf0f274793.png"></p>
+
+<p>This release introduces many cool new features:</p>
+
+<ul>
+<li>All-new mining dashboard with 7 new mining graphs</li>
+<li>Added &quot;bitfeed style&quot; mempool block visualization</li>
+<li>Improved blocks page that identifies mining pools</li>
+<li>Improved fee suggestions with a &quot;no priority&quot; rate</li>
+<li>And much more!</li>
+</ul>
+
+<p>Out of the ~3400 commits in our git repo, ~1300 were made since v2.3.
+Lots of work went into v2.4, and all users are encouraged to upgrade to enjoy this new functionality.</p>
+
+<h2>Notes for upgrading from v2.3 if your timezone is NOT set to UTC</h2>
+
+<p>If you are upgrading from v2.3 or earlier and you want to migrate your historical mempool statistics database, you will need to do a special update procedure <strong>if your server&#39;s timezone is NOT set to UTC</strong>. How to migrate:</p>
+
+<p>1) Backup your MySQL database.
+2) Terminate the mempool backend process.
+3) Run the following query to check your mysql connection timezone: <code>SELECT @@global.time_zone, @@session.time_zone;</code>
+4) If you get SYSTEM, check your system timezone with the <code>date</code> command.
+5) Perform the SQL query with your negative GMT offset: <code>UPDATE statistics SET added=DATE_ADD(added, INTERVAL -2 HOUR);</code> (For example, if your timezone is set to CEST (UTC+2), you need to shift all your statistics entries negative 2 hours.)
+6) Proceed with upgrading mempool as usual.</p>
+
+<h2>Changelog</h2>
+
+<ul>
+<li>Insert zeroed statistics in the database if the mempool is empty by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1151">https://github.com/mempool/mempool/pull/1151</a></li>
+<li>Only apply vbytes/sec cap on Bitcoin mainnet - Fix linter issues by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1154">https://github.com/mempool/mempool/pull/1154</a></li>
+<li>Move difficulty adjustment code to separate module by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1152">https://github.com/mempool/mempool/pull/1152</a></li>
+<li>dont use hardcoded genesis coinbase and block hash by @antonilol in <a href="https://github.com/mempool/mempool/pull/1158">https://github.com/mempool/mempool/pull/1158</a></li>
+<li>Display Liquid asset icons by @softsimon in <a href="https://github.com/mempool/mempool/pull/1167">https://github.com/mempool/mempool/pull/1167</a></li>
+<li>Liquid asset loading fixes by @softsimon in <a href="https://github.com/mempool/mempool/pull/1170">https://github.com/mempool/mempool/pull/1170</a></li>
+<li>Fix Liquid proxy settings by @knorrium in <a href="https://github.com/mempool/mempool/pull/1171">https://github.com/mempool/mempool/pull/1171</a></li>
+<li>Asset name overflow fix by @softsimon in <a href="https://github.com/mempool/mempool/pull/1172">https://github.com/mempool/mempool/pull/1172</a></li>
+<li>Update Liquid tests by @knorrium in <a href="https://github.com/mempool/mempool/pull/1176">https://github.com/mempool/mempool/pull/1176</a></li>
+<li>Update Cypress to v9.3.1 by @knorrium in <a href="https://github.com/mempool/mempool/pull/1175">https://github.com/mempool/mempool/pull/1175</a></li>
+<li>Update e2e tests: new scenarios for Liquid, Bisq and refactor button by @knorrium in <a href="https://github.com/mempool/mempool/pull/1178">https://github.com/mempool/mempool/pull/1178</a></li>
+<li>Fix broken link on the Bisq transaction page by @knorrium in <a href="https://github.com/mempool/mempool/pull/1177">https://github.com/mempool/mempool/pull/1177</a></li>
+<li>Cleanup master-page template by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1183">https://github.com/mempool/mempool/pull/1183</a></li>
+<li>Wrap statistics db ops with try/catch by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1182">https://github.com/mempool/mempool/pull/1182</a></li>
+<li>Mining dashboard (1/2) - Import mining pools into the database by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1163">https://github.com/mempool/mempool/pull/1163</a></li>
+<li>Remove useless autocommit=0 in db migration script by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1187">https://github.com/mempool/mempool/pull/1187</a></li>
+<li>Fixing Liquid asset precision by @softsimon in <a href="https://github.com/mempool/mempool/pull/1173">https://github.com/mempool/mempool/pull/1173</a></li>
+<li>Change Citadel link to core by @AaronDewes in <a href="https://github.com/mempool/mempool/pull/1194">https://github.com/mempool/mempool/pull/1194</a></li>
+<li>Mining dashboard (2/2) - Dashboard PoC by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1162">https://github.com/mempool/mempool/pull/1162</a></li>
+<li>Increase nginx send<em>timeout and keepalive</em>requests by @wiz in <a href="https://github.com/mempool/mempool/pull/1193">https://github.com/mempool/mempool/pull/1193</a></li>
+<li>Enable nginx warm cache for mining pools API data by @wiz in <a href="https://github.com/mempool/mempool/pull/1198">https://github.com/mempool/mempool/pull/1198</a></li>
+<li>Let backend set its own HTTP cache time headers for APIs by @wiz in <a href="https://github.com/mempool/mempool/pull/1199">https://github.com/mempool/mempool/pull/1199</a></li>
+<li>Replaced /mining/pools?interval=X by /mining/pools/X by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1208">https://github.com/mempool/mempool/pull/1208</a></li>
+<li>Set proper mining pool page title - Rename &quot;Name&quot; to &quot;Pool&quot; by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1207">https://github.com/mempool/mempool/pull/1207</a></li>
+<li>outputs of genesis coinbase are always unspent by @antonilol in <a href="https://github.com/mempool/mempool/pull/1160">https://github.com/mempool/mempool/pull/1160</a></li>
+<li>Proxy all /api and /api/v1 requests to local nodejs server by @softsimon in <a href="https://github.com/mempool/mempool/pull/1215">https://github.com/mempool/mempool/pull/1215</a></li>
+<li>Wrap custom blocks fields into a sub object of IEsplora.Blocks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1212">https://github.com/mempool/mempool/pull/1212</a></li>
+<li>Adding a &quot;mixed&quot; dev proxy by @softsimon in <a href="https://github.com/mempool/mempool/pull/1219">https://github.com/mempool/mempool/pull/1219</a></li>
+<li>Local dev proxy working with all base modules by @softsimon in <a href="https://github.com/mempool/mempool/pull/1218">https://github.com/mempool/mempool/pull/1218</a></li>
+<li>Fetch conversion rates over Tor by @knorrium in <a href="https://github.com/mempool/mempool/pull/1213">https://github.com/mempool/mempool/pull/1213</a></li>
+<li>Run tests in Staging by @knorrium in <a href="https://github.com/mempool/mempool/pull/1228">https://github.com/mempool/mempool/pull/1228</a></li>
+<li>Featured assets and asset groups by @softsimon in <a href="https://github.com/mempool/mempool/pull/1224">https://github.com/mempool/mempool/pull/1224</a></li>
+<li>Add EXTERNAL_ASSETS defaults to the Docker start script README by @knorrium in <a href="https://github.com/mempool/mempool/pull/1225">https://github.com/mempool/mempool/pull/1225</a></li>
+<li>Disable featured assets test for testnet by @softsimon in <a href="https://github.com/mempool/mempool/pull/1230">https://github.com/mempool/mempool/pull/1230</a></li>
+<li>add log priority option for stdout log by @antonilol in <a href="https://github.com/mempool/mempool/pull/1180">https://github.com/mempool/mempool/pull/1180</a></li>
+<li>Cypress improvements by @knorrium in <a href="https://github.com/mempool/mempool/pull/1234">https://github.com/mempool/mempool/pull/1234</a></li>
+<li>sync-assets: Download pool logos from github by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1233">https://github.com/mempool/mempool/pull/1233</a></li>
+<li>Remove debug return which break the UX the first time we open by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1232">https://github.com/mempool/mempool/pull/1232</a></li>
+<li>Allow TV view time span switch through url fragment by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1192">https://github.com/mempool/mempool/pull/1192</a></li>
+<li>Duplicated db blocks insertion attempts are expected by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1220">https://github.com/mempool/mempool/pull/1220</a></li>
+<li>Consider we&#39;re synced with the mempool if we cached 99% by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1240">https://github.com/mempool/mempool/pull/1240</a></li>
+<li>Refactor docs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1239">https://github.com/mempool/mempool/pull/1239</a></li>
+<li>Added /api/v1/blocks-extras endpoint by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1235">https://github.com/mempool/mempool/pull/1235</a></li>
+<li>implement /api/mempool for home users (romanz/electrs backend) by @antonilol in <a href="https://github.com/mempool/mempool/pull/1248">https://github.com/mempool/mempool/pull/1248</a></li>
+<li>Don&#39;t wait for 100% mempool sync before starting block indexing by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1243">https://github.com/mempool/mempool/pull/1243</a></li>
+<li>Remove duplicated tests by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1252">https://github.com/mempool/mempool/pull/1252</a></li>
+<li>Provide a way to completely disable block indexing and mining menu by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1250">https://github.com/mempool/mempool/pull/1250</a></li>
+<li>Created mining pool stats page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1242">https://github.com/mempool/mempool/pull/1242</a></li>
+<li>Index more block data by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1253">https://github.com/mempool/mempool/pull/1253</a></li>
+<li>Create difficulty chart component by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1255">https://github.com/mempool/mempool/pull/1255</a></li>
+<li>Change pool ranking pie chart colors by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1257">https://github.com/mempool/mempool/pull/1257</a></li>
+<li>Create mining dashboard page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1254">https://github.com/mempool/mempool/pull/1254</a></li>
+<li>When blocks need re-indexing, truncate the table by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1258">https://github.com/mempool/mempool/pull/1258</a></li>
+<li>Update docker default min loglevel to info by @knorrium in <a href="https://github.com/mempool/mempool/pull/1261">https://github.com/mempool/mempool/pull/1261</a></li>
+<li>Show miner tag under blocks in the mining dashboard by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1259">https://github.com/mempool/mempool/pull/1259</a></li>
+<li>Display top featured assets on Liquid dashboard by @softsimon in <a href="https://github.com/mempool/mempool/pull/1245">https://github.com/mempool/mempool/pull/1245</a></li>
+<li>detect lightning htlc and unilateral close + fix multisig badge by @antonilol in <a href="https://github.com/mempool/mempool/pull/1223">https://github.com/mempool/mempool/pull/1223</a></li>
+<li>Created hashrate chart component by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1269">https://github.com/mempool/mempool/pull/1269</a></li>
+<li>Tweak new charts design by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1272">https://github.com/mempool/mempool/pull/1272</a></li>
+<li>Show block reward in the mining dashboard by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1274">https://github.com/mempool/mempool/pull/1274</a></li>
+<li>Display asset circulating amount more nicely fixing overflow by @softsimon in <a href="https://github.com/mempool/mempool/pull/1273">https://github.com/mempool/mempool/pull/1273</a></li>
+<li>Merge hashrate and difficulty components, cleanup mining design by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1275">https://github.com/mempool/mempool/pull/1275</a></li>
+<li>Remove block subsidy from mempool blocks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1277">https://github.com/mempool/mempool/pull/1277</a></li>
+<li>Handle missing asset registry assets by @softsimon in <a href="https://github.com/mempool/mempool/pull/1278">https://github.com/mempool/mempool/pull/1278</a></li>
+<li>Add proxy support for Liquid Testnet by @softsimon in <a href="https://github.com/mempool/mempool/pull/1279">https://github.com/mempool/mempool/pull/1279</a></li>
+<li>Show tx value sum if complete unblinding data is provided by @softsimon in <a href="https://github.com/mempool/mempool/pull/1280">https://github.com/mempool/mempool/pull/1280</a></li>
+<li>Fixed incoming transactions bar on the status page by @softsimon in <a href="https://github.com/mempool/mempool/pull/1281">https://github.com/mempool/mempool/pull/1281</a></li>
+<li>Fix status page regex by @knorrium in <a href="https://github.com/mempool/mempool/pull/1282">https://github.com/mempool/mempool/pull/1282</a></li>
+<li>Update Cypress to v9.5.0 by @knorrium in <a href="https://github.com/mempool/mempool/pull/1283">https://github.com/mempool/mempool/pull/1283</a></li>
+<li>Upgrade frontend deps: Angular 13.2, echarts 5.3, fortawesome by @softsimon in <a href="https://github.com/mempool/mempool/pull/1284">https://github.com/mempool/mempool/pull/1284</a></li>
+<li>Create pools hashrate dominance chart by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1285">https://github.com/mempool/mempool/pull/1285</a></li>
+<li>Merge pool share and dominance into one widget by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1288">https://github.com/mempool/mempool/pull/1288</a></li>
+<li>Only reset hashrate state flag after database migration - Fix weekly … by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1297">https://github.com/mempool/mempool/pull/1297</a></li>
+<li>Make sure to reset hashrates indexing flags upon error by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1298">https://github.com/mempool/mempool/pull/1298</a></li>
+<li>Pause block indexing chunk upon error and retry later by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1300">https://github.com/mempool/mempool/pull/1300</a></li>
+<li>Only return unique address prefix autocomplete by @softsimon in <a href="https://github.com/mempool/mempool/pull/1291">https://github.com/mempool/mempool/pull/1291</a></li>
+<li>Shorten address search with middle ellipsis by @softsimon in <a href="https://github.com/mempool/mempool/pull/1293">https://github.com/mempool/mempool/pull/1293</a></li>
+<li>fix 0 sat/vB not displaying by @antonilol in <a href="https://github.com/mempool/mempool/pull/1185">https://github.com/mempool/mempool/pull/1185</a></li>
+<li>Fix hashrate indexing backend logic by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1302">https://github.com/mempool/mempool/pull/1302</a></li>
+<li>Mining dashboard polishing by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1303">https://github.com/mempool/mempool/pull/1303</a></li>
+<li>UTXO spent tracking by @softsimon in <a href="https://github.com/mempool/mempool/pull/1305">https://github.com/mempool/mempool/pull/1305</a></li>
+<li>Handle missing asset registry for inputs by @softsimon in <a href="https://github.com/mempool/mempool/pull/1306">https://github.com/mempool/mempool/pull/1306</a></li>
+<li>Truncate hashrates table only for bitcoin (db migration v9) by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1308">https://github.com/mempool/mempool/pull/1308</a></li>
+<li>Bugfix/auto refresh reward stats by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1310">https://github.com/mempool/mempool/pull/1310</a></li>
+<li>UTXO spent tracking refactor by @softsimon in <a href="https://github.com/mempool/mempool/pull/1314">https://github.com/mempool/mempool/pull/1314</a></li>
+<li>Add skeleton in the mining dashboard page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1315">https://github.com/mempool/mempool/pull/1315</a></li>
+<li>Fix broken navigation when clicking on pie chart by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1313">https://github.com/mempool/mempool/pull/1313</a></li>
+<li>Shorten reward stats by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1312">https://github.com/mempool/mempool/pull/1312</a></li>
+<li>Replace difficulty adjustment timestamp with block height by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1311">https://github.com/mempool/mempool/pull/1311</a></li>
+<li>Added new Zeus logo by @Bosch-0 in <a href="https://github.com/mempool/mempool/pull/1316">https://github.com/mempool/mempool/pull/1316</a></li>
+<li>Index blocks.blockTimestamp for faster hashrates indexing by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1319">https://github.com/mempool/mempool/pull/1319</a></li>
+<li>Replace by fee storage by @softsimon in <a href="https://github.com/mempool/mempool/pull/1318">https://github.com/mempool/mempool/pull/1318</a></li>
+<li>Added pool hashrate chart by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1317">https://github.com/mempool/mempool/pull/1317</a></li>
+<li>Fix skeleton for difficulty adjustment table by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1324">https://github.com/mempool/mempool/pull/1324</a></li>
+<li>Show <code>+</code> sign on positive diff adjust by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1325">https://github.com/mempool/mempool/pull/1325</a></li>
+<li>Display unknown for non standard output types by @softsimon in <a href="https://github.com/mempool/mempool/pull/1323">https://github.com/mempool/mempool/pull/1323</a></li>
+<li>Increment db version to 10 by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1329">https://github.com/mempool/mempool/pull/1329</a></li>
+<li>improve testnet block time estimations by @antonilol in <a href="https://github.com/mempool/mempool/pull/1328">https://github.com/mempool/mempool/pull/1328</a></li>
+<li>Index weekly hashrates using last Monday midnight - Fix charts by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1333">https://github.com/mempool/mempool/pull/1333</a></li>
+<li>Fix pool detail page on Firefox by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1326">https://github.com/mempool/mempool/pull/1326</a></li>
+<li>Always show scrolbar to avoid horizontal jumpy UI by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1327">https://github.com/mempool/mempool/pull/1327</a></li>
+<li>Show current indexing progress in charts without data by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1331">https://github.com/mempool/mempool/pull/1331</a></li>
+<li>Index more data using getblockstats core RPC by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1330">https://github.com/mempool/mempool/pull/1330</a></li>
+<li>regtest fixes by @antonilol in <a href="https://github.com/mempool/mempool/pull/1320">https://github.com/mempool/mempool/pull/1320</a></li>
+<li>Add new production installation script and related files by @wiz in <a href="https://github.com/mempool/mempool/pull/1321">https://github.com/mempool/mempool/pull/1321</a></li>
+<li>Revert &quot;Always show scrolbar to avoid horizontal jumpy UI&quot; by @softsimon in <a href="https://github.com/mempool/mempool/pull/1337">https://github.com/mempool/mempool/pull/1337</a></li>
+<li>Make blocks.fees larger data type by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1338">https://github.com/mempool/mempool/pull/1338</a></li>
+<li>Add production frontend configurations by @wiz in <a href="https://github.com/mempool/mempool/pull/1344">https://github.com/mempool/mempool/pull/1344</a></li>
+<li>Install production backend/frontend configurations from master by @wiz in <a href="https://github.com/mempool/mempool/pull/1345">https://github.com/mempool/mempool/pull/1345</a></li>
+<li>Remove old install script, merge remaining stuff into upgrade script by @wiz in <a href="https://github.com/mempool/mempool/pull/1346">https://github.com/mempool/mempool/pull/1346</a></li>
+<li>Set git to always rebase from install script by @wiz in <a href="https://github.com/mempool/mempool/pull/1349">https://github.com/mempool/mempool/pull/1349</a></li>
+<li>Create symlinks for mempool scripts in installation script by @wiz in <a href="https://github.com/mempool/mempool/pull/1350">https://github.com/mempool/mempool/pull/1350</a></li>
+<li>Add mariadb-server and mysql db creation to install script by @wiz in <a href="https://github.com/mempool/mempool/pull/1347">https://github.com/mempool/mempool/pull/1347</a></li>
+<li>Fix database migration/typing issues by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1340">https://github.com/mempool/mempool/pull/1340</a></li>
+<li>Fix empty diff adjust table by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1336">https://github.com/mempool/mempool/pull/1336</a></li>
+<li>Create new /mining/blocks page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1335">https://github.com/mempool/mempool/pull/1335</a></li>
+<li>Fix font size in reward stat widget by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1353">https://github.com/mempool/mempool/pull/1353</a></li>
+<li>Reorganizing community integrations by @softsimon in <a href="https://github.com/mempool/mempool/pull/1357">https://github.com/mempool/mempool/pull/1357</a></li>
+<li>Fix duplicate hashrate data points in &quot;difficulty vs hashrate&quot; chart by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1351">https://github.com/mempool/mempool/pull/1351</a></li>
+<li>Add support for MySQL connections over UNIX sockets by @dsbaars in <a href="https://github.com/mempool/mempool/pull/1360">https://github.com/mempool/mempool/pull/1360</a></li>
+<li>Increase default INDEXING<em>BLOCKS</em>AMOUNT by 10x to 11000 blocks by @wiz in <a href="https://github.com/mempool/mempool/pull/1358">https://github.com/mempool/mempool/pull/1358</a></li>
+<li>Address page highlight and transfer value by @softsimon in <a href="https://github.com/mempool/mempool/pull/1304">https://github.com/mempool/mempool/pull/1304</a></li>
+<li>Fix docs navigation on desktop by @hunicus in <a href="https://github.com/mempool/mempool/pull/1342">https://github.com/mempool/mempool/pull/1342</a></li>
+<li>Difficulty adjustment refactor by @softsimon in <a href="https://github.com/mempool/mempool/pull/1352">https://github.com/mempool/mempool/pull/1352</a></li>
+<li>Move all charts into /graphs page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1309">https://github.com/mempool/mempool/pull/1309</a></li>
+<li>Updated websocket mock data with difficulty adjustment by @softsimon in <a href="https://github.com/mempool/mempool/pull/1364">https://github.com/mempool/mempool/pull/1364</a></li>
+<li>Remove duplicate websocket push. by @softsimon in <a href="https://github.com/mempool/mempool/pull/1363">https://github.com/mempool/mempool/pull/1363</a></li>
+<li>Make the hashrate/difficulty widget simpler by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1362">https://github.com/mempool/mempool/pull/1362</a></li>
+<li>Capitalize js package labels in docs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1361">https://github.com/mempool/mempool/pull/1361</a></li>
+<li>Fix typo in hashrate widget by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1366">https://github.com/mempool/mempool/pull/1366</a></li>
+<li>Fix docs navigation on mobile by @hunicus in <a href="https://github.com/mempool/mempool/pull/1354">https://github.com/mempool/mempool/pull/1354</a></li>
+<li>Merge node-bitcoin into the project by @softsimon in <a href="https://github.com/mempool/mempool/pull/1370">https://github.com/mempool/mempool/pull/1370</a></li>
+<li>Address value did not calculate self transfers by @softsimon in <a href="https://github.com/mempool/mempool/pull/1371">https://github.com/mempool/mempool/pull/1371</a></li>
+<li>Optimize RPC calls by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1374">https://github.com/mempool/mempool/pull/1374</a></li>
+<li>Index asciiScriptSig and display it in /mining/blocks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1375">https://github.com/mempool/mempool/pull/1375</a></li>
+<li>Hide tabs in /graphs page is mining not available by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1379">https://github.com/mempool/mempool/pull/1379</a></li>
+<li>Force disable mining dashboard if base_module not mempool by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1380">https://github.com/mempool/mempool/pull/1380</a></li>
+<li>Updated blocks list in pool details page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1381">https://github.com/mempool/mempool/pull/1381</a></li>
+<li>Apply coinbase style to blocks list tooltip by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1382">https://github.com/mempool/mempool/pull/1382</a></li>
+<li>Fix pagination on /mining/blocks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1376">https://github.com/mempool/mempool/pull/1376</a></li>
+<li>Fix javascript crash when disable hashrate/difficulty chart line by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1383">https://github.com/mempool/mempool/pull/1383</a></li>
+<li>fix and improve block time predictions by @antonilol in <a href="https://github.com/mempool/mempool/pull/1373">https://github.com/mempool/mempool/pull/1373</a></li>
+<li>Use our forked repo of mining pool data by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1390">https://github.com/mempool/mempool/pull/1390</a></li>
+<li>Show pools in main dashboard in mining dashboard is enabled by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1398">https://github.com/mempool/mempool/pull/1398</a></li>
+<li>Don&#39;t navigate to root when sub network url is wrong. by @softsimon in <a href="https://github.com/mempool/mempool/pull/1400">https://github.com/mempool/mempool/pull/1400</a></li>
+<li>Configure syslog for keybase alerts from install script by @wiz in <a href="https://github.com/mempool/mempool/pull/1410">https://github.com/mempool/mempool/pull/1410</a></li>
+<li>Set build script to notify new location based Keybase channels by @wiz in <a href="https://github.com/mempool/mempool/pull/1411">https://github.com/mempool/mempool/pull/1411</a></li>
+<li>Install mempool crontab from install script by @wiz in <a href="https://github.com/mempool/mempool/pull/1412">https://github.com/mempool/mempool/pull/1412</a></li>
+<li>Create zfs filesystem for /backup and chown to mempool by @wiz in <a href="https://github.com/mempool/mempool/pull/1413">https://github.com/mempool/mempool/pull/1413</a></li>
+<li>Subscribe to blocks and mempool updates in the mining dashboard by @softsimon in <a href="https://github.com/mempool/mempool/pull/1415">https://github.com/mempool/mempool/pull/1415</a></li>
+<li>Update Cypress to v9.5.2 by @knorrium in <a href="https://github.com/mempool/mempool/pull/1418">https://github.com/mempool/mempool/pull/1418</a></li>
+<li>Address highlighting tests by @knorrium in <a href="https://github.com/mempool/mempool/pull/1417">https://github.com/mempool/mempool/pull/1417</a></li>
+<li>Enable full block indexing on all Bitcoin networks by @wiz in <a href="https://github.com/mempool/mempool/pull/1416">https://github.com/mempool/mempool/pull/1416</a></li>
+<li>Fix path in mempool crontab for daily backup script by @wiz in <a href="https://github.com/mempool/mempool/pull/1419">https://github.com/mempool/mempool/pull/1419</a></li>
+<li>Add minfee node setup to production install script by @wiz in <a href="https://github.com/mempool/mempool/pull/1420">https://github.com/mempool/mempool/pull/1420</a></li>
+<li>Use 10 minutes avg block time for halving calculation by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1422">https://github.com/mempool/mempool/pull/1422</a></li>
+<li>Disable cluster mode in prod bisq backend config by @wiz in <a href="https://github.com/mempool/mempool/pull/1425">https://github.com/mempool/mempool/pull/1425</a></li>
+<li>If we have incomplete data for the day/week, don&#39;t index hashrate by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1423">https://github.com/mempool/mempool/pull/1423</a></li>
+<li>Don&#39;t show coinbase tooltip on mining dashboard by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1431">https://github.com/mempool/mempool/pull/1431</a></li>
+<li>Format Transaction vBytes per second (vB/s) tooltip value by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1429">https://github.com/mempool/mempool/pull/1429</a></li>
+<li>Improve skeleton on pool detail page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1430">https://github.com/mempool/mempool/pull/1430</a></li>
+<li>More dynamic mining reward  by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1427">https://github.com/mempool/mempool/pull/1427</a></li>
+<li>Set weekly hashrates timestamp to midnight by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1424">https://github.com/mempool/mempool/pull/1424</a></li>
+<li>Fix git commit error by @knorrium in <a href="https://github.com/mempool/mempool/pull/1434">https://github.com/mempool/mempool/pull/1434</a></li>
+<li>Last hashrate indexing check needs to be in milliseconds by @softsimon in <a href="https://github.com/mempool/mempool/pull/1435">https://github.com/mempool/mempool/pull/1435</a></li>
+<li>Truncate hashrates after #1435 - Fix hashrate indexing logs by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1437">https://github.com/mempool/mempool/pull/1437</a></li>
+<li>Added slug into <code>pools</code> table by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1446">https://github.com/mempool/mempool/pull/1446</a></li>
+<li>Fix rounding issue in reward stats by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1445">https://github.com/mempool/mempool/pull/1445</a></li>
+<li>Fix blocks list mobile layout by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1428">https://github.com/mempool/mempool/pull/1428</a></li>
+<li>Remove unnecessary echart init option by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1449">https://github.com/mempool/mempool/pull/1449</a></li>
+<li>Use relative pipe for pie chart click event by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1450">https://github.com/mempool/mempool/pull/1450</a></li>
+<li>If pool slug does not exist, generate one on the fly, avoid crash by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1451">https://github.com/mempool/mempool/pull/1451</a></li>
+<li>Disable glitchy angular tooltips animation by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1458">https://github.com/mempool/mempool/pull/1458</a></li>
+<li>Use mining pool slug in urls by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1456">https://github.com/mempool/mempool/pull/1456</a></li>
+<li>Use slug instead of id in mining blocks list component by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1467">https://github.com/mempool/mempool/pull/1467</a></li>
+<li>Fix query to insert unknown mining pool by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1470">https://github.com/mempool/mempool/pull/1470</a></li>
+<li>Use mining pool slug in block component by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1468">https://github.com/mempool/mempool/pull/1468</a></li>
+<li>Pool addresses collapse - Cleanup mobile layout by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1457">https://github.com/mempool/mempool/pull/1457</a></li>
+<li>Add data zoom on pool hashrate chart by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1472">https://github.com/mempool/mempool/pull/1472</a></li>
+<li>Use slugs in cache warmer by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1474">https://github.com/mempool/mempool/pull/1474</a></li>
+<li>Show block reward on blockchain blocks for all Bitcoin networks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1484">https://github.com/mempool/mempool/pull/1484</a></li>
+<li>Fix spam call to <code>/api/v1/mining/pool/{slug}</code> by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1489">https://github.com/mempool/mempool/pull/1489</a></li>
+<li>Update pool detail page label - Fix no data text by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1485">https://github.com/mempool/mempool/pull/1485</a></li>
+<li>Add missing mining API endpoint to cache warmer by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1483">https://github.com/mempool/mempool/pull/1483</a></li>
+<li>Enable nginx warm cache for all /api/v1/mining API endpoints by @wiz in <a href="https://github.com/mempool/mempool/pull/1475">https://github.com/mempool/mempool/pull/1475</a></li>
+<li>Don&#39;t use <code>slugs</code> if it&#39;s not available in pools.json frontend by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1490">https://github.com/mempool/mempool/pull/1490</a></li>
+<li>Apply smooth scrolling to docs only by @hunicus in <a href="https://github.com/mempool/mempool/pull/1491">https://github.com/mempool/mempool/pull/1491</a></li>
+<li>Subscribe to websocket blocks update for all graphs components by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1493">https://github.com/mempool/mempool/pull/1493</a></li>
+<li>Remove unused <code>/api/v1/mining/difficulty/{interval}</code> endpoint by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1482">https://github.com/mempool/mempool/pull/1482</a></li>
+<li>Fix some mobile UI issues on mining dashboard by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1401">https://github.com/mempool/mempool/pull/1401</a></li>
+<li>Detect more lightning scripts by @antonilol in <a href="https://github.com/mempool/mempool/pull/1464">https://github.com/mempool/mempool/pull/1464</a></li>
+<li>Mining stats does not depend on the websocket blocks number by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1496">https://github.com/mempool/mempool/pull/1496</a></li>
+<li>Return empty pool addresses on testnet and signet by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1488">https://github.com/mempool/mempool/pull/1488</a></li>
+<li>Correcting wrong or missing op_codes display by @softsimon in <a href="https://github.com/mempool/mempool/pull/1500">https://github.com/mempool/mempool/pull/1500</a></li>
+<li>Correcting op_code coloring by @softsimon in <a href="https://github.com/mempool/mempool/pull/1501">https://github.com/mempool/mempool/pull/1501</a></li>
+<li>Avoid parralel hashrate indexing when initial query is too slow by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1498">https://github.com/mempool/mempool/pull/1498</a></li>
+<li>Send 404 when accessing non existing mining pool by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1487">https://github.com/mempool/mempool/pull/1487</a></li>
+<li>Rounding bitcoin api satoshis by @softsimon in <a href="https://github.com/mempool/mempool/pull/1486">https://github.com/mempool/mempool/pull/1486</a></li>
+<li>Update AS142052 link by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1504">https://github.com/mempool/mempool/pull/1504</a></li>
+<li>Updated pool summary page to display more info on hashrate/blocks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1503">https://github.com/mempool/mempool/pull/1503</a></li>
+<li>If mining dashboard is enabled, set block miner to &quot;Unknown&quot; by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1492">https://github.com/mempool/mempool/pull/1492</a></li>
+<li>Npm run start broke by @softsimon in <a href="https://github.com/mempool/mempool/pull/1510">https://github.com/mempool/mempool/pull/1510</a></li>
+<li>Use github api to fetch and update the pools database, once a week by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1511">https://github.com/mempool/mempool/pull/1511</a></li>
+<li>fix RTL layout issues by @TechMiX in <a href="https://github.com/mempool/mempool/pull/1506">https://github.com/mempool/mempool/pull/1506</a></li>
+<li>Fix Lightning HTLC detection with options_anchors by @antonilol in <a href="https://github.com/mempool/mempool/pull/1514">https://github.com/mempool/mempool/pull/1514</a></li>
+<li>[Indexing] - Support 10 blocks depth reorgs by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1369">https://github.com/mempool/mempool/pull/1369</a></li>
+<li>Add block fees graph by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1512">https://github.com/mempool/mempool/pull/1512</a></li>
+<li>Add block rewards graph by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1513">https://github.com/mempool/mempool/pull/1513</a></li>
+<li>Set zlevel for all graphs series by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1495">https://github.com/mempool/mempool/pull/1495</a></li>
+<li>fix wrong display of other sighash types + p2sh redeemScript by @antonilol in <a href="https://github.com/mempool/mempool/pull/1502">https://github.com/mempool/mempool/pull/1502</a></li>
+<li>Add faq by @hunicus in <a href="https://github.com/mempool/mempool/pull/1473">https://github.com/mempool/mempool/pull/1473</a></li>
+<li>Cleanup mining related backend logs by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1519">https://github.com/mempool/mempool/pull/1519</a></li>
+<li>Fix log rotation configuration for mempool backend logs by @wiz in <a href="https://github.com/mempool/mempool/pull/1499">https://github.com/mempool/mempool/pull/1499</a></li>
+<li>Refactor database pool use by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1517">https://github.com/mempool/mempool/pull/1517</a></li>
+<li>Sponsor page revamped by @softsimon in <a href="https://github.com/mempool/mempool/pull/1505">https://github.com/mempool/mempool/pull/1505</a></li>
+<li>Create dependabot.yml by @naveensrinivasan in <a href="https://github.com/mempool/mempool/pull/1339">https://github.com/mempool/mempool/pull/1339</a></li>
+<li>Breaking out strtotime from locutus lib by @softsimon in <a href="https://github.com/mempool/mempool/pull/1518">https://github.com/mempool/mempool/pull/1518</a></li>
+<li>Pin actions by SHA and set permissions for workflow by @naveensrinivasan in <a href="https://github.com/mempool/mempool/pull/1341">https://github.com/mempool/mempool/pull/1341</a></li>
+<li>Allow syncing external backend assets using Tor by @knorrium in <a href="https://github.com/mempool/mempool/pull/1433">https://github.com/mempool/mempool/pull/1433</a></li>
+<li>Add try/catch liquid icon loading by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1546">https://github.com/mempool/mempool/pull/1546</a></li>
+<li>Add mercury wallet in the about page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1555">https://github.com/mempool/mempool/pull/1555</a></li>
+<li>Wait for external assets file writers to complete by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1558">https://github.com/mempool/mempool/pull/1558</a></li>
+<li>Add block fee rates percentiles chart by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1521">https://github.com/mempool/mempool/pull/1521</a></li>
+<li>Use block count instead of oldest block for timespan selection by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1548">https://github.com/mempool/mempool/pull/1548</a></li>
+<li>Update blocks list skeleton by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1553">https://github.com/mempool/mempool/pull/1553</a></li>
+<li>Validate block hash chain after indexing and for new blocks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1554">https://github.com/mempool/mempool/pull/1554</a></li>
+<li>Remove loading indicator for blocks-extras API by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1563">https://github.com/mempool/mempool/pull/1563</a></li>
+<li>Ignore case on coinbase tag regexes by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1564">https://github.com/mempool/mempool/pull/1564</a></li>
+<li>Read bisq dump blocks line by line and parse manually by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1569">https://github.com/mempool/mempool/pull/1569</a></li>
+<li>Update docker faq by @hunicus in <a href="https://github.com/mempool/mempool/pull/1571">https://github.com/mempool/mempool/pull/1571</a></li>
+<li>Clean local block cache before loading dump by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1579">https://github.com/mempool/mempool/pull/1579</a></li>
+<li>Fix reward stats skeleton titles by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1580">https://github.com/mempool/mempool/pull/1580</a></li>
+<li>Show current network hashrate and difficulty using core RPC by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1592">https://github.com/mempool/mempool/pull/1592</a></li>
+<li>Revise main readme and docker install docs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1599">https://github.com/mempool/mempool/pull/1599</a></li>
+<li>Add screenshot for 2.4.0 to readme by @hunicus in <a href="https://github.com/mempool/mempool/pull/1600">https://github.com/mempool/mempool/pull/1600</a></li>
+<li>Fix datababse typo by @knorrium in <a href="https://github.com/mempool/mempool/pull/1587">https://github.com/mempool/mempool/pull/1587</a></li>
+<li>Moving Docs and Faq to separate lazy loaded module by @softsimon in <a href="https://github.com/mempool/mempool/pull/1568">https://github.com/mempool/mempool/pull/1568</a></li>
+<li>Upgrading npm packages and by @softsimon in <a href="https://github.com/mempool/mempool/pull/1584">https://github.com/mempool/mempool/pull/1584</a></li>
+<li>Update pools table before fetching the first blocks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1565">https://github.com/mempool/mempool/pull/1565</a></li>
+<li>Change faq docker link since docker docs moved by @hunicus in <a href="https://github.com/mempool/mempool/pull/1610">https://github.com/mempool/mempool/pull/1610</a></li>
+<li>Add back overwritten sentence to main readme by @hunicus in <a href="https://github.com/mempool/mempool/pull/1609">https://github.com/mempool/mempool/pull/1609</a></li>
+<li>Run hashrate indexing after midnight by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1590">https://github.com/mempool/mempool/pull/1590</a></li>
+<li>fix lightning force close label with CSV delay &lt;= 16 by @antonilol in <a href="https://github.com/mempool/mempool/pull/1598">https://github.com/mempool/mempool/pull/1598</a></li>
+<li>Bump crypto-js from 4.0.0 to 4.1.1 in /backend by @dependabot in <a href="https://github.com/mempool/mempool/pull/1538">https://github.com/mempool/mempool/pull/1538</a></li>
+<li>Bump typescript from 4.4.4 to 4.6.4 in /backend by @dependabot in <a href="https://github.com/mempool/mempool/pull/1585">https://github.com/mempool/mempool/pull/1585</a></li>
+<li>Bump ws from 8.3.0 to 8.6.0 in /backend by @dependabot in <a href="https://github.com/mempool/mempool/pull/1593">https://github.com/mempool/mempool/pull/1593</a></li>
+<li>Bump express from 4.17.1 to 4.18.1 in /backend by @dependabot in <a href="https://github.com/mempool/mempool/pull/1594">https://github.com/mempool/mempool/pull/1594</a></li>
+<li>Refine production deployment doc by @hunicus in <a href="https://github.com/mempool/mempool/pull/1611">https://github.com/mempool/mempool/pull/1611</a></li>
+<li>Remove $ from commands in repo docs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1618">https://github.com/mempool/mempool/pull/1618</a></li>
+<li>Add faq on address lookups by @hunicus in <a href="https://github.com/mempool/mempool/pull/1617">https://github.com/mempool/mempool/pull/1617</a></li>
+<li>Add graph download feature by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1601">https://github.com/mempool/mempool/pull/1601</a></li>
+<li>Create indexing progress sticky notification by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1596">https://github.com/mempool/mempool/pull/1596</a></li>
+<li>detect received lighting HTLC outputs by @antonilol in <a href="https://github.com/mempool/mempool/pull/1561">https://github.com/mempool/mempool/pull/1561</a></li>
+<li>Add block sizes vs weights graph by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1597">https://github.com/mempool/mempool/pull/1597</a></li>
+<li>Update issue templates by @hunicus in <a href="https://github.com/mempool/mempool/pull/1630">https://github.com/mempool/mempool/pull/1630</a></li>
+<li>Fix the socks5 connection after updating the socks lib by @knorrium in <a href="https://github.com/mempool/mempool/pull/1633">https://github.com/mempool/mempool/pull/1633</a></li>
+<li>Modify minfee node bitcoin.conf to connect to external peers by @wiz in <a href="https://github.com/mempool/mempool/pull/1636">https://github.com/mempool/mempool/pull/1636</a></li>
+<li>Fix ELECTRUM<em>TLS</em>ENABLED Docker variable by @knorrium in <a href="https://github.com/mempool/mempool/pull/1640">https://github.com/mempool/mempool/pull/1640</a></li>
+<li>Added some missing alt tags on some img by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1644">https://github.com/mempool/mempool/pull/1644</a></li>
+<li>Skip missing blocks during block hash chain validation by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1591">https://github.com/mempool/mempool/pull/1591</a></li>
+<li>Update block API by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1556">https://github.com/mempool/mempool/pull/1556</a></li>
+<li>Add simple faq on full mempool by @hunicus in <a href="https://github.com/mempool/mempool/pull/1639">https://github.com/mempool/mempool/pull/1639</a></li>
+<li>Update the recommended node version to v16.15.0 (LTS) by @knorrium in <a href="https://github.com/mempool/mempool/pull/1625">https://github.com/mempool/mempool/pull/1625</a></li>
+<li>Polish dashboards second widgets line by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1629">https://github.com/mempool/mempool/pull/1629</a></li>
+<li>Delete useless log by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1662">https://github.com/mempool/mempool/pull/1662</a></li>
+<li>Correcting and harmonizing i18n strings by @softsimon in <a href="https://github.com/mempool/mempool/pull/1627">https://github.com/mempool/mempool/pull/1627</a></li>
+<li>Minor i18n corrections by @softsimon in <a href="https://github.com/mempool/mempool/pull/1663">https://github.com/mempool/mempool/pull/1663</a></li>
+<li>Always use BTC unit in blocks list by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1652">https://github.com/mempool/mempool/pull/1652</a></li>
+<li>Allow CTRL F an address on the transaction list component by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1653">https://github.com/mempool/mempool/pull/1653</a></li>
+<li>Use passive listeners to improve scrolling performance by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1658">https://github.com/mempool/mempool/pull/1658</a></li>
+<li>Cleanup mining API endpoints by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1659">https://github.com/mempool/mempool/pull/1659</a></li>
+<li>Define avg block time to 10 min until we have at least 146 block in the current epoch by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1661">https://github.com/mempool/mempool/pull/1661</a></li>
+<li>Fix for transaction inputs being fetched recursively by @softsimon in <a href="https://github.com/mempool/mempool/pull/1665">https://github.com/mempool/mempool/pull/1665</a></li>
+<li>Reset outspends cache when switching to new tx page. by @softsimon in <a href="https://github.com/mempool/mempool/pull/1632">https://github.com/mempool/mempool/pull/1632</a></li>
+<li>Tweaking the websocket retry timers by @softsimon in <a href="https://github.com/mempool/mempool/pull/1637">https://github.com/mempool/mempool/pull/1637</a></li>
+<li>pools-updater: Support secure Tor connection to sync data with Github by @ayanamidev in <a href="https://github.com/mempool/mempool/pull/1649">https://github.com/mempool/mempool/pull/1649</a></li>
+<li>Remove unused config from nginx by @ayanamidev in <a href="https://github.com/mempool/mempool/pull/1666">https://github.com/mempool/mempool/pull/1666</a></li>
+<li>Adding some missing i18n strings by @softsimon in <a href="https://github.com/mempool/mempool/pull/1664">https://github.com/mempool/mempool/pull/1664</a></li>
+<li>Upgrade Cypress to v9.6.1 by @knorrium in <a href="https://github.com/mempool/mempool/pull/1672">https://github.com/mempool/mempool/pull/1672</a></li>
+<li>Don&#39;t prepend apiBasePath for services backend resources by @wiz in <a href="https://github.com/mempool/mempool/pull/1670">https://github.com/mempool/mempool/pull/1670</a></li>
+<li>Index blocks.hash by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1673">https://github.com/mempool/mempool/pull/1673</a></li>
+<li>Cache /block API response for 10 min on user side by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1674">https://github.com/mempool/mempool/pull/1674</a></li>
+<li>Additional expiration header for mining pool API endpoints by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1676">https://github.com/mempool/mempool/pull/1676</a></li>
+<li>Add mining api docs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1654">https://github.com/mempool/mempool/pull/1654</a></li>
+<li>Moving graphs and mining dashboard to a lazy loaded module by @softsimon in <a href="https://github.com/mempool/mempool/pull/1682">https://github.com/mempool/mempool/pull/1682</a></li>
+<li>Add feedback for mining API docs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1680">https://github.com/mempool/mempool/pull/1680</a></li>
+<li>Set /mining/blocks/xxx APIs expiration to 60 seconds instead of 5 min by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1686">https://github.com/mempool/mempool/pull/1686</a></li>
+<li>Fixes broken fee rate calculation for mempool transactions by @softsimon in <a href="https://github.com/mempool/mempool/pull/1688">https://github.com/mempool/mempool/pull/1688</a></li>
+<li>Improving loading indicator UX by @softsimon in <a href="https://github.com/mempool/mempool/pull/1667">https://github.com/mempool/mempool/pull/1667</a></li>
+<li>Fixes for Liquid module routing by @softsimon in <a href="https://github.com/mempool/mempool/pull/1690">https://github.com/mempool/mempool/pull/1690</a></li>
+<li>Reward stats i18n fix by @softsimon in <a href="https://github.com/mempool/mempool/pull/1694">https://github.com/mempool/mempool/pull/1694</a></li>
+<li>Round miners reward to full dollar by @softsimon in <a href="https://github.com/mempool/mempool/pull/1695">https://github.com/mempool/mempool/pull/1695</a></li>
+<li>Fix websockets tab by @hunicus in <a href="https://github.com/mempool/mempool/pull/1697">https://github.com/mempool/mempool/pull/1697</a></li>
+<li>Lazy load tx inputs in Bitcoin Core mode by @softsimon in <a href="https://github.com/mempool/mempool/pull/1643">https://github.com/mempool/mempool/pull/1643</a></li>
+<li>Add escaped slug into logs when slug does not match any pool by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1657">https://github.com/mempool/mempool/pull/1657</a></li>
+<li>Make sure to re-index skipped block when backend is offline for too long by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1635">https://github.com/mempool/mempool/pull/1635</a></li>
+<li>Fix missing tx column in main dashboard on mobile by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1708">https://github.com/mempool/mempool/pull/1708</a></li>
+<li>Hide graph selection button on non bitcoin networks by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1707">https://github.com/mempool/mempool/pull/1707</a></li>
+<li>Add schildbach bitcoin wallet to about page by @hunicus in <a href="https://github.com/mempool/mempool/pull/1710">https://github.com/mempool/mempool/pull/1710</a></li>
+<li>Update case in some mining API endpoint response by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1685">https://github.com/mempool/mempool/pull/1685</a></li>
+<li>Merge legacy and mining /blocks components and APIs by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1696">https://github.com/mempool/mempool/pull/1696</a></li>
+<li>Block transactions list error handling by @softsimon in <a href="https://github.com/mempool/mempool/pull/1700">https://github.com/mempool/mempool/pull/1700</a></li>
+<li>Add role attributes for doc nav elements by @hunicus in <a href="https://github.com/mempool/mempool/pull/1701">https://github.com/mempool/mempool/pull/1701</a></li>
+<li>Replace all oldestIndexedBlockTimestamp with X-total-count header by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1687">https://github.com/mempool/mempool/pull/1687</a></li>
+<li>Liquid empty miner UX fix by @softsimon in <a href="https://github.com/mempool/mempool/pull/1699">https://github.com/mempool/mempool/pull/1699</a></li>
+<li>Move manual install notes to separate docs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1714">https://github.com/mempool/mempool/pull/1714</a></li>
+<li>NgBootstrap library import optimization by @softsimon in <a href="https://github.com/mempool/mempool/pull/1717">https://github.com/mempool/mempool/pull/1717</a></li>
+<li>Add faq on empty blocks by @hunicus in <a href="https://github.com/mempool/mempool/pull/1728">https://github.com/mempool/mempool/pull/1728</a></li>
+<li>Add loading spinner in /blocks page by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1718">https://github.com/mempool/mempool/pull/1718</a></li>
+<li>Remove keybase link from about page by @hunicus in <a href="https://github.com/mempool/mempool/pull/1735">https://github.com/mempool/mempool/pull/1735</a></li>
+<li>Adjust stuck tx faqs for angry people by @hunicus in <a href="https://github.com/mempool/mempool/pull/1736">https://github.com/mempool/mempool/pull/1736</a></li>
+<li>Angular 13.3.10 update by @softsimon in <a href="https://github.com/mempool/mempool/pull/1733">https://github.com/mempool/mempool/pull/1733</a></li>
+<li>Mining dashboard still runs fine if Bitcoin Core becomes unavailable by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1716">https://github.com/mempool/mempool/pull/1716</a></li>
+<li>Don&#39;t try to run pools parser if db is not enabled by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1719">https://github.com/mempool/mempool/pull/1719</a></li>
+<li>Fix doc page titles by @hunicus in <a href="https://github.com/mempool/mempool/pull/1730">https://github.com/mempool/mempool/pull/1730</a></li>
+<li>Use block hash instead of block height in urls by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1739">https://github.com/mempool/mempool/pull/1739</a></li>
+<li>Add <code>economyFee</code> field in /api/fees/recommended API by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1738">https://github.com/mempool/mempool/pull/1738</a></li>
+<li>Upgrading packages by @softsimon in <a href="https://github.com/mempool/mempool/pull/1742">https://github.com/mempool/mempool/pull/1742</a></li>
+<li>Changed menu buttons to links by @softsimon in <a href="https://github.com/mempool/mempool/pull/1750">https://github.com/mempool/mempool/pull/1750</a></li>
+<li>Bump clipboard from 2.0.10 to 2.0.11 in /frontend by @dependabot in <a href="https://github.com/mempool/mempool/pull/1624">https://github.com/mempool/mempool/pull/1624</a></li>
+<li>Save bisq aggregate exchange rates in the database for each new block by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1723">https://github.com/mempool/mempool/pull/1723</a></li>
+<li>Handle nonstandard inputs by @softsimon in <a href="https://github.com/mempool/mempool/pull/1751">https://github.com/mempool/mempool/pull/1751</a></li>
+<li>Change backend start syslog message from DEBUG to NOTICE by @wiz in <a href="https://github.com/mempool/mempool/pull/1763">https://github.com/mempool/mempool/pull/1763</a></li>
+<li>Remove fee calculation from the frontend by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1741">https://github.com/mempool/mempool/pull/1741</a></li>
+<li>Only attempt to save fx rate if database is enabled by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1764">https://github.com/mempool/mempool/pull/1764</a></li>
+<li>Use inline SVG for mempool.space logo by @wiz in <a href="https://github.com/mempool/mempool/pull/1752">https://github.com/mempool/mempool/pull/1752</a></li>
+<li>If bisq data folder is not ready, retry every 3 minutes instead of exit by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1642">https://github.com/mempool/mempool/pull/1642</a></li>
+<li>Send fee info with init data by @softsimon in <a href="https://github.com/mempool/mempool/pull/1765">https://github.com/mempool/mempool/pull/1765</a></li>
+<li>Re-add hash field in the mysql block query by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1769">https://github.com/mempool/mempool/pull/1769</a></li>
+<li>Rewamp the fee widget by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1766">https://github.com/mempool/mempool/pull/1766</a></li>
+<li>Feature: Projected block visualization by @mononaut in <a href="https://github.com/mempool/mempool/pull/1774">https://github.com/mempool/mempool/pull/1774</a></li>
+<li>Minor refactor for projected block transactions by @softsimon in <a href="https://github.com/mempool/mempool/pull/1779">https://github.com/mempool/mempool/pull/1779</a></li>
+<li>Updated new fee widget design by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1790">https://github.com/mempool/mempool/pull/1790</a></li>
+<li>Make node 16.15 required not recommended by @hunicus in <a href="https://github.com/mempool/mempool/pull/1784">https://github.com/mempool/mempool/pull/1784</a></li>
+<li>Skip blocks disk cache loading after db migration by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1797">https://github.com/mempool/mempool/pull/1797</a></li>
+<li>Update dashboard screenshot for v2.4.0 release by @wiz in <a href="https://github.com/mempool/mempool/pull/1792">https://github.com/mempool/mempool/pull/1792</a></li>
+<li>Update /api/blocks docs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1795">https://github.com/mempool/mempool/pull/1795</a></li>
+<li>Refactor pool ranking rxjs observable by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1772">https://github.com/mempool/mempool/pull/1772</a></li>
+<li>Re-added missing cache version by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1800">https://github.com/mempool/mempool/pull/1800</a></li>
+<li>Improve disk cache logging by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1801">https://github.com/mempool/mempool/pull/1801</a></li>
+<li>Fix for mempool logo SVG issue by @softsimon in <a href="https://github.com/mempool/mempool/pull/1809">https://github.com/mempool/mempool/pull/1809</a></li>
+<li>Make sure blocks list rxjs observable triggers at least once by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1808">https://github.com/mempool/mempool/pull/1808</a></li>
+<li>Cypress v10 upgrade by @knorrium in <a href="https://github.com/mempool/mempool/pull/1806">https://github.com/mempool/mempool/pull/1806</a></li>
+<li>stricter multisig check + detect bare multisig when spent by @antonilol in <a href="https://github.com/mempool/mempool/pull/1745">https://github.com/mempool/mempool/pull/1745</a></li>
+<li>Reload mempool visualization on reconnect by @softsimon in <a href="https://github.com/mempool/mempool/pull/1811">https://github.com/mempool/mempool/pull/1811</a></li>
+<li>Handle Error with basic retry while syncing external assets by @ayanamidev in <a href="https://github.com/mempool/mempool/pull/1691">https://github.com/mempool/mempool/pull/1691</a></li>
+<li>Add pull request template to discourage tx prs by @hunicus in <a href="https://github.com/mempool/mempool/pull/1825">https://github.com/mempool/mempool/pull/1825</a></li>
+<li>Update fee faq by @hunicus in <a href="https://github.com/mempool/mempool/pull/1819">https://github.com/mempool/mempool/pull/1819</a></li>
+<li>Add &#39;db-less&#39; mining pool tagging support by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1822">https://github.com/mempool/mempool/pull/1822</a></li>
+<li>Add feerate tooltips by @hunicus in <a href="https://github.com/mempool/mempool/pull/1820">https://github.com/mempool/mempool/pull/1820</a></li>
+<li>Change &#39;projected blocks&#39; to &#39;mempool blocks&#39; in feerate tooltips by @hunicus in <a href="https://github.com/mempool/mempool/pull/1827">https://github.com/mempool/mempool/pull/1827</a></li>
+<li>Change &quot;projected block&quot; to &quot;mempool block&quot; in feerate faq by @hunicus in <a href="https://github.com/mempool/mempool/pull/1830">https://github.com/mempool/mempool/pull/1830</a></li>
+<li>Fix pool import crash by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1834">https://github.com/mempool/mempool/pull/1834</a></li>
+<li>Add missing sed substitutions in docker/backend/start.sh by @wiz in <a href="https://github.com/mempool/mempool/pull/1839">https://github.com/mempool/mempool/pull/1839</a></li>
+<li>Use ellipsis + tooltip combo to fix layout on long string by @nymkappa in <a href="https://github.com/mempool/mempool/pull/1855">https://github.com/mempool/mempool/pull/1855</a></li>
+<li>Release v2.4.0 by @wiz in <a href="https://github.com/mempool/mempool/pull/1858">https://github.com/mempool/mempool/pull/1858</a></li>
+</ul>
+
+<h2>New Contributors</h2>
+
+<ul>
+<li>@antonilol made their first contribution in <a href="https://github.com/mempool/mempool/pull/1158">https://github.com/mempool/mempool/pull/1158</a></li>
+<li>@AaronDewes made their first contribution in <a href="https://github.com/mempool/mempool/pull/1194">https://github.com/mempool/mempool/pull/1194</a></li>
+<li>@Bosch-0 made their first contribution in <a href="https://github.com/mempool/mempool/pull/1316">https://github.com/mempool/mempool/pull/1316</a></li>
+<li>@dsbaars made their first contribution in <a href="https://github.com/mempool/mempool/pull/1360">https://github.com/mempool/mempool/pull/1360</a></li>
+<li>@naveensrinivasan made their first contribution in <a href="https://github.com/mempool/mempool/pull/1339">https://github.com/mempool/mempool/pull/1339</a></li>
+<li>@ayanamidev made their first contribution in <a href="https://github.com/mempool/mempool/pull/1649">https://github.com/mempool/mempool/pull/1649</a></li>
+<li>@mononaut made their first contribution in <a href="https://github.com/mempool/mempool/pull/1774">https://github.com/mempool/mempool/pull/1774</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/mempool/mempool/compare/v2.3.1...v2.4.0">https://github.com/mempool/mempool/compare/v2.3.1...v2.4.0</a></p>
+</p>
+					    <a href="https://github.com/mempool/mempool" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/mempool/mempool/releases/tag/v2.4.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.107">v0.0.107</a>
 						    </h2>
 							<p class="card-text">Published: 2022-06-08 23:56:54 UTC</p>
@@ -2696,6 +3324,52 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.3">v1.5.3</a>
+						    </h2>
+							<p class="card-text">Published: 2022-05-25 10:38:42 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>New features:</h3>
+
+<ul>
+<li>Add an experimental mode for new features (#3772) @NicolasDorier</li>
+<li>Wallet transactions export (#3744) @dennisreimann</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Fix: Invoices from shopify had empty orderId (#3777 #3769) @NicolasDorier</li>
+<li>Lightning: Allow specifying explicit amount for invoices (#3753) @dennisreimann</li>
+<li>Make login and password not required for sending email (#3764) @bolatovumar @NicolasDorier</li>
+<li>Fix labels not showing multiple payouts payments (#3729) @Kukks</li>
+<li>Fix overflowing text in order ID field in invoices table (#3765) @bolatovumar</li>
+<li>Fix a couple of mobile display issues (#3759) @bolatovumar</li>
+<li>Fix unwanted alert list marker for single error in payout&#39;s validation form, issue #3583 MrPaz</li>
+<li>Fix a bunch of open redirect vulnerability @NicolasDorier (Thanks to Iman Sharafaldin @ImanOracle for reporting those)</li>
+<li>Fix Automatically Approved column in pull payment was always false, even if automatic approval was activated (#3693) @bolatovumar</li>
+</ul>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>Performance improvement when lot&#39;s of invoices are pending (#3774) @NicolasDorier</li>
+<li>Remove of an unused table in postgres (#3773) @NicolasDorier</li>
+<li>Remove some logs from the payout processor @NicolasDorier</li>
+<li>Payout Processors: Use friendly name in delete confirmation (#3758) @dennisreimann</li>
+<li>Wallet display improvements (#3755) @dennisreimann</li>
+<li>Some UI improvements @dstrukt</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/bitcoin-core/HWI">bitcoin-core/HWI</a>: <a href="https://github.com/bitcoin-core/HWI/releases/tag/2.1.1">2.1.1</a>
 						    </h2>
 							<p class="card-text">Published: 2022-05-24 20:39:01 UTC</p>
@@ -2870,6 +3544,39 @@ Rusty.</p>
 </p>
 					    <a href="https://github.com/Start9Labs/embassy-os" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.0.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.2">v1.5.2</a>
+						    </h2>
+							<p class="card-text">Published: 2022-05-09 12:16:43 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Bug fixes:</h3>
+
+<ul>
+<li>Various internal fixes @NicolasDorier @Kukks</li>
+<li>Various UI fixes (#3702 #3721) @dennisreimann</li>
+<li>Updated Payout processor Label for setting interval (#3698) @Bangalisch</li>
+<li>Update validation of crowdfund app settings (#3708) @bolatovumar</li>
+<li>Fix POS styling (#3713) @ishristov </li>
+</ul>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>Do not always provide counting in list views (#3696) @NicolasDorier</li>
+<li>Lightning: Catch and display external service error (#3710) @dennisreimann</li>
+<li>Add dark mode option for public pull payment and payment request views (#3707) @dennisreimann</li>
+<li>Show Shopify Order Id instead of Shopify order internal id (#3718) @Kukks</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -3085,6 +3792,35 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/romanz/electrs" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/romanz/electrs/releases/tag/v0.9.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.1">v1.5.1</a>
+						    </h2>
+							<p class="card-text">Published: 2022-04-30 04:12:32 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Bug fixes:</h3>
+
+<ul>
+<li>Do not show balance if can&#39;t get the balance (#3695) @NicolasDorier</li>
+<li>Fix performance issue on dashboard for big wallets (#3694) @NicolasDorier</li>
+<li>Do not crash if /apps/{appId} do not exists @NicolasDorier</li>
+</ul>
+
+<h3>Improvements:</h3>
+
+<ul>
+<li>Remove logs about pending invoices @NicolasDorier</li>
+<li>Add missing swagger doc for auto approval of payouts @Kukks</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -3794,6 +4530,22 @@ b0d7bee008 First draft of 1.9.1 release notes (#4195)
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.17">v0.4.17</a>
+						    </h2>
+							<p class="card-text">Published: 2022-04-05 12:02:34 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This update brings two brand new apps to the Umbrel App Store — Agora and sparkkiosk, along with updated apps and bugfixes.</p>
+</p>
+					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.17" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.2">v1.9.2</a>
 						    </h2>
 							<p class="card-text">Published: 2022-04-04 17:25:39 UTC</p>
@@ -4213,6 +4965,47 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.22">android-legacy-v1.4.22</a>
+						    </h2>
+							<p class="card-text">Published: 2022-03-25 10:10:39 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Fix wallet creation on some devices</h3>
+
+<p>This version fixes an issue on some devices where creating an entry in the keystore would fail, preventing new wallets from being created.</p>
+
+<p>List of commits (filter on phoenix-legacy)</p>
+
+<ul>
+<li><a href="https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.21...android-legacy-v1.4.22">https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.21...android-legacy-v1.4.22</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
+- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import padioupm.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.22" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -4641,6 +5434,40 @@ That instruction is not tested on many different distros. If you encounter probl
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.7">v1.4.7</a>
+						    </h2>
+							<p class="card-text">Published: 2022-03-02 12:03:44 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>New features:</h3>
+
+<ul>
+<li>Plugins: Expose file service @Kukks</li>
+<li>Plugins: Allow writing Greenfield API endpoints (#3495) @dennisreimann</li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Fix Shopify configuration UI due to shopify changes (#3479) @Kukks</li>
+<li>Various fixes related to store context (#3505) @dennisreimann @Kukks</li>
+<li>Various fixes related to plugin system @dennisreimann @Kukks</li>
+<li>Add missing documentation for wallet generation Greenfield API @Kukks</li>
+<li>Fix broken modal views on mobile (#3504) @dennisreimann</li>
+<li>Custom amount option in point of sale print view was not showing  (#3503) @Kukks</li>
+<li>Fix code copying buttons (#3489 #3499) @dennisreimann @bolatovumar</li>
+<li>Various UI fixes @dennisreimann @bolatovumar</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.15">v0.4.15</a>
 						    </h2>
 							<p class="card-text">Published: 2022-03-01 14:07:30 UTC</p>
@@ -4751,6 +5578,139 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/Start9Labs/embassy-os" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.105">v0.0.105</a>
+						    </h2>
+							<p class="card-text">Published: 2022-03-01 04:15:52 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2>API Updates</h2>
+
+<ul>
+<li><code>Phantom node</code> payments are now supported, allowing receipt of a payment on
+any one of multiple nodes without any coordination across the nodes being
+required. See the new <code>PhantomKeysManager</code>&#39;s docs for more, as well as
+requirements on <code>KeysInterface::get_inbound_payment_key_material</code> and
+<code>lightning_invoice::utils::create_phantom_invoice</code> (#1199).</li>
+<li>In order to support phantom node payments, several <code>KeysInterface</code> methods
+now accept a <code>Recipient</code> parameter to select between the local <code>node_id</code> and
+a phantom-specific one.</li>
+<li><code>ProbabilisticScorer</code>, a <code>Score</code> based on learning the current balances of
+channels in the network, was added. It attempts to better capture payment
+success probability than the existing <code>Scorer</code>, though may underperform on
+nodes with low payment volume. We welcome feedback on performance (#1227).</li>
+<li><code>Score::channel_penalty_msat</code> now always takes the channel value, instead of
+an <code>Option</code> (#1227).</li>
+<li><code>UserConfig::manually_accept_inbound_channels</code> was added which, when set,
+generates a new <code>Event::OpenChannelRequest</code>, which allows manual acceptance
+or rejection of incoming channels on a per-channel basis (#1281).</li>
+<li><code>Payee</code> has been renamed to <code>PaymentParameters</code> (#1271).</li>
+<li><code>PaymentParameters</code> now has a <code>max_total_cltv_expiry_delta</code> field. This
+defaults to 1008 and limits the maximum amount of time an HTLC can be pending
+before it will either fail or be claimed (#1234).</li>
+<li>The <code>lightning-invoice</code> crate now supports no-std environments. This required
+numerous API changes around timestamp handling and std+no-std versions of
+several methods that previously assumed knowledge of the time (#1223, #1230).</li>
+<li><code>lightning-invoice</code> now supports parsing invoices with expiry times of more
+than one year. This required changing the semantics of <code>ExpiryTime</code> (#1273).</li>
+<li>The <code>CounterpartyCommitmentSecrets</code> is now public, allowing external uses of
+the <code>BOLT 3</code> secret storage scheme (#1299).</li>
+<li>Several <code>Sign</code> methods now receive HTLC preimages as proof of state
+transition, see new documentation for more (#1251).</li>
+<li><code>KeysInterface::sign_invoice</code> now provides the HRP and other invoice data
+separately to make it simpler for external signers to parse (#1272).</li>
+<li><code>Sign::sign_channel_announcement</code> now returns both the node&#39;s signature and
+the per-channel signature. <code>InMemorySigner</code> now requires the node&#39;s secret
+key in order to implement this (#1179).</li>
+<li><code>ChannelManager</code> deserialization will now fail if the <code>KeysInterface</code> used
+has a different <code>node_id</code> than the <code>ChannelManager</code> expects (#1250).</li>
+<li>A new <code>ErrorAction</code> variant was added to send <code>warning</code> messages (#1013).</li>
+<li>Several references to <code>chain::Listen</code> objects in <code>lightning-block-sync</code> no
+longer require a mutable reference (#1304).</li>
+</ul>
+
+<h2>Bug Fixes</h2>
+
+<ul>
+<li>Fixed a regression introduced in 0.0.104 where <code>ChannelManager</code>&#39;s internal
+locks could have an order violation leading to a deadlock (#1238).</li>
+<li>Fixed cases where slow code (including user I/O) could cause us to
+disconnect peers with ping timeouts in <code>BackgroundProcessor</code> (#1269).</li>
+<li>Now persist the <code>ChannelManager</code> prior to <code>BackgroundProcessor</code> stopping,
+preventing race conditions where channels are closed on startup even with a
+clean shutdown. This requires that users stop network processing and
+disconnect peers prior to <code>BackgroundProcessor</code> shutdown (#1253).</li>
+<li>Fields in <code>ChannelHandshakeLimits</code> provided via the <code>override_config</code> to
+<code>create_channel</code> are now applied instead of the default config (#1292).</li>
+<li>Fixed the generation of documentation on docs.rs to include API surfaces
+which are hidden behind feature flags (#1303).</li>
+<li>Added the <code>channel_type</code> field to <code>accept_channel</code> messages we send, which
+may avoid some future compatibility issues with other nodes (#1314).</li>
+<li>Fixed a bug where, if a previous LDK run using <code>lightning-persister</code> crashed
+while persisting updated data, we may have failed to initialize (#1332).</li>
+<li>Fixed a rare bug where having both pending inbound and outbound HTLCs on a
+just-opened inbound channel could cause <code>ChannelDetails::balance_msat</code> to
+underflow and be reported as large, or cause panics in debug mode (#1268).</li>
+<li>Moved more instances of verbose gossip logging from the <code>Trace</code> level to the
+<code>Gossip</code> level (#1220).</li>
+<li>Delayed <code>announcement_signatures</code> until the channel has six confirmations,
+slightly improving propagation of channel announcements (#1179).</li>
+<li>Several fixes in script and transaction weight calculations when anchor
+outputs are enabled (#1229).</li>
+</ul>
+
+<h2>Serialization Compatibility</h2>
+
+<ul>
+<li>Using <code>ChannelManager</code> data written by versions prior to 0.0.105 will result
+in preimages for HTLCs that were pending at startup to be missing in calls
+to <code>KeysInterface</code> methods (#1251).</li>
+<li>Any phantom invoice payments received on a node that is not upgraded to
+0.0.105 will fail with an &quot;unknown channel&quot; error. Further, downgrading to
+0.0.104 or before and then upgrading again will invalidate existing phantom
+SCIDs which may be included in invoices (#1199).</li>
+</ul>
+
+<h2>Security</h2>
+
+<p>0.0.105 fixes two denial-of-service vulnerabilities which may be reachable from
+untrusted input in certain application designs.</p>
+
+<ul>
+<li>Route calculation spuriously panics when a routing decision is made for a
+path where the second-to-last hop is a private channel, included due to a
+multi-hop route hint in an invoice.</li>
+<li><code>ChannelMonitor::get_claimable_balances</code> spuriously panics in some scenarios
+when the LDK application&#39;s local commitment transaction is confirmed while
+HTLCs are still pending resolution.</li>
+</ul>
+
+<p>In total, this release features 109 files changed, 7270 insertions, 2131
+deletions in 108 commits from 15 authors, in alphabetical order:
+ * Conor Okus
+ * Devrandom
+ * Elias Rohrer
+ * Jeffrey Czyz
+ * Jurvis Tan
+ * Ken Sedgwick
+ * Matt Corallo
+ * Naveen
+ * Tibo-lg
+ * Valentine Wallace
+ * Viktor Tigerström
+ * dependabot[bot]
+ * hackerrdave
+ * naveen
+ * vss96</p>
+</p>
+					    <a href="https://github.com/lightningdevkit/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.105" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -5320,511 +6280,6 @@ e5707d5002 Fix broken website examples (#4085)
 </p>
 					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.14" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/lnbits/lnbits-legend">lnbits/lnbits-legend</a>: <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0">0.6.0</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-07 13:41:11 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Updated LNURLPoS to LNURLDevices, to give the extension greater scope
-Added admin users to allow easy debiting of admin accounts, and admin only extensions
-Added FakeWallet, so LNbits can be used completely detached from bitcoin as a centralised payment server (for use as voucher system in schools, universities, businesses, events, etc)</p>
-</p>
-					    <a href="https://github.com/lnbits/lnbits-legend" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.6.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/vulpemventures/marina">vulpemventures/marina</a>: <a href="https://github.com/vulpemventures/marina/releases/tag/v0.4.0">v0.4.0</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-04 16:49:04 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"></p>
-					    <a href="https://github.com/vulpemventures/marina" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/vulpemventures/marina/releases/tag/v0.4.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/romanz/electrs">romanz/electrs</a>: <a href="https://github.com/romanz/electrs/releases/tag/v0.9.5">v0.9.5</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-04 15:45:49 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><a href="https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#095-feb-4-2022">https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#095-feb-4-2022</a></p>
-</p>
-					    <a href="https://github.com/romanz/electrs" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/romanz/electrs/releases/tag/v0.9.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta">v0.14.2-beta</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-03 22:33:20 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This is the second minor release of the 0.14x cycle! This release contains no new larger/major features, and instead packages up a series of bug fixes (several obscure crash fixes), and enhancements (like begin able to convert a node to a watch-only mode for use with the remote signer feature).</p>
-
-<p>We strongly recommend that all users update!</p>
-
-<h1>Verifying the Release</h1>
-
-<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already: </p>
-
-<p><code>
-curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/roasbeef.asc | gpg --import
-</code></p>
-
-<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-roasbeef-v0.14.2-beta.sig</code> and <code>manifest-v0.14.2-beta.txt</code> are in the current directory) with:</p>
-
-<p><code>
-gpg --verify manifest-roasbeef-v0.14.2-beta.sig manifest-v0.14.2-beta.txt
-</code></p>
-
-<p>You should see the following if the verification was successful:</p>
-
-<p><code>
-gpg: Signature made Thu Feb  3 13:55:45 2022 PST
-gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
-</code></p>
-
-<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
-
-<h2>Verifying the Release Timestamp</h2>
-
-<p>From this new version onwards, in addition time-stamping the <em>git tag</em> with <a href="https://opentimestamps.org/">OpenTimeStamps</a>, we&#39;ll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: <code>manifest-roasbeef-v0.14.2-beta.txt.asc.ots</code>.</p>
-
-<p>Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
-<code>
-ots verify manifest-roasbeef-v0.14.2-beta.sig.ots -f manifest-roasbeef-v0.14.2-beta.sig
-</code></p>
-
-<p>Alternatively, <a href="https://opentimestamps.org/">the open timestamps website</a> can be used to verify timestamps if one doesn&#39;t have a <code>bitcoind</code> instance accessible locally. </p>
-
-<p>These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. </p>
-
-<h2>Verifying the Release Binaries</h2>
-
-<p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/tree/master/build/release">reproducible builds guide</a> for how this can be achieved.
-The release binaries are compiled with <code>go1.17.3</code>, which is required by verifiers to arrive at the same ones.
-They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>routerrpc</code>, <code>watchtowerrpc</code> and <code>monitoring</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
-
-<p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
-
-<p>Finally, you can also verify the <em>tag</em> itself with the following command:</p>
-
-<p><code>
-$ git verify-tag v0.14.2-beta
-gpg: Signature made Thu 03 Feb 2022 08:21:05 PM UTC using RSA key ID 9B280306
-gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot;
-</code></p>
-
-<h2>Verifying the Docker Images</h2>
-
-<p>To verify the <code>lnd</code> and <code>lncli</code> binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):</p>
-
-<p><code>shell
-$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.14.2-beta /verify-install.sh v0.14.2-beta
-$ OK=$?
-$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
-$ docker run lightninglabs/lnd [command-line options]
-</code></p>
-
-<h1>Building the Contained Release</h1>
-
-<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
-that <code>vendor.tar.gz</code> and <code>lnd-source-v0.14.2-beta.tar.gz</code> are in the current directory, follow these steps:</p>
-
-<p><code>
-tar -xvzf vendor.tar.gz
-tar -xvzf lnd-source-v0.14.2-beta.tar.gz
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.2-beta&quot; ./cmd/lnd
-GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.2-beta&quot; ./cmd/lncli
-</code></p>
-
-<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory. </p>
-
-<p>Additionally, it&#39;s now possible to use the <a href="https://github.com/lightningnetwork/lnd/pull/2191">enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so</a>: </p>
-
-<p><code>
-make release sys=&quot;linux-arm64 darwin-amd64&quot;
-</code></p>
-
-<p>⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️</p>
-
-<p>The release notes can be found here: <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.2.md">https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-notes-0.14.2.md</a> </p>
-</p>
-					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.2-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/sparrowwallet/sparrow">sparrowwallet/sparrow</a>: <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.5.6">1.5.6</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-03 12:04:52 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><ul>
-<li>Add wallet search dialog for labels, address, values and txids across all wallet accounts (View menu)</li>
-<li>Add dialog to sweep a private key in WIF format (e.g. Opendime) to any address (Tools menu)</li>
-<li>Expand transaction diagram in popup by clicking on it to display more inputs, outputs and their values</li>
-<li>Do database updates in a background thread and improve efficiency when refreshing a deep wallet</li>
-<li>Improve deep wallet loading performance by adding a setting to watch only the last X used addresses plus the gap limit (Settings &gt; Advanced)</li>
-<li>General wallet loading performance improvements</li>
-<li>Add broadcasting step to Soroban initiator dialog and indicate when the transaction has been successfully broadcasted</li>
-<li>Add fee rate, RBF and vB from tip information to the tooltip for unconfirmed transactions in transactions tab</li>
-<li>Remove AOPP</li>
-<li>Pass PSBTs and messages to HWI on stdin to avoid overly long process arguments</li>
-<li>Support retrieving a keystore from a scanned crypto-output QR</li>
-<li>Indicate output descriptor key expressions are shown in canonical order</li>
-<li>Indicate payment label is required</li>
-<li>Request focus on password field for encrypted locked wallets when wallet window becomes active</li>
-<li>Increase maximum number of UTXO chart bars</li>
-<li>(Re)allow full addresses in Whirlpool child wallet address CSV exports</li>
-<li>Ensure monotonically increasing ids are used for all JSON-RPC requests in a session</li>
-<li>Tune batch page size for better performance over Tor (maxPageSize config setting)</li>
-<li>Detect Fulcrum version to enable batching (&gt; 1.6.0)</li>
-<li>Upgrade to H2 2.0.206</li>
-<li>Bug fix: Fix memory leak in Jetty ShutdownThread when mixing</li>
-<li>Bug fix: Fix regression selecting a public server in regtest</li>
-<li>Bug fix: Don&#39;t enable the Max button when Clear is pressed</li>
-<li>Bug fix: Use unique (per session) integers as ids for all paged server queries</li>
-<li>Bug fix: Adapt to non-commented derivation entries for multiple derivation path wallets in Coldcard export file (firmware &gt; 3.2.1)</li>
-<li>Bug fix: Fix incorrect mix out probability percentage shown in tooltip</li>
-<li>Bug fix: Fix NPE when performing Soroban reply without UTXOs</li>
-<li>Bug fix: Only retain one day of mempool rate sizes to keep memory usage bounded</li>
-<li>Bug fix: Fix reversion of transaction labels when switching servers</li>
-<li>Bug fix: Fix disappearing watch only accounts with the same derivation path</li>
-<li>Bug fix: Improve label cell performance by avoiding clipboard retrieval on creation</li>
-</ul>
-</p>
-					    <a href="https://github.com/sparrowwallet/sparrow" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.5.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.18">v6.2.18</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-02 20:13:32 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><ul>
-<li>FIX: Reorder wallets screen crash on macOS</li>
-</ul>
-</p>
-					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.18" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.12">v0.4.12</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-02 13:53:43 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Umbrel 0.4.12 brings four brand new apps in the Umbrel App Store — Kollider, Bitfeed, Suredbits Wallet, and LNDg, updated apps, a security patch, bug fixes, and more.</p>
-</p>
-					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.12" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.3">v1.4.3</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-02 11:46:28 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>Bug fixes:</h3>
-
-<ul>
-<li>Ensure the swagger doc is semantically correct (#3390) @ubolator</li>
-<li>Fix crashes with some plugins (#3401) @Kukks</li>
-<li>Fix crash of payment request list (#3392) @NicolasDorier</li>
-<li>Reference correct payment type definition for webhook events in Swagger docs @ubolator</li>
-<li>Fix pay button type comparison (#3403) @dennisreimann</li>
-<li>No JS error in crowdfund if canvas unavailable @NicolasDorier</li>
-<li>Bump z-index on header (#3393, #3377) @ubolator</li>
-</ul>
-
-<h3>Improvements:</h3>
-
-<ul>
-<li>Delete user preferences cookie on logout (#3379) @dennisreimann</li>
-<li>Pay Button Alert: Add missing alert-link classes (#3397)</li>
-<li>Fix pay button type comparison (#3403 #3403) @dennisreimann</li>
-<li>Various CSS UI adjustment @dstrukt</li>
-</ul>
-</p>
-					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.1">v1.8.1</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-01 15:37:31 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/Specter-Setup-v1.8.1.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/SpecterDesktop-v1.8.1.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/specter_desktop-v1.8.1-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/specterd-v1.8.1-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/specterd-v1.8.1-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/specterd-v1.8.1-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h2>Signatures and hashes</h2>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.1/SHA256SUMS">SHA256SUMS</a> file contains sha256 hashes of all binary files and signed with &quot;Specter Signer&#39;s&quot; GPG key.
-You can get the public key from <a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7">here</a>.
-Fingerprint of the key is <code>785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7</code>
-This key has been signed by @k9ert&#39;s key which you might have used for validating th 1.7.0 release.</p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Bugfix: Import electrum multisig wallet (with available seed) (#1543 relativisticelectron) </li>
-<li>Feature: Adds JS polling to improve Swan integration flow completion (#1546 kdmukai )</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/eclair">ACINQ/eclair</a>: <a href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0">v0.7.0</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-01 09:15:56 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Eclair v0.7.0</h1>
-
-<p>This release adds official support for two long-awaited lightning features: anchor outputs and onion messages.
-Support for the PostreSQL database backend is also now production ready!
-This release also includes a few bug fixes and many new (smaller) features.
-It is fully compatible with 0.6.2 (and all previous versions of eclair).</p>
-
-<p>Because this release changes the default type of channels that your node will use, make sure you read the release notes carefully!
-The release notes can be found <a href="https://github.com/ACINQ/eclair/blob/master/docs/release-notes/eclair-v0.7.0.md">here</a>.</p>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:</p>
-
-<ul>
-<li>from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a></li>
-<li>from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></li>
-</ul>
-
-<p>To import our signing key:</p>
-
-<p><code>sh
-$ gpg --import drouinf.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:</p>
-
-<p><code>sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-
-<h2>Building</h2>
-
-<p>Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):</p>
-
-<ul>
-<li>Ubuntu 20.04</li>
-<li>AdoptOpenJDK 11.0.6</li>
-<li>Maven 3.8.1</li>
-</ul>
-
-<p>Use the following command to generate the eclair-node package:</p>
-
-<p><code>sh
-mvn clean install -DskipTests
-</code></p>
-
-<p>That should generate <code>eclair-node/target/eclair-node-0.7.0-a804905-bin.zip</code> with sha256 checksums that match the one we provide and sign in <code>SHA256SUMS.asc</code></p>
-
-<p>(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not tried everything.</p>
-
-<h2>Upgrading</h2>
-
-<p>This release is fully compatible with previous eclair versions. You don&#39;t need to close your channels, just stop eclair, upgrade and restart.</p>
-</p>
-					    <a href="https://github.com/ACINQ/eclair" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/eclair/releases/tag/v0.7.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17">v6.2.17</a>
-						    </h2>
-							<p class="card-text">Published: 2022-01-31 20:46:04 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><ul>
-<li>ADD: show selected coins summary on CoinControl screen </li>
-<li>ADD: Navigate to selected wallet </li>
-<li>DEL: AOPP </li>
-<li>FIX: Reorder wallet is clunky to use. #4405</li>
-</ul>
-</p>
-					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.2.17" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0">v1.8.0</a>
-						    </h2>
-							<p class="card-text">Published: 2022-01-29 12:15:02 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/Specter-Setup-v1.8.0.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/SpecterDesktop-v1.8.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specter_desktop-v1.8.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/specterd-v1.8.0-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h2>Signatures and hashes</h2>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.8.0/SHA256SUMS">SHA256SUMS</a> file contains sha256 hashes of all binary files and signed with &quot;Specter Signer&#39;s&quot; GPG key.
-You can get the public key from <a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7">here</a>.
-Fingerprint of the key is <code>785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7</code>
-This key has been signed by @k9ert&#39;s key which you might have used for validating th 1.7.0 release.</p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Feature: Add Jade multisig support #1520 (Stepan Snigirev)</li>
-<li>Feature: add liquid-testnet support #1527 (Stepan Snigirev)</li>
-<li>Feature: Allow descriptors with xpubs but without derivations (just wpkh(xpub) ) for wallet imports  #1519 (Stepan Snigirev)</li>
-<li>Feature: search improvements #1497 (Kim Neunert)</li>
-<li>Feature: Send dialog refactored and sped up #1454 (Kim Neunert)</li>
-<li>Feature: Service integration - Swan #1517 (kdmukai)</li>
-<li>Bugfix: Coin selection - unselection via toggle #1536 (Manolis)</li>
-<li>Bugfix: deactivate internal Tor for non-AppImages #1499 (Kim Neunert)</li>
-<li>Bugfix: Edge case for electrum label import #1542 (relativisticelectron)</li>
-<li>Bugfix/Feature: Restoring send functionalities and better address validation and fee selection #1532 (Manolis)</li>
-<li>Bugfix: Final Swan service updates #1533 (kdmukai)</li>
-<li>Bugfix: fix jade signing of unconfidential inputs #1528 (Stepan Snigirev)</li>
-<li>Bugfix: fix keypoolrefill perfomance and adjusted callback logic #1508 (Kim Neunert)</li>
-<li>Bugfix: Multiple send bug fixes #1538 (Manolis)</li>
-<li>Bugfix: prevent using keys twice #1500 (Kim Neunert)</li>
-<li>Bugfix: Restore ability to import address labels of unlabeled addresses #1511 (relativisticelectron)</li>
-<li>Bugfix: Revision of test-new-releases.md #1529 (Manolis)</li>
-<li>Bugfix: Servicediscovery in pyinstaller-packages (specterd) #1531 (Kim Neunert)</li>
-<li>Bugfix: service icons breaking liquid #1534 (Stepan Snigirev)</li>
-<li>Bugfix: Very last fixes for Service swan #1537 (Kim Neunert)</li>
-<li>Documentation: message signature #1310 (Kim Neunert)</li>
-<li>Documentation: added endless pacman troubleshooting Guide #1498 (Kim Neunert)</li>
-<li>Documentation: Create document for testing-setups and cleaning up swan #1526 (Kim Neunert)</li>
-<li>Documentation: Update Donation Link #1514 (Moritz)</li>
-<li>I18N: Fixed the translation error. #1507 (2a3dex)</li>
-<li>UIUX: Added suggestion to quit other wallet software when connecting HWI over USB #1535 (Lobbelt)</li>
-<li>UIUX: Improve behaviour for apps #1540 (Kim Neunert)</li>
-<li>UIUX: Fixed help text #1510 (relativisticelectron)</li>
-<li>Chore: Bump HWI to 2.0.2 #1522 (Michael Henke)</li>
-<li>Chore: Fix running bitcoind with docker #1523 (Kim Neunert)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.8.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.2">v1.4.2</a>
-						    </h2>
-							<p class="card-text">Published: 2022-01-28 13:58:43 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>Bug fixes:</h3>
-
-<ul>
-<li>Newly created guest cannot login (#3373) @dennisreimann</li>
-<li>Guest users shouldn&#39;t see Payouts menu item @NicolasDorier</li>
-<li>Add plugins link in server nav @Kukks</li>
-</ul>
-</p>
-					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
