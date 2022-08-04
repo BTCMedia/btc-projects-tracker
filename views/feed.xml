@@ -6,7 +6,60 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-04T05:05:17+00:00</updated>
+  <updated>2022-08-04T11:51:08+00:00</updated>
+  <entry>
+    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.6.6</id>
+    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.6.6"/>
+    <summary>- Add support for Auth47 authentication by registering a handler for auth: URLs in the browser
+- Add support for LNURL-auth authentication by registering a handler for lightning: URLs in the browser
+- Add BIP47 support for Bitcoin Core connections
+- Spend change from BIP47 notification transactions only if necessary
+- Add support for sweeping of funds from a BIP38 encrypted private key
+- Only allow sending to PayNyms where a notification transaction has previously been sent by the sender (no automatic reverse linking)
+- Show taproot specific sighash default in sighash dropdown, and select it if appropriate
+- Add optional transaction count column on address table using table header context menu to show and hide
+- Reduce delay before attempting to reconnect when a private server connection fails
+- Allow mixing out to other postmix wallet accounts
+- Copy existing labels from deposit UTXOs into badbank UTXOs if present
+- Add tooltip to wallet tab label on load failure
+- Avoid unnecessary computation during entry cell sizing on initial table scroll
+- Cache any wallet nodes for provided addresses during transaction construction, and use cache in transaction diagram and privacy analysis
+- Refactor and optimize address classes
+- Optimize retrieving unspent UTXOs
+- Optimize UTXO selection through local variable caching of wallet data reused in computation
+- Prefer using libsecp256k1 to derive public keys from private
+- Store address data in wallet file where no passphrase is present to avoid lengthy rederivation of keys on deep wallets
+- Compact wallet database on closing
+- Indicate when creating a wallet transaction from a deep wallet is deriving keys
+- Check proposed wallet name against open wallets for duplicates
+- Invalidate multisig addresses for message signing and include address tooltip for guidance
+- Add Help menu item to open Telegram support group
+- Show wallet name in delete wallet dialog
+- Improve unconfirmed transaction tooltip
+- Show custom error dialog for 'min relay fee not met' broadcast errors
+- Add context menus to transaction diagram labels to copy addresses and values
+- Require non-empty password on encrypted wallet load
+- Avoid re-requesting passphrase on BIP39 wallet import
+- Show empty passphrases as 'No passphrase' in seed view dialog
+- Indicate number of UTXOs selected in UTXOs tab
+- Delete temporary HWI pyinstaller extraction if HWI crashes
+- Update H2 database to 2.1.214
+- Upgrade to Gradle 7.5
+- Upgrade to Java 18.0.1
+- Bug fix: Always find node for first input when retrieving historical notification transactions
+- Bug fix: Save encrypted keystores on all wallets when changing password on child wallet Settings tab
+- Bug fix: Add all whirlpool accounts if any one is discovered on wallet import
+- Bug fix: Fix transaction sort where parent/child transactions were included in the same block
+- Bug fix: Fix case insensitive matching when searching for addresses and transaction outputs
+- Bug fix: Disallow duplicate xpubs in multisig wallet keystores
+- Bug fix: Fix issue adding accounts to multisig wallets with mixed watch-only and seed keystores
+- Bug fix: Avoid saving xpubs on BIP47 wallets, restore from seed on opening
+- Bug fix: Use locale-insensitive lowercase and uppercase functions
+- Bug fix: Allow PSBTs without previous UTXO data</summary>
+    <title>sparrowwallet/sparrow: 1.6.6</title>
+    <updated>2022-08-04T11:46:15Z</updated>
+    <dc:date>2022-08-04T11:46:15Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.5</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.5"/>
@@ -5084,13 +5137,5 @@ e5707d5002 Fix broken website examples (#4085)
     <updated>2022-02-15T06:07:59Z</updated>
     <dc:date>2022-02-15T06:07:59Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.2</id>
-    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.2"/>
-    <summary></summary>
-    <title>vulpemventures/marina: v0.4.2</title>
-    <updated>2022-02-11T17:28:39Z</updated>
-    <dc:date>2022-02-11T17:28:39Z</dc:date>
-  </entry>
-  <dc:date>2022-08-04T05:05:17+00:00</dc:date>
+  <dc:date>2022-08-04T11:51:08+00:00</dc:date>
 </feed>

@@ -38,6 +38,69 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/sparrowwallet/sparrow">sparrowwallet/sparrow</a>: <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.6.6">1.6.6</a>
+						    </h2>
+							<p class="card-text">Published: 2022-08-04 11:46:15 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><ul>
+<li>Add support for Auth47 authentication by registering a handler for auth: URLs in the browser</li>
+<li>Add support for LNURL-auth authentication by registering a handler for lightning: URLs in the browser</li>
+<li>Add BIP47 support for Bitcoin Core connections</li>
+<li>Spend change from BIP47 notification transactions only if necessary</li>
+<li>Add support for sweeping of funds from a BIP38 encrypted private key</li>
+<li>Only allow sending to PayNyms where a notification transaction has previously been sent by the sender (no automatic reverse linking)</li>
+<li>Show taproot specific sighash default in sighash dropdown, and select it if appropriate</li>
+<li>Add optional transaction count column on address table using table header context menu to show and hide</li>
+<li>Reduce delay before attempting to reconnect when a private server connection fails</li>
+<li>Allow mixing out to other postmix wallet accounts</li>
+<li>Copy existing labels from deposit UTXOs into badbank UTXOs if present</li>
+<li>Add tooltip to wallet tab label on load failure</li>
+<li>Avoid unnecessary computation during entry cell sizing on initial table scroll</li>
+<li>Cache any wallet nodes for provided addresses during transaction construction, and use cache in transaction diagram and privacy analysis</li>
+<li>Refactor and optimize address classes</li>
+<li>Optimize retrieving unspent UTXOs</li>
+<li>Optimize UTXO selection through local variable caching of wallet data reused in computation</li>
+<li>Prefer using libsecp256k1 to derive public keys from private</li>
+<li>Store address data in wallet file where no passphrase is present to avoid lengthy rederivation of keys on deep wallets</li>
+<li>Compact wallet database on closing</li>
+<li>Indicate when creating a wallet transaction from a deep wallet is deriving keys</li>
+<li>Check proposed wallet name against open wallets for duplicates</li>
+<li>Invalidate multisig addresses for message signing and include address tooltip for guidance</li>
+<li>Add Help menu item to open Telegram support group</li>
+<li>Show wallet name in delete wallet dialog</li>
+<li>Improve unconfirmed transaction tooltip</li>
+<li>Show custom error dialog for &#39;min relay fee not met&#39; broadcast errors</li>
+<li>Add context menus to transaction diagram labels to copy addresses and values</li>
+<li>Require non-empty password on encrypted wallet load</li>
+<li>Avoid re-requesting passphrase on BIP39 wallet import</li>
+<li>Show empty passphrases as &#39;No passphrase&#39; in seed view dialog</li>
+<li>Indicate number of UTXOs selected in UTXOs tab</li>
+<li>Delete temporary HWI pyinstaller extraction if HWI crashes</li>
+<li>Update H2 database to 2.1.214</li>
+<li>Upgrade to Gradle 7.5</li>
+<li>Upgrade to Java 18.0.1</li>
+<li>Bug fix: Always find node for first input when retrieving historical notification transactions</li>
+<li>Bug fix: Save encrypted keystores on all wallets when changing password on child wallet Settings tab</li>
+<li>Bug fix: Add all whirlpool accounts if any one is discovered on wallet import</li>
+<li>Bug fix: Fix transaction sort where parent/child transactions were included in the same block</li>
+<li>Bug fix: Fix case insensitive matching when searching for addresses and transaction outputs</li>
+<li>Bug fix: Disallow duplicate xpubs in multisig wallet keystores</li>
+<li>Bug fix: Fix issue adding accounts to multisig wallets with mixed watch-only and seed keystores</li>
+<li>Bug fix: Avoid saving xpubs on BIP47 wallets, restore from seed on opening</li>
+<li>Bug fix: Use locale-insensitive lowercase and uppercase functions</li>
+<li>Bug fix: Allow PSBTs without previous UTXO data</li>
+</ul>
+</p>
+					    <a href="https://github.com/sparrowwallet/sparrow" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.6.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.5">v1.6.5</a>
 						    </h2>
 							<p class="card-text">Published: 2022-08-04 04:52:05 UTC</p>
@@ -6269,21 +6332,6 @@ e5707d5002 Fix broken website examples (#4085)
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.5" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/vulpemventures/marina">vulpemventures/marina</a>: <a href="https://github.com/vulpemventures/marina/releases/tag/v0.4.2">v0.4.2</a>
-						    </h2>
-							<p class="card-text">Published: 2022-02-11 17:28:39 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"></p>
-					    <a href="https://github.com/vulpemventures/marina" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/vulpemventures/marina/releases/tag/v0.4.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
