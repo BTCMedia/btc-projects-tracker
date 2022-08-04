@@ -6,7 +6,17 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-03T14:21:19+00:00</updated>
+  <updated>2022-08-04T05:05:17+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.5</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.5"/>
+    <summary>### Bug fixes:
+
+* Fix crash when running BTCPay without BTC (#4017) @NicolasDorier</summary>
+    <title>btcpayserver/btcpayserver: v1.6.5</title>
+    <updated>2022-08-04T04:52:05Z</updated>
+    <dc:date>2022-08-04T04:52:05Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.4</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.4"/>
@@ -5082,13 +5092,5 @@ e5707d5002 Fix broken website examples (#4085)
     <updated>2022-02-11T17:28:39Z</updated>
     <dc:date>2022-02-11T17:28:39Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.14</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.14"/>
-    <summary>This update brings four brand new apps to the Umbrel App Store — Urbit, Urbit Bitcoin Connector, Tailscale, and usocial, along with LND 0.14.2, updated apps, and Nunchuk wallet connection support.</summary>
-    <title>getumbrel/umbrel: v0.4.14</title>
-    <updated>2022-02-09T15:35:35Z</updated>
-    <dc:date>2022-02-09T15:35:35Z</dc:date>
-  </entry>
-  <dc:date>2022-08-03T14:21:19+00:00</dc:date>
+  <dc:date>2022-08-04T05:05:17+00:00</dc:date>
 </feed>
