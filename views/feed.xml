@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-07T08:10:10+00:00</updated>
+  <updated>2022-08-09T14:09:16+00:00</updated>
+  <entry>
+    <id>https://github.com/romanz/electrs/releases/tag/v0.9.8</id>
+    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.8"/>
+    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#098-jun-3-2022</summary>
+    <title>romanz/electrs: v0.9.8</title>
+    <updated>2022-08-09T13:58:59Z</updated>
+    <dc:date>2022-08-09T13:58:59Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.6</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.6"/>
@@ -4740,18 +4748,5 @@ deletions in 108 commits from 15 authors, in alphabetical order:
     <updated>2022-02-20T23:28:13Z</updated>
     <dc:date>2022-02-20T23:28:13Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.7.0</id>
-    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.7.0"/>
-    <summary>- Fixes issue of LNDHub extension linked to busy wallet taking down LNbits
-- Support for AES-encrypted macaroons (for LND)
-- Fixes LNURLwithdraw bug where withdraws would fail
-- .env theme selection working properly
-- Adds &quot;bitcoin&quot; theme
-</summary>
-    <title>lnbits/lnbits-legend: 0.7.0</title>
-    <updated>2022-02-18T23:29:20Z</updated>
-    <dc:date>2022-02-18T23:29:20Z</dc:date>
-  </entry>
-  <dc:date>2022-08-07T08:10:10+00:00</dc:date>
+  <dc:date>2022-08-09T14:09:16+00:00</dc:date>
 </feed>
