@@ -6,7 +6,23 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-09T14:09:16+00:00</updated>
+  <updated>2022-08-10T08:11:54+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.7</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.7"/>
+    <summary>## 1.6.7
+
+### Improvement:
+
+* Improve LNDHub support @dennisreimann
+
+### Bug fixes:
+
+* Fix Kraken rate source (#4027) @Kukks</summary>
+    <title>btcpayserver/btcpayserver: v1.6.7</title>
+    <updated>2022-08-10T08:08:17Z</updated>
+    <dc:date>2022-08-10T08:08:17Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/romanz/electrs/releases/tag/v0.9.8</id>
     <link href="https://github.com/romanz/electrs/releases/tag/v0.9.8"/>
@@ -4740,13 +4756,5 @@ deletions in 108 commits from 15 authors, in alphabetical order:
     <updated>2022-02-21T08:26:22Z</updated>
     <dc:date>2022-02-21T08:26:22Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.2</id>
-    <link href="https://github.com/rootzoll/raspiblitz/releases/tag/v1.7.2"/>
-    <summary>Cache &amp; Backgroundscan refactor &amp; new apps: LNbits c-lightning, Tallycoin Connect, Helipad, ...</summary>
-    <title>rootzoll/raspiblitz: v1.7.2</title>
-    <updated>2022-02-20T23:28:13Z</updated>
-    <dc:date>2022-02-20T23:28:13Z</dc:date>
-  </entry>
-  <dc:date>2022-08-09T14:09:16+00:00</dc:date>
+  <dc:date>2022-08-10T08:11:54+00:00</dc:date>
 </feed>
