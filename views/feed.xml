@@ -6,7 +6,121 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-10T08:11:54+00:00</updated>
+  <updated>2022-08-11T09:50:40+00:00</updated>
+  <entry>
+    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.4</id>
+    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.4"/>
+    <summary>### _[Wasabi](https://WasabiWallet.io) is an easy to use, privacy-focused, open-source, non-custodial, Bitcoin wallet_
+
+# Download
+
+:window: [Windows](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.4/Wasabi-2.0.1.4.msi)
+:green_apple: [Apple M1](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.4/Wasabi-2.0.1.4-arm64.dmg)
+:apple: [Apple Intel](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.4/Wasabi-2.0.1.4.dmg)
+:penguin: [Ubuntu / Debian](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.4/Wasabi-2.0.1.4.deb)
+:penguin: [Other Linux](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.1.4/Wasabi-2.0.1.4.tar.gz)
+
+## Release Highlights
+
+🧅 Tor improvements for bigger and faster coinjoins
+💾 Ledger Nano S Plus support
+🦥 Auto-download of software updates
+
+## Release Summary
+
+With this minor release we hope to solve the ongoing problem of coinjoin failures during the Tor denial of service attack, coinjoins should now be happening more frequently and with more users. Wasabi can now optionally download the new software package in the background and will ask you to install it. The Ledger Nano S Plus hardware wallet is now supported. Of course included are the usual numerous bug fixes and stability improvements.
+
+---
+
+## Installation Guide
+
+Download the operating system relevant software package and install Wasabi like you would any other software on your computer. For a detailed installation guide, including **signature verification**, see [the documentation](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html).
+
+## Advanced Guide
+
+If you want to build or update Wasabi from source code, check out [these easy instructions](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html).
+
+Wasabi uses [reproducible builds](https://reproducible-builds.org/), which you can verify with [this guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md).
+
+Build with .NET 6.0.300.
+
+## Documentation
+
+:spider_web: [Website](https://wasabiwallet.io)
+:onion: [Tor onion site](http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion/)
+:grey_question: [FAQ](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq)
+
+
+## Requirements 
+- Windows 10+
+- macOs 10.15+
+- Ubuntu 16.04, 18.04, 20.04+
+- Fedora 33+
+- Debian 10+
+---
+
+## What's Changed
+* [trivial] Packager: Replace three conditions with a single one by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8379
+* Update compatibiltiy information by @karozagorus in https://github.com/zkSNACKs/WalletWasabi/pull/8743
+* `TorSettings`: Use `KeepAliveIsolateSOCKSAuth` flag by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8819
+* [VDG] Simplify AnySelected in Coins List by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8813
+* `Packager`: Fix for WSL2 by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/7837
+* `WasabiSynchronizer`: Fix exception being handled. by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8821
+* [VDG] Trace all info in exception on app crash by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8809
+* [VDG] remove unnecessary using directive in AddressViewmodel by @MarnixCroes in https://github.com/zkSNACKs/WalletWasabi/pull/8828
+* [VDG] lowercase writing not coinjoining tooltip by @MarnixCroes in https://github.com/zkSNACKs/WalletWasabi/pull/8829
+* `HttpMessageHelper`: Change exception being thrown by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8810
+* [VDG] [Trivial] Replace coinjoin icon by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8845
+* Make software update flow better by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/8741
+* [VDG] CurrencyEntryBox - fix divide by zero crash by @ichthus1604 in https://github.com/zkSNACKs/WalletWasabi/pull/8844
+* [VDG] Fix DualCurrencyEntryBox bug when ConversionRate is zero by @ichthus1604 in https://github.com/zkSNACKs/WalletWasabi/pull/8847
+* Add support for Ledger Nano S+ by @jmacato in https://github.com/zkSNACKs/WalletWasabi/pull/8801
+* [VDG] Add Enable GPU setting by @wieslawsoltes in https://github.com/zkSNACKs/WalletWasabi/pull/8342
+* [VDG] Add Coinjoin Settings dialog by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8849
+* Simplify `TorHttpPool.CreateNewConnectionAsync` by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8861
+* [VDG] Searchbar Flyout logic Review &amp; Fix by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8437
+* [VDG] Improve Coin List by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8822
+* [Trivial] Add latest Bitcoin Core version to Constants.UserAgents by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/8826
+* [Trivial] Fix CodeFactor issues by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/8872
+* Display user friendly exception message by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/8871
+* [Trivial] Fix formatting by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/8865
+* [Trivial] Hide overwhelming `SocketExceptions` by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/8853
+* Introduce CancellationToken to UpdateManager by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/8864
+* [Tor] Experiment no.1 by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8846
+* [Tor] Experiment - Set shorter `SocksTimeout` by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8860
+* [VDG] Show formatted &quot;until&quot; date for banned coins by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8879
+* [VDG] Change the wallet creation ux to set the password later by @jmacato in https://github.com/zkSNACKs/WalletWasabi/pull/8867
+* More user friendly error message for Invalid Hex String error by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/8836
+* Abstractify enough to reuse Wabisabi without Wasabi wallet by @Kukks in https://github.com/zkSNACKs/WalletWasabi/pull/8754
+* Fixup Support DnsEndpoint for Tor by @nopara73 in https://github.com/zkSNACKs/WalletWasabi/pull/8888
+* [VDG] Update % when AnonScore changes in CJ settings by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8891
+* [VDG] Remove OAPH from SearchBar by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8875
+* [VDG] Remove OAPH from Coin List by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8874
+* `TorProcessManagerTests`: Fix test by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8896
+* [Tor] Add timeout to GetStatus request by @molnard in https://github.com/zkSNACKs/WalletWasabi/pull/8878
+* [VDG] [Trivial] Optimize Replay by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/8901
+* Implement Virtual Coins by @nopara73 in https://github.com/zkSNACKs/WalletWasabi/pull/8689
+* [VDG] Fix scrolling issues with mouse wheel in UTXO list (and other lists) when labels are under mouse by @wieslawsoltes in https://github.com/zkSNACKs/WalletWasabi/pull/8895
+* Better log messages when round aborted with not enough alices by @molnard in https://github.com/zkSNACKs/WalletWasabi/pull/8907
+* [VDG] Fee Chart dialog + custom fee rate input by @ichthus1604 in https://github.com/zkSNACKs/WalletWasabi/pull/8610
+* Support taproot (coordinator side) by @nopara73 in https://github.com/zkSNACKs/WalletWasabi/pull/8912
+* Suport taproot by @onvej-sl in https://github.com/zkSNACKs/WalletWasabi/pull/8831
+* Add retry timeouts to CoinJoin requests by @molnard in https://github.com/zkSNACKs/WalletWasabi/pull/8898
+* [VDG] Optimize LabelsListBox - and rename to LabelsItemsPresenter by @wieslawsoltes in https://github.com/zkSNACKs/WalletWasabi/pull/8909
+* `TorTcpConnectionFactory`: Add missing cancellation token by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8911
+* Tor SOCKS5: Remove &quot;keepalive&quot; functionality by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/8897
+* [VDG] Send preview - fix button is not clickable by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8869
+* [VDG] Fee Chart - fix crash by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/8803
+* Refactor SmartCoinSelector tests by @jmacato in https://github.com/zkSNACKs/WalletWasabi/pull/8790
+
+## New Contributors
+* @karozagorus made their first contribution in https://github.com/zkSNACKs/WalletWasabi/pull/8743
+
+**Full Changelog**: https://github.com/zkSNACKs/WalletWasabi/compare/v2.0.1.3...v2.0.1.4</summary>
+    <title>zkSNACKs/WalletWasabi: v2.0.1.4</title>
+    <updated>2022-08-11T09:47:24Z</updated>
+    <dc:date>2022-08-11T09:47:24Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.7</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.7"/>
@@ -4731,30 +4845,5 @@ deletions in 108 commits from 15 authors, in alphabetical order:
     <updated>2022-02-28T09:06:00Z</updated>
     <dc:date>2022-02-28T09:06:00Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.6"/>
-    <summary>### New features:
-
-* Greenfield: Exposes LNUrl's comment and LN address in invoice's payment method (#3427) @Kukks
-* Greenfield: Add maxFeePercent/maxFeeFlat to the lightning payment API (#3454) @dennisreimann @NicolasDorier
-* Greenfield: Find 1 user by ID or by email, or list all users. (#3176) @woutersamaey
-
-### Bug fixes:
-
-* Fix: All PSBT flows were crashing @NicolasDorier
-
-### Improvements:
-
-* UI: Add border for mobile menu (#3477 #3469) @denniseimann @dstrukt
-* UI: Sticky headers improvements (#3471) @denniseimann
-* UX: Remove payment methods not currently configured when creating invoice (#3394) @ubolator
-* UX: Add pull payment grouping options (#3177) @ubolator
-* UI: Redesign Wallet UI (#3408) @denniseimann @dstrukt
-* UI: Remove storeid from the invoice's filter, as it is implicit @NicolasDorier</summary>
-    <title>btcpayserver/btcpayserver: v1.4.6</title>
-    <updated>2022-02-21T08:26:22Z</updated>
-    <dc:date>2022-02-21T08:26:22Z</dc:date>
-  </entry>
-  <dc:date>2022-08-10T08:11:54+00:00</dc:date>
+  <dc:date>2022-08-11T09:50:40+00:00</dc:date>
 </feed>
