@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-11T09:50:40+00:00</updated>
+  <updated>2022-08-12T14:01:44+00:00</updated>
+  <entry>
+    <id>https://github.com/romanz/electrs/releases/tag/v0.9.9</id>
+    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.9"/>
+    <summary></summary>
+    <title>romanz/electrs: v0.9.9</title>
+    <updated>2022-08-12T14:00:57Z</updated>
+    <dc:date>2022-08-12T14:00:57Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.4</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.1.4"/>
@@ -4837,13 +4845,5 @@ deletions in 108 commits from 15 authors, in alphabetical order:
     <updated>2022-03-01T04:15:52Z</updated>
     <dc:date>2022-03-01T04:15:52Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.3</id>
-    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.3"/>
-    <summary></summary>
-    <title>vulpemventures/marina: v0.4.3</title>
-    <updated>2022-02-28T09:06:00Z</updated>
-    <dc:date>2022-02-28T09:06:00Z</dc:date>
-  </entry>
-  <dc:date>2022-08-11T09:50:40+00:00</dc:date>
+  <dc:date>2022-08-12T14:01:44+00:00</dc:date>
 </feed>
