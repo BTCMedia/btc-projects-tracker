@@ -6,7 +6,20 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-18T11:31:05+00:00</updated>
+  <updated>2022-08-18T20:04:59+00:00</updated>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.10</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.10"/>
+    <summary>## What's Changed
+* fixes bug when going back on send address and amount selection by @bordalix in https://github.com/vulpemventures/marina/pull/380
+* Bug fix and improvement on marina events by @bordalix in https://github.com/vulpemventures/marina/pull/378
+
+
+**Full Changelog**: https://github.com/vulpemventures/marina/compare/v0.4.9...v0.4.10</summary>
+    <title>vulpemventures/marina: v0.4.10</title>
+    <updated>2022-08-18T19:54:30Z</updated>
+    <dc:date>2022-08-18T19:54:30Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.9</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.9"/>
@@ -4710,13 +4723,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-03-02T12:03:44Z</updated>
     <dc:date>2022-03-02T12:03:44Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.15</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.15"/>
-    <summary>This update brings three brand new apps to the Umbrel App Store — Jam (JoinMarket UI), Snowflake Tor Proxy, and Bleskomat Server, along with updated apps and bugfixes.</summary>
-    <title>getumbrel/umbrel: v0.4.15</title>
-    <updated>2022-03-01T14:07:30Z</updated>
-    <dc:date>2022-03-01T14:07:30Z</dc:date>
-  </entry>
-  <dc:date>2022-08-18T11:31:05+00:00</dc:date>
+  <dc:date>2022-08-18T20:04:59+00:00</dc:date>
 </feed>
