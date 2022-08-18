@@ -38,6 +38,48 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.8">v1.6.8</a>
+						    </h2>
+							<p class="card-text">Published: 2022-08-18 06:22:55 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>New feature:</h3>
+
+<ul>
+<li>Edit Pull Payment UI (#4016) @daviogg</li>
+<li>Custodian Account Deposit UI (#4024) @woutersamaey</li>
+<li>Add Yadio rate provider (#4048) @bolatovumar</li>
+</ul>
+
+<h3>Improvement:</h3>
+
+<ul>
+<li>Add no rate found error message in Invoices (#4039) @HamroRamro</li>
+<li>Greenfield API docs improvements (#4041 #4035) @dennisreimann</li>
+<li>Allow binding ip and port for non ssl scenarios too (#4031) @Kukks </li>
+</ul>
+
+<h3>Bug fixes:</h3>
+
+<ul>
+<li>Fix crash when running BTCPay without BTC (#4038) @Kukks</li>
+<li>Fix edge cases around LNURL not providing invoice (#4034) @dennisreimann</li>
+<li>Fix store creation button distortion  (#4025) @bolatovumar</li>
+<li>Fix payout labels (#4032) @Kukks</li>
+<li>Handle hold invoices in ln payouts (#4032) @Kukks</li>
+<li>Save preimage of ln payouts when possible (#4032) @Kukks</li>
+<li>Fix crash on stores that had configured a payment method that is no longer supported (#4042) @Kukks</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/romanz/electrs">romanz/electrs</a>: <a href="https://github.com/romanz/electrs/releases/tag/v0.9.9">v0.9.9</a>
 						    </h2>
 							<p class="card-text">Published: 2022-08-12 14:00:57 UTC</p>
@@ -5910,139 +5952,6 @@ That instruction is not tested on many different distros. If you encounter probl
 					  </div>
 					</div>
 	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.105">v0.0.105</a>
-						    </h2>
-							<p class="card-text">Published: 2022-03-01 04:15:52 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h2>API Updates</h2>
-
-<ul>
-<li><code>Phantom node</code> payments are now supported, allowing receipt of a payment on
-any one of multiple nodes without any coordination across the nodes being
-required. See the new <code>PhantomKeysManager</code>&#39;s docs for more, as well as
-requirements on <code>KeysInterface::get_inbound_payment_key_material</code> and
-<code>lightning_invoice::utils::create_phantom_invoice</code> (#1199).</li>
-<li>In order to support phantom node payments, several <code>KeysInterface</code> methods
-now accept a <code>Recipient</code> parameter to select between the local <code>node_id</code> and
-a phantom-specific one.</li>
-<li><code>ProbabilisticScorer</code>, a <code>Score</code> based on learning the current balances of
-channels in the network, was added. It attempts to better capture payment
-success probability than the existing <code>Scorer</code>, though may underperform on
-nodes with low payment volume. We welcome feedback on performance (#1227).</li>
-<li><code>Score::channel_penalty_msat</code> now always takes the channel value, instead of
-an <code>Option</code> (#1227).</li>
-<li><code>UserConfig::manually_accept_inbound_channels</code> was added which, when set,
-generates a new <code>Event::OpenChannelRequest</code>, which allows manual acceptance
-or rejection of incoming channels on a per-channel basis (#1281).</li>
-<li><code>Payee</code> has been renamed to <code>PaymentParameters</code> (#1271).</li>
-<li><code>PaymentParameters</code> now has a <code>max_total_cltv_expiry_delta</code> field. This
-defaults to 1008 and limits the maximum amount of time an HTLC can be pending
-before it will either fail or be claimed (#1234).</li>
-<li>The <code>lightning-invoice</code> crate now supports no-std environments. This required
-numerous API changes around timestamp handling and std+no-std versions of
-several methods that previously assumed knowledge of the time (#1223, #1230).</li>
-<li><code>lightning-invoice</code> now supports parsing invoices with expiry times of more
-than one year. This required changing the semantics of <code>ExpiryTime</code> (#1273).</li>
-<li>The <code>CounterpartyCommitmentSecrets</code> is now public, allowing external uses of
-the <code>BOLT 3</code> secret storage scheme (#1299).</li>
-<li>Several <code>Sign</code> methods now receive HTLC preimages as proof of state
-transition, see new documentation for more (#1251).</li>
-<li><code>KeysInterface::sign_invoice</code> now provides the HRP and other invoice data
-separately to make it simpler for external signers to parse (#1272).</li>
-<li><code>Sign::sign_channel_announcement</code> now returns both the node&#39;s signature and
-the per-channel signature. <code>InMemorySigner</code> now requires the node&#39;s secret
-key in order to implement this (#1179).</li>
-<li><code>ChannelManager</code> deserialization will now fail if the <code>KeysInterface</code> used
-has a different <code>node_id</code> than the <code>ChannelManager</code> expects (#1250).</li>
-<li>A new <code>ErrorAction</code> variant was added to send <code>warning</code> messages (#1013).</li>
-<li>Several references to <code>chain::Listen</code> objects in <code>lightning-block-sync</code> no
-longer require a mutable reference (#1304).</li>
-</ul>
-
-<h2>Bug Fixes</h2>
-
-<ul>
-<li>Fixed a regression introduced in 0.0.104 where <code>ChannelManager</code>&#39;s internal
-locks could have an order violation leading to a deadlock (#1238).</li>
-<li>Fixed cases where slow code (including user I/O) could cause us to
-disconnect peers with ping timeouts in <code>BackgroundProcessor</code> (#1269).</li>
-<li>Now persist the <code>ChannelManager</code> prior to <code>BackgroundProcessor</code> stopping,
-preventing race conditions where channels are closed on startup even with a
-clean shutdown. This requires that users stop network processing and
-disconnect peers prior to <code>BackgroundProcessor</code> shutdown (#1253).</li>
-<li>Fields in <code>ChannelHandshakeLimits</code> provided via the <code>override_config</code> to
-<code>create_channel</code> are now applied instead of the default config (#1292).</li>
-<li>Fixed the generation of documentation on docs.rs to include API surfaces
-which are hidden behind feature flags (#1303).</li>
-<li>Added the <code>channel_type</code> field to <code>accept_channel</code> messages we send, which
-may avoid some future compatibility issues with other nodes (#1314).</li>
-<li>Fixed a bug where, if a previous LDK run using <code>lightning-persister</code> crashed
-while persisting updated data, we may have failed to initialize (#1332).</li>
-<li>Fixed a rare bug where having both pending inbound and outbound HTLCs on a
-just-opened inbound channel could cause <code>ChannelDetails::balance_msat</code> to
-underflow and be reported as large, or cause panics in debug mode (#1268).</li>
-<li>Moved more instances of verbose gossip logging from the <code>Trace</code> level to the
-<code>Gossip</code> level (#1220).</li>
-<li>Delayed <code>announcement_signatures</code> until the channel has six confirmations,
-slightly improving propagation of channel announcements (#1179).</li>
-<li>Several fixes in script and transaction weight calculations when anchor
-outputs are enabled (#1229).</li>
-</ul>
-
-<h2>Serialization Compatibility</h2>
-
-<ul>
-<li>Using <code>ChannelManager</code> data written by versions prior to 0.0.105 will result
-in preimages for HTLCs that were pending at startup to be missing in calls
-to <code>KeysInterface</code> methods (#1251).</li>
-<li>Any phantom invoice payments received on a node that is not upgraded to
-0.0.105 will fail with an &quot;unknown channel&quot; error. Further, downgrading to
-0.0.104 or before and then upgrading again will invalidate existing phantom
-SCIDs which may be included in invoices (#1199).</li>
-</ul>
-
-<h2>Security</h2>
-
-<p>0.0.105 fixes two denial-of-service vulnerabilities which may be reachable from
-untrusted input in certain application designs.</p>
-
-<ul>
-<li>Route calculation spuriously panics when a routing decision is made for a
-path where the second-to-last hop is a private channel, included due to a
-multi-hop route hint in an invoice.</li>
-<li><code>ChannelMonitor::get_claimable_balances</code> spuriously panics in some scenarios
-when the LDK application&#39;s local commitment transaction is confirmed while
-HTLCs are still pending resolution.</li>
-</ul>
-
-<p>In total, this release features 109 files changed, 7270 insertions, 2131
-deletions in 108 commits from 15 authors, in alphabetical order:
- * Conor Okus
- * Devrandom
- * Elias Rohrer
- * Jeffrey Czyz
- * Jurvis Tan
- * Ken Sedgwick
- * Matt Corallo
- * Naveen
- * Tibo-lg
- * Valentine Wallace
- * Viktor Tigerström
- * dependabot[bot]
- * hackerrdave
- * naveen
- * vss96</p>
-</p>
-					    <a href="https://github.com/lightningdevkit/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.105" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
 			</div>
 
 		 	<div class="col-md-4 sidenav">
@@ -6229,11 +6138,11 @@ deletions in 108 commits from 15 authors, in alphabetical order:
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/ACINQ/bitcoin-lib">ACINQ/bitcoin-lib</a>
+		                	<a href="https://github.com/BlueWallet/rn-ldk">BlueWallet/rn-ldk</a>
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/BlueWallet/rn-ldk">BlueWallet/rn-ldk</a>
+		                	<a href="https://github.com/ACINQ/bitcoin-lib">ACINQ/bitcoin-lib</a>
 		                </li>
 	                
 		                <li>
