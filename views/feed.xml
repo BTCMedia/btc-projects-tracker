@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-18T20:04:59+00:00</updated>
+  <updated>2022-08-19T21:51:30+00:00</updated>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.11</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.11"/>
+    <summary></summary>
+    <title>vulpemventures/marina: v0.4.11</title>
+    <updated>2022-08-19T21:48:03Z</updated>
+    <dc:date>2022-08-19T21:48:03Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.10</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.10"/>
@@ -4701,27 +4709,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-03-03T13:17:27Z</updated>
     <dc:date>2022-03-03T13:17:27Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.7</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.7"/>
-    <summary>### New features:
-
-* Plugins: Expose file service @Kukks
-* Plugins: Allow writing Greenfield API endpoints (#3495) @dennisreimann
-
-### Bug fixes:
-* Fix Shopify configuration UI due to shopify changes (#3479) @Kukks
-* Various fixes related to store context (#3505) @dennisreimann @Kukks
-* Various fixes related to plugin system @dennisreimann @Kukks
-* Add missing documentation for wallet generation Greenfield API @Kukks
-* Fix broken modal views on mobile (#3504) @dennisreimann
-* Custom amount option in point of sale print view was not showing  (#3503) @Kukks
-* Fix code copying buttons (#3489 #3499) @dennisreimann @bolatovumar
-* Various UI fixes @dennisreimann @bolatovumar
-</summary>
-    <title>btcpayserver/btcpayserver: v1.4.7</title>
-    <updated>2022-03-02T12:03:44Z</updated>
-    <dc:date>2022-03-02T12:03:44Z</dc:date>
-  </entry>
-  <dc:date>2022-08-18T20:04:59+00:00</dc:date>
+  <dc:date>2022-08-19T21:51:30+00:00</dc:date>
 </feed>
