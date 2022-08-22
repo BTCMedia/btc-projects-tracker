@@ -6,11 +6,23 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-19T21:51:30+00:00</updated>
+  <updated>2022-08-22T16:50:31+00:00</updated>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.12</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.12"/>
+    <summary></summary>
+    <title>vulpemventures/marina: v0.4.12</title>
+    <updated>2022-08-22T16:46:21Z</updated>
+    <dc:date>2022-08-22T16:46:21Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.11</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.11"/>
-    <summary></summary>
+    <summary>## What's Changed
+* naming fix + select only spendableByMarina accounts in UI by @louisinger in https://github.com/vulpemventures/marina/pull/376
+
+
+**Full Changelog**: https://github.com/vulpemventures/marina/compare/v0.4.10...v0.4.11</summary>
     <title>vulpemventures/marina: v0.4.11</title>
     <updated>2022-08-19T21:48:03Z</updated>
     <dc:date>2022-08-19T21:48:03Z</dc:date>
@@ -4688,26 +4700,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-03-03T14:05:07Z</updated>
     <dc:date>2022-03-03T14:05:07Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.6.0</id>
-    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.6.0"/>
-    <summary>- Implement BIP47 - linking, sending to and receiving from PayNyms on Legacy, Nested Segwit and Segwit addresses
-- Introduce nested wallet support to allow BIP47 wallets to contribute to the first (master) wallet
-- Add BIP39 option to File &gt; Import Wallet dialog, discovering any existing wallets using common script types and derivations
-- Improve label handling by detaching and storing labels before a wallet refresh, and labelling matching entries from this store as the wallet is updated
-- Buffer address history update notifications to perform fewer wallet history refreshes
-- Improved IPv6 handling on NAT64 networks
-- Use smaller, shared stage icon to reduce memory usage
-- Add link to Server Preferences in status bar on connection failure
-- Add SeedSigner to File &gt; Import Wallet dialog
-- Bug fix: Fix expanding grey area in Transaction viewer when increasing hex area height
-- Bug fix: Add border to undecorated stages on Windows
-- Bug fix: Mixing UTXOs should reflect in Send Selected total on UTXOs tab
-- Bug fix: Fix resolution of mDNS (.local) hostnames when connecting to Bitcoin Core
-- Bug fix: Prevent wallet response updates while Whirlpool is starting to avoid empty UTXO mix queue</summary>
-    <title>sparrowwallet/sparrow: 1.6.0</title>
-    <updated>2022-03-03T13:17:27Z</updated>
-    <dc:date>2022-03-03T13:17:27Z</dc:date>
-  </entry>
-  <dc:date>2022-08-19T21:51:30+00:00</dc:date>
+  <dc:date>2022-08-22T16:50:31+00:00</dc:date>
 </feed>
