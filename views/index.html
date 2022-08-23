@@ -38,12 +38,98 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ElementsProject/lightning">ElementsProject/lightning</a>: <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.12.0">v0.12.0</a>
+						    </h2>
+							<p class="card-text">Published: 2022-08-23 19:26:51 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>We&#39;re pleased to announce the 0.12.0 release of core-lightning, named by @adi2011.</p>
+
+<p><strong>Developers</strong>: please note the Great Msat Migration in the APIs!</p>
+
+<h2>Highlights for Users</h2>
+
+<ul>
+<li><em>NEW</em> Built-in <code>bookkeeper</code> plugin! This plugin tracks all movements of msats for your node, gives you a better idea of your costs and revenues, prints out CSVs that are uploadable to Koinly and CoinTracker, lets you inspect the on-chain footprint of a channel (useful when it goes to chain). Check out the new <code>bkpr-</code> prefixed commands.</li>
+<li><em>NEW</em> Built-in <code>commando</code> plugin! This lets you create runes to allow access to your node from a commando client, which will let you send and receive RPC commands over the lightning network.</li>
+<li><em>NEW</em> Emergency channel backup (&quot;static backup&quot;)! Keep track of what peers you have channels with, and in case of node failure ask those peers to close the channel.</li>
+<li><em>NEW</em> zeroconf channels are possible for whitelisted peers. </li>
+<li><code>hsmtool</code> has a new command, <code>checkhsm</code>, which will let you check a BIP30 passphrase against the <code>hsm_secret</code>.</li>
+<li>Multiple <code>log-file</code> options will open multiple files for logging.</li>
+<li>Various crashes and issues fixed in <code>connectd</code> including crash on peer reconnect and large memory usage when many concurrent peers.</li>
+<li>PSBT: fixes signature encoding to comply with BIP-0171.</li>
+<li>We added dynamically detected public IP addresses to <code>getinfo</code>.</li>
+<li>Due to dependency issues on some platforms, a tarball of pre-generated manual pages is included with this release.</li>
+</ul>
+
+<h2>Highlights for the Network</h2>
+
+<ul>
+<li>We prefer IPv6 connections when available.</li>
+<li>We now accept spam gossip and use it for routing, but don&#39;t relay it.</li>
+<li>We no longer create gossip messages with zlib encoding (but still understand them).</li>
+<li>We treat LND &quot;internal error&quot; as warnings, not force close events (reverts to v0.10.0 behavior).</li>
+</ul>
+
+<h2>Highlights for Developers</h2>
+
+<ul>
+<li><code>_msat</code> fields are added wherever they were missing in the API: they&#39;re still currently an &quot;msat&quot;-suffixed string, but will soon bean integer value. Test with deprecated_apis=false.</li>
+<li>The <code>channel_state_changed</code> notification now fires when a channel moves into state <code>CHANNELD_AWAITING_LOCKIN</code>.</li>
+<li><code>htlc_accepted_hook</code> will now expose the <code>short_channel_id</code> and the per-channel HTLC <code>id</code>.</li>
+<li><code>pyln-testing</code> now includes utilities to read and parse the gossip_store.</li>
+<li><code>startup_regtest.sh</code> script now includes a <code>fund_ln</code> method.</li>
+<li>Rust binaries such as <code>cln-grpc</code> now included in our reproducible builds.</li>
+<li>Updated the bolts implementation for pyln-spec.</li>
+<li>Plugins no longer hang indefinitely if <code>lightningd</code> closes their connection.</li>
+<li>M1 architecture support.</li>
+<li>Upgrade docker base image from Debian buster to bullseye, works with glibc 2.29+.</li>
+<li>Docker images now built with rust plugin <code>cln-grpc</code>.</li>
+</ul>
+
+<p>Since v0.11.1 we&#39;ve had 508 commits from 31 different contributors over 80 days.</p>
+
+<p>A special thanks goes to 9 first time contributors:</p>
+
+<ul>
+<li>Aditya Sharma</li>
+<li>Alex Myers</li>
+<li>Igor Bubelov</li>
+<li>Justin Moon</li>
+<li>Peter Neuroth</li>
+<li>Swapnil</li>
+<li>Jose A.P.</li>
+<li>Brian Barto</li>
+<li>AutonomoousOrganization</li>
+</ul>
+
+<p>~ @niftynei, Christian, and Rusty</p>
+</p>
+					    <a href="https://github.com/ElementsProject/lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ElementsProject/lightning/releases/tag/v0.12.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/vulpemventures/marina">vulpemventures/marina</a>: <a href="https://github.com/vulpemventures/marina/releases/tag/v0.4.12">v0.4.12</a>
 						    </h2>
 							<p class="card-text">Published: 2022-08-22 16:46:21 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"></p>
+					    <p class="card-text"><h2>What&#39;s Changed</h2>
+
+<ul>
+<li>Bump moment from 2.29.3 to 2.29.4 by @dependabot in <a href="https://github.com/vulpemventures/marina/pull/385">https://github.com/vulpemventures/marina/pull/385</a></li>
+<li>Bump terser from 5.14.1 to 5.14.2 by @dependabot in <a href="https://github.com/vulpemventures/marina/pull/386">https://github.com/vulpemventures/marina/pull/386</a></li>
+<li>fix bug with mempool explorer url by @bordalix in <a href="https://github.com/vulpemventures/marina/pull/387">https://github.com/vulpemventures/marina/pull/387</a></li>
+<li>add walletState V4 migration by @louisinger in <a href="https://github.com/vulpemventures/marina/pull/390">https://github.com/vulpemventures/marina/pull/390</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/vulpemventures/marina/compare/v0.4.11...v0.4.12">https://github.com/vulpemventures/marina/compare/v0.4.11...v0.4.12</a></p>
+</p>
 					    <a href="https://github.com/vulpemventures/marina" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/vulpemventures/marina/releases/tag/v0.4.12" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
@@ -5826,27 +5912,6 @@ That instruction is not tested on many different distros. If you encounter probl
 </p>
 					    <a href="https://github.com/romanz/electrs" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/romanz/electrs/releases/tag/v0.9.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ElementsProject/elements">ElementsProject/elements</a>: <a href="https://github.com/ElementsProject/elements/releases/tag/elements-0.21.0.2">elements-0.21.0.2</a>
-						    </h2>
-							<p class="card-text">Published: 2022-03-03 14:05:07 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Changelog:  </p>
-
-<ul>
-<li>raise max P2P message size to account for larger elements dynafed headers</li>
-<li>remove block from in-flight list when a duplicate is received through RPC</li>
-</ul>
-</p>
-					    <a href="https://github.com/ElementsProject/elements" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ElementsProject/elements/releases/tag/elements-0.21.0.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

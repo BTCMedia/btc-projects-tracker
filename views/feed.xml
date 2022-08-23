@@ -6,11 +6,82 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-22T16:50:31+00:00</updated>
+  <updated>2022-08-23T19:31:38+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/lightning/releases/tag/v0.12.0</id>
+    <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.12.0"/>
+    <summary>We're pleased to announce the 0.12.0 release of core-lightning, named by @adi2011.
+
+**Developers**: please note the Great Msat Migration in the APIs!
+
+## Highlights for Users
+
+- *NEW* Built-in `bookkeeper` plugin! This plugin tracks all movements of msats for your node, gives you a better idea of your costs and revenues, prints out CSVs that are uploadable to Koinly and CoinTracker, lets you inspect the on-chain footprint of a channel (useful when it goes to chain). Check out the new `bkpr-` prefixed commands.
+- *NEW* Built-in `commando` plugin! This lets you create runes to allow access to your node from a commando client, which will let you send and receive RPC commands over the lightning network.
+- *NEW* Emergency channel backup (&quot;static backup&quot;)! Keep track of what peers you have channels with, and in case of node failure ask those peers to close the channel.
+- *NEW* zeroconf channels are possible for whitelisted peers. 
+- `hsmtool` has a new command, `checkhsm`, which will let you check a BIP30 passphrase against the `hsm_secret`.
+- Multiple `log-file` options will open multiple files for logging.
+- Various crashes and issues fixed in `connectd` including crash on peer reconnect and large memory usage when many concurrent peers.
+- PSBT: fixes signature encoding to comply with BIP-0171.
+- We added dynamically detected public IP addresses to `getinfo`.
+- Due to dependency issues on some platforms, a tarball of pre-generated manual pages is included with this release.
+
+
+## Highlights for the Network
+
+- We prefer IPv6 connections when available.
+- We now accept spam gossip and use it for routing, but don't relay it.
+- We no longer create gossip messages with zlib encoding (but still understand them).
+- We treat LND &quot;internal error&quot; as warnings, not force close events (reverts to v0.10.0 behavior).
+
+
+## Highlights for Developers
+
+- `_msat` fields are added wherever they were missing in the API: they're still currently an &quot;msat&quot;-suffixed string, but will soon bean integer value. Test with deprecated_apis=false.
+- The `channel_state_changed` notification now fires when a channel moves into state `CHANNELD_AWAITING_LOCKIN`.
+- `htlc_accepted_hook` will now expose the `short_channel_id` and the per-channel HTLC `id`.
+- `pyln-testing` now includes utilities to read and parse the gossip\_store.
+- `startup_regtest.sh` script now includes a `fund_ln` method.
+- Rust binaries such as `cln-grpc` now included in our reproducible builds.
+- Updated the bolts implementation for pyln-spec.
+- Plugins no longer hang indefinitely if `lightningd` closes their connection.
+- M1 architecture support.
+- Upgrade docker base image from Debian buster to bullseye, works with glibc 2.29+.
+- Docker images now built with rust plugin `cln-grpc`.
+
+
+Since v0.11.1 we've had 508 commits from 31 different contributors over 80 days.
+
+A special thanks goes to 9 first time contributors:
+
+- Aditya Sharma
+- Alex Myers
+- Igor Bubelov
+- Justin Moon
+- Peter Neuroth
+- Swapnil
+- Jose A.P.
+- Brian Barto
+- AutonomoousOrganization
+
+
+~ @niftynei, Christian, and Rusty</summary>
+    <title>ElementsProject/lightning: v0.12.0</title>
+    <updated>2022-08-23T19:26:51Z</updated>
+    <dc:date>2022-08-23T19:26:51Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.12</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.12"/>
-    <summary></summary>
+    <summary>## What's Changed
+* Bump moment from 2.29.3 to 2.29.4 by @dependabot in https://github.com/vulpemventures/marina/pull/385
+* Bump terser from 5.14.1 to 5.14.2 by @dependabot in https://github.com/vulpemventures/marina/pull/386
+* fix bug with mempool explorer url by @bordalix in https://github.com/vulpemventures/marina/pull/387
+* add walletState V4 migration by @louisinger in https://github.com/vulpemventures/marina/pull/390
+
+
+**Full Changelog**: https://github.com/vulpemventures/marina/compare/v0.4.11...v0.4.12</summary>
     <title>vulpemventures/marina: v0.4.12</title>
     <updated>2022-08-22T16:46:21Z</updated>
     <dc:date>2022-08-22T16:46:21Z</dc:date>
@@ -4689,16 +4760,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-03-04T07:56:34Z</updated>
     <dc:date>2022-03-04T07:56:34Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ElementsProject/elements/releases/tag/elements-0.21.0.2</id>
-    <link href="https://github.com/ElementsProject/elements/releases/tag/elements-0.21.0.2"/>
-    <summary>Changelog:  
-
-- raise max P2P message size to account for larger elements dynafed headers
-- remove block from in-flight list when a duplicate is received through RPC</summary>
-    <title>ElementsProject/elements: elements-0.21.0.2</title>
-    <updated>2022-03-03T14:05:07Z</updated>
-    <dc:date>2022-03-03T14:05:07Z</dc:date>
-  </entry>
-  <dc:date>2022-08-22T16:50:31+00:00</dc:date>
+  <dc:date>2022-08-23T19:31:38+00:00</dc:date>
 </feed>
