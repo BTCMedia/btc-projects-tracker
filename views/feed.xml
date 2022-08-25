@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-25T11:22:14+00:00</updated>
+  <updated>2022-08-25T11:41:03+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0-pre1</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0-pre1"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.12.0-pre1</title>
+    <updated>2022-08-25T11:32:31Z</updated>
+    <dc:date>2022-08-25T11:32:31Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v0.12.0</id>
     <link href="https://github.com/ElementsProject/lightning/releases/tag/v0.12.0"/>
@@ -4752,13 +4760,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-03-04T13:22:07Z</updated>
     <dc:date>2022-03-04T13:22:07Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/romanz/electrs/releases/tag/v0.9.6</id>
-    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.6"/>
-    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#096-mar-4-2022</summary>
-    <title>romanz/electrs: v0.9.6</title>
-    <updated>2022-03-04T07:56:34Z</updated>
-    <dc:date>2022-03-04T07:56:34Z</dc:date>
-  </entry>
-  <dc:date>2022-08-25T11:22:14+00:00</dc:date>
+  <dc:date>2022-08-25T11:41:03+00:00</dc:date>
 </feed>
