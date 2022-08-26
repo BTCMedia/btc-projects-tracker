@@ -6,7 +6,20 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-25T11:41:03+00:00</updated>
+  <updated>2022-08-26T08:32:08+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.10</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.10"/>
+    <summary>### Bug fixes:
+
+* Fix Wallet Transactions screen not loading in case of older payout labels (#4078) @Kukks
+* Fix missing route hints for LNURL (#4077) @dennisreimann
+* Fix API Docs url (#4061) @dennisreimann
+* Fix Pay button logo and url (#4054) @dennisreimann</summary>
+    <title>btcpayserver/btcpayserver: v1.6.10</title>
+    <updated>2022-08-26T08:27:40Z</updated>
+    <dc:date>2022-08-26T08:27:40Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0-pre1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0-pre1"/>
@@ -4748,17 +4761,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-03-08T10:37:06Z</updated>
     <dc:date>2022-03-08T10:37:06Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.6.1</id>
-    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.6.1"/>
-    <summary>- Add PayNym Addresses dialog to view linked PayNym addresses (Addresses tab)
-- Roll back to preferring IPv4 over IPv6 addresses
-- Bug fix: Fix issue where BIP47 addresses that were sent to did not get history updates
-- Bug fix: Update optimization buttons after Max button pressed
-- Bug fix: Fix regression with expanded transaction diagram dark theme background</summary>
-    <title>sparrowwallet/sparrow: 1.6.1</title>
-    <updated>2022-03-04T13:22:07Z</updated>
-    <dc:date>2022-03-04T13:22:07Z</dc:date>
-  </entry>
-  <dc:date>2022-08-25T11:41:03+00:00</dc:date>
+  <dc:date>2022-08-26T08:32:08+00:00</dc:date>
 </feed>
