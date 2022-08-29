@@ -6,11 +6,59 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-26T09:21:49+00:00</updated>
+  <updated>2022-08-29T14:02:04+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre1</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre1"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.13.0-pre1</title>
+    <updated>2022-08-29T13:54:41Z</updated>
+    <dc:date>2022-08-29T13:54:41Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0"/>
-    <summary></summary>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/Specter-Setup-v1.12.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/Specter-v1.12.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/specter_desktop-v1.12.0-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/specterd-v1.12.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/specterd-v1.12.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/specterd-v1.12.0-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[SHA256SUMS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/SHA256SUMS) file contains sha256 hashes of all binary files and signed with &quot;Specter Signer's&quot; GPG key.
+You can get the public key from [here](http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7).
+Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
+This key has been signed by @k9ert's key which you might have used for validating th 1.7.0 release.
+
+# Release notes
+
+- Feature: add faucet and exfund extensions #1820 (Stepan Snigirev)
+- Feature: Dev tools - Adding full python access via javascript for developers #1842 (relativisticelectron)
+- UIUX: Complete overhaul of the tooltips used in Specter Desktop #1813 (Manolis Mandrapilias)
+- UIUX: Easier adding and deleting of recipients #1782 (relativisticelectron)
+- UIUX: Optimize tx-table for mobile screen #1804 (relativisticelectron)
+- Mobile: Some extra height in mobile browsers #1827 (relativisticelectron)
+- Bugfix: Allow mouse selection during address label editing for Firefox #1825 (relativisticelectron)
+- Bugfix: Another broken html part and b tag #1823 (relativisticelectron)
+- Bugfix: Fiat price in address table not visible #1836 (relativisticelectron)
+- Bugfix: remove print statement with buggy expression #1822 (k9ert)
+- Bugfix: fix explorer issue #1838 #1839 (relativisticelectron)
+- Chore: Detecting Liquid chain #1851 (Manolis Mandrapilias)
+- Chore: Fix psbt creator api to work with liquid assets when using json #1831 (Stepan Snigirev)
+- Chore: Upgrade pyinstaller from 4.9 to 5.2 #1807 (k9ert)
+- Docs: Add mobile access question to the FAQ #1829 (Manolis Mandrapilias)
+- Docs: some doc fixes, refactorings and ext clarification #1789 (k9ert)
+- Docs: Supported Python versions #1847 (Willie Wheeler)</summary>
     <title>cryptoadvance/specter-desktop: v1.12.0</title>
     <updated>2022-08-26T09:17:32Z</updated>
     <dc:date>2022-08-26T09:17:32Z</dc:date>
@@ -27,14 +75,6 @@
     <title>btcpayserver/btcpayserver: v1.6.10</title>
     <updated>2022-08-26T08:27:40Z</updated>
     <dc:date>2022-08-26T08:27:40Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0-pre1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0-pre1"/>
-    <summary></summary>
-    <title>cryptoadvance/specter-desktop: v1.12.0-pre1</title>
-    <updated>2022-08-25T11:32:31Z</updated>
-    <dc:date>2022-08-25T11:32:31Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v0.12.0</id>
@@ -4636,5 +4676,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2022-03-10T13:04:25Z</updated>
     <dc:date>2022-03-10T13:04:25Z</dc:date>
   </entry>
-  <dc:date>2022-08-26T09:21:49+00:00</dc:date>
+  <dc:date>2022-08-29T14:02:04+00:00</dc:date>
 </feed>

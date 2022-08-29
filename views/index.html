@@ -38,12 +38,73 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre1">v1.13.0-pre1</a>
+						    </h2>
+							<p class="card-text">Published: 2022-08-29 13:54:41 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"></p>
+					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0">v1.12.0</a>
 						    </h2>
 							<p class="card-text">Published: 2022-08-26 09:17:32 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"></p>
+					    <p class="card-text"><h1>Binaries</h1>
+
+<p>There are two types of binaries:</p>
+
+<h2>Specter Desktop</h2>
+
+<p>It&#39;s a windowed GUI application with Specter server included.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/Specter-Setup-v1.12.0.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/Specter-v1.12.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/specter_desktop-v1.12.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
+
+<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
+
+<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
+
+<h2>specterd</h2>
+
+<p>It&#39;s a command-line program that only runs Specter server.
+Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/specterd-v1.12.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/specterd-v1.12.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/specterd-v1.12.0-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
+
+<h2>Signatures and hashes</h2>
+
+<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.12.0/SHA256SUMS">SHA256SUMS</a> file contains sha256 hashes of all binary files and signed with &quot;Specter Signer&#39;s&quot; GPG key.
+You can get the public key from <a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7">here</a>.
+Fingerprint of the key is <code>785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7</code>
+This key has been signed by @k9ert&#39;s key which you might have used for validating th 1.7.0 release.</p>
+
+<h1>Release notes</h1>
+
+<ul>
+<li>Feature: add faucet and exfund extensions #1820 (Stepan Snigirev)</li>
+<li>Feature: Dev tools - Adding full python access via javascript for developers #1842 (relativisticelectron)</li>
+<li>UIUX: Complete overhaul of the tooltips used in Specter Desktop #1813 (Manolis Mandrapilias)</li>
+<li>UIUX: Easier adding and deleting of recipients #1782 (relativisticelectron)</li>
+<li>UIUX: Optimize tx-table for mobile screen #1804 (relativisticelectron)</li>
+<li>Mobile: Some extra height in mobile browsers #1827 (relativisticelectron)</li>
+<li>Bugfix: Allow mouse selection during address label editing for Firefox #1825 (relativisticelectron)</li>
+<li>Bugfix: Another broken html part and b tag #1823 (relativisticelectron)</li>
+<li>Bugfix: Fiat price in address table not visible #1836 (relativisticelectron)</li>
+<li>Bugfix: remove print statement with buggy expression #1822 (k9ert)</li>
+<li>Bugfix: fix explorer issue #1838 #1839 (relativisticelectron)</li>
+<li>Chore: Detecting Liquid chain #1851 (Manolis Mandrapilias)</li>
+<li>Chore: Fix psbt creator api to work with liquid assets when using json #1831 (Stepan Snigirev)</li>
+<li>Chore: Upgrade pyinstaller from 4.9 to 5.2 #1807 (k9ert)</li>
+<li>Docs: Add mobile access question to the FAQ #1829 (Manolis Mandrapilias)</li>
+<li>Docs: some doc fixes, refactorings and ext clarification #1789 (k9ert)</li>
+<li>Docs: Supported Python versions #1847 (Willie Wheeler)</li>
+</ul>
+</p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
@@ -69,21 +130,6 @@
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.10" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0-pre1">v1.12.0-pre1</a>
-						    </h2>
-							<p class="card-text">Published: 2022-08-25 11:32:31 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"></p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.12.0-pre1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
