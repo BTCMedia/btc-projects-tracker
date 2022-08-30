@@ -6,7 +6,183 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-30T22:36:37+00:00</updated>
+  <updated>2022-08-30T23:04:56+00:00</updated>
+  <entry>
+    <id>https://github.com/btcsuite/btcd/releases/tag/v0.23.1</id>
+    <link href="https://github.com/btcsuite/btcd/releases/tag/v0.23.1"/>
+    <summary>## What's Changed
+* btcjson: Update WalletCreateFundedPsbtOpts.FeeRate type by @gnasr in https://github.com/btcsuite/btcd/pull/1729
+* rpcserverhelp: Remove extra period for gettxout--synopsis by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1733
+* mempool: export isDust for use in other projects by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1739
+* Switch irc to libera.chat by @jcvernaleo in https://github.com/btcsuite/btcd/pull/1725
+* rpcclient: Export symbols needed for custom commands by @JeremyRand in https://github.com/btcsuite/btcd/pull/1457
+* btcec: check if recovered pk is at point of infinity by @MariusVanDerWijden in https://github.com/btcsuite/btcd/pull/1750
+* mempool: introduce GetDustThreshold to export dust limit calculation by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1742
+* build: bump min Go version to 1.16.8 add Go 1.17.1 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1753
+* Upgraded the docker version to 1.16 by @naveensrinivasan in https://github.com/btcsuite/btcd/pull/1755
+* peer+server: add new config option to optionally disable stall detection by @Roasbeef in https://github.com/btcsuite/btcd/pull/1752
+* addrmgr: make KnownAddress methods thread-safe by @chappjc in https://github.com/btcsuite/btcd/pull/1763
+* comment improvement by @pyh4 in https://github.com/btcsuite/btcd/pull/1762
+* Included permissions for GitHub action by @naveensrinivasan in https://github.com/btcsuite/btcd/pull/1756
+* connmgr: Fix stale comment in TestRemovePendingConnection by @sloorush in https://github.com/btcsuite/btcd/pull/1749
+* rpcclient: Add retry with backoffs to HTTP POST requests by @3nprob in https://github.com/btcsuite/btcd/pull/1743
+* txscript: backport tokenizer from dcrd by @Roasbeef in https://github.com/btcsuite/btcd/pull/1769
+* go.mod, go.sum: Update goleveldb by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1770
+* reduce redundant memory allocation - resolves btcsuite/btcd#1699 by @ziollek in https://github.com/btcsuite/btcd/pull/1759
+* rpcclient+rpcserver+integration: GetNetworkHashPS3 must be float64 by @mattbajorek in https://github.com/btcsuite/btcd/pull/1778
+* multi: move the btcutil repo into btcd as a sub-module by @Roasbeef in https://github.com/btcsuite/btcd/pull/1785
+* btcutil: update modules to replace to top-level btcd repo by @Roasbeef in https://github.com/btcsuite/btcd/pull/1788
+* chaincfg+blockchain: abstract/refactor BIP 9 version bits implementation to work w/ BIP 8 block heights  by @Roasbeef in https://github.com/btcsuite/btcd/pull/1700
+* btcec: create new btcec/v2 module that type aliases into the dcrec module by @Roasbeef in https://github.com/btcsuite/btcd/pull/1773
+* btcec/v2: create new schnorr package for BIP-340, move existing ecdsa implementation into new ecdsa package by @Roasbeef in https://github.com/btcsuite/btcd/pull/1777
+* build: update to btcec v2.1.0 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1801
+* build: retract bogus tags from btcd fork by @Roasbeef in https://github.com/btcsuite/btcd/pull/1805
+* mempool/estimatefee: Fix negative index bug by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1813
+* Replace github.com/btcsuite/goleveldb imports with github.com/syndtr/goleveldb by @anupcshan in https://github.com/btcsuite/btcd/pull/1780
+* Remove circular dependency issue between `btcec/v2` and main package by @guggero in https://github.com/btcsuite/btcd/pull/1823
+* Fixes coveralls coverage report by @vpereira01 in https://github.com/btcsuite/btcd/pull/1814
+* Update LICENSE by @MarnixCroes in https://github.com/btcsuite/btcd/pull/1809
+* build: update to btcec/v2.1.1 and chaincfg/chainhash/v1.00 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1824
+* multi: implement BIP 341 and 342 a.k.a complete taproot and tapscript consensus verification logic  by @Roasbeef in https://github.com/btcsuite/btcd/pull/1787
+* build: update to btcec/v2.1.3 and chaincfg/chainhash v1.0.1 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1831
+* blockchain: demote BIP 9 log statements by @Roasbeef in https://github.com/btcsuite/btcd/pull/1832
+* psbt: allow empty bip32 derivation path by @guggero in https://github.com/btcsuite/btcd/pull/1834
+* Revert &quot;reduce redundant memory allocatio - resolves btcsuite/btcd#1699&quot; by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1804
+* Default to JSONRPC 1.0 if the rpcVersion empty by @jsfour in https://github.com/btcsuite/btcd/pull/1837
+* btcjson: Update fields in GetNetworkInfoResult by @dekokun in https://github.com/btcsuite/btcd/pull/1800
+* harden daemon on OpenBSD by @timkuijsten in https://github.com/btcsuite/btcd/pull/1815
+* rpctest: ensure rpclisten is set to an available port by @arshbot in https://github.com/btcsuite/btcd/pull/1806
+* btcjson: add addresstype arg to getnewaddress by @chappjc in https://github.com/btcsuite/btcd/pull/1776
+* chaincfg: use lower custom activation threshold for regtest+simnet by @Roasbeef in https://github.com/btcsuite/btcd/pull/1838
+* rpcclient: add getzmqnotifications RPC by @torkelrogstad in https://github.com/btcsuite/btcd/pull/1810
+* btcd: don't override explicitly set GOGC by @anupcshan in https://github.com/btcsuite/btcd/pull/1782
+* Adds GH workflow to build docker images on version tags by @vpereira01 in https://github.com/btcsuite/btcd/pull/1830
+* multi: implement BIP-155 addrv2 support by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1812
+* psbt: always use non witness serialization format by @guggero in https://github.com/btcsuite/btcd/pull/1842
+* btcec/schnorr/musig2: add new musig2 implementation based on musig2 draft BIP by @Roasbeef in https://github.com/btcsuite/btcd/pull/1820
+* fuzz: add ParsePubKey fuzzer by @odeke-em in https://github.com/btcsuite/btcd/pull/1854
+* psbt: add support for new Taproot fields by @guggero in https://github.com/btcsuite/btcd/pull/1847
+* rpcclient: fix crash in http retry handler by @bhandras in https://github.com/btcsuite/btcd/pull/1856
+* mempool: export checkStandardness func by @ellemouton in https://github.com/btcsuite/btcd/pull/1840
+* build: bump version to v0.23 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1860
+* rpcclient: add getnewaddresstype and revert breaking change by @chappjc in https://github.com/btcsuite/btcd/pull/1844
+* rpcclient: fix missing return by @bhandras in https://github.com/btcsuite/btcd/pull/1862
+* build: bump version to v0.23.1 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1863
+
+## New Contributors
+* @gnasr made their first contribution in https://github.com/btcsuite/btcd/pull/1729
+* @MariusVanDerWijden made their first contribution in https://github.com/btcsuite/btcd/pull/1750
+* @naveensrinivasan made their first contribution in https://github.com/btcsuite/btcd/pull/1755
+* @chappjc made their first contribution in https://github.com/btcsuite/btcd/pull/1763
+* @pyh4 made their first contribution in https://github.com/btcsuite/btcd/pull/1762
+* @sloorush made their first contribution in https://github.com/btcsuite/btcd/pull/1749
+* @3nprob made their first contribution in https://github.com/btcsuite/btcd/pull/1743
+* @ziollek made their first contribution in https://github.com/btcsuite/btcd/pull/1759
+* @mattbajorek made their first contribution in https://github.com/btcsuite/btcd/pull/1778
+* @anupcshan made their first contribution in https://github.com/btcsuite/btcd/pull/1780
+* @vpereira01 made their first contribution in https://github.com/btcsuite/btcd/pull/1814
+* @MarnixCroes made their first contribution in https://github.com/btcsuite/btcd/pull/1809
+* @jsfour made their first contribution in https://github.com/btcsuite/btcd/pull/1837
+* @dekokun made their first contribution in https://github.com/btcsuite/btcd/pull/1800
+* @timkuijsten made their first contribution in https://github.com/btcsuite/btcd/pull/1815
+* @arshbot made their first contribution in https://github.com/btcsuite/btcd/pull/1806
+* @odeke-em made their first contribution in https://github.com/btcsuite/btcd/pull/1854
+* @bhandras made their first contribution in https://github.com/btcsuite/btcd/pull/1856
+* @ellemouton made their first contribution in https://github.com/btcsuite/btcd/pull/1840
+
+**Full Changelog**: https://github.com/btcsuite/btcd/compare/v0.22.0-beta...v0.23.1</summary>
+    <title>btcsuite/btcd: v0.23.1</title>
+    <updated>2022-08-30T23:01:03Z</updated>
+    <dc:date>2022-08-30T23:01:03Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/btcsuite/btcd/releases/tag/v0.23.1</id>
+    <link href="https://github.com/btcsuite/btcd/releases/tag/v0.23.1"/>
+    <summary>## What's Changed
+* btcjson: Update WalletCreateFundedPsbtOpts.FeeRate type by @gnasr in https://github.com/btcsuite/btcd/pull/1729
+* rpcserverhelp: Remove extra period for gettxout--synopsis by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1733
+* mempool: export isDust for use in other projects by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1739
+* Switch irc to libera.chat by @jcvernaleo in https://github.com/btcsuite/btcd/pull/1725
+* rpcclient: Export symbols needed for custom commands by @JeremyRand in https://github.com/btcsuite/btcd/pull/1457
+* btcec: check if recovered pk is at point of infinity by @MariusVanDerWijden in https://github.com/btcsuite/btcd/pull/1750
+* mempool: introduce GetDustThreshold to export dust limit calculation by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1742
+* build: bump min Go version to 1.16.8 add Go 1.17.1 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1753
+* Upgraded the docker version to 1.16 by @naveensrinivasan in https://github.com/btcsuite/btcd/pull/1755
+* peer+server: add new config option to optionally disable stall detection by @Roasbeef in https://github.com/btcsuite/btcd/pull/1752
+* addrmgr: make KnownAddress methods thread-safe by @chappjc in https://github.com/btcsuite/btcd/pull/1763
+* comment improvement by @pyh4 in https://github.com/btcsuite/btcd/pull/1762
+* Included permissions for GitHub action by @naveensrinivasan in https://github.com/btcsuite/btcd/pull/1756
+* connmgr: Fix stale comment in TestRemovePendingConnection by @sloorush in https://github.com/btcsuite/btcd/pull/1749
+* rpcclient: Add retry with backoffs to HTTP POST requests by @3nprob in https://github.com/btcsuite/btcd/pull/1743
+* txscript: backport tokenizer from dcrd by @Roasbeef in https://github.com/btcsuite/btcd/pull/1769
+* go.mod, go.sum: Update goleveldb by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1770
+* reduce redundant memory allocation - resolves btcsuite/btcd#1699 by @ziollek in https://github.com/btcsuite/btcd/pull/1759
+* rpcclient+rpcserver+integration: GetNetworkHashPS3 must be float64 by @mattbajorek in https://github.com/btcsuite/btcd/pull/1778
+* multi: move the btcutil repo into btcd as a sub-module by @Roasbeef in https://github.com/btcsuite/btcd/pull/1785
+* btcutil: update modules to replace to top-level btcd repo by @Roasbeef in https://github.com/btcsuite/btcd/pull/1788
+* chaincfg+blockchain: abstract/refactor BIP 9 version bits implementation to work w/ BIP 8 block heights  by @Roasbeef in https://github.com/btcsuite/btcd/pull/1700
+* btcec: create new btcec/v2 module that type aliases into the dcrec module by @Roasbeef in https://github.com/btcsuite/btcd/pull/1773
+* btcec/v2: create new schnorr package for BIP-340, move existing ecdsa implementation into new ecdsa package by @Roasbeef in https://github.com/btcsuite/btcd/pull/1777
+* build: update to btcec v2.1.0 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1801
+* build: retract bogus tags from btcd fork by @Roasbeef in https://github.com/btcsuite/btcd/pull/1805
+* mempool/estimatefee: Fix negative index bug by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1813
+* Replace github.com/btcsuite/goleveldb imports with github.com/syndtr/goleveldb by @anupcshan in https://github.com/btcsuite/btcd/pull/1780
+* Remove circular dependency issue between `btcec/v2` and main package by @guggero in https://github.com/btcsuite/btcd/pull/1823
+* Fixes coveralls coverage report by @vpereira01 in https://github.com/btcsuite/btcd/pull/1814
+* Update LICENSE by @MarnixCroes in https://github.com/btcsuite/btcd/pull/1809
+* build: update to btcec/v2.1.1 and chaincfg/chainhash/v1.00 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1824
+* multi: implement BIP 341 and 342 a.k.a complete taproot and tapscript consensus verification logic  by @Roasbeef in https://github.com/btcsuite/btcd/pull/1787
+* build: update to btcec/v2.1.3 and chaincfg/chainhash v1.0.1 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1831
+* blockchain: demote BIP 9 log statements by @Roasbeef in https://github.com/btcsuite/btcd/pull/1832
+* psbt: allow empty bip32 derivation path by @guggero in https://github.com/btcsuite/btcd/pull/1834
+* Revert &quot;reduce redundant memory allocatio - resolves btcsuite/btcd#1699&quot; by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1804
+* Default to JSONRPC 1.0 if the rpcVersion empty by @jsfour in https://github.com/btcsuite/btcd/pull/1837
+* btcjson: Update fields in GetNetworkInfoResult by @dekokun in https://github.com/btcsuite/btcd/pull/1800
+* harden daemon on OpenBSD by @timkuijsten in https://github.com/btcsuite/btcd/pull/1815
+* rpctest: ensure rpclisten is set to an available port by @arshbot in https://github.com/btcsuite/btcd/pull/1806
+* btcjson: add addresstype arg to getnewaddress by @chappjc in https://github.com/btcsuite/btcd/pull/1776
+* chaincfg: use lower custom activation threshold for regtest+simnet by @Roasbeef in https://github.com/btcsuite/btcd/pull/1838
+* rpcclient: add getzmqnotifications RPC by @torkelrogstad in https://github.com/btcsuite/btcd/pull/1810
+* btcd: don't override explicitly set GOGC by @anupcshan in https://github.com/btcsuite/btcd/pull/1782
+* Adds GH workflow to build docker images on version tags by @vpereira01 in https://github.com/btcsuite/btcd/pull/1830
+* multi: implement BIP-155 addrv2 support by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1812
+* psbt: always use non witness serialization format by @guggero in https://github.com/btcsuite/btcd/pull/1842
+* btcec/schnorr/musig2: add new musig2 implementation based on musig2 draft BIP by @Roasbeef in https://github.com/btcsuite/btcd/pull/1820
+* fuzz: add ParsePubKey fuzzer by @odeke-em in https://github.com/btcsuite/btcd/pull/1854
+* psbt: add support for new Taproot fields by @guggero in https://github.com/btcsuite/btcd/pull/1847
+* rpcclient: fix crash in http retry handler by @bhandras in https://github.com/btcsuite/btcd/pull/1856
+* mempool: export checkStandardness func by @ellemouton in https://github.com/btcsuite/btcd/pull/1840
+* build: bump version to v0.23 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1860
+* rpcclient: add getnewaddresstype and revert breaking change by @chappjc in https://github.com/btcsuite/btcd/pull/1844
+* rpcclient: fix missing return by @bhandras in https://github.com/btcsuite/btcd/pull/1862
+* build: bump version to v0.23.1 by @Roasbeef in https://github.com/btcsuite/btcd/pull/1863
+
+## New Contributors
+* @gnasr made their first contribution in https://github.com/btcsuite/btcd/pull/1729
+* @MariusVanDerWijden made their first contribution in https://github.com/btcsuite/btcd/pull/1750
+* @naveensrinivasan made their first contribution in https://github.com/btcsuite/btcd/pull/1755
+* @chappjc made their first contribution in https://github.com/btcsuite/btcd/pull/1763
+* @pyh4 made their first contribution in https://github.com/btcsuite/btcd/pull/1762
+* @sloorush made their first contribution in https://github.com/btcsuite/btcd/pull/1749
+* @3nprob made their first contribution in https://github.com/btcsuite/btcd/pull/1743
+* @ziollek made their first contribution in https://github.com/btcsuite/btcd/pull/1759
+* @mattbajorek made their first contribution in https://github.com/btcsuite/btcd/pull/1778
+* @anupcshan made their first contribution in https://github.com/btcsuite/btcd/pull/1780
+* @vpereira01 made their first contribution in https://github.com/btcsuite/btcd/pull/1814
+* @MarnixCroes made their first contribution in https://github.com/btcsuite/btcd/pull/1809
+* @jsfour made their first contribution in https://github.com/btcsuite/btcd/pull/1837
+* @dekokun made their first contribution in https://github.com/btcsuite/btcd/pull/1800
+* @timkuijsten made their first contribution in https://github.com/btcsuite/btcd/pull/1815
+* @arshbot made their first contribution in https://github.com/btcsuite/btcd/pull/1806
+* @odeke-em made their first contribution in https://github.com/btcsuite/btcd/pull/1854
+* @bhandras made their first contribution in https://github.com/btcsuite/btcd/pull/1856
+* @ellemouton made their first contribution in https://github.com/btcsuite/btcd/pull/1840
+
+**Full Changelog**: https://github.com/btcsuite/btcd/compare/v0.22.0-beta...v0.23.1</summary>
+    <title>btcsuite/btcd: v0.23.1</title>
+    <updated>2022-08-30T23:01:03Z</updated>
+    <dc:date>2022-08-30T23:01:03Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.15.1-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.15.1-beta"/>
@@ -4915,29 +5091,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2022-03-18T14:00:59Z</updated>
     <dc:date>2022-03-18T14:00:59Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.6.2</id>
-    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.6.2"/>
-    <summary>- Support linking and sending directly to payment codes (without paynym.is)
-- Automatically label new BIP47 receive addresses to identify incoming BIP47 transactions
-- Allow any linked PayNym contact to be renamed (right-click on the contact in the PayNym dialog)
-- Add PayNym contacts from the followers list
-- Allow mix partner to more easily retry listening if a timeout occurs via a provided link in the dialog
-- Label invalid notification transactions and avoid attempting to relink with them
-- Identify and color code signatures in transaction hex witness data
-- Bug fix: Make db-updater a daemon thread to fix an issue shutting down properly on Windows
-- Bug fix: Enable Create Transaction button when sending max payment to a linked PayNym</summary>
-    <title>sparrowwallet/sparrow: 1.6.2</title>
-    <updated>2022-03-17T13:57:16Z</updated>
-    <dc:date>2022-03-17T13:57:16Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.16</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.16"/>
-    <summary>This update brings the latest versions of Jam, Krystal Bull, Suredbits Wallet, Bitfeed, LNDg, and Urbit to the Umbrel App Store.</summary>
-    <title>getumbrel/umbrel: v0.4.16</title>
-    <updated>2022-03-15T12:36:38Z</updated>
-    <dc:date>2022-03-15T12:36:38Z</dc:date>
-  </entry>
-  <dc:date>2022-08-30T22:36:37+00:00</dc:date>
+  <dc:date>2022-08-30T23:04:56+00:00</dc:date>
 </feed>
