@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-08-30T23:04:56+00:00</updated>
+  <updated>2022-09-01T08:31:13+00:00</updated>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.13</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.13"/>
+    <summary></summary>
+    <title>vulpemventures/marina: v0.4.13</title>
+    <updated>2022-09-01T08:24:22Z</updated>
+    <dc:date>2022-09-01T08:24:22Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcsuite/btcd/releases/tag/v0.23.1</id>
     <link href="https://github.com/btcsuite/btcd/releases/tag/v0.23.1"/>
@@ -5060,36 +5068,5 @@ Build with .NET Core 3.1.407-win-x64.
     <updated>2022-03-22T09:21:48Z</updated>
     <dc:date>2022-03-22T09:21:48Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.21</id>
-    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.21"/>
-    <summary>## Main changes
-
-### Remove send all checkbox
-
-When sending a payment, the &quot;send all&quot; checkbox lets users use all their balance for that payment and forces the app to use the highest possible trampoline fee, which can lead to unintended high fees (especially if the default trampoline fees have been altered by the user). This checkbox has thus been removed until we find a better solution.
-
-- **app**: https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.20...android-legacy-v1.4.21
-
-## Verifying signatures
-
-You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: https://acinq.co/pgp/padioupm.asc
-- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
-
-To import our signing key:
-```
-$ gpg --import padioupm.asc
-```
-
-To verify the release file checksums and signatures:
-```
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-```</summary>
-    <title>ACINQ/phoenix: android-legacy-v1.4.21</title>
-    <updated>2022-03-18T14:00:59Z</updated>
-    <dc:date>2022-03-18T14:00:59Z</dc:date>
-  </entry>
-  <dc:date>2022-08-30T23:04:56+00:00</dc:date>
+  <dc:date>2022-09-01T08:31:13+00:00</dc:date>
 </feed>
