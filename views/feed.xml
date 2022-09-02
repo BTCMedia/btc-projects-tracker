@@ -6,11 +6,25 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-09-01T08:31:13+00:00</updated>
+  <updated>2022-09-02T13:21:20+00:00</updated>
+  <entry>
+    <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/rm</id>
+    <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/rm"/>
+    <summary></summary>
+    <title>bitcoin-s/bitcoin-s: rm</title>
+    <updated>2022-09-02T13:17:27Z</updated>
+    <dc:date>2022-09-02T13:17:27Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.13</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.13"/>
-    <summary></summary>
+    <summary>## What's Changed
+* `getAccountInfo()` returns mainAccount data + add main account template by @louisinger in https://github.com/vulpemventures/marina/pull/361
+* Use `ElectrsBatchServer` from ldk 0.5.6 by @louisinger in https://github.com/vulpemventures/marina/pull/392
+* Transaction history fix by @louisinger in https://github.com/vulpemventures/marina/pull/398
+
+
+**Full Changelog**: https://github.com/vulpemventures/marina/compare/v0.4.12...v0.4.13</summary>
     <title>vulpemventures/marina: v0.4.13</title>
     <updated>2022-09-01T08:24:22Z</updated>
     <dc:date>2022-09-01T08:24:22Z</dc:date>
@@ -5032,41 +5046,5 @@ cce6c949251d1ee6d9ab8bf1d29e026778a846f048a854ca5ef114000b05f079 rskj-core-3.3.0
     <updated>2022-03-23T18:31:51Z</updated>
     <dc:date>2022-03-23T18:31:51Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.13.1</id>
-    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.13.1"/>
-    <summary># Summary
-
-This release upgrades the built-in Tor client from v.0.4.5.10 to v0.4.6.9. There are many significant changes, that greatly increase the network stability and performance. The release also contains some rare but annoying crash fix.  Make sure your Tor client is not running in the background so Wasabi can update it - the easiest way is to restart your machine and start the new version of Wasabi. 
-
-- Updated Tor client to [0.4.6.9](https://github.com/zkSNACKs/WalletWasabi/pull/7460).
-
-# Newbie Guide
-
-While setting up Wasabi is straightforward, even a Linux wizard with the longest beard can get stuck on the most basic tasks. Consider taking a look at the [Installation Instructions](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html) guide.
-
-# Advanced Guide
-
-If you want to build Wasabi from source code or update the source code check out [these instructions.](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html)
-
-From version 1.1.3 Wasabi also introduces [reproducible builds](https://reproducible-builds.org/): [Deterministic Build Guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md)
-
-Build with .NET Core 3.1.407-win-x64.
-
-## FAQ
-
-- **Frequently asked questions [here](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq).**
-- **Requirements?** x64, Linux, &gt;Win10, &gt;macOS 10.13.
-
-# Release Notes
-
-- **Recover from AddressManager file corruption** https://github.com/zkSNACKs/WalletWasabi/pull/6723
-- **Minor bugfixes** https://github.com/zkSNACKs/WalletWasabi/pull/4106 https://github.com/zkSNACKs/WalletWasabi/pull/6683
-- **Bitcoin Knots to LTS** https://github.com/zkSNACKs/WalletWasabi/pull/7016
-- **Major Tor update** https://github.com/zkSNACKs/WalletWasabi/pull/7579</summary>
-    <title>zkSNACKs/WalletWasabi: v1.1.13.1</title>
-    <updated>2022-03-22T09:21:48Z</updated>
-    <dc:date>2022-03-22T09:21:48Z</dc:date>
-  </entry>
-  <dc:date>2022-09-01T08:31:13+00:00</dc:date>
+  <dc:date>2022-09-02T13:21:20+00:00</dc:date>
 </feed>
