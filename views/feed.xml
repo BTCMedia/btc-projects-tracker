@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-09-02T13:21:20+00:00</updated>
+  <updated>2022-09-02T15:22:09+00:00</updated>
+  <entry>
+    <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.3</id>
+    <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.3"/>
+    <summary></summary>
+    <title>bitcoin-s/bitcoin-s: 1.9.3</title>
+    <updated>2022-09-02T15:17:24Z</updated>
+    <dc:date>2022-09-02T15:17:24Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/rm</id>
     <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/rm"/>
@@ -5024,27 +5032,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2022-03-25T10:10:39Z</updated>
     <dc:date>2022-03-25T10:10:39Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/rsksmart/rskj/releases/tag/IRIS-3.3.0</id>
-    <link href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.3.0"/>
-    <summary>This release contains several enhancements in JSON-RPC interface, Ethereum compatibility fixes and node robustness enhancements. This is a non-comprehensive list of the changes included in this version:
-
-* Fix `web3_sha3` method for non-hex encoded strings in https://github.com/rsksmart/rskj/pull/1637
-* JSON-RPC compatibility fixes in https://github.com/rsksmart/rskj/pull/1659
-* `eth_getLogs` method performance improvements in https://github.com/rsksmart/rskj/pull/1650
-* Mitigated db inconsistency issue after improper node shutdown in https://github.com/rsksmart/rskj/pull/1660
-* Enabled fast block propagation mode by default in https://github.com/rsksmart/rskj/pull/1677
-* Added tracing options to `debug_traceTransaction` method in https://github.com/rsksmart/rskj/pull/1644
-
-You can find a complete list of the changes introduced in [Iris 3.3.0 milestone](https://github.com/rsksmart/rskj/milestone/28).
-
-SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
-cce6c949251d1ee6d9ab8bf1d29e026778a846f048a854ca5ef114000b05f079 rskj-core-3.3.0-IRIS-all.jar
-
-</summary>
-    <title>rsksmart/rskj: IRIS-3.3.0</title>
-    <updated>2022-03-23T18:31:51Z</updated>
-    <dc:date>2022-03-23T18:31:51Z</dc:date>
-  </entry>
-  <dc:date>2022-09-02T13:21:20+00:00</dc:date>
+  <dc:date>2022-09-02T15:22:09+00:00</dc:date>
 </feed>
