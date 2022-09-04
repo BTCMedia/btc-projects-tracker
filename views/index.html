@@ -38,6 +38,477 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bitcoin-s/bitcoin-s">bitcoin-s/bitcoin-s</a>: <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.3">1.9.3</a>
+						    </h2>
+							<p class="card-text">Published: 2022-09-02 16:21:56 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>1.9.3</h1>
+
+<p>This release is backwards compatible with the 1.9.x series of bitcoin-s</p>
+
+<p>See the individual module sections for more information on lower level updates to the codebase.</p>
+
+<p>Want to get started quickly? See our <code>docker-compose.yml</code> file. <a href="https://github.com/bitcoin-s/bitcoin-s/#docker">See instructions here</a></p>
+
+<p>If you are a typescript developer, <a href="https://github.com/bitcoin-s/bitcoin-s-ts">you can access the backend via our typescript library</a></p>
+
+<h1>Executive Summary</h1>
+
+<ul>
+<li>Many websocket events added</li>
+<li><code>loadwallet</code> RPC to switch wallets without restarting the application</li>
+<li>taproot script/signature verification</li>
+<li>multi peer neutrino</li>
+<li>musig2 Scala implementation</li>
+</ul>
+
+<h2>Running bitcoin-s</h2>
+
+<p>If you want to run the standalone server binary, after verifying gpg signatures, you
+can <code>unzip bitcoin-s-server-1.9.3.zip</code> and then run it with <code>chmod +x ./bin/bitcoin-s-server &amp;&amp; ./bin/bitcoin-s-server</code> to start the node. You will need to
+configure the node properly first, you can find example
+configurations <a href="https://bitcoin-s.org/docs/config/configuration#example-configuration-file">here</a>.</p>
+
+<p>You can then unzip the <code>bitcoin-s-cli-1.9.3.zip</code> folder and start using the <code>bitcoin-s-cli</code> like this:</p>
+
+<p>```bashrc
+./bin/bitcoin-s-cli --help
+Usage: bitcoin-s-cli [options] [<cmd>]</p>
+
+<p>-n, --network <value>    Select the active network.
+  --debug                  Print debugging information
+  --rpcport <value>        The port to send our rpc request to on the server
+  -h, --help               Display this help message and exit
+```</p>
+
+<p>For more information on what commands <code>bitcoin-s-cli</code> supports check the documentation, here is where to
+start: <a href="https://bitcoin-s.org/docs/next/applications/server#server-endpoints">https://bitcoin-s.org/docs/next/applications/server#server-endpoints</a></p>
+
+<h2>Verifying signatures</h2>
+
+<p>This release is signed with <a href="https://bitcoin-s.org/docs/next/security#disclosure">Chris&#39;s signing key</a> with
+fingerprint <code>9234F4D6AF47C71B741A390F8976CA0AF71A7A2A</code></p>
+
+<p>To do the verification, first hash the executable using <code>sha256sum</code>. You should check that the result is listed in
+the <code>SHA256SUMS.asc</code> file next to its file name. After doing that you can use <code>gpg --verify</code> to authenticate the
+signature.</p>
+
+<p>Example:</p>
+
+<p>```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+gpg: Signature made Sun 04 Sep 2022 08:37:01 AM CDT
+gpg:                using RSA key 9234F4D6AF47C71B741A390F8976CA0AF71A7A2A
+gpg: Good signature from &quot;Chris Stewart <a href="mailto:stewart.chris1234@gmail.com">stewart.chris1234@gmail.com</a>&quot; [ultimate]</p>
+
+<p>$ sha256sum -c SHA256SUMS.stripped
+bitcoin-s-cli-linux-1.9.3.zip: OK
+bitcoin-s-cli-macosx-1.9.3.zip: OK
+bitcoin-s-cli-windowsserver2022-1.9.3.zip: OK
+bitcoin-s-cli-x86<em>64-apple-darwin: OK
+bitcoin-s-cli-x86</em>64-pc-linux: OK
+bitcoin-s-oracle-server-linux-1.9.3.zip: OK
+bitcoin-s-oracle-server-macosx-1.9.3.zip: OK
+bitcoin-s-oracle-server-windowsserver2022-1.9.3.zip: OK
+bitcoin-s-server-linux-1.9.3.zip: OK
+bitcoin-s-server-macosx-1.9.3.zip: OK
+bitcoin-s-server-windowsserver2022-1.9.3.zip: OK
+krystal-bull<em>1.9.3</em>amd64.deb: OK
+Krystal.Bull-darwin-x64-1.9.3.zip: OK
+suredbits-wallet<em>1.9.3</em>amd64.deb: OK
+Suredbits.Wallet-darwin-x64-1.9.3.zip: OK
+```</p>
+
+<h3>Website</h3>
+
+<p><a href="https://bitcoin-s.org/">https://bitcoin-s.org/</a></p>
+
+<h3>Releases</h3>
+
+<p><a href="https://repo1.maven.org/maven2/org/bitcoin-s/">https://repo1.maven.org/maven2/org/bitcoin-s/</a></p>
+
+<h3>Snapshot releases</h3>
+
+<p><a href="https://oss.sonatype.org/content/repositories/snapshots/org/bitcoin-s/">https://oss.sonatype.org/content/repositories/snapshots/org/bitcoin-s/</a></p>
+
+<h2>Contributors</h2>
+
+<p><code>
+   125  Chris Stewart
+    45  benthecarman
+    18  rorp
+    14  Shreyansh
+     4  GreyMcCarthy
+     1  Nadav Kohen
+     1  fiatjaf
+     1  user411
+</code></p>
+
+<h1>Modules</h1>
+
+<h2>app commons</h2>
+
+<p>Consolidate duplicate data structures in <code>cli</code> and <code>appServer</code> into a common location.</p>
+
+<p>66d298be3e Add SatoshisPerVirtualByte json serializers (#4672)
+825937ea5f Add more JSON serializers (#4628)
+b7c7cb8fc2 Moving duplicate dataStructures in <code>cli</code> and <code>app-server</code> into <code>app-commons</code> (#4541)</p>
+
+<h2>App server</h2>
+
+<p>This release adds the ability to call <code>loadwallet [wallet-name] [aes-password-opt] [bip39-password-opt]</code>.
+This RPC allows you to load a new wallet in bitcoin-s without shutting down and restarting the server.</p>
+
+<p>This release also adds the rpc <code>exportseed [wallet-name] [aes-password-opt]</code> to export the mnemonic seed for a wallet.</p>
+
+<p>Websocket events added this release are </p>
+
+<ul>
+<li>fee rate change</li>
+<li>rescan complete</li>
+<li>sync complete</li>
+<li>tor started</li>
+</ul>
+
+<p>dbcde5d3c7 Fix flaky test (#4695)
+f65b483d6f Allow LnMessage(tlv) &amp; raw tlv to be used in <code>DLCRoutes</code> (#4682)
+b18da7ac2b Fix bug where it prevented us from rescanning an empty wallet (#4632)
+153d20128f Improve logging to try and solve 4618 (#4622)
+85c01f7a8c More lazy initialization for BitcoinSServerMain (#4621)
+1b19872ac4 Implement <code>exportstakingaddresswif</code> (#4617)
+b6710e7043 .map() on loadwallet result before starting http server so wallet is fully loaded (#4614)
+a0851fea58 Run migrations upfront (#4607)
+d0dadfa423 2022 08 11 issue 4600 and only emit <code>syncing</code> ws event when we are actually syncing (#4604)
+b0831f26a7 Refactor waiting for bitcoind lost blocks into helper method, add context (#4602)
+95139bdc3d Improve logging on getBlockchainInfo() (#4590)
+9f89ba9b7a <code>loadwallet</code> endpoint (#4417)
+a02e25b0ce Refactor <code>WalletRoutes</code> to take <code>DLCWalletLoaderApi</code> as a paramete (#4565)
+8cb45e8208 Add unit tests for loader rescans (#4570)
+1d3db879ad Add rescanState variable to DLCWalletLoaderApi (#4569)
+ec0103dab3 2022 08 02 loadwallet startup logic (#4568)
+191df09196 Move pollBitcoind out of startBitcoindBlockPolling (#4559)
+936a65edd4 2022 07 21 Modify helper methods in <code>BitcoindRpcBackendUtil</code> to not materialize streams eagerly. (#4526)
+a2e7c428cf Bump sleeps on CallbackUtilTest (#4534)
+d508d65142 Implement ability to cancel bitcoind polling jobs (#4538)
+4ef27dd163 Fix bug where dlcNode was not apart of tor dependent configs (#4537)
+67dd16d8ad Add missing calls to BitcoinSAppConfig.stop() (#4535)
+d4210fad65 Pull over changes from loadwallet branch (#4527)
+5d309fbae0 Fee rate WS notification (#4518)
+e3a7c0971f Refactor to hide the Message paramter that gets fed to the websocket queue, move it to a internal implementation detail (#4514)
+f6df30c45e Make appServerTest run in parallel to speed up test suite (#4515)
+cdef8c01dd Set syncing flag to true on startup (#4506)
+d1375a589e 2022 07 12 server startup cleanup (#4501)
+e90e372e54 Add <code>sync</code> JSON field to the <code>getinfo</code> endpoint output (#4452)
+84ce76e16c Fix race condition related to sqlite3 database not being created before we access it (#4479)
+20bf1e6a08 Remove map on tor to allow access to getdlchostaddress endpoint before tor is fully stated (#4435)
+a7aad46934 Seed backup API (#4357)</p>
+
+<h2>bitcoind rpc</h2>
+
+<p>This release adds official support for v22 and v23 of bitcoin core.
+It also includes some basic support for fetching blocks via akka streams
+and taproot.</p>
+
+<p>ea123139d9 Remove support for bitcoind v16 rpc client (#4634)
+d95d3db75c Download <code>arm64-apple-darwin</code> bitcoind binary on M1 Mac OS X (#4588)
+7b754138b8 Drop support for the experimental bitcoind version (#4586)
+ed4e332cef Dafalut to the latest Bitcoin Core version (#4579)
+ad21a11254 Create BitcoindStreamUtil and refactor to use it (#4578)
+3ae169a41f V22 RPC Support Update Continued (#4424)
+99b75d166f Fixes support for bitcoind taproot descriptor wallets (#4415)
+4dc1bc7050 add bitcoind v23 rpc (#4368)</p>
+
+<h2>bundle</h2>
+
+<p>945b3914dd Remove javafx release (#4684)</p>
+
+<h2>Build</h2>
+
+<p>Implements electron app builds to combine bitcoin-s backend and bitcoin-s-ts
+frontend into a single electron app.</p>
+
+<p>Adds a flag <code>DISABLE_JLINK</code> to disable jlink when running the artifact built by <code>universal:packageBin</code>.</p>
+
+<p>This release fixes a package name bug introduced in 1.9.2 (#4401).</p>
+
+<p>Fixes various bugs in bash scripts used by <code>bitcoin-s-{server, oracle-server}</code>.</p>
+
+<p>3578b56ea3 Switch base docker image to eclipse-temurin:17 (#4697)
+7322186b56 Fix Tor hidden service config (#4689)
+49b2730f8c revert docker-compose user again as its impossible to create mounted direcotry as non root user (#4691)
+d6c7247a79 Simple docker-compose.yml, add BITCOIN<em>S</em>UID, add DISABLE<em>JLINK (#4680)
+c266ba849f Set entrypoint scripts so they are executable by anyone, revert daemonUserId to test on umbrel (#4678)
+969333c9e4 Add correct volume mapping for UI (#4670)
+15032e27a1 Add default exposed volume of /bitcoin-s so we can always write data to a place (#4669)
+85a0a0b889 Add docker command mkdir /wallet (#4666)
+ac24bfb230 Revert #4601 / #4624 so that docker works on umbrel again (#4665)
+288918d705 Partially revert #4601 and re-add <code>daemonUser := bitcoin-s</code> (#4655)
+2001e86ab9 If `DISABLE</em>JLINK<code>set, don&#39;t try to chmod</code>jre/bin/java<code>(#4651)
+0b39c38419 Configure scalafmt to preserve line endings (#4638)
+28311e1550 Only build native bitcoin-s-cli on tags or merges to master (#4636)
+713ee75d4c Get rid of standalone scalajs, mdoc CI matrix. Consolidate with other CI jobs (#4633)
+2dad9f57b8 Fix bug where we weren&#39;t specify the bash script for each project to modify file permissions (#4625)
+ac7939ac54 Adjust bash script permissions so they can be run by any user (#4624)
+6b8f45e393 Update docker-compose.yml (#4599)
+e413f04106 Remove the daemonUser/daemonUserId combination to make our docker images more portable (#4601)
+a2117e2551 Downgrade CI jdk 18 -&gt; 17 (#4546)
+6f42f83146 Move OSX check inside of jre path check, fix bug where quarantine wasn&#39;t working in case where we are in the same directory as script (#4508)
+5b44c074f1 Fix</code>chmod: jre/bin/java: No such file or directory` errors (#4493)
+de935032ea Make coreTestJVM.dependOn(testkit), add new multi core dispatcher to allow more cores for TaprootTTests to hopefully take load off the scala execution context (#4477)
+9985db3b41 Bump to jdk18 (#4471)
+3ea4763cfc Change 2.13.7 -&gt; 2.13.8 in a few spots where I missed it (#4470)
+2968a9ee15 Try to test out setup-java CI action (#4466)
+76694a55e9 Add server build matrix, mac,linux electron builds (#4434)
+aed92c35af Implement DISABLE_JLINK env variable to disable jlink jre&#39;s usage at runtime (#4426)
+e25c24dc9b Fix package name bug so package name is  ra… (#4402)</p>
+
+<h2>chain</h2>
+
+<p>86463231d6 2022 08 18 Add configuration to only emit websocket events when IBD is done (#4627)
+27120a2bb9 Add InvalidBlockHeader ChainException (#4635)</p>
+
+<h2>Core</h2>
+
+<p>This release adds support for the <a href="https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki">taproot script interpreter</a>
+and <a href="https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki">taproot signature serialization</a></p>
+
+<p>The next release will add signing support for taproot transactions.</p>
+
+<p>e5545cb3b9 Improve toString functions for schnorr data types (#4644)
+c34b0de886 removed logger parameter from where it&#39;s used with callbacks (#4598)
+26492d2449 Add descriptor for TaprootScriptPubKey (#4595)
+b04a34ad02 Use FutureUtil.makeAsync where we are attmepting to create async Futures (#4583)
+4b83286922 2022 07 25 wallet api refactor (#4545)
+c210052640 Refactor coin selection to be not be bitcoin-s specific (#4496)
+5c9092889b Add abillity to clear callbacks (#4512)
+9412170f09 2022 07 11 fix invalid csa neg (#4495)
+f8f4facdd1 Correctly parse TaprootKeyPath how they are represented (#4494)
+b16a8ca6aa Fix bug where we weren&#39;t checking if a TaprootKeyPath w/ annex has two stack elements (#4491)
+59732809d0 Represent and handle <code>SIGHASH_DEFAULT</code> correctly in <code>TaprootKeyPath</code> (#4488)
+ef50becf1b Enforce MAX<em>PUSH</em>SIZE for taproot (#4486)
+db63b286b3 Fix hashtype check to correctly handle scala&#39;s conversion (#4487)
+91a1c84a6f Enforce minimalif for tapscripts (#4484)
+990e344a49 Disallow OP<em>CMS in taproot (#4485)
+cc45924ed8 Validate max ScriptNumber bytes in OP</em>CHECKSIGADD (#4483)
+3892fa23ef Restrict hash types allowed by taproot signature verification (#4481)
+3821060e68 Schnorr sig parsing checks (#4482)
+ec599a5c3d Fix <code>containsOpSuccess</code> implementation (#4480)
+0397ca6c78 tapscript/sigopsratio<em>3 failing correctly (#4461)
+5df5bf6741 Add support for taproot keyspend PSBTs (#4462)
+000e7a7930 Have FutureUtil.makeAsync handle thrown exceptions (#4458)
+211339f344 Add static test vectors for Taproot (#3769)
+83cff9a44c 2022 07 07 issue 4455 (#4457)
+97be26586 Get a SIGHASH</em>SINGLE test case working (#4431)
+eae16a52f8 Allow creating input info of simple OP<em>TRUE script pub key (#4450)
+11f6c8f024 2022 07 05 <code>UnknownControlBlock</code> (#4449)
+6f6315c1e7 Fix taproot SIGHASH</em>SINGLE taproot annex hash bug (#4448)
+64183568fe Allow creation of TaprootTxSigComponent (#4445)
+5f93096c5a Fix Taproot keyspend serialization (#4443)
+93302fea01 Fix TaprootKeyPath.isValid for 64 byte sigs (#4444)
+0c14fc961b Add test case for <code>SIGHASH_ALL_ANYONECANPAY</code> in taproot (#4442)
+3122e1d0f8 Fix bug in taproot SIGHASH<em>ANYONECANPAY</em>SINGLE impl (#4440)
+38d8f8cdf0 2022 06 30 <code>OP_CODESEPARATOR</code> impl compatible with taproot (#4439)
+a97be26586 Get a SIGHASH_SINGLE test case working (#4431)
+c4fd7035be Add Taproot PSBT fields (#4420)
+124cbe4b67 Add annex to <code>TaprootKeyPath</code> (#4416)
+5115d8d076 Move lastCodeSeparator to StartedScriptProgram (#4414)
+a680f03c04 Implement BIP341 (#4409)</p>
+
+<h2>Crypto</h2>
+
+<p>This release implements <a href="https://github.com/jonasnick/bips/blob/musig2/bip-musig2.mediawiki">musig2</a></p>
+
+<p>2b60bbb1c3 Remove .map() and use .foreach() with buffer in CryptoBytesUtil.toByteVector() (#4454)
+ae0962d7ed Musig2 Implementation (#4418)</p>
+
+<h2>db commons</h2>
+
+<p>b514e812b5 Use findByPrimaryKey query in findByPrimaryKeyAction (#4671)
+02f525fd39 Make CRUDAction types more strict (#4657)
+675b210333 Add PSBT database mapper (#4584)</p>
+
+<h2>DLC node</h2>
+
+<h2>DLC wallet</h2>
+
+<p>Optimizations for the DLC Wallet.</p>
+
+<p>a5186cd1da Change default DLC peer alias (#4663)
+34c10c6c65 Fix WalletDLCSetupTest (#4623)
+46502496c1  Update DLCClientIntegrationTest to use the newest bitcoind (#4596)
+a22e847e2e Implement small optimization to not query for DLCDb twice (#4592)
+326cb9845e Implement listDLCs(state), use it in getWalletAccounting() (#4591)
+ba396f2fb3 Fetch findByFundingTxId/findByFundingOutPoints in parallel as an optimization (#4560)
+603b7e0aea Make DLCWallet.listDLCs use DBIOActions (#4555)</p>
+
+<h2>gui</h2>
+
+<h2>fee rate</h2>
+
+<p>This release fixes a bug which can cause an application to hang for a long time
+when requesting a fee rate. Now we have a timeout of 1 second when fetching fee rates.</p>
+
+<p>6dfa7683e4 Implement a timeout on fee rate requests (#4503)</p>
+
+<h2>keymanager</h2>
+
+<p>This release of the keymanager now keeps track if seeds have been imported
+into bitcoin-s or generated from internal entropy.</p>
+
+<p>08699c0ee0 Remove nested Option<a href="#4564">Option[AesPassword]</a>
+948d2b424e Make KeyManagerAppConfig.walletName return String rather than Option<a href="#4507">String</a>
+414557effb Add <code>imported</code> flag to the seed JSON (#4459)</p>
+
+<h2>Lnd rpc</h2>
+
+<p>dac65ca806 Fixes for force closes or failure to close lnd channel (#4692)
+80051d4089 Make macaroon path accessible in LndInstanceLocal, add Versioner RPC (#4688)
+64bc1367c5 Add listPendingChannels to LND (#4603)
+ef3bfed1dc Add ChainNotifier to LND (#4589)
+f286b42c71 Retry lnd startup if it fails (#4573)
+678612161b Fix lnd OutputDetails for outputs that dont have an address (#4438)
+828d03c727 Fix out of bounds issues with lnd mappers (#4425)
+0b9190f968 Lnd v0.15.0-beta (#4419)
+531845adfa Accept keysend and amp in lnd fixtures (#4407)
+9b1f8924ab Fix download lnd command (#4406)
+04802ae239 Add peers rpc to lnd (#4403)
+a0ab0638f8 Allow for custom channel sizes in LndRpcTestUtil.createNodePair (#4398)</p>
+
+<h2>Lnurl</h2>
+
+<h2>node</h2>
+
+<p>This release merges multi-peer neutrino support. This release does NOT enable multi peer support by default.</p>
+
+<p>These new configurations are introduced in #4408. Adjust it if you want different behavior.
+<code>
+bitcoin-s.node.peers = [] # put ip/dns addresses here to force connections to these peers
+bitcoin-s.node.maxConnectedPeers = 1 # try to connect to peers from dns seeds, database, addr messages etc
+bitcoin-s.node.enable-peer-discovery = false # use the defauls suredbits neutrino node as a peer
+bitcoin-s-.node.use-default-peers = true # whether to use suredbits hosted peer
+</code></p>
+
+<p>This PR also implements <code>NodeCallbacks</code> with akka streams so we can safely call <code>loadwallet</code>
+when node callbacks are being executed. Now we want for the streams to complete, and then continue
+loading the next wallet.</p>
+
+<p>d2f8811a1c Add log when we are fetching peers to sync with (#4693)
+9353c41e8f Add some guards for when we set IBD flag to reduce false positive WARN messages (#4683)
+2cae3f803d Fix infinite invalid header loop (#4667)
+4e4e4aa9ed change stream to use backpressure (#4654)
+068187c93d increase buffer size of dataMessageStream to 10000 (#4646)
+2c2e03b279 Header sync validation (#4456)
+d241e6f9e4 Remove merklebuffers (#4615)
+dea99457b5 fix mac node-wallet test failure (#4585)
+5acbba9377 Replace <code>BoundedSourceQueueWithComplete</code> with <code>SourceQueueWithComplete</code> (#4576)
+c4d358061a Add P2PClientSupervisor (#4509)
+f5cca7e5e1 Add guard for calling NodeCallbackStreamManager.stop() (#4523)
+0a127368f0 2022 07 18 node callback stream manager (#4520)
+2e309086d5 Fix block fetch issue #4513 (#4522)
+0cb93ddbf4 2022 07 17 node callback akka streams (#4516)
+0b53c7be12 Change tests to use disconnectnode rpc instead of restarting bitcoind (#4468)
+7c649d39db Fix filter sync if headers received while syncing (#4463)
+111df25df0 Fix sync issues post #4408 (#4441)
+42564bc810 Find and switch peers (#4408)
+a7ba46f67d Update hardcoded seeds (#4412)
+7f43ef98ad Default to suredbits node if peers field is left empty (#4404)</p>
+
+<h2>Oracle Explorer Client</h2>
+
+<p>8638d14ca0 Update Oracle Explorer addreess (#4609)</p>
+
+<h2>wallet</h2>
+
+<p>This release introduces akka streams in the wallet module.</p>
+
+<p>With this new dependency, we implemented rescan&#39;s with streams so that the rescan can be arbitrarily terminated
+by the user. The streaming feature was needed to implement the <code>loadwallet</code> rpc call safely when a rescan is ongoing.</p>
+
+<p>The wallet now emits a websocket event when a rescan is complete.</p>
+
+<p>This release also fixes a bug in rescans where a single tranaction pays to multiple wallet addresses.
+If those addresses were generated in <em>separate</em> batches during a rescan, funds wouldn&#39;t be discovered.
+This is unlikely to happen in practice. Consider rescanning your wallet though on the 1.9.3 release.</p>
+
+<p>Various refactors and optimizations were needed to complete the rescan and <code>loadwallet</code> work.</p>
+
+<p>7c112b8a90 Fix rescan for existing wallets (#4656)
+9afab28d50 Fix empty.head exception in rescan flow (#4649)
+451b525be5 Don&#39;t process block that we can&#39;t fetch height for (#4613)
+a0eb0824a2 Fix some bugs around resetting rescan state when a rescan fails (#4642)
+c09da6f116 Bump rescan test timeouts from 5 -&gt; 10 seconds (#4639)
+eb1327824b Fix bug where we were not generating change addresses during a rescan (#4631)
+6119a334fa Make fundRawTransactionInternal use DBIOActions (#4575)
+cf22816003 Fix rescan batch boundary bug (#4549)
+2fa7c39f64 Use DBIOActions to speed up processing transactions (#4572)
+c03b158f94 Implement <code>RescanTerminatedEarly</code> exception to terminate the stream, implement <code>ArgumentSource</code> (#4574)
+524c0af536 Make wallet.getBalance more effienct (#4566)
+78648f1e40 PostgreSQL friendly wallet names (#4571)
+c89491c3e7 2022 07 29 fix multiple batch test (#4556)
+b1a7f92c67 Refactor to not use filterThenSum() when calculating balances (#4562)
+af9e5eaeef Expose DBIOActions for various models in wallet, remove address queue (#4524)
+17ef1dcdd9 Fix rescan flag getting set, add unit test (#4554)
+f608c5d5e4 Create a helper case class called <code>FundRawTxHelper</code> (#4544)
+b69e487d04 Move <code>MockChainQueryApi</code>/<code>MockNodeApi</code> out of <code>BaseWalletTest</code> (#4542)
+6c76639ba3 Move processBlock into WalletApi (#4543)
+44e09270d9 Move getNewAddress(account) to HDWalletApi (#4540)
+b905afa65e 2022 07 20 wallet rescan stream (#4530)
+1ae4d40dac Implement <code>rescancomplete</code> callback (#4475)</p>
+
+<h2>testkit-core</h2>
+
+<p>Fixes regression that broke test logging.</p>
+
+<p>aca59ca352 Fix test logging (#4446)</p>
+
+<h2>testkit</h2>
+
+<p>Various PRs to improve flexibility and clean up resources allocated by tests.</p>
+
+<p>8b646802b3 Fix postgres database not clearing after test (#4558)
+f487c1270e Implement cleanup of dlcWallet/wallet DbAppConfig threadpools (#4557)
+2cd8c80f67 Refactor so we don&#39;t create multiple WalletAppConfig in testkit (#4548)
+f1e9a34690 Remove hard coded values for embedded pg config (#4533)
+412e6a06c4 Allow pg embedded better support for 3rd party libraries (#4532)</p>
+
+<h2>tor</h2>
+
+<p>Emit a <code>torstarted</code> websocket callback when tor is fully started.</p>
+
+<p>1b169d8fa0 Implement <code>torstarted</code> websocket callback (#4476)</p>
+
+<h2>Website</h2>
+
+<p>15b6e429b2 Update README to use grey&#39;s new <code>build-wallet-electron.sh</code> script (#4686)
+e65346f558 Version 1.9.3 of everything (#4643)
+531fd0f865 Update 1.9.3 release notes through #4609 (#4612)
+9fd9cf1ee4 Update release notes again for 1.9.3 (#4597)
+c7e5317294  2022 08 06 1.9.3 release notes (#4582)
+6b9d2db350 Update license to latest year (#4525)
+135b9f8a35  Update documentation for UI to use build script Advanced Setup  (#4430)
+305e920784 Remove extra stuff from README so its easier to find important stuff (#4433)
+906e1f5c53 Bump previousStableVersion to 1.9.2 (#4432)
+0f3c28e23e Fix UI build instructions (#4405)</p>
+
+<h2>Dependencies</h2>
+
+<p>d79f70ee82 Bump scalatest to 3.2.13 (#4605)
+c10f7beadb Run yarn upgrade to update website deps (#4581)
+9930c964f7 sbt 1.7.1 (#4497)
+1fc6d2a793 Upgrade sbt to 1.7.0 (#4490)
+0404cffe26 Embedded Pg v1.0.1 (#4567)
+970b6fd6eb upgrade scalatest dependencies (#4411)</p>
+</p>
+					    <a href="https://github.com/bitcoin-s/bitcoin-s" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/vulpemventures/marina">vulpemventures/marina</a>: <a href="https://github.com/vulpemventures/marina/releases/tag/v0.4.13">v0.4.13</a>
 						    </h2>
 							<p class="card-text">Published: 2022-09-01 08:24:22 UTC</p>
@@ -6191,56 +6662,6 @@ cce6c949251d1ee6d9ab8bf1d29e026778a846f048a854ca5ef114000b05f079 rskj-core-3.3.0
 </p>
 					    <a href="https://github.com/rsksmart/rskj" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.3.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/zkSNACKs/WalletWasabi">zkSNACKs/WalletWasabi</a>: <a href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.13.1">v1.1.13.1</a>
-						    </h2>
-							<p class="card-text">Published: 2022-03-22 09:21:48 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Summary</h1>
-
-<p>This release upgrades the built-in Tor client from v.0.4.5.10 to v0.4.6.9. There are many significant changes, that greatly increase the network stability and performance. The release also contains some rare but annoying crash fix.  Make sure your Tor client is not running in the background so Wasabi can update it - the easiest way is to restart your machine and start the new version of Wasabi. </p>
-
-<ul>
-<li>Updated Tor client to <a href="https://github.com/zkSNACKs/WalletWasabi/pull/7460">0.4.6.9</a>.</li>
-</ul>
-
-<h1>Newbie Guide</h1>
-
-<p>While setting up Wasabi is straightforward, even a Linux wizard with the longest beard can get stuck on the most basic tasks. Consider taking a look at the <a href="https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html">Installation Instructions</a> guide.</p>
-
-<h1>Advanced Guide</h1>
-
-<p>If you want to build Wasabi from source code or update the source code check out <a href="https://docs.wasabiwallet.io/using-wasabi/BuildSource.html">these instructions.</a></p>
-
-<p>From version 1.1.3 Wasabi also introduces <a href="https://reproducible-builds.org/">reproducible builds</a>: <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md">Deterministic Build Guide</a></p>
-
-<p>Build with .NET Core 3.1.407-win-x64.</p>
-
-<h2>FAQ</h2>
-
-<ul>
-<li><strong>Frequently asked questions <a href="https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq">here</a>.</strong></li>
-<li><strong>Requirements?</strong> x64, Linux, &gt;Win10, &gt;macOS 10.13.</li>
-</ul>
-
-<h1>Release Notes</h1>
-
-<ul>
-<li><strong>Recover from AddressManager file corruption</strong> <a href="https://github.com/zkSNACKs/WalletWasabi/pull/6723">https://github.com/zkSNACKs/WalletWasabi/pull/6723</a></li>
-<li><strong>Minor bugfixes</strong> <a href="https://github.com/zkSNACKs/WalletWasabi/pull/4106">https://github.com/zkSNACKs/WalletWasabi/pull/4106</a> <a href="https://github.com/zkSNACKs/WalletWasabi/pull/6683">https://github.com/zkSNACKs/WalletWasabi/pull/6683</a></li>
-<li><strong>Bitcoin Knots to LTS</strong> <a href="https://github.com/zkSNACKs/WalletWasabi/pull/7016">https://github.com/zkSNACKs/WalletWasabi/pull/7016</a></li>
-<li><strong>Major Tor update</strong> <a href="https://github.com/zkSNACKs/WalletWasabi/pull/7579">https://github.com/zkSNACKs/WalletWasabi/pull/7579</a></li>
-</ul>
-</p>
-					    <a href="https://github.com/zkSNACKs/WalletWasabi" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v1.1.13.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
