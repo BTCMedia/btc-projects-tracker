@@ -38,6 +38,21 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bitcoin-s/bitcoin-s">bitcoin-s/bitcoin-s</a>: <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/0.0.9">0.0.9</a>
+						    </h2>
+							<p class="card-text">Published: 2022-09-07 13:48:40 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"></p>
+					    <a href="https://github.com/bitcoin-s/bitcoin-s" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/0.0.9" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/bitcoin-s/bitcoin-s">bitcoin-s/bitcoin-s</a>: <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.3">1.9.3</a>
 						    </h2>
 							<p class="card-text">Published: 2022-09-02 16:21:56 UTC</p>
@@ -748,7 +763,7 @@ c10f7beadb Run yarn upgrade to update website deps (#4581)
 
 <p>This release contains an <em>optional</em> migration to <em>delete</em> old revocation log space. The v0.15 release contained an &quot;on the fly&quot; migration that will start to write items in the revocation log in a more efficient manner. This release allows users to reclaim all the old disk space by converting historical records to the new format, with the old records being deleted. </p>
 
-<p>The migration can be activated with a new CLI command: <code>--db.prune-revocation=true</code>.  This migration can be restart at any time, with the migration logic picking up from where it left off. </p>
+<p>The migration can be activated with a new CLI command: <code>--db.prune-revocation</code>.  This migration can be restart at any time, with the migration logic picking up from where it left off. </p>
 
 <h1>Verifying the Release</h1>
 
@@ -6632,36 +6647,6 @@ $ sha256sum -c SHA256SUMS.stripped
 </p>
 					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.22" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/rsksmart/rskj">rsksmart/rskj</a>: <a href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.3.0">IRIS-3.3.0</a>
-						    </h2>
-							<p class="card-text">Published: 2022-03-23 18:31:51 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This release contains several enhancements in JSON-RPC interface, Ethereum compatibility fixes and node robustness enhancements. This is a non-comprehensive list of the changes included in this version:</p>
-
-<ul>
-<li>Fix <code>web3_sha3</code> method for non-hex encoded strings in <a href="https://github.com/rsksmart/rskj/pull/1637">https://github.com/rsksmart/rskj/pull/1637</a></li>
-<li>JSON-RPC compatibility fixes in <a href="https://github.com/rsksmart/rskj/pull/1659">https://github.com/rsksmart/rskj/pull/1659</a></li>
-<li><code>eth_getLogs</code> method performance improvements in <a href="https://github.com/rsksmart/rskj/pull/1650">https://github.com/rsksmart/rskj/pull/1650</a></li>
-<li>Mitigated db inconsistency issue after improper node shutdown in <a href="https://github.com/rsksmart/rskj/pull/1660">https://github.com/rsksmart/rskj/pull/1660</a></li>
-<li>Enabled fast block propagation mode by default in <a href="https://github.com/rsksmart/rskj/pull/1677">https://github.com/rsksmart/rskj/pull/1677</a></li>
-<li>Added tracing options to <code>debug_traceTransaction</code> method in <a href="https://github.com/rsksmart/rskj/pull/1644">https://github.com/rsksmart/rskj/pull/1644</a></li>
-</ul>
-
-<p>You can find a complete list of the changes introduced in <a href="https://github.com/rsksmart/rskj/milestone/28">Iris 3.3.0 milestone</a>.</p>
-
-<p>SHA256 (see <a href="https://developers.rsk.co/rsk/node/security-chain/">Reproducible Build</a> guide for further details):
-cce6c949251d1ee6d9ab8bf1d29e026778a846f048a854ca5ef114000b05f079 rskj-core-3.3.0-IRIS-all.jar</p>
-</p>
-					    <a href="https://github.com/rsksmart/rskj" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/rsksmart/rskj/releases/tag/IRIS-3.3.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
