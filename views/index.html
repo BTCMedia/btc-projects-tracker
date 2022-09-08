@@ -38,14 +38,42 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/bitcoin-s/bitcoin-s">bitcoin-s/bitcoin-s</a>: <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/0.0.9">0.0.9</a>
+						    	<a href="https://github.com/rsksmart/rskj">rsksmart/rskj</a>: <a href="https://github.com/rsksmart/rskj/releases/tag/HOP-4.1.0">HOP-4.1.0</a>
 						    </h2>
-							<p class="card-text">Published: 2022-09-07 13:48:40 UTC</p>
+							<p class="card-text">Published: 2022-09-07 13:38:58 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"></p>
-					    <a href="https://github.com/bitcoin-s/bitcoin-s" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/0.0.9" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					    <p class="card-text"><h2>Summary</h2>
+
+<p>This release brings new JSON-RPC tracing methods, support for the latest versions of Hardhat development environment, the introduction of a peer reputation system, and support for RocksDb storage library, among other things. While this is a non-mandatory upgrade, we encourage users to upgrade their nodes to the new version.</p>
+
+<h2>What&#39;s New in RSKj 4.1.0</h2>
+
+<p>A non-comprehensive list of changes included in this version is:</p>
+
+<ul>
+<li>Introduced a new peer reputation system in<a href="https://github.com/rsksmart/rskj/pull/1737"> #1737</a>,<a href="https://github.com/rsksmart/rskj/pull/1739"> #1739</a>,<a href="https://github.com/rsksmart/rskj/pull/1740"> #1740</a>,<a href="https://github.com/rsksmart/rskj/pull/1745"> #1745</a>,<a href="https://github.com/rsksmart/rskj/pull/1750"> #1750</a>,<a href="https://github.com/rsksmart/rskj/pull/1772"> #1772</a>, and<a href="https://github.com/rsksmart/rskj/pull/1782"> #1782</a> <code>[experimental]</code>.</li>
+<li>Introduced two new JSON-RPC tracing methods: <code>trace_get</code> and <code>trace_filter</code> in<a href="https://github.com/rsksmart/rskj/pull/1711"> #1711</a>, and<a href="https://github.com/rsksmart/rskj/pull/1744"> #1744</a>.</li>
+<li>Added support for <code>RocksDb</code> storage library in<a href="https://github.com/rsksmart/rskj/pull/1703"> #1703</a> <code>[experimental]</code>. See <a href="https://developers.rsk.co/rsk/node/configure/#using-rocksdb-experimental">RSK Developers Portal</a> for more information.</li>
+<li>Fixed corner case bug in <code>eth_estimateGas</code> JSON-RPC method in<a href="https://github.com/rsksmart/rskj/pull/1803"> #1803</a>.</li>
+<li>Accept websocket connections without requiring the <code>websocket</code> suffix in the URL path in<a href="https://github.com/rsksmart/rskj/pull/1753"> #1753</a>.</li>
+<li>Improved the <code>eth_gasPrice</code> method by fetching historical gas prices from DB at node startup in<a href="https://github.com/rsksmart/rskj/pull/1724"> #1724</a>.</li>
+<li>Added <code>Content-Length</code> and <code>Connection</code> headers to JSON-RPC responses, solving issues Hardhat users had when interacting with RSKj, in<a href="https://github.com/rsksmart/rskj/pull/1836"> #1836</a>.</li>
+</ul>
+
+<p>You can find a complete list of the changes introduced in <a href="https://github.com/rsksmart/rskj/milestone/30">Hop 4.1.0 milestone</a>.</p>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/rsksmart/rskj/compare/HOP-4.0.0...HOP-4.1.0">https://github.com/rsksmart/rskj/compare/HOP-4.0.0...HOP-4.1.0</a></p>
+
+<p><strong>NOTE:</strong> features marked as <code>[experimental]</code> are disabled by default. They require further validation and should only be used with caution. They can be changed or removed in future releases of the node. If you don&#39;t know what these features are or their possible impact, you likely should not enable them.</p>
+
+<h2>Reproducible Build</h2>
+
+<p>SHA256 (see <a href="https://developers.rsk.co/rsk/node/security-chain/">Reproducible Build</a> guide for further details):
+d5ec4c766b184d13dde8c4cdef6f30481731b72c562c087bfd0c223d5709a2e6 rskj-core-4.1.0-HOP-all.jar</p>
+</p>
+					    <a href="https://github.com/rsksmart/rskj" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/rsksmart/rskj/releases/tag/HOP-4.1.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

@@ -6,14 +6,40 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-09-07T13:51:32+00:00</updated>
+  <updated>2022-09-08T14:28:24+00:00</updated>
   <entry>
-    <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/0.0.9</id>
-    <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/0.0.9"/>
-    <summary></summary>
-    <title>bitcoin-s/bitcoin-s: 0.0.9</title>
-    <updated>2022-09-07T13:48:40Z</updated>
-    <dc:date>2022-09-07T13:48:40Z</dc:date>
+    <id>https://github.com/rsksmart/rskj/releases/tag/HOP-4.1.0</id>
+    <link href="https://github.com/rsksmart/rskj/releases/tag/HOP-4.1.0"/>
+    <summary>## Summary
+
+This release brings new JSON-RPC tracing methods, support for the latest versions of Hardhat development environment, the introduction of a peer reputation system, and support for RocksDb storage library, among other things. While this is a non-mandatory upgrade, we encourage users to upgrade their nodes to the new version.
+
+## What's New in RSKj 4.1.0
+
+A non-comprehensive list of changes included in this version is:
+
+- Introduced a new peer reputation system in[ #1737](https://github.com/rsksmart/rskj/pull/1737),[ #1739](https://github.com/rsksmart/rskj/pull/1739),[ #1740](https://github.com/rsksmart/rskj/pull/1740),[ #1745](https://github.com/rsksmart/rskj/pull/1745),[ #1750](https://github.com/rsksmart/rskj/pull/1750),[ #1772](https://github.com/rsksmart/rskj/pull/1772), and[ #1782](https://github.com/rsksmart/rskj/pull/1782) `[experimental]`.
+- Introduced two new JSON-RPC tracing methods: `trace_get` and `trace_filter` in[ #1711](https://github.com/rsksmart/rskj/pull/1711), and[ #1744](https://github.com/rsksmart/rskj/pull/1744).
+- Added support for `RocksDb` storage library in[ #1703](https://github.com/rsksmart/rskj/pull/1703) `[experimental]`. See [RSK Developers Portal](https://developers.rsk.co/rsk/node/configure/#using-rocksdb-experimental) for more information.
+- Fixed corner case bug in `eth_estimateGas` JSON-RPC method in[ #1803](https://github.com/rsksmart/rskj/pull/1803).
+- Accept websocket connections without requiring the `websocket` suffix in the URL path in[ #1753](https://github.com/rsksmart/rskj/pull/1753).
+- Improved the `eth_gasPrice` method by fetching historical gas prices from DB at node startup in[ #1724](https://github.com/rsksmart/rskj/pull/1724).
+- Added `Content-Length` and `Connection` headers to JSON-RPC responses, solving issues Hardhat users had when interacting with RSKj, in[ #1836](https://github.com/rsksmart/rskj/pull/1836).
+
+You can find a complete list of the changes introduced in [Hop 4.1.0 milestone](https://github.com/rsksmart/rskj/milestone/30).
+
+**Full Changelog**: https://github.com/rsksmart/rskj/compare/HOP-4.0.0...HOP-4.1.0
+
+**NOTE:** features marked as `[experimental]` are disabled by default. They require further validation and should only be used with caution. They can be changed or removed in future releases of the node. If you don't know what these features are or their possible impact, you likely should not enable them.
+
+## Reproducible Build
+
+SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details):
+d5ec4c766b184d13dde8c4cdef6f30481731b72c562c087bfd0c223d5709a2e6 rskj-core-4.1.0-HOP-all.jar
+</summary>
+    <title>rsksmart/rskj: HOP-4.1.0</title>
+    <updated>2022-09-07T13:38:58Z</updated>
+    <dc:date>2022-09-07T13:38:58Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.3</id>
@@ -5486,5 +5512,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2022-03-25T10:10:39Z</updated>
     <dc:date>2022-03-25T10:10:39Z</dc:date>
   </entry>
-  <dc:date>2022-09-07T13:51:32+00:00</dc:date>
+  <dc:date>2022-09-08T14:28:24+00:00</dc:date>
 </feed>
