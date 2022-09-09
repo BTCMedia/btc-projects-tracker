@@ -38,21 +38,6 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre2">v1.13.0-pre2</a>
-						    </h2>
-							<p class="card-text">Published: 2022-09-08 14:57:11 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"></p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre2" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
 						    	<a href="https://github.com/rsksmart/rskj">rsksmart/rskj</a>: <a href="https://github.com/rsksmart/rskj/releases/tag/HOP-4.1.0">HOP-4.1.0</a>
 						    </h2>
 							<p class="card-text">Published: 2022-09-07 13:38:58 UTC</p>
@@ -6649,6 +6634,47 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.22">android-legacy-v1.4.22</a>
+						    </h2>
+							<p class="card-text">Published: 2022-03-25 10:10:39 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Fix wallet creation on some devices</h3>
+
+<p>This version fixes an issue on some devices where creating an entry in the keystore would fail, preventing new wallets from being created.</p>
+
+<p>List of commits (filter on phoenix-legacy)</p>
+
+<ul>
+<li><a href="https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.21...android-legacy-v1.4.22">https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.21...android-legacy-v1.4.22</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
+- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import padioupm.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.22" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
