@@ -38,6 +38,125 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.111">v0.0.111</a>
+						    </h2>
+							<p class="card-text">Published: 2022-09-13 00:34:47 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>&quot;Saturated with Messages&quot;</h1>
+
+<h2>API Updates</h2>
+
+<ul>
+<li>Support for relaying onion messages has been added via a new
+<code>OnionMessenger</code> struct when passed as the <code>OnionMessageHandler</code> to a
+<code>PeerManager</code>. Pre-encoded onion messages can also be sent and received
+(#1503, #1650, #1652, #1688).</li>
+<li>Rate-limiting of outbound gossip syncs has been rewritten to utilize less
+buffering inside LDK. The new rate-limiting is also used for onion messages
+to avoid delaying other messages (#1604. #1660, #1683).</li>
+<li>Rather than spawning a full OS thread, <code>lightning-background-processor</code> has
+a new <code>process_events_async</code> method which takes the place of a
+<code>BackgroundProcessor</code> for those using Rust&#39;s async (#1657).</li>
+<li><code>ChannelManager::get_persistable_update_future</code> has been added to block on
+a ChannelManager needing re-persistence in a Rust async environment (#1657).</li>
+<li>The <code>Filter::register_output</code> return value has been removed, as it was
+very difficult to correctly implement (i.e., without blocking). Users
+previously using it should instead pass dependent transactions in via
+additional <code>chain::Confirm::transactions_confirmed</code> calls (#1663).</li>
+<li><code>ChannelHandshakeConfig::their_channel_reserve_proportional_millionths</code> has
+been added to allow configuring counterparty reserve values (#1619).</li>
+<li><code>KeysInterface::ecdh</code> has been added as an ECDH oracle (#1503, #1658).</li>
+<li>The <code>rust-bitcoin</code> dependency has been updated 0.29 (#1658).</li>
+<li>The <code>bitcoin_hashes</code> dependency has been updated 0.11 (#1677).</li>
+<li><code>ChannelManager::broadcast_node_announcement</code> has been moved to
+<code>PeerManager</code> (#1699).</li>
+<li><code>channel_</code> and <code>node_announcement</code>s are now rebroadcast automatically to all
+new peers which connect (#1699).</li>
+<li><code>{Init,Node}Features</code> sent to peers/broadcasted are now fetched via the
+various <code>*MessageHandler</code> traits, rather than hard-coded (#1701, #1688).</li>
+<li><code>Event::PaymentPathFailed::rejected_by_dest</code> has been renamed
+<code>payment_failed_permanently</code> (#1702).</li>
+<li><code>Invoice</code> now derives the std <code>Hash</code> trait (#1575).</li>
+<li><code>{Signed,}RawInvoice::hash</code> have been renamed <code>signable_hash</code> (#1714).</li>
+<li><code>chain::AccessError</code> now derives the std <code>Debug</code> trait (#1709).</li>
+<li><code>ReadOnlyNetworkGraph::list_{channels,nodes}</code> have been added largely for
+users of downstream bindings (#1651).</li>
+<li><code>ChannelMonitor::get_counterparty_node_id</code> is now available (#1635).</li>
+</ul>
+
+<h2>Bug Fixes</h2>
+
+<ul>
+<li>The script compared with that returned from <code>chain::Access</code> was incorrect
+~half of the time, causing spurious gossip rejection (#1666).</li>
+<li>Pending in-flight HTLCs are now considered when calculating new routes,
+ensuring, e.g. MPP retries do not take known-saturated paths (#1643).</li>
+<li>Counterparty-revoked outputs are now included in <code>get_claimable_balance</code>
+output via a new <code>Balance::CounterpartyRevokedOutputClaimable</code> (#1495).</li>
+<li>Inbound HTLCs for which we do not (yet) have a preimage are now included in
+<code>get_claimable_balance</code> via a <code>Balance::MaybePreimageClaimableHTLC</code> (#1673).</li>
+<li>Probes that fail prior to being sent over their first hop are correctly
+failed with a <code>Event::ProbeFailed</code> rather than a <code>PaymentPathFailed</code> (#1704).</li>
+<li>Pending <code>Event::HTLCHandlingFailed</code>s are no longer lost on restart (#1700).</li>
+<li>HTLCs that fail prior to being sent over their first hop are now marked as
+retryable via <code>!PaymentPathFailed::payment_failed_permanently</code> (#1702).</li>
+<li>Dust HTLCs are now considered failed in the payment tracking logic after the
+commitment transaction confirms, allowing retry on restart (#1691).</li>
+<li>On machines with buggy &quot;monotonic&quot; clocks, LDK will no longer panic if time
+goes backwards (#1692).</li>
+</ul>
+
+<h2>Backwards Compatibility</h2>
+
+<ul>
+<li>The new <code>current_time</code> argument to <code>PeerManager</code> constructors must be set to
+a UNIX timestamp for upgraded nodes; new nodes may use a counter (#1699).</li>
+<li><code>Balance::CounterpartyRevokedOutputClaimable</code> will never be generated for
+channels that were observed to go on-chain with LDK versions prior to
+0.0.111 (#1495).</li>
+<li><code>ChannelMonitor::get_counterparty_node_id</code> will return <code>None</code> for all
+channels opened on a version of LDK prior to 0.0.110 (#1635).</li>
+<li>Setting <code>their_channel_reserve_proportional_millionths</code> to any value other
+than the default will cause LDK versions prior to 0.0.104 to be unable to
+read the serialized <code>ChannelManager</code> (#1619).</li>
+</ul>
+
+<h2>Security</h2>
+
+<p>0.0.111 fixes a denial-of-service vulnerability which is reachable from
+untrusted input in deployments accepting 0conf channels, or via a race-condition
+in deployments creating outbound 0conf channels.</p>
+
+<ul>
+<li>LDK versions prior to 0.0.111 may spuriously panic when receiving a block if
+they are awaiting the construction of a funding transaction for a 0-conf
+channel (#1711). 0-conf support was added in LDK version 0.0.107.</li>
+</ul>
+
+<p>In total, this release features 84 files changed, 6306 insertions, 1960
+deletions in 121 commits from 11 authors, in alphabetical order:
+ * Arik Sosman
+ * Devrandom
+ * Duncan Dean
+ * Elias Rohrer
+ * Gursharan Singh
+ * Matt Corallo
+ * NicolaLS
+ * Valentine Wallace
+ * Viktor Tigerström
+ * jurvis
+ * ok300</p>
+</p>
+					    <a href="https://github.com/lightningdevkit/rust-lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.111" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/rsksmart/rskj">rsksmart/rskj</a>: <a href="https://github.com/rsksmart/rskj/releases/tag/HOP-4.1.0">HOP-4.1.0</a>
 						    </h2>
 							<p class="card-text">Published: 2022-09-07 13:38:58 UTC</p>
@@ -6634,47 +6753,6 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 </p>
 					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.22">android-legacy-v1.4.22</a>
-						    </h2>
-							<p class="card-text">Published: 2022-03-25 10:10:39 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>Fix wallet creation on some devices</h3>
-
-<p>This version fixes an issue on some devices where creating an entry in the keystore would fail, preventing new wallets from being created.</p>
-
-<p>List of commits (filter on phoenix-legacy)</p>
-
-<ul>
-<li><a href="https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.21...android-legacy-v1.4.22">https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.21...android-legacy-v1.4.22</a></li>
-</ul>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
-- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import padioupm.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.22" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
