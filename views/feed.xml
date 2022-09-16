@@ -6,7 +6,37 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-09-13T00:42:17+00:00</updated>
+  <updated>2022-09-16T11:52:06+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.23</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.23"/>
+    <summary>### Fix compatibility issue with LND 0.15.1-beta
+
+The legacy Phoenix app on android used bit 50 for the trampoline feature bit, which has since been reused for zeroconf with a dependency on scid_alias. The legacy app now uses bit 148 instead. This fixes an issue that prevented the android app from receiving payment sent from LND 0.15.1-beta
+
+- (phoenix-legacy) : https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.22...android-legacy-v1.4.23
+- (eclair-core) : https://github.com/ACINQ/eclair/compare/v0.4.15-android-phoenix...v0.4.16-android-phoenix
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: https://acinq.co/pgp/padioupm.asc
+- from github user @pm47, a committer on eclair: https://api.github.com/users/pm47/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import padioupm.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: android-legacy-v1.4.23</title>
+    <updated>2022-09-16T11:47:28Z</updated>
+    <dc:date>2022-09-16T11:47:28Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.111</id>
     <link href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.111"/>
@@ -5510,75 +5540,5 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <updated>2022-03-31T11:41:00Z</updated>
     <dc:date>2022-03-31T11:41:00Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/Specter-Setup-v1.9.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/SpecterDesktop-v1.9.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/specter_desktop-v1.9.0-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/specterd-v1.9.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/specterd-v1.9.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/specterd-v1.9.0-x86_64-linux-gnu.zip)
-
-## Signatures and hashes
-[SHA256SUMS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/SHA256SUMS) file contains sha256 hashes of all binary files and signed with &quot;Specter Signer's&quot; GPG key.
-You can get the public key from [here](http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7).
-Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
-This key has been signed by @k9ert's key which you might have used for validating th 1.7.0 release.
-
-# Release notes
-- Feature: added better scrollbar for all table-style-lists #1598 (relativisticelectron)
-- Feature: CLI and a publishing model for extensions #1566 (Kim Neunert)
-- Feature: Import of raw transaction #1591 (relativisticelectron)
-- Feature: initial devhelper extension #1547 (Kim Neunert)
-- Feature: introduction of url-prefixes and defaults #1561 (Kim Neunert)
-- UIUX: add Added hover titles #1621 (relativisticelectron)
-- UIUX: Add margin under Device type dropdown #1616 (cypherhoodlum)
-- UIUX: Adds KYC warning and link to learn more #1560 (kdmukai)
-- UIUX: Add two missing titles in the settings bar #1618 (cypherhoodlum)
-- UIUX: Placeholder for amount send #1545 (VCBhatawadekar)
-- UIUX: Redesign the main page #1620 (cypherhoodlum)
-- UIUX: Renaming and static plugin list teasering + refactoring #1569 (Kim Neunert)
-- UIUX: Update icon for Passport signing device #1589 (BitcoinQnA)
-- Buffix: Electrum PSBT import fixes #1544  #1548 (relativisticelectron)
-- Bugfix: App Icon for Gnome Doc #1158 #1592 (salderma)
-- Bugfix: Chore - update black to fix linter failure #1642 (Kim Neunert)
-- Bugfix: electrum single-sig wallet import #1573 (relativisticelectron)
-- Bugfix: Fixed missing vsize in tx.  This led to no available feerate for RBF #1585 (relativisticelectron)
-- Bugfix: fixing the logging-system screwup #1578 (Kim Neunert)
-- Bugfix: logging error, caused by passing 2 arguments #1576 (relativisticelectron)
-- Bugfix: OAuth2_hostname #1579 (Kim Neunert)
-- Bugfix: Price data edge-case, fixes #1554 #1624 (Kim Neunert)
-- Bugfix: refactor and fix css #1607 (Kim Neunert)
-- Bugfix: Release-process #1608 (Kim Neunert)
-- Bugfix: Reserving too many addresses at Swan, fix v2; Bugfix: admin change password #1563 (kdmukai)
-- Bugfix: TXs in csv and in the UI now get blocktime for time if confirmed fixes #1552  #1559 (Kim Neunert)
-- Bugfix: upgrade pyinstaller #1556 (Kim Neunert)
-- Bugfix: versionChecker and downloadloc #1633 (Kim Neunert)
-- Chore: Build Script improvements #1612 (Kim Neunert)
-- Chore: Bump follow-redirects from 1.14.4 to 1.14.7 #1557 (dependabot[bot])
-- Chore: Bump follow-redirects from 1.14.7 to 1.14.8 #1590 (dependabot[bot])
-- Chore: Migrate to elements v0.21.0.1 #1601 (Kim Neunert)
-- Chore: some build-improvements #1603 (Kim Neunert)
-- Chore: Service class refactoring #1623 (Kim Neunert)
-- Chore: Price Provider and error-management #1551 (Kim Neunert)
-- Docs: Changes that didn't make into merge commit for #1591 #1611 (Manolis)
-- Docs: Fix various typos and grammatical errors #1606 (Matt Wesley)
-- Docs: Update docs/reverse-proxy.md #1587 (GoofyAF)
-- Docs: Update daemon.md #1586 (GoofyAF)
-</summary>
-    <title>cryptoadvance/specter-desktop: v1.9.0</title>
-    <updated>2022-03-30T10:17:28Z</updated>
-    <dc:date>2022-03-30T10:17:28Z</dc:date>
-  </entry>
-  <dc:date>2022-09-13T00:42:17+00:00</dc:date>
+  <dc:date>2022-09-16T11:52:06+00:00</dc:date>
 </feed>

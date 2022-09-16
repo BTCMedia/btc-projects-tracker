@@ -38,6 +38,46 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.23">android-legacy-v1.4.23</a>
+						    </h2>
+							<p class="card-text">Published: 2022-09-16 11:47:28 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Fix compatibility issue with LND 0.15.1-beta</h3>
+
+<p>The legacy Phoenix app on android used bit 50 for the trampoline feature bit, which has since been reused for zeroconf with a dependency on scid_alias. The legacy app now uses bit 148 instead. This fixes an issue that prevented the android app from receiving payment sent from LND 0.15.1-beta</p>
+
+<ul>
+<li>(phoenix-legacy) : <a href="https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.22...android-legacy-v1.4.23">https://github.com/ACINQ/phoenix/compare/android-legacy-v1.4.22...android-legacy-v1.4.23</a></li>
+<li>(eclair-core) : <a href="https://github.com/ACINQ/eclair/compare/v0.4.15-android-phoenix...v0.4.16-android-phoenix">https://github.com/ACINQ/eclair/compare/v0.4.15-android-phoenix...v0.4.16-android-phoenix</a></li>
+</ul>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key E434ED292E85643A. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/padioupm.asc">https://acinq.co/pgp/padioupm.asc</a>
+- from github user @pm47, a committer on eclair: <a href="https://api.github.com/users/pm47/gpg_keys">https://api.github.com/users/pm47/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import padioupm.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.23" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lightningdevkit/rust-lightning">lightningdevkit/rust-lightning</a>: <a href="https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.111">v0.0.111</a>
 						    </h2>
 							<p class="card-text">Published: 2022-09-13 00:34:47 UTC</p>
@@ -6670,89 +6710,6 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.8" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0">v1.9.0</a>
-						    </h2>
-							<p class="card-text">Published: 2022-03-30 10:17:28 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h1>Binaries</h1>
-
-<p>There are two types of binaries:</p>
-
-<h2>Specter Desktop</h2>
-
-<p>It&#39;s a windowed GUI application with Specter server included.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/Specter-Setup-v1.9.0.exe">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/SpecterDesktop-v1.9.0.dmg">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/specter_desktop-v1.9.0-x86_64-linux-gnu.tar.gz">Linux (x86_64)</a></p>
-
-<p><strong>Note on Linux</strong>: you need to set up udev rules (included in the archive). Check out <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage">readme</a>.</p>
-
-<p><strong>Note on macOS</strong>: The current build supports only macOS Catalina (10.15) or higher. If you&#39;d like to run Specter on an older macOS version, you can <a href="https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip">install Specter from Pip</a>.</p>
-
-<h2>specterd</h2>
-
-<p>It&#39;s a command-line program that only runs Specter server.
-Supported platforms: <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/specterd-v1.9.0-win64.zip">Windows</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/specterd-v1.9.0-osx.zip">MacOS</a>, <a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/specterd-v1.9.0-x86_64-linux-gnu.zip">Linux (x86_64)</a></p>
-
-<h2>Signatures and hashes</h2>
-
-<p><a href="https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.0/SHA256SUMS">SHA256SUMS</a> file contains sha256 hashes of all binary files and signed with &quot;Specter Signer&#39;s&quot; GPG key.
-You can get the public key from <a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7">here</a>.
-Fingerprint of the key is <code>785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7</code>
-This key has been signed by @k9ert&#39;s key which you might have used for validating th 1.7.0 release.</p>
-
-<h1>Release notes</h1>
-
-<ul>
-<li>Feature: added better scrollbar for all table-style-lists #1598 (relativisticelectron)</li>
-<li>Feature: CLI and a publishing model for extensions #1566 (Kim Neunert)</li>
-<li>Feature: Import of raw transaction #1591 (relativisticelectron)</li>
-<li>Feature: initial devhelper extension #1547 (Kim Neunert)</li>
-<li>Feature: introduction of url-prefixes and defaults #1561 (Kim Neunert)</li>
-<li>UIUX: add Added hover titles #1621 (relativisticelectron)</li>
-<li>UIUX: Add margin under Device type dropdown #1616 (cypherhoodlum)</li>
-<li>UIUX: Adds KYC warning and link to learn more #1560 (kdmukai)</li>
-<li>UIUX: Add two missing titles in the settings bar #1618 (cypherhoodlum)</li>
-<li>UIUX: Placeholder for amount send #1545 (VCBhatawadekar)</li>
-<li>UIUX: Redesign the main page #1620 (cypherhoodlum)</li>
-<li>UIUX: Renaming and static plugin list teasering + refactoring #1569 (Kim Neunert)</li>
-<li>UIUX: Update icon for Passport signing device #1589 (BitcoinQnA)</li>
-<li>Buffix: Electrum PSBT import fixes #1544  #1548 (relativisticelectron)</li>
-<li>Bugfix: App Icon for Gnome Doc #1158 #1592 (salderma)</li>
-<li>Bugfix: Chore - update black to fix linter failure #1642 (Kim Neunert)</li>
-<li>Bugfix: electrum single-sig wallet import #1573 (relativisticelectron)</li>
-<li>Bugfix: Fixed missing vsize in tx.  This led to no available feerate for RBF #1585 (relativisticelectron)</li>
-<li>Bugfix: fixing the logging-system screwup #1578 (Kim Neunert)</li>
-<li>Bugfix: logging error, caused by passing 2 arguments #1576 (relativisticelectron)</li>
-<li>Bugfix: OAuth2_hostname #1579 (Kim Neunert)</li>
-<li>Bugfix: Price data edge-case, fixes #1554 #1624 (Kim Neunert)</li>
-<li>Bugfix: refactor and fix css #1607 (Kim Neunert)</li>
-<li>Bugfix: Release-process #1608 (Kim Neunert)</li>
-<li>Bugfix: Reserving too many addresses at Swan, fix v2; Bugfix: admin change password #1563 (kdmukai)</li>
-<li>Bugfix: TXs in csv and in the UI now get blocktime for time if confirmed fixes #1552  #1559 (Kim Neunert)</li>
-<li>Bugfix: upgrade pyinstaller #1556 (Kim Neunert)</li>
-<li>Bugfix: versionChecker and downloadloc #1633 (Kim Neunert)</li>
-<li>Chore: Build Script improvements #1612 (Kim Neunert)</li>
-<li>Chore: Bump follow-redirects from 1.14.4 to 1.14.7 #1557 (dependabot[bot])</li>
-<li>Chore: Bump follow-redirects from 1.14.7 to 1.14.8 #1590 (dependabot[bot])</li>
-<li>Chore: Migrate to elements v0.21.0.1 #1601 (Kim Neunert)</li>
-<li>Chore: some build-improvements #1603 (Kim Neunert)</li>
-<li>Chore: Service class refactoring #1623 (Kim Neunert)</li>
-<li>Chore: Price Provider and error-management #1551 (Kim Neunert)</li>
-<li>Docs: Changes that didn&#39;t make into merge commit for #1591 #1611 (Manolis)</li>
-<li>Docs: Fix various typos and grammatical errors #1606 (Matt Wesley)</li>
-<li>Docs: Update docs/reverse-proxy.md #1587 (GoofyAF)</li>
-<li>Docs: Update daemon.md #1586 (GoofyAF)</li>
-</ul>
-</p>
-					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
