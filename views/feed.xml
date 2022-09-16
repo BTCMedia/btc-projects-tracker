@@ -6,7 +6,31 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-09-16T11:52:06+00:00</updated>
+  <updated>2022-09-16T16:42:07+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/elements/releases/tag/elements-22.0</id>
+    <link href="https://github.com/ElementsProject/elements/releases/tag/elements-22.0"/>
+    <summary>This release includes the following changes:
+* Brings Elements up to date with Bitcoin Core version 22.0. To see the Bitcoin 22.0 release notes please [click here](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-22.0.md).
+* Multiple improvements to PSET (Partially-Signed Elements Transactions):
+	- Updates to the PSET specification ([PR #1122](https://github.com/ElementsProject/elements/pull/1122)).
+	- Multiple fixes to the PSET implementation ([PR #1121](https://github.com/ElementsProject/elements/pull/1121), [PR #1145](https://github.com/ElementsProject/elements/pull/1145), [issue #1065](https://github.com/ElementsProject/elements/issues/1065)).
+	- New `parsepsbt` RPC for testing ([PR #1121](https://github.com/ElementsProject/elements/pull/1121)).
+	- Changes PSET to not blind asset issuances by default ([PR #1150](https://github.com/ElementsProject/elements/pull/1150)).
+	- Adds fields for explicit input value and assets, and their proofs. Also adds a flag to indicate whether an issuance should be blinded ([PR 1157](https://github.com/ElementsProject/elements/pull/1157), [PR #1165](https://github.com/ElementsProject/elements/pull/1165)).
+* Multiple fixes/improvements to how dynafed parameters are returned in RPC output (PRs [#1108](https://github.com/ElementsProject/elements/pull/1108), [#1111](https://github.com/ElementsProject/elements/pull/1111), [#1114](https://github.com/ElementsProject/elements/pull/1114), issues [#1102](https://github.com/ElementsProject/elements/issues/1102), [#1109](https://github.com/ElementsProject/elements/issues/1109)).
+* The `dumpblindingkey` RPC now accepts non-confidential addresses, if there is a corresponding blinding key ([PR #1131](https://github.com/ElementsProject/elements/pull/1131)).
+* Fixes a crash in the wallet when handling unusual outputs with blinded assets but unblinded values ([PR #1134](https://github.com/ElementsProject/elements/pull/1134), [issue #1105](https://github.com/ElementsProject/elements/issues/1105)).
+* Fixes a corner case when receiving a block from a peer races with getting the same block from `submitblock`, wrongly banning the peer ([PR #1085](https://github.com/ElementsProject/elements/pull/1085), [issue #1084](https://github.com/ElementsProject/elements/issues/1084)).
+* Fixes a problem in Windows where Elements would be installed in Bitcoin’s folder instead of its own ([PR #869](https://github.com/ElementsProject/elements/pull/869)).
+(Note: Since Elements 22.0 will be installed in the right location, cleanup of the left over files in `Program Files\Bitcoin` may be required.)
+* Minor fixes in elements-qt ([PR #1146](https://github.com/ElementsProject/elements/pull/1146), [PR #1154](https://github.com/ElementsProject/elements/pull/1154)).
+* Adds documentation about the format used to serialize Elements transactions ([PR #1148](https://github.com/ElementsProject/elements/pull/1148)).
+* The `getnewblockhex` RPC accepts an array of commitments instead of a single commitment ([PR #1155](https://github.com/ElementsProject/elements/pull/1155)).</summary>
+    <title>ElementsProject/elements: elements-22.0</title>
+    <updated>2022-09-16T16:40:29Z</updated>
+    <dc:date>2022-09-16T16:40:29Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.23</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.23"/>
@@ -36,6 +60,196 @@ $ sha256sum -c SHA256SUMS.stripped
     <title>ACINQ/phoenix: android-legacy-v1.4.23</title>
     <updated>2022-09-16T11:47:28Z</updated>
     <dc:date>2022-09-16T11:47:28Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.4</id>
+    <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.4"/>
+    <summary># 1.9.4
+
+This release is backwards compatible with the 1.9.x series of bitcoin-s
+
+See the individual module sections for more information on lower level updates to the codebase.
+
+Want to get started quickly? See our `docker-compose.yml` file. [See instructions here](https://github.com/bitcoin-s/bitcoin-s/#docker)
+
+If you are a typescript developer, [you can access the backend via our typescript library](https://github.com/bitcoin-s/bitcoin-s-ts)
+
+# Executive Summary
+
+This is a bug fix release. In our 1.9.3 release we did not successfully publish all jars for the libraries.
+For more information see: https://github.com/bitcoin-s/bitcoin-s/issues/4725
+
+This release drops support for Scala 2.12.x, which fixes this bug. It also updates some dependencies.
+
+This release also adds the abillity to test connections with peers before sending offers and accepts. See #4720
+
+## Running bitcoin-s
+
+If you want to run the standalone server binary, after verifying gpg signatures, you
+can `unzip bitcoin-s-server-1.9.4.zip` and then run it with `chmod +x ./bin/bitcoin-s-server &amp;&amp; ./bin/bitcoin-s-server` to start the node. You will need to
+configure the node properly first, you can find example
+configurations [here](https://bitcoin-s.org/docs/config/configuration#example-configuration-file).
+
+You can then unzip the `bitcoin-s-cli-1.9.4.zip` folder and start using the `bitcoin-s-cli` like this:
+
+```bashrc
+./bin/bitcoin-s-cli --help
+Usage: bitcoin-s-cli [options] [&lt;cmd&gt;]
+
+  -n, --network &lt;value&gt;    Select the active network.
+  --debug                  Print debugging information
+  --rpcport &lt;value&gt;        The port to send our rpc request to on the server
+  -h, --help               Display this help message and exit
+```
+
+For more information on what commands `bitcoin-s-cli` supports check the documentation, here is where to
+start: https://bitcoin-s.org/docs/next/applications/server#server-endpoints
+
+## Verifying signatures
+
+This release is signed with [Chris's signing key](https://bitcoin-s.org/docs/next/security#disclosure) with
+fingerprint `9234F4D6AF47C71B741A390F8976CA0AF71A7A2A`
+
+To do the verification, first hash the executable using `sha256sum`. You should check that the result is listed in
+the `SHA256SUMS.asc` file next to its file name. After doing that you can use `gpg --verify` to authenticate the
+signature.
+
+Example:
+
+```
+$ gpg --verify SHA256SUMS.asc
+gpg: Signature made Wed 14 Sep 2022 10:21:24 AM CDT
+gpg:                using RSA key 9234F4D6AF47C71B741A390F8976CA0AF71A7A2A
+gpg: Good signature from &quot;Chris Stewart &lt;stewart.chris1234@gmail.com&gt;&quot; [ultimate]
+
+$ sha256sum -c SHA256SUMS.stripped                                                                                            
+bitcoin-s-cli-linux-1.9.4.zip: OK
+bitcoin-s-cli-windows-1.9.4.zip: OK
+bitcoin-s-cli-x86_64-apple-darwin: OK
+bitcoin-s-cli-x86_64-pc-linux: OK
+bitcoin-s-oracle-server-linux-1.9.4.zip: OK
+bitcoin-s-oracle-server-mac-1.9.4.zip: OK
+bitcoin-s-oracle-server-windows-1.9.4.zip: OK
+bitcoin-s-server-linux-1.9.4.zip: OK
+bitcoin-s-server-mac-1.9.4.zip: OK
+bitcoin-s-server-windows-1.9.4.zip: OK
+krystal-bull_1.9.4_amd64.deb: OK
+Krystal.Bull-darwin-x64-1.9.4.zip: OK
+suredbits-wallet_1.9.4_amd64.deb: OK
+Suredbits.Wallet-darwin-x64-1.9.4.zip: OK
+```
+
+### Website
+
+https://bitcoin-s.org/
+
+### Releases
+
+https://repo1.maven.org/maven2/org/bitcoin-s/
+
+### Snapshot releases
+
+https://oss.sonatype.org/content/repositories/snapshots/org/bitcoin-s/
+
+## Contributors
+
+# Modules
+
+## app commons
+
+2cfd6f3591 Allow for custom config file name (#4709)
+
+## App server
+
+7b7847885e Attempt to reduce redundant work on startup to speed up start up time (#4764)
+7460dcd255 Parallelize running of individual migrations (#4761)
+6b432ea509 Emit 2000th header received during IBD (#4719)
+a36e55c892 Fix patterns I missed when updating logback (#4713)
+
+## bitcoind rpc
+
+0c05edd633 mask bitcoind password (#4763)
+61d4882efd Implement retry of fetching bitcoind version when calling `clientF` (#4760)
+
+## bundle
+
+## Build
+
+7d9d0c577f Run scalafmt (#4757)
+7fe9bdbe35 re-add Compile / fork in server.sbt so we can run appServer from sbt console (#4730)
+06844bcd13 Make docker publish use java 18 to avoid slick 3.4.0 issues (#4718)
+d2fb3fc150 Revert &quot;Make electron build use bitcoin-s-ts latest tag (#4701)&quot; (#4711)
+38725f0155 Make electron build use bitcoin-s-ts latest tag (#4701)
+3ad43a8f86 ignore jakarta dependnecy in logback (#4707)
+328e1653a9 Drop support for scalac `2.12.x` (#4704)
+669eb03f93 2022 09 02 issue 4699 (#4700)
+
+## chain
+
+## Core
+
+2f18f622ab Give BitcoinNetworks.knownNetworks proper type (#4766)
+
+## Crypto
+
+## db commons
+
+## DLC node
+
+16893f999e DLC connection checks and notifications (#4720)
+
+## DLC wallet
+
+26595ab3ac Fix bug where no exception was thrown if the acceptor did not have enough money (#4728)
+
+## gui
+
+## fee rate
+
+## keymanager
+
+## Lnd rpc
+
+20ed1dcab0 Fix lnd default datadir (#4767)
+8bbfbc89d7 Add handling so test lnd clients can be reached by docker (#4729)
+1758197d58 Remove bitcoind as a dep for lnd (#4703)
+
+## Lnurl
+
+## node
+
+fae1a53579 Bump `bitcoin-s.node.query-wait-time=120 seconds` (#4759)
+
+## Oracle Explorer Client
+
+## wallet
+
+81cddc12df Remove checkRootAccount/downloadMissingUtxos (#4762)
+2bf1c9d1a5 Try to debug what is happening on CI with zmq test (#4708)
+2448fe13e8 Revert the unique outpoint index DB migration (#4652)
+
+## testkit-core
+
+## testkit
+
+018a6e58ee Add [regtest] section to fixture config (#4717)
+
+## tor
+
+1571b85819 Bump tor timeout to 120 seconds (#4723)
+
+## Website
+
+## Dependencies
+
+2d83210ba3 Update flyway-core to 9.2.3 (#4744)
+12326c7f33 Update sqlite-jdbc to 3.39.3.0 (#4755)
+6bfb669343 Update akka deps (#4724)
+fd7bef3aa7 Try out slick 3.4.0-RC3 (#4620)
+3ee4fe1138 Upgrade dependencies (#4705)</summary>
+    <title>bitcoin-s/bitcoin-s: 1.9.4</title>
+    <updated>2022-09-14T11:44:40Z</updated>
+    <dc:date>2022-09-14T11:44:40Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/lightningdevkit/rust-lightning/releases/tag/v0.0.111</id>
@@ -5489,56 +5703,5 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <updated>2022-04-01T11:23:57Z</updated>
     <dc:date>2022-04-01T11:23:57Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.6.3</id>
-    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.6.3"/>
-    <summary>- Move account tabs to the left with clearer color hierarchy
-- Update BWT for Bitcoin Core v23 compatibility (@shesek)
-- Add PDF export of wallet output descriptor from QR display dialog
-- Restore collaborative (Stowaway) sends to linked PayNyms
-- Support searching for custom PayNyms when initiating collaborative sends
-- Use paynym.is onion address when Tor proxy is set
-- Always use &quot;Deposit&quot; label for default Account #0 wallet
-- Ensure unique Stonewall input txids for entire tx (not just per set)
-- Support PSBT Taproot BIP32 derivation field
-- Ensure order of unencrypted wallet tabs is retained across app restarts
-- Warn if saved certificate file could not be deleted when requested
-- Indicate when a server failure occurs when loading a transaction from file or text
-- Show an error message if partial signatures do not match the wallet on finalizing a PSBT
-- Change show delay duration for help tooltips to 500ms
-- Remove earn.com as fee rates source
-- Bug fix: Disable BIP47 support for Taproot wallets (for now)
-- Bug fix: Omit frozen UTXOs from Soroban collaborations
-- Bug fix: Update UTXO tab fiat balances as rates change
-- Bug fix: Fix issues updating UTXO chart when mixing
-- Bug fix: Ensure wallet rescan occurs when changing the wallet birthday in the transactions table
-- Bug fix: Perform signature verification on PSBT inputs only after all have been parsed (required for Taproot signatures)</summary>
-    <title>sparrowwallet/sparrow: 1.6.3</title>
-    <updated>2022-03-31T13:44:20Z</updated>
-    <dc:date>2022-03-31T13:44:20Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.8</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.4.8"/>
-    <summary>### New features:
-* Greenfield: Send email via store (#3181) @woutersamaey @kukks
-* Greenfield: Configure store email settings (#3554) @kukks
-* Greenfield: Create lightning invoice with description hash (#3559) @dennisreimann
-
-### Bug fixes:
-* Fix crash on Wallet send page @bolatovumar
-* Various UI fixes (#3519 #3522 #3543 #3553 #3584 #3578) @dennisreimann @bolatovumar @dafunction
-* Fix plugin listing error due to Github rate limiting (#3502) @kukks
-* Fix shopify integration (#3589) @kukks
-* Fix order id in invoices updating (#3521) @woutersamaey
-* Fix missing permissions in API keys creation pages @Kukks
-
-### Improvements:
-* Various improvements around plugin system @dennisreimann @kukks
-* Various tweaks around copy in UI @phershbe @dennisreimann @kukks @pavlenex</summary>
-    <title>btcpayserver/btcpayserver: v1.4.8</title>
-    <updated>2022-03-31T11:41:00Z</updated>
-    <dc:date>2022-03-31T11:41:00Z</dc:date>
-  </entry>
-  <dc:date>2022-09-16T11:52:06+00:00</dc:date>
+  <dc:date>2022-09-16T16:42:07+00:00</dc:date>
 </feed>
