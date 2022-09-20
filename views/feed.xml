@@ -6,47 +6,31 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-09-18T13:52:05+00:00</updated>
+  <updated>2022-09-20T08:20:53+00:00</updated>
   <entry>
-    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.9.2</id>
-    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.2"/>
-    <summary>Named in honour of the great DarthCoin, a very well respected member of the LNbits community who not only has produced lots of great written guides, also tirelessly has helped many, many users with debugging in our groups. 
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre7</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre7"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.13.0-pre7</title>
+    <updated>2022-09-20T08:18:53Z</updated>
+    <dc:date>2022-09-20T08:18:53Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/lnbits/lnbits/releases/tag/0.9.2</id>
+    <link href="https://github.com/lnbits/lnbits/releases/tag/0.9.2"/>
+    <summary>Named in honor of the great DarthCoin, a very well respected member of the LNbits community who not only has produced lots of great written guides, also tirelessly has helped many, many users with debugging in our groups. 
 Thank you DarthCoin!
 ### CORE
     • Important payment logic fix
     • pending (stuck) payment fix
-    • Reuse db connections for faster boot
+    • Reuse DB connections for faster boot
 ### EXTENSIONS
     • Onchain Wallet, includes support for HWW connected over serial https://lnbits.github.io/hardware-wallet/installer/
-    • Boltcard extension, create and manage LNURL tap and pay NFC cards
+    • Boltcard Extension, create and manage LNURL tap and pay NFC cards
     • Invoices, Extension for creating formal invoices tor goods/services</summary>
-    <title>lnbits/lnbits-legend: 0.9.2</title>
+    <title>lnbits/lnbits: 0.9.2</title>
     <updated>2022-09-18T13:45:41Z</updated>
     <dc:date>2022-09-18T13:45:41Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/ElementsProject/elements/releases/tag/elements-22.0</id>
-    <link href="https://github.com/ElementsProject/elements/releases/tag/elements-22.0"/>
-    <summary>This release includes the following changes:
-* Brings Elements up to date with Bitcoin Core version 22.0. To see the Bitcoin 22.0 release notes please [click here](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-22.0.md).
-* Multiple improvements to PSET (Partially-Signed Elements Transactions):
-	- Updates to the PSET specification ([PR #1122](https://github.com/ElementsProject/elements/pull/1122)).
-	- Multiple fixes to the PSET implementation ([PR #1121](https://github.com/ElementsProject/elements/pull/1121), [PR #1145](https://github.com/ElementsProject/elements/pull/1145), [issue #1065](https://github.com/ElementsProject/elements/issues/1065)).
-	- New `parsepsbt` RPC for testing ([PR #1121](https://github.com/ElementsProject/elements/pull/1121)).
-	- Changes PSET to not blind asset issuances by default ([PR #1150](https://github.com/ElementsProject/elements/pull/1150)).
-	- Adds fields for explicit input value and assets, and their proofs. Also adds a flag to indicate whether an issuance should be blinded ([PR 1157](https://github.com/ElementsProject/elements/pull/1157), [PR #1165](https://github.com/ElementsProject/elements/pull/1165)).
-* Multiple fixes/improvements to how dynafed parameters are returned in RPC output (PRs [#1108](https://github.com/ElementsProject/elements/pull/1108), [#1111](https://github.com/ElementsProject/elements/pull/1111), [#1114](https://github.com/ElementsProject/elements/pull/1114), issues [#1102](https://github.com/ElementsProject/elements/issues/1102), [#1109](https://github.com/ElementsProject/elements/issues/1109)).
-* The `dumpblindingkey` RPC now accepts non-confidential addresses, if there is a corresponding blinding key ([PR #1131](https://github.com/ElementsProject/elements/pull/1131)).
-* Fixes a crash in the wallet when handling unusual outputs with blinded assets but unblinded values ([PR #1134](https://github.com/ElementsProject/elements/pull/1134), [issue #1105](https://github.com/ElementsProject/elements/issues/1105)).
-* Fixes a corner case when receiving a block from a peer races with getting the same block from `submitblock`, wrongly banning the peer ([PR #1085](https://github.com/ElementsProject/elements/pull/1085), [issue #1084](https://github.com/ElementsProject/elements/issues/1084)).
-* Fixes a problem in Windows where Elements would be installed in Bitcoin’s folder instead of its own ([PR #869](https://github.com/ElementsProject/elements/pull/869)).
-(Note: Since Elements 22.0 will be installed in the right location, cleanup of the left over files in `Program Files\Bitcoin` may be required.)
-* Minor fixes in elements-qt ([PR #1146](https://github.com/ElementsProject/elements/pull/1146), [PR #1154](https://github.com/ElementsProject/elements/pull/1154)).
-* Adds documentation about the format used to serialize Elements transactions ([PR #1148](https://github.com/ElementsProject/elements/pull/1148)).
-* The `getnewblockhex` RPC accepts an array of commitments instead of a single commitment ([PR #1155](https://github.com/ElementsProject/elements/pull/1155)).</summary>
-    <title>ElementsProject/elements: elements-22.0</title>
-    <updated>2022-09-16T16:40:29Z</updated>
-    <dc:date>2022-09-16T16:40:29Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.23</id>
@@ -1819,15 +1803,15 @@ SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-cha
     <dc:date>2022-07-28T17:30:17Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.9.1</id>
-    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.1"/>
+    <id>https://github.com/lnbits/lnbits/releases/tag/0.9.1</id>
+    <link href="https://github.com/lnbits/lnbits/releases/tag/0.9.1"/>
     <summary>## Core
 * Hotfix for `venv` install guide for building static files
 ## Extensions
 * Onchain Wallet (formally known as Watch Only), scrapes for funds and gives total balance + allow psbt construction
 * Satspayserver now shows pending balance and keeps updated via mempool.space websocket
 * SCRUB extension, pushes payments going to a wallet to an LNURLpay or LNaddress</summary>
-    <title>lnbits/lnbits-legend: 0.9.1</title>
+    <title>lnbits/lnbits: 0.9.1</title>
     <updated>2022-07-28T13:52:16Z</updated>
     <dc:date>2022-07-28T13:52:16Z</dc:date>
   </entry>
@@ -1975,8 +1959,8 @@ Build with .NET 6.0.300.
     <dc:date>2022-07-27T21:54:25Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0</id>
-    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0"/>
+    <id>https://github.com/lnbits/lnbits/releases/tag/0.9.0</id>
+    <link href="https://github.com/lnbits/lnbits/releases/tag/0.9.0"/>
     <summary>## Core 
 * Added Poetry as a python package manager option
  * Added Nix flake for immutable reproducible builds
@@ -1991,7 +1975,7 @@ Build with .NET 6.0.300.
 * General enhancements and improvements
 
 </summary>
-    <title>lnbits/lnbits-legend: 0.9.0</title>
+    <title>lnbits/lnbits: 0.9.0</title>
     <updated>2022-07-27T20:27:15Z</updated>
     <dc:date>2022-07-27T20:27:15Z</dc:date>
   </entry>
@@ -5703,12 +5687,12 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <dc:date>2022-04-02T19:53:51Z</dc:date>
   </entry>
   <entry>
-    <id>https://github.com/lnbits/lnbits-legend/releases/tag/0.8.0</id>
-    <link href="https://github.com/lnbits/lnbits-legend/releases/tag/0.8.0"/>
+    <id>https://github.com/lnbits/lnbits/releases/tag/0.8.0</id>
+    <link href="https://github.com/lnbits/lnbits/releases/tag/0.8.0"/>
     <summary>General fixes/improvements, mainly restoring the fee reserve improvements made to the Quart branch.</summary>
-    <title>lnbits/lnbits-legend: 0.8.0</title>
+    <title>lnbits/lnbits: 0.8.0</title>
     <updated>2022-04-02T00:29:36Z</updated>
     <dc:date>2022-04-02T00:29:36Z</dc:date>
   </entry>
-  <dc:date>2022-09-18T13:52:05+00:00</dc:date>
+  <dc:date>2022-09-20T08:20:53+00:00</dc:date>
 </feed>

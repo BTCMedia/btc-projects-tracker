@@ -38,30 +38,14 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/lnbits/lnbits-legend">lnbits/lnbits-legend</a>: <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.2">0.9.2</a>
+						    	<a href="https://github.com/cryptoadvance/specter-desktop">cryptoadvance/specter-desktop</a>: <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre7">v1.13.0-pre7</a>
 						    </h2>
-							<p class="card-text">Published: 2022-09-18 13:45:41 UTC</p>
+							<p class="card-text">Published: 2022-09-20 08:18:53 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><p>Named in honour of the great DarthCoin, a very well respected member of the LNbits community who not only has produced lots of great written guides, also tirelessly has helped many, many users with debugging in our groups. 
-Thank you DarthCoin!</p>
-
-<h3>CORE</h3>
-
-<pre><code>• Important payment logic fix
-• pending (stuck) payment fix
-• Reuse db connections for faster boot
-</code></pre>
-
-<h3>EXTENSIONS</h3>
-
-<pre><code>• Onchain Wallet, includes support for HWW connected over serial https://lnbits.github.io/hardware-wallet/installer/
-• Boltcard extension, create and manage LNURL tap and pay NFC cards
-• Invoices, Extension for creating formal invoices tor goods/services
-</code></pre>
-</p>
-					    <a href="https://github.com/lnbits/lnbits-legend" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					    <p class="card-text"></p>
+					    <a href="https://github.com/cryptoadvance/specter-desktop" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0-pre7" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -69,31 +53,30 @@ Thank you DarthCoin!</p>
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/ElementsProject/elements">ElementsProject/elements</a>: <a href="https://github.com/ElementsProject/elements/releases/tag/elements-22.0">elements-22.0</a>
+						    	<a href="https://github.com/lnbits/lnbits">lnbits/lnbits</a>: <a href="https://github.com/lnbits/lnbits/releases/tag/0.9.2">0.9.2</a>
 						    </h2>
-							<p class="card-text">Published: 2022-09-16 16:40:29 UTC</p>
+							<p class="card-text">Published: 2022-09-18 13:45:41 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"><p>This release includes the following changes:
-* Brings Elements up to date with Bitcoin Core version 22.0. To see the Bitcoin 22.0 release notes please <a href="https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-22.0.md">click here</a>.
-* Multiple improvements to PSET (Partially-Signed Elements Transactions):
-    - Updates to the PSET specification (<a href="https://github.com/ElementsProject/elements/pull/1122">PR #1122</a>).
-    - Multiple fixes to the PSET implementation (<a href="https://github.com/ElementsProject/elements/pull/1121">PR #1121</a>, <a href="https://github.com/ElementsProject/elements/pull/1145">PR #1145</a>, <a href="https://github.com/ElementsProject/elements/issues/1065">issue #1065</a>).
-    - New <code>parsepsbt</code> RPC for testing (<a href="https://github.com/ElementsProject/elements/pull/1121">PR #1121</a>).
-    - Changes PSET to not blind asset issuances by default (<a href="https://github.com/ElementsProject/elements/pull/1150">PR #1150</a>).
-    - Adds fields for explicit input value and assets, and their proofs. Also adds a flag to indicate whether an issuance should be blinded (<a href="https://github.com/ElementsProject/elements/pull/1157">PR 1157</a>, <a href="https://github.com/ElementsProject/elements/pull/1165">PR #1165</a>).
-* Multiple fixes/improvements to how dynafed parameters are returned in RPC output (PRs <a href="https://github.com/ElementsProject/elements/pull/1108">#1108</a>, <a href="https://github.com/ElementsProject/elements/pull/1111">#1111</a>, <a href="https://github.com/ElementsProject/elements/pull/1114">#1114</a>, issues <a href="https://github.com/ElementsProject/elements/issues/1102">#1102</a>, <a href="https://github.com/ElementsProject/elements/issues/1109">#1109</a>).
-* The <code>dumpblindingkey</code> RPC now accepts non-confidential addresses, if there is a corresponding blinding key (<a href="https://github.com/ElementsProject/elements/pull/1131">PR #1131</a>).
-* Fixes a crash in the wallet when handling unusual outputs with blinded assets but unblinded values (<a href="https://github.com/ElementsProject/elements/pull/1134">PR #1134</a>, <a href="https://github.com/ElementsProject/elements/issues/1105">issue #1105</a>).
-* Fixes a corner case when receiving a block from a peer races with getting the same block from <code>submitblock</code>, wrongly banning the peer (<a href="https://github.com/ElementsProject/elements/pull/1085">PR #1085</a>, <a href="https://github.com/ElementsProject/elements/issues/1084">issue #1084</a>).
-* Fixes a problem in Windows where Elements would be installed in Bitcoin’s folder instead of its own (<a href="https://github.com/ElementsProject/elements/pull/869">PR #869</a>).
-(Note: Since Elements 22.0 will be installed in the right location, cleanup of the left over files in <code>Program Files\Bitcoin</code> may be required.)
-* Minor fixes in elements-qt (<a href="https://github.com/ElementsProject/elements/pull/1146">PR #1146</a>, <a href="https://github.com/ElementsProject/elements/pull/1154">PR #1154</a>).
-* Adds documentation about the format used to serialize Elements transactions (<a href="https://github.com/ElementsProject/elements/pull/1148">PR #1148</a>).
-* The <code>getnewblockhex</code> RPC accepts an array of commitments instead of a single commitment (<a href="https://github.com/ElementsProject/elements/pull/1155">PR #1155</a>).</p>
+					    <p class="card-text"><p>Named in honor of the great DarthCoin, a very well respected member of the LNbits community who not only has produced lots of great written guides, also tirelessly has helped many, many users with debugging in our groups. 
+Thank you DarthCoin!</p>
+
+<h3>CORE</h3>
+
+<pre><code>• Important payment logic fix
+• pending (stuck) payment fix
+• Reuse DB connections for faster boot
+</code></pre>
+
+<h3>EXTENSIONS</h3>
+
+<pre><code>• Onchain Wallet, includes support for HWW connected over serial https://lnbits.github.io/hardware-wallet/installer/
+• Boltcard Extension, create and manage LNURL tap and pay NFC cards
+• Invoices, Extension for creating formal invoices tor goods/services
+</code></pre>
 </p>
-					    <a href="https://github.com/ElementsProject/elements" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ElementsProject/elements/releases/tag/elements-22.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					    <a href="https://github.com/lnbits/lnbits" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lnbits/lnbits/releases/tag/0.9.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -2192,7 +2175,7 @@ That instruction is not tested on many different distros. If you encounter probl
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/lnbits/lnbits-legend">lnbits/lnbits-legend</a>: <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.1">0.9.1</a>
+						    	<a href="https://github.com/lnbits/lnbits">lnbits/lnbits</a>: <a href="https://github.com/lnbits/lnbits/releases/tag/0.9.1">0.9.1</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-28 13:52:16 UTC</p>
 						</div>
@@ -2207,8 +2190,8 @@ That instruction is not tested on many different distros. If you encounter probl
 <li>SCRUB extension, pushes payments going to a wallet to an LNURLpay or LNaddress</li>
 </ul>
 </p>
-					    <a href="https://github.com/lnbits/lnbits-legend" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					    <a href="https://github.com/lnbits/lnbits" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lnbits/lnbits/releases/tag/0.9.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -2382,7 +2365,7 @@ That instruction is not tested on many different distros. If you encounter probl
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/lnbits/lnbits-legend">lnbits/lnbits-legend</a>: <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0">0.9.0</a>
+						    	<a href="https://github.com/lnbits/lnbits">lnbits/lnbits</a>: <a href="https://github.com/lnbits/lnbits/releases/tag/0.9.0">0.9.0</a>
 						    </h2>
 							<p class="card-text">Published: 2022-07-27 20:27:15 UTC</p>
 						</div>
@@ -2412,8 +2395,8 @@ That instruction is not tested on many different distros. If you encounter probl
 <li>General enhancements and improvements</li>
 </ul>
 </p>
-					    <a href="https://github.com/lnbits/lnbits-legend" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.9.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					    <a href="https://github.com/lnbits/lnbits" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lnbits/lnbits/releases/tag/0.9.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -6863,15 +6846,15 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
-						    	<a href="https://github.com/lnbits/lnbits-legend">lnbits/lnbits-legend</a>: <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.8.0">0.8.0</a>
+						    	<a href="https://github.com/lnbits/lnbits">lnbits/lnbits</a>: <a href="https://github.com/lnbits/lnbits/releases/tag/0.8.0">0.8.0</a>
 						    </h2>
 							<p class="card-text">Published: 2022-04-02 00:29:36 UTC</p>
 						</div>
 					    <hr/>
 					    <p class="card-text"><p>General fixes/improvements, mainly restoring the fee reserve improvements made to the Quart branch.</p>
 </p>
-					    <a href="https://github.com/lnbits/lnbits-legend" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/lnbits/lnbits-legend/releases/tag/0.8.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					    <a href="https://github.com/lnbits/lnbits" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lnbits/lnbits/releases/tag/0.8.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -6997,11 +6980,11 @@ This key has been signed by @k9ert&#39;s key which you might have used for valid
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/mynodebtc/mynode">mynodebtc/mynode</a>
+		                	<a href="https://github.com/lnbits/lnbits">lnbits/lnbits</a>
 		                </li>
 	                
 		                <li>
-		                	<a href="https://github.com/lnbits/lnbits-legend">lnbits/lnbits-legend</a>
+		                	<a href="https://github.com/mynodebtc/mynode">mynodebtc/mynode</a>
 		                </li>
 	                
 		                <li>
