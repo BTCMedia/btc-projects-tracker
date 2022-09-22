@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-09-22T08:21:15+00:00</updated>
+  <updated>2022-09-22T09:52:27+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.13.0</title>
+    <updated>2022-09-22T09:42:14Z</updated>
+    <dc:date>2022-09-22T09:42:14Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lnbits/lnbits/releases/tag/0.9.3</id>
     <link href="https://github.com/lnbits/lnbits/releases/tag/0.9.3"/>
@@ -5698,13 +5706,5 @@ This key has been signed by @k9ert's key which you might have used for validatin
     <updated>2022-04-02T19:53:51Z</updated>
     <dc:date>2022-04-02T19:53:51Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lnbits/lnbits/releases/tag/0.8.0</id>
-    <link href="https://github.com/lnbits/lnbits/releases/tag/0.8.0"/>
-    <summary>General fixes/improvements, mainly restoring the fee reserve improvements made to the Quart branch.</summary>
-    <title>lnbits/lnbits: 0.8.0</title>
-    <updated>2022-04-02T00:29:36Z</updated>
-    <dc:date>2022-04-02T00:29:36Z</dc:date>
-  </entry>
-  <dc:date>2022-09-22T08:21:15+00:00</dc:date>
+  <dc:date>2022-09-22T09:52:27+00:00</dc:date>
 </feed>
