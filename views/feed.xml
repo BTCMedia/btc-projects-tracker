@@ -6,11 +6,60 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-09-22T09:52:27+00:00</updated>
+  <updated>2022-09-23T10:31:54+00:00</updated>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.14</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.14"/>
+    <summary></summary>
+    <title>vulpemventures/marina: v0.4.14</title>
+    <updated>2022-09-23T10:25:17Z</updated>
+    <dc:date>2022-09-23T10:25:17Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.0"/>
-    <summary></summary>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.0/Specter-Setup-v1.13.0.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.0/Specter-v1.13.0.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.0/specter_desktop-v1.13.0-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.0/specterd-v1.13.0-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.0/specterd-v1.13.0-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.0/specterd-v1.13.0-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[SHA256SUMS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.0/SHA256SUMS) file contains sha256 hashes of all binary files and signed with &quot;Specter Signer's&quot; GPG key.
+You can get the public key from [here](http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7).
+Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
+This key has been signed by @k9ert's key which you might have used for validating th 1.7.0 release.
+
+# Release notes
+- Feature: Improve Dev-Console #1850 (k9ert)
+- Feature: Menu extensions can extend menus #1648 (k9ert)
+- UIUX: Adding &quot;Open Bitcoin app&quot; verbiage to Ledger Upload Keys page #1868 (wombat6)
+- UIUX: Better balance display #1841 (relativisticelectron)
+- UIUX: Do not hide elements by default #1854 (relativisticelectron)
+- UIUX: Individual HWI progess for Ledger devices #1864 (Manolis Mandrapilias)
+- Mobile: Better width settings #1828 (relativisticelectron)
+- Mobile: Optimisation of tx-table #1852 (Manolis Mandrapilias)
+- Bugfix: Add non-witness-utxos and xpubs when using hwi with ledger #1888 (Salvatore Ingala)
+- Bugfix: Escaped HTML in messages and errors #1890 (relativisticelectron)
+- Bugfix: HTML escaped on Cobo and Coldcard Upload Keys page #1871 (wombat6)
+- Bugfix: Missing values in tx details #1862 (relativisticelectron)
+- Bugfix: during loading: KeyError: 'blocks' #1859 (relativisticelectron)
+- Chore: Delete endpoint controller test #1872 (Manolis Mandrapilias)
+- Chore: Dynamic fee rate optimisations &amp; Cypress tests #1878 (Manolis Mandrapilias)
+- Chore: Reworked extension list #1895 (k9ert)
+- Chore: Upgrade to python 3.10 #1688 (relativisticelectron)
+- Chore: Use Python 3.9 for black in pre-commit-config #1894 (Manolis Mandrapilias)
+- Chore: redirect flash call #1883 (k9ert)</summary>
     <title>cryptoadvance/specter-desktop: v1.13.0</title>
     <updated>2022-09-22T09:42:14Z</updated>
     <dc:date>2022-09-22T09:42:14Z</dc:date>
@@ -1580,8 +1629,6 @@ Download the operating system relevant software package and install Wasabi like 
 If you want to build or update Wasabi from source code, check out [these easy instructions](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html).
 
 Wasabi uses [reproducible builds](https://reproducible-builds.org/), which you can verify with [this guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md).
-
-Build with .NET 6.0.300.
 
 ## Documentation
 
@@ -5669,42 +5716,5 @@ deletions in 75 commits from 11 authors, in alphabetical order:
     <updated>2022-04-03T16:35:30Z</updated>
     <dc:date>2022-04-03T16:35:30Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.9.1"/>
-    <summary># Binaries
-
-There are two types of binaries:
-
-## Specter Desktop
-It's a windowed GUI application with Specter server included.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.1/Specter-Setup-v1.9.1.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.1/SpecterDesktop-v1.9.1.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.1/specter_desktop-v1.9.1-x86_64-linux-gnu.tar.gz)
-
-**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
-
-**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
-
-## specterd
-It's a command-line program that only runs Specter server.
-Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.1/specterd-v1.9.1-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.1/specterd-v1.9.1-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.1/specterd-v1.9.1-x86_64-linux-gnu.zip)
-
-## Signatures and hashes
-[SHA256SUMS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.9.1/SHA256SUMS) file contains sha256 hashes of all binary files and signed with &quot;Specter Signer's&quot; GPG key.
-You can get the public key from [here](http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7).
-Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
-This key has been signed by @k9ert's key which you might have used for validating th 1.7.0 release.
-
-# Release notes
-- Bugfix: opening non-installed extensions in new window #1650 (Kim Neunert)
-- Bugfix: price provider uses wrong user #1640 (Kim Neunert)
-- Bugfix: Restore editing of labels #1649 (Kim Neunert)
-- Chore: Bump ansi-regex from 4.1.0 to 4.1.1 in /pyinstaller/electron #1643 (dependabot[bot])
-- Chore: Bump minimist from 1.2.5 to 1.2.6 #1639 (dependabot[bot])
-- Chore: Update elements to 0.21.0.2 #1641 (Kim Neunert)
-</summary>
-    <title>cryptoadvance/specter-desktop: v1.9.1</title>
-    <updated>2022-04-02T19:53:51Z</updated>
-    <dc:date>2022-04-02T19:53:51Z</dc:date>
-  </entry>
-  <dc:date>2022-09-22T09:52:27+00:00</dc:date>
+  <dc:date>2022-09-23T10:31:54+00:00</dc:date>
 </feed>
