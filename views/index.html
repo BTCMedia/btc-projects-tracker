@@ -38,6 +38,67 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.11">v1.6.11</a>
+						    </h2>
+							<p class="card-text">Published: 2022-09-26 14:25:02 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>New feature</h3>
+
+<ul>
+<li>Add support for updating POS app through Greenfield API (#3458) @bolatovumar</li>
+<li>Allow specifing fee block target for onchain payout processor (#4065) @Kukks</li>
+</ul>
+
+<h3>Improvement</h3>
+
+<ul>
+<li>Make POS and Crowdfund system plugins (#3987) @dennisreimann</li>
+<li>Enhance export function for invoices (#4060) @HamroRamro</li>
+<li>Create dynamic manifest for pos apps (#4064) @Kukks</li>
+<li>Update invoice amount description in Swagger template @bolatovumar</li>
+<li>Improve payout processors description (#4109) @woutersamaey</li>
+<li>Set explicit cursor style property on pay button with custom text (#4107) @bolatovumar</li>
+<li>Use mempool space as default block explorer (#4100) @junderw</li>
+<li>Improve Lightning Node setup examples (#4033) @dennisreimann</li>
+<li>Refactor QR functionality and improve wallet import support (#4091) @dennisreimann</li>
+<li>Sanitize filename for downloaded files (#4117) @dennisreimann</li>
+<li>Improve PayButton error page (#4129) @dennisreimann</li>
+<li>Consistent switch UI on Create Wallet views (#4135) @dennisreimann</li>
+<li>Point Of Sale: Custom amount disabled by default (#4126) @daviogg</li>
+<li>Improve &quot;Advanced Settings&quot; button (#4140) @dennisreimann</li>
+<li>Improve currency selection (#4155) @dennisreimann</li>
+<li>Add official Telegram link to footer (#4160) @daviogg</li>
+<li>Minor updates to security issues and bug reports doc (#4161) @Bangalisch</li>
+</ul>
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li>Fix app-related API docs @bolatovumar</li>
+<li>Fix missing route hints option for LNURL invoices (#4077) @dennisreimann</li>
+<li>Scale-down PoS item image (#4076) @prusnak</li>
+<li>Ensure apps can be deleted through UI (#4080) @bolatovumar</li>
+<li>Make sure end date is after start date in Crowdfund app (#4084) @bolatovumar</li>
+<li>Show iframe when showing invoice in Shopify plugin (#4106) @bolatovumar</li>
+<li>LNURL max value is set to min when item type is minmum (#4115) @Kukks</li>
+<li>Fix Monero and Zcash nav extensions (#4124) @dennisreimann</li>
+<li>Add missing store ID to invoice links (#4128) @bolatovumar</li>
+<li>Fix pagination of wallet&#39;s transactions (#4150) @dennisreimann @NicolasDorier</li>
+<li>Remove redundant exception status from invoice state label (#4151) @bolatovumar</li>
+<li>Fix Store Settings nav highlight (#4138) @daviogg</li>
+<li>Fix crash on migration from old install (#4162) @NicolasDorier</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.11" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lnbits/lnbits">lnbits/lnbits</a>: <a href="https://github.com/lnbits/lnbits/releases/tag/0.9.4">0.9.4</a>
 						    </h2>
 							<p class="card-text">Published: 2022-09-23 19:15:04 UTC</p>
@@ -138,7 +199,7 @@ Thank you DarthCoin!</p>
 <h2>Highlights for Developers</h2>
 
 <ul>
-<li>Reliance on <code>mako</code> and <code>mrkd</code> python libraries has been removed.</li>
+<li>Reliance on <code>mistune</code> and <code>mrkd</code> python libraries has been removed.</li>
 </ul>
 
 <p>Since v0.12.0 we&#39;ve had 26 commits from 5 different contributors over 29 days.</p>
@@ -159,7 +220,17 @@ Thank you DarthCoin!</p>
 							<p class="card-text">Published: 2022-09-23 10:25:17 UTC</p>
 						</div>
 					    <hr/>
-					    <p class="card-text"></p>
+					    <p class="card-text"><h2>What&#39;s Changed</h2>
+
+<ul>
+<li>Improve Tx Outbound/Inbound calculations by @louisinger in <a href="https://github.com/vulpemventures/marina/pull/404">https://github.com/vulpemventures/marina/pull/404</a></li>
+<li>marina provider getters with <code>undefined</code> accountsIDs param fallback to [MainAccountID] by @louisinger in <a href="https://github.com/vulpemventures/marina/pull/412">https://github.com/vulpemventures/marina/pull/412</a></li>
+<li>add Wallet migration v6 (make sure only xpub are in reducer) by @louisinger in <a href="https://github.com/vulpemventures/marina/pull/410">https://github.com/vulpemventures/marina/pull/410</a></li>
+<li>address-amount form: handle asset precision by @louisinger in <a href="https://github.com/vulpemventures/marina/pull/409">https://github.com/vulpemventures/marina/pull/409</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/vulpemventures/marina/compare/v0.4.13...v0.4.14">https://github.com/vulpemventures/marina/compare/v0.4.13...v0.4.14</a></p>
+</p>
 					    <a href="https://github.com/vulpemventures/marina" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/vulpemventures/marina/releases/tag/v0.4.14" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
@@ -6772,22 +6843,6 @@ b0d7bee008 First draft of 1.9.1 release notes (#4195)
 </p>
 					    <a href="https://github.com/Start9Labs/embassy-os" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.0.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/getumbrel/umbrel">getumbrel/umbrel</a>: <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.17">v0.4.17</a>
-						    </h2>
-							<p class="card-text">Published: 2022-04-05 12:02:34 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This update brings two brand new apps to the Umbrel App Store — Agora and sparkkiosk, along with updated apps and bugfixes.</p>
-</p>
-					    <a href="https://github.com/getumbrel/umbrel" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.17" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

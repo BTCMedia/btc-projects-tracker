@@ -6,7 +6,54 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-09-23T19:21:54+00:00</updated>
+  <updated>2022-09-26T14:36:40+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.11</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.11"/>
+    <summary>### New feature
+
+* Add support for updating POS app through Greenfield API (#3458) @bolatovumar
+* Allow specifing fee block target for onchain payout processor (#4065) @Kukks
+
+### Improvement
+
+* Make POS and Crowdfund system plugins (#3987) @dennisreimann
+* Enhance export function for invoices (#4060) @HamroRamro
+* Create dynamic manifest for pos apps (#4064) @Kukks
+* Update invoice amount description in Swagger template @bolatovumar
+* Improve payout processors description (#4109) @woutersamaey
+* Set explicit cursor style property on pay button with custom text (#4107) @bolatovumar
+* Use mempool space as default block explorer (#4100) @junderw
+* Improve Lightning Node setup examples (#4033) @dennisreimann
+* Refactor QR functionality and improve wallet import support (#4091) @dennisreimann
+* Sanitize filename for downloaded files (#4117) @dennisreimann
+* Improve PayButton error page (#4129) @dennisreimann
+* Consistent switch UI on Create Wallet views (#4135) @dennisreimann
+* Point Of Sale: Custom amount disabled by default (#4126) @daviogg
+* Improve &quot;Advanced Settings&quot; button (#4140) @dennisreimann
+* Improve currency selection (#4155) @dennisreimann
+* Add official Telegram link to footer (#4160) @daviogg
+* Minor updates to security issues and bug reports doc (#4161) @Bangalisch
+
+### Bug fixes
+
+* Fix app-related API docs @bolatovumar
+* Fix missing route hints option for LNURL invoices (#4077) @dennisreimann
+* Scale-down PoS item image (#4076) @prusnak
+* Ensure apps can be deleted through UI (#4080) @bolatovumar
+* Make sure end date is after start date in Crowdfund app (#4084) @bolatovumar
+* Show iframe when showing invoice in Shopify plugin (#4106) @bolatovumar
+* LNURL max value is set to min when item type is minmum (#4115) @Kukks
+* Fix Monero and Zcash nav extensions (#4124) @dennisreimann
+* Add missing store ID to invoice links (#4128) @bolatovumar
+* Fix pagination of wallet's transactions (#4150) @dennisreimann @NicolasDorier
+* Remove redundant exception status from invoice state label (#4151) @bolatovumar
+* Fix Store Settings nav highlight (#4138) @daviogg
+* Fix crash on migration from old install (#4162) @NicolasDorier</summary>
+    <title>btcpayserver/btcpayserver: v1.6.11</title>
+    <updated>2022-09-26T14:25:02Z</updated>
+    <dc:date>2022-09-26T14:25:02Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lnbits/lnbits/releases/tag/0.9.4</id>
     <link href="https://github.com/lnbits/lnbits/releases/tag/0.9.4"/>
@@ -70,7 +117,7 @@ For a list of differences, please see [v0.12.0..v0.12.1](https://github.com/Elem
 
 ## Highlights for Developers
 
-- Reliance on `mako` and `mrkd` python libraries has been removed.
+- Reliance on `mistune` and `mrkd` python libraries has been removed.
 
 Since v0.12.0 we've had 26 commits from 5 different contributors over 29 days.
 
@@ -83,7 +130,14 @@ Since v0.12.0 we've had 26 commits from 5 different contributors over 29 days.
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.14</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.14"/>
-    <summary></summary>
+    <summary>## What's Changed
+* Improve Tx Outbound/Inbound calculations by @louisinger in https://github.com/vulpemventures/marina/pull/404
+* marina provider getters with `undefined` accountsIDs param fallback to [MainAccountID] by @louisinger in https://github.com/vulpemventures/marina/pull/412
+* add Wallet migration v6 (make sure only xpub are in reducer) by @louisinger in https://github.com/vulpemventures/marina/pull/410
+* address-amount form: handle asset precision by @louisinger in https://github.com/vulpemventures/marina/pull/409
+
+
+**Full Changelog**: https://github.com/vulpemventures/marina/compare/v0.4.13...v0.4.14</summary>
     <title>vulpemventures/marina: v0.4.14</title>
     <updated>2022-09-23T10:25:17Z</updated>
     <dc:date>2022-09-23T10:25:17Z</dc:date>
@@ -5616,13 +5670,5 @@ d7f12be1d4 Update scalafx to 17.0.1-R26 (#3874)
     <updated>2022-04-07T04:40:20Z</updated>
     <dc:date>2022-04-07T04:40:20Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.4.17</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.4.17"/>
-    <summary>This update brings two brand new apps to the Umbrel App Store — Agora and sparkkiosk, along with updated apps and bugfixes.</summary>
-    <title>getumbrel/umbrel: v0.4.17</title>
-    <updated>2022-04-05T12:02:34Z</updated>
-    <dc:date>2022-04-05T12:02:34Z</dc:date>
-  </entry>
-  <dc:date>2022-09-23T19:21:54+00:00</dc:date>
+  <dc:date>2022-09-26T14:36:40+00:00</dc:date>
 </feed>
