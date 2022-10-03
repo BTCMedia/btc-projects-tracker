@@ -6,15 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-10-03T20:08:59+00:00</updated>
-  <entry>
-    <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.5</id>
-    <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.5"/>
-    <summary></summary>
-    <title>bitcoin-s/bitcoin-s: 1.9.5</title>
-    <updated>2022-10-03T20:08:19Z</updated>
-    <dc:date>2022-10-03T20:08:19Z</dc:date>
-  </entry>
+  <updated>2022-10-03T22:09:20+00:00</updated>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.11</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.11"/>
@@ -5670,5 +5662,13 @@ d7f12be1d4 Update scalafx to 17.0.1-R26 (#3874)
     <updated>2022-04-12T15:11:43Z</updated>
     <dc:date>2022-04-12T15:11:43Z</dc:date>
   </entry>
-  <dc:date>2022-10-03T20:08:59+00:00</dc:date>
+  <entry>
+    <id>https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.0.1</id>
+    <link href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.0.1"/>
+    <summary>Minor bugfixes and performance improvements.</summary>
+    <title>Start9Labs/embassy-os: v0.3.0.1</title>
+    <updated>2022-04-07T04:40:20Z</updated>
+    <dc:date>2022-04-07T04:40:20Z</dc:date>
+  </entry>
+  <dc:date>2022-10-03T22:09:20+00:00</dc:date>
 </feed>
