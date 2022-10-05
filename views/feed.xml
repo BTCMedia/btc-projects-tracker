@@ -6,7 +6,88 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-10-04T14:42:24+00:00</updated>
+  <updated>2022-10-05T15:42:23+00:00</updated>
+  <entry>
+    <id>https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.2</id>
+    <link href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.2"/>
+    <summary>## What's Changed
+* formatting by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1698
+* Update README.md by @kn0wmad in https://github.com/Start9Labs/embassy-os/pull/1705
+* Update README.md by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1703
+* feat: migrate to Angular 14 and RxJS 7 by @waterplea in https://github.com/Start9Labs/embassy-os/pull/1681
+* 0312 multiple FE by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1712
+* Fix http requests by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1717
+* Add build-essential to README.md by @chrisguida in https://github.com/Start9Labs/embassy-os/pull/1716
+* write image to sparse-aware archive format by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1709
+* fix: Add modification to the max_user_watches by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1695
+* [Feat] follow logs by @chrisguida in https://github.com/Start9Labs/embassy-os/pull/1714
+* Update README.md by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1728
+* fix build for patch-db client for consistency by @elvece in https://github.com/Start9Labs/embassy-os/pull/1722
+* fix cli install by @chrisguida in https://github.com/Start9Labs/embassy-os/pull/1720
+* highlight instructions if not viewed by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1731
+* Feat: HttpReader by @redragonx in https://github.com/Start9Labs/embassy-os/pull/1733
+* Bugfix/dns by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1741
+* add x86 build and run unittests to backend pipeline by @moerketh in https://github.com/Start9Labs/embassy-os/pull/1682
+* [Fix] websocket connecting and patchDB connection monitoring by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1738
+* Set pipeline job timeouts and add ca-certificates to test container by @moerketh in https://github.com/Start9Labs/embassy-os/pull/1753
+* Disable bluetooth properly #862 by @redragonx in https://github.com/Start9Labs/embassy-os/pull/1745
+* [feat]: resumable downloads by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1746
+* Fix/empty properties by @elvece in https://github.com/Start9Labs/embassy-os/pull/1764
+* use hostname from patchDB as default server name by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1758
+* switch to postgresql by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1763
+* remove product key from setup flow by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1750
+* pinning cargo dep versions for CLI by @redragonx in https://github.com/Start9Labs/embassy-os/pull/1775
+* fix: Js deep dir by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1784
+* 0.3.2 final cleanup by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1782
+* expect ui marketplace to be undefined by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1787
+* fix init to exit on failure by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1788
+* fix search to return more accurate results by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1792
+* update backend dependencies by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1796
+* use base64 for HTTP headers by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1795
+* fix: Bad cert of *.local.local is now fixed to correct. by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1798
+* fix duplicate patch updates, add scroll button to setup success by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1800
+* 🎚️ reclaiming that precious RAM memory by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1799
+* stop leaking avahi clients by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1802
+* fix: Deep is_parent was wrong and could be escapped by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1801
+* prevent cfg str generation from running forever by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1804
+* better RPC error message by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1803
+* Bugfix/marketplace add by @elvece in https://github.com/Start9Labs/embassy-os/pull/1805
+* fix mrketplace swtiching by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1810
+* clean up code and logs by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1809
+* fix: Minor fix that matt wanted by @Blu-J in https://github.com/Start9Labs/embassy-os/pull/1808
+* 🧅 replace instead of adding tor repository by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1813
+* 🏦 Start as embassy hostname from the begining by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1814
+* add descriptions to marketplace list page by @elvece in https://github.com/Start9Labs/embassy-os/pull/1812
+* Fix/encryption by @elvece in https://github.com/Start9Labs/embassy-os/pull/1811
+* restructure initialization by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1816
+* update license by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1819
+* perform system rebuild after updating by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1820
+* ignore file not found error for delete by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1822
+* Multiple by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1823
+* Bugfix/correctly package backend job by @moerketh in https://github.com/Start9Labs/embassy-os/pull/1826
+* update patch-db by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1831
+* give name to logs file by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1833
+* play song during update by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1832
+* Seed patchdb UI data by @elvece in https://github.com/Start9Labs/embassy-os/pull/1835
+* update patch db and enable logging by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1837
+* reduce patch-db log level to warn by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1840
+* update ts matches to fix properties ordering bug by @elvece in https://github.com/Start9Labs/embassy-os/pull/1843
+* handle multiple image tags having the same hash and increase timeout by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1844
+* retry pgloader up to 5x by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1845
+* show connection bar right away by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1849
+* 💫 Rebranding to embassyOS by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1851
+* update patch db by @MattDHill in https://github.com/Start9Labs/embassy-os/pull/1852
+* 📸 screenshots update by @k0gen in https://github.com/Start9Labs/embassy-os/pull/1853
+* disable concurrency and delete tmpdir before retry by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1846
+
+## New Contributors
+* @redragonx made their first contribution in https://github.com/Start9Labs/embassy-os/pull/1733
+
+**Full Changelog**: https://github.com/Start9Labs/embassy-os/compare/v0.3.1.1...v0.3.2</summary>
+    <title>Start9Labs/embassy-os: v0.3.2</title>
+    <updated>2022-10-05T15:39:02Z</updated>
+    <dc:date>2022-10-05T15:39:02Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.1-pre1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.1-pre1"/>
@@ -5846,13 +5927,5 @@ d7f12be1d4 Update scalafx to 17.0.1-R26 (#3874)
     <updated>2022-04-15T21:41:28Z</updated>
     <dc:date>2022-04-15T21:41:28Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/vulpemventures/marina/releases/tag/v0.4.5</id>
-    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.4.5"/>
-    <summary></summary>
-    <title>vulpemventures/marina: v0.4.5</title>
-    <updated>2022-04-12T18:04:58Z</updated>
-    <dc:date>2022-04-12T18:04:58Z</dc:date>
-  </entry>
-  <dc:date>2022-10-04T14:42:24+00:00</dc:date>
+  <dc:date>2022-10-05T15:42:23+00:00</dc:date>
 </feed>
