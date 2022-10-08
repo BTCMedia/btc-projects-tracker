@@ -6,11 +6,51 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-10-05T15:42:23+00:00</updated>
+  <updated>2022-10-08T10:51:58+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.12</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.12"/>
+    <summary>### New features
+
+* Greenfield: Extend LN GetInfo data (#4167) @dennisreimann
+
+### Bug fixes
+
+* Always show overpaid amount if invoice is overpaid (#4192) @bolatovumar
+* Fix custodian Swagger docs missing some path parameters (#4196) @AryanJ-NYC
+* Fix receipts for Lightning Address invoices (#4169) @dennisreimann
+* POS: Fix keypad view without custom amount (#4183) @dennisreimann @bolatovumar
+* Fix truncated dates in wallet transaction list (#4191) @dennisreimann
+* Update default value for &quot;showCustomAmount&quot; in Swagger docs (#4200) @bolatovumar
+
+### Improvement
+
+* The wallet transaction list use infinity scroll rather than pagination (#4074) @HamroRamro @dennisreimann
+* Remove direct and temp link functionality from the File Storage (#4177) @daviogg
+* Fix warning error when rebooting the server caused by some shitcoin currency pair format @NicolasDorier
+* Add Invoice.OrderId to list of supported email interpolation strings (#4202) @bolatovumar
+* Do not hide errors happening in tasks spawned by BaseAsyncService @NicolasDorier</summary>
+    <title>btcpayserver/btcpayserver: v1.6.12</title>
+    <updated>2022-10-08T10:45:51Z</updated>
+    <dc:date>2022-10-08T10:45:51Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.2</id>
     <link href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.2"/>
-    <summary>## What's Changed
+    <summary>## Highlights
+- Autoscrolling for logs
+- Improved connectivity between browser and Embassy
+- Switch to Postgres for EOS database for better performance
+- Multiple bug fixes and under-the-hood improvements
+- Various UI/UX enhancements
+- Removal of product keys
+
+Update Hash (SHA256): d8ce908b06baee6420b45be1119e5eb9341ba8df920d1e255f94d1ffb7cc4de9
+Image Hash (SHA256): e035cd764e5ad9eb1c60e2f7bc3b9bd7248f42a91c69015c8a978a0f94b90bbb
+
+Note: This image was uploaded as a gzipped POSIX sparse TAR file. The recommended command for unpacking it on systems that support sparse files is `tar --format=posix --sparse -zxvf eos.tar.gz`
+
+## What's Changed
 * formatting by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1698
 * Update README.md by @kn0wmad in https://github.com/Start9Labs/embassy-os/pull/1705
 * Update README.md by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1703
@@ -87,14 +127,6 @@
     <title>Start9Labs/embassy-os: v0.3.2</title>
     <updated>2022-10-05T15:39:02Z</updated>
     <dc:date>2022-10-05T15:39:02Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.1-pre1</id>
-    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.1-pre1"/>
-    <summary></summary>
-    <title>cryptoadvance/specter-desktop: v1.13.1-pre1</title>
-    <updated>2022-10-04T14:36:56Z</updated>
-    <dc:date>2022-10-04T14:36:56Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.5</id>
@@ -5927,5 +5959,5 @@ d7f12be1d4 Update scalafx to 17.0.1-R26 (#3874)
     <updated>2022-04-15T21:41:28Z</updated>
     <dc:date>2022-04-15T21:41:28Z</dc:date>
   </entry>
-  <dc:date>2022-10-05T15:42:23+00:00</dc:date>
+  <dc:date>2022-10-08T10:51:58+00:00</dc:date>
 </feed>
