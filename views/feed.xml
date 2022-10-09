@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-10-08T10:51:58+00:00</updated>
+  <updated>2022-10-09T16:31:11+00:00</updated>
+  <entry>
+    <id>https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.6</id>
+    <link href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.6"/>
+    <summary></summary>
+    <title>bitcoin-s/bitcoin-s: 1.9.6</title>
+    <updated>2022-10-09T16:27:33Z</updated>
+    <dc:date>2022-10-09T16:27:33Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.12</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.12"/>
@@ -5929,35 +5937,5 @@ d7f12be1d4 Update scalafx to 17.0.1-R26 (#3874)
     <updated>2022-04-18T17:44:34Z</updated>
     <dc:date>2022-04-18T17:44:34Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/bitcoin-core/HWI/releases/tag/2.1.0</id>
-    <link href="https://github.com/bitcoin-core/HWI/releases/tag/2.1.0"/>
-    <summary>Also available on [PyPi](https://pypi.org/project/hwi/2.1.0/) and can be installed with `pip install -U hwi`
-
-# Added
-
-* Blockstream Jade is now supported
-* Taproot support
-  * Taproot signing support for Trezors and Ledger
-  * Taproot PSBT fields
-  * `tr()` descriptors and `tap` address type
-* Support for Ledger Bitcoin App 2.0. Note that the 2.0 app changes what the Ledger will sign and may break some workflows.
-* Trezor multisig change address verification
-* `signtx` will return a status indicating whether the PSBT was signed
-* Trezor labels will be output in `enumerate`
-* PSBTv2 support
-
-# Removed
-
-* For Trezor Ones with firmware 1.10.6 and greater and Trezor Ts with firmware 2.4.4 and greater will not be able to sign transactions containing external inputs
-
-# Fixed
-
-* Keepkeys will no longer also appear as Trezors
-* Nonresponse with some Trezors/Keepkeys when sending PIN</summary>
-    <title>bitcoin-core/HWI: 2.1.0</title>
-    <updated>2022-04-15T21:41:28Z</updated>
-    <dc:date>2022-04-15T21:41:28Z</dc:date>
-  </entry>
-  <dc:date>2022-10-08T10:51:58+00:00</dc:date>
+  <dc:date>2022-10-09T16:31:11+00:00</dc:date>
 </feed>
