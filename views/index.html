@@ -38,6 +38,171 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bitcoin-s/bitcoin-s">bitcoin-s/bitcoin-s</a>: <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.6">1.9.6</a>
+						    </h2>
+							<p class="card-text">Published: 2022-10-09 16:27:33 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>1.9.6</h1>
+
+<p>This release is backwards compatible with the 1.9.x series of bitcoin-s</p>
+
+<p>See the individual module sections for more information on lower level updates to the codebase.</p>
+
+<p>Want to get started quickly? See our <code>docker-compose.yml</code> file. <a href="https://github.com/bitcoin-s/bitcoin-s/#docker">See instructions here</a></p>
+
+<p>If you are a typescript developer, <a href="https://github.com/bitcoin-s/bitcoin-s-ts">you can access the backend via our typescript library</a></p>
+
+<h1>Executive Summary</h1>
+
+<p>This release adds network notifications via the websocket when various tor interactions fail when negotiating a DLC.</p>
+
+<p>This release delete all DLCs that are settled using the <code>Alpha</code> version of the DLC protocol.
+This makes upgrading to the new v0 format of the dlc protocol easier for an implementation point of view.
+This will not delete alpha DLCs that are still in progress, rather throw an exception on wallet startup.</p>
+
+<p>This release also fixes a bug in the wallet where utxos would be stuck in an unconfirmed state.</p>
+
+<h2>Running bitcoin-s</h2>
+
+<p>If you want to run the standalone server binary, after verifying gpg signatures, you
+can <code>unzip bitcoin-s-server-1.9.6.zip</code> and then run it with <code>chmod +x ./bin/bitcoin-s-server &amp;&amp; ./bin/bitcoin-s-server</code> to start the node. You will need to
+configure the node properly first, you can find example
+configurations <a href="https://bitcoin-s.org/docs/config/configuration#example-configuration-file">here</a>.</p>
+
+<p>You can then unzip the <code>bitcoin-s-cli-1.9.6.zip</code> folder and start using the <code>bitcoin-s-cli</code> like this:</p>
+
+<p>```bashrc
+./bin/bitcoin-s-cli --help
+Usage: bitcoin-s-cli [options] [<cmd>]</p>
+
+<p>-n, --network <value>    Select the active network.
+  --debug                  Print debugging information
+  --rpcport <value>        The port to send our rpc request to on the server
+  -h, --help               Display this help message and exit
+```</p>
+
+<p>For more information on what commands <code>bitcoin-s-cli</code> supports check the documentation, here is where to
+start: <a href="https://bitcoin-s.org/docs/next/applications/server#server-endpoints">https://bitcoin-s.org/docs/next/applications/server#server-endpoints</a></p>
+
+<h2>Verifying signatures</h2>
+
+<p>This release is signed with <a href="https://bitcoin-s.org/docs/next/security#disclosure">Chris&#39;s signing key</a> with
+fingerprint <code>9234F4D6AF47C71B741A390F8976CA0AF71A7A2A</code></p>
+
+<p>To do the verification, first hash the executable using <code>sha256sum</code>. You should check that the result is listed in
+the <code>SHA256SUMS.asc</code> file next to its file name. After doing that you can use <code>gpg --verify</code> to authenticate the
+signature.</p>
+
+<p>Example:</p>
+
+<p>```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+gpg: Signature made Sun 09 Oct 2022 01:39:03 PM CDT
+gpg:                using RSA key 9234F4D6AF47C71B741A390F8976CA0AF71A7A2A
+gpg: Good signature from &quot;Chris Stewart <a href="mailto:stewart.chris1234@gmail.com">stewart.chris1234@gmail.com</a>&quot; [ultimate]</p>
+
+<p>$  sha256sum -c SHA256SUMS.stripped
+bitcoin-s-cli-linux-1.9.6.zip: OK
+bitcoin-s-cli-mac-1.9.6.zip: OK
+bitcoin-s-cli-windows-1.9.6.zip: OK
+bitcoin-s-oracle-server-linux-1.9.6.zip: OK
+bitcoin-s-oracle-server-mac-1.9.6.zip: OK
+bitcoin-s-oracle-server-windows-1.9.6.zip: OK
+bitcoin-s-server-linux-1.9.6.zip: OK
+bitcoin-s-server-mac-1.9.6.zip: OK
+bitcoin-s-server-windows-1.9.6.zip: OK
+krystal-bull<em>1.9.5</em>amd64.deb: OK
+Krystal.Bull-darwin-x64-1.9.5.zip: OK
+suredbits-wallet<em>1.9.5</em>amd64.deb: OK
+Suredbits.Wallet-darwin-x64-1.9.5.zip: OK
+```</p>
+
+<h3>Website</h3>
+
+<p><a href="https://bitcoin-s.org/">https://bitcoin-s.org/</a></p>
+
+<h3>Releases</h3>
+
+<p><a href="https://repo1.maven.org/maven2/org/bitcoin-s/">https://repo1.maven.org/maven2/org/bitcoin-s/</a></p>
+
+<h3>Snapshot releases</h3>
+
+<p><a href="https://oss.sonatype.org/content/repositories/snapshots/org/bitcoin-s/">https://oss.sonatype.org/content/repositories/snapshots/org/bitcoin-s/</a></p>
+
+<h1>Modules</h1>
+
+<h2>app commons</h2>
+
+<h2>App server</h2>
+
+<h2>bitcoind rpc</h2>
+
+<h2>bundle</h2>
+
+<h2>Build</h2>
+
+<h2>chain</h2>
+
+<h2>Core</h2>
+
+<h2>Crypto</h2>
+
+<h2>db commons</h2>
+
+<h2>DLC node</h2>
+
+<p>de43dadf52b Network notifications (#4774)</p>
+
+<h2>DLC Oracle</h2>
+
+<h2>DLC wallet</h2>
+
+<p>62081a43ecd 2022 10 05 Delete legacy <code>DLCSerializationVersion.Alpha</code> DLCs for a cleaner upgrade to v0 spec (#4817)</p>
+
+<h2>gui</h2>
+
+<h2>fee rate</h2>
+
+<h2>keymanager</h2>
+
+<h2>Lnd rpc</h2>
+
+<h2>Lnurl</h2>
+
+<h2>node</h2>
+
+<p>718053668d8 2022 10 07 node test fixes (#4819)</p>
+
+<h2>Oracle Explorer Client</h2>
+
+<h2>wallet</h2>
+
+<p>Fix bug where transactions would be stuck in a unconfirmed state</p>
+
+<p>ddc672cc466 Fix unconfirmed -&gt; confirmed state change (#4816)</p>
+
+<h2>testkit-core</h2>
+
+<h2>testkit</h2>
+
+<h2>tor</h2>
+
+<h2>Website</h2>
+
+<h2>Dependencies</h2>
+
+<p>c075112db5b Upgrade sbt to 1.7.2 (#4818)</p>
+</p>
+					    <a href="https://github.com/bitcoin-s/bitcoin-s" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.6" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.6.12">v1.6.12</a>
 						    </h2>
 							<p class="card-text">Published: 2022-10-08 10:45:51 UTC</p>
@@ -7098,53 +7263,6 @@ b0d7bee008 First draft of 1.9.1 release notes (#4195)
 </p>
 					    <a href="https://github.com/bitcoin-s/bitcoin-s" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/bitcoin-s/bitcoin-s/releases/tag/1.9.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bitcoin-core/HWI">bitcoin-core/HWI</a>: <a href="https://github.com/bitcoin-core/HWI/releases/tag/2.1.0">2.1.0</a>
-						    </h2>
-							<p class="card-text">Published: 2022-04-15 21:41:28 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Also available on <a href="https://pypi.org/project/hwi/2.1.0/">PyPi</a> and can be installed with <code>pip install -U hwi</code></p>
-
-<h1>Added</h1>
-
-<ul>
-<li>Blockstream Jade is now supported</li>
-<li>Taproot support
-
-<ul>
-<li>Taproot signing support for Trezors and Ledger</li>
-<li>Taproot PSBT fields</li>
-<li><code>tr()</code> descriptors and <code>tap</code> address type</li>
-</ul></li>
-<li>Support for Ledger Bitcoin App 2.0. Note that the 2.0 app changes what the Ledger will sign and may break some workflows.</li>
-<li>Trezor multisig change address verification</li>
-<li><code>signtx</code> will return a status indicating whether the PSBT was signed</li>
-<li>Trezor labels will be output in <code>enumerate</code></li>
-<li>PSBTv2 support</li>
-</ul>
-
-<h1>Removed</h1>
-
-<ul>
-<li>For Trezor Ones with firmware 1.10.6 and greater and Trezor Ts with firmware 2.4.4 and greater will not be able to sign transactions containing external inputs</li>
-</ul>
-
-<h1>Fixed</h1>
-
-<ul>
-<li>Keepkeys will no longer also appear as Trezors</li>
-<li>Nonresponse with some Trezors/Keepkeys when sending PIN</li>
-</ul>
-</p>
-					    <a href="https://github.com/bitcoin-core/HWI" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bitcoin-core/HWI/releases/tag/2.1.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
