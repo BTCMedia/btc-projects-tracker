@@ -6,7 +6,116 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-10-10T22:10:51+00:00</updated>
+  <updated>2022-10-14T19:40:57+00:00</updated>
+  <entry>
+    <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.4-beta</id>
+    <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.4-beta"/>
+    <summary>This release is a back port of the chain synchronization bug fix to the `v0.14.x-beta` series.
+
+# Database Migrations
+
+This release contains no database migrations.
+
+# Verifying the Release
+
+In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
+
+```
+curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/roasbeef.asc | gpg --import
+```
+
+Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.14.4-beta.sig` and `manifest-v0.14.4-beta.txt` are in the current directory) with:
+
+```
+gpg --verify manifest-roasbeef-v0.14.4-beta.sig manifest-v0.14.4-beta.txt
+```
+
+You should see the following if the verification was successful:
+
+```
+gpg: Signature made Wed Sep 30 17:35:20 2020 PDT
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+```
+
+That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
+
+## Verifying the Release Timestamp 
+
+From this new version onwards, in addition time-stamping the _git tag_ with [OpenTimeStamps](https://opentimestamps.org/), we'll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: ` manifest-roasbeef-v0.14.4-beta.txt.asc.ots`.
+
+Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+```
+ots verify manifest-roasbeef-v0.14.4-beta.sig.ots -f manifest-roasbeef-v0.14.4-beta.sig
+```
+
+Alternatively, [the open timestamps website](https://opentimestamps.org/) can be used to verify timestamps if one doesn't have a `bitcoind` instance accessible locally. 
+
+These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. 
+
+## Verifying the Release Binaries
+
+Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our [reproducible builds guide](https://github.com/lightningnetwork/lnd/tree/master/build/release) for how this can be achieved.
+The release binaries are compiled with `go1.17.3`, which is required by verifiers to arrive at the same ones.
+They include the following build tags: `autopilotrpc`, `signrpc`, `walletrpc`, `chainrpc`, `invoicesrpc`, `routerrpc`, `watchtowerrpc` and `monitoring`. Note that these are already included in the release script, so they do not need to be provided.
+
+The `make release` command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then `make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;` can be used. 
+
+Finally, you can also verify the _tag_ itself with the following command:
+
+```
+$ git verify-tag v0.14.4-beta
+gpg: Signature made Tue Sep 15 18:55:00 2020 PDT
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+```
+
+## Verifying the Docker Images
+
+To verify the `lnd` and `lncli` binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):
+
+```shell
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.14.4-beta /verify-install.sh v0.14.4-beta
+$ OK=$?
+$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
+$ docker run lightninglabs/lnd [command-line options]
+```
+
+# Building the Contained Release 
+
+Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
+that `vendor.tar.gz` and `lnd-source-v0.14.4-beta.tar.gz` are in the current directory, follow these steps:
+
+```
+tar -xvzf vendor.tar.gz
+tar -xvzf lnd-source-v0.14.4-beta.tar.gz
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.4-beta&quot; ./cmd/lnd
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.14.4-beta&quot; ./cmd/lncli
+```
+
+The `-mod=vendor` flag tells the `go build` command that it doesn't need to fetch the dependencies, and instead, they're all enclosed in the local vendor directory. 
+
+Additionally, it's now possible to use the [enclosed `release.sh` script to bundle a release for a _specific_ system like so](https://github.com/lightningnetwork/lnd/pull/2191): 
+
+```
+make release sys=&quot;linux-arm64 darwin-amd64&quot;
+```
+
+⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️
+
+# Release Notes
+
+ - https://github.com/lightningnetwork/lnd/pull/7016: back port block parsing bug fix
+
+# Contributors (Alphabetical Order)
+
+- Olaoluwa Osuntokun
+
+</summary>
+    <title>lightningnetwork/lnd: v0.14.4-beta</title>
+    <updated>2022-10-14T19:32:28Z</updated>
+    <dc:date>2022-10-14T19:32:28Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcsuite/btcd/releases/tag/v0.22.2</id>
     <link href="https://github.com/btcsuite/btcd/releases/tag/v0.22.2"/>
@@ -5720,36 +5829,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-04-30T04:12:32Z</updated>
     <dc:date>2022-04-30T04:12:32Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.0</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.0"/>
-    <summary>### New features:
-* DASHBOARD!!! (#3530 #3629 #3631 #3654) @NicolasDorier @dennisreimann @dstrukt
-* Payout Processors (#3476) @Kukks
-* Allow pull payments, refunds to be automatically approved (#1851  #3682) @Kukks
-* Greenfield: Add transaction info for on chain wallet (#3561) @bolatovumar
-* Greenfield: Add label filter for on chain wallet transaction (#3588) @bolatovumar
-* Greenfield: Add lightning payment info (#3557) @dennisreimann
-* Greenfield: Add description hash to CreateLightningInvoiceRequest (#3559) @dennisreimann
-* Allow Users to be disabled/enabled (#3639) @Kukks
-### Bug fixes:
-* Various UI fixes (#3599 #3577 #3624 #3642) @leesalminen @bolatovumar @dafunction @dennisreimann
-* Fix bug when bumping fee (#3608) @bolatovumar
-* Fix bug around Pay button html generator (#3646) @dennisreimann
-* Fix Lightning addresses not being deleted after removing store (#3638) @Kukks
-* Fix payment request redirect url (#3672 #3673) @dennisreimann
-### Improvements
-* Add additional rate providers as supported from CoinGecko @NicolasDorier
-* Allow default payment method for Pay button (#3606) @bolatovumar
-* Link directly to services from Lightning wallet page (#3593) @dennisreimann
-* Use the store's default currency when creating entities (#3585) @dennisreimann
-* Specify PayJoin enabled in Payment Link heading (#3614) @orangesurf
-* LNURL: Use Lightning description template in LNURL metadata (#3667) @dennisreimann
-* Design updates (#3647 #3653 #3565) @dennisreimann @dstrukt
-* Hide empty plugins section (#3643) @dennisreimann</summary>
-    <title>btcpayserver/btcpayserver: v1.5.0</title>
-    <updated>2022-04-29T11:02:07Z</updated>
-    <dc:date>2022-04-29T11:02:07Z</dc:date>
-  </entry>
-  <dc:date>2022-10-10T22:10:51+00:00</dc:date>
+  <dc:date>2022-10-14T19:40:57+00:00</dc:date>
 </feed>
