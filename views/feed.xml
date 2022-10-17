@@ -6,11 +6,56 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-10-17T11:02:34+00:00</updated>
+  <updated>2022-10-17T17:21:56+00:00</updated>
+  <entry>
+    <id>https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.2.1</id>
+    <link href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.2.1"/>
+    <summary>## What's Changed
+* Update index.html copy and styling by @elvece in https://github.com/Start9Labs/embassy-os/pull/1855
+* increase maximum avahi entry group size by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1869
+* bump version by @dr-bonez in https://github.com/Start9Labs/embassy-os/pull/1871
+
+
+**Full Changelog**: https://github.com/Start9Labs/embassy-os/compare/v0.3.2...v0.3.2.1</summary>
+    <title>Start9Labs/embassy-os: v0.3.2.1</title>
+    <updated>2022-10-17T17:11:15Z</updated>
+    <dc:date>2022-10-17T17:11:15Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.1</id>
     <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.1"/>
-    <summary></summary>
+    <summary># Binaries
+
+There are two types of binaries:
+
+## Specter Desktop
+It's a windowed GUI application with Specter server included.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.1/Specter-Setup-v1.13.1.exe), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.1/Specter-v1.13.1.dmg), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.1/specter_desktop-v1.13.1-x86_64-linux-gnu.tar.gz)
+
+**Note on Linux**: you need to set up udev rules (included in the archive). Check out [readme](https://github.com/cryptoadvance/specter-desktop/blob/master/udev/README.md#usage).
+
+**Note on macOS**: The current build supports only macOS Catalina (10.15) or higher. If you'd like to run Specter on an older macOS version, you can [install Specter from Pip](https://github.com/cryptoadvance/specter-desktop#installing-specter-from-pip).
+
+## specterd
+It's a command-line program that only runs Specter server.
+Supported platforms: [Windows](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.1/specterd-v1.13.1-win64.zip), [MacOS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.1/specterd-v1.13.1-osx.zip), [Linux (x86_64)](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.1/specterd-v1.13.1-x86_64-linux-gnu.zip)
+
+## Signatures and hashes
+[SHA256SUMS](https://github.com/cryptoadvance/specter-desktop/releases/download/v1.13.1/SHA256SUMS) file contains sha256 hashes of all binary files and signed with &quot;Specter Signer's&quot; GPG key.
+You can get the public key from [here](http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x785a2269ee3a9736ac1a4f4c864b7cf9a811fef7).
+Fingerprint of the key is `785A 2269 EE3A 9736 AC1A 4F4C 864B 7CF9 A811 FEF7`
+This key has been signed by @k9ert's key which you might have used for validating th 1.7.0 release.
+
+# Release notes
+- Bugfix: Hover effect in balance display #1904 (Manolis Mandrapilias)
+- Bugfix: Remove black empty bar in tx-table after search #1912 (relativisticelectron)
+- Bugfix: upgrade hwi to 2.1.1 to fix #1840 #1909 (k9ert)
+- Chore: macos release-script fixes #1897 (Manolis Mandrapilias)
+- Chore: More precise grep in Cypress bash script #1911 (Manolis Mandrapilias)
+- Chore: Update icon used in Electron app #1903 (d11n)
+- Privacy: Disabeling spellcheck to avoid any leakage to 3rd party servers #1892 (relativisticelectron)
+- UIUX: Clearer unconfirmed transaction icons #1899 (relativisticelectron)
+</summary>
     <title>cryptoadvance/specter-desktop: v1.13.1</title>
     <updated>2022-10-17T10:55:52Z</updated>
     <dc:date>2022-10-17T10:55:52Z</dc:date>
@@ -5811,13 +5856,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-05-05T07:20:39Z</updated>
     <dc:date>2022-05-05T07:20:39Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/romanz/electrs/releases/tag/v0.9.7</id>
-    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.7"/>
-    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#097-apr-30-2022</summary>
-    <title>romanz/electrs: v0.9.7</title>
-    <updated>2022-04-30T17:48:44Z</updated>
-    <dc:date>2022-04-30T17:48:44Z</dc:date>
-  </entry>
-  <dc:date>2022-10-17T11:02:34+00:00</dc:date>
+  <dc:date>2022-10-17T17:21:56+00:00</dc:date>
 </feed>
