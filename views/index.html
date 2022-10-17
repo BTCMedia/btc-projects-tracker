@@ -38,6 +38,123 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/lightningnetwork/lnd">lightningnetwork/lnd</a>: <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.15.3-beta">v0.15.3-beta</a>
+						    </h2>
+							<p class="card-text">Published: 2022-10-17 22:22:01 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>This is a minor release that contains mainly bug fixes, and contains no new database migrations. </p>
+
+<p>This release fixes a series of bugs related to fee estimation with taproot outputs/inputs, a bug fix to ensure new channels are always properly announced, and fixes an edge case related to zero conf channels. </p>
+
+<h1>Verifying the Release</h1>
+
+<p>In order to verify the release, you&#39;ll need to have <code>gpg</code> or <code>gpg2</code> installed on your system. Once you&#39;ve obtained a copy (and hopefully verified that as well), you&#39;ll first need to import the keys that have signed this release if you haven&#39;t done so already: </p>
+
+<p><code>
+curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/roasbeef.asc | gpg --import
+</code></p>
+
+<p>Once you have the required PGP keys, you can verify the release (assuming <code>manifest-roasbeef-v0.15.3-beta.sig</code> and <code>manifest-v0.15.3-beta.txt</code> are in the current directory) with:</p>
+
+<p><code>
+gpg --verify manifest-roasbeef-v0.15.3-beta.sig manifest-v0.15.3-beta.txt
+</code></p>
+
+<p>You should see the following if the verification was successful:</p>
+
+<p><code>
+gpg: Signature made Mon Oct 17 15:18:02 2022 PDT
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+</code></p>
+
+<p>That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you&#39;ve downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the <code>sha256</code> hash of the archive with <code>shasum -a 256 &lt;filename&gt;</code>, compare it with the corresponding one in the manifest file, and ensure they match <em>exactly</em>.</p>
+
+<h2>Verifying the Release Timestamp</h2>
+
+<p>From this new version onwards, in addition time-stamping the <em>git tag</em> with <a href="https://opentimestamps.org/">OpenTimeStamps</a>, we&#39;ll also now timestamp the manifest file along with its signature. Two new files are now included along with the rest of our release artifacts: <code>manifest-roasbeef-v0.15.3-beta.txt.asc.ots</code>.</p>
+
+<p>Assuming you have the opentimestamps client installed locally, the timestamps can be verified with the following commands: 
+<code>
+ots verify manifest-roasbeef-v0.15.3-beta.sig.ots -f manifest-roasbeef-v0.15.3-beta.sig
+</code></p>
+
+<p>Alternatively, <a href="https://opentimestamps.org/">the open timestamps website</a> can be used to verify timestamps if one doesn&#39;t have a <code>bitcoind</code> instance accessible locally. </p>
+
+<p>These timestamps should give users confidence in the integrity of this release even after the key that signed the release expires. </p>
+
+<h2>Verifying the Release Binaries</h2>
+
+<p>Our release binaries are fully reproducible. Third parties are able to verify that the release binaries were produced properly without having to trust the release manager(s). See our <a href="https://github.com/lightningnetwork/lnd/tree/master/build/release">reproducible builds guide</a> for how this can be achieved.
+The release binaries are compiled with <code>go1.18.2</code>, which is required by verifiers to arrive at the same ones.
+They include the following build tags: <code>autopilotrpc</code>, <code>signrpc</code>, <code>walletrpc</code>, <code>chainrpc</code>, <code>invoicesrpc</code>, <code>neutrinorpc</code>, <code>routerrpc</code>, <code>watchtowerrpc</code>, <code>monitoring</code>, <code>peersrpc</code>, <code>kvdb_postrgres</code>, and <code>kvdb_etcd</code>. Note that these are already included in the release script, so they do not need to be provided.</p>
+
+<p>The <code>make release</code> command can be used to ensure one rebuilds with all the same flags used for the release. If one wishes to build for only a single platform, then <code>make release sys=&lt;OS-ARCH&gt; tag=&lt;tag&gt;</code> can be used. </p>
+
+<p>Finally, you can also verify the <em>tag</em> itself with the following command:</p>
+
+<p><code>
+$ git verify-tag v0.15.3-beta
+gpg: Signature made Mon 17 Oct 2022 05:55:01 PM UTC using RSA key ID 9B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot;
+</code></p>
+
+<h2>Verifying the Docker Images</h2>
+
+<p>To verify the <code>lnd</code> and <code>lncli</code> binaries inside the docker images against the signed, reproducible release binaries, there is a verification script in the image that can be called (before starting the container for example):</p>
+
+<p><code>shell
+$ docker run --rm --entrypoint=&quot;&quot; lightninglabs/lnd:v0.15.3-beta /verify-install.sh v0.15.3-beta
+$ OK=$?
+$ if [ &quot;$OK&quot; -ne &quot;0&quot; ]; then echo &quot;Verification failed!&quot;; exit 1; done
+$ docker run lightninglabs/lnd [command-line options]
+</code></p>
+
+<h1>Building the Contained Release</h1>
+
+<p>Users are able to rebuild the target release themselves without having to fetch any of the dependencies. In order to do so, assuming
+that <code>vendor.tar.gz</code> and <code>lnd-source-v0.15.3-beta.tar.gz</code> are in the current directory, follow these steps:</p>
+
+<p><code>
+tar -xvzf vendor.tar.gz
+tar -xvzf lnd-source-v0.15.3-beta.tar.gz
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.15.3-beta&quot; ./cmd/lnd
+GO111MODULE=on go install -v -mod=vendor -ldflags &quot;-X github.com/lightningnetwork/lnd/build.Commit=v0.15.3-beta&quot; ./cmd/lncli
+</code></p>
+
+<p>The <code>-mod=vendor</code> flag tells the <code>go build</code> command that it doesn&#39;t need to fetch the dependencies, and instead, they&#39;re all enclosed in the local vendor directory. </p>
+
+<p>Additionally, it&#39;s now possible to use the <a href="https://github.com/lightningnetwork/lnd/pull/2191">enclosed <code>release.sh</code> script to bundle a release for a <em>specific</em> system like so</a>: </p>
+
+<p><code>
+make release sys=&quot;linux-arm64 darwin-amd64&quot;
+</code></p>
+
+<p>⚡️⚡️⚡️ OK, now to the rest of the release notes! ⚡️⚡️⚡️</p>
+
+<h1>Release Notes</h1>
+
+<p><a href="https://github.com/lightningnetwork/lnd/blob/v0-15-3-branch/docs/release-notes/release-notes-0.15.3.md">https://github.com/lightningnetwork/lnd/blob/v0-15-3-branch/docs/release-notes/release-notes-0.15.3.md</a></p>
+
+<h1>Contributors (Alphabetical Order)</h1>
+
+<ul>
+<li>Eugene Siegel</li>
+<li>Jordi Montes</li>
+<li>Olaoluwa Osuntokun</li>
+<li>Oliver Gugger</li>
+</ul>
+</p>
+					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.15.3-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/Start9Labs/embassy-os">Start9Labs/embassy-os</a>: <a href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.2.1">v0.3.2.1</a>
 						    </h2>
 							<p class="card-text">Published: 2022-10-17 17:11:15 UTC</p>
@@ -52,6 +169,12 @@
 </ul>
 
 <p><strong>Full Changelog</strong>: <a href="https://github.com/Start9Labs/embassy-os/compare/v0.3.2...v0.3.2.1">https://github.com/Start9Labs/embassy-os/compare/v0.3.2...v0.3.2.1</a></p>
+
+<p>SHA-256 Checksums:
+<code>
+dedff3eb408ea411812b8f46e6c6ed32bfbd97f61ec2b85a6be40373c0528256  eos.img
+c4b17658910dd10c37df134d5d5fdd6478f962ba1b803d24477d563d44430f96  eos.tar.gz
+</code></p>
 </p>
 					    <a href="https://github.com/Start9Labs/embassy-os" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/Start9Labs/embassy-os/releases/tag/v0.3.2.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
@@ -6838,205 +6961,6 @@ Rusty.</p>
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bisq-network/bisq">bisq-network/bisq</a>: <a href="https://github.com/bisq-network/bisq/releases/tag/v1.9.1">v1.9.1</a>
-						    </h2>
-							<p class="card-text">Published: 2022-05-05 07:20:39 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><strong>A newer version is already available! Please don’t use this version anymore.</strong></p>
-
-<p>This is a follow-up release that fixes a null pointer exception when resolving a mediation with custom payout, fixes an API issue with AustrialianPayId and improves fee transaction validation.</p>
-
-<p>See <a href="https://github.com/bisq-network/bisq/milestone/70?closed=1">https://github.com/bisq-network/bisq/milestone/70?closed=1</a> for more details.</p>
-
-<p>Here are the release notes from v1.9.0:</p>
-
-<h2>Release notes</h2>
-
-<p>If you ever wanted to integrate Bisq into your project and/or to automate your most common use cases, now is the time to do it! This release ships an official API: a daemon (GRPC API endpoints) and a CLI. Please see the API section below for more details.</p>
-
-<p>Aside from an API, we have simplified Bisq&#39;s navigation to make it easier to find what you are looking for:
-* If you want to buy Bitcoin with EUR, just go to Buy &gt; Bitcoin and select your preferred payment method
-* If you want to buy BSQ, just go to Buy &gt; BSQ</p>
-
-<p>This approach gets rid of several intervening and (sometimes unintuitive) steps, so we hope it makes Bisq less mind-bending for new users.</p>
-
-<p>And of course there are lots of bug fixes and improvements across the board.</p>
-
-<h3>Improvements</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/6135">Improve navigation structure</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6132">Check failed trades for sensitive data purge</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6140">Clarify that CBM / F2F not be used to advertise websites or contact info</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6130">Clarify DAO status shown when in sync &amp; peers have conflicts</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6014">Editable account names</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6107">IBAN validation for SEPA account</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6110">Separate transaction details in funds views</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6099">Dispute subsystem enhancements</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6147">Add inbound Tor connectivity test</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6123">Support Bitcoin Core v22 RPC for JSON export</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6164">Add popup reminder to inform users of trading rules</a></li>
-</ul>
-
-<h3>Bug fixes</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/6136">Prevent multiple payout screens when agent repeat clicks on close ticket</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6131">Prevent UI freeze in BSQ dashboard view</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6121">Show correct buy BSQ state on activation for take offer</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6109">Update trigger price validation</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6097">Update currency related fields after switch of payment account</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6111">Trigger price truncation of prompt text</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6176">Fix corrupted MaxTradePeriod when offer payment method changed</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6134">Fix the avatar trade count tag to include BSQ Swap trades</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6148">Fix localization issue when accessing directories and JAR resource paths</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6133">Fix fee request throttling</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6178">Fix update number of open offers on change</a></li>
-</ul>
-
-<h3>Development &amp; Documentation</h3>
-
-<ul>
-<li><a href="https://github.com/bisq-network/bisq/pull/6145">Add logo to README</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6083">Fix permissions for build.yml</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6122">API: Create API cli and daemon releases as zip archives</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6103">API: Send pretty payment details to API clients</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6098">API: Exclude persistedAccountName from API payment acct json forms</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6094">API: Bug-fix for incorrect BsqSwap&#39;s OfferInfo.isActivated value</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6088">API: Send meaningful io.grpc.Status.Code to gRPC clients</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6086">API: Move get (cryptocurrency) offer filter to daemon</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6081">API: Fix 3 misleading .proto TradeInfo field names</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6080">API: Convert grpc.proto field names to snake_case</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6079">API: Remove GetTradeStatistics service from grpc.proto</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6068">API: Continue documenting grpc.proto for API reference site</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6065">API: Clarify meaning of API/Offer related % fields</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6062">API: Change TradeInfo proto&#39;s tradePrice &amp; tradeVolume fields to string</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6060">API: Change API OfferInfo volume/minVolume proto fields to string</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6057">API: Change API grpc.proto triggerPrice field to string</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6056">API: Change API&#39;s OfferInfo proto&#39;s price field to string</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6055">API: Prepare API Offers .proto defs for significant changes</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6074">API: Fix BSQ swap description of BTC price for 1 BSQ</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6152">Bump actions/checkout from 3.0.0 to 3.0.1</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6093">Bump actions/checkout from 2.4.0 to 3</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6143">Bump actions/setup-java from 3.1.0 to 3.1.1</a></li>
-<li><a href="https://github.com/bisq-network/bisq/pull/6082">Bump actions/setup-java from 2.5.0 to 3</a></li>
-</ul>
-
-<h3>New Assets</h3>
-
-<p>No new assets were added.</p>
-
-<h2>Verification</h2>
-
-<p>For a detailed description on how to verify your Bisq installer please have a look at our wiki: <a href="https://bisq.wiki/Downloading_and_installing#Verify_installer_file">https://bisq.wiki/Downloading_and_installing#Verify_installer_file</a></p>
-
-<p>Url of the signing key (Christoph Atteneder): <a href="https://bisq.network/pubkey/29CDFD3B.asc">https://bisq.network/pubkey/29CDFD3B.asc</a>
-Full fingerprint: <code>CB36 D7D2 EBB2 E35D 9B75  500B CD5D C1C5 29CD FD3B</code></p>
-
-<p>Import the key:
-<code>curl https://bisq.network/pubkey/29CDFD3B.asc | gpg --import</code>
-GPG prints a confusion warning: &quot;This key is not certified with a trusted signature!&quot; - See <a href="https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key">https://serverfault.com/questions/569911/how-to-verify-an-imported-gpg-key</a> for background information what it means.</p>
-
-<p>How to verify signatures?
-<code>gpg --digest-algo SHA256 --verify BINARY{.asc*,}</code>
-Replace BINARY with the file you downloaded (e.g. Bisq-1.9.1.dmg)</p>
-
-<p>Verify jar file inside binary:
-You can verify on OSX the jar file with:
-shasum -a256 [PATH TO BISQ APP]/Bisq.app/Contents/app/desktop-1.9.1-all.jar
-The output need to match the value from the Bisq-1.9.1.jar.txt file.</p>
-
-<p>There are three hashes within the Bisq-1.9.1.jar.txt file (macOS, Windows, Linux).
-If you want to reproduce and verify the hash of the jar file locally, you need to do so on Windows or Linux using Java 15.0.6 and the v1.9.1 release tag. Because of the signing and notarization process that requires the developer certificate used for the build on macOS it is not possible to create the same jar on macOS.</p>
-
-<h2>API</h2>
-
-<p>Starting with v1.9.1 you can use pre-built versions of the Bisq cli (bisq-cli-v1.9.1.zip) and Bisq daemon (bisq-daemon-v1.9.1.zip) to use Bisq without touching the user interface.</p>
-
-<p>Just download the archives and extract them locally. You have to run the daemon to access the local Bisq daemon API endpoints.</p>
-
-<p>To run daemon.jar on Mainnet:
-<code>bash
-$ java -jar daemon.jar --apiPassword=becareful
-</code></p>
-
-<p>If you just want to control your headless daemon within your terminal you have to run the Bisq cli as well.</p>
-
-<p>Again just download the bisq-cli archive and extract it locally.</p>
-
-<p>To call getversion from cli.jar
-<code>bash
-$ java -jar cli.jar --password=becareful getversion
-</code></p>
-
-<p>You can use the Bisq API to access local Bisq daemon API endpoints, which provide a subset of the Bisq Desktop application&#39;s feature set: check balances, transfer BTC and BSQ, create payment accounts, view offers, create and take offers, and execute trades.</p>
-
-<p>The Bisq API is based on the gRPC framework, and any supported gRPC language binding can be used to call Bisq API endpoints.</p>
-
-<p>You&#39;ll find in-depth documentation and examples under following link: <a href="https://bisq-network.github.io/slate/#introduction">https://bisq-network.github.io/slate/#introduction</a></p>
-
-<p>Bisq gRPC API reference documentation example source code is hosted on GitHub at <a href="https://github.com/bisq-network/bisq-api-reference">https://github.com/bisq-network/bisq-api-reference</a>. Java and Python developers interested in bot development may find this Intellij project useful for running the existing examples, and writing their own bots.</p>
-
-<p>For additional developer support please join <a href="https://matrix.to/#/%23bisq.dev:bitcoin.kyoto">Development - Bisq v1</a> on Matrix.</p>
-
-<h2>Known issues with installation</h2>
-
-<h3>Windows:</h3>
-
-<p>There is a known issue with Anti Virus software. We got several reports from users running into different problems. Either the AV software blocks Bisq or Tor, delete files in the data directory [2] or app directory [1]) or cause such a long delay at startup that Tor gets terminated and a file remains locked which can cause that Bisq cannot be started afterwards. To resolve that you need to restart Windows then the lock get released. We are working on solutions to fix those issues.</p>
-
-<p>If you use Crypto currencies on your Windows system be aware that Windows is much more vulnerable to malware than Linux or OSX. Consider to use a dedicated non-Windows system when dealing with cryptocurrencies.</p>
-
-<p>[1] Application directory (contains application installation files):
-C:\Users&lt;username&gt;\AppData\Local\Bisq</p>
-
-<p>[2] Data directory (contains all Bisq data including wallet):
-C:\Users&lt;username&gt;\AppData\Roaming\Bisq\btc_mainnet\tor (you can delete everything except the hiddenservice directory)</p>
-
-<h3>Linux:</h3>
-
-<p>Hint for Debian users:
-If you have problems starting Bisq on Debian use: <code>/opt/bisq/bin/Bisq</code></p>
-
-<p>If your Linux distro does not support .deb files please follow this instruction:
-<code>
-cd ~/Downloads  
-mkdir tmp  
-cd tmp   
-ar x ../Bisq-64bit-1.9.1.deb  
-sudo tar Jxvf data.tar.xz  
-sudo cp -rp opt/Bisq /opt/
-</code>
-That instruction is not tested on many different distros. If you encounter problems please report it in a Github issue so we can improve it. </p>
-
-<h2>Credits</h2>
-
-<p>Thanks to everyone who directly contributed to this release:</p>
-
-<ul>
-<li>@Devils-Knight </li>
-<li>@ghubstan</li>
-<li>@jmacxx </li>
-<li>@MarnixCroes </li>
-<li>@ripcurlx </li>
-<li>@xyzmaker123 </li>
-</ul>
-
-<p>A special thanks to our first time contributors:
-  - @Devils-Knight : <a href="https://github.com/bisq-network/bisq/pull/6083">Fix permissions for build.yml</a></p>
-
-<p>As well as to everyone that helped with translations on <a href="https://transifex.com/bisq/bisq-desktop">Transifex</a>.</p>
-</p>
-					    <a href="https://github.com/bisq-network/bisq" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bisq-network/bisq/releases/tag/v1.9.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
