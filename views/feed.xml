@@ -6,7 +6,15 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2022-10-14T19:40:57+00:00</updated>
+  <updated>2022-10-17T11:02:34+00:00</updated>
+  <entry>
+    <id>https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.1</id>
+    <link href="https://github.com/cryptoadvance/specter-desktop/releases/tag/v1.13.1"/>
+    <summary></summary>
+    <title>cryptoadvance/specter-desktop: v1.13.1</title>
+    <updated>2022-10-17T10:55:52Z</updated>
+    <dc:date>2022-10-17T10:55:52Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.14.4-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.14.4-beta"/>
@@ -5811,23 +5819,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2022-04-30T17:48:44Z</updated>
     <dc:date>2022-04-30T17:48:44Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.1</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.5.1"/>
-    <summary>### Bug fixes:
-
-* Do not show balance if can't get the balance (#3695) @NicolasDorier
-* Fix performance issue on dashboard for big wallets (#3694) @NicolasDorier
-* Do not crash if /apps/{appId} do not exists @NicolasDorier
-
-### Improvements:
-
-* Remove logs about pending invoices @NicolasDorier
-* Add missing swagger doc for auto approval of payouts @Kukks
-</summary>
-    <title>btcpayserver/btcpayserver: v1.5.1</title>
-    <updated>2022-04-30T04:12:32Z</updated>
-    <dc:date>2022-04-30T04:12:32Z</dc:date>
-  </entry>
-  <dc:date>2022-10-14T19:40:57+00:00</dc:date>
+  <dc:date>2022-10-17T11:02:34+00:00</dc:date>
 </feed>
