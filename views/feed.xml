@@ -6,7 +6,7 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-05T14:46:02-06:00</updated>
+  <updated>2023-12-05T15:05:31-06:00</updated>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.13</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.13"/>
@@ -5723,6 +5723,18 @@ You can also read our [blog post](https://blog.btcpayserver.org/btcpay-server-1-
     <dc:date>2023-06-01T12:25:07Z</dc:date>
   </entry>
   <entry>
+    <id>https://github.com/vulpemventures/nigiri/releases/tag/v0.5.1</id>
+    <link href="https://github.com/vulpemventures/nigiri/releases/tag/v0.5.1"/>
+    <summary>## Changelog
+* f84dbb3 Improve README description (#180)
+* 04a21f8 fix: use new tapd image (#181)
+
+</summary>
+    <title>vulpemventures/nigiri: v0.5.1</title>
+    <updated>2023-06-01T09:01:53Z</updated>
+    <dc:date>2023-06-01T09:01:53Z</dc:date>
+  </entry>
+  <entry>
     <id>https://github.com/bitcoin/bitcoin/releases/tag/v25.0</id>
     <link href="https://github.com/bitcoin/bitcoin/releases/tag/v25.0"/>
     <summary>Bitcoin Core version 25.0 is now available from:
@@ -5836,29 +5848,5 @@ f25a6a160d1b7bbd90a2e88c542d40bc2e0cfb47d825be99a047bb4121182556 startos-0.3.4.2
     <updated>2023-05-24T08:14:48Z</updated>
     <dc:date>2023-05-24T08:14:48Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lnbits/lnbits/releases/tag/0.10.7</id>
-    <link href="https://github.com/lnbits/lnbits/releases/tag/0.10.7"/>
-    <summary>## What's Changed
-* Adding IT properly by @SuperAtic in https://github.com/lnbits/lnbits/pull/1695
-* fix old payments endpoint for lndhub by @dni in https://github.com/lnbits/lnbits/pull/1698
-* Added Welsh by @arcbtc in https://github.com/lnbits/lnbits/pull/1696
-* Extend bar for mobile by @callebtc in https://github.com/lnbits/lnbits/pull/1544
-* Translated en.js to Polish by @hosiawak in https://github.com/lnbits/lnbits/pull/1701
-* Merges extensions into one page by @arcbtc in https://github.com/lnbits/lnbits/pull/1656
-* Fix: `get_payments` crud default `Filter` values. by @callebtc in https://github.com/lnbits/lnbits/pull/1703
-* Add user role by @talvasconcelos in https://github.com/lnbits/lnbits/pull/1712
-* FIX: internal qrcode scanning check should always check for lowercase by @dni in https://github.com/lnbits/lnbits/pull/1713
-* FIX: qrcode scanner on legends, by updating the library by @dni in https://github.com/lnbits/lnbits/pull/1714
-
-## New Contributors
-* @SuperAtic made their first contribution in https://github.com/lnbits/lnbits/pull/1695
-* @hosiawak made their first contribution in https://github.com/lnbits/lnbits/pull/1701
-
-**Full Changelog**: https://github.com/lnbits/lnbits/compare/0.10.6...0.10.7</summary>
-    <title>lnbits/lnbits: 0.10.7</title>
-    <updated>2023-05-19T18:09:47Z</updated>
-    <dc:date>2023-05-19T18:09:47Z</dc:date>
-  </entry>
-  <dc:date>2023-12-05T14:46:02-06:00</dc:date>
+  <dc:date>2023-12-05T15:05:31-06:00</dc:date>
 </feed>
