@@ -6,7 +6,48 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-06T17:42:04+00:00</updated>
+  <updated>2023-12-06T17:51:50+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.13</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.13"/>
+    <summary>ℹ️ **Migration for existing legacy wallets (v1.x)**
+
+Users upgrading from the legacy app (1.x) to 2.x will need to migrate to be able to use 2.x features. See [the 2.0.0 release notes](https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.0) for details about the migration process. You can see what version you are currently using in Settings &gt; About.
+
+## Changes from 2.0.12
+
+* Add timeout to Peer connection by @dpad85 in https://github.com/ACINQ/phoenix/pull/448
+* Localisation in es-419 (Spanish for Latin America and The Caribbean) by @BitByBitByBitByBit in https://github.com/ACINQ/phoenix/pull/470 and https://github.com/ACINQ/phoenix/pull/477
+Thanks again @BitByBitByBitByBit for your work!
+* Skip TLS check for onion Electrum servers by @dpad85 in https://github.com/ACINQ/phoenix/pull/479
+* Add help message for swaps in Home screen in b5d17ed879d32a5addace1d44094e167101ca7d1
+* Fix crashes due to plural resources not being supported on some Samsung devices 703dd23a94f446c33e3c22c95b386c4debdf4356
+
+**Full Changelog**: 
+
+- phoenix: https://github.com/ACINQ/phoenix/compare/android-v2.0.12...android-v2.0.13
+- lightning-kmp: https://github.com/ACINQ/lightning-kmp/compare/v1.5.11...v1.5.12
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: android-v2.0.13</title>
+    <updated>2023-12-01T16:32:36Z</updated>
+    <dc:date>2023-12-01T16:32:36Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.5.7</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.5.7"/>
@@ -5807,29 +5848,5 @@ f25a6a160d1b7bbd90a2e88c542d40bc2e0cfb47d825be99a047bb4121182556 startos-0.3.4.2
     <updated>2023-05-24T08:14:48Z</updated>
     <dc:date>2023-05-24T08:14:48Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lnbits/lnbits/releases/tag/0.10.7</id>
-    <link href="https://github.com/lnbits/lnbits/releases/tag/0.10.7"/>
-    <summary>## What's Changed
-* Adding IT properly by @SuperAtic in https://github.com/lnbits/lnbits/pull/1695
-* fix old payments endpoint for lndhub by @dni in https://github.com/lnbits/lnbits/pull/1698
-* Added Welsh by @arcbtc in https://github.com/lnbits/lnbits/pull/1696
-* Extend bar for mobile by @callebtc in https://github.com/lnbits/lnbits/pull/1544
-* Translated en.js to Polish by @hosiawak in https://github.com/lnbits/lnbits/pull/1701
-* Merges extensions into one page by @arcbtc in https://github.com/lnbits/lnbits/pull/1656
-* Fix: `get_payments` crud default `Filter` values. by @callebtc in https://github.com/lnbits/lnbits/pull/1703
-* Add user role by @talvasconcelos in https://github.com/lnbits/lnbits/pull/1712
-* FIX: internal qrcode scanning check should always check for lowercase by @dni in https://github.com/lnbits/lnbits/pull/1713
-* FIX: qrcode scanner on legends, by updating the library by @dni in https://github.com/lnbits/lnbits/pull/1714
-
-## New Contributors
-* @SuperAtic made their first contribution in https://github.com/lnbits/lnbits/pull/1695
-* @hosiawak made their first contribution in https://github.com/lnbits/lnbits/pull/1701
-
-**Full Changelog**: https://github.com/lnbits/lnbits/compare/0.10.6...0.10.7</summary>
-    <title>lnbits/lnbits: 0.10.7</title>
-    <updated>2023-05-19T18:09:47Z</updated>
-    <dc:date>2023-05-19T18:09:47Z</dc:date>
-  </entry>
-  <dc:date>2023-12-06T17:42:04+00:00</dc:date>
+  <dc:date>2023-12-06T17:51:50+00:00</dc:date>
 </feed>
