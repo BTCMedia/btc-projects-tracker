@@ -6,7 +6,42 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-06T21:31:55+00:00</updated>
+  <updated>2023-12-07T13:42:03+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.14</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.14"/>
+    <summary>ℹ️ **Migration for existing legacy wallets (v1.x)**
+
+Users upgrading from the legacy app (1.x) to 2.x will need to migrate to be able to use 2.x features. See [the 2.0.0 release notes](https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.0) for details about the migration process. You can see what version you are currently using in Settings &gt; About.
+
+## Main changes from 2.0.13
+
+* Added a screen to delete the wallet (4ffc78d1)
+* Fixed an issue reading bip-21 URIs with a Lightning invoice fallback, see #466 (f0ae9044)
+
+**Full changelog**: 
+- phoenix: https://github.com/ACINQ/phoenix/compare/android-v2.0.13...android-v2.0.14
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: android-v2.0.14</title>
+    <updated>2023-12-07T13:37:14Z</updated>
+    <dc:date>2023-12-07T13:37:14Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.17.3-beta</id>
     <link href="https://github.com/lightningnetwork/lnd/releases/tag/v0.17.3-beta"/>
@@ -5919,32 +5954,5 @@ f25a6a160d1b7bbd90a2e88c542d40bc2e0cfb47d825be99a047bb4121182556 startos-0.3.4.2
     <updated>2023-05-25T20:03:35Z</updated>
     <dc:date>2023-05-25T20:03:35Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lnbits/lnbits/releases/tag/0.10.8</id>
-    <link href="https://github.com/lnbits/lnbits/releases/tag/0.10.8"/>
-    <summary>## What's Changed
-* fix cln wallet for msat migration by @daywalker90 in https://github.com/lnbits/lnbits/pull/1671
-* C-Lightning -&gt; Core Lightning by @AaronDewes in https://github.com/lnbits/lnbits/pull/1720
-* remove mypy from precommit by @dni in https://github.com/lnbits/lnbits/pull/1718
-* Bump version to 0.10.8 by @dni in https://github.com/lnbits/lnbits/pull/1717
-* add voltage logo to index.html under runs on section by @jsahagun91 in https://github.com/lnbits/lnbits/pull/1711
-* fix formatting on main by @dni in https://github.com/lnbits/lnbits/pull/1723
-* Minor improvements to the German translation by @AaronDewes in https://github.com/lnbits/lnbits/pull/1721
-* Adds websocket for incoming/outgoing payments with wallet balance by @arcbtc in https://github.com/lnbits/lnbits/pull/1679
-* fix &quot;boolean&quot; query for sqlite by @talvasconcelos in https://github.com/lnbits/lnbits/pull/1727
-* FEAT: Refactor language selection, add portuguese by @talvasconcelos in https://github.com/lnbits/lnbits/pull/1725
-* feat: print extensions version on install/uninstall/reinstall by @motorina0 in https://github.com/lnbits/lnbits/pull/1726
-* Format wallet UI tweaks by @arcbtc in https://github.com/lnbits/lnbits/pull/1732
-* More wallet formats by @arcbtc in https://github.com/lnbits/lnbits/pull/1733
-
-## New Contributors
-* @daywalker90 made their first contribution in https://github.com/lnbits/lnbits/pull/1671
-* @jsahagun91 made their first contribution in https://github.com/lnbits/lnbits/pull/1711
-
-**Full Changelog**: https://github.com/lnbits/lnbits/compare/0.10.7...0.10.8</summary>
-    <title>lnbits/lnbits: 0.10.8</title>
-    <updated>2023-05-24T13:32:12Z</updated>
-    <dc:date>2023-05-24T13:32:12Z</dc:date>
-  </entry>
-  <dc:date>2023-12-06T21:31:55+00:00</dc:date>
+  <dc:date>2023-12-07T13:42:03+00:00</dc:date>
 </feed>
