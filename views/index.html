@@ -38,6 +38,366 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/bitcoinknots/bitcoin">bitcoinknots/bitcoin</a>: <a href="https://github.com/bitcoinknots/bitcoin/releases/tag/v25.1.knots20231115">v25.1.knots20231115</a>
+						    </h2>
+							<p class="card-text">Published: 2023-12-10 16:29:28 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h1>25.1 Release Notes</h1>
+
+<p>Bitcoin Knots version 25.1.knots20231115 is now available from:</p>
+
+<p><a href="https://bitcoinknots.org/files/25.x/25.1.knots20231115/">https://bitcoinknots.org/files/25.x/25.1.knots20231115/</a></p>
+
+<p>This release includes new features, various bug fixes and performance
+improvements, as well as updated translations.</p>
+
+<p>Please report bugs using the issue tracker at GitHub:</p>
+
+<p><a href="https://github.com/bitcoinknots/bitcoin/issues">https://github.com/bitcoinknots/bitcoin/issues</a></p>
+
+<p>To receive security and update notifications, please subscribe to:</p>
+
+<p><a href="https://bitcoinknots.org/list/announcements/join/">https://bitcoinknots.org/list/announcements/join/</a></p>
+
+<h1>How to Upgrade</h1>
+
+<p>If you are running an older version, shut it down. Wait until it has completely
+shut down (which might take a few minutes in some cases), then run the
+installer (on Windows) or just copy over <code>/Applications/Bitcoin-Qt</code> (on macOS)
+or <code>bitcoind</code>/<code>bitcoin-qt</code> (on Linux).</p>
+
+<p>Upgrading directly from very old versions of Bitcoin Core or Knots is
+possible, but it might take some time if the data directory needs to be migrated. Old
+wallet versions of Bitcoin Knots are generally supported.</p>
+
+<h1>Compatibility</h1>
+
+<p>Bitcoin Knots is supported on operating systems using the Linux kernel,
+macOS 10.15+, and Windows 7 and newer. It is not recommended to use
+Bitcoin Knots on unsupported systems.</p>
+
+<h1>Known Bugs</h1>
+
+<p>In various locations, including the GUI&#39;s transaction details dialog, transaction
+virtual sizes may not account for an unusually high number of sigops (ie, as
+determined by the <code>-bytespersigop</code> policy). This could result in reporting a
+lower virtual size than is actually used for mempool or mining purposes.</p>
+
+<p>In the interest of time, this release does not include updated translations.
+Please open an issue on GitHub if this is of particular importance to you or
+anyone you know. If nobody expresses interest in localization, it may continue
+to be skipped going forward.</p>
+
+<h1>Notable changes</h1>
+
+<h2>Security vulnerabilities fixed</h2>
+
+<p>Several security issues (CVEs CVE-2023-40257, CVE-2023-40258, and CVE-2023-40259)
+were identified in the extended <code>rpcauth</code> wallet-restriction syntax, which is
+intended to enable semi-trusted local applications using the Bitcoin Knots API to
+access only specific wallets (or none at all) and not others. The full details of
+these issues will be disclosed at a future time, but they have all been fixed in
+this release.</p>
+
+<h2>P2P and network changes</h2>
+
+<ul>
+<li>To address a potential denial-of-service, the logic to download headers from peers
+has been reworked.  This is particularly relevant for nodes starting up for the
+first time (or for nodes which are starting up after being offline for a long time).</li>
+</ul>
+
+<p>Whenever headers are received from a peer that have a total chainwork that is either
+  less than the node&#39;s <code>-minimumchainwork</code> value or is sufficiently below the work at
+  the node&#39;s tip, a &quot;presync&quot; phase will begin, in which the node will download the
+  peer&#39;s headers and verify the cumulative work on the peer&#39;s chain, prior to storing
+  those headers permanently. Once that cumulative work is verified to be sufficiently high,
+  the headers will be redownloaded from that peer and fully validated and stored.</p>
+
+<p>This may result in initial headers sync taking longer for new nodes starting up for
+  the first time, both because the headers will be downloaded twice, and because the effect
+  of a peer disconnecting during the presync phase (or while the node&#39;s best headers chain has less
+  than <code>-minimumchainwork</code>), will result in the node needing to use the headers presync mechanism
+  with the next peer as well (downloading the headers twice, again). (#25717)</p>
+
+<ul>
+<li><p>Enable parallel compact block downloads to mitigate temporary stalls from a slow peer. (#27626)</p></li>
+<li><p>The rate limit on transaction relay has been doubled to 14 transactions per
+second (35 tx/s for outbound connections) to better adapt to present network
+conditions. (#28592)</p></li>
+<li><p>Transactions of non-witness size 65 and above are now allowed by mempool
+and relay policy. This is to better reflect the actual afforded protections
+against CVE-2017-12842 and open up additional use-cases of smaller transaction sizes. (#26265)</p></li>
+<li><p>With I2P connections, a new, transient address is used for each outbound
+connection if <code>-i2pacceptincoming=0</code>. (#25355)</p></li>
+<li><p>A new net permission <code>forceinbound</code> (set with <code>-whitelist=forceinbound@...</code>
+or <code>-whitebind=forceinbound@...</code>) is introduced that extends <code>noban</code> permissions.
+Inbound connections from hosts protected by <code>forceinbound</code> will now be more
+likely to connect even if <code>maxconnections</code> is reached and the node&#39;s inbound
+slots are full. This is achieved by attempting to force the eviction of a random,
+inbound, otherwise unprotected peer. RPC <code>getpeerinfo</code> will also now indicate
+<code>forced_inbound</code>. (#27600)</p></li>
+<li><p>The <code>-datacarriersize</code> policy limit has been updated to match newer style datacarrier
+transactions. (#28408)</p></li>
+<li><p>An additional <code>-datacarriercost</code> option has also been added to avoid giving the &quot;segwit
+discount&quot; to aribitrary data (and can be increased to require datacarrier transactions
+to pay higher fees).</p></li>
+<li><p>The spam filters limiting smart contract code sizes for pre-Segwit and Segwit
+&quot;v0&quot; scripts have been expanded to also cover Taproot. Since the sizes were
+inconsistent, the lower size of 1650 which actually had a rationale has been
+used as the default for this release. The size limit can be adjusted with the
+new <code>-maxscriptsize</code> option. If you know of any legitimate scripts that are
+larger than the default, please report a bug.</p></li>
+</ul>
+
+<h2>New RPCs</h2>
+
+<ul>
+<li><p>A new <code>getprioritisedtransactions</code> RPC has been added. It returns a map of all fee deltas created by the
+user with prioritisetransaction, indexed by txid. The map also indicates whether each transaction is
+present in the mempool.</p></li>
+<li><p><code>getaddrmaninfo</code> has been added to view the distribution of addresses in the
+new and tried table of the node&#39;s address manager across different networks
+(ipv4, ipv6, onion, i2p, cjdns). The RPC returns count of addresses in new
+and tried table as well as their sum for all networks. (#27511, #28565)</p></li>
+</ul>
+
+<h2>Updated RPCs</h2>
+
+<ul>
+<li><p>The <code>verifychain</code> RPC will now return <code>false</code> if the checks didn&#39;t fail,
+but couldn&#39;t be completed at the desired depth and level. This could be due
+to missing data while pruning, due to an insufficient dbcache or due to
+the node being shutdown before the call could finish. (#25574)</p></li>
+<li><p><code>sendrawtransaction</code> has a new, optional argument, <code>maxburnamount</code> with a default value of <code>0</code>.
+Any transaction containing an unspendable output with a value greater than <code>maxburnamount</code> will
+not be submitted. At present, the outputs deemed unspendable are those with scripts that begin
+with an <code>OP_RETURN</code> code (known as &#39;datacarriers&#39;), scripts that exceed the maximum script size,
+and scripts that contain invalid opcodes.</p></li>
+<li><p>The <code>testmempoolaccept</code> RPC now returns 2 additional results within the &quot;fees&quot; result:
+&quot;effective-feerate&quot; is the feerate including fees and sizes of transactions validated together if
+package validation was used, and also includes any modified fees from prioritisetransaction. The
+&quot;effective-includes&quot; result lists the wtxids of transactions whose modified fees and sizes were used
+in the effective-feerate (#26646).</p></li>
+<li><p><code>decodescript</code> may now infer a Miniscript descriptor under P2WSH context if it is not lacking
+information. (#27037)</p></li>
+<li><p><code>finalizepsbt</code> is now able to finalize a transaction with inputs spending Miniscript-compatible
+P2WSH scripts. (#24149)</p></li>
+<li><p>The <code>-deprecatedrpc=softforks</code> configuration option has been removed.  The
+RPC <code>getblockchaininfo</code> no longer returns the <code>softforks</code> field, which was
+previously deprecated in 23.0. (#23508) Information on soft fork status is
+now only available via the <code>getdeploymentinfo</code> RPC.</p></li>
+<li><p>The <code>deprecatedrpc=exclude_coinbase</code> configuration option has been removed.
+The <code>receivedby</code> RPCs (<code>listreceivedbyaddress</code>, <code>listreceivedbylabel</code>,
+<code>getreceivedbyaddress</code> and <code>getreceivedbylabel</code>) now always return results
+accounting for received coins from coinbase outputs, without an option to
+change that behaviour. Excluding coinbases was previously deprecated in 23.0.
+(#25171)</p></li>
+<li><p>The <code>deprecatedrpc=fees</code> configuration option has been removed. The top-level
+fee fields <code>fee</code>, <code>modifiedfee</code>, <code>ancestorfees</code> and <code>descendantfees</code> are no
+longer returned by RPCs <code>getmempoolentry</code>, <code>getrawmempool(verbose=true)</code>,
+<code>getmempoolancestors(verbose=true)</code> and <code>getmempooldescendants(verbose=true)</code>.
+The same fee fields can be accessed through the <code>fees</code> object in the result.
+The top-level fee fields were previously deprecated in 23.0. (#25204)</p></li>
+<li><p>The <code>getpeerinfo</code> RPC has been updated with a new <code>presynced_headers</code> field,
+indicating the progress on the presync phase mentioned in the
+&quot;P2P and network changes&quot; section above.</p></li>
+<li><p>RPC <code>disconnectnode</code> now accepts a subnet into <code>address</code> argument. (#26576)</p></li>
+<li><p>The output from <code>getmempoolinfo</code> is extended to include a <code>rbf_policy</code> key
+briefly describing the current replace-by-fee policy (&quot;never&quot;, &quot;optin&quot;, or
+&quot;always&quot;).</p></li>
+</ul>
+
+<p>Changes to wallet related RPCs can be found in the Wallet section below.</p>
+
+<h2>Build System</h2>
+
+<ul>
+<li>The <code>--enable-upnp-default</code> and <code>--enable-natpmp-default</code> options
+have been removed. If you want to use port mapping, you can
+configure it using a .conf file, or by passing the relevant
+options at runtime. (#26896)</li>
+</ul>
+
+<h2>Updated settings</h2>
+
+<ul>
+<li><p>If the <code>-checkblocks</code> or <code>-checklevel</code> options are explicitly provided by the
+user, but the verification checks cannot be completed due to an insufficient
+dbcache, Bitcoin Knots will now return an error at startup. (#25574)</p></li>
+<li><p>Setting <code>-blocksonly</code> will now reduce the maximum mempool memory
+to 5MB (users may still use <code>-maxmempool</code> to override). Previously,
+the default 300MB would be used, leading to unexpected memory usage
+for users running with <code>-blocksonly</code> expecting it to eliminate
+mempool memory usage.</p></li>
+</ul>
+
+<p>As unused mempool memory is shared with dbcache, this also reduces
+  the dbcache size for users running with <code>-blocksonly</code>, potentially
+  impacting performance.
+- Setting <code>-maxconnections=0</code> will now disable <code>-dnsseed</code>
+  and <code>-listen</code> (users may still set them to override).</p>
+
+<p>Changes to GUI or wallet related settings can be found in the GUI or Wallet section below.</p>
+
+<h2>New settings</h2>
+
+<ul>
+<li><p>The <code>shutdownnotify</code> option is used to specify a command to execute synchronously
+before Bitcoin Knots has begun its shutdown sequence. (#23395)</p></li>
+<li><p>To assist in controlling access to the RPC &quot;cookie&quot; file on multiuser systems, a new
+<code>rpccookieperms</code> setting has been added to set the file permissions mode before
+writing the access token.</p></li>
+</ul>
+
+<h2>Wallet</h2>
+
+<ul>
+<li><p>Added a new <code>next_index</code> field in the response in <code>listdescriptors</code> to
+have the same format as <code>importdescriptors</code> (#26194)</p></li>
+<li><p>RPC <code>listunspent</code> now has a new argument <code>include_immature_coinbase</code>
+to include coinbase UTXOs that don&#39;t meet the minimum spendability
+depth requirement (which before were silently skipped). (#25730)</p></li>
+<li><p>Rescans for descriptor wallets are now significantly faster if compact
+block filters (BIP158) are available. Since those are not constructed
+by default, the configuration option &quot;-blockfilterindex=1&quot; has to be
+provided to take advantage of the optimization. This improves the
+performance of the RPC calls <code>rescanblockchain</code>, <code>importdescriptors</code>
+and <code>restorewallet</code>. (#25957)</p></li>
+<li><p>RPC <code>unloadwallet</code> now fails if a rescan is in progress. (#26618)</p></li>
+<li><p>Wallet passphrases may now contain null characters.
+Prior to this change, only characters up to the first
+null character were recognized and accepted. (#27068)</p></li>
+<li><p>Address Purposes strings are now restricted to the currently known values of &quot;send&quot;,
+&quot;receive&quot;, and &quot;refund&quot;. Wallets that have unrecognized purpose strings will have
+loading warnings, and the <code>listlabels</code> RPC will raise an error if an unrecognized purpose
+is requested. (#27217)</p></li>
+<li><p>In the <code>createwallet</code>, <code>loadwallet</code>, <code>unloadwallet</code>, and <code>restorewallet</code> RPCs, the
+&quot;warning&quot; string field is deprecated in favor of a &quot;warnings&quot; field that
+returns a JSON array of strings to better handle multiple warning messages and
+for consistency with other wallet RPCs. The &quot;warning&quot; field will be fully
+removed from these RPCs in v26. It can be temporarily re-enabled during the
+deprecation period by launching bitcoind with the configuration option
+<code>-deprecatedrpc=walletwarningfield</code>. (#27279)</p></li>
+<li><p>Descriptor wallets can now spend coins sent to P2WSH Miniscript descriptors. (#24149)</p></li>
+<li><p>The <code>-walletrbf</code> startup option will now default to <code>true</code>. The
+wallet will now default to opt-in RBF on transactions that it creates. (#25610)</p></li>
+<li><p>The <code>replaceable</code> option for the <code>createrawtransaction</code> and
+<code>createpsbt</code> RPCs will now default to <code>true</code>. Transactions created
+with these RPCs will default to having opt-in RBF enabled. (#25610)</p></li>
+<li><p>The <code>wsh()</code> output descriptor was extended with Miniscript support. You can import Miniscript
+descriptors for P2WSH in a watchonly wallet to track coins, but you can&#39;t spend from them using
+the Bitcoin Core wallet yet.
+You can find more about Miniscript on the <a href="https://bitcoin.sipa.be/miniscript/">reference website</a>. (#24148)</p></li>
+<li><p>The <code>tr()</code> output descriptor now supports multisig scripts through the <code>multi_a()</code> and
+<code>sortedmulti_a()</code> functions. (#24043)</p></li>
+<li><p>The <code>importdescriptors</code> RPC can now be used to import BIP 93 (codex32) seeds. (#27351)</p></li>
+<li><p>To help prevent fingerprinting transactions created by the Bitcoin Core wallet, change output
+amounts are now randomized. (#24494)</p></li>
+<li><p>The <code>listsinceblock</code>, <code>listtransactions</code> and <code>gettransaction</code> output now contain a new
+<code>parent_descs</code> field for every &quot;receive&quot; entry. (#25504)</p></li>
+<li><p>A new optional <code>include_change</code> parameter was added to the <code>listsinceblock</code> command. (#25504)</p></li>
+<li><p>RPC <code>importaddress</code> now supports watch-only descriptor wallets.</p></li>
+<li><p>RPC <code>walletprocesspsbt</code> return object now includes field <code>hex</code> (if the transaction
+is complete) containing the serialized transaction suitable for RPC <code>sendrawtransaction</code>. (#28414)</p></li>
+<li><p>The result of RPC <code>getaddressinfo</code> adds an <code>isactive</code> key which can be used to determine if
+the address is derived from the currently active wallet seed. (#27216)</p></li>
+<li><p>RPC <code>getreceivedbylabel</code> now returns an error, &quot;Label not found
+in wallet&quot; (-4), if the label is not in the address book. (#25122)</p></li>
+</ul>
+
+<h2>Migrating Legacy Wallets to Descriptor Wallets</h2>
+
+<p>An experimental RPC <code>migratewallet</code> has been added to migrate Legacy (non-descriptor) wallets to
+Descriptor wallets. More information about the migration process is available in the
+<a href="https://github.com/bitcoin/bitcoin/blob/master/doc/managing-wallets.md#migrating-legacy-wallets-to-descriptor-wallets">documentation</a>.</p>
+
+<h2>GUI changes</h2>
+
+<ul>
+<li><p>The &quot;Mask values&quot; is a persistent option now. (gui#701)</p></li>
+<li><p>The &quot;Mask values&quot; option affects the &quot;Transaction&quot; view now, in addition to the
+&quot;Overview&quot; one. (gui#708)</p></li>
+<li><p>A new menu item to restore a wallet from a backup file has been added (gui#471).</p></li>
+<li><p>Configuration changes made in the bitcoin GUI (such as the pruning setting,
+proxy settings, UPNP preferences) are now saved to <code>&lt;datadir&gt;/settings.json</code>
+file rather than to the Qt settings backend (windows registry or unix desktop
+config files), so these settings will now apply to bitcoind, instead of being
+ignored. (#15936, gui#602)</p></li>
+<li><p>Also, the interaction between GUI settings and <code>bitcoin.conf</code> settings is
+simplified. Settings from <code>bitcoin.conf</code> are now displayed normally in the GUI
+settings dialog, instead of in a separate warning message (&quot;Options set in this
+dialog are overridden by the configuration file: -setting=value&quot;). And these
+settings can now be edited because <code>settings.json</code> values take precedence over
+<code>bitcoin.conf</code> values. (#15936)</p></li>
+</ul>
+
+<h2>REST</h2>
+
+<ul>
+<li><p>A new <code>/rest/deploymentinfo</code> endpoint has been added for fetching various
+state info regarding deployments of consensus changes. (#25412)</p></li>
+<li><p>The <code>/headers/</code> and <code>/blockfilterheaders/</code> endpoints have been updated to use
+a query parameter instead of path parameter to specify the result count. The
+count parameter is now optional, and defaults to 5 for both endpoints. The old
+endpoints are still functional, and have no documented behaviour change.</p></li>
+</ul>
+
+<p>For <code>/headers</code>, use
+  <code>GET /rest/headers/&lt;BLOCK-HASH&gt;.&lt;bin|hex|json&gt;?count=&lt;COUNT=5&gt;</code>
+  instead of
+  <code>GET /rest/headers/&lt;COUNT&gt;/&lt;BLOCK-HASH&gt;.&lt;bin|hex|json&gt;</code> (deprecated)</p>
+
+<p>For <code>/blockfilterheaders/</code>, use
+  <code>GET /rest/blockfilterheaders/&lt;FILTERTYPE&gt;/&lt;BLOCK-HASH&gt;.&lt;bin|hex|json&gt;?count=&lt;COUNT=5&gt;</code>
+  instead of
+  <code>GET /rest/blockfilterheaders/&lt;FILTERTYPE&gt;/&lt;COUNT&gt;/&lt;BLOCK-HASH&gt;.&lt;bin|hex|json&gt;</code> (deprecated)</p>
+
+<p>(#24098)</p>
+
+<h2>Binary verification</h2>
+
+<ul>
+<li>The binary verification script has been updated. In previous releases it
+would verify that the binaries had been signed with a single &quot;release key&quot;.
+In this release and moving forward it will verify that the binaries are
+signed by a <em>threshold of trusted keys</em>. For more details and
+examples, see:
+<a href="https://github.com/bitcoin/bitcoin/blob/master/contrib/verify-binaries/README.md">https://github.com/bitcoin/bitcoin/blob/master/contrib/verify-binaries/README.md</a>
+(#27358)</li>
+</ul>
+
+<h1>Low-level changes</h1>
+
+<h2>RPC</h2>
+
+<ul>
+<li><p>The JSON-RPC server now rejects requests where a parameter is specified multiple
+times with the same name, instead of silently overwriting earlier parameter values
+with later ones. (#26628)</p></li>
+<li><p>RPC <code>listsinceblock</code> now accepts an optional <code>label</code> argument
+to fetch incoming transactions having the specified label. (#25934)</p></li>
+<li><p>Previously <code>setban</code>, <code>addpeeraddress</code>, <code>walletcreatefundedpsbt</code>, methods
+allowed non-boolean and non-null values to be passed as boolean parameters.
+Any string, number, array, or object value that was passed would be treated
+as false. After this change, passing any value except <code>true</code>, <code>false</code>, or
+<code>null</code> now triggers a JSON value is not of expected type error. (#26213)</p></li>
+<li><p>The <code>deriveaddresses</code>, <code>getdescriptorinfo</code>, <code>importdescriptors</code> and <code>scantxoutset</code> commands now
+accept Miniscript expression within a <code>wsh()</code> descriptor. (#24148)</p></li>
+<li><p>The <code>getaddressinfo</code>, <code>decodescript</code>, <code>listdescriptors</code> and <code>listunspent</code> commands may now output
+a Miniscript descriptor inside a <code>wsh()</code> where a <code>wsh(raw())</code> descriptor was previously returned. (#24148)</p></li>
+</ul>
+</p>
+					    <a href="https://github.com/bitcoinknots/bitcoin" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/bitcoinknots/bitcoin/releases/tag/v25.1.knots20231115" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/bitcoin/bitcoin">bitcoin/bitcoin</a>: <a href="https://github.com/bitcoin/bitcoin/releases/tag/v26.0">v26.0</a>
 						    </h2>
 							<p class="card-text">Published: 2023-12-07 19:53:00 UTC</p>
@@ -7010,30 +7370,6 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 </p>
 					    <a href="https://github.com/vulpemventures/nigiri" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/vulpemventures/nigiri/releases/tag/v0.5.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/bitcoin/bitcoin">bitcoin/bitcoin</a>: <a href="https://github.com/bitcoin/bitcoin/releases/tag/v25.0">v25.0</a>
-						    </h2>
-							<p class="card-text">Published: 2023-05-26 10:28:38 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Bitcoin Core version 25.0 is now available from:</p>
-
-<p><a href="https://bitcoincore.org/bin/bitcoin-core-25.0/">https://bitcoincore.org/bin/bitcoin-core-25.0/</a></p>
-
-<p>For the release notes please see the git repository:</p>
-
-<p><a href="https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-25.0.md">https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-25.0.md</a></p>
-
-<p>Do not use the links provided by GitHub, rather use the above download links, they are guaranteed to be generated deterministically and signed.</p>
-</p>
-					    <a href="https://github.com/bitcoin/bitcoin" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/bitcoin/bitcoin/releases/tag/v25.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
