@@ -48,5 +48,6 @@
   "sparrowwallet/sparrow",
   "btcontract/IMMORTAN",
   "Toporin/SatochipApplet",
-  "vulpemventures/nigiri"
+  "vulpemventures/nigiri",
+  "GregTonoski/BIP39-XOR",
 ]
