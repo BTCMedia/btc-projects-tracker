@@ -38,6 +38,45 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.15">android-v2.0.15</a>
+						    </h2>
+							<p class="card-text">Published: 2023-12-12 14:56:33 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>ℹ️ <strong>Migration for existing legacy wallets (v1.x)</strong></p>
+
+<p>Users upgrading from the legacy app (1.x) to 2.x will need to migrate to be able to use 2.x features. See <a href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.0">the 2.0.0 release notes</a> for details about the migration process. You can see what version you are currently using in Settings &gt; About.</p>
+
+<h2>Hotfix release</h2>
+
+<p>This release fixes an incorrect error message displayed when opening the Send screen (#487).</p>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
+- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import drouinf.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.15" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/lnbits/lnbits">lnbits/lnbits</a>: <a href="https://github.com/lnbits/lnbits/releases/tag/0.11.3">0.11.3</a>
 						    </h2>
 							<p class="card-text">Published: 2023-12-12 10:24:55 UTC</p>
@@ -7348,60 +7387,6 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 </p>
 					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.0">v1.10.0</a>
-						    </h2>
-							<p class="card-text">Published: 2023-06-01 12:25:07 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>Notice: Due to the substantial disk space consumption, we are removing all data pertaining to past webhook deliveries (#5005).</p>
-
-<p>This data, generally used for debugging integrations, will be regularly purged. Hereafter, any Webhook delivery data older than two months will be automatically deleted.</p>
-
-<p>You can also read our <a href="https://blog.btcpayserver.org/btcpay-server-1-10-0/">blog post</a> for a tour of the new features!</p>
-
-<h3>New features</h3>
-
-<ul>
-<li>In addition to the <code>Owner</code> and <code>Guest</code> role available for users of a store, it is now possible to create new custom roles and to adjust the permissions granted by <code>Owner</code> and <code>Guest</code>. (#4940) @Kukks</li>
-<li>Forms: It was only possible to configure a forms via some JSON configuration, we now have a nice UI editor for it (#4968) @dennisreimann @dstrukt</li>
-<li>Setting to hide sensitive info, such as balances and amounts (#4966) @dennisreimann</li>
-<li>Forms: Add multiline input (#4942) @dennisreimann</li>
-<li>In the refund workflow, make it easier to only reimburse overpaid amounts (#4934 #4812) @dennisreimann</li>
-</ul>
-
-<h3>Bug fixes</h3>
-
-<ul>
-<li>Fix: When using LNbank, payments would sometimes not be detected by BTCPay Server (dennisreimann/btcpayserver-plugin-lnbank#33) @NicolasDorier</li>
-<li>Fix: If a altcoins is disabled from BTCPay and payout processor is used, it would crash at restart (#4997) @NicolasDorier</li>
-<li>Fix: When the default currency of the store is SATS, the display on the dashboard was broken (#4994) @dennisreimann</li>
-<li>Fix: When using a LND node, multi path payments with custom records would not be detected as valid payment @dennisreimann</li>
-</ul>
-
-<h3>Improvements</h3>
-
-<ul>
-<li>Crowdfund and PoS app settings were saved in YAML, we are now using JSON. (#4792) @Kukks</li>
-<li>Add minrelayfee to payjoin request (#4689) @Kukks</li>
-<li>Improve invoice filtering UI (#4914) @dennisreimann @dstrukt</li>
-<li>Stop generating new addresses when a new payment is detected (#4984) @NicolasDorier</li>
-<li>Support Core Lightning v23.05 (#4970) @NicolasDorier</li>
-<li>Checkout v2: Improve expired paid partial state (#4827) @dennisreimann</li>
-<li>Improve create first store case (#4951) @dennisreimann @dstrukt</li>
-<li>Improve Refund UI/UX (#4934 #3839 #4812) @dennisreimann @dstrukt</li>
-<li>Prune old webhook delivery data (#5005) @NicolasDorier</li>
-<li>Can mark expired invoices as complete or invalid (#5006) @dennisreimann</li>
-</ul>
-</p>
-					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
