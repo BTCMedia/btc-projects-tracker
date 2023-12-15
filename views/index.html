@@ -38,6 +38,52 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.1.0">android-v2.1.0</a>
+						    </h2>
+							<p class="card-text">Published: 2023-12-15 16:45:57 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>ℹ️ <strong>Migration for existing legacy wallets (v1.x)</strong></p>
+
+<p>Users upgrading from the legacy app (1.x) to 2.x will need to migrate to be able to use 2.x features. See <a href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.0">the 2.0.0 release notes</a> for details about the migration process. You can see what version you are currently using in Settings &gt; About.</p>
+
+<h2>Changes</h2>
+
+<p><strong>Request inbound liquidity from your peer (#489)</strong>
+If you keep receiving funds over Lightning, you&#39;ll consume your inbound liquidity fast and may end up having to splice-in every incoming LN payments, which can be expensive because each splice is an on-chain transaction. By requesting liquidity from the peer, you can plan ahead and avoid future on-chain fees. This is now supported in Phoenix starting from 2.1.0, thanks to liquidity-ads (a new feature in the Lightning protocol).</p>
+
+<p>Requesting liquidity is done manually (for now at least). A button to the liquidity screen has been added in the Home screen. Your inbound liquidity is also displayed in the channels view.</p>
+
+<p><strong>Full changelog:</strong>
+- phoenix: <a href="https://github.com/ACINQ/phoenix/compare/android-v2.0.15...android-v2.1.0">https://github.com/ACINQ/phoenix/compare/android-v2.0.15...android-v2.1.0</a>
+- lightning-kmp: <a href="https://github.com/ACINQ/lightning-kmp/compare/v1.5.12...v1.5.14">https://github.com/ACINQ/lightning-kmp/compare/v1.5.12...v1.5.14</a></p>
+
+<h2>Verifying signatures</h2>
+
+<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
+- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
+
+<p>To import our signing key:
+<code>
+$ gpg --import drouinf.asc
+</code></p>
+
+<p>To verify the release file checksums and signatures:
+<code>
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+</code></p>
+</p>
+					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.1.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.15">android-v2.0.15</a>
 						    </h2>
 							<p class="card-text">Published: 2023-12-12 14:56:33 UTC</p>
@@ -7361,32 +7407,6 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
 </p>
 					    <a href="https://github.com/lightningnetwork/lnd" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/lightningnetwork/lnd/releases/tag/v0.16.3-beta" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.1">v1.10.1</a>
-						    </h2>
-							<p class="card-text">Published: 2023-06-02 11:37:13 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><h3>Bug fixes</h3>
-
-<ul>
-<li>Point of Sale bug after filling out form Shop + cart (#5031) @Kukks</li>
-</ul>
-
-<h3>Improvements</h3>
-
-<ul>
-<li>Language translation update for el-GR</li>
-</ul>
-</p>
-					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            

@@ -6,7 +6,45 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-12T15:03:30+00:00</updated>
+  <updated>2023-12-15T16:51:51+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-v2.1.0</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.1.0"/>
+    <summary>ℹ️ **Migration for existing legacy wallets (v1.x)**
+
+Users upgrading from the legacy app (1.x) to 2.x will need to migrate to be able to use 2.x features. See [the 2.0.0 release notes](https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.0) for details about the migration process. You can see what version you are currently using in Settings &gt; About.
+
+## Changes
+
+**Request inbound liquidity from your peer (#489)**
+If you keep receiving funds over Lightning, you'll consume your inbound liquidity fast and may end up having to splice-in every incoming LN payments, which can be expensive because each splice is an on-chain transaction. By requesting liquidity from the peer, you can plan ahead and avoid future on-chain fees. This is now supported in Phoenix starting from 2.1.0, thanks to liquidity-ads (a new feature in the Lightning protocol).
+
+Requesting liquidity is done manually (for now at least). A button to the liquidity screen has been added in the Home screen. Your inbound liquidity is also displayed in the channels view.
+
+**Full changelog:**
+- phoenix: https://github.com/ACINQ/phoenix/compare/android-v2.0.15...android-v2.1.0
+- lightning-kmp: https://github.com/ACINQ/lightning-kmp/compare/v1.5.12...v1.5.14
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: android-v2.1.0</title>
+    <updated>2023-12-15T16:45:57Z</updated>
+    <dc:date>2023-12-15T16:45:57Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.15</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.15"/>
@@ -6290,19 +6328,5 @@ https://github.com/lightningnetwork/lnd/blob/master/docs/release-notes/release-n
     <updated>2023-06-06T18:03:52Z</updated>
     <dc:date>2023-06-06T18:03:52Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.1</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.1"/>
-    <summary>### Bug fixes
-
-* Point of Sale bug after filling out form Shop + cart (#5031) @Kukks
-
-### Improvements
-
-* Language translation update for el-GR</summary>
-    <title>btcpayserver/btcpayserver: v1.10.1</title>
-    <updated>2023-06-02T11:37:13Z</updated>
-    <dc:date>2023-06-02T11:37:13Z</dc:date>
-  </entry>
-  <dc:date>2023-12-12T15:03:30+00:00</dc:date>
+  <dc:date>2023-12-15T16:51:51+00:00</dc:date>
 </feed>
