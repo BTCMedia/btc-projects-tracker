@@ -6,7 +6,20 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-16T12:51:28+00:00</updated>
+  <updated>2023-12-18T15:21:36+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/bitcoin-lib/releases/tag/v0.31</id>
+    <link href="https://github.com/ACINQ/bitcoin-lib/releases/tag/v0.31"/>
+    <summary>## What's Changed
+* Bump ch.qos.logback:logback-classic from 1.2.3 to 1.2.13 by @dependabot in https://github.com/ACINQ/bitcoin-lib/pull/83
+* Update bitcoin-kmp and secp256k1-kmp by @sstone in https://github.com/ACINQ/bitcoin-lib/pull/84
+
+
+**Full Changelog**: https://github.com/ACINQ/bitcoin-lib/compare/v0.30...v0.31</summary>
+    <title>ACINQ/bitcoin-lib: v0.31</title>
+    <updated>2023-12-18T15:12:41Z</updated>
+    <dc:date>2023-12-18T15:12:41Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v23.11.1</id>
     <link href="https://github.com/ElementsProject/lightning/releases/tag/v23.11.1"/>
@@ -6215,18 +6228,5 @@ SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-cha
     <updated>2023-06-09T02:55:55Z</updated>
     <dc:date>2023-06-09T02:55:55Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.2</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.2"/>
-    <summary>### Bug fixes
-
-* Fix: Stale data when fetching invoice after webhook (#5049) @Kukks
-* Fix: Crash on migation of old instances (#5051) @NicolasDorier
-* Fix: Hide sensitive info feature not working with custom theme (#5044) @dennisreimann
-* Fix: Pay button not rendering on the invoice page (#5043) @dennisreimann</summary>
-    <title>btcpayserver/btcpayserver: v1.10.2</title>
-    <updated>2023-06-07T16:22:04Z</updated>
-    <dc:date>2023-06-07T16:22:04Z</dc:date>
-  </entry>
-  <dc:date>2023-12-16T12:51:28+00:00</dc:date>
+  <dc:date>2023-12-18T15:21:36+00:00</dc:date>
 </feed>
