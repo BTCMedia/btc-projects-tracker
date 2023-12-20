@@ -6,14 +6,21 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-20T13:41:45+00:00</updated>
+  <updated>2023-12-20T16:51:52+00:00</updated>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.6.0</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.6.0"/>
+    <summary></summary>
+    <title>vulpemventures/marina: v0.6.0</title>
+    <updated>2023-12-20T16:51:32Z</updated>
+    <dc:date>2023-12-20T16:51:32Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.5</id>
     <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.5"/>
-    <summary>### _[Wasabi](https://WasabiWallet.io) is an easy to use, privacy-focused, open-source, non-custodial, Bitcoin wallet_
+    <summary>### _[Wasabi Wallet](https://WasabiWallet.io) is an easy to use, privacy-focused, open-source, non-custodial, Bitcoin wallet_
 
 # Download
-
 :window: [Windows](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.5/Wasabi-2.0.5.msi)
 :green_apple: [Apple M1/M2](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.5/Wasabi-2.0.5-arm64.dmg)
 :apple: [Apple Intel](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.5/Wasabi-2.0.5.dmg)
@@ -21,7 +28,6 @@
 :penguin: [Other Linux](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.5/Wasabi-2.0.5.tar.gz)
 
 ---
-
 ## Release Highlights
 
 🛒 Buy Anything Button
@@ -35,31 +41,31 @@ Buying anything with bitcoin has never been more effortless. With the click of a
 To learn more, check out our [blog post](https://blog.wasabiwallet.io/buy-anything-with-bitcoin-through-wasabi-wallet/).
 
 ---
-
 ## Installation Guide
+Download the operating system relevant software package and install Wasabi like you would with any other software on your computer. 
+For a detailed installation guide, including **signature verification**, see [the documentation](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html).
 
-Download the operating system relevant software package and install Wasabi like you would any other software on your computer. For a detailed installation guide, including **signature verification**, see [the documentation](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html).
+## Documentation
+:spider_web: [Website](https://wasabiwallet.io)
+:onion: [Tor onion site](http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion/)
+:orange_book: [Documentation](https://docs.wasabiwallet.io)
+:grey_question: [FAQ](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq)
 
 ## Advanced Guide
-
 If you want to build or update Wasabi from source code, check out [these easy instructions](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html).
 
 Wasabi uses [reproducible builds](https://reproducible-builds.org/), which you can verify with [this guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md).
 
-## Documentation
-
-:spider_web: [Website](https://wasabiwallet.io)
-:onion: [Tor onion site](http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion/)
-:grey_question: [FAQ](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq)
-
-## Requirements 
-- Windows 10+
-- macOs 10.15+
-- Ubuntu 16.04, 18.04, 20.04+
-- Fedora 33+
+## Requirements
+- Windows 10 1607+
+- Windows 11 22000+
+- macOS 10.15+
+- Ubuntu 18.04+
+- Fedora 36+
 - Debian 10+
+---
 
-## What's Changed
+## Full Changelog
 
 * [v2.0.4.1 Silent Release] Update HWI to 2.3.1 by @adamPetho in https://github.com/zkSNACKs/WalletWasabi/pull/11979
 * [v2.0.4.1 Silent Release] Local Prison invalidation by @adamPetho in https://github.com/zkSNACKs/WalletWasabi/pull/11981
@@ -116,7 +122,9 @@ Wasabi uses [reproducible builds](https://reproducible-builds.org/), which you c
 * Fix tests build by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12110
 
 
-**Full Changelog**: https://github.com/zkSNACKs/WalletWasabi/compare/v2.0.4...v2.0.5</summary>
+**Full Changelog**: https://github.com/zkSNACKs/WalletWasabi/compare/v2.0.4...v2.0.5
+
+&lt;hr /&gt;&lt;em&gt;This discussion was created from the release &lt;a href='https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.5'&gt;Wasabi Wallet v2.0.5 - Buy Anything Button&lt;/a&gt;.&lt;/em&gt;</summary>
     <title>zkSNACKs/WalletWasabi: v2.0.5</title>
     <updated>2023-12-20T13:33:43Z</updated>
     <dc:date>2023-12-20T13:33:43Z</dc:date>
@@ -6386,27 +6394,5 @@ upgrade and restart.</summary>
     <updated>2023-06-19T08:45:19Z</updated>
     <dc:date>2023-06-19T08:45:19Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/rsksmart/rskj/releases/tag/FINGERROOT-5.0.0</id>
-    <link href="https://github.com/rsksmart/rskj/releases/tag/FINGERROOT-5.0.0"/>
-    <summary>**IMPORTANT:** since consensus rules have changed, this version is incompatible with previous versions. If you've been running earlier versions of the RSK client node, we encourage you to update to this new version. The **Mainnet** network upgrade will happen at **block number 5,468,000**. The **Testnet** network upgrade will happen at **block number 4,015,800**.
-
-A non-comprehensive list of changes included in this version is:
-
-- Transaction gas price cap ([RSKIP-252](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP252.md))
-- Peg-out events improvements ([RSKIP-326](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP326.md))
-- Reestablish the number of block confirmations for a PowPeg migration period ([RSKIP-374](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP374.md))
-- Use the pegout creation transaction hash as the key in the map structure that stores the pegout transactions waiting for signatures ([RSKIP-375](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP375.md))
-- Store the last retired PowPeg standard P2SH script ([RSKIP-377](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP377.md))
-- Increase POWpeg activation age ([RSKIP-383](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP383.md))
-- Bridge method `getEstimatedFeesForNextPegOutEvent` improvement ([RSKIP-385](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP385.md))
-
-For a detailed description of each consensus change introduced in this network upgrade, please refer to [RSKIP 388 - Network Upgrade: Fingerroot](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP388.md). You can also find a complete list of the changes introduced in the corresponding [GitHub milestone](https://github.com/rsksmart/rskj/milestone/35).
-
-SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-chain/) guide for further details): 198d13a8676714f289e5707dba3f45c6c2dbc5daa1a08c669e64a41df2fe330a rskj-core-5.0.0-FINGERROOT-all.jar</summary>
-    <title>rsksmart/rskj: FINGERROOT-5.0.0</title>
-    <updated>2023-06-16T03:05:05Z</updated>
-    <dc:date>2023-06-16T03:05:05Z</dc:date>
-  </entry>
-  <dc:date>2023-12-20T13:41:45+00:00</dc:date>
+  <dc:date>2023-12-20T16:51:52+00:00</dc:date>
 </feed>
