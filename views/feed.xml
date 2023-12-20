@@ -6,7 +6,41 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-20T02:12:18+00:00</updated>
+  <updated>2023-12-20T13:21:25+00:00</updated>
+  <entry>
+    <id>https://github.com/ACINQ/phoenix/releases/tag/android-v2.1.1</id>
+    <link href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.1.1"/>
+    <summary>ℹ️ **Migration for existing legacy wallets (v1.x)**
+
+Users upgrading from the legacy app (1.x) to 2.x will need to migrate to be able to use 2.x features. See [the 2.0.0 release notes](https://github.com/ACINQ/phoenix/releases/tag/android-v2.0.0) for details about the migration process. You can see what version you are currently using in Settings &gt; About.
+
+## Changes
+
+This minor release fixes the Czech translation (#490, thanks @MasterixCZ) and English typos (#491 thanks @dluvian). It also bumps the feerate used for liquidity requests to help with the current high fees environment.
+
+**Full changelog:**
+- phoenix: https://github.com/ACINQ/phoenix/compare/android-v2.1.0...android-v2.1.1
+
+## Verifying signatures
+
+You will need `gpg` and our release signing key 7A73FE77DE2C4027. Note that you can get it:
+- from our website: https://acinq.co/pgp/drouinf.asc
+- from github user @sstone, a committer on eclair: https://api.github.com/users/sstone/gpg_keys
+
+To import our signing key:
+```
+$ gpg --import drouinf.asc
+```
+
+To verify the release file checksums and signatures:
+```
+$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
+$ sha256sum -c SHA256SUMS.stripped
+```</summary>
+    <title>ACINQ/phoenix: android-v2.1.1</title>
+    <updated>2023-12-20T13:15:25Z</updated>
+    <dc:date>2023-12-20T13:15:25Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.0</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.0"/>
@@ -6275,13 +6309,5 @@ SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-cha
     <updated>2023-06-12T08:28:23Z</updated>
     <dc:date>2023-06-12T08:28:23Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/romanz/electrs/releases/tag/v0.9.14</id>
-    <link href="https://github.com/romanz/electrs/releases/tag/v0.9.14"/>
-    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0914-jun-10-2023</summary>
-    <title>romanz/electrs: v0.9.14</title>
-    <updated>2023-06-09T17:36:50Z</updated>
-    <dc:date>2023-06-09T17:36:50Z</dc:date>
-  </entry>
-  <dc:date>2023-12-20T02:12:18+00:00</dc:date>
+  <dc:date>2023-12-20T13:21:25+00:00</dc:date>
 </feed>
