@@ -38,6 +38,92 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.0">v1.12.0</a>
+						    </h2>
+							<p class="card-text">Published: 2023-12-19 12:10:40 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h3>Noteworthy</h3>
+
+<ul>
+<li>With this release we upgrade to .NET 8, which also requires a current version of the Docker engine for docker deployments (&gt;= 20.10.10).
+We will try to migrate outdated versions when upgrading BTCPay Server, but if you see these <a href="https://docs.linuxserver.io/FAQ/#symptoms">symptoms</a> after updating, please <a href="https://docs.docker.com/engine/install/">upgrade Docker engine manually</a>.</li>
+<li>We changed a lot of things under the hood, making the Lightning integrations extendible by plugins and also preparing the
+migration of Altcoins to plugins. If you are using plugins, you will most likely find them disabled after this update, because
+new versions compatible with BTCPay Server v1.12 are required. Please see the &quot;Manage Plugins&quot; section once updated.</li>
+<li>We are ending support for Postgresql 11 as it reached 5 years after its initial release. Read more about <a href="https://www.postgresql.org/support/versioning/">end-of-life (EOL) of postgresql</a>. While Postgresql 11 should still work with BTCPay Server, we will not keep compatibility moving forward.</li>
+</ul>
+
+<h3>New feature</h3>
+
+<ul>
+<li>Webhooks: Support for Payment Requests, Payouts and extendibility by plugins (#5421) @Kukks</li>
+<li>Support BIP129 Multisig wallet import (#5389) @Kukks</li>
+<li>POS Keypad: Add plus and change clear functionality (#5396) @dennisreimann @dstrukt</li>
+<li>Forms: Support adjusting invoice amount by multiplier, enables percentage-based discount codes (#5463) @Kukks</li>
+<li>Can pair or reset a Boltcard to a pull payment (#5419) @NicolasDorier</li>
+<li>Plugins: Allow scheduling installs/updates of future plugins (#5537) @Kukks</li>
+</ul>
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li>Webhooks: Re-add OverPaid property to WebhookInvoiceSettledEvent (#5538 #5496) @dennisreimann</li>
+<li>Apps: Filter list lookups by available app types (#5482) @dennisreimann</li>
+<li>Wallet: Use application/jsonl as MIME type for BIP329 label export (#5489) @dennisreimann</li>
+<li>Wallet: Fill label from BIP21 (#5428) @dennisreimann</li>
+<li>Greenfield: LNURLPay store payment method fixes (#5446) @dennisreimann</li>
+<li>Greenfield: Fix invoice refund permission (#5558) @Kukks</li>
+<li>Do not activate Blazor in Wizard screens (#5435) @NicolasDorier</li>
+<li>Pull Payment: Display the amount of claims (#5427) @NicolasDorier</li>
+<li>Dashboard: LND limbo balance had the wrong unit (a 1 BTC limbo balance would show as 0.001 BTC) @NicolasDorier</li>
+<li>Fix occasional concurrency issue which would result in app settings change not being properly saved (#5565) @NicolasDorier</li>
+</ul>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>Upgrade to .NET 8.0 (#5479) @NicolasDorier</li>
+<li>Enhance fine grain permissions (#5502) @Kukks</li>
+<li>Checkout: NFC improvements (#5509) @dennisreimann</li>
+<li>Checkout: Receipt improvements (#5505) @rockstardev @dennisreimann</li>
+<li>Payment Request: Improve public view (#5413) @dennisreimann @dstrukt</li>
+<li>POS Keypad: List recent transactions (#5478) @dennisreimann @dstrukt</li>
+<li>POS Cart: Add options for search and categories display (#5438) @dennisreimann</li>
+<li>POS Cart: Horizontal scrollable filters (#5391) @dennisreimann</li>
+<li>POS and Crowdfund: Item editor improvements (#5418 #5449) @dennisreimann</li>
+<li>Reporting: UI improvements (#5432) @dennisreimann @dstrukt</li>
+<li>Wallet: Use Mempool.space fee estimation (#5490 #5556) @Kukks @NicolasDorier</li>
+<li>Wallet: Update Passport instructions for import (#5423) @sethforprivacy</li>
+<li>Plugins: Send notification when a new plugin version is available (#5450) @Kukks</li>
+<li>Plugins: Improve crash detection on startup and hint at disabled plugins (#5514) @dennisreimann</li>
+<li>Plugins: Add disclaimer (#5552) @dennisreimann</li>
+<li>Server Policies: Add warnings for certain options (#5554) @dennisreimann</li>
+<li>Greenfield: Remove unused checkout type setting from POS (#5512) @dennisreimann</li>
+<li>Greenfield: Make checkout type V2 default for new stores (#5495) @dennisreimann</li>
+<li>Domain mapping: Redirect root app to canonical URL (#5471) @dennisreimann</li>
+<li>Lightning: Make implementations extendible by plugins (#5422) @Kukks</li>
+<li>Lightning: Upgrade LND to 0.17.2-beta @rockstardev</li>
+<li>Store Branding: Use store logo as favicon (#5519) @dennisreimann</li>
+<li>Rate Providers: Remove Bittrex (#5553) @Kukks</li>
+<li>UI: Unify list views (#5399) @dennisreimann @dstrukt</li>
+<li>UI: Unify public page styles (#5460 #5462 #5466) @dennisreimann @dstrukt</li>
+<li>UI: Add system option for theme switch (#5473) @dennisreimann</li>
+<li>UI: Pull payment improvements (#5453) @dennisreimann</li>
+<li>UI: Switch pos data to metadata in invoice create view (#5412) @Kukks</li>
+<li>UI: Improve invoice&#39;s webhooks table (#5545) @NicolasDorier</li>
+<li>UI: Remove forced center alignment for POS description (#5555) @dennisreimann</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/ACINQ/bitcoin-lib">ACINQ/bitcoin-lib</a>: <a href="https://github.com/ACINQ/bitcoin-lib/releases/tag/v0.31">v0.31</a>
 						    </h2>
 							<p class="card-text">Published: 2023-12-18 15:12:41 UTC</p>
@@ -7284,31 +7370,6 @@ upgrade and restart.</p>
 </p>
 					    <a href="https://github.com/romanz/electrs" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/romanz/electrs/releases/tag/v0.9.14" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ElementsProject/lightning">ElementsProject/lightning</a>: <a href="https://github.com/ElementsProject/lightning/releases/tag/v23.05.1">v23.05.1</a>
-						    </h2>
-							<p class="card-text">Published: 2023-06-09 02:55:55 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This is a bugfix-only release which repairs several crashes reported in the wild.  It is a recommended upgrade for anyone on v23.05.</p>
-
-<ul>
-<li>Fixed crash (memory corruption!) in <code>listtransactions</code> ([#6304])</li>
-<li>Don&#39;t crash on gossip store deletion fail ([#6297])</li>
-<li>Fix incompatibility with LND which prevented us opening private channels ([#6304])</li>
-<li>Fixed crash in dual-funding. ([#6273])</li>
-</ul>
-
-<p>~ @rustyrussell, @ShahanaFarooqui, @endothermicdev, @cdecker, and @niftynei</p>
-</p>
-					    <a href="https://github.com/ElementsProject/lightning" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ElementsProject/lightning/releases/tag/v23.05.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
