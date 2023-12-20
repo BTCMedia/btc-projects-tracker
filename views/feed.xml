@@ -6,7 +6,121 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-20T13:21:25+00:00</updated>
+  <updated>2023-12-20T13:41:45+00:00</updated>
+  <entry>
+    <id>https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.5</id>
+    <link href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.5"/>
+    <summary>### _[Wasabi](https://WasabiWallet.io) is an easy to use, privacy-focused, open-source, non-custodial, Bitcoin wallet_
+
+# Download
+
+:window: [Windows](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.5/Wasabi-2.0.5.msi)
+:green_apple: [Apple M1/M2](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.5/Wasabi-2.0.5-arm64.dmg)
+:apple: [Apple Intel](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.5/Wasabi-2.0.5.dmg)
+:penguin: [Ubuntu / Debian](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.5/Wasabi-2.0.5.deb)
+:penguin: [Other Linux](https://github.com/zkSNACKs/WalletWasabi/releases/download/v2.0.5/Wasabi-2.0.5.tar.gz)
+
+---
+
+## Release Highlights
+
+🛒 Buy Anything Button
+
+## Release Summary
+
+Purchase stuff inside Wasabi Wallet with bitcoin by using the **Buy Anything Button**:
+
+Buying anything with bitcoin has never been more effortless. With the click of a button you can now request the purchase of physical and digital goods, while protecting your privacy and revealing as little information about you as possible. Let your personal team of butlers find, arrange and ship the products you are looking for. From phones, to cars, even hotels and flights, get it all with Wasabi's new Buy Anything Button.
+
+To learn more, check out our [blog post](https://blog.wasabiwallet.io/buy-anything-with-bitcoin-through-wasabi-wallet/).
+
+---
+
+## Installation Guide
+
+Download the operating system relevant software package and install Wasabi like you would any other software on your computer. For a detailed installation guide, including **signature verification**, see [the documentation](https://docs.wasabiwallet.io/using-wasabi/InstallPackage.html).
+
+## Advanced Guide
+
+If you want to build or update Wasabi from source code, check out [these easy instructions](https://docs.wasabiwallet.io/using-wasabi/BuildSource.html).
+
+Wasabi uses [reproducible builds](https://reproducible-builds.org/), which you can verify with [this guide](https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/Guides/DeterministicBuildGuide.md).
+
+## Documentation
+
+:spider_web: [Website](https://wasabiwallet.io)
+:onion: [Tor onion site](http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion/)
+:grey_question: [FAQ](https://github.com/zkSNACKs/WalletWasabi/discussions/categories/faq)
+
+## Requirements 
+- Windows 10+
+- macOs 10.15+
+- Ubuntu 16.04, 18.04, 20.04+
+- Fedora 33+
+- Debian 10+
+
+## What's Changed
+
+* [v2.0.4.1 Silent Release] Update HWI to 2.3.1 by @adamPetho in https://github.com/zkSNACKs/WalletWasabi/pull/11979
+* [v2.0.4.1 Silent Release] Local Prison invalidation by @adamPetho in https://github.com/zkSNACKs/WalletWasabi/pull/11981
+* [v2.0.4.1 Silent Release] Bump version to 2.0.4.1 by @adamPetho in https://github.com/zkSNACKs/WalletWasabi/pull/11980
+* Improve Orders List by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12003
+* Add Login logic and test by @adamPetho in https://github.com/zkSNACKs/WalletWasabi/pull/12004
+* Improve conversation layout by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12005
+* Control BAB visibility by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12008
+* Link BAB visibility to view by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12009
+* Show Info Bubble for Buy Anything Button by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12010
+* Add unread badge by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12011
+* Add confirmation prompt to delete orders by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12013
+* Show unread icon for conversations by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12012
+* Use IHttpClient + Misc by @turbolay in https://github.com/zkSNACKs/WalletWasabi/pull/12014
+* ReAdd GetCustomerProfile and message fetch by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12015
+* Add failback mechanism when couldn't load countries by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12021
+* Add round edges to conversation by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12020
+* Adapt to Figma designs by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12023
+* BAB: Small cleanups + Add a test setup by @kiminuo in https://github.com/zkSNACKs/WalletWasabi/pull/12018
+* Fix Order Ids by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12028
+* Add states and update full conversation by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12029
+* Trigger event upon new conversation by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12030
+* Sort orders by title, descending. by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12031
+* Avoid next step when order selection changes by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12034
+* Fix bugs by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12038
+* Add track link to offer by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12040
+* Fix message not updating by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12042
+* Allow to select countries with spaces by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12043
+* Fix conversation duplication by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12045
+* Mark *new* messages from selected conversation as &quot;read&quot; by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12044
+* Fix Unread Messages Badge in Wallet Screen by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12047
+* Fix wallet gets stuck after offer recieved by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12049
+* ChatMessage Tags by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/12056
+* Edit by @wieslawsoltes in https://github.com/zkSNACKs/WalletWasabi/pull/12058
+* [BAB] Refactor into UserInputValidatorView and use it edit message dialog by @wieslawsoltes in https://github.com/zkSNACKs/WalletWasabi/pull/12060
+* Auto select new order by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12062
+* Fix unit/total price by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12064
+* Separate links into their own bubbles by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12069
+* Better offer display by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12070
+* pay now by @ichthus1604 in https://github.com/zkSNACKs/WalletWasabi/pull/12067
+* Fix focus in TagsBox by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12071
+* Scroll to new message by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12057
+* Add shipping cost by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12076
+* Buy anything new message types by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12074
+* Fix exception on reset conversation by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12078
+* Custom offer message by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/12082
+* Buy Anything - Córdoba Architecture by @ichthus1604 in https://github.com/zkSNACKs/WalletWasabi/pull/12073
+* Fix focus on ToS acceptance by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12092
+* store IsPaid in Invoice by @soosr in https://github.com/zkSNACKs/WalletWasabi/pull/12093
+* Buy anything cordoba edition by @ichthus1604 in https://github.com/zkSNACKs/WalletWasabi/pull/12100
+* Ignore OperationCancelledException by @SuperJMN in https://github.com/zkSNACKs/WalletWasabi/pull/12104
+* Rename pay now to pay by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12108
+* [Trivial] Simplify the wording and remove unnecessary text by @yahiheb in https://github.com/zkSNACKs/WalletWasabi/pull/12105
+* Fix tests build by @Szpoti in https://github.com/zkSNACKs/WalletWasabi/pull/12110
+
+
+**Full Changelog**: https://github.com/zkSNACKs/WalletWasabi/compare/v2.0.4...v2.0.5</summary>
+    <title>zkSNACKs/WalletWasabi: v2.0.5</title>
+    <updated>2023-12-20T13:33:43Z</updated>
+    <dc:date>2023-12-20T13:33:43Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ACINQ/phoenix/releases/tag/android-v2.1.1</id>
     <link href="https://github.com/ACINQ/phoenix/releases/tag/android-v2.1.1"/>
@@ -6294,20 +6408,5 @@ SHA256 (see [Reproducible Build](https://developers.rsk.co/rsk/node/security-cha
     <updated>2023-06-16T03:05:05Z</updated>
     <dc:date>2023-06-16T03:05:05Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.5</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.5"/>
-    <summary>* ADD: support multiple accounts from Keystone hw wallet (closes #5281) 
-* FIX: un-cache refill onchain addresses on cold start.
-* FIX: sync ar-SA, it, sv, ar, fa, he, id, jp, sv_se and ua languages 
-* FIX: fix errors in RU language 
-* FIX: wallet-&gt;receive-&gt;qr share as an image 
-* FIX: Watch complication name was &quot;BlueWallet&quot; 
-* DEL: accessoryRectangular from iOS widgets 
-* REF: electrum (more public servers; better batching support)</summary>
-    <title>BlueWallet/BlueWallet: v6.4.5</title>
-    <updated>2023-06-12T08:28:23Z</updated>
-    <dc:date>2023-06-12T08:28:23Z</dc:date>
-  </entry>
-  <dc:date>2023-12-20T13:21:25+00:00</dc:date>
+  <dc:date>2023-12-20T13:41:45+00:00</dc:date>
 </feed>
