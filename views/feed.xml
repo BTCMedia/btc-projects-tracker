@@ -6,7 +6,37 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-21T13:21:36+00:00</updated>
+  <updated>2023-12-21T15:11:43+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.1</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.1"/>
+    <summary>Recommended update for users using Boltcard with pull payments or Top-Up invoices.
+
+Breaking change: Boltcards linked to pull payments in version 1.12.0 are not compatible with version 1.12.1.
+
+# New Features
+
+* A disabled plugin can now be uninstalled in the UI (#5570) @Kukks
+
+### Bug fixes
+
+* Fix: Payments to Top-Up could go undetected due to a race condition (#5568) @NicolasDorier
+* Lightning: Fixed the connection display name in LN settings (#5569) @dennisreimann
+* Prevent redirection to archived store after login (#5566) @dennisreimann
+* Use PullPaymentId to derive the cardkey of a Boltcard (#5575) @NicolasDorier
+* Greenfield: The Link a boltcard to a pull payment route would not generate new keys for the boltcard when onExisting was set to UpdateVersion. @NicolasDorier
+
+### Improvements
+
+* Lightning Address: Use lowercase usernames when resolving (#5579) @dennisreimann
+* UI: Form validation summary now matches alert style (#5576, #5564) @dennisreimann
+* Improved error message in Vault if a hardware device isn't supported @NicolasDorier
+* Lightning: Allow LND to be used with non-admin macaroons (#5567) @dennisreimann
+* Fix in API Documentation: The Link a boltcard to a pull payment had incorrectly documented permissions. @NicolasDorier</summary>
+    <title>btcpayserver/btcpayserver: v1.12.1</title>
+    <updated>2023-12-21T15:03:10Z</updated>
+    <dc:date>2023-12-21T15:03:10Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.6.1</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.6.1"/>
@@ -6277,81 +6307,5 @@ d66015e5a29f98e0961d191036d35298549970f31e313ee1682921281c06bf22  startos-0.3.4.
     <updated>2023-06-21T18:22:40Z</updated>
     <dc:date>2023-06-21T18:22:40Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/getumbrel/umbrel/releases/tag/v0.5.4</id>
-    <link href="https://github.com/getumbrel/umbrel/releases/tag/v0.5.4"/>
-    <summary>This update introduces a completely reimagined App Store, crafted to provide a sleek and intuitive experience as you discover the latest self-hosted apps for your Umbrel. The new Migration Assistant feature enables seamless transfer of data and apps from a Raspberry Pi-based Umbrel to the new Umbrel Home in one click. Complementing these enhancements are various performance improvements, bug fixes, and subtle refinements, such as the option to update your display name directly from the settings.
-
-## Changes
-
-https://github.com/getumbrel/umbrel/compare/v0.5.3...v0.5.4
-
-- umbrelOS 0.5.4 (d299a7ad05dfd31d18f8b5d1828cecd459760dd5) @lukechilds
-- Update to dashboard 0.5.4 (4fd68cf6c995c52330ff27db05719d73fb32a253) @lukechilds
-- increase margin on migration logo (c7574b26b8055b0204e0ee356a026bb48667b13c) @nmfretz
-- Update migration assistant wording (016e7db3c02d677179cd9f0b3536423b985d56dd) @mayankchhabra
-- Fix grammar (3043de71d594f8d26c9c8e7714143b166ad78511) @lukechilds
-- Update logo (3e573a81f72318fa0cf2286b650d5ed3c3f73c79) @mayankchhabra
-- Tweak migration error wording (3581215a91dbaa21fce9d19544db3ade15ea72cb) @lukechilds
-- Wording tweaks (e7ec98f7f1d0c5babee9ac1d83913876bf84d89d) @mayankchhabra
-- Add badge to apps optimized for Umbrel Home (3394747f45d0c1c7a6e821d031a0c8ca4c9d7244) @mayankchhabra
-- Update to manager 0.5.4 (8c842b31a22bada261b2c6e1a5157d16e68e13bf) @lukechilds
-- Improve release CI (f5b299dfd2a548b6e37e03b67a11b318c572d569) @lukechilds
-- Fix updates button and drop down menu (c6e648209901ca2a4be82d63bc7ec07c172e58c0) @mayankchhabra
-- Update categories in app store (60fcca771c6d235593a00bd00e778e78be0dc56a) @mayankchhabra
-- Wrap up app store redesign (c232efa642f43f89ed0a70b9120bb62a2394b2d3) @mayankchhabra @nmfretz @lukechilds
-- Show 16GB total RAM for Umbrel Home (7567472b5b27ef11865eeb673fe4e8620cec64f1) @mayankchhabra
-- Update favicons (5bfc8571afc93a59a334e754ad032344bbcece51) @mayankchhabra
-- Show app download progress in migration (75251753d508136e036be412a778de79024e8011) @lukechilds
-- Migration assistant updates (622617bc6b8a814fbaf53b9874687be66e483ea0) @lukechilds @nmfretz
-- Make sure umbreld OTA update is atomic (27d2b2dfb4973ebeec893675d60cbe6d89b3f086) @lukechilds
-- Fix install script (f33ffd815fa50930b06214b752d076f30cafa4e7) @lukechilds
-- Restore image cleanup logic from previous update (cfc5a9b24ffc1513ed35c0905163a3d92f019ff3) @lukechilds
-- Only update Umbrel if migrations suceed (3d7e398af8af5e641619cbcb6ae70b7f587a4af3) @lukechilds
-- Update info.json during update (8d5b01b4f4c68938bb2219e5f4a0fc1d99bffd28) @lukechilds
-- Update umbreld in OTA update (8d9ce79deac14045ee8f9c9d174667b2d0034205) @lukechilds
-- Add umbreld to install script (a52c9d1f522dd0dd0fd6007c168e2b991174bb9a) @lukechilds
-- Update CI (e454e7874bda36c7f7db37b54f77ccaa9a972930) @lukechilds
-- Add hot reload to manager in dev env (cba3a5677e1d9e0d15f8d2d87ca1177b17735252) @mayankchhabra
-- Delete nohup.out (f3dba58a449639966f513456f84566db03b847b8) @lukechilds
-- Delete old CI workflows (a0b284b249f22da48ff76843b41c67c52f1d0a90) @lukechilds
-- Don't preserve new Umbrel password after migration (bec4ec90393084ec5ae6d7a5e6137780ff8934bb) @lukechilds
-- Show 100% on migration completion (4f3652986b31436a8d4f2e4f80581de6ccdc19c3) @lukechilds
-- Improve dev setup (e407909c661b4c31ee995e643fa97f0a57d2c2c0) @lukechilds
-- Fixes disappeared app suggestions from home on fresh install (bd80c23d2282f294778bd44a635f24c865022de2) @mayankchhabra
-- Improve recovery script (63e41f1ec6ed98428ae4e7b4e72e04f0703d29cc) @lukechilds
-- Always run migrations (668e1ba865880a8c7d1ae71434cf717f6b0a4ab2) @lukechilds
-- Move jwt keys to seperate dir so they survive migration (3bc641f706a5f11b0297a635595a72fac4b83606) @lukechilds
-- Fix umbreld url (054f80396ce58737cb52efc8c3ab4ed247971f57) @lukechilds
-- Finish dev integration (08f6aaa43e1c5de2ec846092583155c978c686ab) @lukechilds
-- Add dashboard as package (b5832a7a8e7011a9fff5b3eeac99b35c927ba549) @lukechilds
-- Copy dev files during update (431e2c92469b15fec23589c82552e81d475b7d7e) @lukechilds
-- Only run power button migration if it hasn't already run (3e39d37859dc39ff0ed4491231996bbdf09ad7fc) @lukechilds
-- Retry update network manager (5a140a84b09bd4980d3c306cce3fa871a3c382af) @lukechilds
-- Umbrel Home hardware reset (fb4b8d1935758f6db8f63ba07a24c280b7af8a1b) @lukechilds
-- Don't nuke jwt on every startup (bd330d7eb9371144fa8324ecd1898655541c574e) @lukechilds
-- Add development mode (4d668dda095c35786a0d23ef263e598eb5699554) @lukechilds
-- Don't enforce min length check on old password when updating (a970587c40b08f754bbe831685eebd228f44d944) @lukechilds
-- Add manager as package (4429207a40a5f07d70f1a554c0c59ea9c26eccf6) @lukechilds
-- Ensure umbreld doesn't get unintentionally nuked by start script (cfb93a3fdc94545000f1781df8489783a8f03261) @lukechilds
-- Migrate Umbrel Home installs to using dhclient for DHCP (7db3f023bcae91976133e16e3c2132789ef19b47) @lukechilds
-- Bump JWT lifetime to 1 week (dc2468d39bfac38bcb53887f7e4c00e32683138d) @lukechilds
-- Add umbreld scaffolding and implement migration assistant (0e27affbf16932ebb649e2ea2ac800ba209c8cb8) @lukechilds
-- Update README.md (cf22afaee6d0b3ff1e2bc67b43f12fb7299d2e22) @mayankchhabra
-- replace final message at end of debug script (60b971c1db1cb60709895e0860b8ae1baf2707a1) @louneskmt @nmfretz
-- fix minor spelling error (f60bebecae30de37a41633514e339be7ea1914c0) @nmfretz
-- update app info in readme (597a19d753356c30f441b77167c7da0d3236c561) @nmfretz
-- remove bitcoin network echo (887a4129a144d78b66b597c99268376376260fe0) @nmfretz
-- Fix spelling (d94d02dccc1ace34a501acc9d9fa11b039ee2597) @deverickapollo
-- Delete old locks inside .git for local app repos (d7c9f4d16317d52eef2193458935dc673790f4db) @nevets963
-- chown local app repo when using repo checkout (84c29bc3f7ed3e4d4ce99b11ff8efa94196b8d25) @nevets963
-- During app update, copy remaining app files before the app is started (73f99fa7ac930c905cc16d08336edd7dfdd7afcf) @nevets963
-- Set default logging config for Docker daemon (a023b3db1c20b25c08dfddc9ed5728dddba65880) @nevets963
-- Handle downstream WS/HTTP errors individually (36169fee71b4e96d8805e01ab109de0f702d5f7a) @nevets963
-- Safe app exports (dcd7fb7743900f8e73781436994ce001a4e43c7a) @nevets963</summary>
-    <title>getumbrel/umbrel: v0.5.4</title>
-    <updated>2023-06-21T13:32:32Z</updated>
-    <dc:date>2023-06-21T13:32:32Z</dc:date>
-  </entry>
-  <dc:date>2023-12-21T13:21:36+00:00</dc:date>
+  <dc:date>2023-12-21T15:11:43+00:00</dc:date>
 </feed>
