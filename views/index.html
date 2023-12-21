@@ -38,6 +38,36 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/BlueWallet/BlueWallet">BlueWallet/BlueWallet</a>: <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.12">v6.4.12</a>
+						    </h2>
+							<p class="card-text">Published: 2023-12-21 12:16:48 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><ul>
+<li>ADD: RON currency for widget</li>
+<li>ADD: See currency when tap and hold on balance</li>
+<li><p>ADD: tool to generate last mnemonic word (#5722)</p></li>
+<li><p>FIX: better tracking opt out (related #5688)</p></li>
+<li><p>FIX: correct merge of params when navigating between screens</p></li>
+<li><p>FIX: Lightning wallet CSV export does not differentiate between paid and expired invoices #5835</p></li>
+<li><p>FIX: Sometimes would crash due to lack of initialParams</p></li>
+<li><p>FIX: Wrong Suite was being targeted</p></li>
+<li><p>FIX: Call dismiss on ActionSheet to avoid duplicate firing</p></li>
+<li><p>FIX: Re-enable groups on watch app</p></li>
+<li><p>FIX: Show alert with error message when a selected file isn&#39;t valid</p></li>
+<li><p>FIX: Apple Watch app not working #5470</p></li>
+<li><p>FIX: Wait for transitions to finish before showing sheet</p></li>
+</ul>
+</p>
+					    <a href="https://github.com/BlueWallet/BlueWallet" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.12" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/vulpemventures/marina">vulpemventures/marina</a>: <a href="https://github.com/vulpemventures/marina/releases/tag/v0.6.0">v0.6.0</a>
 						    </h2>
 							<p class="card-text">Published: 2023-12-20 16:51:32 UTC</p>
@@ -7416,76 +7446,6 @@ d66015e5a29f98e0961d191036d35298549970f31e313ee1682921281c06bf22  startos-0.3.4.
 </p>
 					    <a href="https://github.com/ACINQ/bitcoin-lib" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/ACINQ/bitcoin-lib/releases/tag/v0.18.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/eclair">ACINQ/eclair</a>: <a href="https://github.com/ACINQ/eclair/releases/tag/v0.9.0">v0.9.0</a>
-						    </h2>
-							<p class="card-text">Published: 2023-06-19 08:45:19 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This release contains a lot of preparatory work for important (and complex) lightning features: dual-funding, splicing and Bolt 12 offers.
-These features are now fully implemented in <code>eclair</code>, but we&#39;re waiting for the specification work to be finalized and other implementations to be ready for cross-compatibility tests.
-You should only activate them if you know what you&#39;re doing, and are ready to handle potential backwards-incompatible changes!
-We also make plugins more powerful, introduce mitigations against various types of DoS, and improve performance in many areas of the codebase.</p>
-
-<p>The detailed release notes can be found <a href="https://github.com/ACINQ/eclair/blob/master/docs/release-notes/eclair-v0.9.0.md">here</a></p>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:</p>
-
-<ul>
-<li>from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a></li>
-<li>from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></li>
-</ul>
-
-<p>To import our signing key:</p>
-
-<p><code>sh
-$ gpg --import drouinf.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:</p>
-
-<p><code>sh
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-
-<h2>Building</h2>
-
-<p>Eclair builds are deterministic. To reproduce our builds, please use the following environment (*):</p>
-
-<ul>
-<li>Ubuntu 22.04</li>
-<li>AdoptOpenJDK 11.0.6</li>
-<li>Maven 3.9.2</li>
-</ul>
-
-<p>Use the following command to generate the eclair-node package:</p>
-
-<p><code>sh
-mvn clean install -DskipTests
-</code></p>
-
-<p>That should generate <code>eclair-node/target/eclair-node-&lt;version&gt;-XXXXXXX-bin.zip</code> with sha256 checksums that match the one
-we provide and sign in <code>SHA256SUMS.asc</code></p>
-
-<p>(*) You may be able to build the exact same artefacts with other operating systems or versions of JDK 11, we have not
-tried everything.</p>
-
-<h2>Upgrading</h2>
-
-<p>This release is fully compatible with previous eclair versions. You don&#39;t need to close your channels, just stop eclair,
-upgrade and restart.</p>
-</p>
-					    <a href="https://github.com/ACINQ/eclair" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/eclair/releases/tag/v0.9.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
