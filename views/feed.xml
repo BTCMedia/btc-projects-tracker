@@ -6,7 +6,17 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-21T15:11:43+00:00</updated>
+  <updated>2023-12-21T16:03:10+00:00</updated>
+  <entry>
+    <id>https://github.com/bitcoin-core/secp256k1/releases/tag/v0.4.1</id>
+    <link href="https://github.com/bitcoin-core/secp256k1/releases/tag/v0.4.1"/>
+    <summary>This release slightly increases the speed of the ECDH operation and significantly enhances the performance of many library functions when using the default configuration on x86_64.
+
+For a list of changes, see the [CHANGELOG.md](https://github.com/bitcoin-core/secp256k1/blob/master/CHANGELOG.md#041---2023-12-21).</summary>
+    <title>bitcoin-core/secp256k1: v0.4.1</title>
+    <updated>2023-12-21T16:02:43Z</updated>
+    <dc:date>2023-12-21T16:02:43Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.1</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.1"/>
@@ -1221,29 +1231,6 @@ https://github.com/zkSNACKs/WalletWasabi/pull/11980</summary>
     <title>zkSNACKs/WalletWasabi: v2.0.4.1b</title>
     <updated>2023-11-22T15:01:40Z</updated>
     <dc:date>2023-11-22T15:01:40Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.8.1</id>
-    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.8.1"/>
-    <summary>- Add [oxt.me](https://light.oxt.me) as fee rates source (configure in Preferences)
-- Add historical fiat values to the transactions CSV (from Export Wallet or the Transactions tab) where an exchange source is configured
-- Increase and decrease maximum limit on fee rate slider where fee rate equals or exceeds current range
-- Add QR display (with save to PDF) to the Export Wallet &gt; Output Descriptor option
-- Set non-mainnet fallback fee rates to 1 sat/vb
-- Switch from HttpUrlConnection to Jetty HTTP client for all external HTTP calls to avoid spurious DNS query
-- In Cormorant, check the wallet gap limit and increase the Bitcoin Core descriptor range if necessary
-- Set a smaller increment amount on the fee range slider for keyboard adjustments
-- Use fallback fee rate estimates if the connected server returns an error estimating fee rates
-- Show an error dialog on attempting CPFP where no outputs are spendable
-- Add Krux to the Import Wallet options
-- Bug fix: Set dialog minimum height to preferred height (or make it resizable) to avoid window sizing bug in some Linux environments
-- Bug fix: Fix transaction diagram output size indicators in transactions with non-address outputs
-- Bug fix: Add null safe tests for standard account types
-- Bug fix: In Cormorant, handle checking imports and stopping before server is started
-- Bug fix: Save previously used Mix To wallet index to skip used addresses if mix fails</summary>
-    <title>sparrowwallet/sparrow: 1.8.1</title>
-    <updated>2023-11-22T09:46:51Z</updated>
-    <dc:date>2023-11-22T09:46:51Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.17.2-beta</id>
@@ -6307,5 +6294,5 @@ d66015e5a29f98e0961d191036d35298549970f31e313ee1682921281c06bf22  startos-0.3.4.
     <updated>2023-06-21T18:22:40Z</updated>
     <dc:date>2023-06-21T18:22:40Z</dc:date>
   </entry>
-  <dc:date>2023-12-21T15:11:43+00:00</dc:date>
+  <dc:date>2023-12-21T16:03:10+00:00</dc:date>
 </feed>
