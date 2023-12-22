@@ -6,7 +6,20 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-21T16:03:10+00:00</updated>
+  <updated>2023-12-22T02:02:47+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.2</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.2"/>
+    <summary>Please also see [v1.12.1](https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.1) which was released at the same time.
+
+### Bug fixes
+
+*  Plugins: Fix missing uninstall button (#5587) @dennisreimann
+*  Webhooks: Fix invoice interpolation (#5586 #5584) @dennisreimann</summary>
+    <title>btcpayserver/btcpayserver: v1.12.2</title>
+    <updated>2023-12-22T02:00:14Z</updated>
+    <dc:date>2023-12-22T02:00:14Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/bitcoin-core/secp256k1/releases/tag/v0.4.1</id>
     <link href="https://github.com/bitcoin-core/secp256k1/releases/tag/v0.4.1"/>
@@ -1231,6 +1244,29 @@ https://github.com/zkSNACKs/WalletWasabi/pull/11980</summary>
     <title>zkSNACKs/WalletWasabi: v2.0.4.1b</title>
     <updated>2023-11-22T15:01:40Z</updated>
     <dc:date>2023-11-22T15:01:40Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.8.1</id>
+    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.8.1"/>
+    <summary>- Add [oxt.me](https://light.oxt.me) as fee rates source (configure in Preferences)
+- Add historical fiat values to the transactions CSV (from Export Wallet or the Transactions tab) where an exchange source is configured
+- Increase and decrease maximum limit on fee rate slider where fee rate equals or exceeds current range
+- Add QR display (with save to PDF) to the Export Wallet &gt; Output Descriptor option
+- Set non-mainnet fallback fee rates to 1 sat/vb
+- Switch from HttpUrlConnection to Jetty HTTP client for all external HTTP calls to avoid spurious DNS query
+- In Cormorant, check the wallet gap limit and increase the Bitcoin Core descriptor range if necessary
+- Set a smaller increment amount on the fee range slider for keyboard adjustments
+- Use fallback fee rate estimates if the connected server returns an error estimating fee rates
+- Show an error dialog on attempting CPFP where no outputs are spendable
+- Add Krux to the Import Wallet options
+- Bug fix: Set dialog minimum height to preferred height (or make it resizable) to avoid window sizing bug in some Linux environments
+- Bug fix: Fix transaction diagram output size indicators in transactions with non-address outputs
+- Bug fix: Add null safe tests for standard account types
+- Bug fix: In Cormorant, handle checking imports and stopping before server is started
+- Bug fix: Save previously used Mix To wallet index to skip used addresses if mix fails</summary>
+    <title>sparrowwallet/sparrow: 1.8.1</title>
+    <updated>2023-11-22T09:46:51Z</updated>
+    <dc:date>2023-11-22T09:46:51Z</dc:date>
   </entry>
   <entry>
     <id>https://github.com/lightningnetwork/lnd/releases/tag/v0.17.2-beta</id>
@@ -6248,51 +6284,5 @@ d66015e5a29f98e0961d191036d35298549970f31e313ee1682921281c06bf22  startos-0.3.4.
     <updated>2023-06-24T21:12:50Z</updated>
     <dc:date>2023-06-24T21:12:50Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/sparrowwallet/sparrow/releases/tag/1.7.7</id>
-    <link href="https://github.com/sparrowwallet/sparrow/releases/tag/1.7.7"/>
-    <summary>- Improve the mempool fee rates chart to reflect finer granularity and offer an expanded display on click
-- Add a 24h toggle to expanded mempool fee rates chart
-- Add additional inputs to an RBF transaction if needed as required fee is increased
-- Display the order of word selection on a Border Wallets grid
-- Avoid simultaneous multiple selection on a Border Wallets grid
-- Clarify recovery phrase purpose on Border Wallets PDF
-- Support `spendable` property on UTXOs in BIP329 wallet label imports and exports
-- Improve the error message when broadcasting an RBF transaction with insufficient fee, and indicate the minimum required fee if available
-- Improve error message on broadcasting a transaction with a fee rate below the purge rate for the connected node mempool
-- Add Ctrl/Cmd+B keyboard shortcut for quickly switching the bitcoin unit from BTC to sats and back
-- When scanning, invert cropped frame and scan for inverted QRs
-- Support scanning text QR containing seed words
-- Update to hummingbird v1.6.7 to support pair (`&lt;0;1&gt;`) path components and unique part progress indicator
-- Support compact SeedQRs with high error correction
-- Trim leading and trailing whitespace from Pay to address field in the Send tab
-- Look for supported cards across all connected card terminals
-- Support airgapped keystore import of a Tapsigner with a custom derivation path
-- Add a separate button to backup Tapsigner without changing the PIN
-- Ensure canonical ordering of key expressions in multisig descriptor QRs
-- Improve performance on large wallets with high address reuse
-- Optimize fetching mempool entries for fee rate histogram when connected to Bitcoin Core
-- Continue with transaction parsing if pushdata opcode is found with invalid data length
-- Add context menu options to Date column in UTXOs table to freeze UTXO and view transaction
-- Remove path from non-batched Electrum server request ids
-- Highlight CSV download buttons
-- Update `kmp-tor` to v1.4.3
-- Bug fix: Fix export to Specter Desktop without any wallet history
-- Bug fix: Set all witness UTXOs on PSBT inputs before attempting to sign a sweep private key Taproot transaction
-- Bug fix: Fix reading of compact size int as unsigned short when parsing PSBTs
-- Bug fix: Fix unit format switching on Send tab
-- Bug fix: Fix UI button update when stopping mixing on Terminal</summary>
-    <title>sparrowwallet/sparrow: 1.7.7</title>
-    <updated>2023-06-22T10:39:10Z</updated>
-    <dc:date>2023-06-22T10:39:10Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/romanz/electrs/releases/tag/v0.10.0-rc.1</id>
-    <link href="https://github.com/romanz/electrs/releases/tag/v0.10.0-rc.1"/>
-    <summary>https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0100-rc1-jun-21-2023</summary>
-    <title>romanz/electrs: v0.10.0-rc.1</title>
-    <updated>2023-06-21T18:22:40Z</updated>
-    <dc:date>2023-06-21T18:22:40Z</dc:date>
-  </entry>
-  <dc:date>2023-12-21T16:03:10+00:00</dc:date>
+  <dc:date>2023-12-22T02:02:47+00:00</dc:date>
 </feed>

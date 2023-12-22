@@ -38,6 +38,29 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/btcpayserver/btcpayserver">btcpayserver/btcpayserver</a>: <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.2">v1.12.2</a>
+						    </h2>
+							<p class="card-text">Published: 2023-12-22 02:00:14 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><p>Please also see <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.1">v1.12.1</a> which was released at the same time.</p>
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li> Plugins: Fix missing uninstall button (#5587) @dennisreimann</li>
+<li> Webhooks: Fix invoice interpolation (#5586 #5584) @dennisreimann</li>
+</ul>
+</p>
+					    <a href="https://github.com/btcpayserver/btcpayserver" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.2" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/bitcoin-core/secp256k1">bitcoin-core/secp256k1</a>: <a href="https://github.com/bitcoin-core/secp256k1/releases/tag/v0.4.1">v0.4.1</a>
 						    </h2>
 							<p class="card-text">Published: 2023-12-21 16:02:43 UTC</p>
@@ -1453,6 +1476,39 @@ Not even if the server-side prison was cleared.</li>
 </p>
 					    <a href="https://github.com/zkSNACKs/WalletWasabi" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/zkSNACKs/WalletWasabi/releases/tag/v2.0.4.1b" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
+						    	<a href="https://github.com/sparrowwallet/sparrow">sparrowwallet/sparrow</a>: <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.8.1">1.8.1</a>
+						    </h2>
+							<p class="card-text">Published: 2023-11-22 09:46:51 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><ul>
+<li>Add <a href="https://light.oxt.me">oxt.me</a> as fee rates source (configure in Preferences)</li>
+<li>Add historical fiat values to the transactions CSV (from Export Wallet or the Transactions tab) where an exchange source is configured</li>
+<li>Increase and decrease maximum limit on fee rate slider where fee rate equals or exceeds current range</li>
+<li>Add QR display (with save to PDF) to the Export Wallet &gt; Output Descriptor option</li>
+<li>Set non-mainnet fallback fee rates to 1 sat/vb</li>
+<li>Switch from HttpUrlConnection to Jetty HTTP client for all external HTTP calls to avoid spurious DNS query</li>
+<li>In Cormorant, check the wallet gap limit and increase the Bitcoin Core descriptor range if necessary</li>
+<li>Set a smaller increment amount on the fee range slider for keyboard adjustments</li>
+<li>Use fallback fee rate estimates if the connected server returns an error estimating fee rates</li>
+<li>Show an error dialog on attempting CPFP where no outputs are spendable</li>
+<li>Add Krux to the Import Wallet options</li>
+<li>Bug fix: Set dialog minimum height to preferred height (or make it resizable) to avoid window sizing bug in some Linux environments</li>
+<li>Bug fix: Fix transaction diagram output size indicators in transactions with non-address outputs</li>
+<li>Bug fix: Add null safe tests for standard account types</li>
+<li>Bug fix: In Cormorant, handle checking imports and stopping before server is started</li>
+<li>Bug fix: Save previously used Mix To wallet index to skip used addresses if mix fails</li>
+</ul>
+</p>
+					    <a href="https://github.com/sparrowwallet/sparrow" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.8.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
@@ -7320,70 +7376,6 @@ d66015e5a29f98e0961d191036d35298549970f31e313ee1682921281c06bf22  startos-0.3.4.
 </p>
 					    <a href="https://github.com/Start9Labs/start-os" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/Start9Labs/start-os/releases/tag/v0.3.4.3" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/sparrowwallet/sparrow">sparrowwallet/sparrow</a>: <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.7.7">1.7.7</a>
-						    </h2>
-							<p class="card-text">Published: 2023-06-22 10:39:10 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><ul>
-<li>Improve the mempool fee rates chart to reflect finer granularity and offer an expanded display on click</li>
-<li>Add a 24h toggle to expanded mempool fee rates chart</li>
-<li>Add additional inputs to an RBF transaction if needed as required fee is increased</li>
-<li>Display the order of word selection on a Border Wallets grid</li>
-<li>Avoid simultaneous multiple selection on a Border Wallets grid</li>
-<li>Clarify recovery phrase purpose on Border Wallets PDF</li>
-<li>Support <code>spendable</code> property on UTXOs in BIP329 wallet label imports and exports</li>
-<li>Improve the error message when broadcasting an RBF transaction with insufficient fee, and indicate the minimum required fee if available</li>
-<li>Improve error message on broadcasting a transaction with a fee rate below the purge rate for the connected node mempool</li>
-<li>Add Ctrl/Cmd+B keyboard shortcut for quickly switching the bitcoin unit from BTC to sats and back</li>
-<li>When scanning, invert cropped frame and scan for inverted QRs</li>
-<li>Support scanning text QR containing seed words</li>
-<li>Update to hummingbird v1.6.7 to support pair (<code>&lt;0;1&gt;</code>) path components and unique part progress indicator</li>
-<li>Support compact SeedQRs with high error correction</li>
-<li>Trim leading and trailing whitespace from Pay to address field in the Send tab</li>
-<li>Look for supported cards across all connected card terminals</li>
-<li>Support airgapped keystore import of a Tapsigner with a custom derivation path</li>
-<li>Add a separate button to backup Tapsigner without changing the PIN</li>
-<li>Ensure canonical ordering of key expressions in multisig descriptor QRs</li>
-<li>Improve performance on large wallets with high address reuse</li>
-<li>Optimize fetching mempool entries for fee rate histogram when connected to Bitcoin Core</li>
-<li>Continue with transaction parsing if pushdata opcode is found with invalid data length</li>
-<li>Add context menu options to Date column in UTXOs table to freeze UTXO and view transaction</li>
-<li>Remove path from non-batched Electrum server request ids</li>
-<li>Highlight CSV download buttons</li>
-<li>Update <code>kmp-tor</code> to v1.4.3</li>
-<li>Bug fix: Fix export to Specter Desktop without any wallet history</li>
-<li>Bug fix: Set all witness UTXOs on PSBT inputs before attempting to sign a sweep private key Taproot transaction</li>
-<li>Bug fix: Fix reading of compact size int as unsigned short when parsing PSBTs</li>
-<li>Bug fix: Fix unit format switching on Send tab</li>
-<li>Bug fix: Fix UI button update when stopping mixing on Terminal</li>
-</ul>
-</p>
-					    <a href="https://github.com/sparrowwallet/sparrow" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/sparrowwallet/sparrow/releases/tag/1.7.7" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/romanz/electrs">romanz/electrs</a>: <a href="https://github.com/romanz/electrs/releases/tag/v0.10.0-rc.1">v0.10.0-rc.1</a>
-						    </h2>
-							<p class="card-text">Published: 2023-06-21 18:22:40 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p><a href="https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0100-rc1-jun-21-2023">https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0100-rc1-jun-21-2023</a></p>
-</p>
-					    <a href="https://github.com/romanz/electrs" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/romanz/electrs/releases/tag/v0.10.0-rc.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
