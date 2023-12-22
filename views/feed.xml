@@ -6,7 +6,17 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-22T02:02:47+00:00</updated>
+  <updated>2023-12-22T05:41:31+00:00</updated>
+  <entry>
+    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.3</id>
+    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.3"/>
+    <summary>### Bug fixes
+
+* Fix: Crashes would happen on some plugins introducing new apps type (#5590) @dennisreimann</summary>
+    <title>btcpayserver/btcpayserver: v1.12.3</title>
+    <updated>2023-12-22T05:32:16Z</updated>
+    <dc:date>2023-12-22T05:32:16Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.2</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.2"/>
@@ -6240,49 +6250,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2023-06-27T13:25:41Z</updated>
     <dc:date>2023-06-27T13:25:41Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/Start9Labs/start-os/releases/tag/v0.3.4.3</id>
-    <link href="https://github.com/Start9Labs/start-os/releases/tag/v0.3.4.3"/>
-    <summary>## Highlights
-* Improved Tor reliability
-* Experimental features tab
-  * Zram
-  * Manually reset tor
-* Multiple bugfixes and general performance enhancements
-* Update branding
-
-## What's Changed
-* Integration/0.3.4.3 by @elvece in https://github.com/Start9Labs/start-os/pull/2291
-* StartOS 0.3.4.3 by @dr-bonez in https://github.com/Start9Labs/start-os/pull/2304
-* fix rootflags for btrfs update by @dr-bonez in https://github.com/Start9Labs/start-os/pull/2315
-* prevent tor from spinning if a service is in a crash loop by @dr-bonez in https://github.com/Start9Labs/start-os/pull/2316
-* use port instead of pidof to detect tor going down by @dr-bonez in https://github.com/Start9Labs/start-os/pull/2320
-
-
-**Full Changelog**: https://github.com/Start9Labs/start-os/compare/v0.3.4.2...v0.3.4.3
-
-## Checksums
-
-### BLAKE-3
-```
-38ef340ebf453b304dfc553f9886189b5b0c23336cc257b71adfd9724931f7d9  startos-0.3.4.3-dd28ad2-20230623_aarch64.iso
-6ea3b8dec71328d4e96a9c4b08d903d9f2c9f0faf23fc039b4fda3e1e2733dbf  startos-0.3.4.3-dd28ad2-20230623_aarch64-nonfree.iso
-2dc402ef6c742331fd47c93273a3ee14dfeaea16652ba0040a097b8f5f847deb  startos-0.3.4.3-dd28ad2-20230623_x86_64.iso
-a5e220b99385512242ac6dee3cdeab06ed55867d3f22c80210533be5629c3e19  startos-0.3.4.3-dd28ad2-20230623_x86_64-nonfree.iso
-3cb46993eda87c5f2e485efe971c61af5248da41242652b5b56949e88eaa4a7b  startos-0.3.4.3-dd28ad2-20230623_raspberrypi.img.gz
-```
-
-### SHA-256
-```
-720ad631b38000850be563107128c77b6803e7cbe06946e70e8737b08f46728e  startos-0.3.4.3-dd28ad2-20230623_aarch64.iso
-627e7cd18521b51f2bd6988517b0edc9d461631facc37d190f8bd4bf36626b89  startos-0.3.4.3-dd28ad2-20230623_aarch64-nonfree.iso
-d66015e5a29f98e0961d191036d35298549970f31e313ee1682921281c06bf22  startos-0.3.4.3-dd28ad2-20230623_x86_64.iso
-035bb38d112a91c43a5e2ece7bd7fcdc22723f717540ee9a65337e0592dac1b9  startos-0.3.4.3-dd28ad2-20230623_x86_64-nonfree.iso
-42df06e0f5f63431c7863f65ba0b30d78b1985e5000c2d49bd60f639e264943d  startos-0.3.4.3-dd28ad2-20230623_raspberrypi.img.gz
-```</summary>
-    <title>Start9Labs/start-os: v0.3.4.3</title>
-    <updated>2023-06-24T21:12:50Z</updated>
-    <dc:date>2023-06-24T21:12:50Z</dc:date>
-  </entry>
-  <dc:date>2023-12-22T02:02:47+00:00</dc:date>
+  <dc:date>2023-12-22T05:41:31+00:00</dc:date>
 </feed>
