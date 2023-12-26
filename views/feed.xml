@@ -6,7 +6,20 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-26T14:41:31+00:00</updated>
+  <updated>2023-12-26T14:51:32+00:00</updated>
+  <entry>
+    <id>https://github.com/ElementsProject/lightning/releases/tag/v23.11.2</id>
+    <link href="https://github.com/ElementsProject/lightning/releases/tag/v23.11.2"/>
+    <summary>This hotfix release re-introduces a temporary shim that includes the final CLTV delta in the invoice even if the default of 18 is used. This is necessary since the default changed, and for backwards compatibility we were always specifying it. We removed it expecting that all modern implementations had switched to 18 blocks by default, but some did not, and caused payments to fail if the sender still had a default of 9 configured.
+
+## Fixed
+
+ - Default bolt11 invoices are payable by LND nodes.
+</summary>
+    <title>ElementsProject/lightning: v23.11.2</title>
+    <updated>2023-12-22T16:03:07Z</updated>
+    <dc:date>2023-12-22T16:03:07Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.3</id>
     <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.12.3"/>
@@ -6214,41 +6227,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2023-06-29T15:00:38Z</updated>
     <dc:date>2023-06-29T15:00:38Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.3</id>
-    <link href="https://github.com/btcpayserver/btcpayserver/releases/tag/v1.10.3"/>
-    <summary>### New Features
-
-* Pull Payment: Support LNURL Withdraw with SATS denomination (#5041) @dennisreimann
-
-### Bug fixes
-
-* Crowdfund: Fix JS errors in empty state (#5121) @dennisreimann
-* The current preimage of a invoice's lightning payment method should be available via API (#5111) @NicolasDorier
-* Dashboard: Limit &quot;Top Items&quot; to five (#5110) @dennisreimann
-* ToolTip causes glitching when scrolling down on mobile (#4956) @dennisreimann
-* LN payments failed to be detected on litd (#5104) @NicolasDorier
-* Fix for LNDHub via LNbits integration (#5083 #4482) @dennisreimann
-* Applying a discount in PoS with cart wasn't working (#5079) @NicolasDorier
-* Refund: Fix overpaid option (#5076 #5066) @dennisreimann
-* Do not crash when an invoice have an amount that is too big (#5070) @NicolasDorier
-* NFC: Do not start scanning if unsupported (#5067) @dennisreimann
-* Fix: Incorrect rounding in the receipt of PoS invoice (#5071 #5072) @NicolasDorier
-* Crowdfund: Fix null pointer exception for topup type (missing price) (#5068) @dennisreimann
-* Greenfield: Default currency missing from stores API (#5126) @dennisreimann
-
-### Improvements
-
-* Load wallet transaction list asynchronously to avoid timeout on large wallets (#5100 #4987) @NicolasDorier
-* Receipt improvements (#5077) @dennisreimann
-* Dashboard: Make invoice badges consistent with those on invoices list (#5108 #4969) @dennisreimann
-* Make file management UI more useful (#5081) @Kukks
-* After changing PoS items values, the JSON template should be indented @NicolasDorier
-* Add extension point to template editor (#5080) @Kukks
-* Querying a lightning address no longer generates an invoice each time (#5117) @NicolasDorier</summary>
-    <title>btcpayserver/btcpayserver: v1.10.3</title>
-    <updated>2023-06-27T13:25:41Z</updated>
-    <dc:date>2023-06-27T13:25:41Z</dc:date>
-  </entry>
-  <dc:date>2023-12-26T14:41:31+00:00</dc:date>
+  <dc:date>2023-12-26T14:51:32+00:00</dc:date>
 </feed>
