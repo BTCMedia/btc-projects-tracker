@@ -6,7 +6,16 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-26T14:51:32+00:00</updated>
+  <updated>2023-12-29T11:02:55+00:00</updated>
+  <entry>
+    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.14</id>
+    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.14"/>
+    <summary>* FIX: exception trying broadcast after scanning PSBT from QR
+* FIX: correctly work with addresses funded by coinbase transactions</summary>
+    <title>BlueWallet/BlueWallet: v6.4.14</title>
+    <updated>2023-12-29T10:55:40Z</updated>
+    <dc:date>2023-12-29T10:55:40Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/ElementsProject/lightning/releases/tag/v23.11.2</id>
     <link href="https://github.com/ElementsProject/lightning/releases/tag/v23.11.2"/>
@@ -6212,20 +6221,5 @@ As well as to everyone that helped with translations on [Transifex](https://tran
     <updated>2023-06-30T23:34:03Z</updated>
     <dc:date>2023-06-30T23:34:03Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/ElementsProject/lightning/releases/tag/v23.05.2</id>
-    <link href="https://github.com/ElementsProject/lightning/releases/tag/v23.05.2"/>
-    <summary>This is a bugfix-only release which repairs several issues reported in the wild. It is a recommended upgrade for anyone on v23.05.
-
-* `--enable-experimental-features` compilation fixed.
-* `pay` and `decodepay` with description now correctly handle JSON escapes (e.g &quot; inside description)
-* `pay` has *undeprecated* paying a description-hash invoice without providing the description (since it didn't work reliably until now!)
-* GRPC: `listpeers` sometimes could fail on unknown HTLC states.
-
-~ @rustyrussell, @ShahanaFarooqui, @endothermicdev, @cdecker, and @niftynei</summary>
-    <title>ElementsProject/lightning: v23.05.2</title>
-    <updated>2023-06-29T15:00:38Z</updated>
-    <dc:date>2023-06-29T15:00:38Z</dc:date>
-  </entry>
-  <dc:date>2023-12-26T14:51:32+00:00</dc:date>
+  <dc:date>2023-12-29T11:02:55+00:00</dc:date>
 </feed>
