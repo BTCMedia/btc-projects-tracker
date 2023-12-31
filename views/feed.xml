@@ -6,7 +6,259 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2023-12-30T19:03:00+00:00</updated>
+  <updated>2023-12-31T01:32:27+00:00</updated>
+  <entry>
+    <id>https://github.com/btcsuite/btcd/releases/tag/v0.24.0</id>
+    <link href="https://github.com/btcsuite/btcd/releases/tag/v0.24.0"/>
+    <summary>This release is a major release that includes several general bug fixes, security bug fixes, and also a series of performance improvements that dramatically reduce the time for initial block download from ~45 hours+ to around 6 hours! With this release,`btcd` now also supports BIP 155 and has gained support for pruning (`--prune=MiB`). 
+
+# Verifying the Release
+
+In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
+
+```
+curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/roasbeef.asc | gpg --import
+```
+
+Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.24.0.sig` and `manifest-v0.24.0.txt` are in the current directory) with:
+
+```
+gpg --verify manifest-roasbeef-v0.24.0.sig manifest-v0.24.0.txt
+```
+
+You should see the following if the verification was successful:
+
+```
+gpg: Signature made Sat Dec 30 17:11:22 2023 PST
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+```
+
+That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
+
+
+# What's Changed
+* Musig2: Update to 1.0.0.rc2 by @sputn1ck in https://github.com/btcsuite/btcd/pull/1913
+* btcec/schnorr/musig2: fix BenchmarkPartialVerify by @Roasbeef in https://github.com/btcsuite/btcd/pull/1920
+* base58: fix decoding issue by @guggero in https://github.com/btcsuite/btcd/pull/1923
+* Update Docker documentation towards building your own image by @guiand888 in https://github.com/btcsuite/btcd/pull/1925
+* chainhash: JSON marshal hash as string by @ffranr in https://github.com/btcsuite/btcd/pull/1932
+* Update Dockerfile to Alpine 3.16 by @guiand888 in https://github.com/btcsuite/btcd/pull/1924
+* Fix memory leak in connmanager by @hxw in https://github.com/btcsuite/btcd/pull/1576
+* Update mining.md by @jagottsicher in https://github.com/btcsuite/btcd/pull/1938
+* Sighash taproot keyspend bug fix by @Roasbeef in https://github.com/btcsuite/btcd/pull/1941
+* btcutil/psbt: export helper functions, fix/add encoding of unknown fields by @guggero in https://github.com/btcsuite/btcd/pull/1942
+* docs: Update Go version as per the Readme. by @hristog in https://github.com/btcsuite/btcd/pull/1944
+* txscript: Fix typo in IsUnspendable() comment by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1945
+* txscript: allow script builder capacity to be specified by @guggero in https://github.com/btcsuite/btcd/pull/1954
+* Export MakeScritpNum, AsSmallInt, and IsSmallInt by @martonp in https://github.com/btcsuite/btcd/pull/1956
+* chainhash: JSON Unmarshal hash from appropriate string. by @LindenWang01 in https://github.com/btcsuite/btcd/pull/1952
+* psbt: add verification method for utxo data by @ziggie1984 in https://github.com/btcsuite/btcd/pull/1964
+* txscript: fix typos by @hieblmi in https://github.com/btcsuite/btcd/pull/1957
+* chaincfg: Update checkpoints by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1968
+* btcd: Add memory profiling flag by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1953
+* blockchain: Use slices when fetching utxos by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1972
+* main: Update README.md's minimum go version by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1977
+* Add wire.Outpoint parser from string by @GeorgeTsagk in https://github.com/btcsuite/btcd/pull/1879
+* multi: Run gofmt on the entire repository by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1981
+* blockchain+chaincfg: disable retargeting for regtest by @guggero in https://github.com/btcsuite/btcd/pull/1985
+* multi: remove repetitive the by @cuishuang in https://github.com/btcsuite/btcd/pull/1998
+* blockchain: refactor and export header validation checks by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1931
+* btcutil: format BTC amounts with trailing zeroes by @C-Otto in https://github.com/btcsuite/btcd/pull/1996
+* musig2: fix early nonce gen option by @sputn1ck in https://github.com/btcsuite/btcd/pull/2003
+* fix: missing sighashtype when finalizing taproot keyspend signature by @0xEclair in https://github.com/btcsuite/btcd/pull/2006
+* Add address field (rpc client &amp; server) by @lindlof in https://github.com/btcsuite/btcd/pull/1969
+* schnorr: correct rfc reference in docs by @wydengyre in https://github.com/btcsuite/btcd/pull/2016
+* blockchain, integration, mining, main: Rolling merkle root calculation by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1979
+* schnorr: bip-340 compliant verification by @wydengyre in https://github.com/btcsuite/btcd/pull/2018
+* txscript/engine: add execution StepCallback by @halseth in https://github.com/btcsuite/btcd/pull/1980
+* schnorr: bip-340 compliant signing by @wydengyre in https://github.com/btcsuite/btcd/pull/2022
+* main, wire, blockchain, indexers, ffldb: Add pruning by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1971
+* chainhash: add support to legacy-marshaled hashes by @Beerosagos in https://github.com/btcsuite/btcd/pull/2025
+* rpcclient: catch shutdown signal when sending RPC requests by @yyforyongyu in https://github.com/btcsuite/btcd/pull/2028
+* integration: add test to check prune status by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/2043
+* fix: typos in sighash.go by @kevinheavey in https://github.com/btcsuite/btcd/pull/2047
+* Update LICENSE by @davidcardenasus in https://github.com/btcsuite/btcd/pull/2045
+* blockchain: export CheckSerializedHeight by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/2051
+* fix: default forward port by @0xEclair in https://github.com/btcsuite/btcd/pull/2038
+* Added tests for FutureGetBestBlockHashResult.Receive by @ClaytonNorthey92 in https://github.com/btcsuite/btcd/pull/2048
+* Added test for client.GetChainTxStatsAsync() in rpcclient. by @ClaytonNorthey92 in https://github.com/btcsuite/btcd/pull/2049
+* added tests for GetBestBlockHashAsync by @ClaytonNorthey92 in https://github.com/btcsuite/btcd/pull/2057
+* blockchain, btcjson: Implement getchaintips rpc call by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1918
+* Fix typos by @xiaolou86 in https://github.com/btcsuite/btcd/pull/2064
+* Fix typos on signature.go by @EvanTedesco in https://github.com/btcsuite/btcd/pull/2065
+* schnorr: simplify some signing math by @wydengyre in https://github.com/btcsuite/btcd/pull/2042
+* Correct comments in singature.go by @jcvernaleo in https://github.com/btcsuite/btcd/pull/2067
+* blockchain: Add ancestor optimization to finding Ancestor by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1688
+* Update petertodd seed DNS to .net by @petertodd in https://github.com/btcsuite/btcd/pull/2069
+* wire, netsync: change isSyncCandidate behavior by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/2035
+* make: add install and release-install goals by @guggero in https://github.com/btcsuite/btcd/pull/1890
+* chainhash, wire, btcutil, main: Memory efficient txhash by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1978
+* blockchain, cmd, netsync, main: Add utxocache by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1955
+* btcutil: update to chaincfg/chainhash/v1.1.0 by @Roasbeef in https://github.com/btcsuite/btcd/pull/2072
+* fix: enhance code comments by @threewebcode in https://github.com/btcsuite/btcd/pull/2074
+* multi: update main package and btcutil to chainhash/v1.1.0, use optimized dsha256  by @Roasbeef in https://github.com/btcsuite/btcd/pull/2075
+* doc: correct comments by @bodhi-crypo in https://github.com/btcsuite/btcd/pull/2076
+* rpctest: integration test harness fixes by @guggero in https://github.com/btcsuite/btcd/pull/2071
+* btcutil: reuse serialized tx during TxHash by @Roasbeef in https://github.com/btcsuite/btcd/pull/2081
+* wire: only borrow/return binaryFreeList buffers at the message level by @Roasbeef in https://github.com/btcsuite/btcd/pull/2073
+* build: create btcd v0.24 release branch  by @Roasbeef in https://github.com/btcsuite/btcd/pull/2082
+
+## New Contributors
+* @guiand888 made their first contribution in https://github.com/btcsuite/btcd/pull/1925
+* @hxw made their first contribution in https://github.com/btcsuite/btcd/pull/1576
+* @jagottsicher made their first contribution in https://github.com/btcsuite/btcd/pull/1938
+* @hristog made their first contribution in https://github.com/btcsuite/btcd/pull/1944
+* @martonp made their first contribution in https://github.com/btcsuite/btcd/pull/1956
+* @LindenWang01 made their first contribution in https://github.com/btcsuite/btcd/pull/1952
+* @ziggie1984 made their first contribution in https://github.com/btcsuite/btcd/pull/1964
+* @hieblmi made their first contribution in https://github.com/btcsuite/btcd/pull/1957
+* @GeorgeTsagk made their first contribution in https://github.com/btcsuite/btcd/pull/1879
+* @cuishuang made their first contribution in https://github.com/btcsuite/btcd/pull/1998
+* @C-Otto made their first contribution in https://github.com/btcsuite/btcd/pull/1996
+* @0xEclair made their first contribution in https://github.com/btcsuite/btcd/pull/2006
+* @wydengyre made their first contribution in https://github.com/btcsuite/btcd/pull/2016
+* @Beerosagos made their first contribution in https://github.com/btcsuite/btcd/pull/2025
+* @kevinheavey made their first contribution in https://github.com/btcsuite/btcd/pull/2047
+* @davidcardenasus made their first contribution in https://github.com/btcsuite/btcd/pull/2045
+* @ClaytonNorthey92 made their first contribution in https://github.com/btcsuite/btcd/pull/2048
+* @xiaolou86 made their first contribution in https://github.com/btcsuite/btcd/pull/2064
+* @EvanTedesco made their first contribution in https://github.com/btcsuite/btcd/pull/2065
+* @petertodd made their first contribution in https://github.com/btcsuite/btcd/pull/2069
+* @threewebcode made their first contribution in https://github.com/btcsuite/btcd/pull/2074
+* @bodhi-crypo made their first contribution in https://github.com/btcsuite/btcd/pull/2076
+
+**Full Changelog**: https://github.com/btcsuite/btcd/compare/v0.23.4...v0.24.0</summary>
+    <title>btcsuite/btcd: v0.24.0</title>
+    <updated>2023-12-31T01:22:04Z</updated>
+    <dc:date>2023-12-31T01:22:04Z</dc:date>
+  </entry>
+  <entry>
+    <id>https://github.com/btcsuite/btcd/releases/tag/v0.24.0</id>
+    <link href="https://github.com/btcsuite/btcd/releases/tag/v0.24.0"/>
+    <summary>This release is a major release that includes several general bug fixes, security bug fixes, and also a series of performance improvements that dramatically reduce the time for initial block download from ~45 hours+ to around 6 hours! With this release,`btcd` now also supports BIP 155 and has gained support for pruning (`--prune=MiB`). 
+
+# Verifying the Release
+
+In order to verify the release, you'll need to have `gpg` or `gpg2` installed on your system. Once you've obtained a copy (and hopefully verified that as well), you'll first need to import the keys that have signed this release if you haven't done so already: 
+
+```
+curl https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/roasbeef.asc | gpg --import
+```
+
+Once you have the required PGP keys, you can verify the release (assuming `manifest-roasbeef-v0.24.0.sig` and `manifest-v0.24.0.txt` are in the current directory) with:
+
+```
+gpg --verify manifest-roasbeef-v0.24.0.sig manifest-v0.24.0.txt
+```
+
+You should see the following if the verification was successful:
+
+```
+gpg: Signature made Sat Dec 30 17:11:22 2023 PST
+gpg:                using RSA key 60A1FA7DA5BFF08BDCBBE7903BBD59E99B280306
+gpg: Good signature from &quot;Olaoluwa Osuntokun &lt;laolu32@gmail.com&gt;&quot; [ultimate]
+```
+
+That will verify the signature of the manifest file, which ensures integrity and authenticity of the archive you've downloaded locally containing the binaries. Next, depending on your operating system, you should then re-compute the `sha256` hash of the archive with `shasum -a 256 &lt;filename&gt;`, compare it with the corresponding one in the manifest file, and ensure they match *exactly*.
+
+
+# What's Changed
+* Musig2: Update to 1.0.0.rc2 by @sputn1ck in https://github.com/btcsuite/btcd/pull/1913
+* btcec/schnorr/musig2: fix BenchmarkPartialVerify by @Roasbeef in https://github.com/btcsuite/btcd/pull/1920
+* base58: fix decoding issue by @guggero in https://github.com/btcsuite/btcd/pull/1923
+* Update Docker documentation towards building your own image by @guiand888 in https://github.com/btcsuite/btcd/pull/1925
+* chainhash: JSON marshal hash as string by @ffranr in https://github.com/btcsuite/btcd/pull/1932
+* Update Dockerfile to Alpine 3.16 by @guiand888 in https://github.com/btcsuite/btcd/pull/1924
+* Fix memory leak in connmanager by @hxw in https://github.com/btcsuite/btcd/pull/1576
+* Update mining.md by @jagottsicher in https://github.com/btcsuite/btcd/pull/1938
+* Sighash taproot keyspend bug fix by @Roasbeef in https://github.com/btcsuite/btcd/pull/1941
+* btcutil/psbt: export helper functions, fix/add encoding of unknown fields by @guggero in https://github.com/btcsuite/btcd/pull/1942
+* docs: Update Go version as per the Readme. by @hristog in https://github.com/btcsuite/btcd/pull/1944
+* txscript: Fix typo in IsUnspendable() comment by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1945
+* txscript: allow script builder capacity to be specified by @guggero in https://github.com/btcsuite/btcd/pull/1954
+* Export MakeScritpNum, AsSmallInt, and IsSmallInt by @martonp in https://github.com/btcsuite/btcd/pull/1956
+* chainhash: JSON Unmarshal hash from appropriate string. by @LindenWang01 in https://github.com/btcsuite/btcd/pull/1952
+* psbt: add verification method for utxo data by @ziggie1984 in https://github.com/btcsuite/btcd/pull/1964
+* txscript: fix typos by @hieblmi in https://github.com/btcsuite/btcd/pull/1957
+* chaincfg: Update checkpoints by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1968
+* btcd: Add memory profiling flag by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1953
+* blockchain: Use slices when fetching utxos by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1972
+* main: Update README.md's minimum go version by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1977
+* Add wire.Outpoint parser from string by @GeorgeTsagk in https://github.com/btcsuite/btcd/pull/1879
+* multi: Run gofmt on the entire repository by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1981
+* blockchain+chaincfg: disable retargeting for regtest by @guggero in https://github.com/btcsuite/btcd/pull/1985
+* multi: remove repetitive the by @cuishuang in https://github.com/btcsuite/btcd/pull/1998
+* blockchain: refactor and export header validation checks by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/1931
+* btcutil: format BTC amounts with trailing zeroes by @C-Otto in https://github.com/btcsuite/btcd/pull/1996
+* musig2: fix early nonce gen option by @sputn1ck in https://github.com/btcsuite/btcd/pull/2003
+* fix: missing sighashtype when finalizing taproot keyspend signature by @0xEclair in https://github.com/btcsuite/btcd/pull/2006
+* Add address field (rpc client &amp; server) by @lindlof in https://github.com/btcsuite/btcd/pull/1969
+* schnorr: correct rfc reference in docs by @wydengyre in https://github.com/btcsuite/btcd/pull/2016
+* blockchain, integration, mining, main: Rolling merkle root calculation by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1979
+* schnorr: bip-340 compliant verification by @wydengyre in https://github.com/btcsuite/btcd/pull/2018
+* txscript/engine: add execution StepCallback by @halseth in https://github.com/btcsuite/btcd/pull/1980
+* schnorr: bip-340 compliant signing by @wydengyre in https://github.com/btcsuite/btcd/pull/2022
+* main, wire, blockchain, indexers, ffldb: Add pruning by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1971
+* chainhash: add support to legacy-marshaled hashes by @Beerosagos in https://github.com/btcsuite/btcd/pull/2025
+* rpcclient: catch shutdown signal when sending RPC requests by @yyforyongyu in https://github.com/btcsuite/btcd/pull/2028
+* integration: add test to check prune status by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/2043
+* fix: typos in sighash.go by @kevinheavey in https://github.com/btcsuite/btcd/pull/2047
+* Update LICENSE by @davidcardenasus in https://github.com/btcsuite/btcd/pull/2045
+* blockchain: export CheckSerializedHeight by @Crypt-iQ in https://github.com/btcsuite/btcd/pull/2051
+* fix: default forward port by @0xEclair in https://github.com/btcsuite/btcd/pull/2038
+* Added tests for FutureGetBestBlockHashResult.Receive by @ClaytonNorthey92 in https://github.com/btcsuite/btcd/pull/2048
+* Added test for client.GetChainTxStatsAsync() in rpcclient. by @ClaytonNorthey92 in https://github.com/btcsuite/btcd/pull/2049
+* added tests for GetBestBlockHashAsync by @ClaytonNorthey92 in https://github.com/btcsuite/btcd/pull/2057
+* blockchain, btcjson: Implement getchaintips rpc call by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1918
+* Fix typos by @xiaolou86 in https://github.com/btcsuite/btcd/pull/2064
+* Fix typos on signature.go by @EvanTedesco in https://github.com/btcsuite/btcd/pull/2065
+* schnorr: simplify some signing math by @wydengyre in https://github.com/btcsuite/btcd/pull/2042
+* Correct comments in singature.go by @jcvernaleo in https://github.com/btcsuite/btcd/pull/2067
+* blockchain: Add ancestor optimization to finding Ancestor by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1688
+* Update petertodd seed DNS to .net by @petertodd in https://github.com/btcsuite/btcd/pull/2069
+* wire, netsync: change isSyncCandidate behavior by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/2035
+* make: add install and release-install goals by @guggero in https://github.com/btcsuite/btcd/pull/1890
+* chainhash, wire, btcutil, main: Memory efficient txhash by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1978
+* blockchain, cmd, netsync, main: Add utxocache by @kcalvinalvin in https://github.com/btcsuite/btcd/pull/1955
+* btcutil: update to chaincfg/chainhash/v1.1.0 by @Roasbeef in https://github.com/btcsuite/btcd/pull/2072
+* fix: enhance code comments by @threewebcode in https://github.com/btcsuite/btcd/pull/2074
+* multi: update main package and btcutil to chainhash/v1.1.0, use optimized dsha256  by @Roasbeef in https://github.com/btcsuite/btcd/pull/2075
+* doc: correct comments by @bodhi-crypo in https://github.com/btcsuite/btcd/pull/2076
+* rpctest: integration test harness fixes by @guggero in https://github.com/btcsuite/btcd/pull/2071
+* btcutil: reuse serialized tx during TxHash by @Roasbeef in https://github.com/btcsuite/btcd/pull/2081
+* wire: only borrow/return binaryFreeList buffers at the message level by @Roasbeef in https://github.com/btcsuite/btcd/pull/2073
+* build: create btcd v0.24 release branch  by @Roasbeef in https://github.com/btcsuite/btcd/pull/2082
+
+## New Contributors
+* @guiand888 made their first contribution in https://github.com/btcsuite/btcd/pull/1925
+* @hxw made their first contribution in https://github.com/btcsuite/btcd/pull/1576
+* @jagottsicher made their first contribution in https://github.com/btcsuite/btcd/pull/1938
+* @hristog made their first contribution in https://github.com/btcsuite/btcd/pull/1944
+* @martonp made their first contribution in https://github.com/btcsuite/btcd/pull/1956
+* @LindenWang01 made their first contribution in https://github.com/btcsuite/btcd/pull/1952
+* @ziggie1984 made their first contribution in https://github.com/btcsuite/btcd/pull/1964
+* @hieblmi made their first contribution in https://github.com/btcsuite/btcd/pull/1957
+* @GeorgeTsagk made their first contribution in https://github.com/btcsuite/btcd/pull/1879
+* @cuishuang made their first contribution in https://github.com/btcsuite/btcd/pull/1998
+* @C-Otto made their first contribution in https://github.com/btcsuite/btcd/pull/1996
+* @0xEclair made their first contribution in https://github.com/btcsuite/btcd/pull/2006
+* @wydengyre made their first contribution in https://github.com/btcsuite/btcd/pull/2016
+* @Beerosagos made their first contribution in https://github.com/btcsuite/btcd/pull/2025
+* @kevinheavey made their first contribution in https://github.com/btcsuite/btcd/pull/2047
+* @davidcardenasus made their first contribution in https://github.com/btcsuite/btcd/pull/2045
+* @ClaytonNorthey92 made their first contribution in https://github.com/btcsuite/btcd/pull/2048
+* @xiaolou86 made their first contribution in https://github.com/btcsuite/btcd/pull/2064
+* @EvanTedesco made their first contribution in https://github.com/btcsuite/btcd/pull/2065
+* @petertodd made their first contribution in https://github.com/btcsuite/btcd/pull/2069
+* @threewebcode made their first contribution in https://github.com/btcsuite/btcd/pull/2074
+* @bodhi-crypo made their first contribution in https://github.com/btcsuite/btcd/pull/2076
+
+**Full Changelog**: https://github.com/btcsuite/btcd/compare/v0.23.4...v0.24.0</summary>
+    <title>btcsuite/btcd: v0.24.0</title>
+    <updated>2023-12-31T01:22:04Z</updated>
+    <dc:date>2023-12-31T01:22:04Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/romanz/electrs/releases/tag/v0.10.2</id>
     <link href="https://github.com/romanz/electrs/releases/tag/v0.10.2"/>
@@ -5984,75 +6236,5 @@ make release sys=&quot;linux-arm64 darwin-amd64&quot;
     <updated>2023-07-06T00:39:13Z</updated>
     <dc:date>2023-07-06T00:39:13Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/lnbits/lnbits/releases/tag/0.10.9</id>
-    <link href="https://github.com/lnbits/lnbits/releases/tag/0.10.9"/>
-    <summary>In this release, we introduce a whole suite of new security features to harden your LNbits instance. Our goal is to make these features accessible and keep every instance as safe as possible to protect user funds from possible security breaches. 
-
-## The new Security panel
-You will find a new Security panel in your Manage Server [AdminUI](https://github.com/lnbits/lnbits/wiki/LNbits-Documentation) that you can access as the super user. All features are opt-in and are also accessible via the [LNbits API](https://legend.lnbits.com/docs#/default/api_update_settings_admin_api_v1_settings__put).
-
-The Security panel has six components:
-
-* Server logs 📝
-* IP blocker 🚫
-* Rate limiter 🐌
-* Security notifications 🔔
-* Killswitch 🪓
-* Watchdog 🐕
-
-### Server logs 📝
-You can now directly view the logs of your LNbits instance from the admin UI. This will allow users to observe the activity of your instance and identify issues without having to log into a shell.
-
-### IP Blocker 🚫
-The IP blocker allows you to add IP addresses that you would like to block from accessing your instance. 
-
-### Rate limiter 🐌
-The built-in rate limiter protects your instance better from denial-of-service attacks. You can set the number of requests per time unit you want to allow.
-
-### Security notifications 🔔
-The new notifications area will show you updates from the LNbits team to notify you about new version releases and any warnings we might want to issue. The updates are polled from a GitHub repository, so you don't leak your IP to us. This is an opt-in feature.
-
-### Killswitch 🪓
-We have built a security mechanism that allows us to temporarily disable your LNbits instance from making any payments until you restart it. This feature is only intended to protect users from loss of funds in the event of a security incident. We will trigger the killswitch only if we discover critical exploits. The updates are polled from a GitHub repository, so you don't leak your IP to us. This is an opt-in feature.
-
-### Watchdog  🐕 (coming soon)
-Watchdog is a service that runs periodic checks against your node's balance and your LNbits instance's balance. If it detects deviations between the two up to a certain margin, it will disable all payments until you turn it off again. This is to protect you from any vulnerabilities that might drain your instance's balance. Only use this feature if you don't intend to use your node for anything else than your LNbits since that would lead to a divergence of balances otherwise. Please note that we have disabled this feature for now and will enable it shortly after rigorous testing.
-
-## Other changes
-
-* Updates for Wallet UI
-* Improves Extension manager
-* Improves testing on regtest 
-* Hides super_user ID to prevent leaks
-* Precommit checks for developers
-
-## Screenshot
-![image](https://user-images.githubusercontent.com/93376500/250604514-e37f230f-7a32-47f2-90a2-0a0a860317c4.png)
-
-## New Contributors
-* @Perlover made their first contribution in https://github.com/lnbits/lnbits/pull/1749
-* @oren-z0 made their first contribution in https://github.com/lnbits/lnbits/pull/1767
-* @YauhenHuchok made their first contribution in https://github.com/lnbits/lnbits/pull/1748
-* @capybarahodler made their first contribution in https://github.com/lnbits/lnbits/pull/1768
-
-**Full Changelog**: https://github.com/lnbits/lnbits/compare/0.10.8...0.10.9</summary>
-    <title>lnbits/lnbits: 0.10.9</title>
-    <updated>2023-07-04T10:30:20Z</updated>
-    <dc:date>2023-07-04T10:30:20Z</dc:date>
-  </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.6</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.6"/>
-    <summary>* ADD: add new languages
-* ADD: support scanning SeedQR backup (closes #4959) 
-* FIX: incorrect error handling when scanning invalid BC-UR data 
-* FIX: incorrect data display on multisig wallet details screen 
-* FIX: Scan of descriptor QR from Sparrow Wallet not working (closes #5539) 
-</summary>
-    <title>BlueWallet/BlueWallet: v6.4.6</title>
-    <updated>2023-07-03T15:15:22Z</updated>
-    <dc:date>2023-07-03T15:15:22Z</dc:date>
-  </entry>
-  <dc:date>2023-12-30T19:03:00+00:00</dc:date>
+  <dc:date>2023-12-31T01:32:27+00:00</dc:date>
 </feed>
