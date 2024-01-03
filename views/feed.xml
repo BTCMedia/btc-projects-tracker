@@ -6,11 +6,29 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2024-01-02T22:03:10+00:00</updated>
+  <updated>2024-01-03T18:02:52+00:00</updated>
+  <entry>
+    <id>https://github.com/vulpemventures/marina/releases/tag/v0.6.3</id>
+    <link href="https://github.com/vulpemventures/marina/releases/tag/v0.6.3"/>
+    <summary>## What's Changed
+* Remembers invoice by @bordalix in https://github.com/vulpemventures/marina/pull/521
+* fixes problem with SEND ALL other assets by @bordalix in https://github.com/vulpemventures/marina/pull/522
+
+
+**Full Changelog**: https://github.com/vulpemventures/marina/compare/v0.6.2...v0.6.3</summary>
+    <title>vulpemventures/marina: v0.6.3</title>
+    <updated>2024-01-03T17:58:53Z</updated>
+    <dc:date>2024-01-03T17:58:53Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/vulpemventures/marina/releases/tag/v0.6.2</id>
     <link href="https://github.com/vulpemventures/marina/releases/tag/v0.6.2"/>
-    <summary></summary>
+    <summary>## What's Changed
+* add reload button by @bordalix in https://github.com/vulpemventures/marina/pull/520
+* Refund failed swaps by @bordalix in https://github.com/vulpemventures/marina/pull/519
+
+
+**Full Changelog**: https://github.com/vulpemventures/marina/compare/v0.6.1...v0.6.2</summary>
     <title>vulpemventures/marina: v0.6.2</title>
     <updated>2024-01-02T21:59:38Z</updated>
     <dc:date>2024-01-02T21:59:38Z</dc:date>
@@ -6134,13 +6152,5 @@ $ sha256sum -c SHA256SUMS.stripped
     <updated>2023-07-12T13:16:03Z</updated>
     <dc:date>2023-07-12T13:16:03Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.7</id>
-    <link href="https://github.com/BlueWallet/BlueWallet/releases/tag/v6.4.7"/>
-    <summary>FIX: can't access storage for unsigned transaction export #5559</summary>
-    <title>BlueWallet/BlueWallet: v6.4.7</title>
-    <updated>2023-07-09T19:13:33Z</updated>
-    <dc:date>2023-07-09T19:13:33Z</dc:date>
-  </entry>
-  <dc:date>2024-01-02T22:03:10+00:00</dc:date>
+  <dc:date>2024-01-03T18:02:52+00:00</dc:date>
 </feed>
