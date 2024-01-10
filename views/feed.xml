@@ -6,7 +6,20 @@
   </author>
   <id>https://release-tracker.b.tc/</id>
   <title>Bitcoin Projects Release Tracker</title>
-  <updated>2024-01-10T19:41:29+00:00</updated>
+  <updated>2024-01-10T21:01:31+00:00</updated>
+  <entry>
+    <id>https://github.com/unchained-capital/caravan/releases/tag/caravan-v1.0.1</id>
+    <link href="https://github.com/unchained-capital/caravan/releases/tag/caravan-v1.0.1"/>
+    <summary>## [1.0.1](https://github.com/unchained-capital/caravan/compare/caravan-v1.0.0...caravan-v1.0.1) (2024-01-10)
+
+
+### Bug Fixes
+
+* **build:** pass git sha to build properly ([a93d65b](https://github.com/unchained-capital/caravan/commit/a93d65bcab59855ed1049e776374931c5c0f5c1c))</summary>
+    <title>unchained-capital/caravan: caravan-v1.0.1</title>
+    <updated>2024-01-10T20:55:53Z</updated>
+    <dc:date>2024-01-10T20:55:53Z</dc:date>
+  </entry>
   <entry>
     <id>https://github.com/unchained-capital/caravan/releases/tag/caravan-v1.0.0</id>
     <link href="https://github.com/unchained-capital/caravan/releases/tag/caravan-v1.0.0"/>
@@ -6139,23 +6152,5 @@ deletions in 327 commits from 21 authors, in alphabetical order:
     <updated>2023-07-18T14:16:09Z</updated>
     <dc:date>2023-07-18T14:16:09Z</dc:date>
   </entry>
-  <entry>
-    <id>https://github.com/unchained-capital/caravan/releases/tag/caravan-v0.6.1</id>
-    <link href="https://github.com/unchained-capital/caravan/releases/tag/caravan-v0.6.1"/>
-    <summary>## [0.6.1](https://github.com/unchained-capital/caravan/compare/caravan-v0.6.0...caravan-v0.6.1) (2023-07-13)
-
-
-### Bug Fixes
-
-* addressType conflict check not applicable for text xpubs ([185fc01](https://github.com/unchained-capital/caravan/commit/185fc01bcd6c02301fb787229ffcc8f0c4c6cd45))
-* **build:** bring back hash routing ([ed83bf4](https://github.com/unchained-capital/caravan/commit/ed83bf4b6765294180ea96b11898cb1a42adfc42))
-* **scriptexplorer:** change the error message for spending from new wallet ([1923dad](https://github.com/unchained-capital/caravan/commit/1923dad0d5fdc61fe88d729d6e850cee8a22e0f1)), closes [#172](https://github.com/unchained-capital/caravan/issues/172)
-* **scriptexplorer:** show error message trown in fethUTXOs ([158fb61](https://github.com/unchained-capital/caravan/commit/158fb6154856909f4de77a49eaeac24cbd4a42d2)), closes [#172](https://github.com/unchained-capital/caravan/issues/172)
-* **scriptexplorer:** when no error is trown check for 0 balance ([cb96364](https://github.com/unchained-capital/caravan/commit/cb96364922f61e922be30b67fc39eda2fd233dce))
-* **wallet:** add delay to address and utxo calls ([d9774c1](https://github.com/unchained-capital/caravan/commit/d9774c1c7e28021a48efa30666c6ceb9e75cd1da)), closes [#317](https://github.com/unchained-capital/caravan/issues/317)</summary>
-    <title>unchained-capital/caravan: caravan-v0.6.1</title>
-    <updated>2023-07-13T16:05:28Z</updated>
-    <dc:date>2023-07-13T16:05:28Z</dc:date>
-  </entry>
-  <dc:date>2024-01-10T19:41:29+00:00</dc:date>
+  <dc:date>2024-01-10T21:01:31+00:00</dc:date>
 </feed>
