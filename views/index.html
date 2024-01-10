@@ -38,6 +38,48 @@
 					  <div class="card-body">
 					  	<div class="card-top">
 						    <h2 class="card-title">
+						    	<a href="https://github.com/unchained-capital/caravan">unchained-capital/caravan</a>: <a href="https://github.com/unchained-capital/caravan/releases/tag/caravan-v1.0.0">caravan-v1.0.0</a>
+						    </h2>
+							<p class="card-text">Published: 2024-01-10 19:33:19 UTC</p>
+						</div>
+					    <hr/>
+					    <p class="card-text"><h2><a href="https://github.com/unchained-capital/caravan/compare/caravan-v0.7.0...caravan-v1.0.0">1.0.0</a> (2024-01-10)</h2>
+
+<h3>⚠ BREAKING CHANGES</h3>
+
+<ul>
+<li>adds typescript and node v20 support (<a href="https://github.com/unchained-capital/caravan/issues/350">#350</a>)</li>
+</ul>
+
+<h3>Features</h3>
+
+<ul>
+<li>adds typescript and node v20 support (<a href="https://github.com/unchained-capital/caravan/issues/350">#350</a>) (<a href="https://github.com/unchained-capital/caravan/commit/f5c3e90d839f8ac2cc9378b5ddbadc6cb0f41ddc">f5c3e90</a>)</li>
+<li>unblock fee rate limit (<a href="https://github.com/unchained-capital/caravan/commit/ba5de57894bf2db87875235d20fbc18091ef78af">ba5de57</a>)</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+
+<ul>
+<li><strong>deps:</strong> upgrade uc-bitcoin dep for fixture fix (<a href="https://github.com/unchained-capital/caravan/commit/67077c2136bdbb7c6dd3366ab5acdc5f3428e706">67077c2</a>)</li>
+<li>incorrect fee error check conditional operator (<a href="https://github.com/unchained-capital/caravan/commit/2b417c623990f1de5ef41f7910f81c1fb17a056e">2b417c6</a>)</li>
+<li>max spend button (<a href="https://github.com/unchained-capital/caravan/commit/0884745b1252c762d5f1f15b071a2189fd0ae240">0884745</a>)</li>
+<li>more dependency cleanup (<a href="https://github.com/unchained-capital/caravan/commit/593c48d30fc5d4e017cf34a7414bae4ec3938c9f">593c48d</a>)</li>
+<li>psbt download in coldcard test suite (<a href="https://github.com/unchained-capital/caravan/commit/cd883540084764feb378f44adbdbabf32cb84051">cd88354</a>)</li>
+<li><strong>test-suite:</strong> key origins sorted by base58 xpub (<a href="https://github.com/unchained-capital/caravan/commit/444e0838ef723db00974b2f57f2a205b62ac3668">444e083</a>)</li>
+<li>upgrade uc-bitcoin and pin broken ledger deps (<a href="https://github.com/unchained-capital/caravan/commit/64b961335a4d5c0bc565163dc6e87f1ab750f6e7">64b9613</a>)</li>
+<li>utility accepts string instead of BN (<a href="https://github.com/unchained-capital/caravan/commit/607d9b8c6461d4762f0f5873c5a7045eba9a9e9f">607d9b8</a>)</li>
+</ul>
+</p>
+					    <a href="https://github.com/unchained-capital/caravan" class="btn btn-outline-dark btn-sm">Go to Repo</a>
+					    <a href="https://github.com/unchained-capital/caravan/releases/tag/caravan-v1.0.0" class="btn btn-outline-dark btn-sm">Go to Release</a>
+					  </div>
+					</div>
+	            
+	            	<div class="card">
+					  <div class="card-body">
+					  	<div class="card-top">
+						    <h2 class="card-title">
 						    	<a href="https://github.com/vulpemventures/marina">vulpemventures/marina</a>: <a href="https://github.com/vulpemventures/marina/releases/tag/v0.6.3">v0.6.3</a>
 						    </h2>
 							<p class="card-text">Published: 2024-01-03 17:58:53 UTC</p>
@@ -7180,39 +7222,6 @@ deletions in 327 commits from 21 authors, in alphabetical order:
 </p>
 					    <a href="https://github.com/unchained-capital/caravan" class="btn btn-outline-dark btn-sm">Go to Repo</a>
 					    <a href="https://github.com/unchained-capital/caravan/releases/tag/caravan-v0.6.1" class="btn btn-outline-dark btn-sm">Go to Release</a>
-					  </div>
-					</div>
-	            
-	            	<div class="card">
-					  <div class="card-body">
-					  	<div class="card-top">
-						    <h2 class="card-title">
-						    	<a href="https://github.com/ACINQ/phoenix">ACINQ/phoenix</a>: <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.27">android-legacy-v1.4.27</a>
-						    </h2>
-							<p class="card-text">Published: 2023-07-12 13:16:03 UTC</p>
-						</div>
-					    <hr/>
-					    <p class="card-text"><p>This release fixes a display issue, where the decimal parts of amounts denominated in Btc/mBtc/bits units were hard to read. These parts are now correctly aligned.</p>
-
-<h2>Verifying signatures</h2>
-
-<p>You will need <code>gpg</code> and our release signing key 7A73FE77DE2C4027. Note that you can get it:
-- from our website: <a href="https://acinq.co/pgp/drouinf.asc">https://acinq.co/pgp/drouinf.asc</a>
-- from github user @sstone, a committer on eclair: <a href="https://api.github.com/users/sstone/gpg_keys">https://api.github.com/users/sstone/gpg_keys</a></p>
-
-<p>To import our signing key:
-<code>
-$ gpg --import drouinf.asc
-</code></p>
-
-<p>To verify the release file checksums and signatures:
-<code>
-$ gpg -d SHA256SUMS.asc &gt; SHA256SUMS.stripped
-$ sha256sum -c SHA256SUMS.stripped
-</code></p>
-</p>
-					    <a href="https://github.com/ACINQ/phoenix" class="btn btn-outline-dark btn-sm">Go to Repo</a>
-					    <a href="https://github.com/ACINQ/phoenix/releases/tag/android-legacy-v1.4.27" class="btn btn-outline-dark btn-sm">Go to Release</a>
 					  </div>
 					</div>
 	            
